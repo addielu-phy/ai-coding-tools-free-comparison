@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Antigravity vs Claude Code vs Codex｜免費帳號實用比較</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6f5f4;
+      --surface: #ffffff;
+      --surface-2: #fbfaf9;
+      --text: rgba(0,0,0,0.92);
+      --muted: #615d59;
+      --line: rgba(0,0,0,0.1);
+      --blue: #0075de;
+      --blue-soft: #eef6ff;
+      --green: #107c41;
+      --amber: #b25b00;
+      --red: #a93131;
+      --shadow: rgba(0,0,0,0.04) 0px 4px 18px, rgba(0,0,0,0.025) 0px 2px 8px, rgba(0,0,0,0.012) 0px 0.5px 2px;
+      --radius: 16px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(180deg, #ffffff 0%, #f6f5f4 100%);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .wrap {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .hero {
+      padding: 72px 0 32px;
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+    h1 {
+      margin: 18px 0 14px;
+      font-size: clamp(34px, 6vw, 58px);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+    }
+    .lead {
+      max-width: 860px;
+      font-size: clamp(16px, 2.3vw, 21px);
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .meta {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 28px 0 8px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+    .card h3, .section h2 { margin-top: 0; }
+    .section {
+      margin: 24px 0;
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+    .section h2 {
+      font-size: clamp(24px, 3vw, 36px);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+    }
+    .kicker {
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: white;
+      margin-top: 12px;
+    }
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      padding: 14px 14px;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+    }
+    th {
+      background: #faf9f7;
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 700;
+      letter-spacing: .03em;
+    }
+    tr:last-child td { border-bottom: none; }
+    .pill {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
+    .good { background: #edf8f1; color: var(--green); }
+    .warn { background: #fff4e8; color: var(--amber); }
+    .risk { background: #fdeeee; color: var(--red); }
+    ul { padding-left: 1.2em; }
+    .tool {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 20px;
+      align-items: start;
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+    .tool:first-of-type {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+    .tool-name {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+    .tool-sub {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .mini {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 12px;
+    }
+    .mini .box {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--surface-2);
+      padding: 14px;
+    }
+    .box strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+    .quote {
+      padding: 14px 16px;
+      border-left: 4px solid var(--blue);
+      background: #f8fbff;
+      border-radius: 10px;
+      color: #334;
+      margin: 12px 0;
+    }
+    .footnotes li { margin-bottom: 8px; }
+    code {
+      font-family: var(--mono);
+      font-size: .92em;
+      background: #f3f1ef;
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+    .footer {
+      padding: 8px 0 56px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    @media (max-width: 900px) {
+      .grid-3, .mini, .tool { grid-template-columns: 1fr; }
+      .section { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <span class="eyebrow">AI coding tools comparison</span>
+      <h1>Google Antigravity、Claude Code、Codex：<br>主要差別與免費帳號實用比較</h1>
+      <p class="lead">
+        這一頁不是比「誰最強」，而是比「<strong>定位差在哪裡</strong>、<strong>免費帳號能怎麼用</strong>、以及<strong>對一般教學 / 示範 / 個人開發</strong>哪一種更實用」。
+      </p>
+      <div class="meta">整理重點：官方產品定位、免費方案可用性、免費使用者的優缺點與實務選擇。</div>
+
+      <div class="grid-3">
+        <div class="card">
+          <div class="kicker">一句話</div>
+          <h3>Antigravity</h3>
+          <p>比較像<strong>agent-first AI IDE</strong>：多代理、工作區、瀏覽器操作、圖形化體驗較完整。</p>
+        </div>
+        <div class="card">
+          <div class="kicker">一句話</div>
+          <h3>Claude Code</h3>
+          <p>比較像<strong>深度 codebase 代理工具</strong>：很強，但對純免費帳號不算最友善。</p>
+        </div>
+        <div class="card">
+          <div class="kicker">一句話</div>
+          <h3>Codex</h3>
+          <p>比較像<strong>最容易免費上手的 coding agent</strong>：官方明列 ChatGPT Free 可用，但偏短任務。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="kicker">快速總表</div>
+      <h2>先看結論：三者核心差異</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>工具</th>
+            <th>官方定位</th>
+            <th>最適合的人</th>
+            <th>免費帳號狀況</th>
+            <th>一句判斷</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Google Antigravity</strong></td>
+            <td>agent-first AI IDE / 多代理 + IDE 體驗</td>
+            <td>想看圖形介面、多代理協作、整合 browser workflow 的人</td>
+            <td>官方有 <code>Individual $0</code>，但採 weekly quota / rate limits</td>
+            <td>免費入口不錯，但配額透明度較低</td>
+          </tr>
+          <tr>
+            <td><strong>Claude Code</strong></td>
+            <td>agentic coding tool / 深度讀 codebase、編輯、跑命令</td>
+            <td>重視大型專案理解、長程式碼工作流的人</td>
+            <td>官方定價頁未把 Claude Code 放進 Free；Pro 才明寫包含</td>
+            <td>能力強，但純免費帳號門檻最高</td>
+          </tr>
+          <tr>
+            <td><strong>Codex</strong></td>
+            <td>OpenAI 的 coding agent</td>
+            <td>想先免費試用 coding agent、快速完成小任務的人</td>
+            <td>官方明寫包含在 ChatGPT Free，但適合 quick coding tasks</td>
+            <td>免費最直觀，但適合輕量任務</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <div class="kicker">逐一說明</div>
+      <h2>每個工具到底像什麼？</h2>
+
+      <div class="tool">
+        <div>
+          <div class="tool-name">Google Antigravity</div>
+          <div class="tool-sub">最像「代理人導向的 AI 開發環境」</div>
+        </div>
+        <div>
+          <div class="quote">官方把它描述成 <strong>agent-first / AI IDE</strong>，重點在 Agent Manager、多工作區、多代理、編輯器、Browser Use、Artifacts 與 Knowledge。</div>
+          <div class="mini">
+            <div class="box">
+              <strong>主要特色</strong>
+              <ul>
+                <li>偏圖形化操作，不只是命令列</li>
+                <li>強調多代理平行工作</li>
+                <li>可結合 browser / workspace 工作流</li>
+                <li>對示範教學較直觀</li>
+              </ul>
+            </div>
+            <div class="box">
+              <strong>你可以怎麼理解</strong>
+              <p>如果 Claude Code / Codex 比較像「用 agent 幫你寫程式」，Antigravity 更像「<strong>一個把 agent 當主角的開發桌面</strong>」。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tool">
+        <div>
+          <div class="tool-name">Claude Code</div>
+          <div class="tool-sub">最像「能深入大型 codebase 的工程代理」</div>
+        </div>
+        <div>
+          <div class="quote">官方定位是 <strong>agentic coding tool</strong>：可讀 codebase、編輯檔案、跑命令、整合開發工具，適合真正進入專案做事。</div>
+          <div class="mini">
+            <div class="box">
+              <strong>主要特色</strong>
+              <ul>
+                <li>理解大型專案能力強</li>
+                <li>適合重構、除錯、跨檔案修改</li>
+                <li>偏工程工作流，而不是展示型 UI</li>
+                <li>terminal / IDE / web 都可串接</li>
+              </ul>
+            </div>
+            <div class="box">
+              <strong>你可以怎麼理解</strong>
+              <p>如果你已經有一個真實專案，要找一個「很像資深工程夥伴」的代理，Claude Code 的定位最清楚。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tool">
+        <div>
+          <div class="tool-name">Codex</div>
+          <div class="tool-sub">最像「最容易先免費試用的 coding agent」</div>
+        </div>
+        <div>
+          <div class="quote">OpenAI 官方把 Codex 定位為 <strong>software development 的 coding agent</strong>，可協助寫程式、理解陌生程式庫、做 code review、debug、執行重複性開發任務。</div>
+          <div class="mini">
+            <div class="box">
+              <strong>主要特色</strong>
+              <ul>
+                <li>官方明確支援 ChatGPT Free</li>
+                <li>很適合快速產生、修改、解釋程式</li>
+                <li>適合短任務、快速試跑</li>
+                <li>新手試用門檻最低</li>
+              </ul>
+            </div>
+            <div class="box">
+              <strong>你可以怎麼理解</strong>
+              <p>如果你想先免費試試「AI 幫我做 coding task 到底長怎樣」，Codex 是三者裡最容易立刻上手的。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="kicker">免費帳號比較</div>
+      <h2>如果都用免費帳號，差在哪裡？</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>面向</th>
+            <th>Google Antigravity</th>
+            <th>Claude Code</th>
+            <th>Codex</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>官方是否明列免費可用</strong></td>
+            <td><span class="pill good">有</span> Individual $0 / month</td>
+            <td><span class="pill risk">不明列</span> Free 頁面未直接包含 Claude Code</td>
+            <td><span class="pill good">有</span> OpenAI 官方明列 ChatGPT Free 包含 Codex</td>
+          </tr>
+          <tr>
+            <td><strong>免費限制怎麼寫</strong></td>
+            <td>weekly quota / generous weekly rate limits</td>
+            <td>通常需訂閱或改走 Console / 第三方 provider</td>
+            <td>適合 <code>quick coding tasks</code></td>
+          </tr>
+          <tr>
+            <td><strong>新手是否好上手</strong></td>
+            <td>中高：功能完整但概念較多</td>
+            <td>中：工具強，但免費入口不直覺</td>
+            <td>高：最容易先開始用</td>
+          </tr>
+          <tr>
+            <td><strong>重度使用的風險</strong></td>
+            <td>容易碰到週限額</td>
+            <td>若沒有付費或 API 路徑，基本上不夠用</td>
+            <td>免費版較適合短任務，不適合長工時代理</td>
+          </tr>
+          <tr>
+            <td><strong>最像什麼</strong></td>
+            <td>「AI IDE + 多代理桌面」</td>
+            <td>「工程用重型代理」</td>
+            <td>「快速可用的 coding assistant / agent」</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <div class="kicker">實用判斷</div>
+      <h2>免費帳號的優缺點：講白話一點</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Google Antigravity</h3>
+          <p>
+            <span class="pill good">優點</span>
+            官方就有免費方案、UI 直觀、多代理概念清楚，對教學展示、工作流示範很有吸引力。
+          </p>
+          <p>
+            <span class="pill warn">缺點</span>
+            免費額度採週配額，但官方沒有把精確數字講很清楚；如果用得重，會比較難預估何時撞限。
+          </p>
+        </div>
+        <div class="card">
+          <h3>Claude Code</h3>
+          <p>
+            <span class="pill good">優點</span>
+            對真實工程專案、長程式碼上下文、codebase 理解非常有代表性；定位成熟。
+          </p>
+          <p>
+            <span class="pill risk">缺點</span>
+            以「免費帳號」角度來看最不友善。不是不能碰，但通常不會是零成本、零門檻直接開始。
+          </p>
+        </div>
+        <div class="card">
+          <h3>Codex</h3>
+          <p>
+            <span class="pill good">優點</span>
+            官方直接說 Free 可用，最適合先體驗 coding agent。對小任務、課堂 demo、快速測試很方便。
+          </p>
+          <p>
+            <span class="pill warn">缺點</span>
+            免費版官方用語就是 quick coding tasks，意思很明白：長時間、高頻、重任務不宜期待太多。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="kicker">選擇建議</div>
+      <h2>如果是不同使用情境，我會怎麼選？</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>情境</th>
+            <th>比較建議</th>
+            <th>原因</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>想先免費試試看 AI coding agent</td>
+            <td><strong>Codex</strong></td>
+            <td>官方明列 Free 可用，最適合快速上手</td>
+          </tr>
+          <tr>
+            <td>想做圖形化示範、強調多代理與流程展示</td>
+            <td><strong>Antigravity</strong></td>
+            <td>更像完整 AI IDE / 多代理工作台</td>
+          </tr>
+          <tr>
+            <td>要處理較真實的專案、跨多檔案修改與重構</td>
+            <td><strong>Claude Code</strong></td>
+            <td>工程代理定位最強，但免費帳號不是優勢</td>
+          </tr>
+          <tr>
+            <td>要做課堂 demo、短時間展示</td>
+            <td><strong>Codex 或 Antigravity</strong></td>
+            <td>一個免費直上手，一個畫面與 workflow 更好講</td>
+          </tr>
+          <tr>
+            <td>完全不想先付費</td>
+            <td><strong>先試 Codex，再看 Antigravity</strong></td>
+            <td>這兩個對免費使用者的官方訊息最明確</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <div class="kicker">注意事項</div>
+      <h2>有兩個地方要特別說明</h2>
+      <ul>
+        <li><strong>Google Antigravity 的名稱辨識：</strong>這裡採用目前官方站點 <code>antigravity.google</code> 所對應的產品來解釋；不是網路迷因版的「Google Gravity」。</li>
+        <li><strong>免費可用 ≠ 無限制：</strong>Antigravity 與 Codex 雖然都有官方明列免費可用，但都不是「無上限重度使用」；只是它們對免費用戶的路徑比 Claude Code 清楚得多。</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <div class="kicker">資料來源</div>
+      <h2>官方參考頁面</h2>
+      <ol class="footnotes">
+        <li>Google Antigravity Product：<br><code>https://antigravity.google/product</code></li>
+        <li>Google Antigravity Pricing：<br><code>https://antigravity.google/pricing</code></li>
+        <li>Google Antigravity Plans：<br><code>https://antigravity.google/docs/plans</code></li>
+        <li>Google Cloud Blog（Choosing Antigravity or Gemini CLI）：<br><code>https://cloud.google.com/blog/topics/developers-practitioners/choosing-antigravity-or-gemini-cli</code></li>
+        <li>Anthropic Claude Code Overview：<br><code>https://docs.anthropic.com/en/docs/claude-code/overview</code></li>
+        <li>Anthropic Claude Pricing：<br><code>https://claude.com/pricing</code></li>
+        <li>OpenAI Codex Overview：<br><code>https://developers.openai.com/codex</code></li>
+        <li>OpenAI Codex Pricing：<br><code>https://developers.openai.com/codex/pricing</code></li>
+        <li>OpenAI Codex GitHub：<br><code>https://github.com/openai/codex</code></li>
+      </ol>
+    </section>
+
+    <div class="footer">
+      製作說明：本頁以官方文件與定價頁為主做實用比較；重點不是理論最完整，而是協助快速判斷「免費帳號到底該先用哪一個」。
+    </div>
+  </div>
+</body>
+</html>

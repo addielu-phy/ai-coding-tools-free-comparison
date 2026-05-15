@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>用 Lagrange 解圓錐擺</title>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['\\[', '\\]']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <style>
+    :root {
+      --bg: #f6f2ea;
+      --paper: #fffaf1;
+      --ink: #1f2933;
+      --muted: #64748b;
+      --accent: #9a5b24;
+      --accent-2: #1f6f78;
+      --line: rgba(31,41,51,.16);
+      --formula: #102a43;
+      --shadow: 0 18px 50px rgba(43, 31, 18, .12);
+      --radius: 24px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(154,91,36,.16), transparent 34rem),
+        radial-gradient(circle at bottom right, rgba(31,111,120,.12), transparent 34rem),
+        var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+    }
+    header {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 64px 24px 28px;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 32px;
+      height: 2px;
+      background: currentColor;
+    }
+    h1 {
+      margin: 14px 0 12px;
+      font-size: clamp(2.2rem, 6vw, 4.7rem);
+      line-height: 1.04;
+      letter-spacing: -.055em;
+      text-wrap: pretty;
+    }
+    .lead {
+      max-width: 760px;
+      font-size: clamp(1.05rem, 2.4vw, 1.35rem);
+      color: #405466;
+      margin: 0;
+    }
+    main {
+      max-width: 1040px;
+      margin: 0 auto 72px;
+      padding: 0 24px;
+      display: grid;
+      gap: 22px;
+    }
+    .card {
+      background: rgba(255,250,241,.86);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: clamp(22px, 4vw, 42px);
+      backdrop-filter: blur(10px);
+    }
+    h2 {
+      margin: 0 0 16px;
+      font-size: clamp(1.35rem, 3vw, 2rem);
+      line-height: 1.2;
+      letter-spacing: -.02em;
+    }
+    h3 { margin: 24px 0 8px; font-size: 1.12rem; }
+    p { margin: 8px 0; }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      align-items: start;
+    }
+    @media (max-width: 780px) { .grid { grid-template-columns: 1fr; } }
+    .diagram {
+      min-height: 360px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(180deg, rgba(31,111,120,.08), rgba(154,91,36,.05));
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    svg { width: min(100%, 420px); height: auto; }
+    .formula {
+      overflow-x: auto;
+      margin: 12px 0;
+      padding: 14px 18px;
+      border-radius: 16px;
+      background: rgba(16,42,67,.055);
+      border: 1px solid rgba(16,42,67,.11);
+      color: var(--formula);
+      font-family: "Times New Roman", "Cambria Math", serif;
+      font-size: clamp(1.08rem, 2.4vw, 1.32rem);
+      line-height: 1.55;
+      white-space: nowrap;
+    }
+    .steps {
+      counter-reset: step;
+      display: grid;
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .step {
+      position: relative;
+      padding: 18px 18px 18px 64px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,.44);
+    }
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: var(--accent-2);
+      color: white;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .result {
+      border-color: rgba(154,91,36,.32);
+      background: linear-gradient(135deg, rgba(154,91,36,.11), rgba(31,111,120,.08));
+    }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+    .pill {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.56);
+      border-radius: 999px;
+      padding: 8px 12px;
+      color: #405466;
+      font-size: .94rem;
+    }
+    details {
+      border: 1px dashed rgba(31,41,51,.28);
+      border-radius: 16px;
+      padding: 14px 18px;
+      background: rgba(255,255,255,.32);
+    }
+    summary { cursor: pointer; font-weight: 800; color: var(--accent); }
+    footer {
+      max-width: 1040px;
+      margin: 0 auto 40px;
+      padding: 0 24px;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+    @media print {
+      body { background: white; }
+      .card { box-shadow: none; break-inside: avoid; }
+      header { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="eyebrow">Lagrangian Mechanics</div>
+    <h1>用 Lagrange 解圓錐擺</h1>
+    <p class="lead">以線長固定的球座標描述圓錐擺，從 Lagrangian 出發，利用 cyclic coordinate 與 Euler–Lagrange 方程推出角速度與週期。</p>
+  </header>
+
+  <main>
+    <section class="card grid">
+      <div>
+        <h2>系統設定</h2>
+        <p>質量為 <strong>m</strong> 的小球，以長度 <strong>l</strong> 的細線懸掛，在重力場中繞鉛直軸作等角速度旋轉。</p>
+        <div class="formula">r=l,\quad \theta=\theta(t),\quad \phi=\phi(t)</div>
+        <p>其中 \(\theta\) 是細線與鉛直方向的夾角，\(\phi\) 是方位角。圓錐擺的穩定運動對應到：</p>
+        <div class="formula">\theta=\text{constant},\quad \dot{\theta}=0,\quad \dot{\phi}=\omega</div>
+        <div class="pill-row">
+          <span class="pill">廣義座標：\(\theta, \phi\)</span>
+          <span class="pill">約束：\(r=l\)</span>
+          <span class="pill">重力位能：取最低點為零</span>
+        </div>
+      </div>
+      <div class="diagram" aria-label="圓錐擺示意圖">
+        <svg viewBox="0 0 420 360" role="img">
+          <defs>
+            <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+              <path d="M0,0 L10,5 L0,10 z" fill="#1f6f78" />
+            </marker>
+          </defs>
+          <line x1="210" y1="30" x2="210" y2="300" stroke="#8795a1" stroke-dasharray="7 7" stroke-width="2" />
+          <ellipse cx="210" cy="248" rx="112" ry="34" fill="none" stroke="#9a5b24" stroke-width="3" />
+          <line x1="210" y1="30" x2="322" y2="248" stroke="#102a43" stroke-width="4" />
+          <circle cx="322" cy="248" r="22" fill="#1f6f78" />
+          <circle cx="210" cy="30" r="7" fill="#102a43" />
+          <path d="M210 92 A55 55 0 0 1 236 79" fill="none" stroke="#9a5b24" stroke-width="3" />
+          <text x="235" y="108" fill="#9a5b24" font-size="22" font-family="serif">θ</text>
+          <text x="258" y="142" fill="#102a43" font-size="22" font-family="serif">l</text>
+          <line x1="210" y1="248" x2="322" y2="248" stroke="#1f6f78" stroke-width="3" marker-end="url(#arrow)" />
+          <text x="242" y="238" fill="#1f6f78" font-size="20" font-family="serif">l sinθ</text>
+          <line x1="322" y1="248" x2="322" y2="318" stroke="#9a5b24" stroke-width="3" marker-end="url(#arrow)" />
+          <text x="334" y="292" fill="#9a5b24" font-size="20" font-family="serif">mg</text>
+          <path d="M270 214 C296 196 337 204 358 229" fill="none" stroke="#1f6f78" stroke-width="3" marker-end="url(#arrow)" />
+          <text x="306" y="196" fill="#1f6f78" font-size="20" font-family="serif">ω</text>
+        </svg>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>1. 寫出 Lagrangian</h2>
+      <p>因為線長固定，球座標中的動能為：</p>
+      <div class="formula">T=\frac12 ml^2\dot{\theta}^2+\frac12 ml^2\sin^2\theta\,\dot{\phi}^2</div>
+      <p>取最低點為位能零點，小球相對最低點的高度是 \(h=l(1-\cos\theta)\)，因此：</p>
+      <div class="formula">V=mgl(1-\cos\theta)</div>
+      <p>所以</p>
+      <div class="formula">L=T-V=\frac12 ml^2\dot{\theta}^2+\frac12 ml^2\sin^2\theta\,\dot{\phi}^2-mgl(1-\cos\theta)</div>
+    </section>
+
+    <section class="card">
+      <h2>2. Euler–Lagrange 方程</h2>
+      <div class="steps">
+        <div class="step">
+          <h3>對 \(\phi\)：角動量守恆</h3>
+          <p>因為 Lagrangian 不顯含 \(\phi\)，所以 \(\phi\) 是 cyclic coordinate。</p>
+          <div class="formula">\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\phi}}\right)=0</div>
+          <div class="formula">\frac{\partial L}{\partial \dot{\phi}}=ml^2\sin^2\theta\,\dot{\phi}=\text{constant}</div>
+        </div>
+        <div class="step">
+          <h3>對 \(\theta\)：徑向平衡條件</h3>
+          <div class="formula">\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\theta}}\right)-\frac{\partial L}{\partial \theta}=0</div>
+          <div class="formula">ml^2\ddot{\theta}=ml^2\sin\theta\cos\theta\,\dot{\phi}^2-mgl\sin\theta</div>
+          <div class="formula">\ddot{\theta}=\sin\theta\cos\theta\,\dot{\phi}^2-\frac{g}{l}\sin\theta</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card result">
+      <h2>3. 圓錐擺條件與結果</h2>
+      <p>穩定圓錐擺表示 \(\theta\) 固定，因此 \(\ddot{\theta}=0\)，並令 \(\dot{\phi}=\omega\)。代入上式：</p>
+      <div class="formula">0=\sin\theta\cos\theta\,\omega^2-\frac{g}{l}\sin\theta</div>
+      <p>若 \(\theta\neq 0\)，除以 \(\sin\theta\)：</p>
+      <div class="formula">\cos\theta\,\omega^2=\frac{g}{l}</div>
+      <div class="formula">\boxed{\omega=\sqrt{\frac{g}{l\cos\theta}}}</div>
+      <p>週期為：</p>
+      <div class="formula">\boxed{T=\frac{2\pi}{\omega}=2\pi\sqrt{\frac{l\cos\theta}{g}}}</div>
+    </section>
+
+    <section class="card">
+      <h2>4. 與牛頓法對照</h2>
+      <details open>
+        <summary>展開對照式</summary>
+        <p>張力鉛直分量平衡重力，水平分量提供向心力：</p>
+        <div class="formula">F_T\cos\theta=mg</div>
+        <div class="formula">F_T\sin\theta=ml\sin\theta\,\omega^2</div>
+        <p>兩式相除：</p>
+        <div class="formula">\tan\theta=\frac{l\sin\theta\,\omega^2}{g}</div>
+        <div class="formula">\omega^2=\frac{g}{l\cos\theta}</div>
+        <p>與 Lagrange 推導一致。</p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    製作：圓錐擺 Lagrange 解法教學頁。可直接用瀏覽器開啟或列印成講義。
+  </footer>
+</body>
+</html>

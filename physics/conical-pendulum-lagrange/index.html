@@ -198,9 +198,9 @@
       <div>
         <h2>系統設定</h2>
         <p>質量為 <strong>m</strong> 的小球，以長度 <strong>l</strong> 的細線懸掛，在重力場中繞鉛直軸作等角速度旋轉。</p>
-        <div class="formula">r=l,\quad \theta=\theta(t),\quad \phi=\phi(t)</div>
+        <div class="formula">\[r=l,\quad \theta=\theta(t),\quad \phi=\phi(t)\]</div>
         <p>其中 \(\theta\) 是細線與鉛直方向的夾角，\(\phi\) 是方位角。圓錐擺的穩定運動對應到：</p>
-        <div class="formula">\theta=\text{constant},\quad \dot{\theta}=0,\quad \dot{\phi}=\omega</div>
+        <div class="formula">\[\theta=\text{constant},\quad \dot{\theta}=0,\quad \dot{\phi}=\omega\]</div>
         <div class="pill-row">
           <span class="pill">廣義座標：\(\theta, \phi\)</span>
           <span class="pill">約束：\(r=l\)</span>
@@ -235,11 +235,11 @@
     <section class="card">
       <h2>1. 寫出 Lagrangian</h2>
       <p>因為線長固定，球座標中的動能為：</p>
-      <div class="formula">T=\frac12 ml^2\dot{\theta}^2+\frac12 ml^2\sin^2\theta\,\dot{\phi}^2</div>
+      <div class="formula">\[T=\frac12 ml^2\dot{\theta}^2+\frac12 ml^2\sin^2\theta\,\dot{\phi}^2\]</div>
       <p>取最低點為位能零點，小球相對最低點的高度是 \(h=l(1-\cos\theta)\)，因此：</p>
-      <div class="formula">V=mgl(1-\cos\theta)</div>
+      <div class="formula">\[V=mgl(1-\cos\theta)\]</div>
       <p>所以</p>
-      <div class="formula">L=T-V=\frac12 ml^2\dot{\theta}^2+\frac12 ml^2\sin^2\theta\,\dot{\phi}^2-mgl(1-\cos\theta)</div>
+      <div class="formula">\[L=T-V=\frac12 ml^2\dot{\theta}^2+\frac12 ml^2\sin^2\theta\,\dot{\phi}^2-mgl(1-\cos\theta)\]</div>
     </section>
 
     <section class="card">
@@ -248,14 +248,14 @@
         <div class="step">
           <h3>對 \(\phi\)：角動量守恆</h3>
           <p>因為 Lagrangian 不顯含 \(\phi\)，所以 \(\phi\) 是 cyclic coordinate。</p>
-          <div class="formula">\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\phi}}\right)=0</div>
-          <div class="formula">\frac{\partial L}{\partial \dot{\phi}}=ml^2\sin^2\theta\,\dot{\phi}=\text{constant}</div>
+          <div class="formula">\[\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\phi}}\right)=0\]</div>
+          <div class="formula">\[\frac{\partial L}{\partial \dot{\phi}}=ml^2\sin^2\theta\,\dot{\phi}=\text{constant}\]</div>
         </div>
         <div class="step">
           <h3>對 \(\theta\)：徑向平衡條件</h3>
-          <div class="formula">\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\theta}}\right)-\frac{\partial L}{\partial \theta}=0</div>
-          <div class="formula">ml^2\ddot{\theta}=ml^2\sin\theta\cos\theta\,\dot{\phi}^2-mgl\sin\theta</div>
-          <div class="formula">\ddot{\theta}=\sin\theta\cos\theta\,\dot{\phi}^2-\frac{g}{l}\sin\theta</div>
+          <div class="formula">\[\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\theta}}\right)-\frac{\partial L}{\partial \theta}=0\]</div>
+          <div class="formula">\[ml^2\ddot{\theta}=ml^2\sin\theta\cos\theta\,\dot{\phi}^2-mgl\sin\theta\]</div>
+          <div class="formula">\[\ddot{\theta}=\sin\theta\cos\theta\,\dot{\phi}^2-\frac{g}{l}\sin\theta\]</div>
         </div>
       </div>
     </section>
@@ -263,12 +263,12 @@
     <section class="card result">
       <h2>3. 圓錐擺條件與結果</h2>
       <p>穩定圓錐擺表示 \(\theta\) 固定，因此 \(\ddot{\theta}=0\)，並令 \(\dot{\phi}=\omega\)。代入上式：</p>
-      <div class="formula">0=\sin\theta\cos\theta\,\omega^2-\frac{g}{l}\sin\theta</div>
+      <div class="formula">\[0=\sin\theta\cos\theta\,\omega^2-\frac{g}{l}\sin\theta\]</div>
       <p>若 \(\theta\neq 0\)，除以 \(\sin\theta\)：</p>
-      <div class="formula">\cos\theta\,\omega^2=\frac{g}{l}</div>
-      <div class="formula">\boxed{\omega=\sqrt{\frac{g}{l\cos\theta}}}</div>
+      <div class="formula">\[\cos\theta\,\omega^2=\frac{g}{l}\]</div>
+      <div class="formula">\[\boxed{\omega=\sqrt{\frac{g}{l\cos\theta}}}\]</div>
       <p>週期為：</p>
-      <div class="formula">\boxed{T=\frac{2\pi}{\omega}=2\pi\sqrt{\frac{l\cos\theta}{g}}}</div>
+      <div class="formula">\[\boxed{T=\frac{2\pi}{\omega}=2\pi\sqrt{\frac{l\cos\theta}{g}}}\]</div>
     </section>
 
     <section class="card">
@@ -276,11 +276,11 @@
       <details open>
         <summary>展開對照式</summary>
         <p>張力鉛直分量平衡重力，水平分量提供向心力：</p>
-        <div class="formula">F_T\cos\theta=mg</div>
-        <div class="formula">F_T\sin\theta=ml\sin\theta\,\omega^2</div>
+        <div class="formula">\[F_T\cos\theta=mg\]</div>
+        <div class="formula">\[F_T\sin\theta=ml\sin\theta\,\omega^2\]</div>
         <p>兩式相除：</p>
-        <div class="formula">\tan\theta=\frac{l\sin\theta\,\omega^2}{g}</div>
-        <div class="formula">\omega^2=\frac{g}{l\cos\theta}</div>
+        <div class="formula">\[\tan\theta=\frac{l\sin\theta\,\omega^2}{g}\]</div>
+        <div class="formula">\[\omega^2=\frac{g}{l\cos\theta}\]</div>
         <p>與 Lagrange 推導一致。</p>
       </details>
     </section>

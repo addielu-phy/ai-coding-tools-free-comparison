@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>高一數學下｜南一版第三章：機率重點與重要試題解說</title>
+  <meta name="description" content="高中一年級下學期南一版數學第三章機率：重點整理、常見題型、重要試題完整解說與考前檢核。" />
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <style>
+    :root{
+      --bg:#f7f4ed; --paper:#fffdf8; --ink:#1f2933; --muted:#667085; --line:#e7decf;
+      --brand:#8a4b20; --brand2:#1b6b6f; --accent:#c77700; --ok:#20724f; --warn:#ad4e00;
+      --shadow:0 18px 50px rgba(80,45,18,.10),0 3px 12px rgba(0,0,0,.05);
+      --radius:22px; --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:system-ui,-apple-system,"Noto Sans TC","Microsoft JhengHei",sans-serif;background:radial-gradient(circle at top left,#fff6df 0,#f7f4ed 34%,#eef7f5 100%);color:var(--ink);line-height:1.8}
+    a{color:var(--brand2);text-decoration:none} a:hover{text-decoration:underline}
+    .wrap{width:min(1120px,calc(100% - 34px));margin:auto}.hero{padding:58px 0 28px}.badge{display:inline-flex;gap:8px;align-items:center;border:1px solid #ead7b4;background:#fff7e6;color:var(--brand);border-radius:999px;padding:6px 12px;font-weight:800;font-size:13px;letter-spacing:.04em}
+    h1{font-size:clamp(34px,6vw,64px);line-height:1.06;margin:18px 0 14px;letter-spacing:-.045em}.lead{max-width:850px;color:#475467;font-size:clamp(17px,2.2vw,22px);font-weight:560}.meta{margin-top:16px;color:var(--muted);font-size:14px}.notice{margin-top:20px;border-left:5px solid var(--accent);background:rgba(255,248,232,.85);padding:13px 16px;border-radius:14px;color:#59401f}
+    .toc{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:26px 0}.toc a{display:block;background:rgba(255,255,255,.78);border:1px solid var(--line);box-shadow:0 6px 18px rgba(0,0,0,.035);border-radius:16px;padding:14px;font-weight:750;color:#344054}.toc small{display:block;color:var(--muted);font-weight:500;margin-top:4px}
+    section{background:rgba(255,253,248,.92);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:var(--radius);padding:30px;margin:22px 0}.kicker{font-size:13px;color:var(--brand);font-weight:900;letter-spacing:.08em;text-transform:uppercase}h2{font-size:clamp(25px,3.2vw,38px);line-height:1.18;margin:8px 0 18px}h3{font-size:22px;margin:22px 0 8px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px}.card h3{margin-top:0}.pill{display:inline-block;padding:3px 9px;border-radius:999px;font-size:12px;font-weight:800;margin-right:6px}.p-blue{background:#e6f3f4;color:#155c60}.p-gold{background:#fff1cd;color:#946000}.p-green{background:#e8f6ef;color:#176348}.p-red{background:#fff0ec;color:#9b341d}
+    .formula{background:#fbfaf7;border:1px dashed #d9c9b3;border-radius:14px;padding:12px 14px;margin:12px 0}.steps{counter-reset:step;list-style:none;padding-left:0}.steps li{counter-increment:step;margin:11px 0;padding-left:48px;position:relative}.steps li::before{content:counter(step);position:absolute;left:0;top:1px;width:30px;height:30px;border-radius:50%;background:var(--brand2);color:white;display:grid;place-items:center;font-weight:900}.question{border-top:1px solid var(--line);padding-top:22px;margin-top:24px}.tag{font-family:var(--mono);font-size:12px;background:#f2eee7;border:1px solid #e2d8c8;border-radius:8px;padding:3px 7px;color:#6b4e2e}.answer{background:#f5fbf9;border:1px solid #cae6df;border-radius:16px;padding:15px;margin-top:10px}.mistake{background:#fff7f2;border:1px solid #ffd7c2;border-radius:16px;padding:14px;margin-top:12px;color:#713214}.checklist li{margin:8px 0}table{border-collapse:collapse;width:100%;background:white;border-radius:15px;overflow:hidden}th,td{border:1px solid var(--line);padding:12px;vertical-align:top}th{background:#f8efe1;color:#5b361d;text-align:left}.footer{color:var(--muted);font-size:14px;text-align:center;padding:26px 0 44px}
+    @media(max-width:850px){.toc{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}section{padding:22px}.hero{padding-top:36px}}@media(max-width:520px){.toc{grid-template-columns:1fr}h1{letter-spacing:-.025em}}
+    @media print{body{background:white}.toc,.footer{display:none}section{break-inside:avoid;box-shadow:none}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <span class="badge">高中一年級下學期｜南一版數學第三章</span>
+      <h1>機率：重點整理與重要試題解說</h1>
+      <p class="lead">把高一下第三章常考的「樣本空間、古典機率、條件機率、獨立事件、期望值」整理成一頁可複習、可上課投影、可給學生自學的網頁。</p>
+      <div class="meta">製作時間：2026-05-16｜內容為原創教學整理；重要試題為仿考型練習題，不複製課本原題。</div>
+      <div class="notice">說明：此頁依目前常見南一版高一下數學第三章「機率」架構整理。若盧老師手上的班級版本章名或小節順序不同，我可以再依實際目錄微調。</div>
+      <nav class="toc">
+        <a href="#focus">章節重點<small>觀念地圖與公式</small></a>
+        <a href="#types">常見題型<small>從計數到機率</small></a>
+        <a href="#problems">重要試題解說<small>8 題完整步驟</small></a>
+        <a href="#review">考前檢核<small>易錯點與練習建議</small></a>
+      </nav>
+    </header>
+
+    <section id="focus">
+      <div class="kicker">Part 1</div>
+      <h2>一、第三章核心重點</h2>
+      <div class="grid">
+        <div class="card"><h3>1. 樣本空間與事件</h3><p>一次隨機試驗所有可能結果的集合稱為樣本空間 \(S\)，事件 \(A\) 是 \(S\) 的子集合。</p><div class="formula">必會：互斥、補事件、聯集、交集。</div></div>
+        <div class="card"><h3>2. 古典機率</h3><p>若所有基本結果等可能，則</p><div class="formula">\[P(A)=\frac{n(A)}{n(S)}\]</div><p>關鍵不是背公式，而是分母、分子的「計數單位」要一致。</p></div>
+        <div class="card"><h3>3. 加法原理</h3><p>任意兩事件：</p><div class="formula">\[P(A\cup B)=P(A)+P(B)-P(A\cap B)\]</div><p>若互斥，交集為 0，才可直接相加。</p></div>
+        <div class="card"><h3>4. 補事件</h3><p>「至少一個」「不是全部失敗」「不超過」常用補事件簡化。</p><div class="formula">\[P(A^c)=1-P(A)\]</div></div>
+        <div class="card"><h3>5. 條件機率</h3><p>已知 \(B\) 發生後，樣本空間縮小成 \(B\)。</p><div class="formula">\[P(A\mid B)=\frac{P(A\cap B)}{P(B)}\quad(P(B)>0)\]</div></div>
+        <div class="card"><h3>6. 獨立事件</h3><p>\(A\) 發生與否不影響 \(B\) 的機率。</p><div class="formula">\[P(A\cap B)=P(A)P(B)\]</div><p>注意：獨立與互斥不是同一件事。</p></div>
+      </div>
+      <h3>本章觀念一句話</h3>
+      <p>機率題的核心是「先定義清楚樣本空間，再決定用直接算、補事件、條件機率或獨立性」。不要急著套公式；先問：這題的等可能單位是什麼？有沒有順序？有沒有放回？條件是否改變樣本空間？</p>
+    </section>
+
+    <section id="types">
+      <div class="kicker">Part 2</div>
+      <h2>二、常見題型與解題策略</h2>
+      <table>
+        <thead><tr><th>題型</th><th>常見關鍵字</th><th>建議策略</th></tr></thead>
+        <tbody>
+          <tr><td>等可能樣本空間</td><td>擲骰、抽牌、抽球、選人</td><td>先判斷是否有順序、是否放回，再用排列組合計數。</td></tr>
+          <tr><td>至少／至多</td><td>至少一個、至少一次成功、沒有全部</td><td>優先想補事件，通常比分類討論短。</td></tr>
+          <tr><td>兩事件關係</td><td>A 或 B、A 且 B、不是 A</td><td>畫集合圖；「或」要小心重複計算。</td></tr>
+          <tr><td>條件機率</td><td>已知、在……之中、若已發生</td><td>把已知條件視為新的樣本空間，重新計分母。</td></tr>
+          <tr><td>獨立性判斷</td><td>是否互不影響、放回抽取、連續試驗</td><td>檢查 \(P(A\cap B)=P(A)P(B)\)，不要只靠直覺。</td></tr>
+          <tr><td>期望值</td><td>平均收益、公平遊戲、獎金</td><td>列出每個結果的值與機率，計算 \(E(X)=\sum x_iP(X=x_i)\)。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="problems">
+      <div class="kicker">Part 3</div>
+      <h2>三、重要試題解說</h2>
+
+      <div class="question">
+        <span class="tag">例題 1｜古典機率與補事件</span>
+        <h3>擲兩顆公平骰子，點數和至少為 10 的機率為何？</h3>
+        <ol class="steps">
+          <li>兩顆骰子有順序，樣本空間共有 \(6\times 6=36\) 種。</li>
+          <li>點數和至少 10，包含和為 10、11、12。</li>
+          <li>和為 10：\((4,6),(5,5),(6,4)\)，3 種；和為 11：2 種；和為 12：1 種。</li>
+        </ol>
+        <div class="answer">\[P=\frac{3+2+1}{36}=\frac{1}{6}\]</div>
+        <div class="mistake">易錯：把 \((4,6)\) 與 \((6,4)\) 當同一種，會低估機率。擲兩顆骰子若可區分，就要算有序結果。</div>
+      </div>
+
+      <div class="question">
+        <span class="tag">例題 2｜抽球不放回</span>
+        <h3>袋中有 4 顆紅球、3 顆藍球、2 顆白球。任取 3 顆，恰有 2 顆紅球的機率為何？</h3>
+        <ol class="steps">
+          <li>任取 3 顆不管順序，總數為 \(\binom{9}{3}\)。</li>
+          <li>恰有 2 紅：從 4 顆紅球選 2 顆，從 5 顆非紅球選 1 顆。</li>
+        </ol>
+        <div class="answer">\[P=\frac{\binom42\binom51}{\binom93}=\frac{6\cdot5}{84}=\frac{5}{14}\]</div>
+        <div class="mistake">易錯：分母若用排列 \(9\times8\times7\)，分子也必須用有序計數；最好全題統一用組合。</div>
+      </div>
+
+      <div class="question">
+        <span class="tag">例題 3｜至少一個成功</span>
+        <h3>某射手每次命中率為 \(0.7\)，連射 4 次且各次獨立，至少命中一次的機率為何？</h3>
+        <ol class="steps">
+          <li>「至少一次」的補事件是「一次都沒中」。</li>
+          <li>一次沒中的機率是 \(0.3\)，四次都沒中為 \(0.3^4\)。</li>
+        </ol>
+        <div class="answer">\[P=1-0.3^4=1-0.0081=0.9919\]</div>
+        <div class="mistake">易錯：把至少一次誤算成 \(4\times0.7\)。機率不能這樣直接乘次數，因為會超過 1。</div>
+      </div>
+
+      <div class="question">
+        <span class="tag">例題 4｜加法公式</span>
+        <h3>一班 40 人中，參加數學社有 18 人，參加科學社有 15 人，兩社都參加有 6 人。隨機選一人，至少參加其中一社的機率為何？</h3>
+        <ol class="steps">
+          <li>「至少參加一社」是 \(M\cup S\)。</li>
+          <li>兩社都參加的 6 人，在 \(18+15\) 中被重複算一次，因此要扣掉。</li>
+        </ol>
+        <div class="answer">\[P(M\cup S)=\frac{18+15-6}{40}=\frac{27}{40}\]</div>
+        <div class="mistake">易錯：若直接算 \(18+15\)，會把兩社都參加者重複計入。</div>
+      </div>
+
+      <div class="question">
+        <span class="tag">例題 5｜條件機率</span>
+        <h3>擲兩顆公平骰子，已知點數和為偶數，求兩顆點數相同的機率。</h3>
+        <ol class="steps">
+          <li>條件「點數和為偶數」代表樣本空間不是 36，而是和為偶數的結果。</li>
+          <li>和為偶數等價於兩顆同奇或同偶：\(3\times3+3\times3=18\) 種。</li>
+          <li>兩顆點數相同有 \((1,1),(2,2),\ldots,(6,6)\)，共 6 種，且都屬於和為偶數。</li>
+        </ol>
+        <div class="answer">\[P(\text{同點}\mid \text{和偶})=\frac{6}{18}=\frac{1}{3}\]</div>
+        <div class="mistake">易錯：直接用 \(6/36\)。已知條件發生後，分母必須改成條件事件的大小。</div>
+      </div>
+
+      <div class="question">
+        <span class="tag">例題 6｜獨立事件判斷</span>
+        <h3>從 1 到 12 中任選一個整數。令 \(A\)：選到偶數；\(B\)：選到 3 的倍數。判斷 \(A\) 與 \(B\) 是否獨立。</h3>
+        <ol class="steps">
+          <li>\(P(A)=6/12=1/2\)。</li>
+          <li>\(P(B)=4/12=1/3\)。</li>
+          <li>同時為偶數且為 3 的倍數，即 6 的倍數：6、12，共 2 個，故 \(P(A\cap B)=2/12=1/6\)。</li>
+        </ol>
+        <div class="answer">因為 \[P(A)P(B)=\frac12\cdot\frac13=\frac16=P(A\cap B)\] 所以 \(A\) 與 \(B\) 獨立。</div>
+        <div class="mistake">觀念提醒：獨立不代表沒有交集；互斥且機率皆非 0 的兩事件反而不會獨立。</div>
+      </div>
+
+      <div class="question">
+        <span class="tag">例題 7｜條件機率與抽牌</span>
+        <h3>從一副 52 張撲克牌中抽一張，已知抽到的是紅色牌，求它是 A 的機率。</h3>
+        <ol class="steps">
+          <li>已知抽到紅色牌，新的樣本空間是 26 張紅牌。</li>
+          <li>紅色 A 有紅心 A、方塊 A，共 2 張。</li>
+        </ol>
+        <div class="answer">\[P(\text{A}\mid \text{紅色})=\frac{2}{26}=\frac{1}{13}\]</div>
+        <div class="mistake">易錯：用 \(4/52\) 雖然數值也等於 \(1/13\)，但解題邏輯上要知道條件已把分母改成 26；較複雜題不一定會巧合相同。</div>
+      </div>
+
+      <div class="question">
+        <span class="tag">例題 8｜期望值與公平遊戲</span>
+        <h3>擲一顆公平骰子。若擲出 6 點可得 90 元，擲出 1 或 2 點需付 30 元，其餘點數不賺不賠。此遊戲的期望收益為何？是否公平？</h3>
+        <ol class="steps">
+          <li>收益隨機變數 \(X\)：6 點為 90；1 或 2 點為 \(-30\)；3、4、5 點為 0。</li>
+          <li>列出機率：\(P(X=90)=1/6\)，\(P(X=-30)=2/6\)，\(P(X=0)=3/6\)。</li>
+        </ol>
+        <div class="answer">\[E(X)=90\cdot\frac16+(-30)\cdot\frac26+0\cdot\frac36=15-10=5\] 平均每玩一次賺 5 元，對玩家有利，不是公平遊戲。</div>
+        <div class="mistake">公平遊戲不是「有輸有贏」就公平，而是期望值等於 0。</div>
+      </div>
+    </section>
+
+    <section id="review">
+      <div class="kicker">Part 4</div>
+      <h2>四、考前檢核與教學提醒</h2>
+      <div class="grid">
+        <div class="card"><h3>學生要會問的四句話</h3><ul class="checklist"><li>分母的樣本空間是什麼？</li><li>每個結果真的等可能嗎？</li><li>有沒有「已知」條件改變分母？</li><li>用補事件會不會更快？</li></ul></div>
+        <div class="card"><h3>最常見錯誤</h3><ul class="checklist"><li>把「互斥」與「獨立」混為一談。</li><li>忘記扣掉重複計算的交集。</li><li>條件機率仍用原本分母。</li><li>排列與組合在同一題混用。</li></ul></div>
+        <div class="card"><h3>一節課複習安排</h3><ul class="checklist"><li>10 分鐘：公式不是重點，樣本空間才是。</li><li>20 分鐘：例題 1–4 建立基本功。</li><li>20 分鐘：例題 5–8 處理條件、獨立與期望。</li><li>5 分鐘：讓學生寫一題自己的補事件題。</li></ul></div>
+      </div>
+      <h3>快速診斷題</h3>
+      <p>若學生看到「至少」還習慣逐項分類，代表補事件不熟；看到「已知」仍用原樣本空間，代表條件機率概念未穩。這兩點是本章最值得優先補強的地方。</p>
+    </section>
+
+    <div class="footer">本頁可直接投影、列印或分享給學生。若要改成講義 PDF、加上課後練習題、或做成可互動測驗版，可再延伸。</div>
+  </div>
+</body>
+</html>

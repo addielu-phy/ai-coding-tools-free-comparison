@@ -29,6 +29,9 @@
     .formula{background:#fbfaf7;border:1px dashed #d9c9b3;border-radius:14px;padding:12px 14px;margin:12px 0}.steps{counter-reset:step;list-style:none;padding-left:0}.steps li{counter-increment:step;margin:11px 0;padding-left:48px;position:relative}.steps li::before{content:counter(step);position:absolute;left:0;top:1px;width:30px;height:30px;border-radius:50%;background:var(--brand2);color:white;display:grid;place-items:center;font-weight:900}.question{border-top:1px solid var(--line);padding-top:22px;margin-top:24px}.tag{font-family:var(--mono);font-size:12px;background:#f2eee7;border:1px solid #e2d8c8;border-radius:8px;padding:3px 7px;color:#6b4e2e}.answer{background:#f5fbf9;border:1px solid #cae6df;border-radius:16px;padding:15px;margin-top:10px}.mistake{background:#fff7f2;border:1px solid #ffd7c2;border-radius:16px;padding:14px;margin-top:12px;color:#713214}.checklist li{margin:8px 0}table{border-collapse:collapse;width:100%;background:white;border-radius:15px;overflow:hidden}th,td{border:1px solid var(--line);padding:12px;vertical-align:top}th{background:#f8efe1;color:#5b361d;text-align:left}.footer{color:var(--muted);font-size:14px;text-align:center;padding:26px 0 44px}
     @media(max-width:850px){.toc{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}section{padding:22px}.hero{padding-top:36px}}@media(max-width:520px){.toc{grid-template-columns:1fr}h1{letter-spacing:-.025em}}
     @media print{body{background:white}.toc,.footer{display:none}section{break-inside:avoid;box-shadow:none}}
+
+    .source-note{font-size:14px;color:#59401f;background:#fff8e8;border:1px solid #f0d6a6;border-radius:14px;padding:12px 14px;margin:12px 0 18px}
+    .chapter-list{display:grid;gap:16px}.chapter-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px}.chapter-card h3{margin:0 0 8px}.exam-list{display:grid;gap:10px;margin-top:12px}.exam-item{border:1px solid #e6dfd3;background:#fffdf9;border-radius:14px;padding:12px 14px}.exam-item strong{display:block}.exam-item small{display:block;color:var(--muted);line-height:1.55}.exam-actions{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;gap:6px;border-radius:999px;border:1px solid #b9d8d9;background:#effafa;color:#155c60;padding:5px 10px;font-size:13px;font-weight:800}.btn:hover{text-decoration:none;background:#e1f3f4}.label{display:inline-block;border-radius:999px;font-size:12px;font-weight:900;padding:2px 8px;margin-left:6px}.label-core{background:#e8f6ef;color:#176348}.label-pre{background:#fff1cd;color:#946000}.label-other{background:#eef2f7;color:#475467}
   </style>
 </head>
 <body>
@@ -36,12 +39,13 @@
     <header class="hero">
       <span class="badge">高中一年級下學期｜南一版數學第三章</span>
       <h1>機率：重點整理與重要試題解說</h1>
-      <p class="lead">把高一下第三章常考的「樣本空間、古典機率、條件機率、獨立事件、期望值」整理成一頁可複習、可上課投影、可給學生自學的網頁。</p>
-      <div class="meta">製作時間：2026-05-16｜內容為原創教學整理；重要試題為仿考型練習題，不複製課本原題。</div>
+      <p class="lead">把高一下第三章常考的「樣本空間、古典機率、條件機率、獨立事件、期望值」整理成一頁，並加入高師大附中歷屆公開試題連結，依章節分類，方便備課與給學生練習。</p>
+      <div class="meta">更新時間：2026-05-17｜內容為原創教學整理；歷屆試題連結取自高師大附中數學科公開頁面，本站只整理與導向原始公開來源。</div>
       <div class="notice">說明：此頁依目前常見南一版高一下數學第三章「機率」架構整理。若盧老師手上的班級版本章名或小節順序不同，我可以再依實際目錄微調。</div>
       <nav class="toc">
         <a href="#focus">章節重點<small>觀念地圖與公式</small></a>
         <a href="#types">常見題型<small>從計數到機率</small></a>
+        <a href="#archive">歷屆試題<small>依章節分類</small></a>
         <a href="#problems">重要試題解說<small>8 題完整步驟</small></a>
         <a href="#review">考前檢核<small>易錯點與練習建議</small></a>
       </nav>
@@ -78,9 +82,63 @@
       </table>
     </section>
 
-    <section id="problems">
+
+    <section id="archive">
       <div class="kicker">Part 3</div>
-      <h2>三、重要試題解說</h2>
+      <h2>三、歷屆公開試題：依章節分類</h2>
+      <div class="source-note">
+        來源：<a href="https://sites.google.com/tea.nknush.kh.edu.tw/nknush-math/%E9%AB%98%E4%B8%AD%E6%AE%B5%E8%80%83%E8%A9%A6%E9%A1%8C/%E9%AB%98%E4%B8%80%E8%A9%A6%E9%A1%8C" target="_blank" rel="noopener">高師大附中數學科高一試題頁</a> 與其嵌入之公開 Google Drive。以下為依 PDF 文字與題目關鍵字所做的備課分類；同一份試卷可能橫跨多章。
+      </div>
+
+      <div class="chapter-list">
+        <div class="chapter-card">
+          <h3>第三章｜機率、期望值、隨機試驗 <span class="label label-core">最相關</span></h3>
+          <p>最適合直接對應「南一版高一下第三章：機率」的歷屆段考題。</p>
+          <div class="exam-list">
+            <div class="exam-item"><strong>113 學年度下學期｜第二次段考</strong><small>任取球、抽獎、字排列之機率、期望值；同時含排列組合前置。</small><div class="exam-actions"><a class="btn" href="https://drive.google.com/file/d/1xI9UdPouMTvhtT43bmBLCXNIaUiYP27P/view?usp=drive_link" target="_blank" rel="noopener">開啟試題 PDF</a></div></div>
+            <div class="exam-item"><strong>112 學年度下學期｜第三次段考</strong><small>取球、放回/不放回、不公平骰、猜拳、是非題猜測與期望值。</small><div class="exam-actions"><a class="btn" href="https://drive.google.com/file/d/1P0W0HnJ0RBGAC4nllN5G-yhNeaif-uhx/view?usp=drive_link" target="_blank" rel="noopener">開啟試題 PDF</a></div></div>
+            <div class="exam-item"><strong>111 學年度下學期｜第二次段考</strong><small>隨機跳動、硬幣公平賭局、猜拳、不放回抽球、骰子機率。</small><div class="exam-actions"><a class="btn" href="https://drive.google.com/file/d/1cV39zOEL8dzRCKHfl6B9purIyw_zExGp/view?usp=share_link" target="_blank" rel="noopener">開啟試題 PDF</a></div></div>
+            <div class="exam-item"><strong>110 學年度下學期｜第二次段考</strong><small>猜拳、硬幣、骰子、青蛙隨機漫步、抽籤座位、取球期望；題量最完整。</small><div class="exam-actions"><a class="btn" href="https://drive.google.com/file/d/1PdmUp5qao8eQcYuys8Y6tZd0l-huJG5i/view?usp=sharing" target="_blank" rel="noopener">開啟試題 PDF</a></div></div>
+          </div>
+        </div>
+
+        <div class="chapter-card">
+          <h3>第二章｜排列組合、計數原理、集合 <span class="label label-pre">前置練習</span></h3>
+          <p>適合在機率章前先補「分母與分子怎麼數」；有些試卷也可作機率章暖身。</p>
+          <div class="exam-list">
+            <div class="exam-item"><strong>112 學年度下學期｜第二次段考</strong><small>集合、排列組合、分配等；機率關鍵字少，但很適合機率章前置。</small><div class="exam-actions"><a class="btn" href="https://drive.google.com/file/d/1IuM3NgaZif77BHaVSbIqQoNHhAP3ptPd/view?usp=drive_link" target="_blank" rel="noopener">開啟試題 PDF</a></div></div>
+            <div class="exam-item"><strong>110 學年度下學期｜第一次段考</strong><small>數列為主，含排列組合/集合題；可抽用作計數概念複習。</small><div class="exam-actions"><a class="btn" href="https://drive.google.com/file/d/1-2bZFUm7ddAB_ezeCQHWVHNeXDOJilm1/view?usp=sharing" target="_blank" rel="noopener">開啟試題 PDF</a></div></div>
+          </div>
+        </div>
+
+        <div class="chapter-card">
+          <h3>第一章與統計資料分析｜數列、級數、平均、標準差、相關 <span class="label label-other">非機率主軸</span></h3>
+          <p>這些試卷不是第三章機率主軸，但可供高一下其他章節複習或段考進度比對。</p>
+          <div class="exam-list">
+            <div class="exam-item"><strong>114 學年度下學期｜第二次段考</strong><small>統計資料分析為主。</small><div class="exam-actions"><a class="btn" href="https://drive.google.com/file/d/16NUTP3KCZLxDX2zXZi_79ARlT_35vTj6/view?usp=sharing" target="_blank" rel="noopener">開啟試題 PDF</a></div></div>
+            <div class="exam-item"><strong>113 學年度下學期｜第一次段考</strong><small>數列、統計資料分析為主。</small><div class="exam-actions"><a class="btn" href="https://drive.google.com/file/d/1cPeMwIyf5BqiOu2Xrew2zf7_HtN13FdM/view?usp=drive_link" target="_blank" rel="noopener">開啟試題 PDF</a></div></div>
+            <div class="exam-item"><strong>112 學年度下學期｜第一次段考</strong><small>數列、統計資料分析為主。</small><div class="exam-actions"><a class="btn" href="https://drive.google.com/file/d/1I-4Jbs9RW0QN2fvSCmwbd3UmwNWBG506/view?usp=drive_link" target="_blank" rel="noopener">開啟試題 PDF</a></div></div>
+            <div class="exam-item"><strong>111 學年度下學期｜第一次段考</strong><small>數列與統計資料分析為主。</small><div class="exam-actions"><a class="btn" href="https://drive.google.com/file/d/1IqNZaAY2ncycqlFT0OCusk9eW7zBOBEo/view?usp=share_link" target="_blank" rel="noopener">開啟試題 PDF</a></div></div>
+            <div class="exam-item"><strong>109 學年度下學期｜第二次段考</strong><small>數列/統計為主，未見機率主軸。</small><div class="exam-actions"><a class="btn" href="https://drive.google.com/file/d/1al6YASB3P_XeBabpJfsMyQ1e0CxOeUJM/view?usp=sharing" target="_blank" rel="noopener">開啟試題 PDF</a></div></div>
+          </div>
+        </div>
+
+        <div class="chapter-card">
+          <h3>三角比與解三角形｜進度差異/其他章節 <span class="label label-other">備查</span></h3>
+          <p>部分年度下學期段考把三角比或解三角形放在同一學期不同次段考，可供章節進度調整時備查。</p>
+          <div class="exam-list">
+            <div class="exam-item"><strong>114 學年度下學期｜第一次段考</strong><small>三角比/解三角形為主。</small><div class="exam-actions"><a class="btn" href="https://drive.google.com/file/d/1yK_eJnQpwKkj0q3Z4KazePp1sJp5luav/view?usp=sharing" target="_blank" rel="noopener">開啟試題 PDF</a></div></div>
+            <div class="exam-item"><strong>113 學年度下學期｜第三次段考</strong><small>三角比/解三角形為主。</small><div class="exam-actions"><a class="btn" href="https://drive.google.com/file/d/1CZrT94IwrC8fuqiABPIZgCM7XONQHRhR/view?usp=drive_link" target="_blank" rel="noopener">開啟試題 PDF</a></div></div>
+            <div class="exam-item"><strong>111 學年度下學期｜第三次段考</strong><small>三角比/解三角形為主。</small><div class="exam-actions"><a class="btn" href="https://drive.google.com/file/d/1iC_47lIrQwCGjfETiqIq_Otu8Jws_DIN/view?usp=drive_link" target="_blank" rel="noopener">開啟試題 PDF</a></div></div>
+            <div class="exam-item"><strong>109 學年度下學期｜第一次段考</strong><small>三角/解三角形為主，較舊年度備查。</small><div class="exam-actions"><a class="btn" href="https://docs.google.com/document/d/1PiuUDbUVzLJdLJOJxwVjzm6zFm_KW18C/edit?usp=sharing&ouid=103337008567797972791&rtpof=true&sd=true" target="_blank" rel="noopener">開啟試題</a></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="problems">
+      <div class="kicker">Part 4</div>
+      <h2>四、重要試題解說</h2>
 
       <div class="question">
         <span class="tag">例題 1｜古典機率與補事件</span>
@@ -175,8 +233,8 @@
     </section>
 
     <section id="review">
-      <div class="kicker">Part 4</div>
-      <h2>四、考前檢核與教學提醒</h2>
+      <div class="kicker">Part 5</div>
+      <h2>五、考前檢核與教學提醒</h2>
       <div class="grid">
         <div class="card"><h3>學生要會問的四句話</h3><ul class="checklist"><li>分母的樣本空間是什麼？</li><li>每個結果真的等可能嗎？</li><li>有沒有「已知」條件改變分母？</li><li>用補事件會不會更快？</li></ul></div>
         <div class="card"><h3>最常見錯誤</h3><ul class="checklist"><li>把「互斥」與「獨立」混為一談。</li><li>忘記扣掉重複計算的交集。</li><li>條件機率仍用原本分母。</li><li>排列與組合在同一題混用。</li></ul></div>

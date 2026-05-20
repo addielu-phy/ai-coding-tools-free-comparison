@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PhAI 共學圈｜Codex × Agent 協作：讓 AI 成為你的教學助理團隊</title>
+<style>
+:root{
+  --bg:#0f1412; --panel:#17201c; --panel2:#202c27; --ink:#f2f6ef; --muted:#aebbb1;
+  --accent:#92e0b6; --accent2:#ffd166; --accent3:#86b7ff; --danger:#ff8b8b; --line:#365044;
+  --shadow:0 24px 80px rgba(0,0,0,.35); --radius:28px;
+}
+*{box-sizing:border-box} html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;overflow:hidden}
+body{background:radial-gradient(1200px 800px at 80% 10%, rgba(146,224,182,.16), transparent 55%), radial-gradient(900px 700px at 10% 90%, rgba(134,183,255,.12), transparent 55%), var(--bg)}
+.deck{height:100vh;display:grid;place-items:center;padding:20px}.stage{width:min(100vw - 40px,177.78vh - 40px);aspect-ratio:16/9;position:relative}.slide{position:absolute;inset:0;border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);background:linear-gradient(135deg,rgba(23,32,28,.96),rgba(15,20,18,.97));box-shadow:var(--shadow);padding:64px;display:none;overflow:hidden}.slide.active{display:flex;flex-direction:column}.slide::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(146,224,182,.08) 1px,transparent 1px),linear-gradient(rgba(146,224,182,.055) 1px,transparent 1px);background-size:52px 52px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.45),transparent 78%);pointer-events:none}.topline{display:flex;justify-content:space-between;gap:24px;align-items:center;color:var(--muted);font-size:22px;letter-spacing:.04em;margin-bottom:34px;position:relative;z-index:1}.tag{display:inline-flex;gap:10px;align-items:center;border:1px solid var(--line);border-radius:999px;padding:8px 16px;background:rgba(255,255,255,.04);color:var(--accent)}
+h1{font-size:72px;line-height:1.05;margin:0 0 24px;text-wrap:balance;letter-spacing:-.03em}h2{font-size:58px;line-height:1.08;margin:0 0 24px;text-wrap:balance;letter-spacing:-.025em}h3{font-size:34px;margin:0 0 14px;color:var(--accent)}p,li{font-size:31px;line-height:1.48}p{margin:0 0 18px}.muted{color:var(--muted)}.accent{color:var(--accent)}.yellow{color:var(--accent2)}.blue{color:var(--accent3)}.danger{color:var(--danger)}.big{font-size:44px;line-height:1.32}.huge{font-size:92px;line-height:1.02;letter-spacing:-.05em}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:stretch;position:relative;z-index:1}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative;z-index:1}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative;z-index:1}.card{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.045);border-radius:24px;padding:28px;position:relative;overflow:hidden}.card strong{color:var(--ink)}.card .num{font-size:52px;color:var(--accent);font-weight:800;line-height:1}.flow{display:flex;align-items:center;gap:18px;position:relative;z-index:1}.step{flex:1;border:1px solid var(--line);background:rgba(32,44,39,.88);border-radius:22px;padding:24px;min-height:160px}.arrow{font-size:46px;color:var(--accent2)}.quote{font-size:48px;line-height:1.28;border-left:8px solid var(--accent);padding-left:28px;max-width:1450px}.small{font-size:23px}.mini{font-size:18px}.kpi{font-size:76px;font-weight:800;color:var(--accent);letter-spacing:-.04em}.timeline{display:grid;grid-template-columns:180px 1fr;gap:16px;position:relative;z-index:1}.timeline div{font-size:28px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.1)}.time{color:var(--accent2);font-weight:700}.diagram{position:relative;height:620px;z-index:1}.node{position:absolute;border:1px solid var(--line);background:rgba(255,255,255,.06);border-radius:28px;padding:24px;width:310px;min-height:125px;box-shadow:0 14px 34px rgba(0,0,0,.18)}.node h3{font-size:28px}.center{left:50%;top:50%;transform:translate(-50%,-50%);width:390px;text-align:center;border-color:var(--accent);background:rgba(146,224,182,.08)}.n1{left:60px;top:40px}.n2{right:60px;top:40px}.n3{left:60px;bottom:40px}.n4{right:60px;bottom:40px}.n5{left:50%;top:42px;transform:translateX(-50%)}.n6{left:50%;bottom:42px;transform:translateX(-50%)}.line{position:absolute;background:linear-gradient(90deg,transparent,var(--accent),transparent);height:2px;opacity:.45;transform-origin:left center}.code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;font-size:23px;line-height:1.5;background:#0a0f0d;border:1px solid #263d34;border-radius:20px;padding:22px;white-space:pre-wrap;color:#d7ffe7}.footer{margin-top:auto;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:20px;position:relative;z-index:1}.notes{display:none;position:absolute;left:40px;right:40px;bottom:40px;background:rgba(8,12,10,.94);border:1px solid var(--accent);border-radius:20px;padding:20px;color:var(--ink);font-size:22px;z-index:10}.show-notes .active .notes{display:block}.controls{position:fixed;left:20px;right:20px;bottom:14px;display:flex;justify-content:center;gap:12px;z-index:50;pointer-events:none}.pill{pointer-events:auto;background:rgba(0,0,0,.56);border:1px solid rgba(255,255,255,.18);border-radius:999px;color:var(--ink);padding:9px 14px;font-size:14px}.progress{position:fixed;top:0;left:0;height:5px;background:linear-gradient(90deg,var(--accent),var(--accent2));z-index:60;width:0}.source{font-size:19px;color:#93a69a}.two-col-list{columns:2;column-gap:50px}.two-col-list li{break-inside:avoid;margin-bottom:12px}@media print{html,body{overflow:visible;background:white}.deck{display:block;padding:0}.stage{width:100%;height:auto;aspect-ratio:auto}.slide{display:flex !important;position:relative;page-break-after:always;border-radius:0;box-shadow:none;height:100vh}.controls,.progress{display:none}.notes{display:block;position:static;margin-top:20px;border-color:#777;background:#111}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="deck"><main class="stage" id="stage">
+
+<section class="slide active" data-title="title">
+  <div class="topline"><span class="tag">PhAI 共學圈｜2026/05/20</span><span>Physics × AI 物理教學分享</span></div>
+  <h1>Codex × Agent 協作<br><span class="accent">讓 AI 成為你的教學助理團隊</span></h1>
+  <p class="big muted">從教材、評量、影片到資料整理：一位高中物理老師的實戰工作流</p>
+  <div class="footer"><span>盧政良｜高雄中學／高師大物理系兼任</span><span>← → 換頁｜S 講者提示｜F 全螢幕</span></div>
+  <div class="notes">開場語氣：不要把自己放成「大師」，而是「我這幾週把 AI 當成一群助教來磨，今天分享哪些真的省下時間、哪些還需要老師把關」。</div>
+</section>
+
+<section class="slide">
+  <div class="topline"><span class="tag">今晚 60 分鐘</span><span>不是工具展示，是工作流展示</span></div>
+  <h2>我想回答三個問題</h2>
+  <div class="grid3">
+    <div class="card"><div class="num">1</div><h3>Agent 到底幫老師做什麼？</h3><p>不是聊天，而是把任務拆成可交付的工作包。</p></div>
+    <div class="card"><div class="num">2</div><h3>物理教學如何落地？</h3><p>從題目來源、建模、腳本、圖卡、旁白、字幕到 QA。</p></div>
+    <div class="card"><div class="num">3</div><h3>老師怎麼守住品質？</h3><p>物理正確性、學生尊嚴、引用授權、可追溯紀錄。</p></div>
+  </div>
+  <div class="notes">提醒大家：今晚不是要大家馬上用同一套工具，而是看「把任務交給 AI 團隊」的設計方法。</div>
+</section>
+
+<section class="slide">
+  <div class="topline"><span class="tag">核心比喻</span><span>從單一 Chatbot 到助教團隊</span></div>
+  <h2>以前我問 AI：<span class="muted">「幫我做教材」</span><br>現在我派工：<span class="accent">「誰負責哪一段、如何驗收」</span></h2>
+  <div class="flow" style="margin-top:42px">
+    <div class="step"><h3>Chatbot</h3><p>一次問答，靠老師記得所有脈絡。</p></div><div class="arrow">→</div>
+    <div class="step"><h3>Agent</h3><p>有工具、有檔案、有驗證，能完成一個小任務。</p></div><div class="arrow">→</div>
+    <div class="step"><h3>Agent Team</h3><p>多個角色協作，產出可追蹤、可重做、可交接的成果。</p></div>
+  </div>
+  <div class="notes">這張用生活化方式講：不是 AI 比較聰明，而是「任務管理方式」變了。老師從逐字指揮改成定義目標、限制、驗收標準。</div>
+</section>
+
+<section class="slide">
+  <div class="topline"><span class="tag">我的 AI 教學助理團隊</span><span>角色不是工具名，而是責任</span></div>
+  <h2>一個教學任務，可以拆成六個助教角色</h2>
+  <div class="diagram">
+    <div class="node center"><h3>盧老師</h3><p>決定教學意圖<br>把關物理與倫理</p></div>
+    <div class="node n1"><h3>資料偵察員</h3><p>找來源、整理題目、標注引用風險</p></div>
+    <div class="node n2"><h3>物理審稿員</h3><p>驗算答案、找易錯點、確認模型</p></div>
+    <div class="node n3"><h3>教材編劇</h3><p>hook、分層說明、講稿與 prompt</p></div>
+    <div class="node n4"><h3>視覺導演</h3><p>storyboard、動畫 cue、圖卡排版</p></div>
+    <div class="node n5"><h3>製作助理</h3><p>旁白、字幕、封面、upload kit</p></div>
+    <div class="node n6"><h3>QA／知識庫管家</h3><p>尺寸、可讀性、檔案清單、Obsidian 交接</p></div>
+  </div>
+  <div class="notes">可以說：我不會把「判斷學生」交給 AI；但我會把「整理材料、初稿、檢查清單」交給 AI。</div>
+</section>
+
+<section class="slide">
+  <div class="topline"><span class="tag">工作流地圖</span><span>老師的時間花在最值得花的地方</span></div>
+  <h2>每個成果都走同一條「可驗收」管線</h2>
+  <div class="flow" style="margin-top:36px">
+    <div class="step"><h3>1. 捕捉</h3><p>Telegram／Obsidian 收想法、材料、題目。</p></div><div class="arrow">→</div>
+    <div class="step"><h3>2. 拆工</h3><p>把任務拆成 brief、storyboard、QA、交付包。</p></div><div class="arrow">→</div>
+    <div class="step"><h3>3. 產出</h3><p>HTML、Markdown、MP4、字幕、封面、程式。</p></div><div class="arrow">→</div>
+    <div class="step"><h3>4. 驗證</h3><p>物理、版權、視覺、檔案、GitHub／附件。</p></div>
+  </div>
+  <p class="quote" style="margin-top:42px">重點不是「AI 幫我想」，而是「AI 幫我把可重複的教學工序做成管線」。</p>
+</section>
+
+<section class="slide">
+  <div class="topline"><span class="tag">案例 A</span><span>Obsidian × Codex × Claude Code</span></div>
+  <h2>先打造「共同記憶」：不同 Agent 讀同一份教學脈絡</h2>
+  <div class="grid2">
+    <div class="card"><h3>我們已經建立的入口</h3><ul><li><strong>AGENTS.md</strong>：AI/agent 工作規則</li><li><strong>AI_CONTEXT.md</strong>：盧老師長期背景與偏好</li><li><strong>HANDOFF.md</strong>：目前專案狀態與下一步</li><li><strong>Daily / Knowledge cards</strong>：可搜尋的工作記錄</li></ul></div>
+    <div class="card"><h3>設計原則</h3><ul><li>每台電腦只 clone 一份 vault</li><li>公開成果用 GitHub Pages 或附件，不用臨時網址</li><li>AI 不確定分類時，先寫 Inbox/Agent Inbox</li><li>autosync 讓其他工具能接續</li></ul></div>
+  </div>
+  <p class="source">來源：Obsidian《跨電腦 Obsidian × Codex × Claude Code 同步設定》與 AI_CONTEXT。</p>
+  <div class="notes">這裡可示範：打開 AGENTS/AI_CONTEXT/HANDOFF，說明這不是炫技，是為了讓 AI 不要每次都重新問你是誰、想要什麼。</div>
+</section>
+
+<section class="slide">
+  <div class="topline"><span class="tag">可複製 Prompt</span><span>讓 Agent 先讀規則，再做事</span></div>
+  <h2>給 Codex / Claude Code 的開場提示</h2>
+  <pre class="code">請先讀 AGENTS.md、AI_CONTEXT.md、HANDOFF.md，依裡面的使用者偏好工作。
+產生長期知識或交接紀錄時，不確定分類就先寫到 Inbox/Agent Inbox/。
+正式公開成果不要用臨時網址，用 GitHub / GitHub Pages 穩定連結或 Telegram 附件。
+
+這次任務：請把一個物理題目做成 60–90 秒教學影片 brief。
+請輸出：題目摘要、核心模型、易錯點、5 張 storyboard、每 3–5 秒 timing map、上架前檢查清單。</pre>
+  <div class="notes">可以請與會老師直接複製這種 prompt，改成自己的資料夾與科目。關鍵是把「輸出格式」與「驗收條件」講清楚。</div>
+</section>
+
+<section class="slide">
+  <div class="topline"><span class="tag">案例 B</span><span>每日一題｜分科物理題解</span></div>
+  <h2>一週內，Agent 管線已推進到第 7–19 題</h2>
+  <div class="grid3">
+    <div class="card"><div class="kpi">13</div><p>題目已完成到內部素材<br><span class="muted">第 7 題到第 19 題</span></p></div>
+    <div class="card"><div class="kpi">5×</div><p>每題至少 5 張 storyboard 圖卡<br><span class="muted">1080×1920，附 contact sheet</span></p></div>
+    <div class="card"><div class="kpi">60–90s</div><p>Lu Teacher 旁白影片草稿<br><span class="muted">MP4＋字幕＋upload kit</span></p></div>
+  </div>
+  <p class="quote" style="margin-top:38px">一題不是只做答案；而是做成「可教、可看、可檢查、可上架」的教學單元。</p>
+  <div class="notes">這張不用逐題細講，用數字讓大家看到：Agent 適合處理重複、格式化、需要驗證的工作。</div>
+</section>
+
+<section class="slide">
+  <div class="topline"><span class="tag">單題模板</span><span>從題目到影片，不跳步</span></div>
+  <h2>每一題都先被轉成教學任務</h2>
+  <div class="grid2">
+    <div class="card"><h3>內容層</h3><ul><li>題目來源與授權提醒</li><li>核心觀念與模型選擇</li><li>學生常錯判斷點</li><li>量綱／極端情況／選項合理性檢查</li></ul></div>
+    <div class="card"><h3>製作層</h3><ul><li>60–90 秒旁白腳本</li><li>5 張 storyboard 文案</li><li>每 3–5 秒 timing map</li><li>封面、字幕、upload kit、QA contact sheet</li></ul></div>
+  </div>
+  <div class="notes">強調：老師最重要的介入點是「核心模型」和「易錯點」，AI 可以先鋪稿，但老師要把關。</div>
+</section>
+
+<section class="slide">
+  <div class="topline"><span class="tag">案例流程</span><span>以第 19 題「鎖死滑行距離」為例</span></div>
+  <h2>Agent 不是只寫解答，而是把工作完整交付</h2>
+  <div class="timeline">
+    <div class="time">來源確認</div><div>讀官方試題 PDF，確認題組、題意摘要；不公開完整題文。</div>
+    <div class="time">物理驗算</div><div>以鎖死後輪胎—地面動摩擦模型驗算停止距離 <span class="accent">1.6 m</span>。</div>
+    <div class="time">教學轉譯</div><div>自繪腳踏車鎖死輪、摩擦面選擇卡、自由體圖、速度—距離條。</div>
+    <div class="time">交付包</div><div>MP4、Lu F5-TTS 旁白、SRT/VTT、封面、QA 抽幀、build script、manifest。</div>
+    <div class="time">驗證</div><div>H.264 1080×1920、82 秒、文字可讀、無 tofu／裁切／重疊。</div>
+  </div>
+  <div class="notes">可以補一句：這裡真正省的是「把每題都整理成同規格」的時間；老師仍要決定是否上架、題文引用方式。</div>
+</section>
+
+<section class="slide">
+  <div class="topline"><span class="tag">品質守門</span><span>AI 做初稿，老師做判斷</span></div>
+  <h2>我不把這些事交給 AI 自動決定</h2>
+  <div class="grid4">
+    <div class="card"><h3>物理正確性</h3><p>答案、模型、近似條件一定要檢查。</p></div>
+    <div class="card"><h3>學生資料</h3><p>不讓 AI 替學生貼標籤或做人格判斷。</p></div>
+    <div class="card"><h3>公開授權</h3><p>完整題文、圖像、來源標註需人工確認。</p></div>
+    <div class="card"><h3>教學意圖</h3><p>AI 可製作材料，不能取代教師的教育判斷。</p></div>
+  </div>
+  <p class="quote" style="margin-top:44px">AI 可以幫老師省時間，但不能替學生貼標籤。</p>
+</section>
+
+<section class="slide">
+  <div class="topline"><span class="tag">案例 C</span><span>AI literacy / 探究學習</span></div>
+  <h2>學生用 AI 前，先寫一句：<span class="accent">「我預期會看到什麼」</span></h2>
+  <div class="grid2">
+    <div class="card"><h3>核心訊息</h3><p>讓 AI 回答成為可檢查、可比較、可反思的材料，而不是直接替代思考的答案。</p></div>
+    <div class="card"><h3>可做成什麼</h3><ul><li>Shorts storyboard</li><li>課堂提示卡</li><li>探究前測句型</li><li>學生反思單</li></ul></div>
+  </div>
+  <div class="notes">這是今晚可以呼應後面 NotebookLM、素養命題 Agent 的橋段：AI 不只是老師省力，也要教學生如何保有判斷。</div>
+</section>
+
+<section class="slide">
+  <div class="topline"><span class="tag">現場教師版本</span><span>不用一步到位</span></div>
+  <h2>如果今晚回去只做一件事：<br><span class="accent">先做「教學任務交付格式」</span></h2>
+  <div class="grid3">
+    <div class="card"><h3>最小版</h3><p>請 AI 產出一份 Markdown brief：目標、素材、步驟、檢查清單。</p></div>
+    <div class="card"><h3>進階版</h3><p>讓 Codex/Agent 讀資料夾，生成 HTML 講義或小網頁。</p></div>
+    <div class="card"><h3>團隊版</h3><p>分派資料、物理、視覺、QA 多角色，互相審查。</p></div>
+  </div>
+  <div class="notes">降低門檻：不是叫大家裝完整系統；先從「規格化輸出」開始，就能感覺差異。</div>
+</section>
+
+<section class="slide">
+  <div class="topline"><span class="tag">60 分鐘建議節奏</span><span>今晚可照這份講</span></div>
+  <h2>分享流程</h2>
+  <div class="timeline">
+    <div class="time">0–5</div><div>開場：為什麼老師需要 AI 助教團隊，而不是更多聊天視窗。</div>
+    <div class="time">5–15</div><div>概念：Chatbot → Agent → Agent Team；角色與驗收。</div>
+    <div class="time">15–30</div><div>案例一：Obsidian / Codex / Claude Code 共同記憶與交接。</div>
+    <div class="time">30–45</div><div>案例二：分科物理每日一題影片管線，第 7–19 題成果。</div>
+    <div class="time">45–55</div><div>可複製做法：prompt 模板、品質守門、最小可行流程。</div>
+    <div class="time">55–60</div><div>Q&A：老師怎麼開始、怎麼避免踩雷。</div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="topline"><span class="tag">Live Demo 備案</span><span>依現場網路與時間選一個</span></div>
+  <h2>三種示範路線</h2>
+  <div class="grid3">
+    <div class="card"><h3>A. 最穩</h3><p>打開這份 HTML，展示已整理好的流程與 prompt。</p><p class="small muted">適合時間緊、網路不穩。</p></div>
+    <div class="card"><h3>B. 中度</h3><p>現場貼一題，請 Agent 產出 brief＋storyboard 草稿。</p><p class="small muted">讓老師看到「可驗收格式」。</p></div>
+    <div class="card"><h3>C. 完整</h3><p>展示 Obsidian → Agent → HTML/影片交付包。</p><p class="small muted">適合熟悉環境時使用。</p></div>
+  </div>
+  <div class="notes">建議今晚用 A + 一點點 B。不要冒險現場跑完整影片製作，會吃時間。</div>
+</section>
+
+<section class="slide">
+  <div class="topline"><span class="tag">給老師的 Prompt 模板</span><span>可直接複製</span></div>
+  <h2>把「幫我做教材」改成「請產出可驗收交付包」</h2>
+  <pre class="code">你是我的物理教學助理。請不要只回答概念，請做成可交付的教學工作包。
+
+任務：把【主題／題目】做成一節課可用的素材。
+對象：【高一／高二／分科考生／師培生】
+請輸出：
+1. 教學目標與學生可能卡點
+2. 核心模型或公式，但先用直覺語言說明
+3. 5 分鐘課堂引導流程
+4. 1 張板書／投影片草圖
+5. 2 題形成性評量
+6. 老師檢查清單：物理正確性、學生迷思、資料來源、倫理風險
+
+限制：不要捏造來源；不確定請標「需老師確認」。</pre>
+</section>
+
+<section class="slide">
+  <div class="topline"><span class="tag">常見踩雷</span><span>我的修正方式</span></div>
+  <h2>AI 助教團隊也需要班級經營</h2>
+  <div class="grid2">
+    <div class="card"><h3 class="danger">容易踩雷</h3><ul><li>AI 產出看起來完整但未驗算</li><li>漂亮圖卡塞太多字</li><li>用臨時網址當正式交付</li><li>忘記來源與題文引用風險</li><li>讓 AI 對學生做標籤式判斷</li></ul></div>
+    <div class="card"><h3>修正方法</h3><ul><li>每題保留 build script / manifest / QA</li><li>一張圖只講一個判斷</li><li>正式成果用 GitHub Pages 或附件</li><li>公開前設人工 gate</li><li>AI 只整理行為證據，不做人格判定</li></ul></div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="topline"><span class="tag">收束</span><span>把時間還給學生</span></div>
+  <h2 class="huge">AI 不取代老師，<br><span class="accent">它替老師搬走可規格化的重工。</span></h2>
+  <div class="grid3" style="margin-top:34px">
+    <div class="card"><h3>老師保留</h3><p>教育判斷、關係、價值選擇、最後把關。</p></div>
+    <div class="card"><h3>Agent 承擔</h3><p>整理、轉寫、格式化、檢查、交付、記錄。</p></div>
+    <div class="card"><h3>學生得到</h3><p>更快回饋、更清楚材料、更有品質的學習時間。</p></div>
+  </div>
+  <div class="notes">最後回到活動文案：把繁瑣備課交給 AI 團隊，把時間還給學生。語氣溫和，不要像賣工具。</div>
+</section>
+
+<section class="slide">
+  <div class="topline"><span class="tag">附錄</span><span>今晚資料來源與現有成果</span></div>
+  <h2>這份 HTML 彙整自我們先前建立的材料</h2>
+  <ul class="two-col-list">
+    <li>Obsidian：AI_CONTEXT.md、AGENTS.md、HANDOFF.md</li>
+    <li>《跨電腦 Obsidian × Codex × Claude Code 同步設定》</li>
+    <li>《分科測驗每日試題影片計畫》</li>
+    <li>第 7–19 題分科物理題解 brief / storyboard / Lu Teacher MP4 管線記錄</li>
+    <li>《學生用 AI 前，先寫一句我預期會看到什麼》</li>
+    <li>盧老師 AI 快速背景資料：風格、偏好、倫理提醒</li>
+  </ul>
+  <p class="small source">本檔建立時間：2026-05-20 13:12 CST。投影片支援鍵盤導航、講者提示、列印。</p>
+</section>
+
+</main></div>
+<div class="controls"><button class="pill" onclick="prev()">← 上一張</button><span class="pill" id="count"></span><button class="pill" onclick="next()">下一張 →</button><button class="pill" onclick="toggleNotes()">S 講者提示</button></div>
+<script>
+const slides=[...document.querySelectorAll('.slide')];
+let i=Number(localStorage.getItem('phai-slide')||0); if(i<0||i>=slides.length)i=0;
+function show(n){slides[i].classList.remove('active'); i=(n+slides.length)%slides.length; slides[i].classList.add('active'); localStorage.setItem('phai-slide',i); document.getElementById('count').textContent=`${i+1} / ${slides.length}`; document.getElementById('progress').style.width=`${((i+1)/slides.length)*100}%`;}
+function next(){show(i+1)} function prev(){show(i-1)} function toggleNotes(){document.body.classList.toggle('show-notes')}
+document.addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();next()} if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();prev()} if(e.key.toLowerCase()==='s')toggleNotes(); if(e.key.toLowerCase()==='f'){document.documentElement.requestFullscreen?.()}});
+show(i);
+</script>
+</body>
+</html>

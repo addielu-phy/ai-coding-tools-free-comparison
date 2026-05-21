@@ -206,6 +206,32 @@
       gap: 14px;
       margin-top: 12px;
     }
+    .inline-check {
+      margin: 12px 0 0;
+      padding-left: 1.2rem;
+      color: #405466;
+    }
+    .inline-check li { margin: 4px 0; }
+    .advanced {
+      border-style: solid;
+      border-color: rgba(31,111,120,.22);
+      background: linear-gradient(180deg, rgba(31,111,120,.07), rgba(255,255,255,.34));
+    }
+    .advanced summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .advanced summary::after {
+      content: "選讀";
+      font-size: .78rem;
+      color: #1f6f78;
+      border: 1px solid rgba(31,111,120,.28);
+      border-radius: 999px;
+      padding: 2px 8px;
+      background: rgba(255,255,255,.62);
+    }
     @media (max-width: 780px) {
       .quick-map, .mini-grid { grid-template-columns: 1fr; }
       header { padding-top: 44px; }
@@ -238,7 +264,7 @@
   <header>
     <div class="eyebrow">Lagrangian Mechanics</div>
     <h1>用 Lagrange 解圓錐擺</h1>
-    <p class="lead">以線長固定的球座標描述圓錐擺，從 Lagrangian 出發，利用 cyclic coordinate 與 Euler–Lagrange 方程推出角速度與週期。</p>
+    <p class="lead">以線長固定的球座標描述圓錐擺，從 Lagrangian 出發，利用 cyclic coordinate 與 Euler–Lagrange 方程推出角速度與週期；主線保留高中可讀的物理直覺，進階推導收在頁尾選讀。</p>
   </header>
 
   <main>
@@ -249,6 +275,10 @@
         <div class="map-item"><b>守恆量</b>\(\phi\) 不顯含於 \(L\)，因此對應角動量守恆。</div>
         <div class="map-item"><b>物理圖像</b>向心半徑是水平圓半徑 \(l\sin\theta\)，不是線長 \(l\)。</div>
       </div>
+      <ul class="inline-check">
+        <li>適合先讓學生用牛頓法確認結果，再回頭看 Lagrange 法如何自動處理約束。</li>
+        <li>若只想當課堂講義，讀到第 5 節即可；第 6 節是大學力學選讀。</li>
+      </ul>
     </section>
     <section class="card grid">
       <div>
@@ -366,10 +396,26 @@
         <p>與 Lagrange 推導一致。這個對照特別能幫助學生看出：\(l\sin\theta\) 是水平圓的半徑，而 \(l\) 是細線長。</p>
       </details>
     </section>
+
+    <section class="card">
+      <h2>6. 進階選讀：有效位能與小擾動</h2>
+      <details class="advanced">
+        <summary>用守恆角動量把問題降成一維</summary>
+        <p>因為 \(\phi\) 是 cyclic coordinate，對應的廣義動量為：</p>
+        <div class="formula">\[p_\phi=\frac{\partial L}{\partial \dot\phi}=ml^2\sin^2\theta\,\dot\phi\]</div>
+        <p>若用固定的 \(p_\phi\) 消去 \(\dot\phi\)，可把 \(\theta\) 的運動想成在有效位能中運動：</p>
+        <div class="formula">\[V_{\mathrm{eff}}(\theta)=\frac{p_\phi^2}{2ml^2\sin^2\theta}+mgl(1-\cos\theta)\]</div>
+        <p>平衡條件 \(dV_{\mathrm{eff}}/d\theta=0\) 會回到同一個圓錐擺條件：</p>
+        <div class="formula">\[\omega^2=\frac{g}{l\cos\theta_0}\]</div>
+        <p>若令 \(\theta=\theta_0+\delta\theta\)，在固定 \(p_\phi\) 下做小擾動線性化，可得極角方向的小振盪頻率：</p>
+        <div class="formula">\[\Omega_\theta^2=\frac{g}{l}\frac{1+3\cos^2\theta_0}{\cos\theta_0}=\omega^2(1+3\cos^2\theta_0)\]</div>
+        <div class="note-box">這段適合放在大學力學或專題延伸：主頁前半只需掌握圓錐擺條件，這裡則展示 cyclic coordinate 如何自然導向有效位能與穩定性分析。</div>
+      </details>
+    </section>
   </main>
 
   <footer>
-製作：圓錐擺 Lagrange 解法教學頁。內容已加入推導檢查、常見錯誤提醒與極限檢查，可直接用瀏覽器開啟或列印成講義。
+製作：圓錐擺 Lagrange 解法教學頁。內容已加入推導檢查、常見錯誤提醒、極限檢查與進階有效位能選讀，可直接用瀏覽器開啟或列印成講義。
   </footer>
 </body>
 </html>

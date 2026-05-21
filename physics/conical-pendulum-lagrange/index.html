@@ -168,6 +168,51 @@
       color: #405466;
       font-size: .94rem;
     }
+    .quick-map {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .map-item {
+      border: 1px solid rgba(31,111,120,.18);
+      border-radius: 18px;
+      padding: 14px;
+      background: rgba(255,255,255,.46);
+    }
+    .map-item b { display: block; color: var(--accent-2); margin-bottom: 4px; }
+    .note-box {
+      margin: 14px 0;
+      padding: 14px 16px;
+      border-left: 4px solid var(--accent-2);
+      border-radius: 14px;
+      background: rgba(31,111,120,.08);
+    }
+    .warning-box {
+      margin: 14px 0;
+      padding: 14px 16px;
+      border-left: 4px solid var(--accent);
+      border-radius: 14px;
+      background: rgba(154,91,36,.10);
+    }
+    .check-list {
+      display: grid;
+      gap: 10px;
+      padding-left: 1.2rem;
+    }
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 12px;
+    }
+    @media (max-width: 780px) {
+      .quick-map, .mini-grid { grid-template-columns: 1fr; }
+      header { padding-top: 44px; }
+      main { padding: 0 16px; }
+      .card { border-radius: 20px; }
+      .step { padding-left: 18px; padding-top: 58px; }
+    }
     details {
       border: 1px dashed rgba(31,41,51,.28);
       border-radius: 16px;
@@ -197,6 +242,14 @@
   </header>
 
   <main>
+    <section class="card">
+      <h2>這頁要抓住的三件事</h2>
+      <div class="quick-map">
+        <div class="map-item"><b>座標選擇</b>線長固定，所以真正的自由度是 \(\theta,\phi\)，不是 \(r\)。</div>
+        <div class="map-item"><b>守恆量</b>\(\phi\) 不顯含於 \(L\)，因此對應角動量守恆。</div>
+        <div class="map-item"><b>物理圖像</b>向心半徑是水平圓半徑 \(l\sin\theta\)，不是線長 \(l\)。</div>
+      </div>
+    </section>
     <section class="card grid">
       <div>
         <h2>系統設定</h2>
@@ -204,6 +257,7 @@
         <div class="formula">\[r=l,\quad \theta=\theta(t),\quad \phi=\phi(t)\]</div>
         <p>其中 \(\theta\) 是細線與鉛直方向的夾角，\(\phi\) 是方位角。圓錐擺的穩定運動對應到：</p>
         <div class="formula">\[\theta=\text{constant},\quad \dot{\theta}=0,\quad \dot{\phi}=\omega\]</div>
+        <div class="note-box">這裡的 \(\theta\) 是從鉛直軸量起的極角；因此最低點是 \(\theta=0\)，高度才會寫成 \(h=l(1-\cos\theta)\)。</div>
         <div class="pill-row">
           <span class="pill">廣義座標：\(\theta, \phi\)</span>
           <span class="pill">約束：\(r=l\)</span>
@@ -229,6 +283,8 @@
           <text x="242" y="238" fill="#1f6f78" font-size="20" font-family="serif">l sinθ</text>
           <line x1="322" y1="248" x2="322" y2="318" stroke="#9a5b24" stroke-width="3" marker-end="url(#arrow)" />
           <text x="334" y="292" fill="#9a5b24" font-size="20" font-family="serif">mg</text>
+          <line x1="322" y1="248" x2="260" y2="127" stroke="#7c3aed" stroke-width="3" marker-end="url(#arrow)" />
+          <text x="278" y="166" fill="#7c3aed" font-size="20" font-family="serif">F<tspan baseline-shift="sub" font-size="14">T</tspan></text>
           <path d="M270 214 C296 196 337 204 358 229" fill="none" stroke="#1f6f78" stroke-width="3" marker-end="url(#arrow)" />
           <text x="306" y="196" fill="#1f6f78" font-size="20" font-family="serif">ω</text>
         </svg>
@@ -239,6 +295,7 @@
       <h2>1. 寫出 Lagrangian</h2>
       <p>因為線長固定，球座標中的動能為：</p>
       <div class="formula">\[T=\frac12 ml^2\dot{\theta}^2+\frac12 ml^2\sin^2\theta\,\dot{\phi}^2\]</div>
+      <div class="note-box">第二項來自方位角轉動：小球繞鉛直軸跑圓周，圓周半徑是 \(l\sin\theta\)，所以速度平方含有 \((l\sin\theta)^2\dot\phi^2\)。</div>
       <p>取最低點為位能零點，小球相對最低點的高度是 \(h=l(1-\cos\theta)\)，因此：</p>
       <div class="formula">\[V=mgl(1-\cos\theta)\]</div>
       <p>所以</p>
@@ -250,7 +307,7 @@
       <div class="steps">
         <div class="step">
           <h3>對 \(\phi\)：角動量守恆</h3>
-          <p>因為 Lagrangian 不顯含 \(\phi\)，所以 \(\phi\) 是 cyclic coordinate。</p>
+          <p>因為 Lagrangian 不顯含 \(\phi\)，所以 \(\phi\) 是 cyclic coordinate；這反映系統繞鉛直軸旋轉對稱。</p>
           <div class="formula">\[\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\phi}}\right)=0\]</div>
           <div class="formula">\[\frac{\partial L}{\partial \dot{\phi}}=ml^2\sin^2\theta\,\dot{\phi}=\text{constant}\]</div>
         </div>
@@ -272,25 +329,47 @@
       <div class="formula">\[\boxed{\omega=\sqrt{\frac{g}{l\cos\theta}}}\]</div>
       <p>週期為：</p>
       <div class="formula">\[\boxed{T=\frac{2\pi}{\omega}=2\pi\sqrt{\frac{l\cos\theta}{g}}}\]</div>
+      <div class="warning-box">這個結果只適用於非零角度的圓錐擺；推導中已除以 \(\sin\theta\)，所以 \(\theta=0\) 是退化情況，不應直接代回「水平圓周運動」條件。</div>
+    </section>
+
+
+
+    <section class="card">
+      <h2>4. 檢查結果的物理直覺</h2>
+      <div class="mini-grid">
+        <div class="note-box">
+          <strong>小角極限</strong><br>
+          當 \(\theta\to 0\) 時，\(\cos\theta\to 1\)，週期趨近 \(2\pi\sqrt{l/g}\)。這和單擺小角週期同量級，是合理的極限檢查。
+        </div>
+        <div class="note-box">
+          <strong>接近水平</strong><br>
+          當 \(\theta\to \pi/2\) 時，\(\cos\theta\to 0\)，所需角速度 \(\omega\) 趨於無限大，代表張力也會變得非常大；這是理想化極限。
+        </div>
+      </div>
+      <ul class="check-list">
+        <li>若學生把向心半徑誤寫成 \(l\)，會少掉 \(\sin\theta\)，最後角速度關係會錯。</li>
+        <li>若 \(\theta\) 改成從水平面量起，位能與三角函數會整組改寫；不要混用角度定義。</li>
+        <li>Lagrange 法的優點是約束 \(r=l\) 可直接代入，只留下真正自由度。</li>
+      </ul>
     </section>
 
     <section class="card">
-      <h2>4. 與牛頓法對照</h2>
+      <h2>5. 與牛頓法對照</h2>
       <details open>
         <summary>展開對照式</summary>
-        <p>張力鉛直分量平衡重力，水平分量提供向心力：</p>
+        <p>張力鉛直分量平衡重力，水平分量提供向心力；這也能檢查 Lagrange 推導中的三角函數是否放對位置：</p>
         <div class="formula">\[F_T\cos\theta=mg\]</div>
         <div class="formula">\[F_T\sin\theta=ml\sin\theta\,\omega^2\]</div>
         <p>兩式相除：</p>
         <div class="formula">\[\tan\theta=\frac{l\sin\theta\,\omega^2}{g}\]</div>
         <div class="formula">\[\omega^2=\frac{g}{l\cos\theta}\]</div>
-        <p>與 Lagrange 推導一致。</p>
+        <p>與 Lagrange 推導一致。這個對照特別能幫助學生看出：\(l\sin\theta\) 是水平圓的半徑，而 \(l\) 是細線長。</p>
       </details>
     </section>
   </main>
 
   <footer>
-    製作：圓錐擺 Lagrange 解法教學頁。可直接用瀏覽器開啟或列印成講義。
+製作：圓錐擺 Lagrange 解法教學頁。內容已加入推導檢查、常見錯誤提醒與極限檢查，可直接用瀏覽器開啟或列印成講義。
   </footer>
 </body>
 </html>

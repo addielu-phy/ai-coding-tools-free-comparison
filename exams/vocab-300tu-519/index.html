@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>5/19 英語課堂單字測驗｜300TU 互動學習</title>
-  <meta name="description" content="專為 300TU 5/19 課堂設計的英文單字與片語互動測驗網頁，包含全球的、花豹、防禦等關鍵字彙，支援四選一及拼寫填空雙模式。">
+  <title>5/19 英語課堂單字測驗｜300TU 互動翻卡與測驗</title>
+  <meta name="description" content="專為 300TU 5/19 課堂設計的英文單字與片語互動測驗網頁，包含雙面翻字卡模式、四選一及拼寫填空，支援發音、對錯統計與錯題二次加強。">
   
   <!-- Sleek Modern Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +24,7 @@
       
       --color-primary: #818cf8; /* Indigo accent */
       --color-secondary: #2dd4bf; /* Teal accent */
-      --color-accent-pink: #f43f5e; /* Rose accent */
+      --color-accent-rose: #f43f5e; /* Rose accent */
       
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
@@ -32,7 +32,7 @@
       --shadow-premium: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
       --shadow-glow: 0 0 20px rgba(129, 140, 248, 0.3);
       
-      --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-smooth: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     /* GLOBAL RESET & STYLES */
@@ -110,7 +110,7 @@
     h1 {
       font-size: 2.2rem;
       font-weight: 800;
-      background: linear-gradient(135deg, #ffffff 30%, #a5b4fc(100%));
+      background: linear-gradient(135deg, #ffffff 30%, #a5b4fc 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-bottom: 0.5rem;
@@ -132,6 +132,7 @@
       border-radius: 12px;
       margin-bottom: 2rem;
       position: relative;
+      gap: 0.2rem;
     }
 
     .mode-btn {
@@ -139,8 +140,8 @@
       background: transparent;
       border: none;
       color: var(--text-muted);
-      padding: 0.8rem;
-      font-size: 0.95rem;
+      padding: 0.8rem 0.5rem;
+      font-size: 0.9rem;
       font-weight: 600;
       cursor: pointer;
       border-radius: 9px;
@@ -148,7 +149,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.4rem;
     }
 
     .mode-btn.active {
@@ -192,14 +193,25 @@
       letter-spacing: 0.5px;
     }
 
+    .score-badge-group {
+      display: flex;
+      gap: 0.5rem;
+    }
+
     .score-badge {
       background: rgba(45, 212, 191, 0.1);
       border: 1px solid rgba(45, 212, 191, 0.2);
       color: var(--color-secondary);
-      padding: 0.3rem 0.8rem;
+      padding: 0.3rem 0.6rem;
       border-radius: 8px;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 700;
+    }
+    
+    .score-badge.incorrect-badge {
+      background: rgba(244, 63, 94, 0.1);
+      border: 1px solid rgba(244, 63, 94, 0.2);
+      color: var(--color-accent-rose);
     }
 
     /* PROGRESS BAR */
@@ -208,7 +220,7 @@
       height: 6px;
       background: rgba(255, 255, 255, 0.05);
       border-radius: 10px;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
       overflow: hidden;
       position: relative;
     }
@@ -221,7 +233,74 @@
       transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    /* WORD SHOWCASE STYLING */
+    /* 3D FLASHCARD STYLING */
+    .flashcard-wrapper {
+      perspective: 1000px;
+      width: 100%;
+      height: 280px;
+      margin-bottom: 2rem;
+      cursor: pointer;
+    }
+
+    .flashcard-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      transform-style: preserve-3d;
+    }
+
+    .flashcard-wrapper.flipped .flashcard-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flashcard-front, .flashcard-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      border-radius: 20px;
+      border: 1px solid var(--glass-border);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      box-shadow: var(--shadow-premium);
+      transition: var(--transition-smooth);
+    }
+
+    .flashcard-front {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .flashcard-back {
+      background: rgba(129, 140, 248, 0.08);
+      transform: rotateY(180deg);
+      border-color: rgba(129, 140, 248, 0.3);
+    }
+
+    .flashcard-wrapper:hover .flashcard-front {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
+    }
+
+    .flashcard-tip {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 0.3rem 0.7rem;
+      border-radius: 50px;
+    }
+
+    /* WORD SHOWCASE STYLING (FOR OTHER MODES) */
     .word-display-box {
       text-align: center;
       margin-bottom: 2.5rem;
@@ -247,6 +326,13 @@
       color: #ffffff;
       line-height: 1.2;
     }
+    
+    .chinese-word {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--color-secondary);
+      margin-bottom: 0.5rem;
+    }
 
     .speak-btn {
       background: rgba(129, 140, 248, 0.1);
@@ -270,7 +356,52 @@
       box-shadow: var(--shadow-glow);
     }
 
-    /* ANSWERS / OPTIONS CONTAINER */
+    /* CARD ACTION CONTROLS */
+    .card-actions-row {
+      display: flex;
+      gap: 1rem;
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    .card-btn {
+      flex: 1;
+      border: none;
+      padding: 1.1rem;
+      border-radius: 16px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .card-btn-correct {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: #ffffff;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
+    }
+    
+    .card-btn-correct:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+    }
+
+    .card-btn-wrong {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      color: #ffffff;
+      box-shadow: 0 4px 15px rgba(239, 68, 68, 0.2);
+    }
+
+    .card-btn-wrong:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4);
+    }
+
+    /* ANSWERS / OPTIONS CONTAINER (MCQ MODE) */
     .options-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -310,8 +441,8 @@
 
     .option-card.incorrect {
       background: rgba(244, 63, 94, 0.15) !important;
-      border-color: var(--color-accent-pink) !important;
-      color: var(--color-accent-pink) !important;
+      border-color: var(--color-accent-rose) !important;
+      color: var(--color-accent-rose) !important;
       box-shadow: 0 0 15px rgba(244, 63, 94, 0.15);
     }
 
@@ -342,8 +473,8 @@
     }
 
     .incorrect .option-indicator {
-      border-color: var(--color-accent-pink);
-      background: var(--color-accent-pink);
+      border-color: var(--color-accent-rose);
+      background: var(--color-accent-rose);
       color: #ffffff;
     }
 
@@ -381,7 +512,7 @@
     }
 
     .spelling-input.incorrect {
-      border-color: var(--color-accent-pink) !important;
+      border-color: var(--color-accent-rose) !important;
       background: rgba(244, 63, 94, 0.05);
     }
 
@@ -422,7 +553,7 @@
       box-shadow: 0 0 25px rgba(45, 212, 191, 0.4);
     }
 
-    /* FEEDBACK TEXT FOR SPELLING MODE */
+    /* FEEDBACK TEXT */
     .feedback-message {
       margin-top: 1rem;
       font-size: 1.05rem;
@@ -448,7 +579,7 @@
     }
 
     .feedback-message.fail {
-      color: var(--color-accent-pink);
+      color: var(--color-accent-rose);
     }
 
     /* RESULT SUMMARY SCREEN */
@@ -496,7 +627,7 @@
     .wrong-review-title {
       font-size: 1rem;
       font-weight: 700;
-      color: var(--color-accent-pink);
+      color: var(--color-accent-rose);
       margin-bottom: 1rem;
       display: flex;
       align-items: center;
@@ -575,6 +706,14 @@
       .english-word {
         font-size: 2rem;
       }
+      
+      .chinese-word {
+        font-size: 1.8rem;
+      }
+
+      .flashcard-wrapper {
+        height: 250px;
+      }
 
       .option-card {
         font-size: 0.95rem;
@@ -599,16 +738,19 @@
     <header>
       <div class="lesson-badge">300TU 課程單字專區</div>
       <h1>5/19 英語課堂單字測驗</h1>
-      <p class="subtitle">自動學習系統 ｜ 學生英文回答中文挑戰</p>
+      <p class="subtitle">自動學習系統 ｜ 翻卡記憶與互動評測</p>
     </header>
 
     <!-- Quiz Mode Switcher -->
     <div class="mode-selector">
-      <button class="mode-btn active" id="btn-choice-mode" onclick="setQuizMode('choice')">
-        <i class="fa-solid fa-list-check"></i> 模式一：四選一挑戰
+      <button class="mode-btn active" id="btn-flash-mode" onclick="setQuizMode('flash')">
+        <i class="fa-solid fa-clone"></i> 模式一：字卡記憶挑戰
+      </button>
+      <button class="mode-btn" id="btn-choice-mode" onclick="setQuizMode('choice')">
+        <i class="fa-solid fa-list-check"></i> 模式二：四選一挑戰
       </button>
       <button class="mode-btn" id="btn-spelling-mode" onclick="setQuizMode('spelling')">
-        <i class="fa-solid fa-keyboard"></i> 模式二：拼寫寫作挑戰
+        <i class="fa-solid fa-keyboard"></i> 模式三：拼寫寫作挑戰
       </button>
     </div>
 
@@ -618,7 +760,10 @@
       <!-- Top indicators -->
       <div class="card-header">
         <span class="progress-info" id="indicator-progress">第 1 / 10 題</span>
-        <span class="score-badge" id="indicator-score">目前得分：0 分</span>
+        <div class="score-badge-group">
+          <span class="score-badge" id="indicator-score">目前得分：0 分</span>
+          <span class="score-badge incorrect-badge" id="indicator-incorrect" style="display: none;">已錯：0</span>
+        </div>
       </div>
 
       <!-- Linear Progress Bar -->
@@ -626,8 +771,52 @@
         <div class="progress-bar" id="ui-progress-bar"></div>
       </div>
 
-      <!-- Current Word Box -->
-      <div class="word-display-box">
+      <!-- FLASHCARD CONTENT VIEW (Hidden in other modes) -->
+      <div id="ui-flashcard-container">
+        <div class="flashcard-wrapper" id="ui-flashcard-wrapper" onclick="toggleCardFlip()">
+          <div class="flashcard-inner">
+            
+            <!-- Card Front (English) -->
+            <div class="flashcard-front">
+              <span class="word-tag" id="ui-card-tag-front">Noun</span>
+              <div class="english-word" id="ui-card-word-front">Loading...</div>
+              <button class="speak-btn" onclick="event.stopPropagation(); speakCurrentWord();" title="播放發音">
+                <i class="fa-solid fa-volume-high"></i>
+              </button>
+              <div class="flashcard-tip">
+                <i class="fa-solid fa-arrow-pointer"></i> 點擊卡片翻面看中文
+              </div>
+            </div>
+            
+            <!-- Card Back (Chinese) -->
+            <div class="flashcard-back">
+              <span class="word-tag" id="ui-card-tag-back">Noun</span>
+              <div class="chinese-word" id="ui-card-word-back">載入中...</div>
+              <div class="english-word" style="font-size: 1.3rem; font-weight:600; margin-bottom: 0.5rem; opacity: 0.7;" id="ui-card-word-back-eng">english</div>
+              <button class="speak-btn" style="width: 36px; height: 36px; font-size: 0.9rem;" onclick="event.stopPropagation(); speakCurrentWord();" title="播放發音">
+                <i class="fa-solid fa-volume-high"></i>
+              </button>
+              <div class="flashcard-tip">
+                <i class="fa-solid fa-rotate-left"></i> 點擊卡片翻回英文
+              </div>
+            </div>
+
+          </div>
+        </div>
+        
+        <!-- Score buttons under card -->
+        <div class="card-actions-row">
+          <button class="card-btn card-btn-wrong" onclick="markCardResult(false)">
+            <i class="fa-solid fa-times"></i> 還沒記住 (答錯)
+          </button>
+          <button class="card-btn card-btn-correct" onclick="markCardResult(true)">
+            <i class="fa-solid fa-check"></i> 我記住了 (答對)
+          </button>
+        </div>
+      </div>
+
+      <!-- WORD DISPLAY BOX (Used for choice and spelling modes) -->
+      <div class="word-display-box" id="ui-word-box" style="display: none;">
         <span class="word-tag" id="ui-word-tag">Noun / Phrase</span>
         <div class="english-word" id="ui-english-word">Loading...</div>
         <button class="speak-btn" onclick="speakCurrentWord()" title="播放英式/美式單字發音">
@@ -636,11 +825,11 @@
       </div>
 
       <!-- Option list for MULTIPLE CHOICE mode -->
-      <div class="options-grid" id="ui-options-grid">
+      <div class="options-grid" id="ui-options-grid" style="display: none;">
         <!-- Javascript will inject option buttons here -->
       </div>
 
-      <!-- Form field for SPELLING mode (hidden by default) -->
+      <!-- Form field for SPELLING mode -->
       <div class="input-container" id="ui-spelling-container" style="display: none;">
         <input type="text" class="spelling-input" id="ui-spelling-input" placeholder="請輸入對應的中文意思" autocomplete="off">
         
@@ -654,7 +843,7 @@
         <!-- Correct / Incorrect banner -->
       </div>
 
-      <!-- Next question CTA (visible only after answering) -->
+      <!-- Next question CTA (visible only after answering in MCQ/spelling) -->
       <button class="btn btn-next" id="btn-next-question" style="display: none; margin-top: 1.5rem;" onclick="nextQuestion()">
         下一題 <i class="fa-solid fa-arrow-right"></i>
       </button>
@@ -667,13 +856,13 @@
         <i class="fa-solid fa-trophy trophy-icon"></i>
       </div>
       <div class="percentage-circle" id="ui-percentage-score">90%</div>
-      <h2 style="font-size: 1.6rem; margin-bottom: 0.5rem; font-weight: 800;">太棒了！挑戰完成！</h2>
+      <h2 style="font-size: 1.6rem; margin-bottom: 0.5rem; font-weight: 800;" id="results-headline">太棒了！挑戰完成！</h2>
       <div class="detailed-score" id="ui-detailed-score">您答對了 9/10 題 (得分：90 分)</div>
 
       <!-- Wrong Questions Review Section -->
       <div class="wrong-review-section" id="ui-wrong-review-container">
         <div class="wrong-review-title">
-          <i class="fa-solid fa-circle-xmark"></i> 錯題整理 (供加強練習)
+          <i class="fa-solid fa-circle-xmark"></i> 錯題整理 (點擊下方加強挑戰)
         </div>
         <div id="ui-wrong-list">
           <!-- Wrong answer rows will render here -->
@@ -686,7 +875,7 @@
           <i class="fa-solid fa-rotate-left"></i> 重新全部挑戰
         </button>
         <button class="btn btn-next" id="btn-retry-wrongs" onclick="restartQuiz(true)">
-          <i class="fa-solid fa-bolt"></i> 僅挑戰錯題
+          <i class="fa-solid fa-bolt"></i> 僅加強挑戰錯題
         </button>
       </div>
     </main>
@@ -729,11 +918,15 @@
       { english: "Step back!", chinese: "後退！", partOfSpeech: "sentence", acceptable: ["後退", "往後退", "退後"] }
     ];
 
-    // APP STATE VARIABLE
-    let quizMode = "choice"; // 'choice' or 'spelling'
+    // APP STATE VARIABLES
+    let quizMode = "flash"; // 'flash' | 'choice' | 'spelling'
     let currentQuizWords = []; // Active list for this session
     let questionIndex = 0;
-    let score = 0;
+    
+    // Statistics for the session
+    let score = 0; // Choice/Spelling score
+    let flashCorrectCount = 0; // Flashcard Correct
+    let flashIncorrectCount = 0; // Flashcard Incorrect
     let wrongAnswers = []; // Records { word, wrongAnswerProvided }
     let hasAnsweredCurrentQuestion = false;
 
@@ -759,16 +952,14 @@
       window.speechSynthesis.speak(utterance);
     }
 
-    // LOAD VOICES FOR SAFARI & CHROME ASYNCHRONOUS WAKEUP
-    window.speechSynthesis.onvoiceschanged = () => {};
-
-    // SET QUIZ MODE (Switch between mode tabs)
+    // SET QUIZ MODE
     function setQuizMode(mode) {
       if (mode === quizMode) return;
       
       quizMode = mode;
       
       // Update UI button highlights
+      document.getElementById("btn-flash-mode").classList.toggle("active", mode === "flash");
       document.getElementById("btn-choice-mode").classList.toggle("active", mode === "choice");
       document.getElementById("btn-spelling-mode").classList.toggle("active", mode === "spelling");
       
@@ -790,6 +981,8 @@
     function restartQuiz(onlyWrongOnes = false) {
       questionIndex = 0;
       score = 0;
+      flashCorrectCount = 0;
+      flashIncorrectCount = 0;
       hasAnsweredCurrentQuestion = false;
       
       // Hide results screen and show quiz card
@@ -806,6 +999,10 @@
       
       wrongAnswers = []; // Reset wrong list for new run
       
+      // Reset card flip styling
+      const wrapper = document.getElementById("ui-flashcard-wrapper");
+      if (wrapper) wrapper.classList.remove("flipped");
+      
       updateIndicators();
       loadQuestion();
     }
@@ -819,64 +1016,118 @@
       
       hasAnsweredCurrentQuestion = false;
       
-      // UI Reset
+      // UI Resets
       document.getElementById("btn-next-question").style.display = "none";
       const feedback = document.getElementById("ui-feedback");
       feedback.className = "feedback-message";
       feedback.innerHTML = "";
       
       const currentWordObj = currentQuizWords[questionIndex];
-      
-      // Inject text values
-      document.getElementById("ui-word-tag").innerText = currentWordObj.partOfSpeech.toUpperCase();
-      document.getElementById("ui-english-word").innerText = currentWordObj.english;
-      
-      // Set indicators
       updateIndicators();
       
-      // Auto-pronounce word for audio reinforcement
+      // Auto-pronounce word
       setTimeout(speakCurrentWord, 200);
 
       // Branch view according to mode
-      if (quizMode === "choice") {
-        document.getElementById("ui-options-grid").style.display = "grid";
-        document.getElementById("ui-spelling-container").style.display = "none";
-        generateMultipleChoices(currentWordObj);
-      } else {
+      if (quizMode === "flash") {
+        document.getElementById("ui-flashcard-container").style.display = "block";
+        document.getElementById("ui-word-box").style.display = "none";
         document.getElementById("ui-options-grid").style.display = "none";
-        document.getElementById("ui-spelling-container").style.display = "flex";
+        document.getElementById("ui-spelling-container").style.display = "none";
         
-        const input = document.getElementById("ui-spelling-input");
-        input.value = "";
-        input.disabled = false;
-        input.className = "spelling-input";
-        input.focus();
+        // Reset card state to show front
+        const wrapper = document.getElementById("ui-flashcard-wrapper");
+        wrapper.classList.remove("flipped");
+        
+        // Inject values
+        document.getElementById("ui-card-tag-front").innerText = currentWordObj.partOfSpeech.toUpperCase();
+        document.getElementById("ui-card-word-front").innerText = currentWordObj.english;
+        
+        document.getElementById("ui-card-tag-back").innerText = currentWordObj.partOfSpeech.toUpperCase();
+        document.getElementById("ui-card-word-back").innerText = currentWordObj.chinese;
+        document.getElementById("ui-card-word-back-eng").innerText = currentWordObj.english;
+
+      } else {
+        document.getElementById("ui-flashcard-container").style.display = "none";
+        document.getElementById("ui-word-box").style.display = "block";
+        
+        document.getElementById("ui-word-tag").innerText = currentWordObj.partOfSpeech.toUpperCase();
+        document.getElementById("ui-english-word").innerText = currentWordObj.english;
+        
+        if (quizMode === "choice") {
+          document.getElementById("ui-options-grid").style.display = "grid";
+          document.getElementById("ui-spelling-container").style.display = "none";
+          generateMultipleChoices(currentWordObj);
+        } else {
+          document.getElementById("ui-options-grid").style.display = "none";
+          document.getElementById("ui-spelling-container").style.display = "flex";
+          
+          const input = document.getElementById("ui-spelling-input");
+          input.value = "";
+          input.disabled = false;
+          input.className = "spelling-input";
+          input.focus();
+        }
       }
     }
 
-    // GENERATE RANDOM MULTIPLE CHOICES OPTIONS
+    // TOGGLE CARD FLIP ACTION
+    function toggleCardFlip() {
+      const wrapper = document.getElementById("ui-flashcard-wrapper");
+      wrapper.classList.toggle("flipped");
+    }
+
+    // MARK FLASHCARD RESULT (CORRECT/WRONG)
+    function markCardResult(isCorrect) {
+      if (hasAnsweredCurrentQuestion) return;
+      hasAnsweredCurrentQuestion = true;
+      
+      const currentWordObj = currentQuizWords[questionIndex];
+      
+      if (isCorrect) {
+        flashCorrectCount++;
+        score += 10;
+        showFeedback(true, "記住囉！加把勁！");
+      } else {
+        flashIncorrectCount++;
+        wrongAnswers.push({ word: currentWordObj, wrongAnswerProvided: "記錯/忘記" });
+        showFeedback(false, `別灰心，正確答案是：${currentWordObj.chinese}`);
+        
+        // Auto-flip card back to show Chinese if it isn't flipped yet
+        const wrapper = document.getElementById("ui-flashcard-wrapper");
+        if (!wrapper.classList.contains("flipped")) {
+          wrapper.classList.add("flipped");
+        }
+      }
+      
+      updateIndicators();
+      
+      // Delay briefly to let student read the back, then move on
+      setTimeout(() => {
+        nextQuestion();
+      }, 1500);
+    }
+
+    // GENERATE MULTIPLE CHOICES (MCQ MODE)
     function generateMultipleChoices(wordObj) {
       const optionsGrid = document.getElementById("ui-options-grid");
       optionsGrid.innerHTML = "";
       
-      // Include the correct answer
+      // Include correct answer
       let selections = [wordObj.chinese];
       
-      // Collect wrong options from the rest of database
+      // Collect distractors
       const pool = vocabData.filter(item => item.chinese !== wordObj.chinese);
       const shuffledPool = shuffleArray(pool);
       
-      // Add 3 unique distractors
       for (let i = 0; i < shuffledPool.length && selections.length < 4; i++) {
         if (!selections.includes(shuffledPool[i].chinese)) {
           selections.push(shuffledPool[i].chinese);
         }
       }
       
-      // Shuffle choices so correct answer position changes
       selections = shuffleArray(selections);
       
-      // Render to DOM
       selections.forEach(choiceText => {
         const optionBtn = document.createElement("button");
         optionBtn.className = "option-card";
@@ -889,7 +1140,7 @@
       });
     }
 
-    // HANDLE STUDENT CHOICE ON MULTIPLE CHOICE MODE
+    // HANDLE STUDENT CHOICE ON MCQ MODE
     function selectChoice(selectedCard, selectedText, correctWordObj) {
       if (hasAnsweredCurrentQuestion) return;
       hasAnsweredCurrentQuestion = true;
@@ -897,7 +1148,6 @@
       const optionCards = document.querySelectorAll(".option-card");
       let isCorrect = selectedText === correctWordObj.chinese;
       
-      // Check answers
       if (isCorrect) {
         selectedCard.classList.add("correct");
         score += 10;
@@ -907,7 +1157,6 @@
         wrongAnswers.push({ word: correctWordObj, wrongAnswerProvided: selectedText });
         showFeedback(false, `答錯了！正確答案是：${correctWordObj.chinese}`);
         
-        // Highlight correct card to teach the student
         optionCards.forEach(card => {
           if (card.querySelector("span").innerText === correctWordObj.chinese) {
             card.classList.add("correct");
@@ -915,13 +1164,12 @@
         });
       }
       
-      // Disable further inputs
       optionCards.forEach(card => card.classList.add("disabled"));
       document.getElementById("btn-next-question").style.display = "block";
       updateIndicators();
     }
 
-    // SUBMIT ANSWER ON TEXT INPUT MODE
+    // SUBMIT ANSWER ON SPELLING INPUT MODE
     function submitSpellingAnswer() {
       if (hasAnsweredCurrentQuestion) return;
       
@@ -989,10 +1237,20 @@
       if (currentQuizWords.length === 0) return;
       
       const cappedIndex = Math.min(questionIndex + 1, currentQuizWords.length);
-      document.getElementById("indicator-progress").innerText = `第 ${cappedIndex} / ${currentQuizWords.length} 題`;
-      document.getElementById("indicator-score").innerText = `目前得分：${score} 分`;
+      document.getElementById("indicator-progress").innerText = `進度：${cappedIndex} / ${currentQuizWords.length}`;
       
-      // Calculate progress width percentage
+      const scoreBadge = document.getElementById("indicator-score");
+      const incorrectBadge = document.getElementById("indicator-incorrect");
+      
+      if (quizMode === "flash") {
+        incorrectBadge.style.display = "inline-block";
+        scoreBadge.innerText = `記住：${flashCorrectCount}`;
+        incorrectBadge.innerText = `忘記：${flashIncorrectCount}`;
+      } else {
+        incorrectBadge.style.display = "none";
+        scoreBadge.innerText = `得分：${score} 分`;
+      }
+      
       const percentProgress = ((questionIndex) / currentQuizWords.length) * 100;
       document.getElementById("ui-progress-bar").style.width = `${percentProgress}%`;
     }
@@ -1005,10 +1263,27 @@
       document.getElementById("results-card").style.display = "block";
       
       const totalQuestions = currentQuizWords.length;
-      const pct = Math.round((score / (totalQuestions * 10)) * 100);
+      
+      let pct = 0;
+      if (quizMode === "flash") {
+        pct = Math.round((flashCorrectCount / totalQuestions) * 100);
+        document.getElementById("ui-detailed-score").innerText = `您記住了 ${flashCorrectCount} 個單字，忘記了 ${flashIncorrectCount} 個單字。`;
+      } else {
+        pct = Math.round((score / (totalQuestions * 10)) * 100);
+        document.getElementById("ui-detailed-score").innerText = `您答對了 ${score / 10} / ${totalQuestions} 題 (總得分：${score} 分)`;
+      }
       
       document.getElementById("ui-percentage-score").innerText = `${pct}%`;
-      document.getElementById("ui-detailed-score").innerText = `您答對了 ${score / 10} / ${totalQuestions} 題 (總分：${score} 分)`;
+      
+      // Update headline text
+      const headline = document.getElementById("results-headline");
+      if (pct >= 90) {
+        headline.innerText = "太棒了！簡直是英文大師！";
+      } else if (pct >= 60) {
+        headline.innerText = "做得好！再接再厲就全對囉！";
+      } else {
+        headline.innerText = "加油！多練幾次就會記住囉！";
+      }
       
       // Render wrong answers review
       const wrongReviewSection = document.getElementById("ui-wrong-review-container");
@@ -1025,8 +1300,7 @@
           row.className = "wrong-item";
           row.innerHTML = `
             <span class="wrong-eng">${item.word.english}</span>
-            <span>您的答案: <span style="color:var(--text-muted)">${item.wrongAnswerProvided || "無"}</span></span>
-            <span class="wrong-correct">正解: ${item.word.chinese}</span>
+            <span>正解: <span class="wrong-correct">${item.word.chinese}</span></span>
           `;
           wrongList.appendChild(row);
         });

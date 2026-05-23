@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>盧老師公開網頁總整理</title>
+  <meta name="description" content="把盧老師近期由 AI 協作製作與發布的公開網頁，依教學素材、簡報、社群網站、影片素材與 AI 工作流分門別類彙整。" />
+  <style>
+    :root {
+      --bg: #f7f5f0;
+      --ink: #1f2933;
+      --muted: #667085;
+      --card: #ffffff;
+      --line: rgba(31,41,51,.12);
+      --brand: #176b87;
+      --brand-2: #9a5b13;
+      --soft: #eaf6f8;
+      --soft-2: #fff4e5;
+      --shadow: 0 18px 55px rgba(16,24,40,.08), 0 3px 14px rgba(16,24,40,.06);
+      --radius: 22px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(23,107,135,.16), transparent 34rem),
+        radial-gradient(circle at top right, rgba(154,91,19,.12), transparent 30rem),
+        linear-gradient(180deg, #fffdf8 0%, var(--bg) 58%, #f2efe8 100%);
+      line-height: 1.7;
+    }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    .hero { padding: 72px 0 30px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 7px 12px; border-radius: 999px;
+      background: rgba(23,107,135,.10); color: var(--brand);
+      font-size: 13px; font-weight: 800; letter-spacing: .04em;
+    }
+    h1 { margin: 18px 0 12px; font-size: clamp(34px, 6vw, 64px); line-height: 1.04; letter-spacing: -.045em; }
+    .lead { max-width: 860px; margin: 0; color: var(--muted); font-size: clamp(16px, 2.2vw, 21px); font-weight: 520; }
+    .top-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 44px; padding: 10px 16px; border-radius: 999px;
+      border: 1px solid var(--line); background: var(--card); box-shadow: 0 5px 18px rgba(16,24,40,.06);
+      font-weight: 750;
+    }
+    .btn.primary { background: var(--brand); color: white; border-color: var(--brand); }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 34px 0 0; }
+    .stat { background: rgba(255,255,255,.72); border: 1px solid var(--line); border-radius: 18px; padding: 16px; backdrop-filter: blur(10px); }
+    .stat strong { display: block; font-size: 28px; line-height: 1; }
+    .stat span { color: var(--muted); font-size: 13px; }
+    .toc { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 34px; }
+    .toc a { padding: 8px 12px; border-radius: 999px; background: #fff; border: 1px solid var(--line); font-size: 14px; font-weight: 700; }
+    section.category { margin: 24px 0; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 14px; }
+    .section-head h2 { margin: 0; font-size: clamp(24px, 4vw, 38px); line-height: 1.12; letter-spacing: -.03em; }
+    .section-head p { margin: 0; color: var(--muted); max-width: 560px; }
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .card {
+      background: rgba(255,255,255,.88); border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 20px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 12px;
+    }
+    .card h3 { margin: 0; font-size: 21px; letter-spacing: -.02em; line-height: 1.25; }
+    .card p { margin: 0; color: var(--muted); }
+    .meta { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tag { display: inline-flex; align-items: center; padding: 4px 9px; border-radius: 999px; background: var(--soft); color: #155e75; font-size: 12px; font-weight: 800; }
+    .tag.alt { background: var(--soft-2); color: #9a5b13; }
+    .links { display: flex; flex-wrap: wrap; gap: 9px; margin-top: auto; }
+    .links a { display: inline-flex; align-items: center; padding: 8px 11px; border-radius: 12px; background: #f8fafc; border: 1px solid var(--line); font-weight: 750; font-size: 14px; }
+    .full { grid-column: 1 / -1; }
+    .site-map { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 4px; }
+    .site-map a { background: #fff; border: 1px solid var(--line); border-radius: 13px; padding: 10px 12px; font-size: 14px; font-weight: 700; }
+    .note { margin: 34px 0 52px; padding: 18px 20px; border-radius: 18px; background: rgba(255,255,255,.72); border: 1px dashed rgba(31,41,51,.24); color: var(--muted); }
+    .footer { padding: 10px 0 52px; color: var(--muted); font-size: 14px; }
+    @media (max-width: 820px) {
+      .hero { padding-top: 46px; }
+      .stats, .grid, .site-map { grid-template-columns: 1fr; }
+      .section-head { display: block; }
+      .section-head p { margin-top: 8px; }
+      .card { padding: 17px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <span class="eyebrow">公開成果入口｜更新：2026-05-24</span>
+      <h1>盧老師公開網頁總整理</h1>
+      <p class="lead">這裡把之前協作製作、已發布或可直接開啟的網頁集中在同一頁，依用途分成「教學素材」、「簡報／分享」、「社群網站」、「影片與 YouTube 素材」、「AI 工具與工作流」幾類，方便用手機快速轉給學生、同事或自己備課時查找。</p>
+      <div class="top-actions">
+        <a class="btn primary" href="#teaching">先看教學素材</a>
+        <a class="btn" href="../">回 AI 工具比較首頁</a>
+        <a class="btn" href="https://addielu-phy.github.io/kh-inquiry-community-site/">高雄探究社群網站</a>
+      </div>
+      <div class="stats" aria-label="彙整統計">
+        <div class="stat"><strong>5</strong><span>大分類</span></div>
+        <div class="stat"><strong>20+</strong><span>公開入口／子頁</span></div>
+        <div class="stat"><strong>3</strong><span>主要 GitHub Pages 站點</span></div>
+        <div class="stat"><strong>1</strong><span>手機友善索引</span></div>
+      </div>
+    </header>
+
+    <nav class="toc" aria-label="分類導覽">
+      <a href="#teaching">教學素材</a>
+      <a href="#talks">簡報／分享</a>
+      <a href="#community">社群網站</a>
+      <a href="#video">影片素材</a>
+      <a href="#ai-workflow">AI 工具與工作流</a>
+    </nav>
+
+    <section class="category" id="teaching">
+      <div class="section-head">
+        <h2>教學素材</h2>
+        <p>可直接分享給學生或作為課堂備課入口的互動頁、講義頁、試題整理頁。</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="meta"><span class="tag">物理</span><span class="tag alt">高中／大學橋接</span></div>
+          <h3>用 Lagrange 解圓錐擺</h3>
+          <p>球座標設定、Lagrangian、Euler–Lagrange 方程與高中向心力解法對照，含常見錯誤與進階摺疊區。</p>
+          <div class="links"><a href="../physics/conical-pendulum-lagrange/">開啟頁面</a></div>
+        </article>
+        <article class="card">
+          <div class="meta"><span class="tag">數學</span><span class="tag alt">高一機率</span></div>
+          <h3>高一數學下｜南一版第三章機率</h3>
+          <p>章節重點、常見題型、歷屆公開試題連結與逐題截圖；部分題目已補入答案與簡潔詳解。</p>
+          <div class="links"><a href="../math/nanyi-math-1b-ch3-probability/">開啟頁面</a></div>
+        </article>
+        <article class="card">
+          <div class="meta"><span class="tag">會考自然</span><span class="tag alt">物理試題</span></div>
+          <h3>115 會考自然科物理試題截圖整理</h3>
+          <p>依官方會考自然科題本擷取物理相關題目，整理成主題分類、參考答案與官方來源連結。</p>
+          <div class="links"><a href="../exams/cap-115-nature-physics/">開啟頁面</a></div>
+        </article>
+        <article class="card">
+          <div class="meta"><span class="tag">英語</span><span class="tag alt">互動測驗</span></div>
+          <h3>5/19 英語課堂 300TU 單字與片語測驗</h3>
+          <p>字卡翻轉、四選一、拼寫寫作三合一互動測驗，支援語音發音與答題統計。</p>
+          <div class="links"><a href="../exams/vocab-300tu-519/">開啟頁面</a></div>
+        </article>
+        <article class="card">
+          <div class="meta"><span class="tag">分科物理</span><span class="tag alt">影片教學頁</span></div>
+          <h3>114 分科物理第 11 題｜光電效應波長改變</h3>
+          <p>YouTube 素材站中的單題物理影片頁，聚焦光電效應中波長改變與光電子動能關係。</p>
+          <div class="links"><a href="https://addielu-phy.github.io/lu-ai-youtube-assets/physics/114-q11-photoelectric-wavelength-20260517/">開啟頁面</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="category" id="talks">
+      <div class="section-head">
+        <h2>簡報／分享</h2>
+        <p>對外分享、共學圈或工作坊可用的 HTML slide deck 與展示頁。</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="meta"><span class="tag">PhAI</span><span class="tag alt">HTML 投影片</span></div>
+          <h3>PhAI 共學圈｜Codex × Agent 教學助理團隊分享</h3>
+          <p>以手機與投影都能閱讀的 HTML slide deck，說明如何用 Codex／Agent 組成教學助理團隊。</p>
+          <div class="links"><a href="../presentations/phai-codex-agent-2026-05-20/">開啟投影片</a></div>
+        </article>
+        <article class="card">
+          <div class="meta"><span class="tag">活動草稿</span><span class="tag alt">本機待發布</span></div>
+          <h3>同課異構一頁式網站草稿</h3>
+          <p>已在 Obsidian 專案區有 HTML 草稿；因日期、地點與報名方式仍待確認，暫不列為正式公開頁。</p>
+          <div class="links"><a href="#note-unpublished">查看備註</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="category" id="community">
+      <div class="section-head">
+        <h2>社群網站</h2>
+        <p>高雄市探究與實作社群的正式公開網站與主要子頁。</p>
+      </div>
+      <article class="card full">
+        <div class="meta"><span class="tag">正式網站</span><span class="tag alt">GitHub Pages</span></div>
+        <h3>高雄市探究與實作社群</h3>
+        <p>社群理念、年度共備主題、活動紀實、資源專區與成員角色的穩定入口。</p>
+        <div class="links"><a href="https://addielu-phy.github.io/kh-inquiry-community-site/">開啟首頁</a></div>
+        <div class="site-map" aria-label="高雄探究社群子頁">
+          <a href="https://addielu-phy.github.io/kh-inquiry-community-site/about.html">關於社群</a>
+          <a href="https://addielu-phy.github.io/kh-inquiry-community-site/themes.html">共備主題</a>
+          <a href="https://addielu-phy.github.io/kh-inquiry-community-site/showcase.html">成果與活動</a>
+          <a href="https://addielu-phy.github.io/kh-inquiry-community-site/resources.html">資源專區</a>
+          <a href="https://addielu-phy.github.io/kh-inquiry-community-site/members.html">社群成員</a>
+          <a href="https://addielu-phy.github.io/kh-inquiry-community-site/ai-agent-physics.html">AI 代理與物理教學</a>
+          <a href="https://addielu-phy.github.io/kh-inquiry-community-site/activity-archive.html">活動紀事</a>
+          <a href="https://addielu-phy.github.io/kh-inquiry-community-site/community-methodology.html">社群方法論</a>
+          <a href="https://addielu-phy.github.io/kh-inquiry-community-site/community-chronicle.html">社群編年</a>
+          <a href="https://addielu-phy.github.io/kh-inquiry-community-site/discussion-insights.html">討論洞察</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="category" id="video">
+      <div class="section-head">
+        <h2>影片與 YouTube 素材</h2>
+        <p>給手機快速檢視影片、封面、字幕與上傳素材的索引。</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="meta"><span class="tag">手機索引</span><span class="tag alt">YouTube 素材站</span></div>
+          <h3>盧老師 AI YouTube 成果手機索引</h3>
+          <p>集中管理短影音、長片草稿、字幕、封面與上傳交接包的手機友善入口。</p>
+          <div class="links"><a href="https://addielu-phy.github.io/lu-ai-youtube-assets/mobile-index/">開啟手機索引</a><a href="https://addielu-phy.github.io/lu-ai-youtube-assets/">素材站首頁</a></div>
+        </article>
+        <article class="card">
+          <div class="meta"><span class="tag">早期測試</span><span class="tag alt">本 repo</span></div>
+          <h3>YouTube 素材手機觀看測試頁</h3>
+          <p>早期用來測試影片素材在手機上觀看與下載的 GitHub Pages 頁面。</p>
+          <div class="links"><a href="../youtube-assets/">開啟測試頁</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="category" id="ai-workflow">
+      <div class="section-head">
+        <h2>AI 工具與工作流</h2>
+        <p>AI coding tools 比較、盧老師 AI 背景資料與其他 AI 協作入口。</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="meta"><span class="tag">AI 工具</span><span class="tag alt">比較頁</span></div>
+          <h3>Antigravity vs Claude Code vs Codex｜免費帳號實用比較</h3>
+          <p>比較 agent-first IDE、codebase 代理與免費 coding agent 的定位、免費可用性與教學／個人開發情境。</p>
+          <div class="links"><a href="../">開啟比較頁</a></div>
+        </article>
+        <article class="card">
+          <div class="meta"><span class="tag">AI Profile</span><span class="tag alt">給其他 AI 看</span></div>
+          <h3>盧老師 AI 快速背景資料</h3>
+          <p>提供其他 AI 快速理解盧老師背景、偏好、工作流、重要專案與公開成果的簡短入口。</p>
+          <div class="links"><a href="../ai-profile/">開啟背景資料</a></div>
+        </article>
+      </div>
+    </section>
+
+    <div class="note" id="note-unpublished">
+      <strong>備註：</strong>此頁優先收錄已發布的穩定 GitHub Pages 連結；草稿、私人影片、補課影片或仍待授權／確認的素材不直接公開列出。若之後新增正式頁面，可再把這個總整理頁當作公開入口持續更新。
+    </div>
+
+    <footer class="footer">
+      由 Hermes Agent 協助彙整。主要公開站點：AI tools / teaching pages、lu-ai-youtube-assets、高雄市探究與實作社群。
+    </footer>
+  </main>
+</body>
+</html>

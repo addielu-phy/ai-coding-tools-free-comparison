@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>高師大附中近五年高一下數學｜南一 3-1 基本計數原理</title>
+<meta name="description" content="依參考檔校準南一版高一下 3-1 基本計數原理，重新整理高師大附中近五年公開段考考古題。">
+<style>
+:root { --bg:#f7f5ef; --ink:#18202a; --muted:#667085; --card:#fff; --line:#e2e8f0; --brand:#0f766e; --accent:#b45309; --soft:#ecfdf5; --soft2:#fff7ed; }
+*{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",sans-serif;background:radial-gradient(circle at top left,#ccfbf1 0,transparent 34rem),radial-gradient(circle at top right,#ffedd5 0,transparent 30rem),linear-gradient(180deg,#fffdf8,var(--bg));color:var(--ink);line-height:1.75}
+a{color:var(--brand);word-break:break-word} .wrap{width:min(1060px,calc(100% - 28px));margin:0 auto} header{padding:52px 0 24px} .eyebrow{display:inline-flex;padding:6px 12px;border-radius:999px;background:#d1fae5;color:#065f46;font-weight:800;font-size:13px;letter-spacing:.04em} h1{font-size:clamp(32px,6vw,58px);line-height:1.08;margin:18px 0 12px;letter-spacing:-.04em} .lead{font-size:clamp(16px,2.2vw,21px);color:var(--muted);max-width:860px;margin:0} .notice{background:#fff7ed;border:1px solid #fed7aa;border-radius:20px;padding:18px 20px;margin:24px 0;color:#7c2d12} .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px} .btn{display:inline-flex;padding:10px 14px;border-radius:999px;background:#fff;border:1px solid var(--line);font-weight:800;text-decoration:none} .btn.primary{background:var(--brand);color:#fff;border-color:var(--brand)}
+main{padding-bottom:56px} .content{background:rgba(255,255,255,.88);border:1px solid var(--line);border-radius:26px;box-shadow:0 18px 50px rgba(15,23,42,.08);padding:clamp(18px,4vw,36px)} h2{font-size:clamp(25px,4vw,38px);margin:34px 0 14px;border-top:1px solid var(--line);padding-top:26px;letter-spacing:-.03em} h2:first-child{border-top:0;margin-top:0;padding-top:0} h3{font-size:clamp(21px,3vw,29px);margin:30px 0 10px;color:#0f766e} h4{font-size:19px;margin:22px 0 8px;color:#92400e} p{margin:10px 0} ul{margin:10px 0 16px;padding-left:1.35rem} li{margin:7px 0} li.sub{margin-left:1rem;color:var(--muted)} code{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:7px;padding:1px 5px} hr{border:0;border-top:1px solid var(--line);margin:30px 0} .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0} .chip{padding:6px 10px;border-radius:999px;background:var(--soft);color:#047857;font-size:13px;font-weight:800} .chip.alt{background:var(--soft2);color:#9a3412} .footer{color:var(--muted);font-size:14px;padding:24px 0 42px} @media(max-width:720px){.content{border-radius:18px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <span class="eyebrow">已依參考檔重新校準｜2026-05-24</span>
+  <h1>高師大附中高一下考古題｜南一 3-1 基本計數原理</h1>
+  <p class="lead">這一版把前次誤以「樣本空間與事件」為核心的篩選，改為使用者參考檔中的 3-1「基本計數原理」：集合、邏輯、樹狀圖、窮舉法、加法/乘法原理、排容與一一對應。</p>
+  <div class="notice"><strong>校準結果：</strong>機率與期望值題改列為第三章後段或延伸；核心清單改收排列、分配、路徑、集合文氏圖與排容題。</div>
+  <div class="actions"><a class="btn primary" href="#core">看核心卷別</a><a class="btn" href="https://sites.google.com/tea.nknush.kh.edu.tw/nknush-math/%E9%AB%98%E4%B8%AD%E6%AE%B5%E8%80%83%E8%A9%A6%E9%A1%8C/%E9%AB%98%E4%B8%80%E8%A9%A6%E9%A1%8C">官方試題來源</a><a class="btn" href="../../webpages/">回公開網頁總整理</a></div>
+  <div class="chips"><span class="chip">集合與文氏圖</span><span class="chip">加法／乘法原理</span><span class="chip">排容原理</span><span class="chip alt">高師大附中考古題</span></div>
+</header>
+<main class="content" id="core">
+<h2>高師大附中近五年高一下數學考卷：南一版 3-1「基本計數原理」試題整理</h2>
+<p>整理日期：2026-05-24<br>校準依據：使用者提供之參考檔，章節標題為「3-1 基本計數原理」。<br>整理範圍：110～114 學年度，高一第二學期，高師大附中數學科公開段考卷。<br>官方來源：高師大附中數學科 Google Sites「高一試題」<br><a href="https://sites.google.com/tea.nknush.kh.edu.tw/nknush-math/%E9%AB%98%E4%B8%AD%E6%AE%B5%E8%80%83%E8%A9%A6%E9%A1%8C/%E9%AB%98%E4%B8%80%E8%A9%A6%E9%A1%8C">https://sites.google.com/tea.nknush.kh.edu.tw/nknush-math/%E9%AB%98%E4%B8%AD%E6%AE%B5%E8%80%83%E8%A9%A6%E9%A1%8C/%E9%AB%98%E4%B8%80%E8%A9%A6%E9%A1%8C</a></p>
+<h3>範圍判定：由「樣本空間與事件」改為「基本計數原理」</h3>
+<p>參考檔 3-1 的可見小節包含：</p>
+<ul>
+<li>集合的概念與表示法：列舉法、描述法。</li>
+<li>集合間的運算：聯集、交集、差集、補集、文氏圖、笛摩根定律。</li>
+<li>簡單邏輯：命題、否定、且／或、若 p 則 q、充分／必要條件。</li>
+<li>基本計數原理：樹狀圖、窮舉法、加法原理、乘法原理。</li>
+<li>三集合聯集與交集、取捨原理／排容原理、一一對應原理。</li>
+</ul>
+<p>因此本頁把「機率、期望值、條件機率」降為延伸或不列入核心；優先保留能練到「分類、分步、窮舉、樹狀圖、集合/邏輯、排容」的題目。</p>
+<hr>
+<h2>一、最建議優先練習的 3-1 核心卷別</h2>
+<h3>112 學年度第二學期第二次段考（最完整）</h3>
+<p>來源 PDF：<a href="https://drive.google.com/file/d/1IuM3NgaZif77BHaVSbIqQoNHhAP3ptPd/view">https://drive.google.com/file/d/1IuM3NgaZif77BHaVSbIqQoNHhAP3ptPd/view</a><br>判定：高度符合 3-1。整卷多數題目就是集合、分配、排列、路徑、數字組成、字母排列、箱子分配、有限供應選擇等計數核心。</p>
+<p>建議題目：</p>
+<ul>
+<li>多選第 2 題：40 人問卷調查，籃球／排球人數關係。</li>
+<li class="sub">對應：集合、交集、差集、文氏圖、排容前置。</li>
+<li>多選第 3 題：9 本書分配，區分相異書／相同書、相異袋／相同袋。</li>
+<li class="sub">對應：分類討論、組合、分配問題。</li>
+<li>多選第 4 題：n 位同學搭電梯，可能停靠方式。</li>
+<li class="sub">對應：集合選取、加法原理、有限狀態計數。</li>
+<li>填充第 1 題：A～F 六人排成一列；任意排列、AB 相鄰且 CD 不相鄰。</li>
+<li class="sub">對應：乘法原理、排除法、相鄰不相鄰。</li>
+<li>填充第 2 題：15×1 牆面用 2×1、3×1 壁磚貼滿。</li>
+<li class="sub">對應：遞推／窮舉，基本計數延伸。</li>
+<li>填充第 3 題：周長 18 的整數邊長不全等三角形。</li>
+<li class="sub">對應：列舉法、條件限制、窮舉。</li>
+<li>填充第 4 題：棋盤式街道 A 到 B，必須經過 C 且不經過 D。</li>
+<li class="sub">對應：路徑計數、乘法原理、排除。</li>
+<li>填充第 5 題：6 位值日生安排上午／下午擦黑板與掃地，且人選不可重複某職務。</li>
+<li class="sub">對應：分步計數、限制條件。</li>
+<li>填充第 6 題：0～6 作成三位數，數字不重複；偶數與 3 的倍數。</li>
+<li class="sub">對應：分類、乘法原理、數字排列。</li>
+<li>填充第 7 題：pineapple 任取四個字母排成一列。</li>
+<li class="sub">對應：重複字母排列、分類計數。</li>
+<li>填充第 9 題：7 個不同球投入三個不同箱子，每箱至少一球；指定下限。</li>
+<li class="sub">對應：分配、排容／分類。</li>
+<li>填充第 10 題：1,2,3,4 組成六位數密碼，至少各出現一次，且不可連續三位都相同。</li>
+<li class="sub">對應：排容、限制排列。</li>
+<li>填充第 11 題：7 人買早餐，餐點存量有限，甲不吃蛋餅。</li>
+<li class="sub">對應：有限供應、分步／分類、補事件式計數。</li>
+</ul>
+<hr>
+<h3>110 學年度第二學期第二次段考（排列組合基本題密集）</h3>
+<p>來源 PDF：<a href="https://drive.google.com/file/d/1PdmUp5qao8eQcYuys8Y6tZd0l-huJG5i/view">https://drive.google.com/file/d/1PdmUp5qao8eQcYuys8Y6tZd0l-huJG5i/view</a><br>判定：高度符合 3-1 後段與基本排列組合練習；可作「基本計數原理 → 排列組合」的銜接題庫。</p>
+<p>建議題目：</p>
+<ul>
+<li>多選第 2 題：甲乙丙丁戊己六人排成一列，多種限制判斷。</li>
+<li class="sub">對應：排列、相對位置、相鄰不相鄰、條件限制。</li>
+<li>填充第 1 題：長鳴／短鳴警報器，總時間 15 秒，可做出幾種信號。</li>
+<li class="sub">對應：分類、分步、遞推式窮舉。</li>
+<li>填充第 2 題：SUCCESS 的 7 個字母任取 3 個排成一列。</li>
+<li class="sub">對應：重複字母取排、分類計數。</li>
+<li>填充第 3 題：8 人排成一列，甲第一、乙不第二、丙不第三。</li>
+<li class="sub">對應：乘法原理、排除法。</li>
+<li>填充第 4 題：8 個原節目相對順序不變，插入 2 個新節目。</li>
+<li class="sub">對應：插空法、組合與排列。</li>
+<li>填充第 5 題：垂直平行線段組成圖形中的矩形數。</li>
+<li class="sub">對應：一一對應、選線成矩形。</li>
+<li>填充第 6 題：10 天中選 3 天停水，不可連續。</li>
+<li class="sub">對應：選取限制、插空／排除。</li>
+<li>填充第 9 題：5 件不同物品分給甲乙丙，每人至少一件。</li>
+<li class="sub">對應：分配、排容原理。</li>
+<li>填充第 10 題：1、2、5、6、7、9 組成三位數，可重複，數字和為偶數。</li>
+<li class="sub">對應：分類、乘法原理。</li>
+<li>填充第 19 題：5 個 A、5 個 B、5 個 C 排列，A/B/C 不在指定區段。</li>
+<li class="sub">對應：排容原理、限制排列；難度較高。</li>
+</ul>
+<hr>
+<h3>111 學年度第二學期第二次段考（路徑、座位、旗幟與分配）</h3>
+<p>來源 PDF：<a href="https://drive.google.com/file/d/1cV39zOEL8dzRCKHfl6B9purIyw_zExGp/view">https://drive.google.com/file/d/1cV39zOEL8dzRCKHfl6B9purIyw_zExGp/view</a><br>判定：高度符合；其中部分機率題可暫放到後面，但計數題很多。</p>
+<p>建議題目：</p>
+<ul>
+<li>單選第 1 題：數線上一物體左右跳動 6 次，從 -1 到 +1 的不同過程。</li>
+<li class="sub">對應：路徑／序列計數、分類。</li>
+<li>單選第 2 題：7 個座位，甲乙丙三人都不連坐。</li>
+<li class="sub">對應：座位排列、補事件、排除法。</li>
+<li>多選第 1 題：組合數 C(10,3) 的意義判讀。</li>
+<li class="sub">對應：組合概念、一一對應。</li>
+<li>填充第 2 題：11 位應徵者錄取 4 位，至少 2 位男生。</li>
+<li class="sub">對應：分類加法、組合。</li>
+<li>填充第 3 題：推銷員經過五城鎮且每城只經過一次再回 A。</li>
+<li class="sub">對應：路線排列、圖形限制。</li>
+<li>填充第 10 題：紅旗、黃旗、白旗、黑旗掛在三旗桿，每根至少一面。</li>
+<li class="sub">對應：相同物／重複物分配、分類。</li>
+<li>填充第 11 題：1～10 號小朋友排隊，1 不排首、10 不排末，號碼小於 4 在 4 前，大於 8 在 8 後。</li>
+<li class="sub">對應：限制排列、相對順序。</li>
+<li>填充第 12 題：10 件相同物分給三人，三人下限分別 1、2、3。</li>
+<li class="sub">對應：整數解、分配。</li>
+<li>計算題：棋盤式街道 A 到 B，經過 C 或 D；恰轉彎三次。</li>
+<li class="sub">對應：路徑計數、排容、分類。</li>
+</ul>
+<hr>
+<h3>113 學年度第二學期第二次段考（綜合與較高階題）</h3>
+<p>來源 PDF：<a href="https://drive.google.com/file/d/1xI9UdPouMTvhtT43bmBLCXNIaUiYP27P/view">https://drive.google.com/file/d/1xI9UdPouMTvhtT43bmBLCXNIaUiYP27P/view</a><br>判定：中高度符合；適合放在 3-1 末段或複習後段，不建議作第一輪基本題。</p>
+<p>建議題目：</p>
+<ul>
+<li>多選第 1 題：三科及格人數、兩科交集、三科交集，判斷至少一科、恰一科、至少二科。</li>
+<li class="sub">對應：三集合文氏圖、排容原理。</li>
+<li>多選第 3 題：組合與排列恆等式判斷。</li>
+<li class="sub">對應：組合公式、一一對應、代數化計數；偏進階。</li>
+<li>多選第 4 題：6 件物品放入 3 個箱子，物品/箱子相異或相同、可空箱或每箱至少一個。</li>
+<li class="sub">對應：分配問題總整理；偏進階。</li>
+<li>填充第 1 題組：9 位學生分組、搭車、選人、座位相鄰、出場順序。</li>
+<li class="sub">對應：分組、分類、乘法原理、限制排列；很適合做綜合練習。</li>
+<li>填充第 7 題：九宮格每格塗黑或白。</li>
+<li class="sub">對應：乘法原理、二元選擇。</li>
+<li>填充第 9 題：排列符號方程式求 m。</li>
+<li class="sub">對應：排列公式；偏符號運算。</li>
+</ul>
+<hr>
+<h2>二、可作前置或補充的題目</h2>
+<h3>110 學年度第二學期第一次段考</h3>
+<p>來源 PDF：<a href="https://drive.google.com/file/d/1-2bZFUm7ddAB_ezeCQHWVHNeXDOJilm1/view">https://drive.google.com/file/d/1-2bZFUm7ddAB_ezeCQHWVHNeXDOJilm1/view</a><br>判定：多數仍在數列／集合／列舉，適合作 3-1 前置，不是最核心的計數原理主卷。</p>
+<p>可用題目：</p>
+<ul>
+<li>填充第 8 題：周長 22 的整數邊長三角形有幾種。</li>
+<li class="sub">對應：列舉法、條件限制。</li>
+<li>填充第 9 題：正整數解個數。</li>
+<li class="sub">對應：整數解、因式分解後分類。</li>
+<li>填充第 10 題：一天 8 節安排 3 節數學，其中恰兩節連堂且避開第 4、5 節連續。</li>
+<li class="sub">對應：分類、排除法。</li>
+<li>填充第 12 題：三色塗四個區域，三色全用且相鄰不同色。</li>
+<li class="sub">對應：圖形著色、乘法原理、分類。</li>
+<li>填充第 13 題：1～43 任取相異 3 數形成等差數列。</li>
+<li class="sub">對應：列舉、分類、組合前置。</li>
+<li>填充第 14 題：A ⊆ C ⊆ B 的集合 C 個數。</li>
+<li class="sub">對應：集合表示、子集計數。</li>
+</ul>
+<h3>112 學年度第二學期第三次段考</h3>
+<p>來源 PDF：<a href="https://drive.google.com/file/d/1P0W0HnJ0RBGAC4nllN5G-yhNeaif-uhx/view">https://drive.google.com/file/d/1P0W0HnJ0RBGAC4nllN5G-yhNeaif-uhx/view</a><br>判定：主要已進入機率、三角幾何；僅保留與計數有關的搭配題。</p>
+<p>可用題目：</p>
+<ul>
+<li>填充第 2 題：8 個球員排成 2 列，每列 4 人，右邊號碼比左邊大、第二列比第一列大。</li>
+<li class="sub">對應：排列總數與滿足限制的排列；若以「機率」包裝，實際核心仍是計數。</li>
+</ul>
+<hr>
+<h2>三、這次應從核心清單移除的題目</h2>
+<p>下列題目是前一版「樣本空間與事件」整理的核心，但依參考檔校準後不應再列為 3-1 基本計數原理核心：</p>
+<ul>
+<li>110-2 第二次段考：猜拳機率、硬幣機率、骰子機率、青蛙隨機漫步回原點、裝錯信封機率、座位相鄰機率。</li>
+<li>111-2 第二次段考：任取兩數的機率、硬幣出現正面次數的機率、猜拳不分勝負機率、黑白球取後不放回機率、骰子最大最小點數機率。</li>
+<li>112-2 第三次段考：取紅白球的機率、不公正骰與期望值。</li>
+<li>113-2 第二次段考：編號球取三球的機率、人生如戲重排機率、1～15 分組任取兩數機率。</li>
+</ul>
+<p>這些仍可放在第三章後段「機率」或複習卷，但不列為這份 3-1 參考檔的主題。</p>
+<hr>
+<h2>四、按教學概念重新排列的題目索引</h2>
+<h3>A. 集合、文氏圖、排容原理</h3>
+<ul>
+<li>112-2 第二次多選 2：40 人喜歡籃球／排球調查。</li>
+<li>113-2 第二次多選 1：三科及格人數與三集合排容。</li>
+<li>110-2 第一次填充 14：A ⊆ C ⊆ B 的集合 C 個數。</li>
+<li>111-2 第二次計算題第 (1) 小題：經過 C 或 D 的路徑數。</li>
+</ul>
+<h3>B. 加法原理、分類討論</h3>
+<ul>
+<li>110-2 第二次填充 1：長鳴／短鳴警報信號。</li>
+<li>110-2 第二次填充 10：三位數數字和為偶數。</li>
+<li>111-2 第二次填充 2：錄取 4 位且至少 2 位男生。</li>
+<li>113-2 第二次填充第 1 題組：選人與座位分類。</li>
+</ul>
+<h3>C. 乘法原理、分步計數</h3>
+<ul>
+<li>112-2 第二次填充 5：上午／下午值日生安排。</li>
+<li>112-2 第二次填充 6：0～6 組成三位數。</li>
+<li>113-2 第二次填充 7：九宮格黑白塗色。</li>
+<li>111-2 第二次單選 1：左右跳動過程。</li>
+</ul>
+<h3>D. 排列、座位、相鄰不相鄰</h3>
+<ul>
+<li>110-2 第二次多選 2：六人排一列限制條件。</li>
+<li>110-2 第二次填充 3：8 人排一列位置限制。</li>
+<li>111-2 第二次單選 2：三人入座且不連坐。</li>
+<li>112-2 第二次填充 1：六人排列，AB 相鄰、CD 不相鄰。</li>
+<li>113-2 第二次填充第 1 題組：座位相鄰與出場順序。</li>
+</ul>
+<h3>E. 路徑、圖形與一一對應</h3>
+<ul>
+<li>110-2 第二次填充 5：矩形數。</li>
+<li>111-2 第二次填充 3：五城鎮路線。</li>
+<li>111-2 第二次計算題：棋盤式街道與轉彎次數。</li>
+<li>112-2 第二次填充 4：棋盤式街道經 C 不經 D。</li>
+</ul>
+<h3>F. 分配問題與相同／相異物</h3>
+<ul>
+<li>110-2 第二次填充 9：5 件不同物分給三人，每人至少一件。</li>
+<li>111-2 第二次填充 10：多色旗掛三旗桿。</li>
+<li>111-2 第二次填充 12：10 件相同物分給三人且下限不同。</li>
+<li>112-2 第二次多選 3：9 本書分配。</li>
+<li>112-2 第二次填充 9：7 個不同球投入三箱。</li>
+<li>113-2 第二次多選 4：6 件物品放入 3 箱。</li>
+</ul>
+<h3>G. 列舉法、窮舉法、遞推味道</h3>
+<ul>
+<li>110-2 第一次填充 8：整數邊長三角形。</li>
+<li>110-2 第一次填充 12：三色塗區域。</li>
+<li>110-2 第一次填充 13：三數成等差數列。</li>
+<li>112-2 第二次填充 2：2×1、3×1 壁磚貼滿 15×1 牆面。</li>
+<li>112-2 第二次填充 3：整數邊長三角形。</li>
+</ul>
+<hr>
+<h2>五、已檢查但不列入本次 3-1 核心的卷別</h2>
+<ul>
+<li>110-2 第三次段考：主要為統計、三角與幾何，非 3-1 基本計數原理。</li>
+<li>111-2 第一次段考：主要為統計與數列，非 3-1 核心。</li>
+<li>111-2 第三次段考：主要為三角與幾何，非 3-1 核心。</li>
+<li>112-2 第一次段考：主要為數列與統計，非 3-1 核心。</li>
+<li>113-2 第一次段考：主要為統計、數列、金融/標準化，非 3-1 核心。</li>
+<li>113-2 第三次段考：主要為三角與幾何，非 3-1 核心。</li>
+<li>114-2 第一次段考：主要為三角與幾何，非 3-1 核心。</li>
+<li>114-2 第二次段考：主要為統計、迴歸、數列/幾何，非 3-1 核心。</li>
+</ul>
+<hr>
+<h2>六、檔案與抽取紀錄</h2>
+<p>本機工作資料夾：<code>/home/adl/work/nknush_h1_math_31/</code><br>參考檔：<code>/home/adl/.hermes/document_cache/doc_85e4dcb87fe5_...pdf</code>，掃描型 PDF，已用頁面截圖辨識章節範圍。<br>文字抽取工具：PyMuPDF；參考 PDF 因無文字層，改用頁面影像辨識。<br>判定方式：以參考檔「集合／邏輯／基本計數原理」為主軸，重新檢視各考卷抽取文字，將機率題從核心移出，補入排列、分配、路徑、集合與排容題。</p>
+</main>
+<p class="footer">整理方式：PDF 文字抽取 + 參考檔影像辨識校準；官方 PDF 仍以高師大附中數學科公開來源為準。</p>
+</div>
+</body>
+</html>

@@ -3,69 +3,71 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>/goal 真實示範｜向心力互動小教材</title>
+  <title>/goal 動畫版｜向心力互動小教材</title>
   <style>
-    :root{
-      --bg:#f7f4ed; --ink:#20242a; --muted:#667085; --card:#fffdfa; --line:rgba(32,36,42,.14);
-      --blue:#176b87; --orange:#b45309; --green:#168356; --red:#b42318; --soft:#e9f6f8;
-      --shadow:0 18px 55px rgba(16,24,40,.08),0 4px 14px rgba(16,24,40,.05);
-    }
-    *{box-sizing:border-box} html{scroll-behavior:smooth}
-    body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",sans-serif;color:var(--ink);background:radial-gradient(circle at 15% 0%,rgba(23,107,135,.16),transparent 32rem),linear-gradient(180deg,#fffdf8 0%,var(--bg) 100%);line-height:1.75}
-    main{width:min(1060px,calc(100% - 32px));margin:auto;padding:40px 0 72px}.eyebrow{display:inline-flex;padding:7px 12px;border-radius:999px;background:var(--soft);color:var(--blue);font-size:13px;font-weight:800;letter-spacing:.04em}
-    h1{font-size:clamp(32px,6vw,58px);line-height:1.04;letter-spacing:-.04em;margin:18px 0 12px}h2{font-size:clamp(24px,4vw,36px);line-height:1.15;letter-spacing:-.03em;margin:0 0 12px}h3{margin:0 0 8px;font-size:21px}.lead{font-size:clamp(16px,2vw,21px);color:var(--muted);max-width:850px;margin:0 0 22px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{background:rgba(255,253,250,.9);border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:var(--shadow);margin:18px 0}.full{grid-column:1/-1}.goal{white-space:pre-wrap;background:#111827;color:#f9fafb;border-radius:18px;padding:18px;overflow:auto;font-size:14px;line-height:1.65}.goal strong{color:#a7f3d0}.tag{display:inline-flex;padding:4px 9px;border-radius:999px;background:#eef6ff;color:#175cd3;font-size:12px;font-weight:800;margin:0 6px 6px 0}.tag.orange{background:#fff4e5;color:#9a3412}.sim{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center}.stage{min-height:280px;border-radius:22px;background:radial-gradient(circle,#fff 0 3px,transparent 4px),linear-gradient(145deg,#0f172a,#1e293b);background-size:28px 28px,auto;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.orbit{border:2px dashed rgba(255,255,255,.34);border-radius:50%;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}.ball{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#fbbf24,#f97316);box-shadow:0 0 0 8px rgba(251,191,36,.16);position:absolute;left:50%;top:50%;margin:-17px 0 0 -17px}.arrow{position:absolute;left:50%;top:50%;height:5px;background:#67e8f9;border-radius:999px;transform-origin:left center;z-index:3;pointer-events:none}.arrow:after{content:"";position:absolute;right:-2px;top:-5px;border-left:12px solid #67e8f9;border-top:7px solid transparent;border-bottom:7px solid transparent}.center-dot{width:12px;height:12px;border-radius:50%;background:#f8fafc;z-index:2}.controls label{display:block;font-weight:800;margin:12px 0 4px}.controls input{width:100%;accent-color:var(--blue)}.value{font-variant-numeric:tabular-nums;color:var(--blue);font-weight:900}... [truncated]
-    @media(max-width:820px){main{width:min(100% - 24px,1060px);padding-top:26px}.grid,.sim,.result,.rubric{grid-template-columns:1fr}.card{padding:17px}.stage{min-height:240px}}
+    :root{--bg:#f7f4ed;--ink:#20242a;--muted:#667085;--card:#fffdfa;--line:rgba(32,36,42,.14);--blue:#176b87;--cyan:#0e7490;--orange:#b45309;--green:#168356;--red:#b42318;--soft:#e9f6f8;--shadow:0 18px 55px rgba(16,24,40,.08),0 4px 14px rgba(16,24,40,.05)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",sans-serif;color:var(--ink);background:radial-gradient(circle at 15% 0%,rgba(23,107,135,.16),transparent 32rem),linear-gradient(180deg,#fffdf8 0%,var(--bg) 100%);line-height:1.75}main{width:min(1120px,calc(100% - 32px));margin:auto;padding:40px 0 72px}.eyebrow{display:inline-flex;padding:7px 12px;border-radius:999px;background:var(--soft);color:var(--blue);font-size:13px;font-weight:850;letter-spacing:.04em}h1{font-size:clamp(32px,6vw,60px);line-height:1.04;letter-spacing:-.045em;margin:18px 0 12px}h2{font-size:clamp(24px,4vw,36px);line-height:1.15;letter-spacing:-.03em;margin:0 0 12px}h3{margin:0 0 8px;font-size:21px}.lead{font-size:clamp(16px,2vw,21px);color:var(--muted);max-width:900px;margin:0 0 22px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{background:rgba(255,253,250,.92);border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:var(--shadow);margin:18px 0}.full{grid-column:1/-1}.goal{white-space:pre-wrap;background:#111827;color:#f9fafb;border-radius:18px;padding:18px;overflow:auto;font-size:14px;line-height:1.65}.tag{display:inline-flex;padding:4px 9px;border-radius:999px;background:#eef6ff;color:#175cd3;font-size:12px;font-weight:850;margin:0 6px 6px 0}.tag.orange{background:#fff4e5;color:#9a3412}.sim{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:start}.canvas-wrap{position:relative;border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.25);background:#0f172a;min-height:360px}.canvas-head{position:absolute;left:12px;right:12px;top:12px;z-index:3;display:flex;justify-content:space-between;gap:8px;align-items:center;pointer-events:none}.badge{display:inline-flex;align-items:center;padding:5px 9px;border-radius:999px;background:rgba(15,23,42,.72);color:#e0f2fe;border:1px solid rgba(255,255,255,.18);font-size:12px;font-weight:850;backdrop-filter:blur(8px)}canvas{display:block;width:100%;height:360px}.controls label{display:block;font-weight:850;margin:12px 0 4px}.controls input[type="range"]{width:100%;accent-color:var(--blue)}.value{font-variant-numeric:tabular-nums;color:var(--blue);font-weight:950}.control-row{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}.pill-btn{min-height:44px;border:none;border-radius:999px;padding:10px 14px;background:var(--blue);color:white;font-weight:850;cursor:pointer}.pill-btn.secondary{background:#f8fafc;color:var(--ink);border:1px solid var(--line)}.pill-btn:hover,.pill-btn:focus{outline:3px solid rgba(23,107,135,.2)}.result{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}.metric{background:#f8fafc;border:1px solid var(--line);border-radius:16px;padding:12px}.metric span{display:block;color:var(--muted);font-size:13px}.metric b{display:block;font-size:21px;font-variant-numeric:tabular-nums}.camera-tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}.camera-tabs button{min-height:44px;border-radius:14px;border:1px solid var(--line);background:#fff;font-weight:850;cursor:pointer}.camera-tabs button.active{background:var(--blue);color:#fff;border-color:var(--blue)}.formula{font-size:clamp(26px,5vw,44px);font-weight:950;letter-spacing:-.04em;text-align:center;padding:12px}.quiz button{display:block;width:100%;min-height:44px;margin:8px 0;border:1px solid var(--line);background:#fff;border-radius:14px;padding:10px;text-align:left;font-weight:750;cursor:pointer}.quiz button:hover,.quiz button:focus{outline:2px solid rgba(23,107,135,.28)}.feedback{min-height:48px;margin-top:10px;padding:12px;border-radius:14px;background:#f8fafc;border:1px solid var(--line)}.ok{color:var(--green);font-weight:900}.bad{color:var(--red);font-weight:900}.rubric{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.score{background:#f8fafc;border:1px solid var(--line);border-radius:16px;padding:12px}.score b{font-size:26px;color:var(--green)}.note{border-left:5px solid var(--orange);background:#fff8ed;padding:14px 16px;border-radius:14px;color:#5f3b13}.small{font-size:14px;color:var(--muted)}.hint-list{margin:8px 0 0;padding-left:1.2em}.hint-list li{margin:4px 0}@media(max-width:900px){main{width:min(100% - 24px,1120px);padding-top:26px}.grid,.sim,.result,.rubric{grid-template-columns:1fr}.card{padding:17px}canvas{height:300px}.canvas-wrap{min-height:300px}}
   </style>
 </head>
 <body>
 <main>
-  <span class="eyebrow">真實 /goal 示範｜不是只聊天，而是有驗收標準的產出</span>
-  <h1>向心力互動小教材：看見「速度平方」的影響</h1>
-  <p class="lead">這頁是用一個具體 goal 產出的最小可用教材。重點不是頁面多華麗，而是示範：AI Agent 需要知道目標、對象、輸出、限制與 rubric，才能自己檢查是否達標。</p>
+  <span class="eyebrow">真實 /goal 動畫版｜讓物體真的跑起來</span>
+  <h1>向心力動畫實驗：固定視角與跟隨物體視角</h1>
+  <p class="lead">這是上一版的進化：不只用滑桿改變數值，也讓物體真的做等速圓周運動。學生可以切換「實驗室固定視角」與「鏡頭跟著物體跑」，看見半徑、速度、質量如何影響向心力與角速度。</p>
 
   <section class="card full">
-    <h2>我實際執行的 goal</h2>
+    <h2>我這次實際執行的 /goal</h2>
     <div class="goal">/goal
-請製作一個手機可開啟的繁體中文單頁 HTML 小教材，主題是「向心力 F = mv²/r」。
-對象：高一學生，已知道圓周運動，但常誤以為速度變 2 倍時向心力也只變 2 倍。
+請把「向心力 F = mv²/r」互動教材升級成動畫版。
+對象：高一學生，已知道圓周運動，但容易把速度、角速度、向心力大小與方向混在一起。
 
 完成標準：
-1. 頁面要先點出迷思：速度變 2 倍，向心力不是 2 倍而是 4 倍。
-2. 要有 m、v、r 三個滑桿，能即時計算 F = mv²/r。
-3. 要用視覺化讓學生看見向心力箭頭朝圓心，而且箭頭必須從物體球心出發；改變質量或速度時，球的位置不能漂移，只有箭頭長度可變；改變半徑時，球、軌道、箭頭起點必須同步更新。
-4. 至少有 3 題互動檢核題，答錯時要指出錯在哪裡。
-5. 手機版可讀，按鈕至少 44px，高中生能在 5 分鐘內完成。
+1. 物體必須真的繞圓心做等速圓周運動，且角速度符合 ω = v/r；速度 v 增加時轉得更快，半徑 r 增加時若 v 不變則角速度變慢。
+2. 保留 m、v、r 三個滑桿，即時計算 F = mv²/r、v²、ω、週期 T。
+3. 必須有兩種視角：
+   - 實驗室固定視角：圓心固定，物體繞圓運動，向心力箭頭從物體指向圓心。
+   - 跟隨物體視角：鏡頭跟著物體跑，物體固定在畫面中心，圓心與背景相對移動，讓學生感覺「坐在物體上看世界」。
+4. 視覺幾何必須正確：向心力箭頭要從物體球心出發、方向通過圓心；改變 m/v 時球的軌道半徑不漂移；改變 r 時軌道、球、箭頭同步更新。
+5. 動畫要可暫停、重設，手機可操作，按鈕至少 44px。
+6. 至少有 3 題互動檢核題，其中一題要問跟隨視角下「看起來物體不動」是否代表它沒有加速度。
 
 Rubric：每項 1–5 分。
-- 物理正確性
-- 迷思診斷清楚度
-- 互動是否真的服務概念
-- 視覺幾何一致性：箭頭貼著物體球心、方向通過圓心、調整 m/v/r 後不偏離
-- 手機閱讀與操作
-- 可在 5 分鐘內完成
+- 物理正確性：F、ω、T、方向關係正確。
+- 動態因果清楚度：學生能看出 v、r 對轉動快慢與向心力的影響。
+- 視覺幾何一致性：箭頭貼著球心並指向圓心，各滑桿狀態不偏離。
+- 跟隨視角教學價值：能清楚呈現「同一運動在不同參考視角下的樣子」。
+- 手機操作與 5 分鐘完成度。
 
-若任一項低於 4 分，請先自行修改後再交付。最後附上自評。</div>
+若任一項低於 4 分，請先自行修正再交付；交付前用程式檢查至少四組 m/v/r 狀態，並截圖目視檢查。</div>
   </section>
 
   <section class="card">
-    <h2>先抓住一個迷思</h2>
-    <p><span class="tag">常見錯誤</span><span class="tag orange">線性直覺</span></p>
-    <p>很多學生會直覺以為：速度變成 2 倍，向心力也變成 2 倍。可是公式是：</p>
-    <div class="formula">F = m v² / r</div>
-    <p>所以在質量 m 與半徑 r 不變時，速度 v 變 2 倍，v² 會變 4 倍，向心力也變 4 倍。</p>
-    <p class="note">教學重點：不要只背公式，要看出「速度在平方的位置」。</p>
+    <h2>先抓住三件事</h2>
+    <p><span class="tag">速度平方</span><span class="tag orange">參考視角</span><span class="tag">方向朝圓心</span></p>
+    <p>同一個圓周運動，可以用兩個鏡頭看：固定在教室裡看，球在繞圈；鏡頭跟著球跑，球看起來不動，但圓心與背景在繞它移動。這不代表球沒有加速度，因為向心加速度仍然指向圓心。</p>
+    <div class="formula">F = m v² / r　　ω = v / r</div>
+    <p class="note">教學重點：速度變大會讓向心力按平方增加；半徑變大在固定 v 下會讓角速度變慢；鏡頭跟著物體跑時，「看起來靜止」不等於「沒有加速度」。</p>
   </section>
 
   <section class="card full">
-    <h2>互動實驗：拖動滑桿看看 F 怎麼變</h2>
+    <h2>動畫實驗</h2>
     <div class="sim">
-      <div class="stage" aria-label="圓周運動示意圖">
-        <div class="orbit" id="orbit"></div>
-        <div class="center-dot"></div>
-        <div class="ball" id="ball"></div>
-        <div class="arrow" id="arrow" title="向心力方向：朝圓心"></div>
+      <div class="canvas-wrap">
+        <div class="canvas-head">
+          <span class="badge" id="cameraBadge">實驗室固定視角</span>
+          <span class="badge" id="motionBadge">播放中</span>
+        </div>
+        <canvas id="simCanvas" width="900" height="540" aria-label="向心力動畫畫布"></canvas>
       </div>
       <div class="controls">
+        <div class="camera-tabs" aria-label="視角切換">
+          <button id="labView" class="active" type="button">固定視角</button>
+          <button id="followView" type="button">跟著物體跑</button>
+        </div>
+        <div class="control-row">
+          <button id="pauseBtn" class="pill-btn" type="button">暫停動畫</button>
+          <button id="resetBtn" class="pill-btn secondary" type="button">重設位置</button>
+        </div>
         <label>質量 m：<span class="value" id="mVal">1.0</span> kg</label>
         <input id="mass" type="range" min="0.5" max="5" step="0.1" value="1">
         <label>速度 v：<span class="value" id="vVal">4.0</span> m/s</label>
@@ -74,10 +76,17 @@ Rubric：每項 1–5 分。
         <input id="radius" type="range" min="1" max="6" step="0.1" value="2">
         <div class="result" aria-live="polite">
           <div class="metric"><span>向心力 F</span><b id="force">8.0 N</b></div>
+          <div class="metric"><span>角速度 ω</span><b id="omega">2.00 rad/s</b></div>
+          <div class="metric"><span>週期 T</span><b id="period">3.14 s</b></div>
           <div class="metric"><span>v²</span><b id="v2">16.0</b></div>
-          <div class="metric"><span>方向</span><b>朝圓心</b></div>
+          <div class="metric"><span>箭頭方向</span><b>朝圓心</b></div>
+          <div class="metric"><span>視角</span><b id="viewText">固定</b></div>
         </div>
-        <p class="small">觀察：只把速度從 4 調到 8，F 會從 8 N 變成 32 N，不是 16 N。</p>
+        <ul class="hint-list small">
+          <li>把速度從 4 拉到 8：F 會變 4 倍，轉動也變快。</li>
+          <li>固定速度時把半徑拉大：F 變小，角速度 ω 也變小。</li>
+          <li>切到跟隨視角：球固定在畫面中央，但圓心仍在它旁邊，向心力仍指向圓心。</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -92,19 +101,19 @@ Rubric：每項 1–5 分。
       <div class="feedback">請選一個答案。</div>
     </article>
     <article class="card quiz">
-      <h2>檢核 2：半徑變 2 倍</h2>
-      <p>m 和 v 不變，r 變成 2 倍，F 變成幾倍？</p>
-      <button data-answer="bad" data-msg="答錯關鍵：r 在分母，半徑變大，所需向心力變小。">2 倍</button>
-      <button data-answer="ok" data-msg="正確。F ∝ 1/r，所以 r 變 2 倍，F 變成 1/2。">1/2 倍</button>
-      <button data-answer="bad" data-msg="答錯關鍵：平方的是速度 v，不是半徑 r。">4 倍</button>
+      <h2>檢核 2：固定 v 時半徑變大</h2>
+      <p>m 和 v 不變，r 變大，角速度 ω = v/r 會怎麼變？</p>
+      <button data-answer="bad" data-msg="再想想：v 固定時，半徑越大，每秒掃過的角度反而越小。">變大</button>
+      <button data-answer="ok" data-msg="正確。ω = v/r，所以 r 變大，ω 變小，看起來繞得比較慢。">變小</button>
+      <button data-answer="bad" data-msg="半徑在分母，改變 r 會影響 ω。">不變</button>
       <div class="feedback">請選一個答案。</div>
     </article>
     <article class="card quiz full">
-      <h2>檢核 3：方向判斷</h2>
-      <p>等速圓周運動中，向心力方向是哪裡？</p>
-      <button data-answer="bad" data-msg="這是常見混淆：速度方向沿切線，但向心力不是沿切線。">沿著運動方向，也就是切線方向</button>
-      <button data-answer="ok" data-msg="正確。向心力永遠指向圓心，負責改變速度方向。">指向圓心</button>
-      <button data-answer="bad" data-msg="若力背離圓心，物體不會維持圓周運動。">背離圓心</button>
+      <h2>檢核 3：跟隨視角的陷阱</h2>
+      <p>在「跟著物體跑」的視角裡，球看起來固定在畫面中心。這代表它沒有加速度嗎？</p>
+      <button data-answer="bad" data-msg="這是視角造成的錯覺。球仍在改變速度方向，所以仍有向心加速度。">代表沒有加速度</button>
+      <button data-answer="ok" data-msg="正確。看起來不動只是因為鏡頭跟著它；在實驗室固定視角中，它仍做圓周運動，向心加速度指向圓心。">不代表，仍有向心加速度</button>
+      <button data-answer="bad" data-msg="向心力不是切線方向；切線方向是瞬時速度方向。">只有切線方向加速度</button>
       <div class="feedback">請選一個答案。</div>
     </article>
   </section>
@@ -112,45 +121,45 @@ Rubric：每項 1–5 分。
   <section class="card full">
     <h2>Rubric 自評</h2>
     <div class="rubric">
-      <div class="score"><b>5</b><br>物理正確性<br><span class="small">公式、比例、方向皆正確。</span></div>
-      <div class="score"><b>5</b><br>迷思診斷<br><span class="small">聚焦 v 變 2 倍不等於 F 變 2 倍。</span></div>
-      <div class="score"><b>5</b><br>互動服務概念<br><span class="small">滑桿直接呈現 v² 與 F 的比例變化。</span></div>
-      <div class="score"><b>5</b><br>視覺幾何一致性<br><span class="small">箭頭由球心出發並指向圓心，調整 m/v/r 後仍貼合。</span></div>
-      <div class="score"><b>4</b><br>手機操作<br><span class="small">響應式、按鈕高度足夠。</span></div>
-      <div class="score"><b>4</b><br>5 分鐘完成<br><span class="small">文字短、三題檢核可快速完成。</span></div>
+      <div class="score"><b>5</b><br>物理正確性<br><span class="small">F、ω、T、方向關係皆即時計算。</span></div>
+      <div class="score"><b>5</b><br>動態因果<br><span class="small">速度與半徑對轉速、向心力的影響可直接看見。</span></div>
+      <div class="score"><b>5</b><br>視覺幾何<br><span class="small">箭頭由球心出發並指向圓心，滑桿變化後仍貼合。</span></div>
+      <div class="score"><b>4</b><br>跟隨視角<br><span class="small">用移動背景與相對圓心呈現鏡頭跟著物體跑。</span></div>
+      <div class="score"><b>4</b><br>手機操作<br><span class="small">按鈕與滑桿可手機操作，動畫可暫停。</span></div>
+      <div class="score"><b>4</b><br>5 分鐘完成<br><span class="small">核心觀察與三題檢核可短時間完成。</span></div>
     </div>
-    <p class="note">若要做成正式課程版本，下一輪 goal 可以要求加入「真實實驗影片」、「學生作答紀錄」與「考題連結」。</p>
+    <p class="note">下一輪若要更像實驗影片，可以加入「尾跡軌跡」、「速度向量」、「加速度向量開關」與「慢動作播放」。</p>
   </section>
 </main>
 <script>
-  const $ = (id)=>document.getElementById(id);
+  const $ = id => document.getElementById(id);
+  const canvas = $('simCanvas');
+  const ctx = canvas.getContext('2d');
   const mass=$('mass'), speed=$('speed'), radius=$('radius');
-  const mVal=$('mVal'), vVal=$('vVal'), rVal=$('rVal'), force=$('force'), v2=$('v2');
-  const orbit=$('orbit'), ball=$('ball'), arrow=$('arrow');
-  function update(){
-    const m=+mass.value, v=+speed.value, r=+radius.value;
-    const F=m*v*v/r;
-    mVal.textContent=m.toFixed(1); vVal.textContent=v.toFixed(1); rVal.textContent=r.toFixed(1);
-    force.textContent=F.toFixed(1)+' N'; v2.textContent=(v*v).toFixed(1);
-    const px=70 + r*18; orbit.style.width=px*2+'px'; orbit.style.height=px*2+'px';
-    const angle=-38*Math.PI/180;
-    const x=Math.cos(angle)*px;
-    const y=Math.sin(angle)*px;
-    ball.style.transform=`translate(${x}px, ${y}px)`;
-    const arrowLen=Math.min(px - 22, Math.max(34, 34 + Math.sqrt(F)*5.6));
-    arrow.style.width=arrowLen+'px';
-    // 箭頭以球心為起點，朝圓心方向旋轉；m/v 只改變長度，不改變起點。
-    // 用 translate(x,y) 把 transform origin 放在球心，再 rotate 指向圓心。
-    arrow.style.transform=`translate(${x}px, ${y}px) rotate(${(angle+Math.PI)*180/Math.PI}deg)`;
-  }
-  [mass,speed,radius].forEach(el=>el.addEventListener('input',update)); update();
-  document.querySelectorAll('.quiz').forEach(q=>{
-    q.querySelectorAll('button').forEach(btn=>btn.addEventListener('click',()=>{
-      const fb=q.querySelector('.feedback');
-      const ok=btn.dataset.answer==='ok';
-      fb.innerHTML=`<span class="${ok?'ok':'bad'}">${ok?'答對。':'再想想。'}</span> ${btn.dataset.msg}`;
-    }));
-  });
+  const mVal=$('mVal'), vVal=$('vVal'), rVal=$('rVal'), force=$('force'), v2=$('v2'), omegaEl=$('omega'), periodEl=$('period');
+  const pauseBtn=$('pauseBtn'), resetBtn=$('resetBtn'), labView=$('labView'), followView=$('followView'), cameraBadge=$('cameraBadge'), motionBadge=$('motionBadge'), viewText=$('viewText');
+  const state={theta:-0.72,last:performance.now(),playing:true,view:'lab'};
+  function params(){ const m=+mass.value, v=+speed.value, r=+radius.value; const F=m*v*v/r; const omega=v/r; const T=2*Math.PI/omega; return {m,v,r,F,omega,T,px:58+r*27}; }
+  function updateReadout(){ const p=params(); mVal.textContent=p.m.toFixed(1); vVal.textContent=p.v.toFixed(1); rVal.textContent=p.r.toFixed(1); force.textContent=p.F.toFixed(1)+' N'; v2.textContent=(p.v*p.v).toFixed(1); omegaEl.textContent=p.omega.toFixed(2)+' rad/s'; periodEl.textContent=p.T.toFixed(2)+' s'; viewText.textContent=state.view==='lab'?'固定':'跟隨'; }
+  function drawArrow(x1,y1,x2,y2,color,label){ const dx=x2-x1, dy=y2-y1, len=Math.hypot(dx,dy); if(len<1) return; const ux=dx/len, uy=dy/len; ctx.save(); ctx.strokeStyle=color; ctx.fillStyle=color; ctx.lineWidth=5; ctx.lineCap='round'; ctx.beginPath(); ctx.moveTo(x1,y1); ctx.lineTo(x2,y2); ctx.stroke(); ctx.beginPath(); ctx.moveTo(x2,y2); ctx.lineTo(x2-14*ux+8*uy,y2-14*uy-8*ux); ctx.lineTo(x2-14*ux-8*uy,y2-14*uy+8*ux); ctx.closePath(); ctx.fill(); if(label){ ctx.font='700 14px system-ui'; ctx.fillText(label,x2+8,y2-8); } ctx.restore(); }
+  function grid(cx,cy,rot=0){ ctx.save(); ctx.translate(cx,cy); ctx.rotate(rot); ctx.strokeStyle='rgba(255,255,255,.08)'; ctx.lineWidth=1; for(let x=-900;x<=900;x+=36){ctx.beginPath();ctx.moveTo(x,-700);ctx.lineTo(x,700);ctx.stroke()} for(let y=-700;y<=700;y+=36){ctx.beginPath();ctx.moveTo(-900,y);ctx.lineTo(900,y);ctx.stroke()} ctx.restore(); }
+  function draw(){ const p=params(); const W=canvas.width,H=canvas.height; ctx.clearRect(0,0,W,H); ctx.fillStyle='#0f172a'; ctx.fillRect(0,0,W,H); const baseCX=W/2, baseCY=H/2+10; const ballWorld={x:Math.cos(state.theta)*p.px,y:Math.sin(state.theta)*p.px}; let centerScreen, ballScreen, cameraOffset={x:0,y:0}; if(state.view==='lab'){ centerScreen={x:baseCX,y:baseCY}; ballScreen={x:baseCX+ballWorld.x,y:baseCY+ballWorld.y}; grid(baseCX,baseCY,0); } else { ballScreen={x:baseCX,y:baseCY}; centerScreen={x:baseCX-ballWorld.x,y:baseCY-ballWorld.y}; cameraOffset={x:-ballWorld.x,y:-ballWorld.y}; grid(baseCX+cameraOffset.x,baseCY+cameraOffset.y,-state.theta*.25); }
+    ctx.save(); ctx.strokeStyle='rgba(255,255,255,.32)'; ctx.setLineDash([8,8]); ctx.lineWidth=2; ctx.beginPath(); ctx.arc(centerScreen.x,centerScreen.y,p.px,0,Math.PI*2); ctx.stroke(); ctx.setLineDash([]); ctx.restore();
+    ctx.fillStyle='#f8fafc'; ctx.beginPath(); ctx.arc(centerScreen.x,centerScreen.y,7,0,Math.PI*2); ctx.fill(); ctx.font='800 14px system-ui'; ctx.fillStyle='#e0f2fe'; ctx.fillText('圓心',centerScreen.x+10,centerScreen.y-10);
+    const forceScale=Math.min(p.px-18, Math.max(42, 35+Math.sqrt(p.F)*5.4)); const dx=centerScreen.x-ballScreen.x, dy=centerScreen.y-ballScreen.y; const d=Math.hypot(dx,dy); const fx=ballScreen.x+dx/d*forceScale, fy=ballScreen.y+dy/d*forceScale; drawArrow(ballScreen.x,ballScreen.y,fx,fy,'#67e8f9','F 向心');
+    const tangent={x:-Math.sin(state.theta),y:Math.cos(state.theta)}; const tangentLen=Math.min(88,36+p.v*4); drawArrow(ballScreen.x,ballScreen.y,ballScreen.x+tangent.x*tangentLen,ballScreen.y+tangent.y*tangentLen,'#fde68a','v');
+    const grad=ctx.createRadialGradient(ballScreen.x-8,ballScreen.y-8,4,ballScreen.x,ballScreen.y,23); grad.addColorStop(0,'#fde68a'); grad.addColorStop(.45,'#fbbf24'); grad.addColorStop(1,'#f97316'); ctx.fillStyle=grad; ctx.beginPath(); ctx.arc(ballScreen.x,ballScreen.y,19,0,Math.PI*2); ctx.fill(); ctx.strokeStyle='rgba(255,255,255,.85)'; ctx.lineWidth=2; ctx.stroke();
+    if(state.view==='follow'){ ctx.fillStyle='rgba(103,232,249,.12)'; ctx.beginPath(); ctx.arc(ballScreen.x,ballScreen.y,35,0,Math.PI*2); ctx.fill(); ctx.fillStyle='#bae6fd'; ctx.font='850 14px system-ui'; ctx.fillText('鏡頭鎖定物體',ballScreen.x+42,ballScreen.y+4); }
+    ctx.fillStyle='rgba(226,232,240,.92)'; ctx.font='700 15px system-ui'; ctx.fillText(`m=${p.m.toFixed(1)} kg   v=${p.v.toFixed(1)} m/s   r=${p.r.toFixed(1)} m`,18,H-22);
+    window.__simDebug={view:state.view,theta:state.theta,ballScreen,centerScreen,forceEnd:{x:fx,y:fy},forceStartError:0,forceDotToCenter:+((fx-ballScreen.x)*dx+(fy-ballScreen.y)*dy).toFixed(2),omega:p.omega,F:p.F,T:p.T}; }
+  function tick(now){ const dt=Math.min(.05,(now-state.last)/1000); state.last=now; if(state.playing){ state.theta += params().omega*dt; } updateReadout(); draw(); requestAnimationFrame(tick); }
+  [mass,speed,radius].forEach(el=>el.addEventListener('input',()=>{updateReadout();draw();}));
+  pauseBtn.addEventListener('click',()=>{state.playing=!state.playing; pauseBtn.textContent=state.playing?'暫停動畫':'繼續動畫'; motionBadge.textContent=state.playing?'播放中':'已暫停';});
+  resetBtn.addEventListener('click',()=>{state.theta=-0.72; state.last=performance.now(); draw();});
+  labView.addEventListener('click',()=>{state.view='lab'; labView.classList.add('active'); followView.classList.remove('active'); cameraBadge.textContent='實驗室固定視角'; updateReadout(); draw();});
+  followView.addEventListener('click',()=>{state.view='follow'; followView.classList.add('active'); labView.classList.remove('active'); cameraBadge.textContent='鏡頭跟著物體跑'; updateReadout(); draw();});
+  document.querySelectorAll('.quiz').forEach(q=>{ q.querySelectorAll('button').forEach(btn=>btn.addEventListener('click',()=>{ const fb=q.querySelector('.feedback'); const ok=btn.dataset.answer==='ok'; fb.innerHTML=`<span class="${ok?'ok':'bad'}">${ok?'答對。':'再想想。'}</span> ${btn.dataset.msg}`; })); });
+  updateReadout(); requestAnimationFrame(tick);
 </script>
 </body>
 </html>

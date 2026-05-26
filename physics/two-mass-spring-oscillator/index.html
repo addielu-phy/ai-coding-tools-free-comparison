@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>高中物理｜雙質量彈簧振子互動模擬</title>
+  <meta name="description" content="兩個物體中間以彈簧連接，壓縮後自由震盪的互動模擬。可調整兩物體質量、彈性係數、壓縮量，觀察質心、相對運動、週期與能量轉換。" />
+  <script>
+    window.MathJax = { tex: { inlineMath: [['\\(','\\)'], ['$', '$']], displayMath: [['\\[','\\]']] }, svg: { fontCache: 'global' } };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <style>
+    :root{
+      --bg:#f5f7fb; --ink:#162033; --muted:#667085; --card:#ffffff; --line:rgba(22,32,51,.12);
+      --brand:#2458a6; --brand2:#c27a1f; --red:#c24135; --green:#16794c; --soft:#eaf2ff; --soft2:#fff4df;
+      --shadow:0 18px 48px rgba(16,24,40,.10),0 3px 12px rgba(16,24,40,.06); --radius:22px;
+      --mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",sans-serif;color:var(--ink);line-height:1.72;background:radial-gradient(circle at top left,rgba(36,88,166,.18),transparent 34rem),radial-gradient(circle at top right,rgba(194,122,31,.16),transparent 30rem),linear-gradient(180deg,#fff 0%,var(--bg) 62%,#edf1f7 100%)}
+    a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}.wrap{width:min(1160px,calc(100% - 30px));margin:0 auto}.hero{padding:58px 0 26px}.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:7px 12px;border-radius:999px;background:var(--soft);color:var(--brand);font-size:13px;font-weight:850;letter-spacing:.04em}h1{margin:16px 0 12px;font-size:clamp(34px,6vw,64px);line-height:1.04;letter-spacing:-.05em}.lead{max-width:900px;color:var(--muted);font-size:clamp(16px,2.2vw,21px);font-weight:520;margin:0}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.btn,button{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:42px;padding:9px 14px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);font-weight:800;box-shadow:0 4px 14px rgba(16,24,40,.06);cursor:pointer}.primary{background:var(--brand);color:#fff;border-color:var(--brand)}
+    .sim-grid{display:grid;grid-template-columns:1.35fr .85fr;gap:18px;align-items:start}.card{background:rgba(255,255,255,.88);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}.canvas-wrap{position:relative;background:linear-gradient(180deg,#f9fbff 0%,#eef4ff 100%);border:1px solid var(--line);border-radius:18px;overflow:hidden}canvas{width:100%;height:auto;display:block}.legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;color:var(--muted);font-size:14px}.dot{width:12px;height:12px;border-radius:999px;display:inline-block}.blue{background:#2f6fd6}.orange{background:#e3952d}.gray{background:#64748b}.controls{display:grid;gap:14px}.control label{display:flex;justify-content:space-between;gap:12px;font-weight:850}.control span{font-family:var(--mono);color:var(--brand)}input[type=range]{width:100%;accent-color:var(--brand)}.readouts{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px}.metric{padding:12px;border-radius:16px;background:#f8fafc;border:1px solid var(--line)}.metric b{display:block;font-size:18px}.metric small{color:var(--muted)}
+    .section{margin:20px 0;padding:22px;background:rgba(255,255,255,.88);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.section h2{margin:0 0 12px;font-size:clamp(25px,4vw,38px);line-height:1.14;letter-spacing:-.035em}.section h3{margin-top:22px}.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}.note{padding:14px 16px;border-left:5px solid var(--brand);background:#f4f8ff;border-radius:14px;color:#344054}.warn{border-left-color:var(--brand2);background:#fff8ec}.formula{overflow-x:auto;padding:14px;border:1px solid var(--line);border-radius:16px;background:#fbfdff}table{width:100%;border-collapse:collapse;background:white;border:1px solid var(--line);border-radius:16px;overflow:hidden}th,td{padding:12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{background:#f8fafc;color:var(--muted);font-size:13px}tr:last-child td{border-bottom:none}code{font-family:var(--mono);background:#eef2f7;padding:2px 6px;border-radius:6px}.energy-bar{height:16px;border-radius:999px;background:#e5e7eb;overflow:hidden;display:flex;margin-top:8px}.energy-k{background:#2f6fd6}.energy-u{background:#e3952d}.pill{display:inline-flex;padding:4px 9px;border-radius:999px;background:var(--soft2);color:#9a5b13;font-size:12px;font-weight:850;margin:2px}.footer{padding:10px 0 46px;color:var(--muted);font-size:14px}
+    @media(max-width:900px){.sim-grid,.two{grid-template-columns:1fr}.hero{padding-top:38px}.card,.section{padding:16px}.readouts{grid-template-columns:1fr}.actions .btn,.actions button{flex:1 1 auto}}
+    @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <span class="eyebrow">高中物理互動模擬｜雙振子 / two-mass spring oscillator</span>
+      <h1>兩物體中間一條彈簧：壓縮後的自由震盪</h1>
+      <p class="lead">這個模型沒有牆壁、沒有外力，只有兩個質量與中間彈簧。把彈簧壓縮後放手，系統會以「質心固定、相對距離簡諧振盪」的方式運動；數學上等效成一個約化質量 \(\mu\) 接上一條彈簧。</p>
+      <div class="actions"><a class="btn" href="../../webpages/">回公開網頁總整理</a><a class="btn" href="#derivation">看推導</a><a class="btn" href="#concepts">看概念整理</a></div>
+    </header>
+
+    <section class="sim-grid" aria-label="雙質量彈簧模擬器">
+      <div class="card">
+        <div class="canvas-wrap"><canvas id="sim" width="980" height="420" aria-label="雙質量彈簧自由震盪動畫"></canvas></div>
+        <div class="legend"><span><i class="dot blue"></i> 質量 \(m_1\)</span><span><i class="dot orange"></i> 質量 \(m_2\)</span><span><i class="dot gray"></i> 質心 CM</span><span>彈簧自然長度：\(L_0\)</span></div>
+        <div class="readouts">
+          <div class="metric"><small>時間 t</small><b id="tOut">0.00 s</b></div>
+          <div class="metric"><small>角頻率 ω</small><b id="omegaOut">—</b></div>
+          <div class="metric"><small>週期 T</small><b id="periodOut">—</b></div>
+          <div class="metric"><small>約化質量 μ</small><b id="muOut">—</b></div>
+        </div>
+        <div class="energy-bar" title="能量比例"><div class="energy-k" id="barK"></div><div class="energy-u" id="barU"></div></div>
+        <div class="legend"><span>藍：動能 \(K\)</span><span>橘：彈性位能 \(U\)</span><span id="energyText">總能量 —</span></div>
+      </div>
+
+      <aside class="card controls">
+        <h2 style="margin:0">控制滑桿</h2>
+        <div class="control"><label>左物體質量 m₁ <span id="m1Val"></span></label><input id="m1" type="range" min="0.5" max="8" value="2" step="0.1"></div>
+        <div class="control"><label>右物體質量 m₂ <span id="m2Val"></span></label><input id="m2" type="range" min="0.5" max="8" value="3" step="0.1"></div>
+        <div class="control"><label>彈性係數 k <span id="kVal"></span></label><input id="k" type="range" min="5" max="120" value="35" step="1"></div>
+        <div class="control"><label>初始壓縮量 A <span id="AVal"></span></label><input id="A" type="range" min="0.1" max="2.5" value="1.2" step="0.05"></div>
+        <div class="control"><label>自然長度 L₀ <span id="L0Val"></span></label><input id="L0" type="range" min="2" max="6" value="4" step="0.1"></div>
+        <div class="control"><label>動畫速度 <span id="speedVal"></span></label><input id="speed" type="range" min="0.2" max="2.5" value="1" step="0.1"></div>
+        <div class="actions"><button class="primary" id="toggle">暫停</button><button id="reset">重設時間</button><button id="presetEqual">等質量</button><button id="presetHeavy">右邊較重</button></div>
+        <p class="note warn" style="margin:0">觀察提示：若 \(m_2\) 變很大，右邊幾乎不動，左邊像是在「接近固定牆」的彈簧振子；但嚴格說質心仍固定。</p>
+      </aside>
+    </section>
+
+    <section class="section" id="concepts">
+      <h2>一、這個系統到底在震盪什麼？</h2>
+      <div class="two">
+        <div class="note"><strong>不是兩個物體各自獨立震盪。</strong><br>因為只有中間一條彈簧，內力大小相等方向相反；兩個物體的運動被同一個彈簧伸長量控制。</div>
+        <div class="note"><strong>真正簡諧的是「相對距離」。</strong><br>令 \(r=x_2-x_1\)，自然長度為 \(L_0\)，伸長量 \(q=r-L_0\)。壓縮後放手就是 \(q<0\)，之後 \(q\) 會做簡諧運動。</div>
+      </div>
+      <h3>三個最重要的物理量</h3>
+      <table>
+        <thead><tr><th>物理量</th><th>意義</th><th>本頁怎麼看</th></tr></thead>
+        <tbody>
+          <tr><td>質心 \(X_{CM}\)</td><td>整個系統的平均位置；無外力時保持等速。初速為零時，質心固定。</td><td>畫面中央灰色虛線與小點。</td></tr>
+          <tr><td>相對伸長量 \(q\)</td><td>彈簧比自然長度多出的量；壓縮時 \(q<0\)，拉長時 \(q>0\)。</td><td>畫面上彈簧左右端距離改變。</td></tr>
+          <tr><td>約化質量 \(\mu\)</td><td>把兩物體相對運動等效成單一質量的量。</td><td>右下即時計算 \(\mu=\frac{m_1m_2}{m_1+m_2}\)。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section" id="derivation">
+      <h2>二、計算過程：從牛頓第二定律到簡諧運動</h2>
+      <p>令右方向為正，兩物體位置為 \(x_1,x_2\)，中間彈簧自然長度為 \(L_0\)。彈簧伸長量定義為</p>
+      <div class="formula">\[q=(x_2-x_1)-L_0\]</div>
+      <p>若 \(q>0\) 表示彈簧被拉長；若 \(q<0\) 表示彈簧被壓縮。彈簧會把兩物體往恢復自然長度的方向拉／推，因此</p>
+      <div class="formula">\[m_1\ddot{x}_1=kq,\qquad m_2\ddot{x}_2=-kq\]</div>
+      <p>兩式相減，得到相對座標的運動方程：</p>
+      <div class="formula">\[\ddot{q}=\ddot{x}_2-\ddot{x}_1=-kq\left(\frac{1}{m_1}+\frac{1}{m_2}\right)\]</div>
+      <p>整理成標準簡諧運動形式：</p>
+      <div class="formula">\[\ddot{q}+\omega^2 q=0,\qquad \omega=\sqrt{k\left(\frac{1}{m_1}+\frac{1}{m_2}\right)}=\sqrt{\frac{k}{\mu}}\]</div>
+      <p>其中約化質量為</p>
+      <div class="formula">\[\mu=\frac{m_1m_2}{m_1+m_2}\]</div>
+      <p>如果一開始壓縮量為 \(A\)，放手時速度為零，則</p>
+      <div class="formula">\[q(0)=-A,\quad \dot{q}(0)=0\quad\Rightarrow\quad q(t)=-A\cos(\omega t)\]</div>
+      <p>因此兩物體的距離是</p>
+      <div class="formula">\[x_2-x_1=L_0-A\cos(\omega t)\]</div>
+    </section>
+
+    <section class="section">
+      <h2>三、質心固定時，兩顆物體各自怎麼動？</h2>
+      <p>若系統初始總動量為零，質心固定。選質心為原點，且令 \(M=m_1+m_2\)，則</p>
+      <div class="formula">\[x_1=X_{CM}-\frac{m_2}{m_1+m_2}\bigl(L_0+q(t)\bigr),\qquad x_2=X_{CM}+\frac{m_1}{m_1+m_2}\bigl(L_0+q(t)\bigr)\]</div>
+      <p>這一行很值得讓學生觀察：</p>
+      <ul>
+        <li>質量較小者移動距離較大。</li>
+        <li>質量較大者移動距離較小。</li>
+        <li>兩者不是同相同振幅，而是一起保持質心位置不變。</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>四、週期、頻率與能量</h2>
+      <div class="two">
+        <div>
+          <h3>週期</h3>
+          <div class="formula">\[T=\frac{2\pi}{\omega}=2\pi\sqrt{\frac{\mu}{k}}\]</div>
+          <p>所以 \(k\) 越大，震盪越快；約化質量 \(\mu\) 越大，震盪越慢。</p>
+        </div>
+        <div>
+          <h3>能量</h3>
+          <div class="formula">\[E=\frac{1}{2}\mu\dot{q}^{2}+\frac{1}{2}kq^2=\frac{1}{2}kA^2\]</div>
+          <p>壓縮最多或拉伸最多時，主要是彈性位能；經過自然長度時，主要是動能。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>五、課堂提問與典型誤解</h2>
+      <p><span class="pill">提問 1</span> 若兩邊質量相同，兩物體振幅是否相同？為什麼？</p>
+      <p><span class="pill">提問 2</span> 若右邊質量變成左邊的 10 倍，誰移動比較多？質心在哪裡？</p>
+      <p><span class="pill">提問 3</span> 為什麼這題不能直接把其中一端當固定端，除非另一個質量極大？</p>
+      <p><span class="pill">常見誤解</span> 把每一顆都套 \(T=2\pi\sqrt{m/k}\)。自由雙質量系統的相對運動要用 \(\mu\)，不是單獨某一顆質量。</p>
+    </section>
+  </main>
+  <footer class="wrap footer">模型假設：水平無摩擦、彈簧質量忽略、彈簧 obeys Hooke's law、初始總動量為零。若加入牆壁、阻尼或外力，方程式會改變。</footer>
+
+<script>
+const els = Object.fromEntries(['m1','m2','k','A','L0','speed','m1Val','m2Val','kVal','AVal','L0Val','speedVal','tOut','omegaOut','periodOut','muOut','energyText','barK','barU','toggle','reset','presetEqual','presetHeavy'].map(id=>[id,document.getElementById(id)]));
+const canvas=document.getElementById('sim'); const ctx=canvas.getContext('2d');
+let t=0, running=true, last=performance.now();
+function params(){ const m1=+els.m1.value, m2=+els.m2.value, k=+els.k.value, A=+els.A.value, L0=+els.L0.value, speed=+els.speed.value; const M=m1+m2, mu=m1*m2/M, omega=Math.sqrt(k/mu), T=2*Math.PI/omega; return {m1,m2,k,A,L0,speed,M,mu,omega,T}; }
+function springPath(x1,x2,y,amp=18,turns=13){ const pts=[]; pts.push([x1,y]); const len=x2-x1; for(let i=1;i<turns;i++){ const x=x1+len*i/turns; const yy=y+(i%2? -amp: amp); pts.push([x,yy]); } pts.push([x2,y]); return pts; }
+function draw(){
+  const p=params(); const q=-p.A*Math.cos(p.omega*t); const r=p.L0+q; const qdot=p.A*p.omega*Math.sin(p.omega*t);
+  const cm=canvas.width/2; const scale=92; const x1=cm - (p.m2/p.M)*r*scale; const x2=cm + (p.m1/p.M)*r*scale; const y=210;
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.fillStyle='#f9fbff'; ctx.fillRect(0,0,canvas.width,canvas.height);
+  ctx.strokeStyle='#d0d7e2'; ctx.lineWidth=2; ctx.beginPath(); ctx.moveTo(70,285); ctx.lineTo(910,285); ctx.stroke();
+  ctx.setLineDash([8,7]); ctx.strokeStyle='#64748b'; ctx.beginPath(); ctx.moveTo(cm,60); ctx.lineTo(cm,310); ctx.stroke(); ctx.setLineDash([]);
+  ctx.fillStyle='#64748b'; ctx.beginPath(); ctx.arc(cm,285,6,0,Math.PI*2); ctx.fill(); ctx.font='15px system-ui'; ctx.fillText('CM',cm+10,282);
+  const leftAnchor=x1+36, rightAnchor=x2-36; const pts=springPath(leftAnchor,rightAnchor,y,16,15); ctx.strokeStyle='#334155'; ctx.lineWidth=4; ctx.beginPath(); pts.forEach(([x,y],i)=>i?ctx.lineTo(x,y):ctx.moveTo(x,y)); ctx.stroke();
+  const w1=58+7*Math.sqrt(p.m1), h1=52+5*Math.sqrt(p.m1), w2=58+7*Math.sqrt(p.m2), h2=52+5*Math.sqrt(p.m2);
+  ctx.fillStyle='#2f6fd6'; ctx.beginPath(); ctx.roundRect(x1-w1/2,y-h1/2,w1,h1,12); ctx.fill(); ctx.fillStyle='#e3952d'; ctx.beginPath(); ctx.roundRect(x2-w2/2,y-h2/2,w2,h2,12); ctx.fill();
+  ctx.fillStyle='white'; ctx.font='bold 18px system-ui'; ctx.textAlign='center'; ctx.fillText('m₁',x1,y+6); ctx.fillText('m₂',x2,y+6); ctx.textAlign='left';
+  ctx.strokeStyle='#94a3b8'; ctx.lineWidth=2; ctx.setLineDash([5,5]); const eq1=cm-(p.m2/p.M)*p.L0*scale, eq2=cm+(p.m1/p.M)*p.L0*scale; ctx.beginPath(); ctx.moveTo(eq1,100); ctx.lineTo(eq1,310); ctx.moveTo(eq2,100); ctx.lineTo(eq2,310); ctx.stroke(); ctx.setLineDash([]);
+  ctx.fillStyle='#475467'; ctx.font='14px system-ui'; ctx.fillText('自然長度兩端位置',eq1-55,95); ctx.fillText(`q = ${(q).toFixed(2)} m`,70,52); ctx.fillText(`x₂ - x₁ = ${r.toFixed(2)} m`,70,78);
+  ctx.fillStyle=q<0?'#b42318':'#16794c'; ctx.font='bold 18px system-ui'; ctx.fillText(q<0?'壓縮中 / compressed':'拉伸中 / stretched',70,112);
+  const K=0.5*p.mu*qdot*qdot, U=0.5*p.k*q*q, E=0.5*p.k*p.A*p.A; const kPct=Math.max(0,Math.min(100,100*K/E)), uPct=100-kPct;
+  els.tOut.textContent=t.toFixed(2)+' s'; els.omegaOut.textContent=p.omega.toFixed(2)+' rad/s'; els.periodOut.textContent=p.T.toFixed(2)+' s'; els.muOut.textContent=p.mu.toFixed(2)+' kg'; els.energyText.textContent=`總能量 E = ${E.toFixed(2)} J；K = ${K.toFixed(2)} J，U = ${U.toFixed(2)} J`; els.barK.style.width=kPct+'%'; els.barU.style.width=uPct+'%';
+}
+function updateLabels(){ const p=params(); els.m1Val.textContent=p.m1.toFixed(1)+' kg'; els.m2Val.textContent=p.m2.toFixed(1)+' kg'; els.kVal.textContent=p.k.toFixed(0)+' N/m'; els.AVal.textContent=p.A.toFixed(2)+' m'; els.L0Val.textContent=p.L0.toFixed(1)+' m'; els.speedVal.textContent=p.speed.toFixed(1)+'×'; draw(); }
+['m1','m2','k','A','L0','speed'].forEach(id=>els[id].addEventListener('input',updateLabels));
+els.toggle.onclick=()=>{running=!running; els.toggle.textContent=running?'暫停':'播放'}; els.reset.onclick=()=>{t=0; draw()};
+els.presetEqual.onclick=()=>{els.m1.value=2; els.m2.value=2; els.k.value=35; els.A.value=1.2; updateLabels();};
+els.presetHeavy.onclick=()=>{els.m1.value=1.2; els.m2.value=7; els.k.value=35; els.A.value=1.2; updateLabels();};
+function loop(now){ const dt=(now-last)/1000; last=now; if(running){t+=dt*params().speed;} draw(); requestAnimationFrame(loop); }
+if(!CanvasRenderingContext2D.prototype.roundRect){CanvasRenderingContext2D.prototype.roundRect=function(x,y,w,h,r){this.moveTo(x+r,y);this.arcTo(x+w,y,x+w,y+h,r);this.arcTo(x+w,y+h,x,y+h,r);this.arcTo(x,y+h,x,y,r);this.arcTo(x,y,x+w,y,r);return this;}}
+updateLabels(); requestAnimationFrame(loop);
+</script>
+</body>
+</html>

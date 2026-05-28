@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OpenMAIC-lite｜繁中物理課程模組生成器 prototype</title>
+  <meta name="description" content="不用 Firebase、純前端可部署的繁中物理課程模組生成器 prototype：分步產生大綱、概念圖、白板腳本、活動、評量與 HTML 講義草稿。" />
+  <style>
+    :root{--bg:#06111f;--panel:#0f1d33;--panel2:#132641;--ink:#f8fafc;--muted:#b9c7d9;--line:#29435f;--accent:#7dd3fc;--accent2:#a7f3d0;--warn:#fde68a;--bad:#fca5a5;--shadow:0 18px 60px rgba(0,0,0,.35)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:radial-gradient(circle at 10% 0%,#17365f 0,#06111f 42%,#020617 100%);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",Segoe UI,sans-serif;line-height:1.65}
+    header{position:sticky;top:0;z-index:9;background:rgba(6,17,31,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .wrap{max-width:1180px;margin:0 auto;padding:0 16px}.hero{padding:28px 0 18px}.kicker{display:inline-flex;gap:8px;align-items:center;color:#cffafe;background:rgba(14,116,144,.25);border:1px solid rgba(125,211,252,.35);padding:5px 10px;border-radius:999px;font-size:13px;font-weight:800;letter-spacing:.04em}h1{font-size:clamp(28px,7vw,58px);line-height:1.05;margin:14px 0 10px;letter-spacing:-.03em}.subtitle{max-width:850px;color:var(--muted);font-size:clamp(15px,2.4vw,19px)}
+    nav{display:flex;gap:8px;flex-wrap:wrap;padding:0 0 16px}nav a,.btn{appearance:none;border:0;display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:10px 14px;text-decoration:none;background:#1d4ed8;color:white;font-weight:800;cursor:pointer;box-shadow:0 10px 22px rgba(29,78,216,.22)}.btn.secondary,nav a.secondary{background:#26384f;color:#dbeafe}.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--ink);box-shadow:none}.btn.good{background:#047857}.btn.warn{background:#a16207}.btn:disabled{opacity:.45;cursor:not-allowed}
+    main{max-width:1180px;margin:0 auto;padding:18px 16px 60px}.grid{display:grid;grid-template-columns:minmax(280px,390px) 1fr;gap:18px;align-items:start}@media(max-width:880px){.grid{grid-template-columns:1fr}header{position:relative}}
+    .panel{background:linear-gradient(180deg,rgba(15,29,51,.96),rgba(10,22,39,.96));border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}.panel h2{font-size:22px;margin:0 0 10px}.form{padding:18px;position:sticky;top:150px}@media(max-width:880px){.form{position:static}}label{display:block;margin:12px 0 6px;color:#e2e8f0;font-weight:800;font-size:14px}input,select,textarea{width:100%;border:1px solid #365470;background:#071426;color:var(--ink);border-radius:13px;padding:11px 12px;font:inherit;outline:none}textarea{min-height:86px;resize:vertical}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.hint{color:var(--muted);font-size:13px;margin-top:8px}.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}.chip{border:1px solid var(--line);background:#0a1930;color:#dbeafe;padding:7px 10px;border-radius:999px;cursor:pointer;font-size:13px}.chip:hover{border-color:var(--accent)}
+    .steps{display:grid;gap:12px}.step{padding:15px;border:1px solid var(--line);background:rgba(12,24,42,.82);border-radius:18px}.step-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px}.step-title{font-weight:900;color:#e0f2fe}.badge{font-size:12px;border:1px solid #3b5d7e;border-radius:999px;color:#bfdbfe;padding:3px 8px}.step-content{display:grid;gap:10px}.card{background:#071426;border:1px solid #243b56;border-radius:16px;padding:13px}.card h3{margin:0 0 8px;color:var(--accent2);font-size:17px}.card ul,.card ol{padding-left:1.35em;margin:6px 0}.muted{color:var(--muted)}.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}@media(max-width:720px){.two{grid-template-columns:1fr}.row{grid-template-columns:1fr}}
+    .board{background:#071426;border:1px solid #24405f;border-radius:18px;padding:12px;overflow:hidden}.board svg{width:100%;height:auto;display:block}.agent-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.agent{padding:12px;border:1px solid #284460;border-radius:16px;background:rgba(30,41,59,.72)}.agent b{color:#bae6fd}.progress{height:10px;background:#09172a;border-radius:999px;overflow:hidden;border:1px solid #213a57}.bar{height:100%;width:0;background:linear-gradient(90deg,#38bdf8,#34d399);transition:width .4s ease}.output-actions{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.template-box{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:pre-wrap;background:#020617;border:1px solid #263b54;border-radius:16px;padding:14px;color:#d1fae5;font-size:13px;max-height:360px;overflow:auto}.notice{border-left:4px solid var(--warn);background:rgba(120,83,20,.22);padding:12px;border-radius:12px;color:#fef3c7}.small{font-size:13px}.hidden{display:none!important}footer{color:#94a3b8;text-align:center;padding:24px 0}.toast{position:fixed;right:18px;bottom:18px;background:#052e2b;color:#ccfbf1;border:1px solid #0f766e;padding:12px 14px;border-radius:14px;box-shadow:var(--shadow);opacity:0;transform:translateY(8px);transition:.25s;z-index:20}.toast.show{opacity:1;transform:translateY(0)}
+  </style>
+</head>
+<body>
+<header><div class="wrap hero">
+  <span class="kicker">OpenMAIC-lite · Physics zh-TW prototype</span>
+  <h1>繁中物理課程模組生成器</h1>
+  <p class="subtitle">這是一個不用 Firebase、可放 GitHub Pages 的純前端初版。它把「長時間 AI 生成」拆成六個可重試步驟：大綱、概念圖、白板、活動、評量、HTML 講義。現在先用物理模板模擬；下一版可把每一步接到 Vercel Function / OpenRouter / Gemini。</p>
+  <nav><a href="#generator">開始生成</a><a href="#architecture" class="secondary">看架構</a><a href="../../webpages/" class="secondary">回公開網頁總整理</a></nav>
+</div></header>
+<main id="generator" class="grid">
+  <aside class="panel form">
+    <h2>課程輸入</h2>
+    <div class="row"><div><label>年級</label><select id="grade"><option>高一</option><option selected>高二</option><option>高三</option><option>師培課程</option></select></div><div><label>時間</label><select id="duration"><option>25 分鐘</option><option selected>50 分鐘</option><option>100 分鐘</option><option>三週專題</option></select></div></div>
+    <label>單元 / 主題</label><input id="unit" value="力矩與轉動平衡" />
+    <label>學生程度</label><select id="level"><option>概念待建立</option><option selected>普通高中自然組</option><option>分科測驗準備</option><option>師培 / 教師共備</option></select>
+    <label>教學風格</label><select id="style"><option selected>探究式</option><option>題解導向</option><option>實驗活動導向</option><option>3Blue1Brown 視覺推導</option><option>白板講授</option></select>
+    <label>想處理的迷思概念</label><textarea id="misconception">力矩不是只有力的大小，還要看力臂；順逆時針方向要先約定；平衡不代表沒有力，而是合力矩為零。</textarea>
+    <div class="chips" aria-label="範例主題"><button class="chip" data-unit="力矩與轉動平衡">力矩</button><button class="chip" data-unit="等電位線與電力線">等電位線</button><button class="chip" data-unit="動量守恆與碰撞">碰撞</button><button class="chip" data-unit="光電效應與截止電壓">光電效應</button></div>
+    <button id="generateAll" class="btn good">生成完整模組</button>
+    <button id="reset" class="btn ghost" style="margin-top:8px">清空重來</button>
+    <p class="hint">初版不呼叫外部 LLM，所以可穩定部署在 GitHub Pages。生成結果可下載 JSON / Markdown / HTML。</p>
+  </aside>
+  <section>
+    <div class="panel" style="padding:16px;margin-bottom:14px">
+      <div class="step-head"><div><h2 style="margin:0">生成流程</h2><div class="muted small">每一步都可以單獨重試，避免 serverless 長任務 timeout。</div></div><span class="badge" id="status">待生成</span></div>
+      <div class="progress"><div class="bar" id="bar"></div></div>
+      <div class="output-actions"><button class="btn secondary" id="copyMd">複製 Markdown</button><button class="btn secondary" id="downloadJson">下載 JSON</button><button class="btn secondary" id="downloadHtml">下載 HTML 講義</button></div>
+    </div>
+    <div class="steps">
+      <div class="step" data-step="outline"><div class="step-head"><span class="step-title">1. generateOutline()</span><button class="btn ghost retry">重試此步</button></div><div class="step-content" id="outline"></div></div>
+      <div class="step" data-step="concept"><div class="step-head"><span class="step-title">2. generateConceptMap()</span><button class="btn ghost retry">重試此步</button></div><div class="step-content" id="concept"></div></div>
+      <div class="step" data-step="whiteboard"><div class="step-head"><span class="step-title">3. generateWhiteboardScript()</span><button class="btn ghost retry">重試此步</button></div><div class="step-content" id="whiteboard"></div></div>
+      <div class="step" data-step="activities"><div class="step-head"><span class="step-title">4. generateActivities()</span><button class="btn ghost retry">重試此步</button></div><div class="step-content" id="activities"></div></div>
+      <div class="step" data-step="assessment"><div class="step-head"><span class="step-title">5. generateAssessment()</span><button class="btn ghost retry">重試此步</button></div><div class="step-content" id="assessment"></div></div>
+      <div class="step" data-step="html"><div class="step-head"><span class="step-title">6. composeHtml()</span><button class="btn ghost retry">重試此步</button></div><div class="step-content" id="htmlout"></div></div>
+    </div>
+  </section>
+</main>
+<section id="architecture" class="wrap" style="margin-top:10px">
+  <div class="panel" style="padding:18px">
+    <h2>下一版接真正 AI 的低成本架構</h2>
+    <div class="agent-row">
+      <div class="agent"><b>物理老師 Agent</b><br><span class="muted">檢查概念、公式、單位與常見錯誤。</span></div>
+      <div class="agent"><b>探究設計 Agent</b><br><span class="muted">產生提問、活動、預測—觀察—解釋流程。</span></div>
+      <div class="agent"><b>板書設計 Agent</b><br><span class="muted">把內容轉成白板、圖像、逐步 reveal 腳本。</span></div>
+    </div>
+    <p class="notice">部署建議：GitHub Pages 放這個前端；真正 AI 生成放到 Vercel Function / Cloudflare Worker / Deno Deploy。每一步是一個短 API call，不要一次 generateFullCourse()。</p>
+    <div class="template-box">prompts/physics/zh-TW/mechanics.yaml
+unit: 力矩與轉動平衡
+grade: 高二
+language: zh-TW
+style: 探究式
+agents:
+  - physics_teacher
+  - inquiry_designer
+  - whiteboard_designer
+steps:
+  - generateOutline
+  - generateConceptMap
+  - generateWhiteboardScript
+  - generateActivities
+  - generateAssessment
+  - composeHtml</div>
+  </div>
+</section>
+<footer>Prototype v0.1｜純前端、無登入、無資料庫、無 Firebase｜可作為 OpenMAIC-lite 繁中物理版第一塊積木</footer>
+<div id="toast" class="toast">已完成</div>
+<script>
+const $ = s => document.querySelector(s);
+const state = { data:{} };
+function getInput(){return {grade:$('#grade').value,duration:$('#duration').value,unit:$('#unit').value.trim()||'力矩與轉動平衡',level:$('#level').value,style:$('#style').value,misconception:$('#misconception').value.trim()};}
+function esc(s){return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
+function card(title,body){return `<div class="card"><h3>${esc(title)}</h3>${body}</div>`}
+function list(items, ordered=false){return `<${ordered?'ol':'ul'}>`+items.map(x=>`<li>${esc(x)}</li>`).join('')+`</${ordered?'ol':'ul'}>`}
+function setStatus(text,pct){$('#status').textContent=text;$('#bar').style.width=pct+'%'}
+function toast(t){const el=$('#toast');el.textContent=t;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),1600)}
+function generateOutline(input){return {goals:[`能用力臂與力矩方向判斷 ${input.unit} 問題`,`能從真實情境抽象出轉軸、力、力臂`,`能用合力矩為零建立平衡條件`], flow:[`0–5 分：以生活物件引出轉動效果`,`5–15 分：學生預測不同施力點的效果`,`15–30 分：建立 τ = rF sinθ 與方向約定`,`30–42 分：小組解一題變式題`,`42–50 分：出口票檢核迷思`], prior:['力的向量表示','槓桿經驗','三角函數基本意義'], teacherNote:`以「力不是越大越會轉」作為主鉤子，讓學生先犯錯再修正。`};}
+function generateConceptMap(input){return {nodes:['轉軸','施力點','力 F','力臂 r⊥','力矩 τ','順/逆時針','平衡條件 Στ=0','生活裝置'], links:['施力點與轉軸決定力臂','力與力臂共同決定轉動效果','方向約定決定正負號','平衡代表總力矩為零，不代表沒有力']};}
+function generateWhiteboardScript(input){return {frames:[`畫一支水平桿與轉軸 O，只標出 O，不急著寫公式。`,`加入兩個施力位置：靠近轉軸、遠離轉軸，請學生投票哪個較容易轉。`,`把力線延長，畫出垂直距離 r⊥，強調力臂不是桿長本身。`,`寫出 τ = F r⊥ = rF sinθ，並用顏色標示 r、F、θ。`,`最後用 Στ順 = Στ逆 作為平衡口訣。`], reveal:['先圖像','再方向','再公式','最後代數']};}
+function generateActivities(input){return {activities:[{name:'尺與橡皮擦轉軸實作',steps:['用橡皮擦當轉軸','同樣力道推不同位置','記錄哪裡最容易轉','討論力臂與力矩關係']},{name:'錯誤診斷卡',steps:['給三張學生常見錯解','小組標出錯在力臂、方向或平衡條件','全班共同修正']}], prompts:['如果力通過轉軸，為什麼不容易造成轉動？','同一個力，改變角度會發生什麼？','平衡時物體受力一定為零嗎？']};}
+function generateAssessment(input){return {questions:[{q:'同一扳手上，手握越遠離螺絲處越容易轉動，主要原因是？',a:'力臂變大，力矩變大。'},{q:'若力的作用線通過轉軸，力矩為何？',a:'為零，因為垂直力臂為零。'},{q:'槓桿靜止時，是否代表沒有受到力？',a:'不是，代表合力矩為零；仍可能受多個力。'}], exitTicket:'請用一句話說明「力矩」和「力」最大的不同。'};}
+function composeHtml(input){return `<!doctype html><html lang="zh-Hant"><meta charset="utf-8"><title>${esc(input.unit)} 講義</title><body><h1>${esc(input.grade)}｜${esc(input.unit)}</h1><p>風格：${esc(input.style)}；時間：${esc(input.duration)}</p><h2>學習目標</h2>${list(state.data.outline.goals)}<h2>概念檢核</h2>${list(state.data.assessment.questions.map(x=>x.q))}</body></html>`;}
+function renderStep(name){const input=getInput(); if(name==='outline'){state.data.outline=generateOutline(input); $('#outline').innerHTML=card('學習目標',list(state.data.outline.goals))+card('課程節奏',list(state.data.outline.flow,true))+card('教師提醒',`<p>${esc(state.data.outline.teacherNote)}</p>`)}
+if(name==='concept'){state.data.concept=generateConceptMap(input); $('#concept').innerHTML=card('概念節點',list(state.data.concept.nodes))+card('關係線',list(state.data.concept.links))+`<div class="board"><svg viewBox="0 0 760 250" role="img" aria-label="概念圖"><defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#7dd3fc"/></marker></defs><rect width="760" height="250" rx="18" fill="#06111f"/><g fill="#0f2a44" stroke="#7dd3fc" stroke-width="2"><rect x="35" y="85" width="120" height="54" rx="18"/><rect x="215" y="35" width="120" height="54" rx="18"/><rect x="215" y="160" width="120" height="54" rx="18"/><rect x="420" y="85" width="120" height="54" rx="18"/><rect x="595" y="85" width="130" height="54" rx="18"/></g><g stroke="#7dd3fc" stroke-width="3" marker-end="url(#a)"><path d="M155 112 C185 90 190 70 215 62"/><path d="M155 112 C185 140 190 180 215 187"/><path d="M335 62 C370 70 385 95 420 112"/><path d="M335 187 C375 170 390 135 420 112"/><path d="M540 112 L595 112"/></g><g font-size="18" fill="#f8fafc" text-anchor="middle" font-weight="700"><text x="95" y="118">轉軸 O</text><text x="275" y="68">力 F</text><text x="275" y="193">力臂 r⊥</text><text x="480" y="118">力矩 τ</text><text x="660" y="118">Στ = 0</text></g></svg></div>`}
+if(name==='whiteboard'){state.data.whiteboard=generateWhiteboardScript(input); $('#whiteboard').innerHTML=card('白板逐步 reveal',list(state.data.whiteboard.frames,true))+card('視覺策略',list(state.data.whiteboard.reveal))}
+if(name==='activities'){state.data.activities=generateActivities(input); $('#activities').innerHTML=state.data.activities.activities.map(a=>card(a.name,list(a.steps,true))).join('')+card('引導提問',list(state.data.activities.prompts))}
+if(name==='assessment'){state.data.assessment=generateAssessment(input); $('#assessment').innerHTML=state.data.assessment.questions.map((q,i)=>card(`概念題 ${i+1}`,`<p>${esc(q.q)}</p><details><summary>顯示答案</summary><p>${esc(q.a)}</p></details>`)).join('')+card('出口票',`<p>${esc(state.data.assessment.exitTicket)}</p>`)}
+if(name==='html'){if(!state.data.assessment) renderStep('assessment'); state.data.html=composeHtml(input); $('#htmlout').innerHTML=card('可匯出的 HTML 講義草稿',`<div class="template-box">${esc(state.data.html)}</div>`)}}
+async function generateAll(){const steps=['outline','concept','whiteboard','activities','assessment','html']; setStatus('生成中',5); for(let i=0;i<steps.length;i++){await new Promise(r=>setTimeout(r,260)); renderStep(steps[i]); setStatus(`完成 ${i+1}/6`,Math.round((i+1)/steps.length*100));} setStatus('已完成',100); toast('課程模組已生成')}
+function toMarkdown(){const input=getInput(); if(!state.data.outline) generateAll(); let d=state.data; return `# ${input.grade}｜${input.unit}\n\n- 時間：${input.duration}\n- 程度：${input.level}\n- 風格：${input.style}\n\n## 學習目標\n${(d.outline?.goals||[]).map(x=>'- '+x).join('\n')}\n\n## 課程流程\n${(d.outline?.flow||[]).map((x,i)=>`${i+1}. ${x}`).join('\n')}\n\n## 概念圖\n${(d.concept?.links||[]).map(x=>'- '+x).join('\n')}\n\n## 白板腳本\n${(d.whiteboard?.frames||[]).map((x,i)=>`${i+1}. ${x}`).join('\n')}\n\n## 活動\n${(d.activities?.activities||[]).map(a=>`### ${a.name}\n${a.steps.map((s,i)=>`${i+1}. ${s}`).join('\n')}`).join('\n\n')}\n\n## 評量\n${(d.assessment?.questions||[]).map((q,i)=>`${i+1}. ${q.q}\n   - 答：${q.a}`).join('\n')}\n`;}
+function download(name, content, type){const blob=new Blob([content],{type}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=name; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),500)}
+document.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{$('#unit').value=b.dataset.unit; generateAll()}));
+$('#generateAll').addEventListener('click',generateAll); $('#reset').addEventListener('click',()=>{state.data={}; ['outline','concept','whiteboard','activities','assessment','htmlout'].forEach(id=>$('#'+id).innerHTML=''); setStatus('待生成',0)});
+document.querySelectorAll('.retry').forEach(btn=>btn.addEventListener('click',e=>{renderStep(e.target.closest('.step').dataset.step); toast('此步已重新生成')}));
+$('#copyMd').addEventListener('click',async()=>{const md=toMarkdown(); await navigator.clipboard.writeText(md); toast('Markdown 已複製')});
+$('#downloadJson').addEventListener('click',()=>{download('physics-module.json',JSON.stringify({input:getInput(),generated:state.data},null,2),'application/json')});
+$('#downloadHtml').addEventListener('click',()=>{if(!state.data.html) renderStep('html'); download('physics-handout.html',state.data.html,'text/html')});
+generateAll();
+</script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>鉛直圓周運動｜例題與練習題詳解</title>
+  <meta name="description" content="依盧老師講義 §7-6 力學能守恆：鉛直面圓周運動，整理例19、例20與練習題11–26的詳解、互動動畫與圖示。" />
+  <script>
+    window.MathJax = { tex: { inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']] }, svg: { fontCache: 'global' } };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <style>
+    :root{
+      --bg:#f7f3e9; --paper:#fffdf7; --ink:#172033; --muted:#667085; --line:rgba(23,32,51,.14);
+      --brand:#1f6f8b; --brand2:#b45f06; --ok:#0f766e; --warn:#a15c00; --soft:#e7f3f6; --soft2:#fff1dd;
+      --shadow:0 18px 55px rgba(24,32,52,.10), 0 3px 14px rgba(24,32,52,.06);
+      --r:22px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",sans-serif;color:var(--ink);line-height:1.75;background:radial-gradient(circle at 8% 0%,rgba(31,111,139,.18),transparent 34rem),radial-gradient(circle at 90% 8%,rgba(180,95,6,.14),transparent 28rem),linear-gradient(180deg,#fffaf0 0%,var(--bg) 62%,#efe7d8 100%)}
+    a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}.wrap{width:min(1180px,calc(100% - 28px));margin:0 auto}.hero{padding:62px 0 24px}.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:7px 12px;border-radius:999px;background:rgba(31,111,139,.11);color:var(--brand);font-size:13px;font-weight:850;letter-spacing:.04em}.hero h1{font-size:clamp(34px,7vw,72px);line-height:1.02;letter-spacing:-.055em;margin:18px 0 12px}.lead{max-width:920px;color:#4b5565;font-size:clamp(17px,2.35vw,22px);font-weight:520}.note{padding:14px 16px;border:1px dashed rgba(31,111,139,.35);border-radius:18px;background:rgba(255,255,255,.68);color:#475467}.toc{display:flex;gap:9px;flex-wrap:wrap;margin:22px 0 28px}.toc a,.btn{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 12px;border-radius:999px;background:#fff;border:1px solid var(--line);box-shadow:0 3px 12px rgba(20,30,45,.04);font-weight:800;font-size:14px}.btn.primary{background:var(--brand);color:white;border-color:var(--brand)}
+    section{margin:26px 0}.section-title{display:flex;align-items:end;justify-content:space-between;gap:18px;margin:0 0 14px}.section-title h2{margin:0;font-size:clamp(26px,4vw,42px);letter-spacing:-.035em;line-height:1.12}.section-title p{margin:0;color:var(--muted);max-width:600px}.grid{display:grid;grid-template-columns:1.05fr .95fr;gap:16px}.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.card,.panel,details{background:rgba(255,255,255,.88);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:20px}.card h3,.panel h3{margin:.1em 0 .45em;font-size:22px;line-height:1.25}.tag{display:inline-flex;align-items:center;padding:3px 9px;border-radius:999px;background:var(--soft);color:#155e75;font-size:12px;font-weight:850}.tag.alt{background:var(--soft2);color:#9a5b13}.formula{background:#0f172a;color:#f8fafc;border-radius:18px;padding:14px 16px;margin:12px 0;overflow:auto}.formula mjx-container{color:#f8fafc}.formula small{color:#cbd5e1} .key{border-left:5px solid var(--brand);padding:12px 14px;background:#eef8fb;border-radius:14px;margin:12px 0}.warn{border-left-color:var(--warn);background:#fff7ed}.ok{border-left-color:var(--ok);background:#ecfdf5}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px}.mini{font-size:14px;color:var(--muted)}
+    .sim{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;align-items:center}.simbox{background:linear-gradient(180deg,#fbfdff,#eff8fb);border:1px solid var(--line);border-radius:24px;padding:14px}.controls{display:grid;gap:12px}.control{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px}.control label{font-weight:850;display:block;margin-bottom:6px}.control input{width:100%}.metric{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.metric div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px}.metric strong{display:block;font-size:22px}.status{font-weight:900}.bad{color:#b42318}.good{color:#067647}.svg-wrap svg{width:100%;height:auto;display:block}.diagram-label{font-weight:850;fill:#172033}.force{stroke-width:5;stroke-linecap:round;marker-end:url(#arrow)}.v{stroke:#2563eb}.t{stroke:#dc2626}.g{stroke:#16a34a}.path{stroke:#94a3b8;stroke-width:4;fill:none}.ball{fill:#f97316;stroke:#7c2d12;stroke-width:2}
+    details{padding:0;overflow:hidden} summary{cursor:pointer;list-style:none;padding:16px 18px;font-weight:900;font-size:18px;display:flex;gap:10px;align-items:center;justify-content:space-between} summary::-webkit-details-marker{display:none}.solution{border-top:1px solid var(--line);padding:0 18px 18px}.pill{display:inline-flex;border-radius:999px;background:#f2f4f7;color:#475467;padding:2px 8px;font-size:12px;font-weight:800;margin-left:6px}.answer{font-weight:900;color:#0f766e}.steps{counter-reset:step}.steps li{margin:.45em 0}.steps li::marker{font-weight:900;color:var(--brand)}.footer{padding:28px 0 54px;color:var(--muted);font-size:14px}
+    @media(max-width:860px){.grid,.sim,.two-col,.cards{grid-template-columns:1fr}.hero{padding-top:42px}.card,.panel,details{padding:16px}.metric{grid-template-columns:1fr}.section-title{display:block}.section-title p{margin-top:8px}}
+    mjx-container[jax="SVG"] svg{width:auto!important;height:auto!important;max-width:none}.formula mjx-container[jax="SVG"] svg{fill:currentColor!important}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <span class="eyebrow">§7-6 力學能守恆｜鉛直面圓周運動</span>
+      <h1>鉛直圓周運動：例題與練習題詳解</h1>
+      <p class="lead">依講義「力學能守恆實例─鉛直面圓周運動」整理。這一頁的目標不是背答案，而是把每一題都回到兩條主線：能量決定速度，法線方向決定張力/正向力。</p>
+      <p class="note">資料來源：盧老師提供之 Google 文件講義。因 Google 匯出時部分公式與圖形會缺漏，本頁以 PDF 可辨識內容、答案欄與標準鉛直圓周模型補成教學版詳解；若要完全逐字校對，可再依原始 Word 圖檔微調。</p>
+      <nav class="toc" aria-label="頁面導覽">
+        <a href="#model">核心模型</a><a href="#sim">互動動畫</a><a href="#examples">例19–20</a><a href="#practice">練習題11–26</a><a href="#summary">速查表</a>
+      </nav>
+    </header>
+
+    <section id="model">
+      <div class="section-title"><h2>一、先抓住兩條主線</h2><p>每一題都先問：高度差是多少？向心方向是哪裡？接著再列能量式與法線式。</p></div>
+      <div class="grid">
+        <article class="card">
+          <span class="tag">能量線</span>
+          <h3>速度由高度決定</h3>
+          <p>繩張力或光滑軌道的正向力都垂直瞬時位移，因此不作功。若無摩擦，只有重力作功：</p>
+          <div class="formula">\[\frac12mv_1^2+mgy_1=\frac12mv_2^2+mgy_2\]</div>
+          <p>若從低點出發，令低點高度為 0，角度 \(\theta\) 自低點量起，則高度</p>
+          <div class="formula">\[h=R(1-\cos\theta),\qquad v^2=v_0^2-2gR(1-\cos\theta)\]</div>
+        </article>
+        <article class="card">
+          <span class="tag alt">法線線</span>
+          <h3>張力/正向力由向心需求決定</h3>
+          <p>向心方向永遠指向圓心。以繩子、內側圓軌道為例：</p>
+          <div class="formula">\[T-mg\cos\theta=m\frac{v^2}{R}\]</div>
+          <p>代入能量式可得一個很好用的總式：</p>
+          <div class="formula">\[\frac{T}{mg}=\frac{v_0^2}{gR}-2+3\cos\theta\]</div>
+          <p class="mini">其中 \(\theta=0\) 為最低點，\(\theta=\pi\) 為最高點。</p>
+        </article>
+      </div>
+      <div class="cards" style="margin-top:14px">
+        <article class="card"><h3>完成整圈的臨界條件</h3><p>最高點若繩子剛好不鬆或軌道剛好不失去接觸，取 \(T=0\) 或 \(N=0\)：</p><div class="formula">\[v_{\text{top,min}}=\sqrt{gR}\]</div><p>再由能量回推最低點：</p><div class="formula">\[v_{\text{bottom,min}}=\sqrt{v_{\text{top}}^2+4gR}=\sqrt{5gR}\]</div></article>
+        <article class="card"><h3>三點張力關係</h3><p>講義 C、D、E 分別為最高點、圓心高度、最低點。若圓心高度 D 的張力為 \(T_D\)：</p><div class="formula">\[T_C=T_D-3mg,\qquad T_E=T_D+3mg\]</div><p class="mini">這不是背公式，而是「速度差 \(2gR\)」加上「重力法線分量差 \(mg\)」共同造成的 3mg。</p></article>
+      </div>
+    </section>
+
+    <section id="sim">
+      <div class="section-title"><h2>二、互動動畫：一滑桿看懂速度與張力</h2><p>調整最低點速率 \(v_0/\sqrt{gR}\) 與位置角度，觀察速度、張力與是否能完成整圈。</p></div>
+      <div class="panel sim">
+        <div class="svg-wrap simbox">
+          <svg id="loopSvg" viewBox="0 0 520 520" role="img" aria-label="鉛直圓周運動互動圖">
+            <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="currentColor"/></marker></defs>
+            <circle cx="260" cy="260" r="170" fill="#fff" stroke="#94a3b8" stroke-width="4"/>
+            <line x1="260" y1="85" x2="260" y2="435" stroke="#d0d5dd" stroke-width="2"/>
+            <line x1="85" y1="260" x2="435" y2="260" stroke="#d0d5dd" stroke-width="2"/>
+            <text x="270" y="105" class="diagram-label">最高點</text><text x="270" y="430" class="diagram-label">最低點</text>
+            <path id="arc" d="" fill="none" stroke="#f97316" stroke-width="8" stroke-linecap="round" opacity=".38"/>
+            <line id="rLine" x1="260" y1="260" x2="260" y2="430" stroke="#64748b" stroke-width="3" stroke-dasharray="8 8"/>
+            <circle id="ball" class="ball" cx="260" cy="430" r="16"/>
+            <line id="vArrow" class="force v" x1="260" y1="430" x2="335" y2="430"/>
+            <line id="tArrow" class="force t" x1="260" y1="430" x2="260" y2="345"/>
+            <line id="gArrow" class="force g" x1="260" y1="430" x2="260" y2="500"/>
+            <text id="labelV" x="345" y="430" fill="#2563eb" font-weight="900">v</text>
+            <text id="labelT" x="250" y="335" fill="#dc2626" font-weight="900">T</text>
+            <text id="labelG" x="268" y="500" fill="#16a34a" font-weight="900">mg</text>
+          </svg>
+        </div>
+        <div class="controls">
+          <div class="control"><label for="speed">最低點速率倍率 \(\mu=v_0/\sqrt{gR}\)：<span id="speedVal">2.24</span></label><input id="speed" type="range" min="1" max="3" step="0.01" value="2.236" /></div>
+          <div class="control"><label for="angle">位置角 \(\theta\)（自最低點往上量）：<span id="angleVal">0°</span></label><input id="angle" type="range" min="0" max="180" step="1" value="0" /></div>
+          <div class="metric">
+            <div><span class="mini">\(v^2/(gR)\)</span><strong id="v2Val">5.00</strong></div>
+            <div><span class="mini">\(T/(mg)\)</span><strong id="tVal">6.00</strong></div>
+            <div><span class="mini">高度 \(h/R\)</span><strong id="hVal">0.00</strong></div>
+            <div><span class="mini">狀態</span><strong id="stateVal" class="status good">可貼住</strong></div>
+          </div>
+          <p class="mini">紅箭頭為張力/正向力方向，綠箭頭為重力，藍箭頭為速度方向。當 \(T<0\) 時，代表繩子不能「推」物體，實際上會鬆弛或離軌。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="examples">
+      <div class="section-title"><h2>三、講義例題詳解</h2><p>例19與例20是後面練習題的核心模板：光滑碗/球面用 \(N\)，內側軌道用 \(N\) 或 \(T\)。</p></div>
+      <details open><summary>例19｜光滑半球形碗，自碗口滑下至 A 點 <span class="pill">答案：\(\sqrt{gR},\ \frac{\sqrt3}{2}g,\ g,\ \frac32mg\)</span></summary><div class="solution">
+        <p>圖中 A 點的半徑與鉛直向下方向夾角為 \(60^\circ\)。物體由碗口高度自靜止滑下，取 A 點相對碗口的下降高度：</p>
+        <div class="formula">\[\Delta h=R\cos60^\circ=\frac{R}{2}\]</div>
+        <ol class="steps">
+          <li>能量：\(mg\Delta h=\frac12mv^2\)，所以 \(v=\sqrt{gR}\)。</li>
+          <li>切線加速度只來自重力切線分量：\(a_t=g\sin60^\circ=\frac{\sqrt3}{2}g\)。</li>
+          <li>向心加速度：\(a_n=v^2/R=g\)。</li>
+          <li>法線方向指向碗心；在 A 點，重力沿法線的分量背離圓心，大小為 \(mg\cos60^\circ\)。因此 \(N-mg\cos60^\circ=m v^2/R=mg\)，得 \(N=\frac32mg\)。物體施於碗壁之力與碗壁施於物體之正向力大小相等，所以也是 \(\frac32mg\)。</li>
+        </ol>
+        <p class="key warn"><b>備課提醒：</b>先畫「指向圓心」再投影重力。這題最容易把 \(mg\cos60^\circ\) 的方向看反。</p>
+      </div></details>
+      <details open><summary>例20｜水平射入鉛直半圓軌道，何處脫離？ <span class="pill">答案：\(\frac43R\)</span></summary><div class="solution">
+        <p>題目：小球自 A 點射出速率 \(\sqrt{3gR}\)，直線軌道 AB 與鉛直圓軌道 BCD 均光滑，求脫離軌道面處高度。</p>
+        <p>令 B 為最低點，高度為 0；沿圓軌道上升角 \(\theta\) 自最低點量起。</p>
+        <div class="formula">\[h=R(1-\cos\theta),\qquad v^2=3gR-2gR(1-\cos\theta)=gR(1+2\cos\theta)\]</div>
+        <p>內側軌道法線式：</p>
+        <div class="formula">\[N-mg\cos\theta=m\frac{v^2}{R}\]</div>
+        <p>脫離時 \(N=0\)，所以 \(v^2=-gR\cos\theta\)。與能量式聯立：</p>
+        <div class="formula">\[gR(1+2\cos\theta)=-gR\cos\theta\Rightarrow 1+3\cos\theta=0\Rightarrow \cos\theta=-\frac13\]</div>
+        <p>高度：</p><div class="formula">\[h=R\left(1-\left(-\frac13\right)\right)=\frac43R\]</div>
+        <p class="key ok"><b>一句話：</b>先用能量寫速度，再用 \(N=0\) 找離軌點；離軌題永遠不是直接套最高點臨界速度。</p>
+      </div></details>
+    </section>
+
+    <section id="practice">
+      <div class="section-title"><h2>四、練習題 11–26 詳解</h2><p>以下聚焦「鉛直圓周/曲面/擺」相關題。部分題幹公式在文件匯出時缺漏，已依答案欄與典型題型補成教學解法。</p></div>
+      <div class="cards">
+        <details><summary>11｜最大速率是最小速率的 \(6/5\)</summary><div class="solution"><p>光滑鉛直圓軌道，最大速率在最低點，最小速率在最高點。</p><div class="formula">\[v_b^2=v_t^2+4gR,\qquad v_b=\frac65v_t\]</div><div class="formula">\[\frac{36}{25}v_t^2=v_t^2+4gR\Rightarrow \frac{11}{25}v_t^2=4gR\Rightarrow v_t=\sqrt{\frac{100}{11}gR}\]</div><p class="answer">答：最小速率 \(=\sqrt{100gR/11}\)。</p></div></details>
+        <details><summary>12｜單擺由 A 點靜止釋放，到最低點 B</summary><div class="solution"><p>若 A 與懸點同高，即繩水平釋放，下降高度為 \(L\)。</p><div class="formula">\[mgL=\frac12mv_B^2\Rightarrow v_B=\sqrt{2gL}\]</div><p>最低點切線方向為水平，重力無切線分量，所以 \(a_t=0\)。</p><div class="formula">\[a_n=\frac{v_B^2}{L}=2g,\qquad T-mg=m\frac{v_B^2}{L}\Rightarrow T=3mg\]</div><p class="answer">答：\(v_B=\sqrt{2gL},\ a_n=2g,
+ a_t=0,
+ T=3mg\)。若原圖 A 角度不是水平，將下降高度改成 \(L(1-\cos\theta_0)\)。</p></div></details>
+        <details><summary>13｜光滑圓弧由水平位置釋放，離軌後最高高度</summary><div class="solution"><p>這題關鍵是：在圓弧上用能量求 B 點速度，離開後改成拋體運動。</p><ol><li>從 A 到 B：\(mg\Delta h=\frac12mv_B^2\)。</li><li>離開 B 後，垂直分速度再轉成上升高度：\(\Delta y=v_{By}^2/(2g)\)。</li><li>總最大高度 = B 點高度 + 拋體額外上升高度。</li></ol><p class="key">講義匯出圖形角度不完整；課堂解題時請先在圖上標出 B 點切線方向，否則無法決定 \(v_{By}\)。</p></div></details>
+        <details><summary>14｜已知圓心高度張力 \(T\)，求任意 P 點張力</summary><div class="solution"><p>以圓心高度點為基準，速度差由高度差決定；張力差再由法線式決定。講義答案欄顯示：</p><div class="formula">\[T_P=T-3mg\cos\theta\]</div><p>若 P 點高度低於圓心，\(\theta\) 為鈍角，\(\cos\theta<0\)，所以上式自然變成 \(T_P>T\)。</p><p class="answer">答：兩種情況皆可用 \(T-3mg\cos\theta\)，但要讓 \(\cos\theta\) 自己帶正負號。</p></div></details>
+        <details><summary>15｜繩長 \(\ell\)，底端速率 \(v\)，判斷選項</summary><div class="solution"><p>由底端到頂端高度增加 \(2\ell\)：</p><div class="formula">\[u^2=v^2-4g\ell\]</div><p>頂端張力：</p><div class="formula">\[T+mg=m\frac{u^2}{\ell}\Rightarrow T=m\frac{v^2}{\ell}-5mg\]</div><p>水平位置高度增加 \(\ell\)：</p><div class="formula">\[K_{\text{水平}}=\frac12mv^2-mg\ell,\qquad \omega=\frac{\sqrt{v^2-2g\ell}}{\ell}\]</div><p class="answer">依講義答案：ACE。重點是角動量要寫 \(L=mv\ell\)，不是只寫 \(mv\)。</p></div></details>
+        <details><summary>16｜斜面上的鉛直圓周：把有效重力換掉</summary><div class="solution"><p>在傾角 \(30^\circ\) 的光滑斜面上作圓周，沿斜面造成速率改變的重力分量為</p><div class="formula">\[g_{\text{eff}}=g\sin30^\circ=\frac g2\]</div><p>所以最高點臨界速率為：</p><div class="formula">\[v_{\text{top,min}}=\sqrt{g_{\text{eff}}R}=\sqrt{\frac{gR}{2}}\]</div><p>上下張力差：\(6m g_{\text{eff}}=3mg\)。</p><p class="answer">依講義答案：CD。</p></div></details>
+        <details><summary>17｜單擺水平釋放，張力恰等於重量</summary><div class="solution"><p>令 \(\theta\) 為擺線與鉛直向下的夾角。由水平釋放，下降高度 \(\ell\cos\theta\)：</p><div class="formula">\[v^2=2g\ell\cos\theta\]</div><p>法線方向：</p><div class="formula">\[T-mg\cos\theta=m\frac{v^2}{\ell}\]</div><p>給定 \(T=mg\)：</p><div class="formula">\[mg-mg\cos\theta=2mg\cos\theta\Rightarrow \cos\theta=\frac13\]</div><p>所以</p><div class="formula">\[\Delta y=\frac{\ell}{3},\quad K=\frac13mg\ell,
+\quad L_O=m\ell v=m\ell\sqrt{\frac{2g\ell}{3}}\]</div><p>瞬時功率：</p><div class="formula">\[P_g=mgv\sin\theta=\frac43mg\sqrt{\frac{g\ell}{3}}\]</div></div></details>
+        <details><summary>18｜人手拿臨界鉛直圓周小球，磅秤最大讀數</summary><div class="solution"><p>小球在最高點臨界：\(v_t^2=gR\)。由能量到底點：</p><div class="formula">\[v_b^2=v_t^2+4gR=5gR\]</div><p>底點張力：</p><div class="formula">\[T_b-mg=m\frac{5gR}{R}=5mg\Rightarrow T_b=6mg\]</div><p>小球在底點拉手向下 6mg；人本身重 \(10mg\)。</p><p class="answer">磅秤最大讀數 \(=10mg+6mg=16mg\)。</p></div></details>
+        <details><summary>19｜進入鉛直半圓軌道：通過或離軌</summary><div class="solution"><p>這題是例20的延伸。令底點 A 高度 0，入軌速率 \(v_0\)。</p><p><b>判斷流程：</b></p><ol><li>若 \(v_0\ge\sqrt{5gR}\)，可完整通過最高點。</li><li>若 \(\sqrt{2gR}<v_0<\sqrt{5gR}\)，會在上升途中離軌。</li><li>離軌條件仍是 \(N=0\)。</li></ol><div class="formula">\[v^2=v_0^2-2gR(1-\cos\theta),\qquad N-mg\cos\theta=m\frac{v^2}{R}\]</div><p>離軌時：</p><div class="formula">\[\cos\theta=\frac{2gR-v_0^2}{3gR},\qquad h=R(1-\cos\theta)\]</div><p>若題目第二小題為 \(v_0=\sqrt{3gR}\)，則 \(h=4R/3\)，離軌後最高點為 \(40R/27\)。</p><p class="answer">講義答案欄可辨識：(1) 落距 \(2R\)；(2) 離軌高度 \(4R/3\)，軌跡最高點依拋體補算為 \(40R/27\)。</p></div></details>
+        <details><summary>20｜最高點速率 \(V_0\) 的鉛直圓軌道判斷</summary><div class="solution"><p>已知最高點速率，可用能量推出最低點最大速率：</p><div class="formula">\[v_b^2=V_0^2+4gR\]</div><p>任一直徑兩端高度差固定為 \(2R\)，所以兩端動能和為定值：</p><div class="formula">\[K(\theta)+K(\theta+\pi)=\text{constant}\]</div><p>但重力對圓心有力矩，角動量一般不守恆；速率也不是定值，週期不能用等速圓周直接算。</p><p class="answer">依講義答案：AC。</p></div></details>
+        <details><summary>21｜擺線被細桿擋住後仍完整繞圈</summary><div class="solution"><p>擺長 \(R\)，水平釋放到底點前下降 \(R\)：</p><div class="formula">\[v_b^2=2gR\]</div><p>被細桿擋住後，新圓半徑為 \(r=R-H\)。要繞新圓完整一圈，最低點至少要有：</p><div class="formula">\[v_b^2\ge 5gr=5g(R-H)\]</div><p>代入 \(2gR\)：</p><div class="formula">\[2R\ge5(R-H)\Rightarrow \frac{H}{R}\ge\frac35\]</div><p class="answer">最小比值 \(H/R=3/5\)；講義選項為 B。</p></div></details>
+        <details><summary>22｜兩球以輕棒連接、繞 O 轉動</summary><div class="solution"><p>這題要用「剛體轉動版」能量，而不是把兩球當成同速直線運動。</p><ol><li>各球速率滿足 \(v_i=\omega r_i\)。</li><li>位能下降量 = 兩球重力位能總變化。</li><li>動能 = \(\frac12 I\omega^2=\sum \frac12 m_i r_i^2\omega^2\)。</li><li>求張力時，對其中一球列法線方向牛頓第二定律。</li></ol><p class="answer">講義答案欄可辨識：A、B 間棒張力為 \(mg\)。</p></div></details>
+        <details><summary>23｜長 3L 輕桿兩端附 m、2m，水平釋放</summary><div class="solution"><p>以 O 為支點，兩質點到 O 距離分別為 \(L\) 與 \(2L\)。兩端角速度相同：</p><div class="formula">\[v_m=\omega L,
+\qquad v_{2m}=2\omega L\]</div><p>由水平到鉛直，用重力位能總下降量等於總轉動動能：</p><div class="formula">\[-\Delta U=\frac12 m(\omega L)^2+\frac12(2m)(2\omega L)^2\]</div><p>課堂上先判斷哪一端下降；若 2m 端下降，淨位能下降為 \(2mg(2L)-mg(L)=3mgL\)。</p><div class="formula">\[3mgL=\frac92m\omega^2L^2\Rightarrow \omega=\sqrt{\frac{2g}{3L}}\]</div><p class="answer">故 \(v_m=\sqrt{2gL/3}\)，\(v_{2m}=2\sqrt{2gL/3}\)。</p></div></details>
+        <details><summary>24｜可滑動盒子上的單擺：水平動量＋能量</summary><div class="solution"><p>盒子可在光滑水平面上滑動，所以水平方向外力為零：</p><div class="formula">\[Mv_1=mv_2\]</div><p>講義解析顯示取 \(M=4m\)，所以 \(v_2=4v_1\)。再用能量：</p><div class="formula">\[mgL(1-
+\cos\beta)=\frac12Mv_1^2+rac12mv_2^2\]</div><p>代入 \(L=0.80\text{ m}\)、\(\beta=37^\circ\)、\(g=10\text{ m/s}^2\)、\(M=4m\)，即可得質點在最低點速率。</p><p class="key">這題最容易錯在把懸點當固定；其實懸點會反向滑動，所以不能直接用 \(mgL(1-\cos\beta)=\frac12mv^2\)。</p></div></details>
+        <details><summary>25｜光滑半球面外側滑下，何處脫離？</summary><div class="solution"><p>外側球面，令 \(\theta\) 自最高點往下量。能量：</p><div class="formula">\[v^2=2gR(1-\cos\theta)\]</div><p>徑向向圓心方向：</p><div class="formula">\[mg\cos\theta-N=m\frac{v^2}{R}\]</div><p>脫離時 \(N=0\)：</p><div class="formula">\[g\cos\theta=2g(1-\cos\theta)\Rightarrow \cos\theta=\frac23\]</div><p>所以離地高度與速率：</p><div class="formula">\[y=R\cos\theta=\frac23R,
+\qquad v=\sqrt{\frac23gR}\]</div><p>若有少許水平初速，所需向心較早達成，脫離高度增加；若有摩擦，速度較小，脫離高度減少。</p><p class="answer">答：(1) \(2R/3\)；(2) \(\sqrt{2gR/3}\)；(3) 增加；(4) 減少。</p></div></details>
+        <details><summary>26｜捷運進站上坡、出站下坡為何節能？</summary><div class="solution"><p>進站上坡時，重力作負功，列車動能轉成重力位能；出站下坡時，重力再作正功，把位能轉回動能。</p><p>若用剎車摩擦來減速，動能會變成熱散逸，不易回收。</p><p class="answer">答：利用保守力重力暫存能量，比單純用摩擦耗散更節能減碳。</p></div></details>
+      </div>
+    </section>
+
+    <section id="summary">
+      <div class="section-title"><h2>五、速查表：看到題目先想什麼？</h2><p>這張表可作為課堂板書或學生檢核表。</p></div>
+      <div class="panel">
+        <div class="two-col">
+          <div><h3>題型 → 方程</h3><ul><li>問速度：先列能量。</li><li>問張力/正向力：再列法線方向。</li><li>問離軌：令 \(N=0\)。</li><li>問臨界整圈：最高點令 \(T=0\) 或 \(N=0\)。</li><li>問拋出後最高點/落點：離軌後改成拋體運動。</li></ul></div>
+          <div><h3>常見錯誤</h3><ul><li>把「速度變」誤認為「不符合圓周運動」。其實是非等速圓周。</li><li>把張力當會作功；理想繩張力垂直位移，不作功。</li><li>離軌題直接套 \(v_{top}=\sqrt{gR}\)，但離軌點不一定在最高點。</li><li>法線方向正負沒先畫，導致 \(mg\cos\theta\) 符號錯。</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>製作：Hermes Agent × 盧老師｜公開教學頁。建議用手機橫向或平板瀏覽互動動畫。</p>
+      <p><a href="../../webpages/">回公開網頁總整理</a> · <a href="../../">回 AI 工具首頁</a></p>
+    </footer>
+  </main>
+  <script>
+    const speed=document.getElementById('speed'), angle=document.getElementById('angle');
+    const speedVal=document.getElementById('speedVal'), angleVal=document.getElementById('angleVal'), v2Val=document.getElementById('v2Val'), tVal=document.getElementById('tVal'), hVal=document.getElementById('hVal'), stateVal=document.getElementById('stateVal');
+    const ball=document.getElementById('ball'), rLine=document.getElementById('rLine'), vArrow=document.getElementById('vArrow'), tArrow=document.getElementById('tArrow'), gArrow=document.getElementById('gArrow'), arc=document.getElementById('arc'), labelV=document.getElementById('labelV'), labelT=document.getElementById('labelT'), labelG=document.getElementById('labelG');
+    const cx=260, cy=260, R=170;
+    function polar(theta){return [cx+R*Math.sin(theta), cy+R*Math.cos(theta)]}
+    function setLine(el,x1,y1,x2,y2){el.setAttribute('x1',x1);el.setAttribute('y1',y1);el.setAttribute('x2',x2);el.setAttribute('y2',y2)}
+    function arcPath(theta){let n=48, d=''; for(let i=0;i<=n;i++){let a=theta*i/n;let [x,y]=polar(a); d+=(i?' L':'M')+x.toFixed(1)+' '+y.toFixed(1)} return d}
+    function update(){
+      const mu=parseFloat(speed.value), deg=parseFloat(angle.value), th=deg*Math.PI/180, c=Math.cos(th), s=Math.sin(th);
+      const v2=mu*mu-2*(1-c), h=1-c, tau=v2+c;
+      speedVal.textContent=mu.toFixed(2); angleVal.textContent=deg.toFixed(0)+'°'; v2Val.textContent=v2.toFixed(2); hVal.textContent=h.toFixed(2); tVal.textContent=tau.toFixed(2);
+      stateVal.textContent=(v2<0)?'到不了此高度':(tau<0?'會鬆繩/離軌':'可貼住'); stateVal.className='status '+((v2>=0&&tau>=0)?'good':'bad');
+      const [x,y]=polar(th); ball.setAttribute('cx',x); ball.setAttribute('cy',y); setLine(rLine,cx,cy,x,y); arc.setAttribute('d',arcPath(th));
+      const tangent=[Math.cos(th),-Math.sin(th)], inward=[-Math.sin(th),-Math.cos(th)];
+      const vLen=Math.max(30,Math.min(92,30+18*Math.sqrt(Math.max(v2,0)))); const tLen=Math.max(0,Math.min(98,18*Math.max(tau,0)));
+      setLine(vArrow,x,y,x+tangent[0]*vLen,y+tangent[1]*vLen); setLine(tArrow,x,y,x+inward[0]*tLen,y+inward[1]*tLen); setLine(gArrow,x,y,x,y+70);
+      labelV.setAttribute('x',x+tangent[0]*vLen+8); labelV.setAttribute('y',y+tangent[1]*vLen); labelT.setAttribute('x',x+inward[0]*tLen-8); labelT.setAttribute('y',y+inward[1]*tLen-8); labelG.setAttribute('x',x+8); labelG.setAttribute('y',y+82);
+    }
+    speed.addEventListener('input',update); angle.addEventListener('input',update); update();
+  </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "title": "113 分科物理第25題｜腳踏車踏板力矩傳遞｜storyboard v1",
+  "created_at": "2026-05-28T10:21:26",
+  "status": "private vault internal storyboard; not public",
+  "source_brief": "../113分科物理-第25題-腳踏車踏板力矩傳遞-影片brief.md",
+  "slides": [
+    "slide-01.png",
+    "slide-02.png",
+    "slide-03.png",
+    "slide-04.png",
+    "slide-05.png"
+  ],
+  "contact_sheet": "contact-sheet-3plus2.png",
+  "dimensions": "1080x1920 RGB",
+  "visual_style": "Remotion-inspired / 3B1B-style fallback: evidence gates, formula reveal, radius-ratio comparison, wrong-vs-correct trap card",
+  "next_auto_push": "Q25 Lu Teacher MP4 draft complete. Next low-risk action: create private public-gate review/checklist for Q25 or continue to the next unmade official-source brief; do not redo Q25 brief/storyboard/MP4 unless QA fails."
+}

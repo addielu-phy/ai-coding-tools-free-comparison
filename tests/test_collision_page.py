@@ -13,7 +13,7 @@ def read_page():
 def test_collision_page_exists_with_core_sections():
     html = read_page()
     assert "§7-7 碰撞" in html
-    for marker in ["#model", "#sim", "#examples", "#activity", "#practice"]:
+    for marker in ["#model", "#sim", "#examples", "#activity", "#practice", "#ceec"]:
         assert marker in html
     assert "動量守恆" in html
     assert "恢復係數" in html
@@ -34,10 +34,21 @@ def test_interactive_collision_animation_controls_and_state_function():
 def test_examples_practice_and_activity_are_rich_enough():
     html = read_page()
     assert html.count("class=\"example-card\"") >= 3
-    assert html.count("class=\"practice-item\"") >= 10
-    assert html.count("<details") >= 13
+    assert html.count("practice-item") >= 19
+    assert html.count("<details") >= 22
     for text in ["例題 1", "例題 2", "例題 3", "練習題 10", "互動活動：先預測，再碰撞"]:
         assert text in html
+
+
+def test_ceec_exam_collection_has_verified_sources_and_answers():
+    html = read_page()
+    assert "近十年分科／指考碰撞題精選" in html
+    for text in ["114 分科物理 第 14 題", "113 分科物理 第 16 題", "111 分科物理 第 2 題", "110 指考物理 第 2 題", "106 指考物理 第 4 題", "105 指考物理 第 11 題"]:
+        assert text in html
+    for answer in ["官方答案：BC", "官方答案：ACE", "官方答案：D", "官方答案：C", "官方答案：A", "官方答案：B"]:
+        assert answer in html
+    assert html.count("試題 PDF") >= 9
+    assert html.count("答案 PDF") >= 9
 
 
 def test_mathjax_and_svg_are_scoped_safely():

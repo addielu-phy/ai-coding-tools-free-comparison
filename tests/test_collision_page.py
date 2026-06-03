@@ -1,0 +1,54 @@
+from pathlib import Path
+import re
+
+ROOT = Path(__file__).resolve().parents[1]
+PAGE = ROOT / "physics" / "collision-momentum-impulse" / "index.html"
+HUB = ROOT / "webpages" / "index.html"
+
+
+def read_page():
+    return PAGE.read_text(encoding="utf-8")
+
+
+def test_collision_page_exists_with_core_sections():
+    html = read_page()
+    assert "§7-7 碰撞" in html
+    for marker in ["#model", "#sim", "#examples", "#activity", "#practice"]:
+        assert marker in html
+    assert "動量守恆" in html
+    assert "恢復係數" in html
+    assert "完全非彈性碰撞" in html
+
+
+def test_interactive_collision_animation_controls_and_state_function():
+    html = read_page()
+    for element_id in ["mass1", "mass2", "v1", "v2", "elasticity", "playCollision", "resetCollision"]:
+        assert f'id="{element_id}"' in html
+    assert "function collisionState" in html
+    assert "requestAnimationFrame" in html
+    assert "動量帳" in html and "能量帳" in html
+    assert re.search(r"const\s+pBefore\s*=", html)
+    assert re.search(r"const\s+kAfter\s*=", html)
+
+
+def test_examples_practice_and_activity_are_rich_enough():
+    html = read_page()
+    assert html.count("class=\"example-card\"") >= 3
+    assert html.count("class=\"practice-item\"") >= 10
+    assert html.count("<details") >= 13
+    for text in ["例題 1", "例題 2", "例題 3", "練習題 10", "互動活動：先預測，再碰撞"]:
+        assert text in html
+
+
+def test_mathjax_and_svg_are_scoped_safely():
+    html = read_page()
+    assert "tex-svg.js" in html
+    assert ".svg-wrap svg" in html
+    assert "mjx-container[jax=\"SVG\"] svg" in html
+    assert "svg { width" not in html
+
+
+def test_hub_links_to_collision_page():
+    hub = HUB.read_text(encoding="utf-8")
+    assert "碰撞與動量守恆" in hub
+    assert "../physics/collision-momentum-impulse/" in hub

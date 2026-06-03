@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>§7-7 碰撞｜動量守恆與衝量互動詳解</title>
+  <meta name="description" content="§7-7 碰撞教學頁：動量守恆、衝量、彈性與非彈性碰撞、恢復係數、例題動畫圖說、互動活動與練習題詳解。" />
+  <script>
+    window.MathJax = { tex: { inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']] }, svg: { fontCache: 'global' } };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  <style>
+    :root{--bg:#f7f3e9;--paper:#fffdf7;--ink:#172033;--muted:#667085;--line:rgba(23,32,51,.14);--brand:#1f6f8b;--brand2:#b45f06;--ok:#0f766e;--warn:#a15c00;--bad:#b42318;--soft:#e7f3f6;--soft2:#fff1dd;--shadow:0 18px 55px rgba(24,32,52,.10),0 3px 14px rgba(24,32,52,.06);--r:22px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at top left,#dff3f7 0,transparent 32rem),linear-gradient(180deg,#fbf7ed 0%,var(--bg) 55%,#efe8d8 100%);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC",sans-serif;line-height:1.75}.wrap{width:min(1180px,calc(100% - 28px));margin:0 auto}.hero{padding:58px 0 28px}.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:6px 12px;border-radius:999px;background:var(--soft);color:#155e75;font-weight:900;font-size:14px}.hero h1{font-size:clamp(34px,7vw,72px);line-height:1.02;margin:18px 0 12px;letter-spacing:-.055em}.lead{font-size:clamp(18px,2.3vw,24px);color:#344054;max-width:920px}.note{background:rgba(255,255,255,.62);border:1px solid var(--line);border-radius:18px;padding:12px 14px;color:var(--muted)}.toc{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.toc a,.btn{border:1px solid var(--line);background:rgba(255,255,255,.82);border-radius:999px;padding:9px 13px;text-decoration:none;color:var(--ink);font-weight:800;box-shadow:0 4px 14px rgba(24,32,52,.05)}.toc a:hover,.btn:hover{transform:translateY(-1px);background:#fff}.btn{cursor:pointer}.btn.primary{background:var(--brand);color:white;border-color:var(--brand)}section{margin:28px 0}.section-title{display:flex;align-items:end;justify-content:space-between;gap:18px;margin:0 0 14px}.section-title h2{margin:0;font-size:clamp(26px,4vw,42px);letter-spacing:-.035em;line-height:1.12}.section-title p{margin:0;color:var(--muted);max-width:620px}.grid{display:grid;grid-template-columns:1.05fr .95fr;gap:16px}.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.three{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card,.panel,.example-card,details{background:rgba(255,255,255,.88);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:20px}.card h3,.panel h3{margin:0 0 8px;font-size:22px}.tag,.pill{display:inline-flex;align-items:center;gap:5px;border-radius:999px;background:var(--soft);color:#155e75;padding:4px 9px;font-size:13px;font-weight:900}.tag.alt{background:var(--soft2);color:#9a3412}.formula{background:#0f172a;color:#f8fafc;border-radius:18px;padding:14px 16px;margin:12px 0;overflow:auto}.formula mjx-container{color:#f8fafc}.formula small{color:#cbd5e1}.key{border-left:5px solid var(--brand);padding:12px 14px;background:#eef8fb;border-radius:14px;margin:12px 0}.warn{border-left-color:var(--warn);background:#fff7ed}.ok{border-left-color:var(--ok);background:#ecfdf5}.bad{border-left-color:var(--bad);background:#fef3f2}.sim{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;align-items:start}.svg-wrap{background:linear-gradient(180deg,#f8fafc,#eef6f7);border:1px solid var(--line);border-radius:20px;overflow:hidden}.svg-wrap svg{width:100%;height:auto;display:block}mjx-container[jax="SVG"] svg{width:auto!important;height:auto!important;max-width:none}.formula mjx-container[jax="SVG"] svg{fill:currentColor!important}.controls{display:grid;gap:12px}.control{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px}.control label{display:flex;justify-content:space-between;font-weight:900}.control input[type=range]{width:100%}.metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.metric{background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px}.metric b{display:block;font-size:20px}.example-card{padding:0;overflow:hidden}.example-head{padding:18px;background:linear-gradient(135deg,#e7f3f6,#fff1dd);border-bottom:1px solid var(--line)}.example-head h3{margin:0}.example-body{padding:18px}.mini-diagram{border:1px solid var(--line);border-radius:16px;background:#fff;padding:10px;margin:10px 0}.activity-options{display:grid;gap:10px}.activity-options button{text-align:left;border:1px solid var(--line);background:#fff;border-radius:14px;padding:12px;cursor:pointer;font-weight:800}.activity-options button.correct{border-color:var(--ok);background:#ecfdf5}.activity-options button.wrong{border-color:var(--bad);background:#fef3f2}.feedback{min-height:38px;border-radius:14px;background:#f8fafc;border:1px dashed var(--line);padding:10px;color:var(--muted)}details{padding:0;overflow:hidden}summary{cursor:pointer;list-style:none;padding:16px 18px;font-weight:900;font-size:18px;display:flex;gap:10px;align-items:center;justify-content:space-between}summary::-webkit-details-marker{display:none}.solution{border-top:1px solid var(--line);padding:0 18px 18px}.practice-item{margin-bottom:12px}.footer{padding:30px 0 50px;color:var(--muted);text-align:center}.footer a{color:var(--brand);font-weight:900}@media(max-width:900px){.grid,.cards,.three,.sim{grid-template-columns:1fr}.section-title{display:block}.section-title p{margin-top:8px}.card,.panel,details{padding:16px}summary{align-items:flex-start}.metrics{grid-template-columns:1fr}.hero{padding-top:40px}}
+  </style>
+</head>
+<body>
+<main class="wrap">
+  <header class="hero">
+    <span class="eyebrow">§7-7 碰撞｜動量、衝量、能量帳</span>
+    <h1>碰撞與動量守恆：從「碰前碰後圖」看懂每一道題</h1>
+    <p class="lead">這一頁把碰撞題拆成三個可視化帳本：動量帳一定要守恆、能量帳只在彈性碰撞守恆、相對速度帳用來判斷彈性程度。例題搭配動畫圖說，練習題提供完整詳解，可直接給學生手機開啟自學。</p>
+    <p class="note">說明：目前依高中常見 §7-7「碰撞」內容重建為原創／仿考型教學頁；若之後提供原講義截圖或題號，可再把題目文字替換成盧老師講義版本。</p>
+    <nav class="toc" aria-label="頁面導覽">
+      <a href="#model">核心觀念</a><a href="#sim">互動動畫</a><a href="#examples">例題圖說</a><a href="#activity">互動活動</a><a href="#practice">練習題詳解</a><a href="#checklist">易錯檢核</a>
+    </nav>
+  </header>
+
+  <section id="model">
+    <div class="section-title"><h2>一、先分清楚：碰撞題不是一條公式打到底</h2><p>碰撞最重要的是判斷「系統」與「碰撞種類」。先問外力衝量可不可忽略，再問能量是否也守恆。</p></div>
+    <div class="cards">
+      <article class="card"><span class="tag">動量帳</span><h3>外力衝量可忽略 ⇒ 總動量守恆</h3><p>碰撞時間很短，兩物體間的作用力雖大，但互為內力。若水平方向外力衝量可忽略：</p><div class="formula">\[m_1u_1+m_2u_2=m_1v_1+m_2v_2\]</div><div class="key">符號方向要先規定。向右為正時，向左速度就要代負號。</div></article>
+      <article class="card"><span class="tag alt">能量帳</span><h3>動能不一定守恆</h3><p>碰撞時形變、聲音、熱會消耗機械能。動量守恆不代表動能守恆。</p><div class="formula">\[K_i=\frac12m_1u_1^2+\frac12m_2u_2^2,\quad K_f=\frac12m_1v_1^2+\frac12m_2v_2^2\]</div><div class="warn">完全非彈性碰撞：兩物黏在一起，動能損失最大，但動量仍守恆。</div></article>
+      <article class="card"><span class="tag">恢復係數</span><h3>用「分離速度／接近速度」描述彈性程度</h3><p>一維碰撞可用恢復係數 \(e\) 表示：</p><div class="formula">\[e=\frac{v_2-v_1}{u_1-u_2}\quad(0\le e\le 1)\]</div><p>\(e=1\)：彈性碰撞；\(e=0\)：完全非彈性，兩者同速。</p></article>
+      <article class="card"><span class="tag alt">質心視角</span><h3>內力只改變彼此速度，不改變質心運動</h3><p>質心速度：</p><div class="formula">\[V_{cm}=\frac{m_1u_1+m_2u_2}{m_1+m_2}\]</div><p>碰撞前後總動量一樣，所以質心速度不變。這是檢查答案是否合理的快速方法。</p></article>
+    </div>
+  </section>
+
+  <section id="sim">
+    <div class="section-title"><h2>二、互動動畫：改質量、速度與彈性，看碰後怎麼跑</h2><p>滑桿改變碰前條件。動畫下方同步顯示動量帳與能量帳，讓學生看見「動量守恆」與「動能是否守恆」的差別。</p></div>
+    <div class="panel sim">
+      <div class="svg-wrap">
+        <svg id="collisionSvg" viewBox="0 0 720 330" role="img" aria-label="一維碰撞動畫">
+          <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#1f6f8b"/></marker></defs>
+          <rect x="35" y="230" width="650" height="18" rx="9" fill="#c8d6dc"/>
+          <line x1="360" y1="42" x2="360" y2="248" stroke="#94a3b8" stroke-dasharray="7 7"/>
+          <text x="360" y="28" text-anchor="middle" fill="#64748b" font-weight="800">碰撞點</text>
+          <g id="cart1"><rect x="110" y="145" width="92" height="68" rx="15" fill="#1f6f8b"/><circle cx="132" cy="222" r="10" fill="#334155"/><circle cx="180" cy="222" r="10" fill="#334155"/><text x="156" y="184" text-anchor="middle" fill="white" font-weight="900">m₁</text></g>
+          <g id="cart2"><rect x="515" y="145" width="92" height="68" rx="15" fill="#b45f06"/><circle cx="537" cy="222" r="10" fill="#334155"/><circle cx="585" cy="222" r="10" fill="#334155"/><text x="561" y="184" text-anchor="middle" fill="white" font-weight="900">m₂</text></g>
+          <line id="vArrow1" x1="205" y1="135" x2="270" y2="135" stroke="#1f6f8b" stroke-width="6" marker-end="url(#arrow)"/><text id="vText1" x="238" y="120" text-anchor="middle" fill="#155e75" font-weight="900">u₁</text>
+          <line id="vArrow2" x1="515" y1="135" x2="470" y2="135" stroke="#b45f06" stroke-width="6" marker-end="url(#arrow)"/><text id="vText2" x="492" y="120" text-anchor="middle" fill="#9a3412" font-weight="900">u₂</text>
+          <text id="phaseText" x="360" y="295" text-anchor="middle" fill="#172033" font-size="20" font-weight="900">拖曳滑桿後按播放</text>
+        </svg>
+      </div>
+      <div class="controls">
+        <div class="control"><label>m₁ <span id="mass1Val">2.0 kg</span></label><input id="mass1" type="range" min="1" max="6" step="0.5" value="2"></div>
+        <div class="control"><label>m₂ <span id="mass2Val">3.0 kg</span></label><input id="mass2" type="range" min="1" max="6" step="0.5" value="3"></div>
+        <div class="control"><label>u₁ <span id="v1Val">4.0 m/s</span></label><input id="v1" type="range" min="-5" max="7" step="0.5" value="4"></div>
+        <div class="control"><label>u₂ <span id="v2Val">-1.0 m/s</span></label><input id="v2" type="range" min="-5" max="5" step="0.5" value="-1"></div>
+        <div class="control"><label>恢復係數 e <span id="elasticityVal">1.0</span></label><input id="elasticity" type="range" min="0" max="1" step="0.1" value="1"></div>
+        <div><button class="btn primary" id="playCollision" type="button">播放碰撞動畫</button> <button class="btn" id="resetCollision" type="button">重設</button></div>
+        <div class="metrics">
+          <div class="metric">碰後 v₁<b id="afterV1">—</b></div><div class="metric">碰後 v₂<b id="afterV2">—</b></div>
+          <div class="metric">動量帳 Δp<b id="momentumDelta">—</b></div><div class="metric">能量帳 ΔK<b id="energyDelta">—</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="examples">
+    <div class="section-title"><h2>三、例題搭配動畫圖說</h2><p>每題都先畫碰前/碰後，再列動量帳。學生要先說出「哪些量已知、哪個守恆、動能可不可以守恆」。</p></div>
+    <div class="three">
+      <article class="example-card"><div class="example-head"><span class="tag">例題 1</span><h3>完全非彈性：子彈嵌入木塊</h3></div><div class="example-body"><p>質量 \(0.02\,\mathrm{kg}\) 子彈以 \(300\,\mathrm{m/s}\) 射入靜止 \(1.98\,\mathrm{kg}\) 木塊並嵌住，求共同速度與動能損失。</p><div class="mini-diagram"><svg viewBox="0 0 360 110"><rect x="25" y="55" width="60" height="25" rx="8" fill="#1f6f8b"/><line x1="90" y1="68" x2="170" y2="68" stroke="#1f6f8b" stroke-width="5" marker-end="url(#arrow)"/><rect x="225" y="45" width="86" height="45" rx="10" fill="#b45f06"/><text x="180" y="28" text-anchor="middle" font-weight="900">碰前：子彈快、木塊靜止</text></svg></div><details open><summary>詳解 <span class="pill">v = 3.0 m/s</span></summary><div class="solution"><p>系統取子彈＋木塊。碰撞時間短，水平方向外力衝量忽略。嵌入代表完全非彈性，碰後共同速度 \(v\)。</p><div class="formula">\[(0.02)(300)+(1.98)(0)=(2.00)v\Rightarrow v=3.0\,\mathrm{m/s}\]</div><p>碰前動能 \(K_i=\frac12(0.02)(300)^2=900\,\mathrm{J}\)。碰後 \(K_f=\frac12(2.00)(3)^2=9\,\mathrm{J}\)，損失 \(891\,\mathrm{J}\)。</p><div class="warn">不是能量消失，而是轉成內能、形變、聲音。</div></div></details></div></article>
+      <article class="example-card"><div class="example-head"><span class="tag">例題 2</span><h3>一維彈性：同質量交換速度</h3></div><div class="example-body"><p>兩滑車質量相同，A 以 \(5\,\mathrm{m/s}\) 向右撞靜止 B，碰撞近似彈性。求碰後速度。</p><div class="mini-diagram"><svg viewBox="0 0 360 110"><rect x="55" y="50" width="65" height="35" rx="9" fill="#1f6f8b"/><rect x="235" y="50" width="65" height="35" rx="9" fill="#b45f06"/><line x1="125" y1="67" x2="205" y2="67" stroke="#1f6f8b" stroke-width="5" marker-end="url(#arrow)"/><text x="180" y="28" text-anchor="middle" font-weight="900">同質量彈性碰撞：速度交換</text></svg></div><details open><summary>詳解 <span class="pill">A 停、B 5 m/s</span></summary><div class="solution"><p>彈性碰撞同時守恆動量與動能。對一維彈性碰撞，也可用相對速度反向：</p><div class="formula">\[v_B-v_A=u_A-u_B=5\]</div><div class="formula">\[m(5)+m(0)=mv_A+mv_B\Rightarrow v_A+v_B=5\]</div><p>聯立得 \(v_B=5\,\mathrm{m/s}\)，\(v_A=0\)。這就是同質量彈性碰撞的「速度交換」。</p></div></details></div></article>
+      <article class="example-card"><div class="example-head"><span class="tag">例題 3</span><h3>爆炸反衝：原本靜止的系統分裂</h3></div><div class="example-body"><p>靜止小車爆炸分成 \(2\,\mathrm{kg}\) 與 \(3\,\mathrm{kg}\) 兩塊。若 \(2\,\mathrm{kg}\) 向左 \(6\,\mathrm{m/s}\)，求另一塊速度。</p><div class="mini-diagram"><svg viewBox="0 0 360 110"><circle cx="180" cy="67" r="22" fill="#f97316"/><line x1="155" y1="67" x2="80" y2="67" stroke="#1f6f8b" stroke-width="5" marker-end="url(#arrow)"/><line x1="205" y1="67" x2="280" y2="67" stroke="#b45f06" stroke-width="5" marker-end="url(#arrow)"/><text x="180" y="28" text-anchor="middle" font-weight="900">總動量原本是 0</text></svg></div><details open><summary>詳解 <span class="pill">4 m/s 向右</span></summary><div class="solution"><p>爆炸是內力造成分裂，外力衝量可忽略，所以總動量仍為 0。取向右為正：</p><div class="formula">\[0=(2)(-6)+(3)v\Rightarrow v=4\,\mathrm{m/s}\]</div><p>檢查：左邊動量 \(-12\)，右邊動量 \(+12\)，互相抵消。</p></div></details></div></article>
+    </div>
+  </section>
+
+  <section id="activity">
+    <div class="section-title"><h2>四、互動活動：先預測，再碰撞</h2><p>適合課堂中 3–5 分鐘使用。先讓學生選直覺，再用動畫驗證，最後要求學生用「動量帳＋能量帳」修正說法。</p></div>
+    <div class="grid">
+      <article class="panel"><h3>活動 A：哪個說法一定正確？</h3><p>兩車在水平低摩擦軌道碰撞，碰撞時間很短。下列哪句話最安全？</p><div class="activity-options" id="activityA"><button data-ok="0">碰撞前後總動能一定相同。</button><button data-ok="1">若外力衝量可忽略，系統總動量一定相同。</button><button data-ok="0">質量大的物體碰後速度一定比較小。</button><button data-ok="0">兩物體受力大小不一定相等，因為質量不同。</button></div><div id="feedbackA" class="feedback">請先作答。</div></article>
+      <article class="panel"><h3>活動 B：小組任務單</h3><ol><li>先不算，預測碰後兩車會往哪裡走。</li><li>用滑桿設定你們的預測條件，按播放。</li><li>記錄 \(p_i,p_f,K_i,K_f\)。</li><li>用一句話回答：「本題動量守恆嗎？動能守恆嗎？」</li></ol><div class="key ok">教師追問：如果把 \(e\) 從 1 改成 0，哪個帳本仍相同？哪個帳本改變？</div></article>
+    </div>
+  </section>
+
+  <section id="practice">
+    <div class="section-title"><h2>五、練習題詳解</h2><p>以下為原創／仿考型題組，涵蓋完全非彈性、彈性碰撞、爆炸反衝、衝量與圖像判讀。</p></div>
+    <div class="practice-list">
+      <details class="practice-item"><summary>練習題 1｜兩車黏在一起 <span class="pill">答案：1.2 m/s</span></summary><div class="solution"><p>2 kg 車以 3 m/s 向右撞上靜止 3 kg 車並黏住。由 \((2)(3)=(5)v\)，得 \(v=1.2\,\mathrm{m/s}\) 向右。</p></div></details>
+      <details class="practice-item"><summary>練習題 2｜迎面完全非彈性 <span class="pill">答案：-0.5 m/s</span></summary><div class="solution"><p>1 kg 以 4 m/s 向右，3 kg 以 2 m/s 向左並黏住。取右正：\(p_i=4-6=-2\)，總質量 4 kg，\(v=-0.5\,\mathrm{m/s}\)，即向左。</p></div></details>
+      <details class="practice-item"><summary>練習題 3｜同質量彈性碰撞 <span class="pill">答案：交換速度</span></summary><div class="solution"><p>同質量一維彈性碰撞會交換速度。若 A 原 6 m/s、B 原 -2 m/s，則碰後 A 為 -2 m/s，B 為 6 m/s。可由動量與相對速度反向聯立驗證。</p></div></details>
+      <details class="practice-item"><summary>練習題 4｜質量不同彈性碰撞 <span class="pill">答案：v₁=-1, v₂=3 m/s</span></summary><div class="solution"><p>\(m_1=1\), \(m_2=3\), \(u_1=5\), \(u_2=1\)。彈性：\(v_2-v_1=u_1-u_2=4\)。動量：\(1\cdot5+3\cdot1=v_1+3v_2=8\)。代 \(v_2=v_1+4\)：\(v_1+3v_1+12=8\)，\(v_1=-1\)，\(v_2=3\)。</p></div></details>
+      <details class="practice-item"><summary>練習題 5｜恢復係數 e=0.5 <span class="pill">答案：v₁=1.25, v₂=3.75 m/s</span></summary><div class="solution"><p>兩質量相同，\(u_1=5\,\mathrm{m/s}\), \(u_2=0\), \(e=0.5\)。動量：\(v_1+v_2=5\)。恢復係數：\(v_2-v_1=e(u_1-u_2)=2.5\)。聯立得 \(2v_2=7.5\Rightarrow v_2=3.75\,\mathrm{m/s}\)，\(v_1=1.25\,\mathrm{m/s}\)。</p><div class="warn">觀念：\(e<1\) 代表分離速度小於接近速度，所以兩車碰後仍向右，但相對分離較慢。</div></div></details>
+      <details class="practice-item"><summary>練習題 6｜爆炸分裂 <span class="pill">答案：2.5 m/s 反向</span></summary><div class="solution"><p>原靜止物體分成 4 kg 與 6 kg。若 4 kg 向右 3.75 m/s，另一塊速度 \(v\)：\(0=4(3.75)+6v\)，\(v=-2.5\,\mathrm{m/s}\)。</p></div></details>
+      <details class="practice-item"><summary>練習題 7｜衝量求平均力 <span class="pill">答案：40 N，方向向左</span></summary><div class="solution"><p>0.5 kg 球以 6 m/s 向右撞牆後以 2 m/s 向左彈回，接觸時間 0.1 s。\(\Delta p=m(v-u)=0.5(-2-6)=-4\,\mathrm{N\,s}\)。平均力 \(F=\Delta p/\Delta t=-40\,\mathrm{N}\)，方向向左。</p></div></details>
+      <details class="practice-item"><summary>練習題 8｜力—時間圖面積 <span class="pill">答案：12 N·s</span></summary><div class="solution"><p>若碰撞力—時間圖為底 0.04 s、高 600 N 的三角形，衝量為面積：\(J=\frac12(0.04)(600)=12\,\mathrm{N\,s}\)。若物體質量 2 kg，速度改變量 \(\Delta v=6\,\mathrm{m/s}\)。</p></div></details>
+      <details class="practice-item"><summary>練習題 9｜動能損失比例 <span class="pill">答案：66.7%</span></summary><div class="solution"><p>質量 1 kg、速度 6 m/s 撞上靜止 2 kg 並黏住。共同速度 \(v=\frac{(1)(6)}{1+2}=2\,\mathrm{m/s}\)。碰前 \(K_i=\frac12(1)(6^2)=18\,\mathrm{J}\)，碰後 \(K_f=\frac12(3)(2^2)=6\,\mathrm{J}\)。損失 \(12\,\mathrm{J}\)，比例 \(12/18=2/3\approx66.7\%\)。</p><div class="bad key">易錯：不要把「速度變成三分之一」直接說成「動能變三分之一」；動能和 \(v^2\) 有關，也和總質量改變有關。</div></div></details>
+      <details class="practice-item"><summary>練習題 10｜判斷碰撞種類 <span class="pill">答案：非彈性但未黏住</span></summary><div class="solution"><p>兩物碰前總動量 10，碰後總動量 10；碰前總動能 30 J，碰後 18 J，且兩物碰後速度不同。動量守恆、動能不守恆、未同速，所以是非彈性碰撞但不是完全非彈性。</p></div></details>
+    </div>
+  </section>
+
+  <section id="checklist">
+    <div class="section-title"><h2>六、學生常見錯誤檢核表</h2><p>每次碰撞題解完後，用這 5 點快速自查。</p></div>
+    <div class="cards"><article class="card"><h3>解題流程</h3><ol><li>畫碰前、碰後圖，標正方向。</li><li>圈出系統，判斷外力衝量是否可忽略。</li><li>先列動量帳，不急著列能量帳。</li><li>若題目說彈性，再加動能守恆或相對速度反向。</li><li>檢查速度方向、單位與動能是否合理。</li></ol></article><article class="card"><h3>易錯提醒</h3><div class="key warn">「碰撞」不等於「彈性碰撞」。一般碰撞只保證動量守恆，不保證動能守恆。</div><div class="key bad">速度有方向、動能沒有方向。不要把負速度平方後還留負號。</div><div class="key ok">完全非彈性代表碰後同速；不代表碰後靜止。</div></article></div>
+  </section>
+
+  <footer class="footer"><p><a href="../../webpages/">回公開網頁總整理</a> · <a href="../../">回首頁</a></p></footer>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const inputs=['mass1','mass2','v1','v2','elasticity'].map($);
+let playing=false, startTime=0;
+function fmt(x,unit=''){return `${Number(x).toFixed(2)}${unit}`}
+function collisionState(m1,m2,u1,u2,e){
+  const pBefore = m1*u1 + m2*u2;
+  const v1After = (m1*u1 + m2*u2 - m2*e*(u1-u2))/(m1+m2);
+  const v2After = (m1*u1 + m2*u2 + m1*e*(u1-u2))/(m1+m2);
+  const pAfter = m1*v1After + m2*v2After;
+  const kBefore = 0.5*m1*u1*u1 + 0.5*m2*u2*u2;
+  const kAfter = 0.5*m1*v1After*v1After + 0.5*m2*v2After*v2After;
+  return {pBefore,pAfter,kBefore,kAfter,v1After,v2After,dp:pAfter-pBefore,dK:kAfter-kBefore};
+}
+function arrow(line,text,x,y,v,color){
+  const len=Math.max(20,Math.min(95,Math.abs(v)*15));
+  const dir=v>=0?1:-1;
+  line.setAttribute('x1',x); line.setAttribute('y1',y); line.setAttribute('x2',x+dir*len); line.setAttribute('y2',y);
+  line.setAttribute('stroke',color); text.setAttribute('x',x+dir*len/2); text.setAttribute('y',y-15); text.textContent=(v>=0?'→ ':'← ')+Math.abs(v).toFixed(1)+' m/s';
+}
+function render(progress=0){
+  const m1=+$('mass1').value,m2=+$('mass2').value,u1=+$('v1').value,u2=+$('v2').value,e=+$('elasticity').value;
+  $('mass1Val').textContent=fmt(m1,' kg'); $('mass2Val').textContent=fmt(m2,' kg'); $('v1Val').textContent=fmt(u1,' m/s'); $('v2Val').textContent=fmt(u2,' m/s'); $('elasticityVal').textContent=e.toFixed(1);
+  const s=collisionState(m1,m2,u1,u2,e);
+  $('afterV1').textContent=fmt(s.v1After,' m/s'); $('afterV2').textContent=fmt(s.v2After,' m/s'); $('momentumDelta').textContent=fmt(s.dp,' kg·m/s'); $('energyDelta').textContent=fmt(s.dK,' J');
+  let x1=105, x2=515, phase='碰前：接近中';
+  if(progress<0.5){ const t=progress/0.5; x1=105+(270-105)*t; x2=515+(365-515)*t; arrow($('vArrow1'),$('vText1'),x1+100,135,u1,'#1f6f8b'); arrow($('vArrow2'),$('vText2'),x2,135,u2,'#b45f06'); }
+  else{ const t=(progress-0.5)/0.5; x1=270+s.v1After*24*t; x2=365+s.v2After*24*t; phase=e===0?'碰後：完全非彈性同速':'碰後：依恢復係數分離'; arrow($('vArrow1'),$('vText1'),x1+100,135,s.v1After,'#1f6f8b'); arrow($('vArrow2'),$('vText2'),x2,135,s.v2After,'#b45f06'); }
+  $('cart1').setAttribute('transform',`translate(${x1-110},0)`); $('cart2').setAttribute('transform',`translate(${x2-515},0)`); $('phaseText').textContent=phase + `｜p前=${s.pBefore.toFixed(2)}，p後=${s.pAfter.toFixed(2)}；K前=${s.kBefore.toFixed(2)}，K後=${s.kAfter.toFixed(2)}`;
+}
+function animate(ts){ if(!playing)return; if(!startTime)startTime=ts; const progress=Math.min((ts-startTime)/2600,1); render(progress); if(progress<1)requestAnimationFrame(animate); else playing=false; }
+inputs.forEach(el=>el.addEventListener('input',()=>{playing=false;startTime=0;render(0)}));
+$('playCollision').addEventListener('click',()=>{playing=true;startTime=0;requestAnimationFrame(animate)});
+$('resetCollision').addEventListener('click',()=>{playing=false;startTime=0;render(0)});
+$('activityA').addEventListener('click',e=>{ if(e.target.tagName!=='BUTTON')return; [...$('activityA').querySelectorAll('button')].forEach(b=>b.classList.remove('correct','wrong')); const ok=e.target.dataset.ok==='1'; e.target.classList.add(ok?'correct':'wrong'); $('feedbackA').textContent= ok?'正確：短時間碰撞中，若系統外力衝量可忽略，總動量守恆。':'再想想：碰撞不一定彈性；受力大小依牛頓第三定律相等反向；質量大不保證速度一定較小。'; });
+render(0);
+</script>
+</body>
+</html>

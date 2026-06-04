@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>鉛直圓周運動｜例題與練習題詳解</title>
-  <meta name="description" content="依盧老師講義 §7-6 力學能守恆：鉛直面圓周運動，整理例19、例20與練習題11–26的詳解、互動動畫與圖示。" />
+  <title>力學能守恆｜鉛直圓周、斜面摩擦與彈簧能量詳解</title>
+  <meta name="description" content="依盧老師講義 §7-6 力學能守恆，整理能量觀念總結、例19、例20、例26、例27與練習題11–26的詳解、互動動畫與圖示。" />
   <script>
     window.MathJax = { tex: { inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']] }, svg: { fontCache: 'global' } };
   </script>
@@ -20,20 +20,20 @@
     a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}.wrap{width:min(1180px,calc(100% - 28px));margin:0 auto}.hero{padding:62px 0 24px}.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:7px 12px;border-radius:999px;background:rgba(31,111,139,.11);color:var(--brand);font-size:13px;font-weight:850;letter-spacing:.04em}.hero h1{font-size:clamp(34px,7vw,72px);line-height:1.02;letter-spacing:-.055em;margin:18px 0 12px}.lead{max-width:920px;color:#4b5565;font-size:clamp(17px,2.35vw,22px);font-weight:520}.note{padding:14px 16px;border:1px dashed rgba(31,111,139,.35);border-radius:18px;background:rgba(255,255,255,.68);color:#475467}.toc{display:flex;gap:9px;flex-wrap:wrap;margin:22px 0 28px}.toc a,.btn{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 12px;border-radius:999px;background:#fff;border:1px solid var(--line);box-shadow:0 3px 12px rgba(20,30,45,.04);font-weight:800;font-size:14px}.btn.primary{background:var(--brand);color:white;border-color:var(--brand)}
     section{margin:26px 0}.section-title{display:flex;align-items:end;justify-content:space-between;gap:18px;margin:0 0 14px}.section-title h2{margin:0;font-size:clamp(26px,4vw,42px);letter-spacing:-.035em;line-height:1.12}.section-title p{margin:0;color:var(--muted);max-width:600px}.grid{display:grid;grid-template-columns:1.05fr .95fr;gap:16px}.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.card,.panel,details{background:rgba(255,255,255,.88);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:20px}.card h3,.panel h3{margin:.1em 0 .45em;font-size:22px;line-height:1.25}.tag{display:inline-flex;align-items:center;padding:3px 9px;border-radius:999px;background:var(--soft);color:#155e75;font-size:12px;font-weight:850}.tag.alt{background:var(--soft2);color:#9a5b13}.formula{background:#0f172a;color:#f8fafc;border-radius:18px;padding:14px 16px;margin:12px 0;overflow:auto}.formula mjx-container{color:#f8fafc}.formula small{color:#cbd5e1} .key{border-left:5px solid var(--brand);padding:12px 14px;background:#eef8fb;border-radius:14px;margin:12px 0}.warn{border-left-color:var(--warn);background:#fff7ed}.ok{border-left-color:var(--ok);background:#ecfdf5}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px}.mini{font-size:14px;color:var(--muted)}
     .sim{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;align-items:center}.simbox{background:linear-gradient(180deg,#fbfdff,#eff8fb);border:1px solid var(--line);border-radius:24px;padding:14px}.controls{display:grid;gap:12px}.control{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px}.control label{font-weight:850;display:block;margin-bottom:6px}.control input{width:100%}.button-row{display:flex;gap:10px;flex-wrap:wrap}.button-row .btn{cursor:pointer}.metric{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.metric div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px}.metric strong{display:block;font-size:22px}.status{font-weight:900}.bad{color:#b42318}.good{color:#067647}.svg-wrap svg{width:100%;height:auto;display:block}.diagram-label{font-weight:850;fill:#172033}.force{stroke-width:5;stroke-linecap:round;marker-end:url(#arrow)}.v{stroke:#2563eb}.t{stroke:#dc2626}.g{stroke:#16a34a}.net{stroke:#7c3aed;marker-end:url(#arrowPurple);stroke-dasharray:7 5}.path{stroke:#94a3b8;stroke-width:4;fill:none}.ball{fill:#f97316;stroke:#7c2d12;stroke-width:2}
-    details{padding:0;overflow:hidden} summary{cursor:pointer;list-style:none;padding:16px 18px;font-weight:900;font-size:18px;display:flex;gap:10px;align-items:center;justify-content:space-between} summary::-webkit-details-marker{display:none}.solution{border-top:1px solid var(--line);padding:0 18px 18px}.pill{display:inline-flex;border-radius:999px;background:#f2f4f7;color:#475467;padding:2px 8px;font-size:12px;font-weight:800;margin-left:6px}.answer{font-weight:900;color:#0f766e}.steps{counter-reset:step}.steps li{margin:.45em 0}.steps li::marker{font-weight:900;color:var(--brand)}.footer{padding:28px 0 54px;color:var(--muted);font-size:14px}
-    @media(max-width:860px){.grid,.sim,.two-col,.cards{grid-template-columns:1fr}.hero{padding-top:42px}.card,.panel,details{padding:16px}.metric{grid-template-columns:1fr}.section-title{display:block}.section-title p{margin-top:8px}}
+    details{padding:0;overflow:hidden} summary{cursor:pointer;list-style:none;padding:16px 18px;font-weight:900;font-size:18px;display:flex;gap:10px;align-items:center;justify-content:space-between} summary::-webkit-details-marker{display:none}.solution{border-top:1px solid var(--line);padding:0 18px 18px}.pill{display:inline-flex;border-radius:999px;background:#f2f4f7;color:#475467;padding:2px 8px;font-size:12px;font-weight:800;margin-left:6px}.answer{font-weight:900;color:#0f766e}.steps{counter-reset:step}.steps li{margin:.45em 0}.steps li::marker{font-weight:900;color:var(--brand)}.footer{padding:28px 0 54px;color:var(--muted);font-size:14px}.concept-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.concept-card{position:relative;overflow:hidden}.concept-card::after{content:"";position:absolute;inset:auto -30px -45px auto;width:140px;height:140px;border-radius:999px;background:rgba(31,111,139,.09)}.flow{display:grid;gap:10px}.flow-step{border:1px solid var(--line);border-radius:16px;background:#fff;padding:12px}.flow-step b{color:var(--brand)}.example-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}.figure{background:linear-gradient(180deg,#ffffff,#f4fbfd);border:1px solid var(--line);border-radius:20px;padding:12px;margin:12px 0}.figure figcaption{font-size:14px;color:var(--muted);margin-top:8px}.app-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.app-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px}.sim-small{display:grid;grid-template-columns:1fr 1fr;gap:12px}.readout{font-weight:900;color:var(--brand)}
+    @media(max-width:860px){.grid,.sim,.two-col,.cards,.concept-grid,.example-grid,.app-grid,.sim-small{grid-template-columns:1fr}.hero{padding-top:42px}.card,.panel,details{padding:16px}.metric{grid-template-columns:1fr}.section-title{display:block}.section-title p{margin-top:8px}}
     mjx-container[jax="SVG"] svg{width:auto!important;height:auto!important;max-width:none}.formula mjx-container[jax="SVG"] svg{fill:currentColor!important}
   </style>
 </head>
 <body>
   <main class="wrap">
     <header class="hero">
-      <span class="eyebrow">§7-6 力學能守恆｜鉛直面圓周運動</span>
-      <h1>鉛直圓周運動：例題與練習題詳解</h1>
-      <p class="lead">依講義「力學能守恆實例─鉛直面圓周運動」整理。這一頁的目標不是背答案，而是把每一題都回到兩條主線：能量決定速度，法線方向決定張力/正向力。</p>
+      <span class="eyebrow">§7-6 力學能｜能量觀念總結 × 鉛直面圓周運動</span>
+      <h1>力學能守恆：例題與練習題詳解</h1>
+      <p class="lead">依講義「力學能」整理。這一頁的目標不是背答案，而是把題目分類成三種能量語言：合力作功改變動能、保守力作功改變位能、非保守力作功改變力學能；再用鉛直圓周、斜面摩擦、彈簧摩擦三個代表情境練習。</p>
       <p class="note">資料來源：盧老師提供之 Google 文件講義。因 Google 匯出時部分公式與圖形會缺漏，本頁以 PDF 可辨識內容、答案欄與標準鉛直圓周模型補成教學版詳解；若要完全逐字校對，可再依原始 Word 圖檔微調。</p>
       <nav class="toc" aria-label="頁面導覽">
-        <a href="#model">核心模型</a><a href="#sim">互動動畫</a><a href="#examples">例19–20</a><a href="#practice">練習題11–26</a><a href="#summary">速查表</a>
+        <a href="#model">核心模型</a><a href="#sim">鉛直圓周動畫</a><a href="#energy-summary">能量總結</a><a href="#work-energy-examples">例26–27</a><a href="#examples">例19–20</a><a href="#practice">練習題11–26</a><a href="#summary">速查表</a>
       </nav>
     </header>
 
@@ -114,8 +114,104 @@
       </div>
     </section>
 
+    <section id="energy-summary">
+      <div class="section-title"><h2>三、能量觀念之總結（講義第六小節）</h2><p>講義在 §7-6 最後把「功能定理、位能定義、非保守力作功效應」收成三把鑰匙。學生要先判斷題目問的是動能、位能，還是力學能是否被摩擦吃掉。</p></div>
+      <div class="concept-grid">
+        <article class="card concept-card"><span class="tag">功能定理</span><h3>合力作功 → 動能變化</h3><div class="formula">
+          \[W_{total}=W_{合}=\Delta K\]
+        </div><p>只要把所有力作功合起來，就能直接得到速率或動能變化。適合問「速度變多少？」但不一定要分辨保守力/非保守力。</p></article>
+        <article class="card concept-card"><span class="tag alt">位能定義</span><h3>保守力作功 → 位能反向變化</h3><div class="formula">
+          \[\Delta U=-W_{保}\]
+        </div><p>重力、彈力、靜電力這類保守力可被包進位能。重力作正功時，重力位能下降；彈簧放鬆作正功時，彈性位能下降。</p></article>
+        <article class="card concept-card"><span class="tag">非保守力</span><h3>摩擦/外力作功 → 力學能變化</h3><div class="formula">
+          \[W_{非保}=\Delta E=\Delta(K+U)\]
+        </div><p>摩擦作負功時，力學能減少並轉成熱；外力作正功時，系統力學能增加。例26、27就是這個觀念的標準應用。</p></article>
+      </div>
+      <div class="panel" style="margin-top:14px">
+        <h3>解題流程圖：先問「誰在作功？」</h3>
+        <div class="flow">
+          <div class="flow-step"><b>1｜先畫起點與終點：</b>標高度差、壓縮量、滑行距離；能量題通常不用先求時間。</div>
+          <div class="flow-step"><b>2｜把保守力收進位能：</b>重力用 \(mgh\)，彈簧用 \(\frac12kx^2\)。</div>
+          <div class="flow-step"><b>3｜把非保守力單獨放右邊：</b>摩擦力 \(f_k=\mu_k N\)，作功 \(W_f=-f_k s\)。</div>
+          <div class="flow-step"><b>4｜列式：</b>常用寫法是 \(K_i+U_i+W_{非保}=K_f+U_f\)。</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work-energy-examples">
+      <div class="section-title"><h2>四、例26、27 詳細解說：摩擦不是消失，是把力學能轉成熱</h2><p>這兩題很適合拿來銜接生活應用：斜坡、捷運進出站坡度、雲霄飛車、彈簧玩具、緩衝器、車輛懸吊與煞車散熱。</p></div>
+      <div class="example-grid">
+        <details open><summary>例26｜粗糙斜面上滑再滑回 <span class="pill">核心：重力位能＋摩擦耗能</span></summary><div class="solution">
+          <p><b>題目：</b>質量 \(m\) 的物體，自仰角 \(\theta\) 的斜面下端以初速 \(v_0\) 上滑；物體與斜面間動摩擦係數 \(\mu_k\)。求：(1) 上滑最大位移；(2) 若到最高點後又下滑，回到出發點速率。</p>
+          <figure class="figure"><svg viewBox="0 0 640 300" role="img" aria-label="粗糙斜面能量圖">
+            <defs><marker id="exArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="currentColor"/></marker></defs>
+            <rect x="20" y="20" width="600" height="250" rx="22" fill="#fffaf0" stroke="#e4d4bd"/>
+            <path d="M90 230 L535 105 L535 230 Z" fill="#e7f3f6" stroke="#64748b" stroke-width="4"/>
+            <rect x="142" y="184" width="58" height="34" rx="6" fill="#f97316" stroke="#7c2d12" stroke-width="3" transform="rotate(-15 171 201)"/>
+            <line x1="190" y1="187" x2="330" y2="148" stroke="#2563eb" stroke-width="6" marker-end="url(#exArrow)"/>
+            <line x1="260" y1="165" x2="176" y2="188" stroke="#dc2626" stroke-width="5" marker-end="url(#exArrow)"/>
+            <line x1="175" y1="206" x2="175" y2="258" stroke="#16a34a" stroke-width="5" marker-end="url(#exArrow)"/>
+            <text x="333" y="145" fill="#2563eb" font-weight="900">上滑位移 s</text><text x="206" y="179" fill="#dc2626" font-weight="900">摩擦力反向</text><text x="184" y="258" fill="#16a34a" font-weight="900">mg</text>
+            <text x="430" y="220" font-weight="900" fill="#172033">高度增加：s sinθ</text><text x="105" y="252" font-weight="900" fill="#172033">θ</text>
+          </svg><figcaption>圖像重點：上滑時，重力沿斜面分量與摩擦力都阻礙運動；下滑時，重力幫忙、摩擦仍阻礙。</figcaption></figure>
+          <ol class="steps">
+            <li><b>上滑到最高點：</b>末速為 0。初動能同時變成重力位能增加與摩擦熱：</li>
+          </ol>
+          <div class="formula">\[\frac12mv_0^2=mg(s\sin\theta)+\mu_k mg\cos\theta\,s\]</div>
+          <div class="formula">\[s_{max}=\frac{v_0^2}{2g(\sin\theta+\mu_k\cos\theta)}\]</div>
+          <ol class="steps" start="2"><li><b>從最高點滑回底端：</b>重力位能下降提供動能，但摩擦仍吃掉一部分能量：</li></ol>
+          <div class="formula">\[mg s\sin\theta-\mu_kmg\cos\theta\,s=\frac12mv^2\]</div>
+          <p>把第一小題的 \(s\) 代入：</p>
+          <div class="formula">\[v=v_0\sqrt{\frac{\sin\theta-\mu_k\cos\theta}{\sin\theta+
+\mu_k\cos\theta}}\]</div>
+          <p class="answer">答：(1) \(\displaystyle s_{max}=\frac{v_0^2}{2g(\sin\theta+
+\mu_k\cos\theta)}\)；(2) \(\displaystyle v=v_0\sqrt{\frac{\sin\theta-
+\mu_k\cos\theta}{\sin\theta+
+\mu_k\cos\theta}}\)。</p>
+          <p class="key warn"><b>限制條件：</b>若 \(\sin\theta\le\mu_k\cos\theta\)，物體到最高點後不一定會自己滑回來；第二式就不能直接套。</p>
+        </div></details>
+
+        <details open><summary>例27｜彈簧推出後，物體還能滑多遠？ <span class="pill">答案：\(d=0.4\,\mathrm{m}\)</span></summary><div class="solution">
+          <p><b>題目：</b>\(m=2\,\mathrm{kg}\) 物體在 \(\mu_k=0.32\) 的水平面上，壓縮水平彈簧 \(x=1.6\,\mathrm{m}\)，\(k=10\,\mathrm{N/m}\)。彈簧回原長後物體脫離，再滑行 \(d\) 後停止。\(g=10\,\mathrm{m/s^2}\)。</p>
+          <figure class="figure"><svg viewBox="0 0 640 300" role="img" aria-label="彈簧摩擦能量圖">
+            <defs><marker id="springArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="currentColor"/></marker></defs>
+            <rect x="20" y="20" width="600" height="250" rx="22" fill="#f8fbff" stroke="#dbe7ef"/>
+            <line x1="65" y1="215" x2="585" y2="215" stroke="#64748b" stroke-width="6"/>
+            <path d="M72 170 C92 130 112 210 132 170 S172 170 192 170 S232 170 252 170" fill="none" stroke="#0f766e" stroke-width="5"/>
+            <rect x="255" y="145" width="82" height="58" rx="8" fill="#f97316" stroke="#7c2d12" stroke-width="3"/>
+            <line x1="340" y1="174" x2="470" y2="174" stroke="#2563eb" stroke-width="6" marker-end="url(#springArrow)"/>
+            <line x1="372" y1="192" x2="300" y2="192" stroke="#dc2626" stroke-width="5" marker-end="url(#springArrow)"/>
+            <text x="118" y="118" fill="#0f766e" font-weight="900">彈性位能 \(\frac12kx^2\)</text><text x="475" y="176" fill="#2563eb" font-weight="900">先推出，再滑行 d</text><text x="305" y="238" fill="#dc2626" font-weight="900">摩擦全程作負功</text>
+            <path d="M255 230 L337 230" stroke="#475467" stroke-width="3"/><path d="M337 230 L485 230" stroke="#475467" stroke-width="3" stroke-dasharray="8 6"/><text x="270" y="258" font-weight="900">1.6 m</text><text x="405" y="258" font-weight="900">d</text>
+          </svg><figcaption>圖像重點：摩擦不只在脫離彈簧後才有；彈簧從壓縮回原長的 1.6 m 期間也有摩擦耗能。</figcaption></figure>
+          <p>用一條式子包住整段過程：初始彈性位能最後全部被摩擦消耗。</p>
+          <div class="formula">\[\frac12kx^2=\mu_kmg(x+d)\]</div>
+          <p>代入數值：</p>
+          <div class="formula">\[\frac12(10)(1.6)^2=12.8\,\mathrm{J}\]</div>
+          <div class="formula">\[f_k=\mu_kmg=(0.32)(2)(10)=6.4\,\mathrm{N}\]</div>
+          <div class="formula">\[12.8=6.4(1.6+d)\Rightarrow 1.6+d=2.0\Rightarrow d=0.4\,\mathrm{m}\]</div>
+          <p class="answer">答：\(d=0.4\,\mathrm{m}\)。</p>
+          <p class="key ok"><b>檢查法：</b>彈簧原本有 12.8 J；前 1.6 m 已被摩擦吃掉 10.24 J，只剩 2.56 J；再除以 6.4 N，得到 \(0.4\) m。</p>
+        </div></details>
+      </div>
+
+      <div class="panel" style="margin-top:14px">
+        <h3>互動小動畫：改變摩擦，看看能量被吃掉多少</h3>
+        <div class="sim-small">
+          <div class="control"><label for="mu26">例26 摩擦係數 \(\mu_k\)：<span id="mu26Val" class="readout">0.20</span></label><input id="mu26" type="range" min="0" max="0.8" step="0.01" value="0.20"><p class="mini">固定 \(\theta=30^\circ\)、\(v_0=10\,\mathrm{m/s}\)、\(g=10\)。最大上滑距離：<span id="s26" class="readout"></span>；回到底端速率：<span id="v26" class="readout"></span>。</p></div>
+          <div class="control"><label for="mu27">例27 摩擦係數 \(\mu_k\)：<span id="mu27Val" class="readout">0.32</span></label><input id="mu27" type="range" min="0.05" max="0.8" step="0.01" value="0.32"><p class="mini">固定 \(m=2\)、\(k=10\)、\(x=1.6\)、\(g=10\)。脫離後距離：<span id="d27" class="readout"></span>；彈簧回原長時剩餘動能：<span id="k27" class="readout"></span>。</p></div>
+        </div>
+      </div>
+
+      <div class="app-grid" style="margin-top:14px">
+        <article class="app-card"><h3>應用 1｜捷運進站上坡、出站下坡</h3><p>進站上坡把動能暫存成重力位能，出站下坡再轉回動能；比全靠煞車摩擦把能量變熱更省能。</p></article>
+        <article class="app-card"><h3>應用 2｜雲霄飛車與滑水道</h3><p>理想狀態下高度決定速率；實際軌道因摩擦與空氣阻力，後面每個高點都會比前一個低。</p></article>
+        <article class="app-card"><h3>應用 3｜彈簧緩衝器、玩具槍、門弓器</h3><p>彈性位能先轉成動能，再被摩擦、阻尼或碰撞轉成熱與聲音；例27就是最簡版的能量帳。</p></article>
+      </div>
+    </section>
+
     <section id="examples">
-      <div class="section-title"><h2>三、講義例題詳解</h2><p>例19與例20是後面練習題的核心模板：光滑碗/球面用 \(N\)，內側軌道用 \(N\) 或 \(T\)。</p></div>
+      <div class="section-title"><h2>五、講義例題詳解：鉛直圓周模板</h2><p>例19與例20是後面練習題的核心模板：光滑碗/球面用 \(N\)，內側軌道用 \(N\) 或 \(T\)。</p></div>
       <details open><summary>例19｜光滑半球形碗，自碗口滑下至 A 點 <span class="pill">答案：\(\sqrt{gR},\ \frac{\sqrt3}{2}g,\ g,\ \frac32mg\)</span></summary><div class="solution">
         <p>圖中 A 點的半徑與鉛直向下方向夾角為 \(60^\circ\)。物體由碗口高度自靜止滑下，取 A 點相對碗口的下降高度：</p>
         <div class="formula">\[\Delta h=R\cos60^\circ=\frac{R}{2}\]</div>
@@ -141,7 +237,7 @@
     </section>
 
     <section id="practice">
-      <div class="section-title"><h2>四、練習題 11–26 詳解</h2><p>以下聚焦「鉛直圓周/曲面/擺」相關題。部分題幹公式在文件匯出時缺漏，已依答案欄與典型題型補成教學解法。</p></div>
+      <div class="section-title"><h2>六、練習題 11–26 詳解</h2><p>以下聚焦「鉛直圓周/曲面/擺」相關題。部分題幹公式在文件匯出時缺漏，已依答案欄與典型題型補成教學解法。</p></div>
       <div class="cards">
         <details><summary>11｜最大速率是最小速率的 \(6/5\)</summary><div class="solution"><p>光滑鉛直圓軌道，最大速率在最低點，最小速率在最高點。</p><div class="formula">\[v_b^2=v_t^2+4gR,\qquad v_b=\frac65v_t\]</div><div class="formula">\[\frac{36}{25}v_t^2=v_t^2+4gR\Rightarrow \frac{11}{25}v_t^2=4gR\Rightarrow v_t=\sqrt{\frac{100}{11}gR}\]</div><p class="answer">答：最小速率 \(=\sqrt{100gR/11}\)。</p></div></details>
         <details><summary>12｜單擺由 A 點靜止釋放，到最低點 B</summary><div class="solution"><p>若 A 與懸點同高，即繩水平釋放，下降高度為 \(L\)。</p><div class="formula">\[mgL=\frac12mv_B^2\Rightarrow v_B=\sqrt{2gL}\]</div><p>最低點切線方向為水平，重力無切線分量，所以 \(a_t=0\)。</p><div class="formula">\[a_n=\frac{v_B^2}{L}=2g,\qquad T-mg=m\frac{v_B^2}{L}\Rightarrow T=3mg\]</div><p class="answer">答：\(v_B=\sqrt{2gL},\ a_n=2g,
@@ -169,7 +265,7 @@
     </section>
 
     <section id="summary">
-      <div class="section-title"><h2>五、速查表：看到題目先想什麼？</h2><p>這張表可作為課堂板書或學生檢核表。</p></div>
+      <div class="section-title"><h2>七、速查表：看到題目先想什麼？</h2><p>這張表可作為課堂板書或學生檢核表。</p></div>
       <div class="panel">
         <div class="two-col">
           <div><h3>題型 → 方程</h3><ul><li>問速度：先列能量。</li><li>問張力/正向力：再列法線方向。</li><li>問離軌：令 \(N=0\)。</li><li>問臨界整圈：最高點令 \(T=0\) 或 \(N=0\)。</li><li>問拋出後最高點/落點：離軌後改成拋體運動。</li></ul></div>
@@ -259,6 +355,27 @@
     timeScaleInput.addEventListener('input',render);
     playMotion.addEventListener('click',()=>{playing=!playing; playMotion.textContent=playing?'暫停':'真實時間播放'; lastFrame=0; if(playing) requestAnimationFrame(stepFrame);});
     resetMotion.addEventListener('click',()=>{stopMotion(); theta=0; direction=1; simTime=0; angle.value=0; trailPoints=[]; render();});
+
+    function renderEnergyExamples(){
+      const mu26=document.getElementById('mu26'), mu27=document.getElementById('mu27');
+      if(mu26){
+        const mu=parseFloat(mu26.value), g0=10, v0=10, th=Math.PI/6, den=Math.sin(th)+mu*Math.cos(th), num=Math.sin(th)-mu*Math.cos(th);
+        document.getElementById('mu26Val').textContent=mu.toFixed(2);
+        document.getElementById('s26').textContent=(v0*v0/(2*g0*den)).toFixed(2)+' m';
+        document.getElementById('v26').textContent=num>0 ? (v0*Math.sqrt(num/den)).toFixed(2)+' m/s' : '不會自行滑回';
+      }
+      if(mu27){
+        const mu=parseFloat(mu27.value), m=2, g0=10, k=10, x=1.6, E=0.5*k*x*x, fk=mu*m*g0, remain=E-fk*x, d=remain/fk;
+        document.getElementById('mu27Val').textContent=mu.toFixed(2);
+        document.getElementById('d27').textContent=d>0 ? d.toFixed(2)+' m' : '0 m（彈簧未推到原長前已停）';
+        document.getElementById('k27').textContent=Math.max(remain,0).toFixed(2)+' J';
+      }
+    }
+    const mu26Input=document.getElementById('mu26'), mu27Input=document.getElementById('mu27');
+    if(mu26Input) mu26Input.addEventListener('input',renderEnergyExamples);
+    if(mu27Input) mu27Input.addEventListener('input',renderEnergyExamples);
+
+    renderEnergyExamples();
     render();
   </script>
 </body>

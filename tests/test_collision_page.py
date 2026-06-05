@@ -13,7 +13,7 @@ def read_page():
 def test_collision_page_exists_with_core_sections():
     html = read_page()
     assert "§7-7 碰撞" in html
-    for marker in ["#model", "#sim", "#examples", "#activity", "#practice", "#ceec"]:
+    for marker in ["#model", "#sim", "#examples", "#handout-examples", "#activity", "#practice", "#ceec"]:
         assert marker in html
     assert "動量守恆" in html
     assert "恢復係數" in html
@@ -38,6 +38,16 @@ def test_examples_practice_and_activity_are_rich_enough():
     assert html.count("<details") >= 22
     for text in ["例題 1", "例題 2", "例題 3", "練習題 10", "互動活動：先預測，再碰撞"]:
         assert text in html
+
+
+def test_handout_examples_have_visual_explanations():
+    html = read_page()
+    assert "講義例題精講：圖像 → 動量帳 → 能量帳" in html
+    assert html.count('class="handout-card"') >= 6
+    for text in ["子彈嵌入木塊", "一維彈性碰撞", "恢復係數", "爆炸與反衝", "碰撞＋滑行", "斜向碰撞"]:
+        assert text in html
+    for marker in ["move-right", "bounce-ball", "explode-left", "momentum-bar"]:
+        assert marker in html
 
 
 def test_ceec_exam_collection_has_verified_sources_and_answers():

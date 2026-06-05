@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>甜的單色器｜糖水旋光如何把白光變成顏色</title>
+  <meta name="description" content="IYPT Sweet monochromator 教學整理：白光 LED、偏振片與 0.5 m 飽和糖水的旋光色散模型，含互動角度掃描、四波段讀數、學生探究活動單與實驗記錄表。" />
+  <style>
+    :root{--bg:#f8f5ee;--paper:#fffdf8;--ink:#172033;--muted:#667085;--line:rgba(23,32,51,.14);--brand:#176b87;--brand2:#a35f16;--violet:#6d28d9;--blue:#2563eb;--green:#0f766e;--red:#dc2626;--shadow:0 18px 55px rgba(24,32,52,.10),0 3px 14px rgba(24,32,52,.06);--r:22px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",sans-serif;color:var(--ink);line-height:1.75;background:radial-gradient(circle at 9% 0%,rgba(23,107,135,.20),transparent 34rem),radial-gradient(circle at 88% 4%,rgba(163,95,22,.16),transparent 30rem),linear-gradient(180deg,#fffaf0 0%,var(--bg) 62%,#efe7d8 100%)}
+    a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}.wrap{width:min(1160px,calc(100% - 28px));margin:0 auto}.hero{padding:62px 0 26px}.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:7px 12px;border-radius:999px;background:rgba(23,107,135,.11);color:var(--brand);font-size:13px;font-weight:850;letter-spacing:.04em}.hero h1{font-size:clamp(34px,7vw,72px);line-height:1.02;letter-spacing:-.055em;margin:18px 0 12px}.lead{max-width:920px;color:#4b5565;font-size:clamp(17px,2.35vw,22px);font-weight:520}.note{padding:14px 16px;border:1px dashed rgba(23,107,135,.36);border-radius:18px;background:rgba(255,255,255,.70);color:#475467}.toc{display:flex;gap:9px;flex-wrap:wrap;margin:22px 0 28px}.toc a,.btn{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 12px;border-radius:999px;background:#fff;border:1px solid var(--line);box-shadow:0 3px 12px rgba(20,30,45,.04);font-weight:800;font-size:14px}.btn.primary{background:var(--brand);color:#fff;border-color:var(--brand)}
+    section{margin:26px 0}.section-title{display:flex;align-items:end;justify-content:space-between;gap:18px;margin:0 0 14px}.section-title h2{margin:0;font-size:clamp(26px,4vw,42px);letter-spacing:-.035em;line-height:1.12}.section-title p{margin:0;color:var(--muted);max-width:610px}.grid{display:grid;grid-template-columns:1.05fr .95fr;gap:16px}.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.card,.panel,details{background:rgba(255,255,255,.90);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:20px}.card h3,.panel h3{margin:.1em 0 .45em;font-size:22px;line-height:1.25}.tag{display:inline-flex;align-items:center;padding:3px 9px;border-radius:999px;background:#e7f3f6;color:#155e75;font-size:12px;font-weight:850}.tag.alt{background:#fff1dd;color:#9a5b13}.formula{background:#0f172a;color:#f8fafc;border-radius:18px;padding:14px 16px;margin:12px 0;overflow:auto;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}.key{border-left:5px solid var(--brand);padding:12px 14px;background:#eef8fb;border-radius:14px;margin:12px 0}.warn{border-left-color:var(--brand2);background:#fff7ed}.mini{font-size:14px;color:var(--muted)}
+    .sim{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:start}.canvas-wrap{background:linear-gradient(180deg,#fbfdff,#eff8fb);border:1px solid var(--line);border-radius:24px;padding:12px}canvas{width:100%;height:auto;display:block;background:#fff;border-radius:18px;border:1px solid rgba(23,32,51,.08)}.controls{display:grid;gap:12px}.control{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px}.control label{font-weight:850;display:block;margin-bottom:6px}.control input{width:100%}.metric{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.metric div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px}.metric strong{display:block;font-size:22px}.swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.swatch{border:1px solid var(--line);border-radius:16px;background:#fff;padding:10px}.bar{height:10px;border-radius:999px;background:#e5e7eb;overflow:hidden}.bar span{display:block;height:100%;border-radius:999px}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;background:#fff;border-radius:18px;overflow:hidden}th,td{border-bottom:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}th{background:#f2f7f8;font-weight:900}td:first-child,th:first-child{text-align:right}.flow{display:grid;gap:10px}.flow-step{border:1px solid var(--line);border-radius:16px;background:#fff;padding:12px}.flow-step b{color:var(--brand)}details{padding:0;overflow:hidden}summary{cursor:pointer;list-style:none;padding:16px 18px;font-weight:900;font-size:18px;display:flex;justify-content:space-between;gap:10px}summary::-webkit-details-marker{display:none}.solution{border-top:1px solid var(--line);padding:0 18px 18px}.footer{padding:28px 0 54px;color:var(--muted);font-size:14px}
+    @media(max-width:860px){.grid,.sim,.cards{grid-template-columns:1fr}.hero{padding-top:42px}.card,.panel,details{padding:16px}.section-title{display:block}.section-title p{margin-top:8px}.metric,.swatches{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <span class="eyebrow">IYPT 2026｜Sweet monochromator × 糖水旋光色散</span>
+      <h1>甜的單色器：糖水如何把偏振變成顏色</h1>
+      <p class="lead">把前面討論的「白光 LED → 偏振片 → 0.5 m 飽和糖水 → 可旋轉分析器」整理成可直接給學生看的互動頁。核心想法：糖水不是把光染色，而是讓不同波長的偏振方向轉過不同角度；第二片偏振片再把角度差轉成強度差與顏色差。</p>
+      <p class="note">教學邊界：本頁數值是 v1 教學模型與圖表包讀數，尚非正式一手實驗真值。公開展示時請保留「待實測校正」說明；真正比賽或研究需補上濃度、溫度、光程長、LED 光譜、光譜儀解析度與背景扣除方法。</p>
+      <nav class="toc" aria-label="頁面導覽">
+        <a href="#idea">現象與模型</a><a href="#interactive">互動角度掃描</a><a href="#readings">模型讀數</a><a href="#activity">學生活動單</a><a href="#experiment">最小實驗流程</a><a href="#questions">反思題</a>
+      </nav>
+    </header>
+
+    <section id="idea">
+      <div class="section-title"><h2>一、先講清楚：顏色從哪裡來？</h2><p>不是吸收染色，而是「旋光色散 + 分析器投影」共同作用。</p></div>
+      <div class="grid">
+        <article class="card">
+          <span class="tag">物理圖像</span>
+          <h3>同一杯糖水，對不同波長轉不同角度</h3>
+          <p>蔗糖溶液有旋光性；線偏振光通過後，偏振方向會旋轉。若旋轉角還隨波長改變，就會形成旋光色散：短波長與長波長通過後的偏振方向不再相同。</p>
+          <div class="formula">α(λ) = α589 × (589 / λ)^2</div>
+          <p class="mini">本頁採用簡化教學式：α589 ≈ 665°，來自 [α]589 ≈ 66.5 deg·dm^-1·(g/mL)^-1、c ≈ 2.0 g/mL、L = 5 dm。</p>
+        </article>
+        <article class="card">
+          <span class="tag alt">分析器作用</span>
+          <h3>第二片偏振片把「方向差」變成「亮暗差」</h3>
+          <p>當分析器角度 θ 改變，某些波長的偏振方向剛好對準分析器，就變亮；不對準就變暗。於是白光的不同波段被不同程度留下。</p>
+          <div class="formula">I(λ, θ) = I0(λ) cos²(θ - α(λ))</div>
+          <div class="key warn">重要提醒：偏振片有 180° 週期，所以旋光角超過一圈後，不代表資訊消失，而是會折回到 0°–180° 的角度圖樣中。</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="interactive">
+      <div class="section-title"><h2>二、互動角度掃描</h2><p>拖曳分析器角度，觀察 380／480／580／680 nm 四個波段亮暗如何改變。</p></div>
+      <div class="panel sim">
+        <div class="canvas-wrap">
+          <canvas id="chart" width="900" height="540" aria-label="四個波段隨分析器角度改變的強度圖"></canvas>
+          <p class="mini">曲線為相對強度，不代表真實 LED 光譜強度；用於課堂討論「峰值角度不同」與「多重通帶」。</p>
+        </div>
+        <div class="controls">
+          <div class="control"><label for="angle">分析器角度 θ：<span id="angleVal">0°</span></label><input id="angle" type="range" min="0" max="180" step="1" value="0" /></div>
+          <div class="metric">
+            <div><span class="mini">最亮波段</span><strong id="bestBand">—</strong></div>
+            <div><span class="mini">近似混色</span><strong id="mixText">—</strong></div>
+            <div><span class="mini">總強度</span><strong id="totalVal">—</strong></div>
+            <div><span class="mini">通帶判讀</span><strong id="bandNote">—</strong></div>
+          </div>
+          <div class="swatches" id="swatches"></div>
+          <div class="key">課堂問法：在某個角度看起來像「單色」時，是否真的只有一個窄波段通過？還是多個遠距波段同時變亮，肉眼混成另一種顏色？</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="readings">
+      <div class="section-title"><h2>三、0.5 m 飽和糖水模型讀數</h2><p>學生先用這張表預測，再回到互動圖或實測資料檢查。</p></div>
+      <div class="table-wrap card">
+        <table>
+          <thead><tr><th>波段</th><th>模型最大強度角</th><th>模型最小強度角</th><th>教學解讀</th></tr></thead>
+          <tbody>
+            <tr><td>380 nm</td><td>約 157.7°</td><td>約 67.7°</td><td>短波長旋光較大，峰值角度應和長波不同。</td></tr>
+            <tr><td>480 nm</td><td>約 101.3°</td><td>約 11.3°</td><td>藍綠波段峰值明顯偏移，可作為角度掃描觀察重點。</td></tr>
+            <tr><td>580 nm</td><td>約 145.8°</td><td>約 55.8°</td><td>接近鈉黃參考波段，但 0.5 m 飽和糖水已旋轉多圈。</td></tr>
+            <tr><td>680 nm</td><td>約 138.9°</td><td>約 48.9°</td><td>紅光旋光較小，但仍受 180° 週期影響。</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="activity">
+      <div class="section-title"><h2>四、學生活動單：先預測，再看證據</h2><p>可紙上探究，也可接實驗。</p></div>
+      <div class="cards">
+        <article class="card"><span class="tag">先寫預測</span><h3>三個空格讓學生先表態</h3><ul><li>我預期最容易和其他波段分開的是：____ nm，理由是：____。</li><li>我預期分析器某些角度會不會出現多個顏色同時變亮？理由是：____。</li><li>我認為最容易讓實驗和模型不一致的因素是：____。</li></ul></article>
+        <article class="card"><span class="tag alt">證據整理</span><h3>每 10° 記錄一次</h3><p>分析器角度、肉眼／照片顏色、主峰波長、FWHM、是否多峰、備註。若看到顏色快速變化，再改成每 5° 掃描。</p><p class="mini">學生產出：角度—顏色—主峰—頻寬表格、裝置圖、100–150 字結論、下一輪只改一個變因的改良提案。</p></article>
+      </div>
+    </section>
+
+    <section id="experiment">
+      <div class="section-title"><h2>五、最小實驗流程</h2><p>有器材時照這個順序做，不急著追求漂亮結果。</p></div>
+      <div class="panel flow">
+        <div class="flow-step"><b>1. 裝置：</b>白光 LED → 第一片偏振片 → 0.5 m 糖水柱 → 第二片可旋轉偏振片 → 光譜儀／手機光譜儀／相機。</div>
+        <div class="flow-step"><b>2. 控制：</b>LED 位置與電流固定；第一片偏振片固定 0°；糖水濃度、溫度、長度要記錄。</div>
+        <div class="flow-step"><b>3. 掃描：</b>第二片偏振片每 10° 掃 0°–180°；顏色變化快的區間改 5°。</div>
+        <div class="flow-step"><b>4. 每點記錄：</b>照片、光譜、總強度、主峰波長、FWHM、是否多峰、背景扣除方式。</div>
+        <div class="flow-step"><b>5. 模型修正：</b>把模型讀數與實測峰值角比較，優先檢查糖水濃度、LED 光譜、光譜儀解析度、氣泡散射與偏振片品質。</div>
+      </div>
+    </section>
+
+    <section id="questions">
+      <div class="section-title"><h2>六、反思題與評量焦點</h2><p>把現象拉回研究問題：怎樣才算「更窄頻」？</p></div>
+      <div class="cards">
+        <details open><summary>反思題</summary><div class="solution"><ol><li>把糖水柱變長，顏色一定會變得更「單色」嗎？請用多重通帶說明。</li><li>為什麼短波長和長波長的最大強度角可能不同？</li><li>如果只用肉眼看顏色，可能會誤判哪些物理量？</li><li>這個裝置和真正的光柵單色器相比，優點與限制各是什麼？</li><li>若要最佳化成 IYPT 題目的 narrowest bandwidth，你會先量哪三個數據？</li></ol></div></details>
+        <details open><summary>教師評量重點</summary><div class="solution"><ul><li>能否分辨「顏色變化」與「頻寬變窄」不是同一件事。</li><li>能否用 cos² 投影解釋分析器角度與亮暗。</li><li>能否指出模型與實驗差異的來源，而不是只說「實驗誤差」。</li><li>能否提出下一輪只改一個變因的可測試設計。</li></ul></div></details>
+      </div>
+    </section>
+
+    <footer class="footer">整理來源：前次 Obsidian 筆記「0.5m 飽和糖水 LED 偏振角度圖表包」與「甜的單色器學生探究活動單-v1」。頁面版本：2026-06-06 v1，模型待實測校正。</footer>
+  </main>
+  <script>
+    const bands=[{nm:380,color:'#6d28d9',peak:157.7,label:'紫光 380 nm'},{nm:480,color:'#0ea5e9',peak:101.3,label:'藍綠 480 nm'},{nm:580,color:'#f59e0b',peak:145.8,label:'黃光 580 nm'},{nm:680,color:'#dc2626',peak:138.9,label:'紅光 680 nm'}];
+    const angle=document.getElementById('angle'), angleVal=document.getElementById('angleVal'), canvas=document.getElementById('chart'), ctx=canvas.getContext('2d');
+    const swatches=document.getElementById('swatches');
+    function rad(d){return d*Math.PI/180} function intensity(theta,peak){return Math.pow(Math.cos(rad(theta-peak)),2)}
+    function mixRGB(vals){const rgb={380:[109,40,217],480:[14,165,233],580:[245,158,11],680:[220,38,38]};let r=0,g=0,b=0,t=0;vals.forEach(v=>{const c=rgb[v.nm];r+=c[0]*v.i;g+=c[1]*v.i;b+=c[2]*v.i;t+=v.i}); if(t===0)return 'rgb(30,30,35)'; return `rgb(${Math.round(r/t)},${Math.round(g/t)},${Math.round(b/t)})`}
+    function draw(){const w=canvas.width,h=canvas.height,p={l:62,r:26,t:28,b:58};ctx.clearRect(0,0,w,h);ctx.fillStyle='#ffffff';ctx.fillRect(0,0,w,h);ctx.strokeStyle='#d0d5dd';ctx.lineWidth=1;ctx.fillStyle='#667085';ctx.font='15px system-ui';for(let y=0;y<=1.0001;y+=0.25){const yy=h-p.b-y*(h-p.t-p.b);ctx.beginPath();ctx.moveTo(p.l,yy);ctx.lineTo(w-p.r,yy);ctx.stroke();ctx.fillText(y.toFixed(2),14,yy+5)}for(let x=0;x<=180;x+=30){const xx=p.l+x/180*(w-p.l-p.r);ctx.beginPath();ctx.moveTo(xx,p.t);ctx.lineTo(xx,h-p.b);ctx.stroke();ctx.fillText(String(x)+'°',xx-12,h-24)}bands.forEach(b=>{ctx.strokeStyle=b.color;ctx.lineWidth=4;ctx.beginPath();for(let x=0;x<=180;x++){const xx=p.l+x/180*(w-p.l-p.r);const yy=h-p.b-intensity(x,b.peak)*(h-p.t-p.b);if(x===0)ctx.moveTo(xx,yy);else ctx.lineTo(xx,yy)}ctx.stroke();});const th=Number(angle.value);const xth=p.l+th/180*(w-p.l-p.r);ctx.strokeStyle='#111827';ctx.lineWidth=2;ctx.setLineDash([7,5]);ctx.beginPath();ctx.moveTo(xth,p.t);ctx.lineTo(xth,h-p.b);ctx.stroke();ctx.setLineDash([]);ctx.fillStyle='#111827';ctx.font='bold 18px system-ui';ctx.fillText('分析器角度 θ = '+th+'°',p.l,p.t-8);bands.forEach((b,i)=>{ctx.fillStyle=b.color;ctx.fillRect(w-190,34+i*26,18,12);ctx.fillStyle='#344054';ctx.font='14px system-ui';ctx.fillText(b.label,w-166,45+i*26)})}
+    function update(){const th=Number(angle.value);angleVal.textContent=th+'°';const vals=bands.map(b=>({...b,i:intensity(th,b.peak)})).sort((a,b)=>b.i-a.i);const total=vals.reduce((s,v)=>s+v.i,0);document.getElementById('bestBand').textContent=vals[0].nm+' nm';document.getElementById('totalVal').textContent=total.toFixed(2);document.getElementById('mixText').textContent= total<0.55?'偏暗':(vals[0].nm===580?'偏黃':vals[0].nm===680?'偏紅':vals[0].nm===480?'偏藍綠':'偏紫');document.getElementById('bandNote').textContent=vals[1].i>0.65*vals[0].i?'多波段同亮':'單一波段較突出';swatches.innerHTML=bands.map(b=>{const i=intensity(th,b.peak);return `<div class="swatch"><b>${b.nm} nm</b><div class="bar"><span style="width:${Math.round(i*100)}%;background:${b.color}"></span></div><span class="mini">相對強度 ${i.toFixed(2)}</span></div>`}).join('')+`<div class="swatch"><b>混色示意</b><div style="height:38px;border-radius:12px;background:${mixRGB(bands.map(b=>({nm:b.nm,i:intensity(th,b.peak)})))}"></div><span class="mini">僅作視覺提示</span></div>`;draw()}
+    angle.addEventListener('input',update);update();
+  </script>
+</body>
+</html>

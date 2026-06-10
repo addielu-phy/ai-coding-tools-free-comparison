@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第八課〈空城計〉名詞注釋翻卡練習</title>
+  <meta name="description" content="國中國文二下第八課〈空城計〉課文內容相關名詞注釋練習：隨機翻卡、答對答錯統計、學習紀錄與錯題複習。" />
+  <style>
+    :root{
+      --bg:#071826; --bg2:#0d3145; --card:#fffdf7; --ink:#17202a; --muted:#65758b;
+      --sea:#24a0b6; --sea2:#70d6e5; --gold:#f7b267; --good:#16a34a; --bad:#dc2626;
+      --line:rgba(255,255,255,.18); --shadow:0 24px 70px rgba(0,0,0,.32); --radius:28px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",sans-serif;color:white;background:
+      radial-gradient(circle at 16% 0%,rgba(112,214,229,.35),transparent 28rem),
+      radial-gradient(circle at 88% 12%,rgba(247,178,103,.22),transparent 24rem),
+      linear-gradient(145deg,var(--bg),var(--bg2) 58%,#092033);line-height:1.75;min-height:100vh;}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:linear-gradient(120deg,transparent 0 46%,rgba(255,255,255,.18) 48%,transparent 51%),radial-gradient(circle at 30% 80%,rgba(255,255,255,.16) 0 1px,transparent 2px);background-size:180px 80px,42px 42px;}
+    .wrap{width:min(1080px,calc(100% - 28px));margin:0 auto;position:relative}.hero{padding:50px 0 22px}.crumb{display:inline-flex;gap:8px;align-items:center;color:#c9f7ff;background:rgba(255,255,255,.08);border:1px solid var(--line);border-radius:999px;padding:7px 12px;font-size:13px;font-weight:800}.crumb a{color:#fff;text-decoration:none}.hero h1{font-size:clamp(34px,7vw,72px);line-height:1.02;letter-spacing:-.055em;margin:18px 0 12px}.lead{font-size:clamp(16px,2.2vw,21px);color:#dcecf4;max-width:850px;margin:0}.toolbar{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.btn{border:0;border-radius:999px;padding:12px 17px;min-height:45px;font-weight:850;cursor:pointer;background:white;color:#123;box-shadow:0 8px 24px rgba(0,0,0,.18);text-decoration:none;display:inline-flex;align-items:center;gap:8px}.btn.primary{background:linear-gradient(135deg,var(--sea2),var(--sea));color:#04222d}.btn.gold{background:linear-gradient(135deg,#ffd38a,var(--gold));color:#3d2500}.btn.ghost{background:rgba(255,255,255,.1);border:1px solid var(--line);color:white}.grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:start}.panel{background:rgba(255,255,255,.1);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);backdrop-filter:blur(10px)}.practice{padding:18px}.card3d{perspective:1200px}.flashcard{min-height:390px;position:relative;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.2,.75,.2,1);cursor:pointer}.flashcard.flipped{transform:rotateY(180deg)}.face{position:absolute;inset:0;border-radius:24px;background:var(--card);color:var(--ink);backface-visibility:hidden;padding:28px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;border:1px solid rgba(23,32,42,.09);box-shadow:inset 0 0 0 8px rgba(36,160,182,.06)}.face.back{transform:rotateY(180deg);align-items:flex-start;text-align:left;justify-content:flex-start;overflow:auto}.term{font-size:clamp(44px,11vw,86px);font-weight:950;letter-spacing:-.06em;line-height:1.05}.hint{margin-top:16px;color:var(--muted);font-weight:750}.tagrow{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:18px}.tag{font-size:12px;font-weight:900;border-radius:999px;background:#e7f7fb;color:#0f6474;padding:5px 9px}.back h2{margin:0 0 8px;font-size:34px;letter-spacing:-.03em}.pron{color:#0f6474;font-weight:900}.def{font-size:20px;font-weight:750;margin:8px 0 10px}.note{color:#475569}.example{margin-top:14px;border-left:5px solid var(--sea);padding:10px 12px;background:#f1fbfd;border-radius:12px;color:#1f2937}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}.scorebtn{flex:1;min-width:140px;border:0;border-radius:18px;padding:14px 16px;color:white;font-weight:950;font-size:16px;cursor:pointer}.correct{background:linear-gradient(135deg,#22c55e,#15803d)}.wrong{background:linear-gradient(135deg,#ef4444,#b91c1c)}.side{padding:20px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.stat{border-radius:18px;background:rgba(255,255,255,.1);border:1px solid var(--line);padding:14px}.stat strong{display:block;font-size:28px;line-height:1}.stat span{font-size:12px;color:#c9dce7}.progress{height:12px;border-radius:999px;background:rgba(255,255,255,.14);overflow:hidden;margin:16px 0}.bar{height:100%;background:linear-gradient(90deg,var(--gold),var(--sea2));width:0%}.small{color:#cbddea;font-size:14px}.list{max-height:330px;overflow:auto;margin-top:10px}.row{display:grid;grid-template-columns:1fr auto;gap:8px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.12)}.row b{font-size:15px}.row span{color:#d4e5ef;font-size:13px}.row .mini{font-weight:950;border-radius:999px;padding:2px 8px;background:rgba(255,255,255,.14)}.filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.filter{border:1px solid var(--line);background:rgba(255,255,255,.08);color:white;border-radius:999px;padding:7px 10px;font-weight:800;cursor:pointer}.filter.active{background:white;color:#123}.section{margin:18px 0 42px;padding:22px}.section h2{margin:0 0 10px;font-size:28px}.termsgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.termchip{background:rgba(255,255,255,.1);border:1px solid var(--line);border-radius:16px;padding:10px;cursor:pointer}.termchip strong{display:block}.termchip span{font-size:13px;color:#cfe4ed}.footer{padding:0 0 36px;color:#c7d8e2;font-size:14px}@media(max-width:860px){.grid{grid-template-columns:1fr}.flashcard{min-height:420px}.stats,.termsgrid{grid-template-columns:1fr 1fr}.face{padding:22px}.actions .btn{width:100%;justify-content:center}}@media(max-width:520px){.termsgrid{grid-template-columns:1fr}.stat strong{font-size:22px}.flashcard{min-height:450px}.back h2{font-size:28px}.def{font-size:18px}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div class="crumb"><a href="../../webpages/">公開網頁總整理</a><span>›</span><span>國文第八課</span></div>
+      <h1>〈空城計〉名詞注釋翻卡練習</h1>
+      <p class="lead">依國中國文二下第八課〈空城計〉課文與注釋整理。每次隨機抽一個名詞，先回想意思，再點卡片翻面核對；可記錄答對、答錯、連續答對與錯題複習。</p>
+      <div class="toolbar">
+        <button class="btn primary" id="shuffleBtn">隨機下一張</button>
+        <button class="btn gold" id="wrongOnlyBtn">錯題複習：關</button>
+        <button class="btn ghost" id="resetBtn">清除本機紀錄</button>
+      </div>
+    </header>
+
+    <section class="grid" aria-label="翻卡練習區">
+      <div class="panel practice">
+        <div class="card3d">
+          <article class="flashcard" id="flashcard" tabindex="0" role="button" aria-label="點選翻轉字卡">
+            <div class="face front">
+              <div class="small" id="cardCounter">第 1 / 31 張</div>
+              <div class="term" id="term">飛魚</div>
+              <div class="hint">先在心中說出注釋，再點一下翻面</div>
+              <div class="tagrow" id="tags"></div>
+            </div>
+            <div class="face back">
+              <h2 id="backTerm">飛魚</h2>
+              <div class="pron" id="pron"></div>
+              <p class="def" id="definition"></p>
+              <p class="note" id="detail"></p>
+              <div class="example" id="example"></div>
+            </div>
+          </article>
+        </div>
+        <div class="actions">
+          <button class="scorebtn correct" id="correctBtn">我答對了</button>
+          <button class="scorebtn wrong" id="wrongBtn">我答錯／還不熟</button>
+        </div>
+      </div>
+
+      <aside class="panel side">
+        <h2 style="margin:0 0 12px">學習統計</h2>
+        <div class="stats">
+          <div class="stat"><strong id="totalSeen">0</strong><span>已作答</span></div>
+          <div class="stat"><strong id="accuracy">0%</strong><span>答對率</span></div>
+          <div class="stat"><strong id="streak">0</strong><span>連續答對</span></div>
+        </div>
+        <div class="progress" aria-label="熟練進度"><div class="bar" id="bar"></div></div>
+        <p class="small" id="summary">還沒有作答紀錄。建議先全部隨機練一輪，再開錯題複習。</p>
+        <div class="filters" id="filters"></div>
+        <h3 style="margin:18px 0 4px">最近紀錄</h3>
+        <div class="list" id="history"></div>
+      </aside>
+    </section>
+
+    <section class="panel section">
+      <h2>本頁收錄名詞</h2>
+      <p class="small">點任一名詞可直接切到該卡。資料來源為第八課〈空城計〉課文注釋，另補入少量課文理解用關鍵詞。</p>
+      <div class="termsgrid" id="termsGrid"></div>
+    </section>
+
+    <footer class="footer">資料來源：Google Drive 內「11-114國中國文2下課本-L08-空城計」PDF。此練習頁僅整理名詞注釋供課堂複習使用；答題紀錄儲存在目前瀏覽器的 localStorage，不會上傳。</footer>
+  </main>
+<script>
+const TERMS = [
+  {
+    "term": "章回小說",
+    "pron": "ㄓㄤ ㄏㄨㄟˊ ㄒㄧㄠˇ ㄕㄨㄛ",
+    "cat": "文學概念",
+    "def": "以分章分回的方式敘述故事的長篇小說。",
+    "detail": "由宋、元說書人的話本演變而來，每回常有對仗回目，回末多以「欲知後事如何，且聽下回分解」作結。",
+    "example": "《三國演義》、《水滸傳》、《西遊記》、《紅樓夢》都屬於著名章回小說。"
+  },
+  {
+    "term": "三國演義",
+    "pron": "ㄙㄢ ㄍㄨㄛˊ ㄧㄢˇ ㄧˋ",
+    "cat": "作品",
+    "def": "中國著名歷史章回小說，取材於《三國志》，再加以渲染與虛構。",
+    "detail": "書中情節曲折精彩，塑造關公、孔明、曹操等鮮明人物，是影響深遠的通俗讀物。",
+    "example": "〈空城計〉節選自《三國演義》第九十五回。"
+  },
+  {
+    "term": "空城計",
+    "pron": "ㄎㄨㄥ ㄔㄥˊ ㄐㄧˋ",
+    "cat": "情節策略",
+    "def": "在兵力空虛時故意展現鎮定、開放城門，使敵人懷疑有埋伏而退兵的計策。",
+    "detail": "本文中孔明利用司馬懿熟知自己「平生謹慎」的印象，反向製造疑陣，成功退敵。",
+    "example": "孔明大開四門、焚香操琴，就是空城計的核心安排。"
+  },
+  {
+    "term": "羅貫中",
+    "pron": "ㄌㄨㄛˊ ㄍㄨㄢˋ ㄓㄨㄥ",
+    "cat": "作者",
+    "def": "名本，號湖海散人，元末明初人，生卒年不詳。",
+    "detail": "他整理、改寫宋元以來的三國故事，成為《三國志通俗演義》，簡稱《三國演義》。",
+    "example": "本課作者欄介紹羅貫中另有《隋唐志傳》、《殘唐五代史演義》等小說。"
+  },
+  {
+    "term": "馬謖拒諫失街亭",
+    "pron": "ㄇㄚˇ ㄙㄨˋ ㄐㄩˋ ㄐㄧㄢˋ ㄕ ㄐㄧㄝ ㄊㄧㄥˊ",
+    "cat": "回目背景",
+    "def": "《三國演義》第九十五回回目上半句，指馬謖不聽勸諫而失守街亭。",
+    "detail": "街亭失守造成蜀軍形勢危急，孔明才在西城遭遇司馬懿大軍壓境。",
+    "example": "本課節選回目：「馬謖拒諫失街亭，武侯彈琴退仲達」。"
+  },
+  {
+    "term": "武侯彈琴退仲達",
+    "pron": "ㄨˇ ㄏㄡˊ ㄊㄢˊ ㄑㄧㄣˊ ㄊㄨㄟˋ ㄓㄨㄥˋ ㄉㄚˊ",
+    "cat": "回目背景",
+    "def": "《三國演義》第九十五回回目下半句，指諸葛亮以彈琴姿態使司馬懿退兵。",
+    "detail": "「武侯」指諸葛亮，「仲達」是司馬懿的字；這一句概括本課主要情節。",
+    "example": "孔明在城樓焚香操琴，讓司馬懿疑有伏兵。"
+  },
+  {
+    "term": "孔明",
+    "pron": "ㄎㄨㄥˇ ㄇㄧㄥˊ",
+    "cat": "人物",
+    "def": "諸葛亮的字，三國蜀漢丞相，以智謀與謹慎著稱。",
+    "detail": "本文刻畫孔明處變不驚、慎謀能斷，在兵少勢危時仍能掌握敵人心理。",
+    "example": "課文：「孔明曰：此人料吾平生謹慎，必不弄險……」。"
+  },
+  {
+    "term": "司馬懿",
+    "pron": "ㄙ ㄇㄚˇ ㄧˋ",
+    "cat": "人物",
+    "def": "字仲達，三國時魏將。",
+    "detail": "本文中司馬懿率十五萬大軍至西城，但因懷疑孔明城中有伏兵而退。",
+    "example": "司馬懿判斷：「亮平生謹慎，不曾弄險。今大開城門，必有埋伏。」"
+  },
+  {
+    "term": "分撥",
+    "pron": "ㄈㄣ ㄅㄛ",
+    "cat": "軍事行動",
+    "def": "分派、調度。",
+    "detail": "孔明在戰前已完成軍務分派，先帶五千兵到西城搬運糧草。",
+    "example": "課文：「孔明分撥已定，先引五千兵去西城縣搬運糧草。」"
+  },
+  {
+    "term": "糧草",
+    "pron": "ㄌㄧㄤˊ ㄘㄠˇ",
+    "cat": "軍事物資",
+    "def": "人的糧食和馬的草料。",
+    "detail": "古代行軍作戰需要糧食與馬匹草料，糧草若不足會影響軍隊續戰能力。",
+    "example": "孔明到西城的任務之一就是搬運糧草。"
+  },
+  {
+    "term": "飛馬",
+    "pron": "ㄈㄟ ㄇㄚˇ",
+    "cat": "軍事情勢",
+    "def": "騎著快馬的人；此處指傳送緊急軍情的人。",
+    "detail": "「十餘次飛馬報到」顯示軍情急迫，敵軍逼近的消息連續傳來。",
+    "example": "課文：「忽然十餘次飛馬報到」。"
+  },
+  {
+    "term": "望",
+    "pron": "ㄨㄤˋ",
+    "cat": "文言用字",
+    "def": "向、朝。",
+    "detail": "在本文中「望西城蜂擁而來」不是看見西城，而是朝西城方向而來。",
+    "example": "「望北山路而退」意思是朝北山路退去。"
+  },
+  {
+    "term": "蜂擁",
+    "pron": "ㄈㄥ ㄩㄥˇ",
+    "cat": "動態描寫",
+    "def": "形容大批人群擁擠向前。",
+    "detail": "用蜜蜂成群湧出的形象，寫魏軍大批向西城推進的氣勢。",
+    "example": "課文：「司馬懿引大軍十五萬，望西城蜂擁而來。」"
+  },
+  {
+    "term": "失色",
+    "pron": "ㄕ ㄙㄜˋ",
+    "cat": "神態描寫",
+    "def": "因為驚恐而變了臉色。",
+    "detail": "眾官聽到敵軍來襲後「盡皆失色」，與孔明的鎮定形成對比。",
+    "example": "例句：聽見突發消息，眾人一時失色。"
+  },
+  {
+    "term": "旌旗",
+    "pron": "ㄐㄧㄥ ㄑㄧˊ",
+    "cat": "軍事物件",
+    "def": "旗子。旌，旗類。",
+    "detail": "軍中旌旗通常顯示部隊存在與陣勢；孔明命令藏起旌旗，是為了營造空城假象。",
+    "example": "課文：「眾將旌旗，盡皆藏匿。」"
+  },
+  {
+    "term": "城鋪",
+    "pron": "ㄔㄥˊ ㄆㄨˋ",
+    "cat": "城防設施",
+    "def": "城中巡查的崗位。鋪，崗位。",
+    "detail": "孔明要求諸軍各守城鋪，表示雖布下空城表象，內部仍有嚴密控制。",
+    "example": "課文：「諸軍各守城鋪」。"
+  },
+  {
+    "term": "妄行出入",
+    "pron": "ㄨㄤˋ ㄒㄧㄥˊ ㄔㄨ ㄖㄨˋ",
+    "cat": "行為規範",
+    "def": "不守規定，隨意進出。",
+    "detail": "孔明嚴令不可妄動、高聲說話，避免露出城中兵少的破綻。",
+    "example": "課文：「如有妄行出入，及高聲言語者，立斬。」"
+  },
+  {
+    "term": "鶴氅",
+    "pron": "ㄏㄜˋ ㄔㄤˇ",
+    "cat": "服飾",
+    "def": "用鳥羽編製的外衣。",
+    "detail": "孔明披鶴氅、戴綸巾，是高雅閒適的形象，與戰場危急形成強烈對比。",
+    "example": "課文：「孔明乃披鶴氅，戴綸巾」。"
+  },
+  {
+    "term": "綸巾",
+    "pron": "ㄍㄨㄢ ㄐㄧㄣ",
+    "cat": "服飾",
+    "def": "青色絲帶編的頭巾，相傳為諸葛亮所設計，也叫「諸葛巾」。",
+    "detail": "綸巾常與諸葛亮形象連結，呈現儒雅、從容的軍師氣質。",
+    "example": "孔明戴綸巾、焚香操琴，讓司馬懿更疑心其中有計。"
+  },
+  {
+    "term": "敵樓",
+    "pron": "ㄉㄧˊ ㄌㄡˊ",
+    "cat": "城防設施",
+    "def": "築在城上，用來觀察敵情的樓臺。",
+    "detail": "孔明坐在敵樓前，讓司馬懿遠遠可見其從容姿態，達到心理戰效果。",
+    "example": "課文：「於城上敵樓前，凭欄而坐」。"
+  },
+  {
+    "term": "凭欄",
+    "pron": "ㄆㄧㄥˊ ㄌㄢˊ",
+    "cat": "動作詞",
+    "def": "靠著欄杆。凭，同「憑」，倚靠。",
+    "detail": "「凭欄而坐」寫出孔明姿態安穩，不像面臨敵軍大軍壓境。",
+    "example": "例句：他凭欄遠望江面。"
+  },
+  {
+    "term": "焚香操琴",
+    "pron": "ㄈㄣˊ ㄒㄧㄤ ㄘㄠ ㄑㄧㄣˊ",
+    "cat": "情節策略",
+    "def": "燒香彈琴。",
+    "detail": "在戰場危急時焚香操琴，是孔明故作安閒、誘使司馬懿疑心的關鍵動作。",
+    "example": "課文：「笑容可掬，焚香操琴。」"
+  },
+  {
+    "term": "卻說",
+    "pron": "ㄑㄩㄝˋ ㄕㄨㄛ",
+    "cat": "章回語詞",
+    "def": "且說、再說。",
+    "detail": "章回小說常用語，用來轉換敘事焦點，帶讀者看另一方情況。",
+    "example": "課文：「卻說司馬懿前軍哨到城下」。"
+  },
+  {
+    "term": "前軍哨",
+    "pron": "ㄑㄧㄢˊ ㄐㄩㄣ ㄕㄠˋ",
+    "cat": "軍事角色",
+    "def": "在前鋒偵探敵情的士兵。",
+    "detail": "前軍哨先抵達城下，看到孔明的模樣後不敢進攻，急忙回報司馬懿。",
+    "example": "前軍哨相當於前線偵察兵。"
+  },
+  {
+    "term": "三軍",
+    "pron": "ㄙㄢ ㄐㄩㄣ",
+    "cat": "軍事組織",
+    "def": "軍隊的統稱。古代軍隊常分為中、左、右或中、前、後三軍。",
+    "detail": "中軍通常由主帥率領，是發號施令所在；本文「止住三軍」即停止全軍前進。",
+    "example": "課文：「遂止住三軍」。"
+  },
+  {
+    "term": "笑容可掬",
+    "pron": "ㄒㄧㄠˋ ㄖㄨㄥˊ ㄎㄜˇ ㄐㄩˊ",
+    "cat": "成語神態",
+    "def": "笑容滿面的樣子。掬，用兩手捧取。",
+    "detail": "孔明在危急中笑容可掬，表面越安閒，越讓司馬懿懷疑有伏兵。",
+    "example": "例句：老師看見學生進步，笑容可掬。"
+  },
+  {
+    "term": "麈尾",
+    "pron": "ㄓㄨˇ ㄨㄟˇ",
+    "cat": "器物",
+    "def": "以麈的尾毛做成的拂塵，可用來拂去塵土或驅趕蚊蠅。麈，鹿的一種。",
+    "detail": "童子手執麈尾，強化城樓上清雅從容的布置。",
+    "example": "課文：「右有一童子，手執麈尾。」"
+  },
+  {
+    "term": "莫非",
+    "pron": "ㄇㄛˋ ㄈㄟ",
+    "cat": "語氣詞",
+    "def": "表推測語氣，相當於「莫不是」、「大概」。",
+    "detail": "司馬昭用「莫非」推測孔明其實無軍，凸顯他對局勢的另一種判斷。",
+    "example": "課文：「莫非諸葛亮無軍，故作此態？」"
+  },
+  {
+    "term": "弄險",
+    "pron": "ㄋㄨㄥˋ ㄒㄧㄢˇ",
+    "cat": "行動判斷",
+    "def": "冒險行事。",
+    "detail": "司馬懿認為孔明平生謹慎、不曾弄險，所以大開城門必有埋伏；孔明正是利用這個印象取勝。",
+    "example": "課文：「亮平生謹慎，不曾弄險。」"
+  },
+  {
+    "term": "焉",
+    "pron": "ㄧㄢ",
+    "cat": "文言用字",
+    "def": "如何、怎麼。",
+    "detail": "司馬懿說「汝輩焉知」，意思是你們這些人怎麼會知道。",
+    "example": "「焉知」可譯作「怎麼知道」。"
+  },
+  {
+    "term": "撫掌",
+    "pron": "ㄈㄨˇ ㄓㄤˇ",
+    "cat": "動作詞",
+    "def": "拍手。",
+    "detail": "魏軍遠去後孔明撫掌而笑，顯示他判斷成功、危機解除。",
+    "example": "課文：「孔明見魏軍遠去，撫掌而笑。」"
+  },
+  {
+    "term": "駭然",
+    "pron": "ㄏㄞˋ ㄖㄢˊ",
+    "cat": "神態描寫",
+    "def": "驚恐的樣子。駭，驚嚇。",
+    "detail": "眾官對司馬懿突然退兵感到駭然，凸顯孔明計策出人意料。",
+    "example": "例句：聽到城外大軍逼近，眾人駭然。"
+  },
+  {
+    "term": "蓋",
+    "pron": "ㄍㄞˋ",
+    "cat": "文言用字",
+    "def": "實在是。",
+    "detail": "孔明說「蓋因不得已而用之」，意思是實在是因為不得已才使用這個計策。",
+    "example": "「蓋」在古文中常有解釋原因或推斷語氣。"
+  },
+  {
+    "term": "投",
+    "pron": "ㄊㄡˊ",
+    "cat": "文言用字",
+    "def": "往。",
+    "detail": "「投山北小路去」意思是往山北小路而去，不是投降。",
+    "example": "課文：「此人必引軍投山北小路去也。」"
+  },
+  {
+    "term": "興、苞",
+    "pron": "ㄒㄧㄥ、ㄅㄠ",
+    "cat": "人物",
+    "def": "蜀漢將領。興指關興，關羽的兒子；苞指張苞，張飛的兒子。",
+    "detail": "孔明預先安排關興、張苞在山北小路等候，顯示他不只用心理戰，也有後續部署。",
+    "example": "課文：「吾已令興、苞二人在彼等候。」"
+  },
+  {
+    "term": "司馬昭之心",
+    "pron": "ㄙ ㄇㄚˇ ㄓㄠ ㄓ ㄒㄧㄣ",
+    "cat": "成語典故",
+    "def": "比喻眾人皆知的陰謀野心。",
+    "detail": "典故來自魏帝曹髦說「司馬昭之心，路人所知也」，表示司馬昭圖謀不軌已很明顯。",
+    "example": "例句：他的企圖太明顯，簡直是司馬昭之心。"
+  },
+  {
+    "term": "玄機",
+    "pron": "ㄒㄩㄢˊ ㄐㄧ",
+    "cat": "計謀評價",
+    "def": "高明奧妙的計謀。",
+    "detail": "眾官稱讚「丞相玄機，神鬼莫測」，表達對孔明深遠計謀的驚服。",
+    "example": "課文：「丞相玄機，神鬼莫測。」"
+  },
+  {
+    "term": "某等",
+    "pron": "ㄇㄡˇ ㄉㄥˇ",
+    "cat": "文言自稱",
+    "def": "我們。某，自稱之詞。",
+    "detail": "眾官自稱「某等」，表示「我們這些人」；古文中常見謙稱。",
+    "example": "課文：「若某等之見，必棄城而走矣。」"
+  },
+  {
+    "term": "得不為司馬懿所擒乎",
+    "pron": "ㄉㄜˊ ㄅㄨˋ ㄨㄟˊ ㄙ ㄇㄚˇ ㄧˋ ㄙㄨㄛˇ ㄑㄧㄣˊ ㄏㄨ",
+    "cat": "文言句式",
+    "def": "能不被司馬懿捉住嗎？",
+    "detail": "「為……所……」是被動句式；孔明說若棄城逃走，很可能被司馬懿追上擒獲。",
+    "example": "句意：如果逃走，難道不會被司馬懿抓住嗎？"
+  },
+  {
+    "term": "言訖",
+    "pron": "ㄧㄢˊ ㄑㄧˋ",
+    "cat": "章回語詞",
+    "def": "說完。訖，完畢、終了。",
+    "detail": "章回小說常用簡潔敘述銜接人物動作，「言訖」表示話說完後接續下一個動作。",
+    "example": "課文：「言訖，拍手大笑。」"
+  },
+  {
+    "term": "故布疑陣",
+    "pron": "ㄍㄨˋ ㄅㄨˋ ㄧˊ ㄓㄣˋ",
+    "cat": "情節策略",
+    "def": "故意布置讓對方起疑的情勢。",
+    "detail": "孔明藏旌旗、大開城門、安排軍士扮百姓、城上彈琴，都是故布疑陣。",
+    "example": "讀後檢測題把孔明的布置概括為「故布疑陣」。"
+  },
+  {
+    "term": "敵眾我寡",
+    "pron": "ㄉㄧˊ ㄓㄨㄥˋ ㄨㄛˇ ㄍㄨㄚˇ",
+    "cat": "情勢判斷",
+    "def": "敵人多，我方少，形容兵力差距懸殊。",
+    "detail": "本文情勢是司馬懿十五萬大軍壓境，孔明城中只有二千五百軍，形成危急對比。",
+    "example": "賞析提到孔明面臨「敵眾我寡」，仍迅速應變。"
+  }
+];
+const KEY='l08-kongchengji-terms-record-v1';
+let state=JSON.parse(localStorage.getItem(KEY)||'{"answers":{},"history":[],"streak":0}');
+let current=0, wrongOnly=false, activeCat='全部';
+const $=id=>document.getElementById(id);
+function save(){localStorage.setItem(KEY,JSON.stringify(state));}
+function pool(){let arr=TERMS.map((_,i)=>i); if(activeCat!=='全部') arr=arr.filter(i=>TERMS[i].cat===activeCat); if(wrongOnly){const w=arr.filter(i=>(state.answers[TERMS[i].term]?.wrong||0)>(state.answers[TERMS[i].term]?.correct||0)); arr=w.length?w:arr;} return arr;}
+function render(){const t=TERMS[current]; $('flashcard').classList.remove('flipped'); $('term').textContent=t.term; $('backTerm').textContent=t.term; $('pron').textContent=t.pron; $('definition').textContent=t.def; $('detail').textContent=t.detail; $('example').textContent=t.example; $('cardCounter').textContent=`第 ${current+1} / ${TERMS.length} 張`; $('tags').innerHTML=`<span class="tag">${t.cat}</span>`; renderStats();}
+function randomNext(){const p=pool(); let n=p[Math.floor(Math.random()*p.length)]; if(p.length>1){while(n===current)n=p[Math.floor(Math.random()*p.length)];} current=n; render();}
+function score(ok){const t=TERMS[current].term; state.answers[t]=state.answers[t]||{correct:0,wrong:0}; if(ok){state.answers[t].correct++; state.streak=(state.streak||0)+1;}else{state.answers[t].wrong++; state.streak=0;} state.history.unshift({term:t,ok,time:new Date().toLocaleString('zh-TW',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'})}); state.history=state.history.slice(0,50); save(); randomNext();}
+function renderStats(){let c=0,w=0,mastered=0; TERMS.forEach(t=>{const a=state.answers[t.term]||{}; c+=a.correct||0; w+=a.wrong||0; if((a.correct||0)>=2 && (a.correct||0)>=(a.wrong||0)+1) mastered++;}); const total=c+w; $('totalSeen').textContent=total; $('accuracy').textContent=total?Math.round(c/total*100)+'%':'0%'; $('streak').textContent=state.streak||0; $('bar').style.width=Math.round(mastered/TERMS.length*100)+'%'; $('summary').textContent= total?`已熟練 ${mastered} / ${TERMS.length} 個名詞；錯題複習會優先抽「答錯多於答對」的字詞。`:'還沒有作答紀錄。建議先全部隨機練一輪，再開錯題複習。';
+  $('history').innerHTML=(state.history||[]).length?state.history.map(h=>`<div class="row"><div><b>${h.term}</b><br><span>${h.time}</span></div><div class="mini" style="color:${h.ok?'#86efac':'#fecaca'}">${h.ok?'答對':'答錯'}</div></div>`).join(''):'<p class="small">尚無紀錄</p>';
+}
+function renderFilters(){const cats=['全部',...new Set(TERMS.map(t=>t.cat))]; $('filters').innerHTML=cats.map(c=>`<button class="filter ${c===activeCat?'active':''}" data-cat="${c}">${c}</button>`).join(''); document.querySelectorAll('.filter').forEach(b=>b.onclick=()=>{activeCat=b.dataset.cat; renderFilters(); randomNext();});}
+function renderGrid(){ $('termsGrid').innerHTML=TERMS.map((t,i)=>`<div class="termchip" data-i="${i}"><strong>${t.term}</strong><span>${t.cat}｜${t.def.slice(0,28)}${t.def.length>28?'…':''}</span></div>`).join(''); document.querySelectorAll('.termchip').forEach(el=>el.onclick=()=>{current=Number(el.dataset.i); render(); scrollTo({top:0,behavior:'smooth'});});}
+$('flashcard').onclick=()=>$('flashcard').classList.toggle('flipped'); $('flashcard').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();$('flashcard').classList.toggle('flipped');}};
+$('shuffleBtn').onclick=randomNext; $('correctBtn').onclick=()=>score(true); $('wrongBtn').onclick=()=>score(false);
+$('wrongOnlyBtn').onclick=()=>{wrongOnly=!wrongOnly; $('wrongOnlyBtn').textContent='錯題複習：'+(wrongOnly?'開':'關'); randomNext();};
+$('resetBtn').onclick=()=>{if(confirm('確定要清除這台裝置上的練習紀錄嗎？')){state={answers:{},history:[],streak:0};save();render();}};
+renderFilters(); renderGrid(); randomNext();
+</script>
+</body>
+</html>

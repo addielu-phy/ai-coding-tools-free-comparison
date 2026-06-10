@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>第九課〈汨羅江神〉名詞注釋翻卡練習</title>
+  <meta name="description" content="國中國文二下第九課〈汨羅江神〉課文內容相關名詞注釋練習：隨機翻卡、答對答錯統計、學習紀錄與錯題複習。" />
+  <style>
+    :root{
+      --bg:#071826; --bg2:#0d3145; --card:#fffdf7; --ink:#17202a; --muted:#65758b;
+      --sea:#24a0b6; --sea2:#70d6e5; --gold:#f7b267; --good:#16a34a; --bad:#dc2626;
+      --line:rgba(255,255,255,.18); --shadow:0 24px 70px rgba(0,0,0,.32); --radius:28px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",sans-serif;color:white;background:
+      radial-gradient(circle at 16% 0%,rgba(112,214,229,.35),transparent 28rem),
+      radial-gradient(circle at 88% 12%,rgba(247,178,103,.22),transparent 24rem),
+      linear-gradient(145deg,var(--bg),var(--bg2) 58%,#092033);line-height:1.75;min-height:100vh;}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:linear-gradient(120deg,transparent 0 46%,rgba(255,255,255,.18) 48%,transparent 51%),radial-gradient(circle at 30% 80%,rgba(255,255,255,.16) 0 1px,transparent 2px);background-size:180px 80px,42px 42px;}
+    .wrap{width:min(1080px,calc(100% - 28px));margin:0 auto;position:relative}.hero{padding:50px 0 22px}.crumb{display:inline-flex;gap:8px;align-items:center;color:#c9f7ff;background:rgba(255,255,255,.08);border:1px solid var(--line);border-radius:999px;padding:7px 12px;font-size:13px;font-weight:800}.crumb a{color:#fff;text-decoration:none}.hero h1{font-size:clamp(34px,7vw,72px);line-height:1.02;letter-spacing:-.055em;margin:18px 0 12px}.lead{font-size:clamp(16px,2.2vw,21px);color:#dcecf4;max-width:850px;margin:0}.toolbar{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.btn{border:0;border-radius:999px;padding:12px 17px;min-height:45px;font-weight:850;cursor:pointer;background:white;color:#123;box-shadow:0 8px 24px rgba(0,0,0,.18);text-decoration:none;display:inline-flex;align-items:center;gap:8px}.btn.primary{background:linear-gradient(135deg,var(--sea2),var(--sea));color:#04222d}.btn.gold{background:linear-gradient(135deg,#ffd38a,var(--gold));color:#3d2500}.btn.ghost{background:rgba(255,255,255,.1);border:1px solid var(--line);color:white}.grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:start}.panel{background:rgba(255,255,255,.1);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);backdrop-filter:blur(10px)}.practice{padding:18px}.card3d{perspective:1200px}.flashcard{min-height:390px;position:relative;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.2,.75,.2,1);cursor:pointer}.flashcard.flipped{transform:rotateY(180deg)}.face{position:absolute;inset:0;border-radius:24px;background:var(--card);color:var(--ink);backface-visibility:hidden;padding:28px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;border:1px solid rgba(23,32,42,.09);box-shadow:inset 0 0 0 8px rgba(36,160,182,.06)}.face.back{transform:rotateY(180deg);align-items:flex-start;text-align:left;justify-content:flex-start;overflow:auto}.term{font-size:clamp(44px,11vw,86px);font-weight:950;letter-spacing:-.06em;line-height:1.05}.hint{margin-top:16px;color:var(--muted);font-weight:750}.tagrow{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:18px}.tag{font-size:12px;font-weight:900;border-radius:999px;background:#e7f7fb;color:#0f6474;padding:5px 9px}.back h2{margin:0 0 8px;font-size:34px;letter-spacing:-.03em}.pron{color:#0f6474;font-weight:900}.def{font-size:20px;font-weight:750;margin:8px 0 10px}.note{color:#475569}.example{margin-top:14px;border-left:5px solid var(--sea);padding:10px 12px;background:#f1fbfd;border-radius:12px;color:#1f2937}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}.scorebtn{flex:1;min-width:140px;border:0;border-radius:18px;padding:14px 16px;color:white;font-weight:950;font-size:16px;cursor:pointer}.correct{background:linear-gradient(135deg,#22c55e,#15803d)}.wrong{background:linear-gradient(135deg,#ef4444,#b91c1c)}.side{padding:20px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.stat{border-radius:18px;background:rgba(255,255,255,.1);border:1px solid var(--line);padding:14px}.stat strong{display:block;font-size:28px;line-height:1}.stat span{font-size:12px;color:#c9dce7}.progress{height:12px;border-radius:999px;background:rgba(255,255,255,.14);overflow:hidden;margin:16px 0}.bar{height:100%;background:linear-gradient(90deg,var(--gold),var(--sea2));width:0%}.small{color:#cbddea;font-size:14px}.list{max-height:330px;overflow:auto;margin-top:10px}.row{display:grid;grid-template-columns:1fr auto;gap:8px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.12)}.row b{font-size:15px}.row span{color:#d4e5ef;font-size:13px}.row .mini{font-weight:950;border-radius:999px;padding:2px 8px;background:rgba(255,255,255,.14)}.filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.filter{border:1px solid var(--line);background:rgba(255,255,255,.08);color:white;border-radius:999px;padding:7px 10px;font-weight:800;cursor:pointer}.filter.active{background:white;color:#123}.section{margin:18px 0 42px;padding:22px}.section h2{margin:0 0 10px;font-size:28px}.termsgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.termchip{background:rgba(255,255,255,.1);border:1px solid var(--line);border-radius:16px;padding:10px;cursor:pointer}.termchip strong{display:block}.termchip span{font-size:13px;color:#cfe4ed}.footer{padding:0 0 36px;color:#c7d8e2;font-size:14px}@media(max-width:860px){.grid{grid-template-columns:1fr}.flashcard{min-height:420px}.stats,.termsgrid{grid-template-columns:1fr 1fr}.face{padding:22px}.actions .btn{width:100%;justify-content:center}}@media(max-width:520px){.termsgrid{grid-template-columns:1fr}.stat strong{font-size:22px}.flashcard{min-height:450px}.back h2{font-size:28px}.def{font-size:18px}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div class="crumb"><a href="../../webpages/">公開網頁總整理</a><span>›</span><span>國文第九課</span></div>
+      <h1>〈汨羅江神〉名詞注釋翻卡練習</h1>
+      <p class="lead">依國中國文二下第九課〈汨羅江神〉課文與注釋整理。每次隨機抽一個名詞，先回想意思，再點卡片翻面核對；可記錄答對、答錯、連續答對與錯題複習。</p>
+      <div class="toolbar">
+        <button class="btn primary" id="shuffleBtn">隨機下一張</button>
+        <button class="btn gold" id="wrongOnlyBtn">錯題複習：關</button>
+        <button class="btn ghost" id="resetBtn">清除本機紀錄</button>
+      </div>
+    </header>
+
+    <section class="grid" aria-label="翻卡練習區">
+      <div class="panel practice">
+        <div class="card3d">
+          <article class="flashcard" id="flashcard" tabindex="0" role="button" aria-label="點選翻轉字卡">
+            <div class="face front">
+              <div class="small" id="cardCounter">第 1 / 31 張</div>
+              <div class="term" id="term">飛魚</div>
+              <div class="hint">先在心中說出注釋，再點一下翻面</div>
+              <div class="tagrow" id="tags"></div>
+            </div>
+            <div class="face back">
+              <h2 id="backTerm">飛魚</h2>
+              <div class="pron" id="pron"></div>
+              <p class="def" id="definition"></p>
+              <p class="note" id="detail"></p>
+              <div class="example" id="example"></div>
+            </div>
+          </article>
+        </div>
+        <div class="actions">
+          <button class="scorebtn correct" id="correctBtn">我答對了</button>
+          <button class="scorebtn wrong" id="wrongBtn">我答錯／還不熟</button>
+        </div>
+      </div>
+
+      <aside class="panel side">
+        <h2 style="margin:0 0 12px">學習統計</h2>
+        <div class="stats">
+          <div class="stat"><strong id="totalSeen">0</strong><span>已作答</span></div>
+          <div class="stat"><strong id="accuracy">0%</strong><span>答對率</span></div>
+          <div class="stat"><strong id="streak">0</strong><span>連續答對</span></div>
+        </div>
+        <div class="progress" aria-label="熟練進度"><div class="bar" id="bar"></div></div>
+        <p class="small" id="summary">還沒有作答紀錄。建議先全部隨機練一輪，再開錯題複習。</p>
+        <div class="filters" id="filters"></div>
+        <h3 style="margin:18px 0 4px">最近紀錄</h3>
+        <div class="list" id="history"></div>
+      </aside>
+    </section>
+
+    <section class="panel section">
+      <h2>本頁收錄名詞</h2>
+      <p class="small">點任一名詞可直接切到該卡。資料來源為第九課〈汨羅江神〉課文注釋，另補入詩歌理解與文化典故關鍵詞。</p>
+      <div class="termsgrid" id="termsGrid"></div>
+    </section>
+
+    <footer class="footer">資料來源：Google Drive 內「12-114國中國文2下課本-L09-汨羅江神」PDF。此練習頁僅整理名詞注釋供課堂複習使用；答題紀錄儲存在目前瀏覽器的 localStorage，不會上傳。</footer>
+  </main>
+<script>
+const TERMS = [
+  {
+    "term": "汨羅江",
+    "pron": "ㄇㄧˋ ㄌㄨㄛˊ ㄐㄧㄤ",
+    "cat": "地名典故",
+    "def": "位於湖南一帶的江河，傳說屈原投江自盡之處。",
+    "detail": "〈汨羅江神〉以汨羅江為核心意象，連結端午、龍舟與屈原精神。注意「汨」音密，不是「汩」音古。",
+    "example": "詩題「汨羅江神」即把屈原由投江的悲劇人物，昇華為精神象徵。"
+  },
+  {
+    "term": "汨羅江神",
+    "pron": "ㄇㄧˋ ㄌㄨㄛˊ ㄐㄧㄤ ㄕㄣˊ",
+    "cat": "詩題概念",
+    "def": "余光中詩作，藉汨羅江、龍舟與屈原典故，追思屈原高潔精神。",
+    "detail": "詩中說「你已成江神，不再是水鬼」，把屈原從待救的亡者轉化為可指引後人的精神典範。",
+    "example": "本課主旨可概括為：藉龍舟競渡勉勵世人傳承屈原高潔品德。"
+  },
+  {
+    "term": "余光中",
+    "pron": "ㄩˊ ㄍㄨㄤ ㄓㄨㄥ",
+    "cat": "作者",
+    "def": "福建永春人，1928 年生，2017 年卒，臺灣重要作家。",
+    "detail": "寫作領域橫跨新詩、散文、評論與翻譯。梁實秋稱頌他「右手寫詩左手寫散文，成就之高一時無雙」。",
+    "example": "著有詩集《藕神》、《白玉苦瓜》，散文集《聽聽那冷雨》等。"
+  },
+  {
+    "term": "藕神",
+    "pron": "ㄡˇ ㄕㄣˊ",
+    "cat": "作品來源",
+    "def": "余光中的詩集，本詩〈汨羅江神〉選自此書。",
+    "detail": "詩集名稱本身也帶有古典文化與現代詩意象交會的特色。",
+    "example": "題解：「本詩選自《藕神》。」"
+  },
+  {
+    "term": "屈原",
+    "pron": "ㄑㄩ ㄩㄢˊ",
+    "cat": "人物典故",
+    "def": "戰國時期楚國詩人，傳說因憂國憂民而投汨羅江自盡。",
+    "detail": "屈原忠貞愛國，創作成就高；詩中凸顯他面對困厄仍堅持信念、不隨波逐流的精神。",
+    "example": "端午節划龍舟、吃粽子的習俗，常與追念屈原相連。"
+  },
+  {
+    "term": "端午節",
+    "pron": "ㄉㄨㄢ ㄨˇ ㄐㄧㄝˊ",
+    "cat": "節俗文化",
+    "def": "傳統節日，習俗包含划龍舟、吃粽子、立蛋、掛菖蒲、佩香包等。",
+    "detail": "課文前哨站說端午活動與屈原有關，百姓划船尋覓、投米飯餵魚蝦，後來演變成端午習俗。",
+    "example": "本詩以國際龍舟節為背景，重新追問屈原精神在今日的意義。"
+  },
+  {
+    "term": "龍舟",
+    "pron": "ㄌㄨㄥˊ ㄓㄡ",
+    "cat": "節俗意象",
+    "def": "端午競渡所用的船，也是詩中追尋屈原精神的重要意象。",
+    "detail": "詩中「逆流而泳是矯健的龍舟」把龍舟寫成後人追尋高潔精神的行動。",
+    "example": "詩句：「急鼓齊催，千槳競發」。"
+  },
+  {
+    "term": "烈士",
+    "pron": "ㄌㄧㄝˋ ㄕˋ",
+    "cat": "人物評價",
+    "def": "為理想、正義或國家犧牲生命的人。",
+    "detail": "詩句「烈士的終站就是詩人的起點？」把屈原的死亡與詩人精神的開始相連。",
+    "example": "屈原既是投江的烈士，也是後世詩人追尋的精神起點。"
+  },
+  {
+    "term": "問天",
+    "pron": "ㄨㄣˋ ㄊㄧㄢ",
+    "cat": "典故意象",
+    "def": "向天發問；此處呼應屈原作品〈天問〉。",
+    "detail": "余光中寫「昔日你問天，今日我問河」，把屈原的古典典故轉成現代詩人的追問。",
+    "example": "詩句：「昔日你問天，今日我問河」。"
+  },
+  {
+    "term": "悠悠",
+    "pron": "ㄧㄡ ㄧㄡ",
+    "cat": "課文注釋",
+    "def": "長久、久遠。",
+    "detail": "詩中寫水面悠悠，營造時間漫長、歷史記憶綿延的感覺。",
+    "example": "課文注釋：「悠悠　長久、久遠。」"
+  },
+  {
+    "term": "滔滔",
+    "pron": "ㄊㄠ ㄊㄠ",
+    "cat": "課文注釋",
+    "def": "水流滾滾不絕的樣子。",
+    "detail": "詩中「所有的河水，滔滔，都向東」寫出大勢、眾流與屈原逆行之間的對比。",
+    "example": "例句：江水滔滔東流。"
+  },
+  {
+    "term": "潔癖",
+    "pron": "ㄐㄧㄝˊ ㄆㄧˇ",
+    "cat": "課文注釋",
+    "def": "過度愛好清潔的習性；此處指屈原堅持操守，不願同流合汙。",
+    "detail": "詩中「唯你患了潔癖」不是說屈原真的愛乾淨，而是比喻他精神上的高潔。",
+    "example": "讀後檢測問：「潔癖」的涵義是什麼？答案指向不願與世俗同流合汙。"
+  },
+  {
+    "term": "酣睡",
+    "pron": "ㄏㄢ ㄕㄨㄟˋ",
+    "cat": "課文注釋",
+    "def": "熟睡。酣，本為盡興暢飲，此處為深、濃之意。",
+    "detail": "「眾人皆酣睡，唯你獨醒」以睡與醒對比，凸顯屈原的清醒與孤獨。",
+    "example": "例句：孩子玩累了，回家後酣睡一晚。"
+  },
+  {
+    "term": "獨醒",
+    "pron": "ㄉㄨˊ ㄒㄧㄥˇ",
+    "cat": "精神特質",
+    "def": "眾人迷醉或沉睡時，唯獨一人保持清醒。",
+    "detail": "呼應屈原「眾人皆醉我獨醒」的典故，代表不隨俗、不迷失的精神。",
+    "example": "詩句：「眾人皆酣睡，唯你獨醒」。"
+  },
+  {
+    "term": "合流",
+    "pron": "ㄏㄜˊ ㄌㄧㄡˊ",
+    "cat": "詩中意象",
+    "def": "水流匯合；此處也暗指順從眾人或世俗潮流。",
+    "detail": "「舉世皆合流」與屈原「反向而行」形成對比，凸顯他不隨波逐流。",
+    "example": "詩句：「舉世皆合流，唯你患了潔癖」。"
+  },
+  {
+    "term": "同流合汙",
+    "pron": "ㄊㄨㄥˊ ㄌㄧㄡˊ ㄏㄜˊ ㄨ",
+    "cat": "成語",
+    "def": "跟壞人一起做壞事，或隨著不好的風氣墮落。",
+    "detail": "課文注釋用來說明「潔癖」：屈原不願同流合汙，堅持品德操守。",
+    "example": "例句：即使環境混亂，他仍不願同流合汙。"
+  },
+  {
+    "term": "逆風而飛",
+    "pron": "ㄋㄧˋ ㄈㄥ ㄦˊ ㄈㄟ",
+    "cat": "意象",
+    "def": "迎著風飛行；詩中象徵不順從時勢、堅持向前。",
+    "detail": "與「逆流而泳」並列，形成高昂、矯健的精神姿態。",
+    "example": "詩句：「逆風而飛是高昂的令旗」。"
+  },
+  {
+    "term": "逆流而泳",
+    "pron": "ㄋㄧˋ ㄌㄧㄡˊ ㄦˊ ㄩㄥˇ",
+    "cat": "意象",
+    "def": "逆著水流游動；詩中象徵與世俗潮流相反、堅守理想。",
+    "detail": "詩中把逆流而泳連到龍舟，強化奮力追尋屈原精神的畫面。",
+    "example": "詩句：「逆流而泳是矯健的龍舟」。"
+  },
+  {
+    "term": "令旗",
+    "pron": "ㄌㄧㄥˋ ㄑㄧˊ",
+    "cat": "器物意象",
+    "def": "發號施令用的旗幟。",
+    "detail": "詩中用「高昂的令旗」比喻逆風而飛的姿態，帶有召喚、引領的意味。",
+    "example": "詩句：「逆風而飛是高昂的令旗」。"
+  },
+  {
+    "term": "矯健",
+    "pron": "ㄐㄧㄠˇ ㄐㄧㄢˋ",
+    "cat": "形容詞",
+    "def": "強健有力、靈活敏捷。",
+    "detail": "詩中用來形容逆流而泳的龍舟，呈現奮發、昂揚的力量。",
+    "example": "例句：選手划槳的姿態十分矯健。"
+  },
+  {
+    "term": "江神",
+    "pron": "ㄐㄧㄤ ㄕㄣˊ",
+    "cat": "精神象徵",
+    "def": "江河之神；詩中象徵屈原被昇華為受人仰慕的精神存在。",
+    "detail": "「你已成江神，不再是水鬼」把投江的悲劇轉化成永恆的精神召喚。",
+    "example": "詩句：「不，你已成江神，不再是水鬼」。"
+  },
+  {
+    "term": "水鬼",
+    "pron": "ㄕㄨㄟˇ ㄍㄨㄟˇ",
+    "cat": "對比意象",
+    "def": "水中亡魂；詩中與「江神」對照。",
+    "detail": "作者否定屈原只是待救的水鬼，強調真正待救的是岸上精神淪落的我們。",
+    "example": "詩句：「待救的是岸上淪落的我們」。"
+  },
+  {
+    "term": "淪落",
+    "pron": "ㄌㄨㄣˊ ㄌㄨㄛˋ",
+    "cat": "課文注釋",
+    "def": "沉淪、墮落。",
+    "detail": "詩中指現代人精神上的失落與沉淪，才是真正需要被救的人。",
+    "example": "課文注釋：「淪落　沉淪、墮落。」"
+  },
+  {
+    "term": "清芬",
+    "pron": "ㄑㄧㄥ ㄈㄣ",
+    "cat": "課文注釋",
+    "def": "清淡的香氣；比喻高潔的品德操守。",
+    "detail": "「失傳已久的清芬」表示後人想找回屈原那種高潔的精神香氣。",
+    "example": "詩句：「要找回失傳已久的清芬」。"
+  },
+  {
+    "term": "三湘",
+    "pron": "ㄙㄢ ㄒㄧㄤ",
+    "cat": "地理代稱",
+    "def": "湖南別稱，古為楚國屬地。",
+    "detail": "屈原是楚國人，三湘子弟追尋屈原，具有地域與文化上的連結。",
+    "example": "詩句：「追你的不僅是三湘的子弟」。"
+  },
+  {
+    "term": "九州",
+    "pron": "ㄐㄧㄡˇ ㄓㄡ",
+    "cat": "地理代稱",
+    "def": "中國古代分天下為九個行政區，稱為九州；後用作中國代稱。",
+    "detail": "詩中「九州的選手」擴大追尋屈原精神的人群範圍。",
+    "example": "詩句：「九州的選手」。"
+  },
+  {
+    "term": "渺渺",
+    "pron": "ㄇㄧㄠˇ ㄇㄧㄠˇ",
+    "cat": "課文注釋",
+    "def": "遙遠而不易見的樣子。",
+    "detail": "詩中寫屈原「長髮飄風的渺渺背影」，使形象帶有遙遠、追尋不易的美感。",
+    "example": "例句：遠山渺渺，雲霧繚繞。"
+  },
+  {
+    "term": "李白",
+    "pron": "ㄌㄧˇ ㄅㄞˊ",
+    "cat": "跨時代詩人",
+    "def": "字太白，唐代著名詩人，性格豪放，才思敏捷，有「詩仙」之名。",
+    "detail": "詩中提到李白與蘇軾的後人，表示屈原精神在中國詩歌傳統中延續。",
+    "example": "課文補充：「李白，字太白，唐著名詩人。」"
+  },
+  {
+    "term": "蘇軾",
+    "pron": "ㄙㄨ ㄕˋ",
+    "cat": "跨時代詩人",
+    "def": "字子瞻，北宋著名文人，詩、詞、文、書、畫皆有成就，自號東坡居士。",
+    "detail": "蘇軾曾多次遭貶謫，其文學精神也能與屈原堅持理想的形象呼應。",
+    "example": "詩句提到「李白與蘇軾的後人」。"
+  },
+  {
+    "term": "惠特曼",
+    "pron": "ㄏㄨㄟˋ ㄊㄜˋ ㄇㄢˋ",
+    "cat": "跨文化詩人",
+    "def": "美國著名詩人，被認為是美國的「詩歌之父」。",
+    "detail": "詩中列入惠特曼，表示屈原精神的追尋不只限於中國，也跨越到西方詩歌傳統。",
+    "example": "詩句：「更有惠特曼與雪萊的子孫」。"
+  },
+  {
+    "term": "雪萊",
+    "pron": "ㄒㄩㄝˇ ㄌㄞˊ",
+    "cat": "跨文化詩人",
+    "def": "英國浪漫主義詩人，被譽為「詩人中的詩人」。",
+    "detail": "與惠特曼並列，呈現詩中東西方詩人共同追尋理想與關懷社會的精神。",
+    "example": "課文補充：雪萊（1792–1822）是英國浪漫主義詩人。"
+  },
+  {
+    "term": "國際龍舟節",
+    "pron": "ㄍㄨㄛˊ ㄐㄧˋ ㄌㄨㄥˊ ㄓㄡ ㄐㄧㄝˊ",
+    "cat": "創作背景",
+    "def": "本詩創作背景，指不同地區船隊在汨羅江上參加龍舟競賽。",
+    "detail": "詩作藉國際龍舟競渡，把屈原精神擴展為跨時代、跨地域的共同追尋。",
+    "example": "附註說明有英、美、澳洲及大陸、臺灣、港、澳船隊參賽。"
+  },
+  {
+    "term": "意象",
+    "pron": "ㄧˋ ㄒㄧㄤˋ",
+    "cat": "詩歌手法",
+    "def": "詩文中能承載情感與思想的具體形象。",
+    "detail": "本詩以河水、清波、龍舟、江神、水鬼、清芬等意象，呈現屈原精神與後人的追尋。",
+    "example": "賞析：「使用意象與典故，深化詩意。」"
+  },
+  {
+    "term": "典故",
+    "pron": "ㄉㄧㄢˇ ㄍㄨˋ",
+    "cat": "詩歌手法",
+    "def": "詩文中引用或化用歷史故事、古人古事或經典語句。",
+    "detail": "本詩化用屈原「舉世皆濁我獨清，眾人皆醉我獨醒」等典故，深化屈原形象。",
+    "example": "讀後檢測考查作者是否透過典故彰顯屈原精神。"
+  },
+  {
+    "term": "對比手法",
+    "pron": "ㄉㄨㄟˋ ㄅㄧˇ ㄕㄡˇ ㄈㄚˇ",
+    "cat": "詩歌手法",
+    "def": "把相反或差異明顯的事物並列，以凸顯主題或人物特質。",
+    "detail": "本詩以向東／反向、合流／潔癖、酣睡／獨醒、江神／水鬼形成對比。",
+    "example": "詩句：「所有的河水……都向東／你的清波卻反向而行」。"
+  },
+  {
+    "term": "第二人稱",
+    "pron": "ㄉㄧˋ ㄦˋ ㄖㄣˊ ㄔㄥ",
+    "cat": "詩歌手法",
+    "def": "用「你」稱呼對象的敘述方式。",
+    "detail": "本詩直接以「你」呼喚屈原，營造跨時空對話與追思傳承的情感。",
+    "example": "詩末：「回一回頭吧，揮一揮手／在浪間，等一等我們」。"
+  },
+  {
+    "term": "眾人皆醉我獨醒",
+    "pron": "ㄓㄨㄥˋ ㄖㄣˊ ㄐㄧㄝ ㄗㄨㄟˋ ㄨㄛˇ ㄉㄨˊ ㄒㄧㄥˇ",
+    "cat": "典故名句",
+    "def": "眾人都沉醉迷失，只有我保持清醒。",
+    "detail": "本句常用來表現屈原不隨俗流、堅持理想的孤高精神；本課前哨站也以此說明屈原。",
+    "example": "課文前哨站標題：「眾人皆醉我獨醒的屈原」。"
+  }
+];
+const KEY='l09-miluojiangshen-terms-record-v1';
+let state=JSON.parse(localStorage.getItem(KEY)||'{"answers":{},"history":[],"streak":0}');
+let current=0, wrongOnly=false, activeCat='全部';
+const $=id=>document.getElementById(id);
+function save(){localStorage.setItem(KEY,JSON.stringify(state));}
+function pool(){let arr=TERMS.map((_,i)=>i); if(activeCat!=='全部') arr=arr.filter(i=>TERMS[i].cat===activeCat); if(wrongOnly){const w=arr.filter(i=>(state.answers[TERMS[i].term]?.wrong||0)>(state.answers[TERMS[i].term]?.correct||0)); arr=w.length?w:arr;} return arr;}
+function render(){const t=TERMS[current]; $('flashcard').classList.remove('flipped'); $('term').textContent=t.term; $('backTerm').textContent=t.term; $('pron').textContent=t.pron; $('definition').textContent=t.def; $('detail').textContent=t.detail; $('example').textContent=t.example; $('cardCounter').textContent=`第 ${current+1} / ${TERMS.length} 張`; $('tags').innerHTML=`<span class="tag">${t.cat}</span>`; renderStats();}
+function randomNext(){const p=pool(); let n=p[Math.floor(Math.random()*p.length)]; if(p.length>1){while(n===current)n=p[Math.floor(Math.random()*p.length)];} current=n; render();}
+function score(ok){const t=TERMS[current].term; state.answers[t]=state.answers[t]||{correct:0,wrong:0}; if(ok){state.answers[t].correct++; state.streak=(state.streak||0)+1;}else{state.answers[t].wrong++; state.streak=0;} state.history.unshift({term:t,ok,time:new Date().toLocaleString('zh-TW',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'})}); state.history=state.history.slice(0,50); save(); randomNext();}
+function renderStats(){let c=0,w=0,mastered=0; TERMS.forEach(t=>{const a=state.answers[t.term]||{}; c+=a.correct||0; w+=a.wrong||0; if((a.correct||0)>=2 && (a.correct||0)>=(a.wrong||0)+1) mastered++;}); const total=c+w; $('totalSeen').textContent=total; $('accuracy').textContent=total?Math.round(c/total*100)+'%':'0%'; $('streak').textContent=state.streak||0; $('bar').style.width=Math.round(mastered/TERMS.length*100)+'%'; $('summary').textContent= total?`已熟練 ${mastered} / ${TERMS.length} 個名詞；錯題複習會優先抽「答錯多於答對」的字詞。`:'還沒有作答紀錄。建議先全部隨機練一輪，再開錯題複習。';
+  $('history').innerHTML=(state.history||[]).length?state.history.map(h=>`<div class="row"><div><b>${h.term}</b><br><span>${h.time}</span></div><div class="mini" style="color:${h.ok?'#86efac':'#fecaca'}">${h.ok?'答對':'答錯'}</div></div>`).join(''):'<p class="small">尚無紀錄</p>';
+}
+function renderFilters(){const cats=['全部',...new Set(TERMS.map(t=>t.cat))]; $('filters').innerHTML=cats.map(c=>`<button class="filter ${c===activeCat?'active':''}" data-cat="${c}">${c}</button>`).join(''); document.querySelectorAll('.filter').forEach(b=>b.onclick=()=>{activeCat=b.dataset.cat; renderFilters(); randomNext();});}
+function renderGrid(){ $('termsGrid').innerHTML=TERMS.map((t,i)=>`<div class="termchip" data-i="${i}"><strong>${t.term}</strong><span>${t.cat}｜${t.def.slice(0,28)}${t.def.length>28?'…':''}</span></div>`).join(''); document.querySelectorAll('.termchip').forEach(el=>el.onclick=()=>{current=Number(el.dataset.i); render(); scrollTo({top:0,behavior:'smooth'});});}
+$('flashcard').onclick=()=>$('flashcard').classList.toggle('flipped'); $('flashcard').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();$('flashcard').classList.toggle('flipped');}};
+$('shuffleBtn').onclick=randomNext; $('correctBtn').onclick=()=>score(true); $('wrongBtn').onclick=()=>score(false);
+$('wrongOnlyBtn').onclick=()=>{wrongOnly=!wrongOnly; $('wrongOnlyBtn').textContent='錯題複習：'+(wrongOnly?'開':'關'); randomNext();};
+$('resetBtn').onclick=()=>{if(confirm('確定要清除這台裝置上的練習紀錄嗎？')){state={answers:{},history:[],streak:0};save();render();}};
+renderFilters(); renderGrid(); randomNext();
+</script>
+</body>
+</html>

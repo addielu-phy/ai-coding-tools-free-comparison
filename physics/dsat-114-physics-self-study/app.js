@@ -88,7 +88,7 @@ function answerLabel(q, ans) {
   return normArr(ans).map(i => LETTERS[i]).join("") || "未作答";
 }
 function correctLabel(q) { return isOpen(q) ? (q.answerText || q.a) : normArr(q.a).map(i => LETTERS[i]).join(""); }
-function isAnswered(ans) { return ans !== undefined && ans !== null && !(typeof ans === 'object' && !ans.text && ans.self === undefined); }
+function isAnswered(ans) { if (Array.isArray(ans)) return ans.length > 0; return ans !== undefined && ans !== null && !(typeof ans === 'object' && !ans.text && ans.self === undefined); }
 function figuresHTML(q) {
   if (!q.img) return "";
   return `<div class="figure">` +

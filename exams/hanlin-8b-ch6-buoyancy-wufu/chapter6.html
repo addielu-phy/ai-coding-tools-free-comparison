@@ -578,6 +578,71 @@
       width: 100%;
       height: auto;
     }
+
+    .figure-wrap img {
+      cursor: zoom-in;
+    }
+
+    .figure-zoom {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: zoom-in;
+    }
+    .figure-zoom:focus-visible {
+      outline: 3px solid rgba(5, 123, 120, .55);
+      outline-offset: 3px;
+    }
+
+    .image-lightbox {
+      width: min(96vw, 1180px);
+      max-height: 92vh;
+      padding: 0;
+      border: 0;
+      border-radius: var(--radius);
+      background: #111827;
+      color: #fff;
+      box-shadow: 0 24px 80px rgba(0,0,0,.45);
+    }
+    .image-lightbox::backdrop {
+      background: rgba(8, 15, 25, .76);
+      backdrop-filter: blur(3px);
+    }
+    .lightbox-inner {
+      position: relative;
+      padding: 44px 12px 12px;
+    }
+    .lightbox-inner img {
+      display: block;
+      max-width: 100%;
+      max-height: 78vh;
+      margin: 0 auto;
+      border-radius: 6px;
+      background: #fff;
+    }
+    .lightbox-caption {
+      margin: 10px 4px 0;
+      color: #e5e7eb;
+      text-align: center;
+      font-size: .95rem;
+    }
+    .lightbox-close {
+      position: absolute;
+      right: 10px;
+      top: 8px;
+      border: 1px solid rgba(255,255,255,.32);
+      border-radius: 999px;
+      background: rgba(255,255,255,.1);
+      color: #fff;
+      min-height: 32px;
+      padding: 4px 12px;
+      font: inherit;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
     .figure-wrap figcaption {
       padding: 8px 12px;
       color: var(--muted);
@@ -1233,7 +1298,7 @@
             <h4>考古題 01｜釣魚用的浮標可浮在水面上作為辨識魚餌的位置。圖（十三）為浮標放在淡水中的情形，若將此浮標改放入酒精中，酒精液面可能會在浮標的何處？（酒精密度略小於水）</h4>
             <p class="diagram-note">原題含浮標圖（圖十三），本頁保留文字重點；位置甲、乙請搭配官方卷圖核對。</p>
 
-            <figure class="figure-wrap"><img src="assets/113-34-figure-p4.jpg" alt="113 年第 34 題原卷圖：浮標在淡水中的位置" loading="lazy"><figcaption>113 年第 34 題原卷圖：浮標在淡水中的位置（官方 PDF 第 4 頁截圖；題目文字上方已整理，可用圖核對細節。）</figcaption></figure>
+            <figure class="figure-wrap"><button class="figure-zoom" type="button" aria-label="點圖放大：113 年第 34 題原卷圖：浮標在淡水中的位置"><img  src="assets/113-34-figure-crop.jpg" alt="113 年第 34 題原卷圖：浮標在淡水中的位置" loading="lazy"></button><figcaption>113 年第 34 題原卷圖：浮標在淡水中的位置（官方 PDF 局部截圖；點圖可放大核對細節。）</figcaption></figure>
             <ol class="options" type="A"><li><strong>A.</strong> 甲位置</li>
 <li><strong>B.</strong> 乙位置</li>
 <li><strong>C.</strong> 維持在原來的位置</li>
@@ -1248,7 +1313,7 @@
             <h4>考古題 02｜如圖（十七）所示，一正立方體木塊，密度為 0.8 g/cm³，置於裝有 500 mL 水的玻璃杯中，此時木塊靜止浮於水面。若在此玻璃杯中再加入 500 mL 的油，發現液面上升，但木塊仍靜止浮於液面。已知油與水互不相溶，且油的密度為 0.7 g/cm³，則關於加入油前後的變化，下列敘述何者正確？</h4>
 
 
-            <figure class="figure-wrap"><img src="assets/113-39-figure-p5.jpg" alt="113 年第 39 題原卷圖：油水分層與木塊" loading="lazy"><figcaption>113 年第 39 題原卷圖：油水分層與木塊（官方 PDF 第 5 頁截圖；題目文字上方已整理，可用圖核對細節。）</figcaption></figure>
+            <figure class="figure-wrap"><button class="figure-zoom" type="button" aria-label="點圖放大：113 年第 39 題原卷圖：油水分層與木塊"><img  src="assets/113-39-figure-crop.jpg" alt="113 年第 39 題原卷圖：油水分層與木塊" loading="lazy"></button><figcaption>113 年第 39 題原卷圖：油水分層與木塊（官方 PDF 局部截圖；點圖可放大核對細節。）</figcaption></figure>
             <ol class="options" type="A"><li><strong>A.</strong> 木塊沒入水中的體積變小</li>
 <li><strong>B.</strong> 木塊沒入水中的體積變大</li>
 <li><strong>C.</strong> 木塊在液體中所受的浮力變小</li>
@@ -1302,7 +1367,7 @@
             <h4>考古題 06｜一名選手坐在大且長方體型的浮墊並浮在水面上。已知選手體重 35 公斤重，浮墊尺寸長×寬×高為 100 cm×100 cm×5 cm，重量為 5 公斤重。當選手坐在此浮墊上可以保持身體完全在水面上嗎？原因為何？</h4>
 
 
-            <figure class="figure-wrap"><img src="assets/112-29-figure-p4.jpg" alt="112 年第 29 題原卷圖：浮墊尺寸與人物" loading="lazy"><figcaption>112 年第 29 題原卷圖：浮墊尺寸與人物（官方 PDF 第 4 頁截圖；題目文字上方已整理，可用圖核對細節。）</figcaption></figure>
+            <figure class="figure-wrap"><button class="figure-zoom" type="button" aria-label="點圖放大：112 年第 29 題原卷圖：浮墊尺寸與人物"><img  src="assets/112-29-figure-crop.jpg" alt="112 年第 29 題原卷圖：浮墊尺寸與人物" loading="lazy"></button><figcaption>112 年第 29 題原卷圖：浮墊尺寸與人物（官方 PDF 局部截圖；點圖可放大核對細節。）</figcaption></figure>
             <ol class="options" type="A"><li><strong>A.</strong> 無法。因為總重量除以浮墊面積，壓力大於水的密度 1 g/cm³</li>
 <li><strong>B.</strong> 可以。因為選手加上浮墊的平均密度遠小於水的密度</li>
 <li><strong>C.</strong> 無法。坐著會沉下去，必須趴著接觸面積變大、壓力變小才能浮得起來</li>
@@ -1317,7 +1382,7 @@
             <h4>考古題 07｜使用彈簧秤測量某一實心不溶於水且不與水發生作用的金屬圓柱體。實驗 O 在空氣中，實驗 A 為一半在水中，實驗 B 為剛好完全沒入水中，實驗 C 為沒入更深的水中。關於實驗 A：一半金屬圓柱體浸入水中保持靜止量取彈簧秤讀數，下列敘述何者錯誤？</h4>
 
 
-            <figure class="figure-wrap"><img src="assets/112-46-figure-p7.jpg" alt="112 年第 46–48 題原卷圖：彈簧秤、浸入深度與讀數關係" loading="lazy"><figcaption>112 年第 46–48 題原卷圖：彈簧秤、浸入深度與讀數關係（官方 PDF 第 7 頁截圖；題目文字上方已整理，可用圖核對細節。）</figcaption></figure>
+            <figure class="figure-wrap"><button class="figure-zoom" type="button" aria-label="點圖放大：112 年第 46–48 題原卷圖：彈簧秤、浸入深度與讀數關係"><img  src="assets/112-46-figure-crop.jpg" alt="112 年第 46–48 題原卷圖：彈簧秤、浸入深度與讀數關係" loading="lazy"></button><figcaption>112 年第 46–48 題原卷圖：彈簧秤、浸入深度與讀數關係（官方 PDF 局部截圖；點圖可放大核對細節。）</figcaption></figure>
             <ol class="options" type="A"><li><strong>A.</strong> 金屬圓柱體同時受到彈簧秤拉力、水的浮力、重力作用，此時合力為 0</li>
 <li><strong>B.</strong> 金屬圓柱體在空氣中的重量為 500 公克重</li>
 <li><strong>C.</strong> 金屬圓柱體受到的浮力為排開的液體重</li>
@@ -1332,7 +1397,7 @@
             <h4>考古題 08｜承上題，若實驗 D 的彈簧秤讀數為 280 公克重，則食鹽水的密度為多少 g/cm³？</h4>
 
 
-            <figure class="figure-wrap"><img src="assets/112-48-figure-p7.jpg" alt="112 年第 46–48 題原卷圖：彈簧秤、浸入深度與讀數關係" loading="lazy"><figcaption>112 年第 46–48 題原卷圖：彈簧秤、浸入深度與讀數關係（官方 PDF 第 7 頁截圖；題目文字上方已整理，可用圖核對細節。）</figcaption></figure>
+            <figure class="figure-wrap"><button class="figure-zoom" type="button" aria-label="點圖放大：112 年第 46–48 題原卷圖：彈簧秤、浸入深度與讀數關係"><img  src="assets/112-48-figure-crop.jpg" alt="112 年第 46–48 題原卷圖：彈簧秤、浸入深度與讀數關係" loading="lazy"></button><figcaption>112 年第 46–48 題原卷圖：彈簧秤、浸入深度與讀數關係（官方 PDF 局部截圖；點圖可放大核對細節。）</figcaption></figure>
             <ol class="options" type="A"><li><strong>A.</strong> 0.80</li>
 <li><strong>B.</strong> 1.00</li>
 <li><strong>C.</strong> 1.10</li>
@@ -1360,7 +1425,7 @@
             <h4>考古題 10｜如下圖所示，四張圖皆為同一艘船，甲、乙為空船，丙、丁載滿相同重量的貨物，所受浮力大小順序為何？（密度：海水＞淡水）</h4>
 
 
-            <figure class="figure-wrap"><img src="assets/111-20-figure-p2.jpg" alt="111 年第 20 題原卷圖：船在淡水與海水、空船與載貨比較" loading="lazy"><figcaption>111 年第 20 題原卷圖：船在淡水與海水、空船與載貨比較（官方 PDF 第 2 頁截圖；題目文字上方已整理，可用圖核對細節。）</figcaption></figure>
+            <figure class="figure-wrap"><button class="figure-zoom" type="button" aria-label="點圖放大：111 年第 20 題原卷圖：船在淡水與海水、空船與載貨比較"><img  src="assets/111-20-figure-crop.jpg" alt="111 年第 20 題原卷圖：船在淡水與海水、空船與載貨比較" loading="lazy"></button><figcaption>111 年第 20 題原卷圖：船在淡水與海水、空船與載貨比較（官方 PDF 局部截圖；點圖可放大核對細節。）</figcaption></figure>
             <ol class="options" type="A"><li><strong>A.</strong> 丁＞丙＞乙＞甲</li>
 <li><strong>B.</strong> 甲＝乙＞丙＝丁</li>
 <li><strong>C.</strong> 乙＞甲＞丁＞丙</li>
@@ -1388,7 +1453,7 @@
             <h4>考古題 12｜將邊長分別為 3 cm、4 cm、8 cm 的長方體放入某液體中，待長方體靜止懸浮在液體中時，上表面恰與液面平行，且上表面受到的向下液體壓力 P下 為 6 gw/cm²，下表面受到的向上液體壓力 P上 為 30 gw/cm²，試問此液體的密度為多少 g/cm³？</h4>
 
 
-            <figure class="figure-wrap"><img src="assets/111-32-figure-p3.jpg" alt="111 年第 32 題原卷圖：長方體上下表面液體壓力" loading="lazy"><figcaption>111 年第 32 題原卷圖：長方體上下表面液體壓力（官方 PDF 第 3 頁截圖；題目文字上方已整理，可用圖核對細節。）</figcaption></figure>
+            <figure class="figure-wrap"><button class="figure-zoom" type="button" aria-label="點圖放大：111 年第 32 題原卷圖：長方體上下表面液體壓力"><img  src="assets/111-32-figure-crop.jpg" alt="111 年第 32 題原卷圖：長方體上下表面液體壓力" loading="lazy"></button><figcaption>111 年第 32 題原卷圖：長方體上下表面液體壓力（官方 PDF 局部截圖；點圖可放大核對細節。）</figcaption></figure>
             <ol class="options" type="A"><li><strong>A.</strong> 1</li>
 <li><strong>B.</strong> 2.5</li>
 <li><strong>C.</strong> 3</li>
@@ -1416,7 +1481,7 @@
             <h4>考古題 14｜將木塊放入一個裝滿水的箱子內，施力將木塊整塊壓入水面，並闔上箱子上蓋，此時水面、木塊頂部與蓋子貼齊；木塊為邊長 10 cm、密度 0.7 g/cm³ 的正立方體；箱子為邊長 20 cm 的正立方體，水的密度為 1 g/cm³。求蓋子施予木塊的力為何？</h4>
 
 
-            <figure class="figure-wrap"><img src="assets/110-20-figure-p2.jpg" alt="110 年第 20 題原卷圖：木塊壓入裝滿水箱" loading="lazy"><figcaption>110 年第 20 題原卷圖：木塊壓入裝滿水箱（官方 PDF 第 2 頁截圖；題目文字上方已整理，可用圖核對細節。）</figcaption></figure>
+            <figure class="figure-wrap"><button class="figure-zoom" type="button" aria-label="點圖放大：110 年第 20 題原卷圖：木塊壓入裝滿水箱"><img  src="assets/110-20-figure-crop.jpg" alt="110 年第 20 題原卷圖：木塊壓入裝滿水箱" loading="lazy"></button><figcaption>110 年第 20 題原卷圖：木塊壓入裝滿水箱（官方 PDF 局部截圖；點圖可放大核對細節。）</figcaption></figure>
             <ol class="options" type="A"><li><strong>A.</strong> 200 gw</li>
 <li><strong>B.</strong> 300 gw</li>
 <li><strong>C.</strong> 700 gw</li>
@@ -1431,7 +1496,7 @@
             <h4>考古題 15｜在彈簧秤下端懸掛一個金屬圓柱，已知彈簧秤讀數為 400 公克重。回答：（1）若圓柱全部沒入水中，此時彈簧秤讀數為 300 公克重，則圓柱所受浮力為多少？（2）若改裝密度為 0.6 g/cm³ 的油，然後將圓柱完全沒入油中，則彈簧秤讀數為多少？</h4>
 
 
-            <figure class="figure-wrap"><img src="assets/110-written-5-figure-p5.jpg" alt="110 年非選第 5 題原卷圖：金屬圓柱與彈簧秤" loading="lazy"><figcaption>110 年非選第 5 題原卷圖：金屬圓柱與彈簧秤（官方 PDF 第 5 頁截圖；題目文字上方已整理，可用圖核對細節。）</figcaption></figure>
+            <figure class="figure-wrap"><button class="figure-zoom" type="button" aria-label="點圖放大：110 年非選第 5 題原卷圖：金屬圓柱與彈簧秤"><img  src="assets/110-written-5-figure-crop.jpg" alt="110 年非選第 5 題原卷圖：金屬圓柱與彈簧秤" loading="lazy"></button><figcaption>110 年非選第 5 題原卷圖：金屬圓柱與彈簧秤（官方 PDF 局部截圖；點圖可放大核對細節。）</figcaption></figure>
             <ol class="options" type="A"><li><strong>A.</strong> （1）100 gw；（2）340 gw</li>
 <li><strong>B.</strong> （1）300 gw；（2）100 gw</li>
 <li><strong>C.</strong> （1）400 gw；（2）240 gw</li>
@@ -1459,6 +1524,15 @@
       </ul>
     </div>
   </footer>
+
+
+  <dialog class="image-lightbox" id="image-lightbox" aria-label="圖片放大檢視">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" type="button" id="lightbox-close">關閉 ×</button>
+      <img id="lightbox-image" alt="">
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+  </dialog>
 
   <script>
     const answerBlocks = Array.from(document.querySelectorAll("details"));
@@ -1508,6 +1582,32 @@
         });
         updateFilterStatus(filter);
       });
+    });
+
+
+    const lightbox = document.querySelector("#image-lightbox");
+    const lightboxImage = document.querySelector("#lightbox-image");
+    const lightboxCaption = document.querySelector("#lightbox-caption");
+    const lightboxClose = document.querySelector("#lightbox-close");
+
+    function openFigureLightbox(img) {
+      if (!lightbox || !lightboxImage) return;
+      lightboxImage.src = img.currentSrc || img.src;
+      lightboxImage.alt = img.alt || "考古題局部圖";
+      const caption = img.closest("figure")?.querySelector("figcaption")?.textContent || img.alt || "考古題局部圖";
+      lightboxCaption.textContent = caption;
+      if (typeof lightbox.showModal === "function") lightbox.showModal();
+    }
+
+    document.querySelectorAll(".figure-zoom").forEach((button) => {
+      button.addEventListener("click", () => {
+        const img = button.querySelector("img");
+        if (img) openFigureLightbox(img);
+      });
+    });
+    lightboxClose?.addEventListener("click", () => lightbox.close());
+    lightbox?.addEventListener("click", (event) => {
+      if (event.target === lightbox) lightbox.close();
     });
 
     const lab = {

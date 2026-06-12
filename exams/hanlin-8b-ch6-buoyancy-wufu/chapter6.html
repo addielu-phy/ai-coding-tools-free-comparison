@@ -1,0 +1,1517 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>國二下翰林理化第 6 章｜力與壓力學習重點</title>
+  <meta name="description" content="國二下翰林版理化第 6 章力與壓力學習重點，含力與平衡、摩擦力、壓力、浮力例題與隱藏式詳解。">
+  <style>
+    :root {
+      --ink: #172331;
+      --muted: #5b6b7a;
+      --paper: #fbfdfb;
+      --surface: #fff;
+      --line: #d6e0df;
+      --teal: #057b78;
+      --teal-soft: #e4f5f2;
+      --blue: #245d9b;
+      --blue-soft: #e8f1fb;
+      --coral: #c65143;
+      --coral-soft: #fdebe5;
+      --gold: #9d6a05;
+      --gold-soft: #fff3cf;
+      --green: #2d7047;
+      --green-soft: #e9f5ea;
+      --violet: #6e55a3;
+      --violet-soft: #f0ebfb;
+      --shadow: 0 16px 36px rgba(16, 34, 48, .1);
+      --radius: 8px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Noto Sans TC", "Microsoft JhengHei", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+      letter-spacing: 0;
+      background:
+        linear-gradient(180deg, rgba(228, 245, 242, .86), rgba(251, 253, 251, .96) 360px),
+        var(--paper);
+    }
+    a { color: inherit; }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(214, 224, 223, .92);
+      background: rgba(255, 255, 255, .92);
+      backdrop-filter: blur(16px);
+    }
+    .topbar-inner {
+      width: min(var(--max), calc(100% - 28px));
+      min-height: 64px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .brand {
+      min-width: max-content;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-weight: 900;
+    }
+    .brand-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: inline-grid;
+      place-items: center;
+      color: #fff;
+      background: conic-gradient(from 160deg, var(--teal), var(--blue), var(--coral), var(--teal));
+      font-weight: 900;
+    }
+    .nav {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding: 10px 0;
+      scrollbar-width: none;
+    }
+    .nav::-webkit-scrollbar { display: none; }
+    .nav a,
+    .button,
+    .filter-button {
+      min-height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 8px 14px;
+      background: #fff;
+      color: var(--ink);
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .nav a:hover,
+    .button:hover,
+    .filter-button:hover,
+    .filter-button.is-active {
+      border-color: rgba(5, 123, 120, .42);
+      background: var(--teal-soft);
+      color: #084f50;
+    }
+    .primary {
+      border-color: var(--teal);
+      background: var(--teal);
+      color: #fff;
+    }
+    .primary:hover {
+      color: #fff;
+      background: #046b68;
+      border-color: #046b68;
+    }
+    .wrap {
+      width: min(var(--max), calc(100% - 28px));
+      margin: 0 auto;
+    }
+    .hero {
+      padding: 42px 0 36px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(320px, .92fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--teal);
+      font-weight: 900;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    p { margin-top: 0; }
+    h1 {
+      margin-bottom: 14px;
+      font-size: 4.1rem;
+      line-height: 1.04;
+    }
+    h2 {
+      margin-bottom: 8px;
+      font-size: 2.25rem;
+      line-height: 1.18;
+    }
+    h3 {
+      margin-bottom: 8px;
+      font-size: 1.32rem;
+      line-height: 1.25;
+    }
+    h4 {
+      margin-bottom: 10px;
+      font-size: 1.02rem;
+      line-height: 1.45;
+    }
+    .lead {
+      max-width: 70ch;
+      color: var(--muted);
+      font-size: 1.06rem;
+    }
+    .badges,
+    .toolbar,
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 20px;
+    }
+    .badge {
+      min-height: 32px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 10px;
+      background: #fff;
+      color: #304153;
+      font-size: .93rem;
+      font-weight: 800;
+    }
+    .hero-visual,
+    .notice,
+    .map-card,
+    .point-card,
+    .formula-card,
+    .example-card,
+    .lab-panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: 0 10px 28px rgba(16, 34, 48, .07);
+    }
+    .hero-visual {
+      min-height: 440px;
+      padding: 20px;
+      display: grid;
+      align-content: space-between;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(255, 243, 207, .82), rgba(232, 241, 251, .76)),
+        #fff;
+    }
+    .visual-title {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      color: var(--muted);
+      font-weight: 900;
+    }
+    .force-scene {
+      position: relative;
+      min-height: 270px;
+      margin-top: 18px;
+      border-radius: var(--radius);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, .72), rgba(255, 255, 255, .18)),
+        repeating-linear-gradient(90deg, rgba(36, 93, 155, .08) 0 1px, transparent 1px 44px),
+        repeating-linear-gradient(0deg, rgba(5, 123, 120, .08) 0 1px, transparent 1px 44px);
+      overflow: hidden;
+    }
+    .track {
+      position: absolute;
+      left: 26px;
+      right: 26px;
+      bottom: 64px;
+      height: 8px;
+      border-radius: 999px;
+      background: #c9d5d8;
+    }
+    .block {
+      position: absolute;
+      left: 48%;
+      bottom: 72px;
+      width: 94px;
+      height: 58px;
+      border-radius: var(--radius);
+      transform: translateX(-50%);
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: linear-gradient(135deg, var(--coral), #8d3a32);
+      box-shadow: 0 18px 26px rgba(198, 81, 67, .25);
+      font-weight: 900;
+    }
+    .spring {
+      position: absolute;
+      left: 52px;
+      bottom: 106px;
+      width: 230px;
+      height: 28px;
+      background:
+        repeating-linear-gradient(90deg, transparent 0 10px, var(--teal) 10px 14px, transparent 14px 24px);
+      border-left: 5px solid var(--teal);
+      border-right: 5px solid var(--teal);
+    }
+    .wall {
+      position: absolute;
+      left: 34px;
+      bottom: 80px;
+      width: 14px;
+      height: 100px;
+      border-radius: 6px;
+      background: var(--ink);
+    }
+    .arrow {
+      position: absolute;
+      height: 4px;
+      border-radius: 999px;
+      background: var(--blue);
+    }
+    .arrow::after {
+      content: "";
+      position: absolute;
+      right: -2px;
+      top: 50%;
+      width: 12px;
+      height: 12px;
+      border-top: 4px solid var(--blue);
+      border-right: 4px solid var(--blue);
+      transform: translateY(-50%) rotate(45deg);
+    }
+    .arrow.push {
+      right: 58px;
+      bottom: 124px;
+      width: 154px;
+    }
+    .arrow.friction {
+      left: 58px;
+      bottom: 48px;
+      width: 136px;
+      background: var(--gold);
+      transform: rotate(180deg);
+    }
+    .arrow.friction::after {
+      border-color: var(--gold);
+    }
+    .arrow.up {
+      left: 50%;
+      bottom: 142px;
+      width: 86px;
+      transform: translateX(-50%) rotate(-90deg);
+      background: var(--green);
+    }
+    .arrow.up::after {
+      border-color: var(--green);
+    }
+    .arrow.down {
+      left: 50%;
+      bottom: 24px;
+      width: 86px;
+      transform: translateX(-50%) rotate(90deg);
+      background: var(--violet);
+    }
+    .arrow.down::after {
+      border-color: var(--violet);
+    }
+    .scene-label {
+      position: absolute;
+      border: 1px solid rgba(214, 224, 223, .9);
+      border-radius: 999px;
+      padding: 5px 9px;
+      background: rgba(255, 255, 255, .92);
+      color: #2d3f4d;
+      font-size: .86rem;
+      font-weight: 900;
+    }
+    .label-push { right: 78px; bottom: 136px; }
+    .label-friction { left: 58px; bottom: 20px; }
+    .label-up { left: 48%; top: 46px; }
+    .label-down { left: 49%; bottom: 8px; }
+    .visual-note {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-weight: 800;
+    }
+    .notice {
+      padding: 14px 16px;
+      color: #3c4c5d;
+      background: #fbfcfe;
+    }
+    .section {
+      padding: 46px 0;
+      border-top: 1px solid rgba(214, 224, 223, .82);
+      scroll-margin-top: 82px;
+    }
+    .section:nth-of-type(odd) {
+      background: rgba(255, 255, 255, .48);
+    }
+    .section-head {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 14px;
+      align-items: start;
+      margin-bottom: 22px;
+    }
+    .section-num {
+      width: 58px;
+      height: 58px;
+      border-radius: var(--radius);
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--teal);
+      font-weight: 900;
+    }
+    .section-head p {
+      max-width: 82ch;
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+    .map-grid,
+    .point-grid,
+    .formula-grid,
+    .example-grid,
+    .lab-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    .point-grid,
+    .formula-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .example-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .lab-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .map-card,
+    .point-card,
+    .formula-card,
+    .example-card,
+    .lab-panel {
+      padding: 18px;
+    }
+    .map-card b,
+    .point-card b,
+    .formula-card b {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--teal);
+    }
+    .map-card ul,
+    .point-card ul {
+      margin: 10px 0 0;
+      padding-left: 1.15rem;
+      color: #344557;
+    }
+    .map-card li + li,
+    .point-card li + li {
+      margin-top: 6px;
+    }
+    .formula {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      border-radius: 6px;
+      padding: 4px 8px;
+      background: var(--blue-soft);
+      color: #173d68;
+      font-family: "Consolas", "Cascadia Mono", monospace;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+    .formula-card p,
+    .example-card p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+    .lab-panel {
+      min-height: 270px;
+      background: #fff;
+    }
+    .lab-panel label {
+      display: grid;
+      gap: 6px;
+      margin: 12px 0;
+      color: #324355;
+      font-weight: 800;
+    }
+    input[type="range"] {
+      width: 100%;
+      accent-color: var(--teal);
+    }
+    .lab-result {
+      min-height: 70px;
+      border-radius: var(--radius);
+      padding: 12px;
+      background: var(--teal-soft);
+      color: #084f50;
+      font-weight: 900;
+    }
+    .practice-top {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: end;
+      margin-bottom: 18px;
+    }
+    .practice-top p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+    .filter-status {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-weight: 800;
+    }
+    .example-card {
+      border-top: 5px solid var(--teal);
+    }
+    .example-card[data-topic="6-1"] { border-top-color: var(--teal); }
+    .example-card[data-topic="6-2"] { border-top-color: var(--gold); }
+    .example-card[data-topic="6-3"] { border-top-color: var(--violet); }
+    .example-card[data-topic="6-4"] { border-top-color: var(--blue); }
+    .q-meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: .9rem;
+      font-weight: 900;
+    }
+    .q-tag {
+      border-radius: 999px;
+      padding: 3px 8px;
+      background: var(--teal-soft);
+      color: #084f50;
+    }
+    .options {
+      display: grid;
+      gap: 6px;
+      margin: 10px 0 0;
+      padding-left: 1.4rem;
+    }
+    details {
+      margin-top: 14px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: #fbfcfe;
+      overflow: hidden;
+    }
+    summary {
+      min-height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 12px;
+      cursor: pointer;
+      color: #1c4f52;
+      font-weight: 900;
+      list-style: none;
+    }
+    summary::after {
+      content: "+";
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: inline-grid;
+      place-items: center;
+      background: var(--teal);
+      color: #fff;
+      font-weight: 900;
+    }
+    details[open] summary::after { content: "-"; }
+    summary::-webkit-details-marker { display: none; }
+    .answer {
+      border-top: 1px solid var(--line);
+      padding: 12px;
+      color: #304153;
+      background: #fff;
+    }
+    .answer p {
+      margin-bottom: 8px;
+    }
+    .answer p:last-child {
+      margin-bottom: 0;
+    }
+    .sources {
+      padding: 40px 0 48px;
+      border-top: 1px solid var(--line);
+      background: #fff;
+      color: var(--muted);
+    }
+    .sources h2 {
+      color: var(--ink);
+      font-size: 1.25rem;
+    }
+    .sources a {
+      color: var(--blue);
+      text-underline-offset: 3px;
+    }
+    .hidden { display: none !important; }
+
+
+    .buoyancy-deep {
+      background: linear-gradient(180deg, rgba(232, 241, 251, .72), rgba(251, 253, 251, .98));
+    }
+    .concept-grid, .exam-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .concept-card, .exam-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: 0 10px 28px rgba(16, 34, 48, .07);
+      padding: 18px;
+    }
+    .concept-card b { display: block; margin-bottom: 8px; color: var(--blue); }
+    .exam-card { display: grid; gap: 12px; }
+    .exam-card h4 { margin-bottom: 0; }
+    .exam-meta { display:flex; flex-wrap:wrap; gap:8px; color: var(--muted); font-weight: 800; font-size: .92rem; }
+    .source-link { color: var(--teal); font-weight: 900; }
+    .diagram-note { margin: 0; padding: 10px 12px; border-radius: var(--radius); background: var(--gold-soft); color: #69480a; font-size: .94rem; }
+    .option-explain { margin: 10px 0 0; padding-left: 1.2rem; }
+    .option-explain li { margin-bottom: 8px; }
+    .scope-note { margin-top: 18px; padding: 14px 16px; border-left: 5px solid var(--teal); background: #fff; border-radius: var(--radius); }
+    @media (max-width: 1020px) { .concept-grid, .exam-grid { grid-template-columns: 1fr; } }
+
+    @media (max-width: 1020px) {
+      .hero,
+      .practice-top,
+      .lab-grid {
+        grid-template-columns: 1fr;
+      }
+      .map-grid,
+      .point-grid,
+      .formula-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 720px) {
+      h1 { font-size: 2.45rem; }
+      h2 { font-size: 1.72rem; }
+      .topbar-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 10px 0;
+      }
+      .hero { padding-top: 28px; }
+      .hero-visual { min-height: 360px; }
+      .force-scene { min-height: 230px; }
+      .spring { width: 160px; }
+      .arrow.push { width: 92px; }
+      .map-grid,
+      .point-grid,
+      .formula-grid,
+      .example-grid {
+        grid-template-columns: 1fr;
+      }
+      .section-head {
+        grid-template-columns: 1fr;
+      }
+      .lab-grid {
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark">C</span>
+        <span>國二下理化</span>
+      </a>
+      <nav class="nav" aria-label="章節導覽">
+        <a href="./index.html">第 5 章重點</a>
+        <a href="./chapter6.html">第 6 章重點</a>
+        <a href="./chapter6-lab-videos.html">實驗影片</a>
+        <a href="./final-exams.html">五福期末考古題</a>
+        <a href="#s61">6-1</a>
+        <a href="#s62">6-2</a>
+        <a href="#s63">6-3</a>
+        <a href="#s64">6-4</a>
+        <a href="#practice">例題練習</a>
+        <a href="#buoyancy-exams">浮力考古題</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">翰林版國二下理化 Ch.6</p>
+        <h1 id="page-title">力與壓力</h1>
+        <p class="lead">第 6 章的題目不是背公式就結束，重點是把「力的方向、接觸面積、液體深度、排開液體」畫出來。這頁把常考觀念拆成四段，搭配計算例題與隱藏式詳解。</p>
+        <div class="badges" aria-label="學習目標">
+          <span class="badge">力圖與二力平衡</span>
+          <span class="badge">摩擦力判斷</span>
+          <span class="badge">壓力與液體壓力</span>
+          <span class="badge">浮力與沉浮</span>
+        </div>
+        <div class="toolbar" aria-label="頁面操作">
+          <a class="button primary" href="#s61">開始讀重點</a>
+          <a class="button primary" href="#practice">直接做例題</a>
+          <a class="button" href="./chapter6-lab-videos.html">看實驗影片</a>
+          <a class="button" href="./final-exams.html#chapter6">做五福第 6 章考古題</a>
+          <a class="button primary" href="#buoyancy-exams">練五福浮力題</a>
+          <button class="button" type="button" id="expand-all">全部顯示解答</button>
+          <button class="button" type="button" id="collapse-all">全部隱藏解答</button>
+        </div>
+        <p class="notice" id="progress" aria-live="polite">目前已開啟 0 題解答。</p>
+      </div>
+
+      <aside class="hero-visual" aria-label="力與壓力示意圖">
+        <div class="visual-title">
+          <span>Force Lab</span>
+          <span>方向比數字先出場</span>
+        </div>
+        <div class="force-scene" aria-hidden="true">
+          <span class="wall"></span>
+          <span class="spring"></span>
+          <span class="track"></span>
+          <span class="block">物體</span>
+          <span class="arrow push"></span>
+          <span class="arrow friction"></span>
+          <span class="arrow up"></span>
+          <span class="arrow down"></span>
+          <span class="scene-label label-push">施力</span>
+          <span class="scene-label label-friction">摩擦力</span>
+          <span class="scene-label label-up">浮力/支持力</span>
+          <span class="scene-label label-down">重力</span>
+        </div>
+        <p class="visual-note">先畫受力，再代公式；第 6 章多數陷阱都藏在方向、面積和深度。</p>
+      </aside>
+    </section>
+
+    <section class="section" id="map">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-num">MAP</span>
+          <div>
+            <h2>章節地圖</h2>
+            <p>把這四塊連起來看：力決定運動狀態，摩擦力和壓力來自接觸，液體壓力造成浮力。</p>
+          </div>
+        </div>
+        <div class="map-grid">
+          <article class="map-card">
+            <b>6-1 力與平衡</b>
+            <ul>
+              <li>力的三要素：大小、方向、作用點</li>
+              <li>彈簧伸長量和受力成正比</li>
+              <li>二力平衡要大小相等、方向相反、同一直線</li>
+            </ul>
+          </article>
+          <article class="map-card">
+            <b>6-2 摩擦力</b>
+            <ul>
+              <li>靜摩擦力會隨外力調整</li>
+              <li>最大靜摩擦力是「快滑動前」的上限</li>
+              <li>摩擦力方向阻礙相對運動或相對運動趨勢</li>
+            </ul>
+          </article>
+          <article class="map-card">
+            <b>6-3 壓力</b>
+            <ul>
+              <li>壓力等於垂直作用力除以受力面積</li>
+              <li>同種液體壓力看深度，不看容器形狀</li>
+              <li>連通管液面會在同一水平高度</li>
+            </ul>
+          </article>
+          <article class="map-card">
+            <b>6-4 浮力</b>
+            <ul>
+              <li>浮力等於物體排開液體的重量</li>
+              <li>漂浮時浮力等於物重</li>
+              <li>彈簧秤讀數變小量就是浮力</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="s61">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-num">6-1</span>
+          <div>
+            <h2>力與平衡</h2>
+            <p>力可以改變物體形狀或運動狀態。題目常把彈簧表格、受力方向和二力平衡混在一起。</p>
+          </div>
+        </div>
+        <div class="point-grid">
+          <article class="point-card">
+            <b>力是向量</b>
+            <p>同樣 10 gw，向右和向左效果不同。作答時先畫箭頭，再比較大小。</p>
+          </article>
+          <article class="point-card">
+            <b>彈簧原長</b>
+            <p>胡克定律看伸長量，不是看彈簧全長。先用「全長 - 原長」求伸長量。</p>
+          </article>
+          <article class="point-card">
+            <b>二力平衡</b>
+            <p>靜止或等速度直線運動都表示合力為 0。兩力平衡時作用在同一物體上。</p>
+          </article>
+        </div>
+        <div class="formula-grid" aria-label="公式整理">
+          <article class="formula-card">
+            <b>彈簧受力</b>
+            <p><span class="formula">F / x = 定值</span></p>
+            <p>x 是伸長量，不能直接拿全長代入。</p>
+          </article>
+          <article class="formula-card">
+            <b>合力</b>
+            <p><span class="formula">同向相加，反向相減</span></p>
+            <p>方向取較大的那一邊。</p>
+          </article>
+          <article class="formula-card">
+            <b>平衡</b>
+            <p><span class="formula">合力 = 0</span></p>
+            <p>合力為 0 不代表沒有受力，而是互相抵消。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="s62">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-num">6-2</span>
+          <div>
+            <h2>摩擦力</h2>
+            <p>摩擦力的陷阱在「還沒動」和「已經動」不同。靜摩擦力不一定等於最大靜摩擦力。</p>
+          </div>
+        </div>
+        <div class="point-grid">
+          <article class="point-card">
+            <b>靜摩擦力</b>
+            <p>物體還沒滑動時，靜摩擦力會配合外力大小調整，讓物體維持平衡。</p>
+          </article>
+          <article class="point-card">
+            <b>最大靜摩擦力</b>
+            <p>外力增加到剛要滑動前，靜摩擦力達最大值。再大就開始滑動。</p>
+          </article>
+          <article class="point-card">
+            <b>影響因素</b>
+            <p>常見題型看接觸面材質與正向力大小，不直接看接觸面積大小。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="s63">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-num">6-3</span>
+          <div>
+            <h2>壓力與液體壓力</h2>
+            <p>壓力不是力本身，而是單位面積受到的垂直作用力。尖端、雪鞋、刀刃都在改變面積。</p>
+          </div>
+        </div>
+        <div class="formula-grid">
+          <article class="formula-card">
+            <b>固體壓力</b>
+            <p><span class="formula">P = F / A</span></p>
+            <p>同樣重量，面積越小，壓力越大。</p>
+          </article>
+          <article class="formula-card">
+            <b>液體壓力</b>
+            <p><span class="formula">P = h × d</span></p>
+            <p>用 gw/cm<sup>2</sup> 時，h 用 cm，d 用 g/cm<sup>3</sup>。</p>
+          </article>
+          <article class="formula-card">
+            <b>大氣壓</b>
+            <p><span class="formula">1 atm ≈ 76 cmHg</span></p>
+            <p>海拔越高，空氣柱越短，大氣壓越小。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="s64">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-num">6-4</span>
+          <div>
+            <h2>浮力</h2>
+            <p>浮力來自液體上下壓力差。計算時抓住一句話：浮力等於排開液體的重量。</p>
+          </div>
+        </div>
+        <div class="formula-grid">
+          <article class="formula-card">
+            <b>浮力測量</b>
+            <p><span class="formula">B = 空氣中重 - 液體中讀數</span></p>
+            <p>彈簧秤少掉多少，就是液體向上的浮力。</p>
+          </article>
+          <article class="formula-card">
+            <b>阿基米德原理</b>
+            <p><span class="formula">B = V<sub>排</sub> × d<sub>液</sub></span></p>
+            <p>液體密度越大，同體積排開的液體越重。</p>
+          </article>
+          <article class="formula-card">
+            <b>漂浮條件</b>
+            <p><span class="formula">漂浮時 B = W</span></p>
+            <p>物體密度小於液體，會有一部分露出液面。</p>
+          </article>
+        </div>
+
+        <div class="concept-grid">
+          <article class="concept-card"><b>1｜浮力從哪裡來</b><p>液體越深壓力越大，所以物體下表面受到的向上壓力通常大於上表面向下壓力；上下壓力差就是浮力。</p></article>
+          <article class="concept-card"><b>2｜阿基米德原理</b><p><span class="formula">B = V<sub>排</sub> × d<sub>液</sub></span>。國中題常用「排開多少 cm³ 的水，就有多少 gw 浮力」。換成鹽水或酒精時，記得乘液體密度。</p></article>
+          <article class="concept-card"><b>3｜彈簧秤題</b><p><span class="formula">浮力 = 空氣中重量 - 液體中讀數</span>。讀數變小，不是重量消失，而是液體幫忙往上托。</p></article>
+          <article class="concept-card"><b>4｜漂浮題</b><p>只要物體靜止漂浮，必有 <span class="formula">B = W</span>。液體密度變大時，所需排開體積變小；密度變小時，物體會沉入更多。</p></article>
+          <article class="concept-card"><b>5｜沉體與浮體</b><p>密度大於液體常下沉；密度小於液體常漂浮。但計算題仍以受力平衡和排開液體重為準。</p></article>
+          <article class="concept-card"><b>6｜外力壓入</b><p>把浮體壓到更深，排開體積增加，浮力變大；需要的外力通常是「完全沒入浮力 − 物重」。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="lab">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-num">CALC</span>
+          <div>
+            <h2>快算小實驗</h2>
+            <p>用數值把公式感覺拉出來。壓力、液體壓力、浮力都只是在問「哪個量被除、哪個量被排開」。</p>
+          </div>
+        </div>
+        <div class="lab-grid">
+          <section class="lab-panel" aria-labelledby="solid-lab-title">
+            <h3 id="solid-lab-title">固體壓力</h3>
+            <label>作用力 <span id="force-value">600 gw</span>
+              <input id="force-range" type="range" min="100" max="1200" step="50" value="600">
+            </label>
+            <label>面積 <span id="area-value">20 cm²</span>
+              <input id="area-range" type="range" min="5" max="80" step="5" value="20">
+            </label>
+            <p class="lab-result" id="solid-result">P = 600 / 20 = 30 gw/cm²</p>
+          </section>
+          <section class="lab-panel" aria-labelledby="liquid-lab-title">
+            <h3 id="liquid-lab-title">液體壓力</h3>
+            <label>深度 <span id="depth-value">50 cm</span>
+              <input id="depth-range" type="range" min="10" max="160" step="10" value="50">
+            </label>
+            <label>液體密度 <span id="density-value">1.0 g/cm³</span>
+              <input id="density-range" type="range" min="0.5" max="1.4" step="0.1" value="1">
+            </label>
+            <p class="lab-result" id="liquid-result">P = 50 × 1.0 = 50 gw/cm²</p>
+          </section>
+          <section class="lab-panel" aria-labelledby="float-lab-title">
+            <h3 id="float-lab-title">浮力測量</h3>
+            <label>空氣中重量 <span id="weight-value">120 gw</span>
+              <input id="weight-range" type="range" min="50" max="300" step="10" value="120">
+            </label>
+            <label>水中讀數 <span id="reading-value">75 gw</span>
+              <input id="reading-range" type="range" min="0" max="250" step="5" value="75">
+            </label>
+            <p class="lab-result" id="float-result">B = 120 - 75 = 45 gw</p>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="practice">
+      <div class="wrap">
+        <div class="practice-top">
+          <div>
+            <h2>例題與練習</h2>
+            <p>先自己算，再點開答案。每題都用段考常見問法整理。</p>
+          </div>
+          <div>
+            <div class="filters" aria-label="例題篩選">
+              <button class="filter-button is-active" type="button" data-filter="all">全部</button>
+              <button class="filter-button" type="button" data-filter="6-1">6-1</button>
+              <button class="filter-button" type="button" data-filter="6-2">6-2</button>
+              <button class="filter-button" type="button" data-filter="6-3">6-3</button>
+              <button class="filter-button" type="button" data-filter="6-4">6-4</button>
+            </div>
+            <p class="filter-status" id="filter-status" aria-live="polite">目前顯示全部 20 題。</p>
+          </div>
+        </div>
+
+        <div class="example-grid">
+          <article class="example-card" data-topic="6-1">
+            <div class="q-meta"><span>例題 1</span><span class="q-tag">6-1 彈簧原長</span></div>
+            <h4>某彈簧掛 40 gw 砝碼時全長 18 cm，掛 70 gw 時全長 24 cm。若在彈性限度內，彈簧原長是多少？</h4>
+            <ol class="options">
+              <li>8 cm</li>
+              <li>10 cm</li>
+              <li>12 cm</li>
+              <li>14 cm</li>
+            </ol>
+            <details><summary>顯示答案與解說</summary><div class="answer"><p><strong>答案：2。</strong></p><p>受力增加 30 gw，全長增加 6 cm，所以每 10 gw 增加 2 cm。掛 40 gw 時伸長 8 cm，原長 = 18 - 8 = 10 cm。</p></div></details>
+          </article>
+
+          <article class="example-card" data-topic="6-1">
+            <div class="q-meta"><span>例題 2</span><span class="q-tag">6-1 合力</span></div>
+            <h4>一物體同時受向右 18 N、向左 11 N、向左 4 N 三個水平力，合力大小和方向為何？</h4>
+            <ol class="options">
+              <li>3 N 向右</li>
+              <li>3 N 向左</li>
+              <li>33 N 向右</li>
+              <li>33 N 向左</li>
+            </ol>
+            <details><summary>顯示答案與解說</summary><div class="answer"><p><strong>答案：1。</strong></p><p>向左合力 11 + 4 = 15 N，向右 18 N 較大，所以合力 18 - 15 = 3 N，方向向右。</p></div></details>
+          </article>
+
+          <article class="example-card" data-topic="6-1">
+            <div class="q-meta"><span>例題 3</span><span class="q-tag">6-1 二力平衡</span></div>
+            <h4>下列哪一組最可能形成二力平衡？</h4>
+            <ol class="options">
+              <li>同一物體受 5 N 向右和 5 N 向上</li>
+              <li>同一物體受 8 N 向左和 8 N 向右，且在同一直線上</li>
+              <li>兩個不同物體各受 10 N 反向力</li>
+              <li>同一物體受 6 N 向左和 9 N 向右</li>
+            </ol>
+            <details><summary>顯示答案與解說</summary><div class="answer"><p><strong>答案：2。</strong></p><p>二力平衡要作用在同一物體，大小相等、方向相反，且在同一直線上。</p></div></details>
+          </article>
+
+          <article class="example-card" data-topic="6-1">
+            <div class="q-meta"><span>例題 4</span><span class="q-tag">6-1 受力判斷</span></div>
+            <h4>電梯等速度上升時，站在體重計上的人所受合力為何？</h4>
+            <ol class="options">
+              <li>向上</li>
+              <li>向下</li>
+              <li>為 0</li>
+              <li>無法判斷</li>
+            </ol>
+            <details><summary>顯示答案與解說</summary><div class="answer"><p><strong>答案：3。</strong></p><p>等速度直線運動表示運動狀態不改變，合力為 0。此時支持力和重力大小相等、方向相反。</p></div></details>
+          </article>
+
+          <article class="example-card" data-topic="6-1">
+            <div class="q-meta"><span>例題 5</span><span class="q-tag">6-1 彈性限度</span></div>
+            <h4>彈簧受力 0、10、20、30 gw 時全長為 12、14、16、18 cm；受力 40 gw 時全長 21 cm。最合理推論是什麼？</h4>
+            <ol class="options">
+              <li>40 gw 後仍完全符合正比</li>
+              <li>彈簧原長是 14 cm</li>
+              <li>40 gw 時可能已超過彈性限度</li>
+              <li>30 gw 時伸長量為 18 cm</li>
+            </ol>
+            <details><summary>顯示答案與解說</summary><div class="answer"><p><strong>答案：3。</strong></p><p>前面每增加 10 gw，全長增加 2 cm；若仍線性，40 gw 應是 20 cm，但實測 21 cm，表示可能已偏離彈性範圍。</p></div></details>
+          </article>
+
+          <article class="example-card" data-topic="6-2">
+            <div class="q-meta"><span>例題 6</span><span class="q-tag">6-2 靜摩擦力</span></div>
+            <h4>用 30 gw 水平力推箱子，箱子仍靜止。箱子受到的靜摩擦力大小為何？</h4>
+            <ol class="options">
+              <li>0 gw</li>
+              <li>30 gw</li>
+              <li>一定大於 30 gw</li>
+              <li>一定等於最大靜摩擦力</li>
+            </ol>
+            <details><summary>顯示答案與解說</summary><div class="answer"><p><strong>答案：2。</strong></p><p>箱子靜止時水平方向合力為 0，因此靜摩擦力大小等於外力 30 gw，方向相反。</p></div></details>
+          </article>
+
+          <article class="example-card" data-topic="6-2">
+            <div class="q-meta"><span>例題 7</span><span class="q-tag">6-2 最大靜摩擦</span></div>
+            <h4>箱子受 80 gw 推力仍靜止，受 95 gw 推力開始滑動。最大靜摩擦力可能是多少？</h4>
+            <ol class="options">
+              <li>60 gw</li>
+              <li>78 gw</li>
+              <li>88 gw</li>
+              <li>110 gw</li>
+            </ol>
+            <details><summary>顯示答案與解說</summary><div class="answer"><p><strong>答案：3。</strong></p><p>80 gw 時還靜止，所以最大靜摩擦力至少 80 gw；95 gw 時開始滑動，所以最大靜摩擦力小於 95 gw。88 gw 符合範圍。</p></div></details>
+          </article>
+
+          <article class="example-card" data-topic="6-2">
+            <div class="q-meta"><span>例題 8</span><span class="q-tag">6-2 摩擦方向</span></div>
+            <h4>一本書放在向右移動的輸送帶上，剛接觸時書相對輸送帶有向左滑動趨勢。書受到的摩擦力方向為何？</h4>
+            <ol class="options">
+              <li>向右</li>
+              <li>向左</li>
+              <li>向上</li>
+              <li>沒有摩擦力</li>
+            </ol>
+            <details><summary>顯示答案與解說</summary><div class="answer"><p><strong>答案：1。</strong></p><p>摩擦力阻礙相對滑動或滑動趨勢。書相對輸送帶有向左趨勢，因此摩擦力作用在書上向右。</p></div></details>
+          </article>
+
+          <article class="example-card" data-topic="6-2">
+            <div class="q-meta"><span>例題 9</span><span class="q-tag">6-2 影響因素</span></div>
+            <h4>同一木塊放在同一桌面上，只把木塊翻成不同面接觸桌面。最大靜摩擦力通常如何變化？</h4>
+            <ol class="options">
+              <li>接觸面積越大一定越大</li>
+              <li>接觸面積越小一定越大</li>
+              <li>大致不因接觸面積改變</li>
+              <li>一定變成 0</li>
+            </ol>
+            <details><summary>顯示答案與解說</summary><div class="answer"><p><strong>答案：3。</strong></p><p>國中常見模型中，最大靜摩擦力主要和接觸面材質、正向力有關，不直接由接觸面積決定。</p></div></details>
+          </article>
+
+          <article class="example-card" data-topic="6-2">
+            <div class="q-meta"><span>例題 10</span><span class="q-tag">6-2 生活應用</span></div>
+            <h4>下列哪一項主要是為了增加摩擦力？</h4>
+            <ol class="options">
+              <li>軸承加潤滑油</li>
+              <li>滑雪板底面打蠟</li>
+              <li>鞋底刻紋</li>
+              <li>機械零件拋光</li>
+            </ol>
+            <details><summary>顯示答案與解說</summary><div class="answer"><p><strong>答案：3。</strong></p><p>鞋底刻紋可增加抓地效果，減少打滑。其餘多是為了降低摩擦。</p></div></details>
+          </article>
+
+          <article class="example-card" data-topic="6-3">
+            <div class="q-meta"><span>例題 11</span><span class="q-tag">6-3 固體壓力</span></div>
+            <h4>一物重 480 gw，與桌面接觸面積 24 cm²，物體對桌面的壓力是多少？</h4>
+            <ol class="options">
+              <li>12 gw/cm²</li>
+              <li>20 gw/cm²</li>
+              <li>36 gw/cm²</li>
+              <li>504 gw/cm²</li>
+            </ol>
+            <details><summary>顯示答案與解說</summary><div class="answer"><p><strong>答案：2。</strong></p><p>P = F / A = 480 / 24 = 20 gw/cm²。</p></div></details>
+          </article>
+
+          <article class="example-card" data-topic="6-3">
+            <div class="q-meta"><span>例題 12</span><span class="q-tag">6-3 面積變化</span></div>
+            <h4>同一人穿一般鞋和穿雪鞋站在雪地上，雪鞋較不易陷入雪中，主要原因是什麼？</h4>
+            <ol class="options">
+              <li>人體重量變小</li>
+              <li>受力面積變大，壓力變小</li>
+              <li>雪地重力變小</li>
+              <li>摩擦力完全消失</li>
+            </ol>
+            <details><summary>顯示答案與解說</summary><div class="answer"><p><strong>答案：2。</strong></p><p>人體重量幾乎不變，但接觸面積變大，所以 P = F / A 變小。</p></div></details>
+          </article>
+
+          <article class="example-card" data-topic="6-3">
+            <div class="q-meta"><span>例題 13</span><span class="q-tag">6-3 液體壓力</span></div>
+            <h4>水深 80 cm 處的液體壓力約是多少？水的密度取 1 g/cm³。</h4>
+            <ol class="options">
+              <li>8 gw/cm²</li>
+              <li>80 gw/cm²</li>
+              <li>800 gw/cm²</li>
+              <li>0.8 gw/cm²</li>
+            </ol>
+            <details><summary>顯示答案與解說</summary><div class="answer"><p><strong>答案：2。</strong></p><p>P = h × d = 80 × 1 = 80 gw/cm²。液體壓力看深度和液體密度。</p></div></details>
+          </article>
+
+          <article class="example-card" data-topic="6-3">
+            <div class="q-meta"><span>例題 14</span><span class="q-tag">6-3 連通管</span></div>
+            <h4>U 形管兩端開口，內裝同種靜止液體。左右管粗細不同時，兩邊自由液面高度如何？</h4>
+            <ol class="options">
+              <li>較粗那邊較高</li>
+              <li>較細那邊較高</li>
+              <li>同一水平高度</li>
+              <li>會一直上下震盪</li>
+            </ol>
+            <details><summary>顯示答案與解說</summary><div class="answer"><p><strong>答案：3。</strong></p><p>同一連通管中的同種靜止液體，自由液面會在同一水平面上，和管子粗細無關。</p></div></details>
+          </article>
+
+          <article class="example-card" data-topic="6-3">
+            <div class="q-meta"><span>例題 15</span><span class="q-tag">6-3 大氣壓</span></div>
+            <h4>登山時海拔升高，氣壓通常如何改變？</h4>
+            <ol class="options">
+              <li>變大</li>
+              <li>變小</li>
+              <li>不變</li>
+              <li>每升高一定變成 0</li>
+            </ol>
+            <details><summary>顯示答案與解說</summary><div class="answer"><p><strong>答案：2。</strong></p><p>海拔越高，上方空氣柱越短、空氣較稀薄，因此大氣壓通常降低。</p></div></details>
+          </article>
+
+          <article class="example-card" data-topic="6-4">
+            <div class="q-meta"><span>例題 16</span><span class="q-tag">6-4 浮力測量</span></div>
+            <h4>物體在空氣中重 120 gw，完全浸入水中時彈簧秤讀數 75 gw，浮力是多少？</h4>
+            <ol class="options">
+              <li>45 gw</li>
+              <li>75 gw</li>
+              <li>120 gw</li>
+              <li>195 gw</li>
+            </ol>
+            <details><summary>顯示答案與解說</summary><div class="answer"><p><strong>答案：1。</strong></p><p>浮力 = 空氣中重量 - 液體中讀數 = 120 - 75 = 45 gw。</p></div></details>
+          </article>
+
+          <article class="example-card" data-topic="6-4">
+            <div class="q-meta"><span>例題 17</span><span class="q-tag">6-4 物體體積</span></div>
+            <h4>承上題，若水的密度為 1 g/cm³，此物完全浸入水中時體積約是多少？</h4>
+            <ol class="options">
+              <li>45 cm³</li>
+              <li>75 cm³</li>
+              <li>120 cm³</li>
+              <li>195 cm³</li>
+            </ol>
+            <details><summary>顯示答案與解說</summary><div class="answer"><p><strong>答案：1。</strong></p><p>浮力等於排開水的重量，水密度為 1 g/cm³，所以排開 45 gw 的水約等於 45 cm³。</p></div></details>
+          </article>
+
+          <article class="example-card" data-topic="6-4">
+            <div class="q-meta"><span>例題 18</span><span class="q-tag">6-4 液體密度</span></div>
+            <h4>同一物體體積 45 cm³，完全浸入某液體中受到 54 gw 浮力，該液體密度約為多少？</h4>
+            <ol class="options">
+              <li>0.8 g/cm³</li>
+              <li>1.0 g/cm³</li>
+              <li>1.2 g/cm³</li>
+              <li>1.5 g/cm³</li>
+            </ol>
+            <details><summary>顯示答案與解說</summary><div class="answer"><p><strong>答案：3。</strong></p><p>B = V × d，所以 d = 54 / 45 = 1.2 g/cm³。</p></div></details>
+          </article>
+
+          <article class="example-card" data-topic="6-4">
+            <div class="q-meta"><span>例題 19</span><span class="q-tag">6-4 漂浮</span></div>
+            <h4>一木塊重 80 gw，漂浮在水面靜止時，受到的浮力為多少？</h4>
+            <ol class="options">
+              <li>小於 80 gw</li>
+              <li>等於 80 gw</li>
+              <li>大於 80 gw</li>
+              <li>等於露出水面部分重量</li>
+            </ol>
+            <details><summary>顯示答案與解說</summary><div class="answer"><p><strong>答案：2。</strong></p><p>漂浮且靜止時，重力和浮力平衡，所以浮力等於物重 80 gw。</p></div></details>
+          </article>
+
+          <article class="example-card" data-topic="6-4">
+            <div class="q-meta"><span>例題 20</span><span class="q-tag">6-4 沉浮判斷</span></div>
+            <h4>甲物密度 0.8 g/cm³、乙物密度 1.0 g/cm³、丙物密度 1.3 g/cm³，放入水中後哪一個會下沉？</h4>
+            <ol class="options">
+              <li>甲</li>
+              <li>乙</li>
+              <li>丙</li>
+              <li>三者都下沉</li>
+            </ol>
+            <details><summary>顯示答案與解說</summary><div class="answer"><p><strong>答案：3。</strong></p><p>水密度約 1.0 g/cm³。密度大於水的物體會下沉，所以丙會下沉；甲會浮起，乙可懸浮或接近平衡。</p></div></details>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section buoyancy-deep" id="buoyancy-exams">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-num">PAST</span>
+          <div>
+            <h2>五福國中國二下期末浮力考古題</h2>
+            <p>整理官方公開 110–113 學年度下學期第三次段考／期末二年級自然、理化卷中的浮力題。每題答案預設隱藏，點開後可逐一看 A–D 選項為何正確或錯誤。</p>
+          </div>
+        </div>
+        <div class="scope-note"><strong>範圍說明：</strong>五福官方公開頁近五年內可取得的期末卷為 110–113；109 學年度目前公開資料只見下學期第二次段考，不列入「期末／第三次段考」題庫，避免混用不同範圍。</div>
+        <div class="toolbar" aria-label="浮力考古題操作">
+          <a class="button primary" href="https://affairs.kh.edu.tw/5365/upload/upload_list/2" target="_blank" rel="noreferrer">五福官方題庫總頁</a>
+          <a class="button" href="https://affairs.kh.edu.tw/sites/5365/upload_file/23/113下-三段_-_pdf.zip" target="_blank" rel="noreferrer">113 原卷 ZIP</a>
+          <a class="button" href="https://affairs.kh.edu.tw/sites/5365/upload_file/19/112下三段_-_pdf.zip" target="_blank" rel="noreferrer">112 原卷 ZIP</a>
+          <a class="button" href="https://affairs.kh.edu.tw/sites/5365/upload_file/15/111下三段-pdf.zip" target="_blank" rel="noreferrer">111 原卷 ZIP</a>
+          <a class="button" href="https://affairs.kh.edu.tw/sites/5365/upload_file/11/110下三段-pdf.zip" target="_blank" rel="noreferrer">110 原卷 ZIP</a>
+        </div>
+        <div class="exam-grid">
+          <article class="exam-card" data-topic="6-4">
+            <div class="exam-meta"><span>113 學年度</span><span>第 34 題</span><span>液體密度與漂浮深淺</span></div>
+            <h4>考古題 01｜釣魚用的浮標可浮在水面上作為辨識魚餌的位置。圖（十三）為浮標放在淡水中的情形，若將此浮標改放入酒精中，酒精液面可能會在浮標的何處？（酒精密度略小於水）</h4>
+            <p class="diagram-note">原題含浮標圖（圖十三），本頁保留文字重點；位置甲、乙請搭配官方卷圖核對。</p>
+            <ol class="options" type="A"><li><strong>A.</strong> 甲位置</li>
+<li><strong>B.</strong> 乙位置</li>
+<li><strong>C.</strong> 維持在原來的位置</li>
+<li><strong>D.</strong> 只有鉛粒沉入酒精中</li></ol>
+            <details><summary>顯示答案與詳細解說</summary><div class="answer"><p><strong>答案：B</strong></p><ol class="option-explain" type="A"><li><strong>A.</strong> 若甲位置代表比淡水時更淺的吃水，則不合理；酒精密度較小，同一浮標要排開更多體積的酒精才能讓浮力等於重量。</li>
+<li><strong>B.</strong> 正確。液體密度變小，浮體需要排開較大體積，浮標會下沉一些，液面會出現在比淡水時更高的刻度/位置。</li>
+<li><strong>C.</strong> 錯。浮標重量不變，但酒精密度小於水，若排開體積不變，浮力會變小，無法平衡重量。</li>
+<li><strong>D.</strong> 錯。浮標整體受浮力與重力平衡，不是只有鉛粒單獨沉入；要看整個浮標排開液體的體積。</li></ol><p><a class="source-link" href="https://affairs.kh.edu.tw/sites/5365/upload_file/23/113下-三段_-_pdf.zip" target="_blank" rel="noreferrer">官方原始試卷 ZIP 來源（113）</a></p></div></details>
+          </article>
+          <article class="exam-card" data-topic="6-4">
+            <div class="exam-meta"><span>113 學年度</span><span>第 39 題</span><span>油水兩層中的浮力</span></div>
+            <h4>考古題 02｜如圖（十七）所示，一正立方體木塊，密度為 0.8 g/cm³，置於裝有 500 mL 水的玻璃杯中，此時木塊靜止浮於水面。若在此玻璃杯中再加入 500 mL 的油，發現液面上升，但木塊仍靜止浮於液面。已知油與水互不相溶，且油的密度為 0.7 g/cm³，則關於加入油前後的變化，下列敘述何者正確？</h4>
+            
+            <ol class="options" type="A"><li><strong>A.</strong> 木塊沒入水中的體積變小</li>
+<li><strong>B.</strong> 木塊沒入水中的體積變大</li>
+<li><strong>C.</strong> 木塊在液體中所受的浮力變小</li>
+<li><strong>D.</strong> 木塊在水中所受的浮力不變</li></ol>
+            <details><summary>顯示答案與詳細解說</summary><div class="answer"><p><strong>答案：A</strong></p><ol class="option-explain" type="A"><li><strong>A.</strong> 正確。加油後，木塊同時可排開水與油；油也提供一部分浮力，所以需要由水提供的浮力減少，沒入水中的體積變小。</li>
+<li><strong>B.</strong> 錯。若水中體積變大，水提供的浮力會變大；但加入油後油已額外提供浮力，不需要更多水的浮力。</li>
+<li><strong>C.</strong> 錯。木塊仍靜止漂浮，總浮力必等於木塊重量，木塊重量未變，所以總浮力不變。</li>
+<li><strong>D.</strong> 錯。總浮力不變，但其中一部分改由油提供，因此水提供的浮力變小，沒入水中的體積也變小。</li></ol><p><a class="source-link" href="https://affairs.kh.edu.tw/sites/5365/upload_file/23/113下-三段_-_pdf.zip" target="_blank" rel="noreferrer">官方原始試卷 ZIP 來源（113）</a></p></div></details>
+          </article>
+          <article class="exam-card" data-topic="6-4">
+            <div class="exam-meta"><span>112 學年度</span><span>第 24 題</span><span>密度、沉浮與浮力平衡</span></div>
+            <h4>考古題 03｜質量相同且塗成相同顏色的實心銅球和軟木球（銅球密度 8.9 g/cm³、軟木球密度 0.25 g/cm³）一起放在水中，結果一沉一浮。三人說法如下：安權懋：兩者質量相同但銅球密度比水大所以沉在水底。寅水姬：銅球所受水的浮力為銅球體積乘上水的密度，所以浮力小於銅球重量，而撐不住沉於水底。金素熙：雖質量相同但軟木球密度較銅球小所以體積較銅球大，而為浮體，其浮力剛好等於球重。請問何人說法正確？</h4>
+            
+            <ol class="options" type="A"><li><strong>A.</strong> 只有安權懋正確</li>
+<li><strong>B.</strong> 只有寅水姬正確</li>
+<li><strong>C.</strong> 只有金素熙正確</li>
+<li><strong>D.</strong> 三人皆正確</li></ol>
+            <details><summary>顯示答案與詳細解說</summary><div class="answer"><p><strong>答案：D</strong></p><ol class="option-explain" type="A"><li><strong>A.</strong> 錯。安權懋的判斷是正確的，但不是只有他正確。銅密度大於水，實心銅球會下沉。</li>
+<li><strong>B.</strong> 錯。寅水姬的判斷也是正確的，但不是只有她正確。沉體完全沒入時，浮力等於排開水重；銅球密度遠大於水，浮力小於重量。</li>
+<li><strong>C.</strong> 錯。金素熙的判斷也是正確的，但不是只有她正確。軟木密度小於水，會漂浮；靜止漂浮時浮力等於重量。</li>
+<li><strong>D.</strong> 正確。三人的說法分別對應密度判斷、阿基米德原理與漂浮平衡，皆合理。</li></ol><p><a class="source-link" href="https://affairs.kh.edu.tw/sites/5365/upload_file/19/112下三段_-_pdf.zip" target="_blank" rel="noreferrer">官方原始試卷 ZIP 來源（112）</a></p></div></details>
+          </article>
+          <article class="exam-card" data-topic="6-4">
+            <div class="exam-meta"><span>112 學年度</span><span>第 25 題</span><span>外力壓入與排開體積</span></div>
+            <h4>考古題 04｜將 500 cm³ 的液體 X 倒入燒杯中，再將質量 40 g、體積 100 cm³ 的正立方體木塊置入液體 X 中。液體 X 不與木塊反應，且靜止平衡後木塊正好有一半體積沒入液面下。若施力於木塊上，使木塊剛好完全沒入液體 X 中，此時施力大小為多少 gw？</h4>
+            
+            <ol class="options" type="A"><li><strong>A.</strong> 100</li>
+<li><strong>B.</strong> 50</li>
+<li><strong>C.</strong> 40</li>
+<li><strong>D.</strong> 資料不足，無法判斷</li></ol>
+            <details><summary>顯示答案與詳細解說</summary><div class="answer"><p><strong>答案：C</strong></p><ol class="option-explain" type="A"><li><strong>A.</strong> 錯。100 gw 是把液體密度誤當 1 g/cm³ 或把整個體積直接當重量，忽略題目已給「一半沒入時浮力=40 gw」。</li>
+<li><strong>B.</strong> 錯。半沒入時排開 50 cm³，浮力為 40 gw，可推得液體密度為 0.8 g/cm³；完全沒入浮力為 80 gw，不是只多 50 gw。</li>
+<li><strong>C.</strong> 正確。漂浮半沒入時 B=W=40 gw；完全沒入時排開體積加倍，浮力變 80 gw。要讓木塊靜止完全沒入，需向下施力 80-40=40 gw。</li>
+<li><strong>D.</strong> 錯。資料足夠，因為半沒入漂浮已可推得完全沒入時浮力會加倍。</li></ol><p><a class="source-link" href="https://affairs.kh.edu.tw/sites/5365/upload_file/19/112下三段_-_pdf.zip" target="_blank" rel="noreferrer">官方原始試卷 ZIP 來源（112）</a></p></div></details>
+          </article>
+          <article class="exam-card" data-topic="6-4">
+            <div class="exam-meta"><span>112 學年度</span><span>第 26 題</span><span>排開體積、浮力與液面</span></div>
+            <h4>考古題 05｜承上題，當施力於木塊的過程中，排開的液體體積 甲；所以浮力會變 乙；而液體 X 的液面會 丙。甲、乙、丙應填入哪一個組合才完全正確？</h4>
+            
+            <ol class="options" type="A"><li><strong>A.</strong> 甲－增加；乙－大；丙－上升</li>
+<li><strong>B.</strong> 甲－增加；乙－小；丙－下降</li>
+<li><strong>C.</strong> 甲－增加；乙－大；丙－不變</li>
+<li><strong>D.</strong> 甲－增加；乙－不變；丙－不變</li></ol>
+            <details><summary>顯示答案與詳細解說</summary><div class="answer"><p><strong>答案：A</strong></p><ol class="option-explain" type="A"><li><strong>A.</strong> 正確。把木塊往下壓，沒入體積增加，排開液體體積增加；浮力 B=d液×V排 變大，液面也因排開更多液體而上升。</li>
+<li><strong>B.</strong> 錯。排開體積增加時，浮力不會變小；液面也不會下降。</li>
+<li><strong>C.</strong> 錯。前兩項對，但排開體積增加會使液面上升，不是不變。</li>
+<li><strong>D.</strong> 錯。排開體積增加時，浮力會隨之增加，液面也會上升。</li></ol><p><a class="source-link" href="https://affairs.kh.edu.tw/sites/5365/upload_file/19/112下三段_-_pdf.zip" target="_blank" rel="noreferrer">官方原始試卷 ZIP 來源（112）</a></p></div></details>
+          </article>
+          <article class="exam-card" data-topic="6-4">
+            <div class="exam-meta"><span>112 學年度</span><span>第 29 題</span><span>浮墊最大浮力</span></div>
+            <h4>考古題 06｜一名選手坐在大且長方體型的浮墊並浮在水面上。已知選手體重 35 公斤重，浮墊尺寸長×寬×高為 100 cm×100 cm×5 cm，重量為 5 公斤重。當選手坐在此浮墊上可以保持身體完全在水面上嗎？原因為何？</h4>
+            
+            <ol class="options" type="A"><li><strong>A.</strong> 無法。因為總重量除以浮墊面積，壓力大於水的密度 1 g/cm³</li>
+<li><strong>B.</strong> 可以。因為選手加上浮墊的平均密度遠小於水的密度</li>
+<li><strong>C.</strong> 無法。坐著會沉下去，必須趴著接觸面積變大、壓力變小才能浮得起來</li>
+<li><strong>D.</strong> 可以。因為浮墊完全沒入水中能提供的浮力大於 40 公斤重</li></ol>
+            <details><summary>顯示答案與詳細解說</summary><div class="answer"><p><strong>答案：D</strong></p><ol class="option-explain" type="A"><li><strong>A.</strong> 錯。這題關鍵是浮力，不是把重量除以面積後拿壓力和密度比較；單位也不相同。</li>
+<li><strong>B.</strong> 錯。若把人也算進體積，人的體積題目未給；不能用這種平均密度當主要判斷。</li>
+<li><strong>C.</strong> 錯。接觸面積不是浮起來的主因；能否浮起要看最大浮力是否足以支撐總重量。</li>
+<li><strong>D.</strong> 正確。浮墊體積 100×100×5=50000 cm³，完全沒入可排開 50000 g=50 kgw 的水，大於人加浮墊總重 40 kgw，因此可浮。</li></ol><p><a class="source-link" href="https://affairs.kh.edu.tw/sites/5365/upload_file/19/112下三段_-_pdf.zip" target="_blank" rel="noreferrer">官方原始試卷 ZIP 來源（112）</a></p></div></details>
+          </article>
+          <article class="exam-card" data-topic="6-4">
+            <div class="exam-meta"><span>112 學年度</span><span>第 46 題</span><span>彈簧秤測浮力</span></div>
+            <h4>考古題 07｜使用彈簧秤測量某一實心不溶於水且不與水發生作用的金屬圓柱體。實驗 O 在空氣中，實驗 A 為一半在水中，實驗 B 為剛好完全沒入水中，實驗 C 為沒入更深的水中。關於實驗 A：一半金屬圓柱體浸入水中保持靜止量取彈簧秤讀數，下列敘述何者錯誤？</h4>
+            
+            <ol class="options" type="A"><li><strong>A.</strong> 金屬圓柱體同時受到彈簧秤拉力、水的浮力、重力作用，此時合力為 0</li>
+<li><strong>B.</strong> 金屬圓柱體在空氣中的重量為 500 公克重</li>
+<li><strong>C.</strong> 金屬圓柱體受到的浮力為排開的液體重</li>
+<li><strong>D.</strong> 因金屬圓柱體靜止不動，可知彈簧秤拉力與重力方向相反，大小相等</li></ol>
+            <details><summary>顯示答案與詳細解說</summary><div class="answer"><p><strong>答案：D</strong></p><ol class="option-explain" type="A"><li><strong>A.</strong> 正確敘述。靜止時合力為 0，受力包含重力向下、彈簧秤拉力向上、水的浮力向上。</li>
+<li><strong>B.</strong> 正確敘述。依原圖讀數，空氣中重量為 500 gw。</li>
+<li><strong>C.</strong> 正確敘述。這就是阿基米德原理：浮力等於排開液體的重量。</li>
+<li><strong>D.</strong> 錯誤敘述，因此為答案。浸入水中時除了彈簧秤拉力外還有浮力向上，所以「拉力＋浮力＝重力」，拉力不會等於重力。</li></ol><p><a class="source-link" href="https://affairs.kh.edu.tw/sites/5365/upload_file/19/112下三段_-_pdf.zip" target="_blank" rel="noreferrer">官方原始試卷 ZIP 來源（112）</a></p></div></details>
+          </article>
+          <article class="exam-card" data-topic="6-4">
+            <div class="exam-meta"><span>112 學年度</span><span>第 48 題</span><span>用彈簧秤反推液體密度</span></div>
+            <h4>考古題 08｜承上題，若實驗 D 的彈簧秤讀數為 280 公克重，則食鹽水的密度為多少 g/cm³？</h4>
+            
+            <ol class="options" type="A"><li><strong>A.</strong> 0.80</li>
+<li><strong>B.</strong> 1.00</li>
+<li><strong>C.</strong> 1.10</li>
+<li><strong>D.</strong> 1.40</li></ol>
+            <details><summary>顯示答案與詳細解說</summary><div class="answer"><p><strong>答案：C</strong></p><ol class="option-explain" type="A"><li><strong>A.</strong> 錯。0.80 g/cm³ 會比水小，浮力會比在水中更小，通常不符合食鹽水情境與原圖讀數。</li>
+<li><strong>B.</strong> 錯。1.00 g/cm³ 是水的密度；題目換成食鹽水且彈簧秤讀數改變，密度不會仍為 1.00。</li>
+<li><strong>C.</strong> 正確。由原圖可得水中完全沒入時浮力與體積，再用食鹽水中「空氣重－讀數」得到食鹽水浮力；比值約為 1.10 g/cm³。</li>
+<li><strong>D.</strong> 錯。1.40 會使浮力過大、彈簧秤讀數過小，和 280 gw 不符。</li></ol><p><a class="source-link" href="https://affairs.kh.edu.tw/sites/5365/upload_file/19/112下三段_-_pdf.zip" target="_blank" rel="noreferrer">官方原始試卷 ZIP 來源（112）</a></p></div></details>
+          </article>
+          <article class="exam-card" data-topic="6-4">
+            <div class="exam-meta"><span>111 學年度</span><span>第 7 題</span><span>漂浮時浮力等於重量</span></div>
+            <h4>考古題 09｜阿翰與同學到海邊玩，哪個人的觀念是錯誤的？</h4>
+            
+            <ol class="options" type="A"><li><strong>A.</strong> 阿翰：我在海上可以浮起來，代表我的密度比海水小</li>
+<li><strong>B.</strong> 琳琳：我雖然不敢下水，但是我把腳泡在海水中也會有浮力</li>
+<li><strong>C.</strong> 小生：我可以浮在海面，代表我受到的浮力大於我的體重</li>
+<li><strong>D.</strong> 花花：若我水母漂靜止在海面上，此時我所受的合力等於 0</li></ol>
+            <details><summary>顯示答案與詳細解說</summary><div class="answer"><p><strong>答案：C</strong></p><ol class="option-explain" type="A"><li><strong>A.</strong> 正確觀念。人能穩定漂浮，通常表示整體平均密度小於或接近海水，能排開足夠海水支撐體重。</li>
+<li><strong>B.</strong> 正確觀念。只要身體一部分浸在水中並排開水，就會受到浮力。</li>
+<li><strong>C.</strong> 錯誤觀念，因此為答案。漂浮且靜止時浮力等於體重，不是大於體重；若浮力大於體重會向上加速。</li>
+<li><strong>D.</strong> 正確觀念。水母漂靜止時運動狀態不變，合力為 0。</li></ol><p><a class="source-link" href="https://affairs.kh.edu.tw/sites/5365/upload_file/15/111下三段-pdf.zip" target="_blank" rel="noreferrer">官方原始試卷 ZIP 來源（111）</a></p></div></details>
+          </article>
+          <article class="exam-card" data-topic="6-4">
+            <div class="exam-meta"><span>111 學年度</span><span>第 20 題</span><span>船在淡水與海水中的浮力</span></div>
+            <h4>考古題 10｜如下圖所示，四張圖皆為同一艘船，甲、乙為空船，丙、丁載滿相同重量的貨物，所受浮力大小順序為何？（密度：海水＞淡水）</h4>
+            
+            <ol class="options" type="A"><li><strong>A.</strong> 丁＞丙＞乙＞甲</li>
+<li><strong>B.</strong> 甲＝乙＞丙＝丁</li>
+<li><strong>C.</strong> 乙＞甲＞丁＞丙</li>
+<li><strong>D.</strong> 丙＝丁＞甲＝乙</li></ol>
+            <details><summary>顯示答案與詳細解說</summary><div class="answer"><p><strong>答案：D</strong></p><ol class="option-explain" type="A"><li><strong>A.</strong> 錯。載同重貨物的船總重相同，漂浮時浮力都等於總重，不會因海水/淡水而一大一小。</li>
+<li><strong>B.</strong> 錯。空船總重小於載貨船，所以空船所受浮力較小。</li>
+<li><strong>C.</strong> 錯。海水密度較大會讓船吃水較淺，但漂浮時浮力仍等於船重，不是乙一定大於甲。</li>
+<li><strong>D.</strong> 正確。同一艘船空船時甲、乙重量相同，浮力相同；載滿相同重量貨物時丙、丁重量相同且大於空船，所以丙＝丁＞甲＝乙。</li></ol><p><a class="source-link" href="https://affairs.kh.edu.tw/sites/5365/upload_file/15/111下三段-pdf.zip" target="_blank" rel="noreferrer">官方原始試卷 ZIP 來源（111）</a></p></div></details>
+          </article>
+          <article class="exam-card" data-topic="6-4">
+            <div class="exam-meta"><span>111 學年度</span><span>第 28 題</span><span>彈簧秤與液體密度</span></div>
+            <h4>考古題 11｜有一彈簧秤掛一石頭，在空氣中秤得 210 gw，石頭完全沒入水中秤得 140 gw，石頭沒入鹽水中秤得 133 gw，則下列敘述何者錯誤？</h4>
+            
+            <ol class="options" type="A"><li><strong>A.</strong> 石頭體積為 70 cm³</li>
+<li><strong>B.</strong> 石頭密度為 3 g/cm³</li>
+<li><strong>C.</strong> 石頭在水中所受的浮力為 70 gw</li>
+<li><strong>D.</strong> 鹽水密度為 1.2 g/cm³</li></ol>
+            <details><summary>顯示答案與詳細解說</summary><div class="answer"><p><strong>答案：D</strong></p><ol class="option-explain" type="A"><li><strong>A.</strong> 正確。水中浮力 = 210-140=70 gw，水密度 1 g/cm³，所以排開水體積也就是石頭體積 70 cm³。</li>
+<li><strong>B.</strong> 正確。石頭質量約 210 g，體積 70 cm³，密度 = 210/70 = 3 g/cm³。</li>
+<li><strong>C.</strong> 正確。彈簧秤讀數減少量就是浮力：210-140=70 gw。</li>
+<li><strong>D.</strong> 錯誤，因此為答案。鹽水中浮力 = 210-133=77 gw，密度 = 77/70 = 1.1 g/cm³，不是 1.2。</li></ol><p><a class="source-link" href="https://affairs.kh.edu.tw/sites/5365/upload_file/15/111下三段-pdf.zip" target="_blank" rel="noreferrer">官方原始試卷 ZIP 來源（111）</a></p></div></details>
+          </article>
+          <article class="exam-card" data-topic="6-4">
+            <div class="exam-meta"><span>111 學年度</span><span>第 32 題</span><span>上下液壓差形成浮力</span></div>
+            <h4>考古題 12｜將邊長分別為 3 cm、4 cm、8 cm 的長方體放入某液體中，待長方體靜止懸浮在液體中時，上表面恰與液面平行，且上表面受到的向下液體壓力 P下 為 6 gw/cm²，下表面受到的向上液體壓力 P上 為 30 gw/cm²，試問此液體的密度為多少 g/cm³？</h4>
+            
+            <ol class="options" type="A"><li><strong>A.</strong> 1</li>
+<li><strong>B.</strong> 2.5</li>
+<li><strong>C.</strong> 3</li>
+<li><strong>D.</strong> 3.75</li></ol>
+            <details><summary>顯示答案與詳細解說</summary><div class="answer"><p><strong>答案：C</strong></p><ol class="option-explain" type="A"><li><strong>A.</strong> 錯。只看水的常見密度會忽略題目給的壓力差。</li>
+<li><strong>B.</strong> 錯。若用錯高度或把總壓力差除錯邊長，可能得到接近值；液壓差應除以上下表面的垂直距離。</li>
+<li><strong>C.</strong> 正確。上下表面壓力差為 30-6=24 gw/cm²；圖示垂直高度為 8 cm，液體密度 d=24/8=3 g/cm³。</li>
+<li><strong>D.</strong> 錯。這相當於把壓力差 24 除以 6.4 之類非題目高度，未正確使用長方體垂直邊長。</li></ol><p><a class="source-link" href="https://affairs.kh.edu.tw/sites/5365/upload_file/15/111下三段-pdf.zip" target="_blank" rel="noreferrer">官方原始試卷 ZIP 來源（111）</a></p></div></details>
+          </article>
+          <article class="exam-card" data-topic="6-4">
+            <div class="exam-meta"><span>110 學年度</span><span>第 4 題</span><span>浮力概念辨正</span></div>
+            <h4>考古題 13｜下列敘述何者錯誤？</h4>
+            
+            <ol class="options" type="A"><li><strong>A.</strong> 船隻由淡水駛入海水，所受浮力變大</li>
+<li><strong>B.</strong> 釘子的尖端易釘入物體內，是因為釘子的尖端接觸物體的面積較小</li>
+<li><strong>C.</strong> 吸盤是利用大氣壓力緊貼於牆面，而能負重掛物</li>
+<li><strong>D.</strong> 一氣泡由湖底往上浮升的過程中，所受的壓力變小，故體積變大</li></ol>
+            <details><summary>顯示答案與詳細解說</summary><div class="answer"><p><strong>答案：A</strong></p><ol class="option-explain" type="A"><li><strong>A.</strong> 錯誤，因此為答案。船漂浮時浮力等於船重；同一艘船重量不變，由淡水到海水時浮力仍等於船重，只是海水密度較大、排開體積變小。</li>
+<li><strong>B.</strong> 正確。力相近時接觸面積越小，壓力越大，較容易刺入。</li>
+<li><strong>C.</strong> 正確。吸盤內外壓力差使吸盤被外界大氣壓壓住。</li>
+<li><strong>D.</strong> 正確。越接近水面液體壓力越小，氣泡內外壓力降低，體積會膨脹。</li></ol><p><a class="source-link" href="https://affairs.kh.edu.tw/sites/5365/upload_file/11/110下三段-pdf.zip" target="_blank" rel="noreferrer">官方原始試卷 ZIP 來源（110）</a></p></div></details>
+          </article>
+          <article class="exam-card" data-topic="6-4">
+            <div class="exam-meta"><span>110 學年度</span><span>第 20 題</span><span>木塊完全壓入水中的外力</span></div>
+            <h4>考古題 14｜將木塊放入一個裝滿水的箱子內，施力將木塊整塊壓入水面，並闔上箱子上蓋，此時水面、木塊頂部與蓋子貼齊；木塊為邊長 10 cm、密度 0.7 g/cm³ 的正立方體；箱子為邊長 20 cm 的正立方體，水的密度為 1 g/cm³。求蓋子施予木塊的力為何？</h4>
+            
+            <ol class="options" type="A"><li><strong>A.</strong> 200 gw</li>
+<li><strong>B.</strong> 300 gw</li>
+<li><strong>C.</strong> 700 gw</li>
+<li><strong>D.</strong> 1000 gw</li></ol>
+            <details><summary>顯示答案與詳細解說</summary><div class="answer"><p><strong>答案：B</strong></p><ol class="option-explain" type="A"><li><strong>A.</strong> 錯。200 gw 低估了完全沒入時水提供的浮力與木塊重量的差。</li>
+<li><strong>B.</strong> 正確。木塊體積 10³=1000 cm³，完全沒入浮力為 1000 gw；木塊重量為 0.7×1000=700 gw。需向下外力 = 1000-700=300 gw。</li>
+<li><strong>C.</strong> 錯。700 gw 是木塊本身重量，不是蓋子需要施加的額外向下力。</li>
+<li><strong>D.</strong> 錯。1000 gw 是木塊完全沒入時受到的浮力，不是外力；外力只需補足浮力與重量的差。</li></ol><p><a class="source-link" href="https://affairs.kh.edu.tw/sites/5365/upload_file/11/110下三段-pdf.zip" target="_blank" rel="noreferrer">官方原始試卷 ZIP 來源（110）</a></p></div></details>
+          </article>
+          <article class="exam-card" data-topic="6-4">
+            <div class="exam-meta"><span>110 學年度</span><span>第 非選5 題</span><span>彈簧秤讀數變化</span></div>
+            <h4>考古題 15｜在彈簧秤下端懸掛一個金屬圓柱，已知彈簧秤讀數為 400 公克重。回答：（1）若圓柱全部沒入水中，此時彈簧秤讀數為 300 公克重，則圓柱所受浮力為多少？（2）若改裝密度為 0.6 g/cm³ 的油，然後將圓柱完全沒入油中，則彈簧秤讀數為多少？</h4>
+            
+            <ol class="options" type="A"><li><strong>A.</strong> （1）100 gw；（2）340 gw</li>
+<li><strong>B.</strong> （1）300 gw；（2）100 gw</li>
+<li><strong>C.</strong> （1）400 gw；（2）240 gw</li>
+<li><strong>D.</strong> （1）60 gw；（2）340 gw</li></ol>
+            <details><summary>顯示答案與詳細解說</summary><div class="answer"><p><strong>答案：(1) 100 gw；(2) 340 gw</strong></p><ol class="option-explain" type="A"><li><strong>A.</strong> 正確。水中浮力=400-300=100 gw，所以圓柱體積約 100 cm³；在油中浮力=0.6×100=60 gw，讀數=400-60=340 gw。</li>
+<li><strong>B.</strong> 錯。300 gw 是水中彈簧秤讀數，不是浮力；油中讀數也不是 100 gw。</li>
+<li><strong>C.</strong> 錯。400 gw 是空氣中重量；油中浮力只有 60 gw，讀數不是 240 gw。</li>
+<li><strong>D.</strong> 錯。60 gw 是在油中的浮力，不是第（1）小題水中浮力；第（1）應為 100 gw。</li></ol><p><a class="source-link" href="https://affairs.kh.edu.tw/sites/5365/upload_file/11/110下三段-pdf.zip" target="_blank" rel="noreferrer">官方原始試卷 ZIP 來源（110）</a></p></div></details>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="sources" id="sources">
+    <div class="wrap">
+      <h2>資料依據</h2>
+      <p>本頁依翰林版國中自然二下第 6 章公開教學資源與五福國中公開題庫考點整理，內容為教學改寫與例題設計。</p>
+      <ul>
+        <li><a href="https://resource.hle.com.tw/Books/BooksResource/111%E5%9C%8B%E4%B8%AD%E8%87%AA%E7%84%B62%E4%B8%8B%E7%90%86%E7%A7%91%E7%A5%95%E7%AC%88-%E6%95%99%E7%94%A8%E5%90%88%E6%AA%94(111f623935).pdf" target="_blank" rel="noreferrer">翰林國中自然二下理科秘笈教用合檔</a></li>
+        <li><a href="https://affairs.kh.edu.tw/5365/upload/upload_list/2" target="_blank" rel="noreferrer">五福國中歷屆試題暨補考題庫（官方公開頁）</a></li>
+        <li><a href="./final-exams.html">五福期末考古題整理頁</a></li>
+        <li><a href="./chapter6-lab-videos.html">第 6 章力與壓力實驗影片整理頁</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const answerBlocks = Array.from(document.querySelectorAll("details"));
+    const progress = document.querySelector("#progress");
+    const expandAll = document.querySelector("#expand-all");
+    const collapseAll = document.querySelector("#collapse-all");
+    const filterButtons = Array.from(document.querySelectorAll(".filter-button"));
+    const examples = Array.from(document.querySelectorAll(".example-card"));
+    const filterStatus = document.querySelector("#filter-status");
+
+    function updateProgress() {
+      const opened = answerBlocks.filter((item) => item.open).length;
+      progress.textContent = `目前已開啟 ${opened} 題解答。`;
+    }
+
+    function updateFilterStatus(filter) {
+      const visibleCount = examples.filter((item) => !item.classList.contains("hidden")).length;
+      filterStatus.textContent = filter === "all"
+        ? `目前顯示全部 ${visibleCount} 題。`
+        : `目前顯示 ${visibleCount} 題：${filter}。`;
+    }
+
+    answerBlocks.forEach((item) => item.addEventListener("toggle", updateProgress));
+
+    expandAll.addEventListener("click", () => {
+      answerBlocks.forEach((item) => {
+        item.open = true;
+      });
+      updateProgress();
+    });
+
+    collapseAll.addEventListener("click", () => {
+      answerBlocks.forEach((item) => {
+        item.open = false;
+      });
+      updateProgress();
+    });
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = button.dataset.filter;
+        filterButtons.forEach((item) => item.classList.remove("is-active"));
+        button.classList.add("is-active");
+        examples.forEach((item) => {
+          const visible = filter === "all" || item.dataset.topic === filter;
+          item.classList.toggle("hidden", !visible);
+        });
+        updateFilterStatus(filter);
+      });
+    });
+
+    const lab = {
+      force: document.querySelector("#force-range"),
+      area: document.querySelector("#area-range"),
+      depth: document.querySelector("#depth-range"),
+      density: document.querySelector("#density-range"),
+      weight: document.querySelector("#weight-range"),
+      reading: document.querySelector("#reading-range")
+    };
+
+    function round(value) {
+      return Number(value.toFixed(1));
+    }
+
+    function updateLabs() {
+      const force = Number(lab.force.value);
+      const area = Number(lab.area.value);
+      const depth = Number(lab.depth.value);
+      const density = Number(lab.density.value);
+      const weight = Number(lab.weight.value);
+      const reading = Math.min(Number(lab.reading.value), weight);
+      if (Number(lab.reading.value) !== reading) {
+        lab.reading.value = reading;
+      }
+
+      document.querySelector("#force-value").textContent = `${force} gw`;
+      document.querySelector("#area-value").textContent = `${area} cm²`;
+      document.querySelector("#solid-result").textContent = `P = ${force} / ${area} = ${round(force / area)} gw/cm²`;
+
+      document.querySelector("#depth-value").textContent = `${depth} cm`;
+      document.querySelector("#density-value").textContent = `${density.toFixed(1)} g/cm³`;
+      document.querySelector("#liquid-result").textContent = `P = ${depth} × ${density.toFixed(1)} = ${round(depth * density)} gw/cm²`;
+
+      document.querySelector("#weight-value").textContent = `${weight} gw`;
+      document.querySelector("#reading-value").textContent = `${reading} gw`;
+      document.querySelector("#float-result").textContent = `B = ${weight} - ${reading} = ${weight - reading} gw`;
+    }
+
+    Object.values(lab).forEach((input) => input.addEventListener("input", updateLabs));
+    updateProgress();
+    updateFilterStatus("all");
+    updateLabs();
+  </script>
+</body>
+</html>

@@ -15,19 +15,19 @@
     <section class="hero">
       <div class="eyebrow">Submission draft</div>
       <h1>投稿資源</h1>
-      <p>這是 PhAI AI 物理教學資源館的投稿入口草案。正式 Google Form 尚未接上前，先用這頁確認欄位與公開邊界；等表單建立後，只要把下方主按鈕換成 Google Form 連結即可。</p>
+      <p>PhAI AI 物理教學資源館的正式 Google Form 已建立。老師可直接按下方按鈕投稿；本頁保留表單欄位、Sheet 欄位與建立腳本，作為後續維護備份。</p>
       <div class="actions">
-        <a class="btn primary" href="https://script.google.com/home/projects/create" target="_blank" rel="noopener">開啟 Apps Script</a>
+        <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeyI7vy8jpzvB1x88hP4BGxYPkE5yPxqZQiWcUspjB2gSGFHg/viewform" target="_blank" rel="noopener">開啟正式投稿表單</a>
         <a class="btn" href="../assets/create-phai-submission-form.gs">下載一鍵建立腳本</a>
         <a class="btn" href="#fields">查看表單題目</a>
         <a class="btn" href="../assets/submission-sheet-fields.csv">下載 Sheet 欄位 CSV</a>
       </div>
-      <div class="notice"><strong>狀態：</strong>我已做好可一鍵建立 Google Form 與收件 Sheet 的 Apps Script；但因目前 Hermes 未登入您的 Google 帳號，需由您在自己的 Google 帳號中貼上並執行一次。執行後請把「公開填寫連結」貼給我，我會把首頁投稿按鈕改成正式表單連結。</div>
+      <div class="notice"><strong>狀態：</strong>正式 Google Form 已建立並可公開填寫。<br>填寫連結：<a href="https://docs.google.com/forms/d/e/1FAIpQLSeyI7vy8jpzvB1x88hP4BGxYPkE5yPxqZQiWcUspjB2gSGFHg/viewform" target="_blank" rel="noopener">開啟投稿表單</a><br>表單編輯：<a href="https://docs.google.com/forms/d/1GmBvRASxQ_FJRfhWXW9YhUPfvrJfjS23KPdE_dEHrlo/edit" target="_blank" rel="noopener">管理表單</a><br>收件 Sheet：<a href="https://docs.google.com/spreadsheets/d/1IRqNFZGr1Pz2KC18mvMbC5Re9kbQjP7e8qcTZ6xftgc/edit" target="_blank" rel="noopener">開啟收件表</a></div>
     </section>
 
 
     <section class="card" style="margin-top:14px">
-      <h2>一鍵建立 Google Form</h2>
+      <h2>Google Form 建立備份與維護</h2>
       <div class="steps">
         <div class="step"><strong>開啟 Apps Script</strong><br><span>點上方「開啟 Apps Script」，建立新的 Google Apps Script 專案。</span></div>
         <div class="step"><strong>複製腳本</strong><br><span>按「複製完整腳本」，貼到 Apps Script 編輯器；也可下載 <a href="../assets/create-phai-submission-form.gs">create-phai-submission-form.gs</a>。</span></div>
@@ -328,12 +328,12 @@ function createAnnouncementSheet_(sheet, form) {
     </section>
 
     <section class="card" style="margin-top:14px">
-      <h2>建立成功後貼給 Hermes 的資訊</h2>
-      <p>Apps Script 執行完成後，請把 Logs 裡三個網址貼回來。最重要的是 <strong>publishedUrl</strong>，我會用它把資源館首頁「投稿資源」按鈕改成正式表單。</p>
+      <h2>正式連結與管理資訊</h2>
+      <p>表單已建立成功，以下三個連結可用於投稿、管理與後續整理。</p>
       <ul class="mini-list">
-        <li><strong>publishedUrl</strong>：老師實際填表的公開連結</li>
-        <li><strong>editUrl</strong>：您管理表單題目的後台連結</li>
-        <li><strong>sheetUrl</strong>：投稿回應 Sheet 連結</li>
+        <li><strong>publishedUrl</strong>：<a href="https://docs.google.com/forms/d/e/1FAIpQLSeyI7vy8jpzvB1x88hP4BGxYPkE5yPxqZQiWcUspjB2gSGFHg/viewform" target="_blank" rel="noopener">老師實際填表的公開連結</a></li>
+        <li><strong>editUrl</strong>：<a href="https://docs.google.com/forms/d/1GmBvRASxQ_FJRfhWXW9YhUPfvrJfjS23KPdE_dEHrlo/edit" target="_blank" rel="noopener">管理表單題目的後台連結</a></li>
+        <li><strong>sheetUrl</strong>：<a href="https://docs.google.com/spreadsheets/d/1IRqNFZGr1Pz2KC18mvMbC5Re9kbQjP7e8qcTZ6xftgc/edit" target="_blank" rel="noopener">投稿回應 Sheet 連結</a></li>
       </ul>
     </section>
     <script>
@@ -352,7 +352,7 @@ function createAnnouncementSheet_(sheet, form) {
       });
     </script>
 
-    <p class="footer">PhAI 共學圈資源平台｜投稿入口草案 v2</p>
+    <p class="footer">PhAI 共學圈資源平台｜正式投稿入口 v1</p>
   </main>
 </body>
 </html>

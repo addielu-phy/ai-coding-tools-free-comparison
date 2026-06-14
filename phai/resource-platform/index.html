@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PhAI AI 物理教學資源館｜v2</title>
+  <meta name="description" content="PhAI 共學圈 AI 物理教學資源館 prototype v2：更清楚的分類、搜尋與教師取用路徑。" />
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8f6f1; --paper: #fffdf8; --ink: #202326; --muted: #6d716f; --faint: #939891;
+      --line: #e2ded1; --line-strong: #cec7b4; --green: #145c56; --green-2: #0e8b7a; --blue: #2f5f9e;
+      --shadow: 0 18px 45px rgba(54, 48, 35, .08); --shadow-soft: 0 10px 30px rgba(54, 48, 35, .06);
+      --radius-lg: 28px; --radius-md: 18px; --max: 1180px;
+    }
+    * { box-sizing: border-box; } html { scroll-behavior: smooth; }
+    body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif; background: radial-gradient(circle at 10% 0%, rgba(20,92,86,.14), transparent 30rem), radial-gradient(circle at 90% 12%, rgba(47,95,158,.12), transparent 26rem), linear-gradient(180deg,#fbfaf5 0%,var(--bg) 42%,#f3f1ea 100%); color:var(--ink); line-height:1.6; }
+    a { color: inherit; } button,input,select { font: inherit; }
+    .shell { max-width: var(--max); margin: 0 auto; padding: 0 22px; }
+    .topbar { position: sticky; top: 0; z-index: 30; backdrop-filter: blur(18px); background: rgba(248,246,241,.78); border-bottom: 1px solid rgba(206,199,180,.55); }
+    .nav { max-width: var(--max); margin:0 auto; padding:14px 22px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .brand { display:flex; align-items:center; gap:12px; min-width:0; } .mark { width:38px; height:38px; border-radius:14px; background:linear-gradient(135deg,var(--green),var(--blue)); color:#fff; display:grid; place-items:center; font-weight:900; letter-spacing:-.08em; box-shadow:var(--shadow-soft); }
+    .brand-text strong { display:block; letter-spacing:-.04em; } .brand-text span { display:block; color:var(--muted); font-size:12px; margin-top:-2px; }
+    .nav-links { display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end; } .nav-links a { text-decoration:none; color:var(--muted); border:1px solid transparent; border-radius:999px; padding:8px 11px; font-size:14px; } .nav-links a:hover,.nav-links a:focus-visible { color:var(--green); background:#fff; border-color:var(--line); outline:none; }
+    .hero { padding:48px 0 24px; } .hero-grid { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(320px,.8fr); gap:28px; align-items:stretch; }
+    .eyebrow { color:var(--green); font-weight:800; letter-spacing:.12em; text-transform:uppercase; font-size:12px; }
+    h1 { font-size:clamp(2.4rem,7vw,5.4rem); line-height:.95; margin:16px 0 18px; letter-spacing:-.08em; text-wrap:balance; }
+    .lead { max-width:760px; color:#4d514f; font-size:clamp(1.05rem,2.2vw,1.32rem); margin:0; text-wrap:pretty; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:26px; } .btn { min-height:44px; display:inline-flex; align-items:center; justify-content:center; gap:8px; border-radius:999px; padding:11px 16px; border:1px solid var(--line-strong); text-decoration:none; font-weight:800; background:#fff; box-shadow:var(--shadow-soft); cursor:pointer; } .btn.primary { background:var(--green); border-color:var(--green); color:#fff; } .btn:hover,.btn:focus-visible { transform:translateY(-1px); outline:3px solid rgba(14,139,122,.16); }
+    .brief-card,.panel { background:rgba(255,253,248,.86); border:1px solid var(--line); border-radius:var(--radius-lg); box-shadow:var(--shadow); }
+    .brief-card { padding:22px; display:grid; gap:16px; } .brief-card h2 { margin:0; font-size:1.05rem; } .brief-list { display:grid; gap:10px; margin:0; padding:0; list-style:none; } .brief-list li { display:grid; grid-template-columns:28px 1fr; gap:10px; color:var(--muted); }
+    .num { width:28px; height:28px; border-radius:999px; background:#e8f2ef; color:var(--green); display:grid; place-items:center; font-weight:900; font-size:12px; }
+    .notice { margin-top:26px; background:#fff6e5; border:1px solid #edd3a2; color:#68430e; border-radius:var(--radius-md); padding:14px 16px; }
+    .stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-top:22px; } .stat { padding:16px; background:rgba(255,253,248,.74); border:1px solid var(--line); border-radius:var(--radius-md); } .stat strong { display:block; font-size:2rem; letter-spacing:-.06em; color:var(--green); line-height:1; } .stat span { color:var(--muted); font-size:13px; }
+    .section-head { display:flex; justify-content:space-between; align-items:end; gap:18px; margin:34px 0 14px; } .section-head h2 { margin:0; font-size:clamp(1.45rem,3.8vw,2.25rem); letter-spacing:-.05em; } .section-head p { margin:6px 0 0; color:var(--muted); max-width:700px; }
+    .catalog { display:grid; grid-template-columns:260px minmax(0,1fr); gap:18px; align-items:start; } .sidebar { position:sticky; top:82px; padding:14px; } .searchbox { padding:16px; display:grid; gap:12px; margin-bottom:14px; } .search-row { display:grid; gap:10px; }
+    input,select { width:100%; min-height:44px; border:1px solid var(--line); border-radius:14px; padding:10px 12px; background:#fff; color:var(--ink); } input:focus,select:focus { outline:3px solid rgba(14,139,122,.18); border-color:var(--green-2); }
+    .label { font-size:12px; letter-spacing:.08em; color:var(--muted); text-transform:uppercase; font-weight:900; } .cat-list { display:grid; gap:7px; } .cat-btn { width:100%; display:flex; justify-content:space-between; align-items:center; gap:8px; border:1px solid transparent; border-radius:14px; padding:10px 12px; background:transparent; color:#4f5552; cursor:pointer; text-align:left; min-height:44px; } .cat-btn:hover { background:#fff; border-color:var(--line); } .cat-btn.active { background:var(--green); color:#fff; box-shadow:var(--shadow-soft); } .cat-count { font-size:12px; opacity:.72; }
+    .resultbar { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 2px; color:var(--muted); font-size:14px; } .view-toggle { display:inline-flex; gap:6px; border:1px solid var(--line); background:var(--paper); border-radius:999px; padding:4px; } .view-toggle button { border:0; background:transparent; padding:6px 10px; border-radius:999px; cursor:pointer; color:var(--muted); } .view-toggle button.active { background:var(--green); color:white; }
+    .cards { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; } .cards.list { grid-template-columns:1fr; } .resource { position:relative; overflow:hidden; background:var(--paper); border:1px solid var(--line); border-radius:22px; padding:18px; box-shadow:var(--shadow-soft); display:grid; gap:12px; } .resource::before { content:""; position:absolute; inset:0 auto 0 0; width:5px; background:var(--accent,var(--green)); opacity:.92; } .resource:hover { transform:translateY(-2px); box-shadow:var(--shadow); }
+    .card-top { display:flex; justify-content:space-between; gap:10px; align-items:start; } .kicker { display:flex; flex-wrap:wrap; gap:6px; align-items:center; } .badge { display:inline-flex; align-items:center; border:1px solid var(--line); border-radius:999px; padding:4px 8px; font-size:12px; color:var(--muted); background:#fff; } .badge.status { color:#805000; background:#fff6dd; border-color:#efd7a6; } .badge.linked { color:var(--green); background:#eaf5f1; border-color:#c9e6dd; }
+    .resource h3 { margin:0; font-size:1.12rem; line-height:1.35; letter-spacing:-.03em; text-wrap:pretty; } .summary { margin:0; color:#3e4441; font-weight:650; } .desc { margin:0; color:var(--muted); font-size:14px; } .meta-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; padding-top:4px; } .meta-box { background:#f6f4ee; border-radius:14px; padding:9px 10px; color:var(--muted); font-size:13px; } .meta-box b { display:block; color:var(--ink); font-size:12px; margin-bottom:2px; }
+    .tags { display:flex; flex-wrap:wrap; gap:6px; } .tag { color:#52605c; background:#f1efe7; border:1px solid #e6e1d3; border-radius:999px; padding:4px 8px; font-size:12px; } .card-actions { display:flex; flex-wrap:wrap; gap:8px; align-items:center; } .mini { min-height:38px; border:1px solid var(--line-strong); border-radius:999px; padding:8px 12px; text-decoration:none; font-weight:800; color:var(--green); background:#fff; display:inline-flex; align-items:center; } .mini.disabled { color:var(--faint); border-color:var(--line); } .empty { padding:32px; color:var(--muted); text-align:center; }
+    .workflow { display:grid; grid-template-columns:1.05fr .95fr; gap:18px; margin-bottom:46px; } .flow-steps { padding:20px; display:grid; gap:12px; } .flow-step { display:grid; grid-template-columns:42px 1fr; gap:12px; align-items:start; padding:12px; border-radius:18px; background:#faf8f1; border:1px solid var(--line); } .flow-step strong { display:block; } .flow-step span { color:var(--muted); font-size:14px; } .principles { padding:20px; background:var(--green); color:#fff; border-radius:var(--radius-lg); } .principles h3 { margin-top:0; font-size:1.5rem; letter-spacing:-.04em; } .principles ul { padding-left:1.2em; margin-bottom:0; color:rgba(255,255,255,.86); } footer { padding:30px 22px 42px; text-align:center; color:var(--muted); }
+    @media (max-width:940px) { .hero-grid,.catalog,.workflow { grid-template-columns:1fr; } .sidebar { position:static; } .stats { grid-template-columns:repeat(2,minmax(0,1fr)); } .cards { grid-template-columns:1fr; } .nav { align-items:start; } .nav-links { display:none; } }
+    @media (max-width:560px) { .shell,.nav { padding-left:16px; padding-right:16px; } .hero { padding-top:34px; } .stats,.meta-grid { grid-template-columns:1fr; } .section-head { display:block; } .brief-card,.panel,.resource { border-radius:20px; } h1 { font-size:clamp(2.35rem,15vw,4rem); } }
+    @media (prefers-reduced-motion:no-preference) { .btn,.resource { transition: transform .18s ease, box-shadow .18s ease; } }
+  </style>
+</head>
+<body>
+  <div class="topbar"><nav class="nav" aria-label="主導覽"><div class="brand"><div class="mark">P</div><div class="brand-text"><strong>PhAI 資源館</strong><span>AI × 物理教學共學</span></div></div><div class="nav-links"><a href="#catalog">資源目錄</a><a href="#workflow">收件流程</a><a href="#review">公開邊界</a></div></nav></div>
+  <header class="hero shell"><div class="hero-grid"><div><div class="eyebrow">Curated teaching resources</div><h1>把老師們的 AI 教學實作，整理成可取用的資源館。</h1><p class="lead">第一版先做「策展式目錄」：不追求平台很大，而是讓講師群能快速投稿、輕審核、分類上架，讓更多物理老師知道哪些工具與流程真的可用。</p><div class="hero-actions"><a class="btn primary" href="#catalog">瀏覽資源</a><a class="btn" href="#workflow">看投稿流程</a></div></div><aside class="brief-card" aria-label="平台摘要"><h2>這一版先解決三件事</h2><ul class="brief-list"><li><span class="num">1</span><span>把散在 LINE、分享會、GitHub 的案例收成一份清楚目錄。</span></li><li><span class="num">2</span><span>每張卡片只留下老師最需要的資訊：用途、對象、工具、狀態。</span></li><li><span class="num">3</span><span>公開前先保留授權與個資提醒，避免社群分享變成負擔。</span></li></ul></aside></div><div id="review" class="notice"><strong>公開邊界：</strong>此為內部審閱 prototype。種子資源依講師群討論整理，尚未代表作者正式投稿；正式上架前需確認授權、公開範圍與連結可用性。</div><div class="stats" aria-label="目前資料摘要"><div class="stat"><strong id="stat-total">0</strong><span>種子資源</span></div><div class="stat"><strong id="stat-linked">0</strong><span>已有公開連結</span></div><div class="stat"><strong id="stat-types">0</strong><span>資源類型</span></div><div class="stat"><strong>MVP</strong><span>表單＋Sheet＋Pages</span></div></div></header>
+  <main class="shell"><section id="catalog"><div class="section-head"><div><h2>資源目錄</h2><p>先用分類與搜尋降低雜訊。正式版可直接由 Google Sheet 匯出資料更新。</p></div></div><div class="catalog"><aside class="sidebar panel"><div class="searchbox"><div class="search-row"><label class="label" for="q">搜尋</label><input id="q" type="search" placeholder="NotebookLM、模擬、Agent..." /></div><div class="search-row"><label class="label" for="audience">適用對象</label><select id="audience"><option value="">全部對象</option></select></div><div class="search-row"><label class="label" for="status">審核狀態</label><select id="status"><option value="">全部狀態</option></select></div></div><div class="searchbox" style="padding-top:0"><div class="label">資源類型</div><div id="categories" class="cat-list"></div></div></aside><div class="catalog-main"><div class="resultbar"><span id="resultText">載入中</span><div class="view-toggle" aria-label="切換檢視"><button id="gridBtn" class="active" type="button">卡片</button><button id="listBtn" type="button">列表</button></div></div><div id="cards" class="cards"></div></div></div></section>
+    <section id="workflow"><div class="section-head"><div><h2>收件到上架</h2><p>流程故意維持輕量：先讓資源累積，再逐步自動化。</p></div></div><div class="workflow"><div class="panel flow-steps"><div class="flow-step"><span class="num">01</span><div><strong>Google 表單投稿</strong><span>老師只需填名稱、用途、對象、連結、公開範圍。</span></div></div><div class="flow-step"><span class="num">02</span><div><strong>講師群輕審核</strong><span>確認連結可開、沒有明顯個資或授權疑慮。</span></div></div><div class="flow-step"><span class="num">03</span><div><strong>AI 協助整理</strong><span>補摘要、標籤、適用對象、授權提醒。</span></div></div><div class="flow-step"><span class="num">04</span><div><strong>資源館上架</strong><span>用靜態網站呈現，社群可手機直接瀏覽。</span></div></div></div><div class="principles"><h3>設計原則</h3><ul><li>少一點平台感，多一點教師取用感。</li><li>不要把未確認資源包裝成正式成果。</li><li>每張卡片都要回答：這能幫老師做什麼？適合誰？目前能不能公開？</li></ul></div></div></section></main><footer>PhAI 共學圈資源平台 prototype v2｜內部審閱版</footer>
+  <script>
+    const resources = [
+  {
+    "id": "PHAI-0001",
+    "status": "待補資料",
+    "title": "Codex × Agent 協作：讓 AI 成為教學助理團隊",
+    "summary": "用 Agent 協作串起教材、評量、影片與資料整理等教學工作流",
+    "description": "第一場分享主題，可整理成教師日常 AI 工作流入門資源",
+    "author_display": "盧政良",
+    "author_visibility": "可公開",
+    "resource_type": [
+      "Agent 工作流"
+    ],
+    "physics_topic": [
+      "AI 教學工作流"
+    ],
+    "ai_tools": [
+      "Codex",
+      "Hermes",
+      "Agent"
+    ],
+    "audience": [
+      "教師備課",
+      "社群共學"
+    ],
+    "url": "",
+    "license_scope": "待確認",
+    "privacy_note": "待補公開講義/錄影授權",
+    "source_event": "5/20 第一場分享",
+    "tags": [
+      "Codex",
+      "Agent",
+      "教學助理",
+      "工作流"
+    ],
+    "review_note": "需補正式資源連結"
+  },
+  {
+    "id": "PHAI-0002",
+    "status": "待補資料",
+    "title": "如何打造課堂適合且隨手可用的物理模擬教材",
+    "summary": "用 AI 協作製作可直接帶進課堂的物理模擬",
+    "description": "第二場分享主題，含 3Blue1Brown 開源動畫工具與物理模擬教材製作",
+    "author_display": "江長屹",
+    "author_visibility": "可公開",
+    "resource_type": [
+      "模擬／互動教材"
+    ],
+    "physics_topic": [
+      "力學",
+      "探究與實作"
+    ],
+    "ai_tools": [
+      "3Blue1Brown",
+      "Codex",
+      "Claude"
+    ],
+    "audience": [
+      "高中",
+      "教師備課"
+    ],
+    "url": "https://changyi123456.github.io/physics-game-S.H.M/",
+    "license_scope": "待確認",
+    "privacy_note": "需確認作品授權與是否可公開收錄",
+    "source_event": "5/27 第二場分享",
+    "tags": [
+      "模擬",
+      "3B1B",
+      "互動教材",
+      "SHM"
+    ],
+    "review_note": "已有公開 demo 連結，可請作者補一句話介紹"
+  },
+  {
+    "id": "PHAI-0003",
+    "status": "待補資料",
+    "title": "NotebookLM × 探究命題：科展轉探究題",
+    "summary": "用 NotebookLM 把科展或競賽題材轉成符合課綱的探究命題",
+    "description": "第三場分享主題，適合不熟程式的老師先做命題與資料整理",
+    "author_display": "趙晉鴻",
+    "author_visibility": "可公開",
+    "resource_type": [
+      "探究題",
+      "Agent 工作流"
+    ],
+    "physics_topic": [
+      "探究與實作"
+    ],
+    "ai_tools": [
+      "NotebookLM",
+      "YAML",
+      "Skills"
+    ],
+    "audience": [
+      "高中",
+      "教師備課"
+    ],
+    "url": "",
+    "license_scope": "待確認",
+    "privacy_note": "需確認範例題材是否可公開",
+    "source_event": "6/3 第三場分享",
+    "tags": [
+      "NotebookLM",
+      "探究命題",
+      "YAML",
+      "課綱"
+    ],
+    "review_note": "需補簡報/流程連結"
+  },
+  {
+    "id": "PHAI-0004",
+    "status": "待補資料",
+    "title": "素養導向出題 Agent 實戰",
+    "summary": "用 Claude Code / Cowork 等工具建立可反覆使用的素養命題 Agent",
+    "description": "第四場分享主題，重點是分析課綱、拆概念、設計情境、檢查迷思概念",
+    "author_display": "吳易哲",
+    "author_visibility": "可公開",
+    "resource_type": [
+      "素養題",
+      "Agent 工作流"
+    ],
+    "physics_topic": [
+      "AI 教學工作流"
+    ],
+    "ai_tools": [
+      "Claude Code",
+      "Cowork",
+      "Agent"
+    ],
+    "audience": [
+      "高中",
+      "教師備課"
+    ],
+    "url": "",
+    "license_scope": "待確認",
+    "privacy_note": "需確認範例題目與學生資料邊界",
+    "source_event": "6/10 第四場分享",
+    "tags": [
+      "素養命題",
+      "Agent",
+      "Claude Code",
+      "Cowork"
+    ],
+    "review_note": "需補正式分享素材"
+  },
+  {
+    "id": "PHAI-0005",
+    "status": "待補資料",
+    "title": "本地端大模型 × Hermes 龍蝦：把 AI 教學助理裝進自己的電腦",
+    "summary": "介紹本地端大模型與 Hermes 龍蝦在教師日常工作中的應用",
+    "description": "第五場預告主題，聚焦教材整理、評量設計、課堂素材管理與長期工作脈絡",
+    "author_display": "盧政良",
+    "author_visibility": "可公開",
+    "resource_type": [
+      "工具安裝／部署教學",
+      "Agent 工作流"
+    ],
+    "physics_topic": [
+      "AI 教學工作流"
+    ],
+    "ai_tools": [
+      "Hermes",
+      "local LLM",
+      "Ollama"
+    ],
+    "audience": [
+      "教師備課",
+      "社群共學"
+    ],
+    "url": "",
+    "license_scope": "待確認",
+    "privacy_note": "安裝畫面若含帳號路徑需遮蔽",
+    "source_event": "6/17 第五場預告",
+    "tags": [
+      "Hermes",
+      "龍蝦",
+      "本地端",
+      "LLM"
+    ],
+    "review_note": "待活動後補資源"
+  },
+  {
+    "id": "PHAI-0006",
+    "status": "待補資料",
+    "title": "學會模擬的下一步：如何將模擬與評量結合",
+    "summary": "把物理模擬從展示工具轉成可操作、可觀察、可評量的學習任務",
+    "description": "第六場預告主題，可發展成互動評量設計模板",
+    "author_display": "江長屹",
+    "author_visibility": "可公開",
+    "resource_type": [
+      "模擬／互動教材",
+      "素養題"
+    ],
+    "physics_topic": [
+      "力學",
+      "探究與實作"
+    ],
+    "ai_tools": [
+      "AI chatbot",
+      "HTML",
+      "模擬工具"
+    ],
+    "audience": [
+      "高中",
+      "教師備課"
+    ],
+    "url": "https://changyi123456.github.io/physics-game-S.H.M/",
+    "license_scope": "待確認",
+    "privacy_note": "需確認題目與評量資料公開範圍",
+    "source_event": "6/24 第六場預告",
+    "tags": [
+      "模擬",
+      "評量",
+      "互動題",
+      "遊戲化"
+    ],
+    "review_note": "待活動後補完整資源"
+  },
+  {
+    "id": "PHAI-0007",
+    "status": "待補資料",
+    "title": "Antigravity IDE 實戰入門",
+    "summary": "讓 AI 進入教材開發環境，管理資料、題目草稿與備課流程",
+    "description": "第七場預告主題，定位為 AI IDE 教材開發入門",
+    "author_display": "趙晉鴻",
+    "author_visibility": "可公開",
+    "resource_type": [
+      "工具安裝／部署教學",
+      "Agent 工作流"
+    ],
+    "physics_topic": [
+      "AI 教學工作流"
+    ],
+    "ai_tools": [
+      "Antigravity IDE",
+      "AI IDE"
+    ],
+    "audience": [
+      "教師備課",
+      "社群共學"
+    ],
+    "url": "",
+    "license_scope": "待確認",
+    "privacy_note": "安裝畫面與帳號資訊需注意",
+    "source_event": "7/1 第七場預告",
+    "tags": [
+      "Antigravity",
+      "AI IDE",
+      "教材開發"
+    ],
+    "review_note": "待活動後補資源"
+  },
+  {
+    "id": "PHAI-0008",
+    "status": "待補資料",
+    "title": "Orbit Transfer 互動模擬",
+    "summary": "軌道轉移互動模擬，可讓學生觀察軌道變化與操作變因",
+    "description": "講師群分享的公開互動網站，可作為物理模擬資源卡",
+    "author_display": "趙晉鴻",
+    "author_visibility": "需確認",
+    "resource_type": [
+      "模擬／互動教材"
+    ],
+    "physics_topic": [
+      "力學"
+    ],
+    "ai_tools": [
+      "HTML",
+      "JavaScript"
+    ],
+    "audience": [
+      "高中",
+      "大學基礎"
+    ],
+    "url": "https://arpowchao.github.io/apps/orbit_transfer/index.html",
+    "license_scope": "待確認",
+    "privacy_note": "需確認是否可收錄於 PhAI 平台",
+    "source_event": "講師群 5/24 分享",
+    "tags": [
+      "軌道",
+      "模擬",
+      "互動教材"
+    ],
+    "review_note": "需請作者確認授權"
+  },
+  {
+    "id": "PHAI-0009",
+    "status": "待補資料",
+    "title": "Orbital Decay 互動模擬",
+    "summary": "軌道衰減互動模擬，可作為天體/軌道運動教材",
+    "description": "講師群分享的公開互動網站，可作為物理模擬資源卡",
+    "author_display": "趙晉鴻",
+    "author_visibility": "需確認",
+    "resource_type": [
+      "模擬／互動教材"
+    ],
+    "physics_topic": [
+      "力學"
+    ],
+    "ai_tools": [
+      "HTML",
+      "JavaScript"
+    ],
+    "audience": [
+      "高中",
+      "大學基礎"
+    ],
+    "url": "https://arpowchao.github.io/apps/orbital_decay/index.html",
+    "license_scope": "待確認",
+    "privacy_note": "需確認是否可收錄於 PhAI 平台",
+    "source_event": "講師群 5/24 分享",
+    "tags": [
+      "軌道",
+      "模擬",
+      "互動教材"
+    ],
+    "review_note": "需請作者確認授權"
+  },
+  {
+    "id": "PHAI-0010",
+    "status": "待補資料",
+    "title": "物理 HTML 電子講義模式",
+    "summary": "可吃 LaTeX 與 JavaScript 的多模態 HTML 電子講義想像",
+    "description": "長屹老師分享的電子講義參考，可作為平台未來資源呈現樣式參考",
+    "author_display": "江長屹",
+    "author_visibility": "需確認",
+    "resource_type": [
+      "教材／講義／簡報"
+    ],
+    "physics_topic": [
+      "跨領域"
+    ],
+    "ai_tools": [
+      "HTML",
+      "LaTeX",
+      "JavaScript"
+    ],
+    "audience": [
+      "高中",
+      "教師備課"
+    ],
+    "url": "https://ebook-physics.netlify.app/",
+    "license_scope": "待確認",
+    "privacy_note": "需確認可否作為案例收錄",
+    "source_event": "講師群 5/18 分享",
+    "tags": [
+      "HTML講義",
+      "LaTeX",
+      "多模態"
+    ],
+    "review_note": "可列為參考案例而非正式投稿"
+  }
+];
+    const state = { query:'', audience:'', status:'', category:'全部', view:'grid' };
+    const accent = { 'Agent 工作流':'#145c56','模擬／互動教材':'#2f5f9e','探究題':'#8a5a18','素養題':'#8d3f58','工具安裝／部署教學':'#5b509e','教材／講義／簡報':'#6d6a30' };
+    const $ = sel => document.querySelector(sel); const uniq = arr => [...new Set(arr.flat().filter(Boolean))].sort((a,b)=>a.localeCompare(b,'zh-Hant')); const primaryType = r => r.resource_type?.[0] || '未分類'; const byCount = values => values.map(v => [v, resources.filter(r => (r.resource_type||[]).includes(v)).length]);
+    function fillSelect(sel, values) { values.forEach(v => { const o=document.createElement('option'); o.value=v; o.textContent=v; sel.appendChild(o); }); }
+    function setup() { $('#stat-total').textContent=resources.length; $('#stat-linked').textContent=resources.filter(r=>r.url).length; $('#stat-types').textContent=uniq(resources.map(r=>r.resource_type)).length; fillSelect($('#audience'), uniq(resources.map(r=>r.audience))); fillSelect($('#status'), uniq(resources.map(r=>[r.status]))); const cats=[['全部',resources.length],...byCount(uniq(resources.map(r=>r.resource_type)))]; $('#categories').innerHTML=cats.map(([c,n])=>`<button type="button" class="cat-btn ${c==='全部'?'active':''}" data-cat="${c}"><span>${c}</span><span class="cat-count">${n}</span></button>`).join(''); $('#categories').addEventListener('click', e=>{ const btn=e.target.closest('.cat-btn'); if(!btn) return; state.category=btn.dataset.cat; document.querySelectorAll('.cat-btn').forEach(b=>b.classList.toggle('active', b===btn)); render(); }); $('#q').addEventListener('input', e=>{ state.query=e.target.value.trim().toLowerCase(); render(); }); $('#audience').addEventListener('input', e=>{ state.audience=e.target.value; render(); }); $('#status').addEventListener('input', e=>{ state.status=e.target.value; render(); }); $('#gridBtn').addEventListener('click',()=>setView('grid')); $('#listBtn').addEventListener('click',()=>setView('list')); render(); }
+    function setView(v) { state.view=v; $('#cards').classList.toggle('list', v==='list'); $('#gridBtn').classList.toggle('active', v==='grid'); $('#listBtn').classList.toggle('active', v==='list'); }
+    function match(r) { const blob=[r.title,r.summary,r.description,r.author_display,r.source_event,r.review_note,...(r.resource_type||[]),...(r.physics_topic||[]),...(r.ai_tools||[]),...(r.audience||[]),...(r.tags||[])].join(' ').toLowerCase(); return (!state.query||blob.includes(state.query)) && (!state.audience||(r.audience||[]).includes(state.audience)) && (!state.status||r.status===state.status) && (state.category==='全部'||(r.resource_type||[]).includes(state.category)); }
+    function render() { const data=resources.filter(match); $('#resultText').textContent=`顯示 ${data.length} / ${resources.length} 筆資源`; $('#cards').innerHTML=data.map(card).join('') || '<div class="panel empty">沒有符合條件的資源。可以清除搜尋或切回「全部」分類。</div>'; }
+    function esc(s) { return String(s||'').replace(/[&<>"]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m])); }
+    function card(r) { const type=primaryType(r), color=accent[type]||'#145c56'; const tags=[...(r.ai_tools||[]),...(r.tags||[])].slice(0,5).map(t=>`<span class="tag">${esc(t)}</span>`).join(''); const linked=r.url?'<span class="badge linked">可開連結</span>':'<span class="badge">待補連結</span>'; return `<article class="resource" style="--accent:${color}"><div class="card-top"><div class="kicker"><span class="badge status">${esc(r.status)}</span><span class="badge">${esc(type)}</span>${linked}</div><span class="badge">${esc(r.id)}</span></div><h3>${esc(r.title)}</h3><p class="summary">${esc(r.summary)}</p><p class="desc">${esc(r.description)}</p><div class="meta-grid"><div class="meta-box"><b>對象</b>${esc((r.audience||[]).join('、'))}</div><div class="meta-box"><b>來源 / 作者</b>${esc(r.source_event)}｜${esc(r.author_display)}</div></div><div class="tags">${tags}</div><div class="card-actions">${r.url?`<a class="mini" href="${esc(r.url)}" target="_blank" rel="noopener">開啟資源</a>`:'<span class="mini disabled">待補資源連結</span>'}<span class="mini disabled">${esc(r.review_note)}</span></div></article>`; }
+    setup();
+  </script>
+</body>
+</html>

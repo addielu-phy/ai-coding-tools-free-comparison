@@ -17,10 +17,23 @@
       <h1>投稿資源</h1>
       <p>這是 PhAI AI 物理教學資源館的投稿入口草案。正式 Google Form 尚未接上前，先用這頁確認欄位與公開邊界；等表單建立後，只要把下方主按鈕換成 Google Form 連結即可。</p>
       <div class="actions">
-        <a class="btn primary" href="#fields">查看表單題目</a>
+        <a class="btn primary" href="https://script.google.com/home/projects/create" target="_blank" rel="noopener">開啟 Apps Script</a>
+        <a class="btn" href="../assets/create-phai-submission-form.gs">下載一鍵建立腳本</a>
+        <a class="btn" href="#fields">查看表單題目</a>
         <a class="btn" href="../assets/submission-sheet-fields.csv">下載 Sheet 欄位 CSV</a>
       </div>
-      <div class="notice"><strong>狀態：</strong>Google Form 尚未開通。原因是目前 Hermes Google Workspace OAuth 未授權；我不會假裝已建立表單。這頁是可直接交給表單建立者照填的正式草案。</div>
+      <div class="notice"><strong>狀態：</strong>我已做好可一鍵建立 Google Form 與收件 Sheet 的 Apps Script；但因目前 Hermes 未登入您的 Google 帳號，需由您在自己的 Google 帳號中貼上並執行一次。執行後請把「公開填寫連結」貼給我，我會把首頁投稿按鈕改成正式表單連結。</div>
+    </section>
+
+
+    <section class="card" style="margin-top:14px">
+      <h2>一鍵建立 Google Form</h2>
+      <div class="steps">
+        <div class="step"><strong>開啟 Apps Script</strong><br><span>點上方「開啟 Apps Script」，建立新的 Google Apps Script 專案。</span></div>
+        <div class="step"><strong>貼上腳本</strong><br><span>下載 <a href="../assets/create-phai-submission-form.gs">create-phai-submission-form.gs</a>，全選複製後貼到 Apps Script 編輯器。</span></div>
+        <div class="step"><strong>執行 createPhaiSubmissionForm</strong><br><span>第一次會要求 Google 授權。授權完成後，它會自動建立 Google Form 與連動 Sheet。</span></div>
+        <div class="step"><strong>複製公開填寫連結</strong><br><span>到 Apps Script 的執行紀錄 / Logs 複製 publishedUrl，貼給我後我會替換首頁投稿按鈕。</span></div>
+      </div>
     </section>
 
     <section class="grid" id="fields">

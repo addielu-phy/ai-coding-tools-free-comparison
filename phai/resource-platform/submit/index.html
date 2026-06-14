@@ -7,7 +7,7 @@
   <meta name="description" content="PhAI AI 物理教學資源館投稿資源草案：Google Form 題目、Sheet 欄位與公開授權提醒。" />
   <style>
     :root{--bg:#f8f6f1;--paper:#fffdf8;--ink:#202326;--muted:#6d716f;--line:#e2ded1;--green:#145c56;--blue:#2f5f9e;--amber:#9a5b13;--shadow:0 18px 45px rgba(54,48,35,.08);--r:24px}*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;background:radial-gradient(circle at 10% 0%,rgba(20,92,86,.14),transparent 28rem),linear-gradient(180deg,#fbfaf5,var(--bg));color:var(--ink);line-height:1.7}.wrap{max-width:1040px;margin:0 auto;padding:30px 18px 56px}a{color:var(--green)}.back{display:inline-flex;margin-bottom:22px;text-decoration:none;font-weight:800}.hero,.card{background:rgba(255,253,248,.9);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}.hero{padding:30px}.eyebrow{color:var(--green);font-weight:900;letter-spacing:.1em;text-transform:uppercase;font-size:12px}h1{font-size:clamp(2rem,7vw,4.5rem);line-height:1;margin:12px 0 14px;letter-spacing:-.07em}p{color:var(--muted)}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.btn{min-height:44px;border-radius:999px;padding:10px 14px;border:1px solid var(--line);background:#fff;text-decoration:none;font-weight:850;color:var(--green);display:inline-flex;align-items:center}.btn.primary{background:var(--green);color:#fff;border-color:var(--green)}.notice{margin-top:16px;padding:14px 16px;border-radius:18px;background:#fff6e5;border:1px solid #edd3a2;color:#68430e}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}.card{padding:20px}.card h2{margin-top:0;letter-spacing:-.04em}.fields{display:grid;gap:10px;margin:0;padding:0;list-style:none}.field{background:#f6f4ee;border:1px solid var(--line);border-radius:16px;padding:12px}.field b{display:block}.field span{display:block;color:var(--muted);font-size:14px}.pill{display:inline-flex;border-radius:999px;background:#e8f2ef;color:var(--green);padding:3px 8px;font-size:12px;font-weight:900;margin-left:6px}.steps{counter-reset:s;display:grid;gap:10px}.step{position:relative;padding:13px 13px 13px 52px;background:#f6f4ee;border:1px solid var(--line);border-radius:16px}.step:before{counter-increment:s;content:counter(s);position:absolute;left:13px;top:13px;width:28px;height:28px;border-radius:999px;display:grid;place-items:center;background:var(--green);color:white;font-weight:900}.footer{margin-top:22px;color:var(--muted);font-size:14px}@media(max-width:760px){.grid{grid-template-columns:1fr}.hero{padding:22px}}
-  </style>
+  .codebox{width:100%;min-height:320px;border:1px solid var(--line);border-radius:16px;padding:12px;background:#1f2933;color:#f8fafc;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;line-height:1.55;white-space:pre;overflow:auto}.copy-status{display:inline-flex;align-items:center;margin-left:10px;color:var(--muted);font-size:14px}.mini-list{display:grid;gap:8px;margin:10px 0 0;padding-left:1.2em;color:var(--muted)}.success-box{background:#e8f2ef;border:1px solid #c9e6dd;color:#145c56;border-radius:18px;padding:14px 16px;margin-top:14px}.textarea-note{color:var(--muted);font-size:14px;margin-top:8px}</style>
 </head>
 <body>
   <main class="wrap">
@@ -30,9 +30,254 @@
       <h2>一鍵建立 Google Form</h2>
       <div class="steps">
         <div class="step"><strong>開啟 Apps Script</strong><br><span>點上方「開啟 Apps Script」，建立新的 Google Apps Script 專案。</span></div>
-        <div class="step"><strong>貼上腳本</strong><br><span>下載 <a href="../assets/create-phai-submission-form.gs">create-phai-submission-form.gs</a>，全選複製後貼到 Apps Script 編輯器。</span></div>
-        <div class="step"><strong>執行 createPhaiSubmissionForm</strong><br><span>第一次會要求 Google 授權。授權完成後，它會自動建立 Google Form 與連動 Sheet。</span></div>
-        <div class="step"><strong>複製公開填寫連結</strong><br><span>到 Apps Script 的執行紀錄 / Logs 複製 publishedUrl，貼給我後我會替換首頁投稿按鈕。</span></div>
+        <div class="step"><strong>複製腳本</strong><br><span>按「複製完整腳本」，貼到 Apps Script 編輯器；也可下載 <a href="../assets/create-phai-submission-form.gs">create-phai-submission-form.gs</a>。</span></div>
+        <div class="step"><strong>執行 createPhaiSubmissionForm</strong><br><span>第一次會要求 Google 授權。授權完成後，它會自動建立 Google Form、連動 Sheet、欄位對照表、網站上架格式與講師群邀請文。</span></div>
+        <div class="step"><strong>複製公開填寫連結</strong><br><span>到 Apps Script 的執行紀錄 / Logs 複製 publishedUrl，貼給 Hermes 後即可替換首頁投稿按鈕。</span></div>
+      </div>
+      <div class="actions">
+        <button class="btn primary" type="button" id="copyScriptBtn">複製完整腳本</button>
+        <a class="btn" href="../assets/create-phai-submission-form.gs">下載 .gs 腳本</a>
+      </div>
+      <span class="copy-status" id="copyStatus" aria-live="polite"></span>
+      <p class="textarea-note">若手機瀏覽器不支援自動複製，可長按下方程式碼區全選複製。</p>
+      <textarea class="codebox" id="scriptBox" spellcheck="false">/**
+ * PhAI AI 物理教學資源館｜Google Form + Sheet 建立器 v2
+ *
+ * 使用方式：
+ * 1. 開 https://script.google.com/home/projects/create
+ * 2. 貼上本檔全部內容
+ * 3. 按 Run / 執行 createPhaiSubmissionForm
+ * 4. 授權後，到「執行紀錄 / Logs」複製：
+ *    - publishedUrl：公開填寫連結（請貼給 Hermes，替換網站投稿按鈕）
+ *    - editUrl：表單編輯連結
+ *    - sheetUrl：收件 Sheet 連結
+ */
+function createPhaiSubmissionForm() {
+  const formTitle = &#x27;PhAI AI 物理教學資源館｜資源投稿表單&#x27;;
+  const sheetTitle = &#x27;PhAI AI 物理教學資源館｜投稿收件表&#x27;;
+  const formDescription = [
+    &#x27;歡迎投稿 AI × 物理教學相關資源。&#x27;,
+    &#x27;&#x27;,
+    &#x27;第一版不追求完美，能說清楚「這份資源可以幫老師做什麼、適合誰、是否可公開」即可。&#x27;,
+    &#x27;正式上架前，講師群會先做輕審核：連結是否可開、是否有個資/著作權疑慮、公開範圍是否清楚。&#x27;,
+    &#x27;&#x27;,
+    &#x27;提醒：若資源含學生作品、學生姓名、照片、聲音、個資或未授權教材，請先在表單中說明，暫勿直接公開。&#x27;
+  ].join(&#x27;\n&#x27;);
+
+  const form = FormApp.create(formTitle)
+    .setDescription(formDescription)
+    .setCollectEmail(false)
+    .setAllowResponseEdits(true)
+    .setShowLinkToRespondAgain(true)
+    .setConfirmationMessage(&#x27;謝謝您的投稿！講師群會先確認公開範圍、授權與連結可用性，再整理到 PhAI 資源館。&#x27;);
+
+  try { form.setRequireLogin(false); } catch (err) { Logger.log(&#x27;setRequireLogin skipped: &#x27; + err); }
+  try { form.setLimitOneResponsePerUser(false); } catch (err) { Logger.log(&#x27;setLimitOneResponsePerUser skipped: &#x27; + err); }
+  try { form.setAcceptingResponses(true); } catch (err) { Logger.log(&#x27;setAcceptingResponses skipped: &#x27; + err); }
+
+  addRequiredFields_(form);
+  addOptionalFields_(form);
+
+  const sheet = SpreadsheetApp.create(sheetTitle);
+  form.setDestination(FormApp.DestinationType.SPREADSHEET, sheet.getId());
+  setupWorkbook_(sheet, form);
+
+  const result = {
+    editUrl: form.getEditUrl(),
+    publishedUrl: form.getPublishedUrl(),
+    sheetUrl: sheet.getUrl()
+  };
+
+  Logger.log(&#x27;表單編輯連結 editUrl: &#x27; + result.editUrl);
+  Logger.log(&#x27;公開填寫連結 publishedUrl: &#x27; + result.publishedUrl);
+  Logger.log(&#x27;收件 Sheet 連結 sheetUrl: &#x27; + result.sheetUrl);
+  Logger.log(&#x27;下一步：把 publishedUrl 貼給 Hermes，Hermes 會把資源館首頁「投稿資源」按鈕改成正式表單連結。&#x27;);
+
+  return result;
+}
+
+function addRequiredFields_(form) {
+  form.addSectionHeaderItem()
+    .setTitle(&#x27;基本資料&#x27;)
+    .setHelpText(&#x27;請用最少資料描述這份資源。第一版不要求完美，只要能讓其他老師判斷用途與公開範圍。&#x27;);
+
+  form.addTextItem()
+    .setTitle(&#x27;投稿者顯示名稱&#x27;)
+    .setHelpText(&#x27;可填真名、暱稱或學校稱呼。&#x27;)
+    .setRequired(true);
+
+  form.addMultipleChoiceItem()
+    .setTitle(&#x27;是否可公開投稿者名稱&#x27;)
+    .setChoiceValues([&#x27;可公開&#x27;, &#x27;僅限講師群內部&#x27;, &#x27;匿名呈現&#x27;])
+    .setRequired(true);
+
+  form.addTextItem()
+    .setTitle(&#x27;資源名稱&#x27;)
+    .setHelpText(&#x27;建議 20 字內，但不強制。&#x27;)
+    .setRequired(true);
+
+  form.addTextItem()
+    .setTitle(&#x27;一句話介紹&#x27;)
+    .setHelpText(&#x27;讓其他老師一眼知道這份資源能做什麼。&#x27;)
+    .setRequired(true);
+
+  form.addCheckboxItem()
+    .setTitle(&#x27;資源類型&#x27;)
+    .setChoiceValues([&#x27;探究題&#x27;, &#x27;素養題&#x27;, &#x27;模擬／互動教材&#x27;, &#x27;Prompt / YAML / Skill&#x27;, &#x27;Agent 工作流&#x27;, &#x27;教材／講義／簡報&#x27;, &#x27;錄影／教學示範&#x27;, &#x27;其他&#x27;])
+    .setRequired(true);
+
+  form.addCheckboxItem()
+    .setTitle(&#x27;適用對象&#x27;)
+    .setChoiceValues([&#x27;國中&#x27;, &#x27;高中&#x27;, &#x27;大學基礎&#x27;, &#x27;教師備課&#x27;, &#x27;社群共學&#x27;])
+    .setRequired(true);
+
+  form.addCheckboxItem()
+    .setTitle(&#x27;物理主題&#x27;)
+    .setChoiceValues([&#x27;力學&#x27;, &#x27;波動&#x27;, &#x27;光學&#x27;, &#x27;電磁&#x27;, &#x27;熱學&#x27;, &#x27;近代物理&#x27;, &#x27;探究與實作&#x27;, &#x27;跨領域&#x27;, &#x27;AI 教學工作流&#x27;])
+    .setRequired(true);
+
+  form.addTextItem()
+    .setTitle(&#x27;使用 AI 工具&#x27;)
+    .setHelpText(&#x27;選填。例如 NotebookLM / Claude / Codex / Gemini / 自製工具。&#x27;)
+    .setRequired(false);
+
+  form.addTextItem()
+    .setTitle(&#x27;資源連結&#x27;)
+    .setHelpText(&#x27;Google Drive、GitHub Pages、YouTube、GitHub repo 或其他公開連結。&#x27;)
+    .setRequired(true);
+
+  form.addMultipleChoiceItem()
+    .setTitle(&#x27;是否允許公開展示在 PhAI 資源平台&#x27;)
+    .setChoiceValues([&#x27;允許公開&#x27;, &#x27;僅限講師群內部&#x27;, &#x27;需先討論後再公開&#x27;])
+    .setRequired(true);
+
+  form.addParagraphTextItem()
+    .setTitle(&#x27;授權 / 使用限制&#x27;)
+    .setHelpText(&#x27;例如：可教學使用、需標註作者、不可再散布、待確認。&#x27;)
+    .setRequired(true);
+
+  form.addMultipleChoiceItem()
+    .setTitle(&#x27;是否願意未來分享 5–10 分鐘使用心得&#x27;)
+    .setChoiceValues([&#x27;願意&#x27;, &#x27;可以再討論&#x27;, &#x27;暫時不方便&#x27;])
+    .setRequired(true);
+}
+
+function addOptionalFields_(form) {
+  form.addPageBreakItem().setTitle(&#x27;選填補充資料&#x27;);
+
+  form.addParagraphTextItem()
+    .setTitle(&#x27;教學使用情境&#x27;)
+    .setHelpText(&#x27;課堂、作業、備課、社群共學等。&#x27;)
+    .setRequired(false);
+
+  form.addParagraphTextItem()
+    .setTitle(&#x27;學生反應或使用結果&#x27;)
+    .setHelpText(&#x27;若涉及學生資料，請先匿名。&#x27;)
+    .setRequired(false);
+
+  form.addTextItem()
+    .setTitle(&#x27;建議搭配的課程單元&#x27;)
+    .setHelpText(&#x27;例如：高一力學、電磁感應、探究與實作。&#x27;)
+    .setRequired(false);
+
+  form.addMultipleChoiceItem()
+    .setTitle(&#x27;是否有範例圖片&#x27;)
+    .setChoiceValues([&#x27;有且可公開&#x27;, &#x27;有但需遮蔽&#x27;, &#x27;沒有&#x27;])
+    .setRequired(false);
+
+  form.addParagraphTextItem()
+    .setTitle(&#x27;是否有學生作品或個資需要隱去&#x27;)
+    .setHelpText(&#x27;公開前輕審核重點。&#x27;)
+    .setRequired(false);
+
+  form.addParagraphTextItem()
+    .setTitle(&#x27;希望講師群協助改進的地方&#x27;)
+    .setHelpText(&#x27;例如分類、題目潤飾、互動化、授權判斷等。&#x27;)
+    .setRequired(false);
+}
+
+function setupWorkbook_(sheet, form) {
+  createAdminSheet_(sheet);
+  createFieldMapSheet_(sheet);
+  createWebsiteExportSheet_(sheet);
+  createAnnouncementSheet_(sheet, form);
+}
+
+function createAdminSheet_(sheet) {
+  const adminSheet = sheet.insertSheet(&#x27;管理欄位說明&#x27;);
+  adminSheet.getRange(1, 1, 1, 4).setValues([[&#x27;欄位&#x27;, &#x27;用途&#x27;, &#x27;建議值&#x27;, &#x27;備註&#x27;]]);
+  adminSheet.getRange(2, 1, 2, 4).setValues([
+    [&#x27;審核狀態&#x27;, &#x27;管理者人工補入&#x27;, &#x27;待整理 / 待補資料 / 可上架 / 已上架 / 限內部使用 / 暫不公開&#x27;, &#x27;正式上架前請確認公開範圍&#x27;],
+    [&#x27;審核備註&#x27;, &#x27;管理者人工補入&#x27;, &#x27;自由填寫&#x27;, &#x27;記錄需補資料、授權提醒或分類調整&#x27;]
+  ]);
+  adminSheet.setFrozenRows(1);
+  adminSheet.autoResizeColumns(1, 4);
+}
+
+function createFieldMapSheet_(sheet) {
+  const mapSheet = sheet.insertSheet(&#x27;欄位對照&#x27;);
+  const rows = [
+    [&#x27;field_key&#x27;, &#x27;Google Form 題目&#x27;, &#x27;網站資源卡用途&#x27;],
+    [&#x27;submitter_display_name&#x27;, &#x27;投稿者顯示名稱&#x27;, &#x27;作者 / 投稿者顯示&#x27;],
+    [&#x27;submitter_visibility&#x27;, &#x27;是否可公開投稿者名稱&#x27;, &#x27;決定是否公開作者&#x27;],
+    [&#x27;resource_title&#x27;, &#x27;資源名稱&#x27;, &#x27;資源卡標題&#x27;],
+    [&#x27;one_sentence_summary&#x27;, &#x27;一句話介紹&#x27;, &#x27;資源卡摘要&#x27;],
+    [&#x27;resource_type&#x27;, &#x27;資源類型&#x27;, &#x27;分類篩選&#x27;],
+    [&#x27;audience&#x27;, &#x27;適用對象&#x27;, &#x27;對象篩選&#x27;],
+    [&#x27;physics_topic&#x27;, &#x27;物理主題&#x27;, &#x27;主題標籤&#x27;],
+    [&#x27;ai_tools&#x27;, &#x27;使用 AI 工具&#x27;, &#x27;工具標籤&#x27;],
+    [&#x27;resource_url&#x27;, &#x27;資源連結&#x27;, &#x27;開啟資源按鈕&#x27;],
+    [&#x27;public_permission&#x27;, &#x27;是否允許公開展示在 PhAI 資源平台&#x27;, &#x27;公開邊界&#x27;],
+    [&#x27;license_scope&#x27;, &#x27;授權 / 使用限制&#x27;, &#x27;授權提醒&#x27;],
+    [&#x27;willing_short_share&#x27;, &#x27;是否願意未來分享 5–10 分鐘使用心得&#x27;, &#x27;後續邀請&#x27;],
+    [&#x27;teaching_context&#x27;, &#x27;教學使用情境&#x27;, &#x27;詳細描述&#x27;],
+    [&#x27;student_response&#x27;, &#x27;學生反應或使用結果&#x27;, &#x27;成效備註&#x27;],
+    [&#x27;course_unit&#x27;, &#x27;建議搭配的課程單元&#x27;, &#x27;課程標籤&#x27;],
+    [&#x27;has_sample_image&#x27;, &#x27;是否有範例圖片&#x27;, &#x27;素材狀態&#x27;],
+    [&#x27;privacy_risk&#x27;, &#x27;是否有學生作品或個資需要隱去&#x27;, &#x27;公開審核&#x27;],
+    [&#x27;help_needed&#x27;, &#x27;希望講師群協助改進的地方&#x27;, &#x27;共編需求&#x27;],
+    [&#x27;review_status&#x27;, &#x27;審核狀態&#x27;, &#x27;是否上架&#x27;],
+    [&#x27;review_note&#x27;, &#x27;審核備註&#x27;, &#x27;管理備註&#x27;]
+  ];
+  mapSheet.getRange(1, 1, rows.length, rows[0].length).setValues(rows);
+  mapSheet.setFrozenRows(1);
+  mapSheet.autoResizeColumns(1, 3);
+}
+
+function createWebsiteExportSheet_(sheet) {
+  const exportSheet = sheet.insertSheet(&#x27;網站上架資料格式&#x27;);
+  const headers = [&#x27;id&#x27;, &#x27;status&#x27;, &#x27;title&#x27;, &#x27;summary&#x27;, &#x27;description&#x27;, &#x27;author_display&#x27;, &#x27;author_visibility&#x27;, &#x27;resource_type&#x27;, &#x27;physics_topic&#x27;, &#x27;ai_tools&#x27;, &#x27;audience&#x27;, &#x27;url&#x27;, &#x27;license_scope&#x27;, &#x27;privacy_note&#x27;, &#x27;source_event&#x27;, &#x27;tags&#x27;, &#x27;review_note&#x27;];
+  exportSheet.getRange(1, 1, 1, headers.length).setValues([headers]);
+  exportSheet.getRange(2, 1, 1, headers.length).setValues([[
+    &#x27;PHAI-NEW-0001&#x27;, &#x27;待整理&#x27;, &#x27;範例：資源名稱&#x27;, &#x27;範例：一句話介紹&#x27;, &#x27;範例：教學使用情境或描述&#x27;, &#x27;投稿者顯示名稱&#x27;, &#x27;依投稿者選項&#x27;, &#x27;模擬／互動教材&#x27;, &#x27;力學&#x27;, &#x27;Claude; Codex&#x27;, &#x27;高中; 教師備課&#x27;, &#x27;https://example.com&#x27;, &#x27;待確認&#x27;, &#x27;若含學生資料請先匿名&#x27;, &#x27;Google Form 投稿&#x27;, &#x27;範例; AI教學&#x27;, &#x27;管理者審核備註&#x27;
+  ]]);
+  exportSheet.setFrozenRows(1);
+  exportSheet.autoResizeColumns(1, headers.length);
+}
+
+function createAnnouncementSheet_(sheet, form) {
+  const ann = sheet.insertSheet(&#x27;講師群邀請文&#x27;);
+  const publishedUrl = form.getPublishedUrl();
+  const text = [
+    &#x27;各位老師好，PhAI AI 物理教學資源館先開一個輕量投稿表單，想先收大家已經做過或正在嘗試的 AI × 物理教學資源。&#x27;,
+    &#x27;&#x27;,
+    &#x27;投稿不需要很完整，只要能說清楚：這份資源可以幫老師做什麼、適合誰、是否可公開，就可以先填。&#x27;,
+    &#x27;&#x27;,
+    &#x27;投稿表單：&#x27; + publishedUrl,
+    &#x27;&#x27;,
+    &#x27;第一階段會先做輕審核：確認連結可開、公開範圍、授權與個資邊界，再整理到 PhAI 資源館。也歡迎先填 1–2 份測試看看。&#x27;
+  ].join(&#x27;\n&#x27;);
+  ann.getRange(1, 1).setValue(&#x27;可貼到講師群的邀請文&#x27;);
+  ann.getRange(2, 1).setValue(text);
+  ann.autoResizeColumn(1);
+}
+</textarea>
+      <div class="success-box"><strong>執行後會建立：</strong>
+        <ul class="mini-list">
+          <li>Google Form：PhAI AI 物理教學資源館｜資源投稿表單</li>
+          <li>Google Sheet：投稿收件表</li>
+          <li>管理欄位說明、欄位對照、網站上架資料格式、講師群邀請文</li>
+        </ul>
       </div>
     </section>
 
@@ -81,7 +326,33 @@
         <div class="step"><strong>每週整理上架</strong><br><span>將 Sheet 中「可上架／已上架」的投稿整理成網站資源卡。</span></div>
       </div>
     </section>
-    <p class="footer">PhAI 共學圈資源平台｜投稿入口草案 v1</p>
+
+    <section class="card" style="margin-top:14px">
+      <h2>建立成功後貼給 Hermes 的資訊</h2>
+      <p>Apps Script 執行完成後，請把 Logs 裡三個網址貼回來。最重要的是 <strong>publishedUrl</strong>，我會用它把資源館首頁「投稿資源」按鈕改成正式表單。</p>
+      <ul class="mini-list">
+        <li><strong>publishedUrl</strong>：老師實際填表的公開連結</li>
+        <li><strong>editUrl</strong>：您管理表單題目的後台連結</li>
+        <li><strong>sheetUrl</strong>：投稿回應 Sheet 連結</li>
+      </ul>
+    </section>
+    <script>
+      const copyBtn = document.getElementById('copyScriptBtn');
+      const scriptBox = document.getElementById('scriptBox');
+      const status = document.getElementById('copyStatus');
+      copyBtn?.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(scriptBox.value);
+          status.textContent = '已複製，可以貼到 Apps Script。';
+        } catch (err) {
+          scriptBox.focus();
+          scriptBox.select();
+          status.textContent = '無法自動複製，請手動全選複製。';
+        }
+      });
+    </script>
+
+    <p class="footer">PhAI 共學圈資源平台｜投稿入口草案 v2</p>
   </main>
 </body>
 </html>

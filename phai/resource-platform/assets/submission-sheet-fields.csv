@@ -1,0 +1,22 @@
+field_key,field_label,required,type,options,note
+submitted_at,投稿時間,yes,timestamp,,由 Google Form/Sheet 自動產生或人工補入
+submitter_display_name,投稿者顯示名稱,yes,short_text,,可填真名/暱稱/學校稱呼
+submitter_visibility,是否可公開投稿者名稱,yes,single_choice,可公開;僅限講師群內部;匿名呈現,公開頁只呈現投稿者同意的名稱
+resource_title,資源名稱,yes,short_text,,建議 20 字內但不強制
+one_sentence_summary,一句話介紹,yes,short_text,,讓老師一眼知道用途
+resource_type,資源類型,yes,multiple_choice,探究題;素養題;模擬／互動教材;Prompt / YAML / Skill;Agent 工作流;教材／講義／簡報;錄影／教學示範;其他,可複選
+audience,適用對象,yes,multiple_choice,國中;高中;大學基礎;教師備課;社群共學,可複選
+physics_topic,物理主題,yes,multiple_choice,力學;波動;光學;電磁;熱學;近代物理;探究與實作;跨領域;AI 教學工作流,可複選
+ai_tools,使用 AI 工具,no,short_text,,例如 NotebookLM / Claude / Codex / Gemini / 自製工具
+resource_url,資源連結,yes,url,,Google Drive/GitHub Pages/YouTube/GitHub repo/其他公開連結
+public_permission,是否允許公開展示在 PhAI 資源平台,yes,single_choice,允許公開;僅限講師群內部;需先討論後再公開,公開前依此欄處理
+license_scope,授權/使用限制,yes,paragraph,,例如 CC 授權/僅供教學/不可再散布/需標註作者
+willing_short_share,是否願意未來分享 5–10 分鐘使用心得,yes,single_choice,願意;可以再討論;暫時不方便,作為後續共學分享邀請依據
+teaching_context,教學使用情境,no,paragraph,,課堂/作業/備課/社群共學等
+student_response,學生反應或使用結果,no,paragraph,,若涉及學生資料請先匿名
+course_unit,建議搭配的課程單元,no,short_text,,例如 高一力學/電磁感應/探究與實作
+has_sample_image,是否有範例圖片,no,single_choice,有且可公開;有但需遮蔽;沒有,圖片或截圖需另行確認授權
+privacy_risk,是否有學生作品或個資需要隱去,no,paragraph,,公開前輕審核重點
+help_needed,希望講師群協助改進的地方,no,paragraph,,例如分類/題目潤飾/互動化/授權判斷
+review_status,審核狀態,yes,single_choice,待整理;待補資料;可上架;已上架;限內部使用;暫不公開,由管理者填寫
+review_note,審核備註,no,paragraph,,由管理者填寫

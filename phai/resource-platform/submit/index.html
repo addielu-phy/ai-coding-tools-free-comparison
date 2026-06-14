@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>投稿資源｜PhAI AI 物理教學資源館</title>
+  <meta name="description" content="PhAI AI 物理教學資源館投稿資源草案：Google Form 題目、Sheet 欄位與公開授權提醒。" />
+  <style>
+    :root{--bg:#f8f6f1;--paper:#fffdf8;--ink:#202326;--muted:#6d716f;--line:#e2ded1;--green:#145c56;--blue:#2f5f9e;--amber:#9a5b13;--shadow:0 18px 45px rgba(54,48,35,.08);--r:24px}*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;background:radial-gradient(circle at 10% 0%,rgba(20,92,86,.14),transparent 28rem),linear-gradient(180deg,#fbfaf5,var(--bg));color:var(--ink);line-height:1.7}.wrap{max-width:1040px;margin:0 auto;padding:30px 18px 56px}a{color:var(--green)}.back{display:inline-flex;margin-bottom:22px;text-decoration:none;font-weight:800}.hero,.card{background:rgba(255,253,248,.9);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}.hero{padding:30px}.eyebrow{color:var(--green);font-weight:900;letter-spacing:.1em;text-transform:uppercase;font-size:12px}h1{font-size:clamp(2rem,7vw,4.5rem);line-height:1;margin:12px 0 14px;letter-spacing:-.07em}p{color:var(--muted)}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.btn{min-height:44px;border-radius:999px;padding:10px 14px;border:1px solid var(--line);background:#fff;text-decoration:none;font-weight:850;color:var(--green);display:inline-flex;align-items:center}.btn.primary{background:var(--green);color:#fff;border-color:var(--green)}.notice{margin-top:16px;padding:14px 16px;border-radius:18px;background:#fff6e5;border:1px solid #edd3a2;color:#68430e}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}.card{padding:20px}.card h2{margin-top:0;letter-spacing:-.04em}.fields{display:grid;gap:10px;margin:0;padding:0;list-style:none}.field{background:#f6f4ee;border:1px solid var(--line);border-radius:16px;padding:12px}.field b{display:block}.field span{display:block;color:var(--muted);font-size:14px}.pill{display:inline-flex;border-radius:999px;background:#e8f2ef;color:var(--green);padding:3px 8px;font-size:12px;font-weight:900;margin-left:6px}.steps{counter-reset:s;display:grid;gap:10px}.step{position:relative;padding:13px 13px 13px 52px;background:#f6f4ee;border:1px solid var(--line);border-radius:16px}.step:before{counter-increment:s;content:counter(s);position:absolute;left:13px;top:13px;width:28px;height:28px;border-radius:999px;display:grid;place-items:center;background:var(--green);color:white;font-weight:900}.footer{margin-top:22px;color:var(--muted);font-size:14px}@media(max-width:760px){.grid{grid-template-columns:1fr}.hero{padding:22px}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <a class="back" href="../">← 回資源館</a>
+    <section class="hero">
+      <div class="eyebrow">Submission draft</div>
+      <h1>投稿資源</h1>
+      <p>這是 PhAI AI 物理教學資源館的投稿入口草案。正式 Google Form 尚未接上前，先用這頁確認欄位與公開邊界；等表單建立後，只要把下方主按鈕換成 Google Form 連結即可。</p>
+      <div class="actions">
+        <a class="btn primary" href="#fields">查看表單題目</a>
+        <a class="btn" href="../assets/submission-sheet-fields.csv">下載 Sheet 欄位 CSV</a>
+      </div>
+      <div class="notice"><strong>狀態：</strong>Google Form 尚未開通。原因是目前 Hermes Google Workspace OAuth 未授權；我不會假裝已建立表單。這頁是可直接交給表單建立者照填的正式草案。</div>
+    </section>
+
+    <section class="grid" id="fields">
+      <article class="card">
+        <h2>必填欄位</h2>
+        <ul class="fields">
+          <li class="field"><b>投稿者顯示名稱 <span class="pill">必填</span></b><span>可填真名、暱稱或學校稱呼。</span></li>
+          <li class="field"><b>是否可公開投稿者名稱 <span class="pill">單選</span></b><span>可公開／僅限講師群內部／匿名呈現。</span></li>
+          <li class="field"><b>資源名稱 <span class="pill">必填</span></b><span>建議 20 字內，但不強制。</span></li>
+          <li class="field"><b>一句話介紹 <span class="pill">必填</span></b><span>讓其他老師一眼知道這份資源能做什麼。</span></li>
+          <li class="field"><b>資源類型 <span class="pill">複選</span></b><span>探究題、素養題、模擬／互動教材、Prompt/YAML/Skill、Agent 工作流、教材／講義／簡報、錄影／教學示範、其他。</span></li>
+          <li class="field"><b>適用對象 <span class="pill">複選</span></b><span>國中、高中、大學基礎、教師備課、社群共學。</span></li>
+          <li class="field"><b>物理主題 <span class="pill">複選</span></b><span>力學、波動、光學、電磁、熱學、近代物理、探究與實作、跨領域、AI 教學工作流。</span></li>
+          <li class="field"><b>資源連結 <span class="pill">必填</span></b><span>Google Drive、GitHub Pages、YouTube、GitHub repo 或其他公開連結。</span></li>
+          <li class="field"><b>是否允許公開展示 <span class="pill">單選</span></b><span>允許公開／僅限講師群內部／需先討論後再公開。</span></li>
+          <li class="field"><b>授權或使用限制 <span class="pill">必填</span></b><span>例如：可教學使用、需標註作者、不可再散布、待確認。</span></li>
+          <li class="field"><b>是否願意未來分享 5–10 分鐘心得 <span class="pill">單選</span></b><span>願意／可以再討論／暫時不方便。</span></li>
+        </ul>
+      </article>
+      <article class="card">
+        <h2>選填欄位</h2>
+        <ul class="fields">
+          <li class="field"><b>使用 AI 工具</b><span>例如 NotebookLM、Claude、Codex、Gemini、自製工具。</span></li>
+          <li class="field"><b>教學使用情境</b><span>課堂、作業、備課、社群共學等。</span></li>
+          <li class="field"><b>學生反應或使用結果</b><span>若涉及學生資料請先匿名。</span></li>
+          <li class="field"><b>建議搭配的課程單元</b><span>例如高一力學、電磁感應、探究與實作。</span></li>
+          <li class="field"><b>是否有範例圖片</b><span>有且可公開／有但需遮蔽／沒有。</span></li>
+          <li class="field"><b>是否有學生作品或個資需要隱去</b><span>公開前輕審核重點。</span></li>
+          <li class="field"><b>希望講師群協助改進的地方</b><span>分類、題目潤飾、互動化、授權判斷等。</span></li>
+        </ul>
+        <h2>管理者欄位</h2>
+        <ul class="fields">
+          <li class="field"><b>審核狀態</b><span>待整理、待補資料、可上架、已上架、限內部使用、暫不公開。</span></li>
+          <li class="field"><b>審核備註</b><span>由講師群或管理者補入。</span></li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="card" style="margin-top:14px">
+      <h2>Google Form / Sheet 接法</h2>
+      <div class="steps">
+        <div class="step"><strong>建立 Google Form</strong><br><span>照本頁欄位建立題目，第一版不要設太高門檻。</span></div>
+        <div class="step"><strong>連到 Google Sheet</strong><br><span>下載 CSV 欄位表，讓 Sheet 欄名與網站資料欄位一致。</span></div>
+        <div class="step"><strong>把表單連結換到首頁投稿按鈕</strong><br><span>目前首頁連到這份草案頁；Google Form 建好後改為直接連表單。</span></div>
+        <div class="step"><strong>每週整理上架</strong><br><span>將 Sheet 中「可上架／已上架」的投稿整理成網站資源卡。</span></div>
+      </div>
+    </section>
+    <p class="footer">PhAI 共學圈資源平台｜投稿入口草案 v1</p>
+  </main>
+</body>
+</html>

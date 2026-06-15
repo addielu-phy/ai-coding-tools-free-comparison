@@ -80,15 +80,23 @@
     ],
     "url": "https://youtu.be/QD0K7Kul6t4?si=BQ_Ytj7Rs80ix-xm",
     "thumbnail_url": "https://i.ytimg.com/vi/QD0K7Kul6t4/hqdefault.jpg",
-    "license_scope": "公開 YouTube 影片",
-    "privacy_note": "公開影片；引用時請保留作者與來源連結",
-    "source_event": "5/20 第一場分享｜YouTube 公開影片",
+    "extra_links": [
+      {
+        "label": "講義 PDF",
+        "url": "https://drive.google.com/file/d/18VBDcvDRFWa9kYl_nZuntfSwDTbSjzF7/view",
+        "kind": "Google Drive"
+      }
+    ],
+    "license_scope": "公開 YouTube 影片與講義 PDF",
+    "privacy_note": "公開影片與講義；引用時請保留作者與來源連結",
+    "source_event": "5/20 第一場分享｜YouTube 公開影片｜講義 PDF",
     "tags": [
       "Codex",
       "Agent",
       "教學助理",
       "工作流",
-      "YouTube"
+      "YouTube",
+      "講義PDF"
     ],
     "review_note": "已公開收錄"
   },
@@ -419,7 +427,7 @@
     function render() { const data=resources.filter(match); $('#resultText').textContent=`顯示 ${data.length} / ${resources.length} 筆資源`; $('#cards').innerHTML=data.map(card).join('') || '<div class="panel empty">沒有符合條件的資源。可以清除搜尋或切回「全部」分類。</div>'; }
     function esc(s) { return String(s||'').replace(/[&<>"]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m])); }
     function preview(r, type) { const words=[...(r.ai_tools||[]),...(r.tags||[])].slice(0,4).map(t=>`<span>${esc(t)}</span>`).join(''); const host=r.url ? new URL(r.url).hostname.replace(/^www\./,'') : 'preview.phai.local'; const label=r.url ? '點擊開啟預覽' : '示意預覽'; const thumbStyle=r.thumbnail_url ? ` style="--preview-image:url('${esc(r.thumbnail_url)}')"` : ''; const thumbClass=r.thumbnail_url ? ' has-thumb' : ''; const inner=`<div class="preview-frame${thumbClass}"${thumbStyle} aria-label="${esc(r.title)} 的預覽畫面"><div class="preview-window"><div class="preview-bar"><div class="traffic" aria-hidden="true"><span></span><span></span><span></span></div><div class="preview-pill">${esc(host)}</div></div><div class="preview-body"><div class="preview-type">${esc(type)}</div><div class="preview-title">${esc(r.title)}</div><div class="preview-keywords">${words}</div></div><div class="preview-footer"><span>${esc(r.author_display||'作者待補')}</span><span class="preview-status">${label}</span></div></div></div>`; return r.url ? `<a class="preview-link" href="${esc(r.url)}" target="_blank" rel="noopener">${inner}</a>` : inner; }
-    function card(r) { const type=primaryType(r), color=accent[type]||'#145c56'; const tags=[...(r.ai_tools||[]),...(r.tags||[])].slice(0,5).map(t=>`<span class="tag">${esc(t)}</span>`).join(''); const linked=r.url?`<a class="badge open-link" href="${esc(r.url)}" target="_blank" rel="noopener" aria-label="開啟資源：${esc(r.title)}">可開連結</a>`:'<span class="badge">連結整理中</span>'; const sourceAuthor=`<div class="source-strip" aria-label="來源與作者"><div><span class="source-label">來源</span><div class="source-event">${esc(r.source_event||'來源待補')}</div></div><div class="author-chip"><span class="author-label">作者</span><span class="author-name">${esc(r.author_display||'作者待補')}</span></div></div>`; return `<article class="resource" style="--accent:${color}"><div class="card-top"><div class="kicker"><span class="badge status">${esc(r.status)}</span><span class="badge">${esc(type)}</span>${linked}</div><span class="badge">${esc(r.id)}</span></div>${preview(r,type)}<h3>${esc(r.title)}</h3>${sourceAuthor}<p class="summary">${esc(r.summary)}</p><p class="desc">${esc(r.description)}</p><div class="meta-grid"><div class="meta-box"><b>對象</b>${esc((r.audience||[]).join('、'))}</div><div class="meta-box"><b>公開狀態</b>${esc(r.author_visibility||'待確認')}</div></div><div class="tags">${tags}</div><div class="card-actions">${r.url?`<a class="mini" href="${esc(r.url)}" target="_blank" rel="noopener">開啟資源</a>`:'<span class="mini disabled">資源整理中</span>'}</div></article>`; }
+    function card(r) { const type=primaryType(r), color=accent[type]||'#145c56'; const tags=[...(r.ai_tools||[]),...(r.tags||[])].slice(0,5).map(t=>`<span class="tag">${esc(t)}</span>`).join(''); const linked=r.url?`<a class="badge open-link" href="${esc(r.url)}" target="_blank" rel="noopener" aria-label="開啟資源：${esc(r.title)}">可開連結</a>`:'<span class="badge">連結整理中</span>'; const sourceAuthor=`<div class="source-strip" aria-label="來源與作者"><div><span class="source-label">來源</span><div class="source-event">${esc(r.source_event||'來源待補')}</div></div><div class="author-chip"><span class="author-label">作者</span><span class="author-name">${esc(r.author_display||'作者待補')}</span></div></div>`; const extras=(r.extra_links||[]).map(x=>`<a class="mini" href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.label||'補充資料')}</a>`).join(''); const mainAction=r.url?`<a class="mini" href="${esc(r.url)}" target="_blank" rel="noopener">開啟資源</a>`:'<span class="mini disabled">資源整理中</span>'; return `<article class="resource" style="--accent:${color}"><div class="card-top"><div class="kicker"><span class="badge status">${esc(r.status)}</span><span class="badge">${esc(type)}</span>${linked}</div><span class="badge">${esc(r.id)}</span></div>${preview(r,type)}<h3>${esc(r.title)}</h3>${sourceAuthor}<p class="summary">${esc(r.summary)}</p><p class="desc">${esc(r.description)}</p><div class="meta-grid"><div class="meta-box"><b>對象</b>${esc((r.audience||[]).join('、'))}</div><div class="meta-box"><b>公開狀態</b>${esc(r.author_visibility||'待確認')}</div></div><div class="tags">${tags}</div><div class="card-actions">${mainAction}${extras}</div></article>`; }
     setup();
   </script>
 </body>

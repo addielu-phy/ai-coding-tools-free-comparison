@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>近五年分科/指考物理｜主題式自學評量</title>
+  <meta name="description" content="110–114 分科測驗/指考物理題目依力學、熱力學、光學、電磁學、近代物理與子單元排序的自學評量網頁。">
+  <link rel="stylesheet" href="style.css?v=20260616a">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">CEEC Physics · 110–114</p>
+      <h1>近五年分科/指考物理｜主題式自學評量</h1>
+      <p class="lead">依指定順序整理：力學（運動學、動力學、能量）→ 熱力學（熱學、氣體動力論）→ 光學（幾何光學、波動、物理光學）→ 電磁學（靜電、電流、電流磁效應、電磁感應）→ 近代物理（光電效應、物質波、波耳氫原子模型）。</p>
+      <div class="actions">
+        <button id="startAll">全部開始</button>
+        <button id="wrongOnly" class="ghost">錯題練習</button>
+        <button id="reset" class="ghost danger">清除本機紀錄</button>
+      </div>
+      <p class="note">題面使用大考中心公開試題頁面截圖；110 為分科測驗前一年度指考物理。非選題採自評。</p>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="panel controls">
+      <label>大單元
+        <select id="domainFilter"><option value="">全部</option></select>
+      </label>
+      <label>子單元
+        <select id="subFilter"><option value="">全部</option></select>
+      </label>
+      <label>年度
+        <select id="yearFilter"><option value="">全部</option></select>
+      </label>
+      <label>搜尋
+        <input id="search" placeholder="題號、主題、年度">
+      </label>
+    </section>
+    <section id="summary" class="summary"></section>
+    <section id="list" class="list"></section>
+    <section class="sources panel">
+      <h2>來源與使用說明</h2>
+      <ul>
+        <li>試題來源：財團法人大學入學考試中心基金會公開試題。</li>
+        <li>答案來源：優先採大考中心選擇題參考答案；部分年度以公開解析輔助核對。非選題提供自評，不做自動給分。</li>
+        <li>本頁設計為學生自學與老師課堂複習用，進度只儲存在目前瀏覽器 localStorage。</li>
+      </ul>
+    </section>
+  </main>
+  <dialog id="quizDialog">
+    <div id="quiz"></div>
+  </dialog>
+  <script src="app.js?v=20260616a"></script>
+</body>
+</html>

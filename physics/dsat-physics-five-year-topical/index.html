@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>近五年分科/指考物理｜主題式自學評量</title>
   <meta name="description" content="110–114 分科測驗/指考物理題目依力學、熱力學、光學、電磁學、近代物理與子單元排序的自學評量網頁。">
-  <link rel="stylesheet" href="style.css?v=20260616b">
+  <link rel="stylesheet" href="style.css?v=20260616d">
 </head>
 <body>
   <header class="hero">
@@ -16,12 +16,23 @@
       <div class="actions">
         <button id="startAll">全部開始</button>
         <button id="wrongOnly" class="ghost">錯題練習</button>
+        <a class="btn ghost" href="teacher.html">老師端</a>
         <button id="reset" class="ghost danger">清除本機紀錄</button>
       </div>
-      <p class="note">題面使用大考中心公開試題頁面截圖；110 為分科測驗前一年度指考物理。非選題採自評。</p>
+      <p class="note">題面使用大考中心公開試題頁面截圖；110 為分科測驗前一年度指考物理。非選題採自評。若 Firebase 已設定，作答紀錄會同步到老師端資料庫。</p>
     </div>
   </header>
   <main class="wrap">
+    <section class="panel student-panel">
+      <label>學生代號 / 座號 / 暱稱
+        <input id="studentName" maxlength="40" placeholder="例如：203-12 王小明，或只填座號">
+      </label>
+      <div class="cloud-row">
+        <span id="cloudBadge" class="tag">雲端：檢查中</span>
+        <button id="flushCloud" class="ghost">補傳暫存紀錄</button>
+      </div>
+      <p class="muted">未設定 Firebase 時，練習紀錄只存在本機；設定後，每題作答會寫入老師端資料庫。</p>
+    </section>
     <section class="panel controls">
       <label>大單元
         <select id="domainFilter"><option value="">全部</option></select>
@@ -43,13 +54,16 @@
       <ul>
         <li>試題來源：財團法人大學入學考試中心基金會公開試題。</li>
         <li>答案來源：優先採大考中心選擇題參考答案；部分年度以公開解析輔助核對。非選題提供自評，不做自動給分。</li>
-        <li>本頁設計為學生自學與老師課堂複習用，進度只儲存在目前瀏覽器 localStorage。</li>
+        <li>本頁設計為學生自學與老師課堂複習用；本機進度存在目前瀏覽器 localStorage。若啟用 Firebase，可開啟 <a href="teacher.html">老師端</a> 查看全班資料。</li>
       </ul>
     </section>
   </main>
   <dialog id="quizDialog">
     <div id="quiz"></div>
   </dialog>
-  <script src="app.js?v=20260616b"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js?v=20260616d"></script>
+  <script src="app.js?v=20260616d"></script>
 </body>
 </html>

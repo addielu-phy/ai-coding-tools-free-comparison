@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>教師端｜近五年分科/指考物理主題式評量</title>
+  <meta name="description" content="近五年分科/指考物理主題式評量的教師端：全班作答紀錄、題目錯誤率、單元弱點、學生明細與 CSV 匯出。">
+  <link rel="stylesheet" href="style.css?v=20260616d">
+</head>
+<body>
+  <header class="hero teacher-hero">
+    <div class="wrap">
+      <p class="eyebrow">Teacher Dashboard · Firebase</p>
+      <h1>教師端｜近五年分科/指考物理</h1>
+      <p class="lead">查看學生練習紀錄、全班最常錯題、單元弱點與個別學生明細。Firebase 尚未設定時，本頁會顯示設定指引，不影響學生端練習。</p>
+      <div class="actions">
+        <a class="btn" href="index.html">回學生端</a>
+        <a class="btn ghost" href="FIREBASE_SETUP.md">Firebase 設定說明</a>
+      </div>
+    </div>
+  </header>
+  <main id="app" class="wrap">
+    <section class="panel"><p class="muted">載入教師端中…</p></section>
+  </main>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js?v=20260616d"></script>
+  <script src="teacher.js?v=20260616d"></script>
+</body>
+</html>

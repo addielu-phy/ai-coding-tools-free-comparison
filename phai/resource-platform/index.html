@@ -124,7 +124,7 @@
       "高中",
       "教師備課"
     ],
-    "url": "https://changyi123456.github.io/physics-game-S.H.M/",
+    "url": "https://dapper-churros-ce9855.netlify.app/",
     "extra_links": [
       {
         "label": "分享資料",
@@ -433,11 +433,92 @@
       "多模態"
     ],
     "review_note": "收錄資料確認中"
+  },
+  {
+    "id": "PHAI-0011",
+    "status": "已公開",
+    "title": "MotionLab Tracker 技術與操作指南：3D Tracker",
+    "summary": "江長屹老師分享的 MotionLab 2D / 3D Tracker 操作與技術指南",
+    "description": "整理 2D / 3D Workbench 的運算原理、操作流程與下載，支援自動追蹤、3D 融合與 CSV 匯出，適合高中物理實驗與探究課程。",
+    "author_display": "江長屹",
+    "author_visibility": "可公開",
+    "resource_type": [
+      "實驗／數據分析工具",
+      "工具安裝／部署教學"
+    ],
+    "physics_topic": [
+      "力學",
+      "探究與實作",
+      "實驗數據分析"
+    ],
+    "ai_tools": [
+      "MotionLab Tracker",
+      "3D Tracker",
+      "CSV"
+    ],
+    "audience": [
+      "高中",
+      "教師備課",
+      "學生探究"
+    ],
+    "url": "https://motionlab-tracker-guide.netlify.app/",
+    "license_scope": "公開網站資源",
+    "privacy_note": "公開網站；引用時請保留作者與來源連結",
+    "source_event": "江長屹老師分享｜3D Tracker",
+    "tags": [
+      "3D Tracker",
+      "MotionLab",
+      "影片分析",
+      "實驗數據",
+      "CSV",
+      "探究與實作"
+    ],
+    "review_note": "已公開收錄"
+  },
+  {
+    "id": "PHAI-0012",
+    "status": "已公開",
+    "title": "物理研究員養成計畫 RPG 遊戲",
+    "summary": "仁武高中曾意真老師分享的高一物理 RPG 遊戲化學習資源",
+    "description": "以 RPG 任務情境包裝高一物理學習，適合學生自學、課堂活動與教師設計遊戲化評量時參考。",
+    "author_display": "曾意真",
+    "author_visibility": "可公開",
+    "resource_type": [
+      "遊戲化學習",
+      "模擬／互動教材"
+    ],
+    "physics_topic": [
+      "高一物理",
+      "力學",
+      "探究與實作"
+    ],
+    "ai_tools": [
+      "Web App",
+      "Firebase",
+      "遊戲化"
+    ],
+    "audience": [
+      "高中",
+      "學生自學",
+      "教師教學"
+    ],
+    "url": "https://high-school-1st-physics-rpg.web.app/",
+    "license_scope": "公開網站資源",
+    "privacy_note": "公開網站；引用時請保留作者與來源連結",
+    "source_event": "仁武高中 曾意真老師分享",
+    "tags": [
+      "RPG",
+      "遊戲化學習",
+      "高一物理",
+      "自學",
+      "任務式學習"
+    ],
+    "review_note": "已公開收錄"
   }
 ];
 
     const state = { query:'', audience:'', status:'', category:'全部', view:'grid' };
-    const accent = { 'Agent 工作流':'#145c56','模擬／互動教材':'#2f5f9e','探究題':'#8a5a18','素養題':'#8d3f58','工具安裝／部署教學':'#5b509e','教材／講義／簡報':'#6d6a30' };
+    const accent = { 'Agent 工作流':'#145c56','模擬／互動教材':'#2f5f9e','探究題':'#8a5a18','素養題':'#8d3f58','工具安裝／部署教學':'#5b509e','教材／講義／簡報':'#6d6a30','實驗／數據分析工具':'#0e7490','遊戲化學習':'#b45309' };
     const $ = sel => document.querySelector(sel); const uniq = arr => [...new Set(arr.flat().filter(Boolean))].sort((a,b)=>a.localeCompare(b,'zh-Hant')); const primaryType = r => r.resource_type?.[0] || '未分類'; const byCount = values => values.map(v => [v, resources.filter(r => (r.resource_type||[]).includes(v)).length]);
     function fillSelect(sel, values) { values.forEach(v => { const o=document.createElement('option'); o.value=v; o.textContent=v; sel.appendChild(o); }); }
     function setup() { $('#stat-total').textContent=resources.length; $('#stat-linked').textContent=resources.filter(r=>r.url).length; $('#stat-types').textContent=uniq(resources.map(r=>r.resource_type)).length; fillSelect($('#audience'), uniq(resources.map(r=>r.audience))); fillSelect($('#status'), uniq(resources.map(r=>[r.status]))); const cats=[['全部',resources.length],...byCount(uniq(resources.map(r=>r.resource_type)))]; $('#categories').innerHTML=cats.map(([c,n])=>`<button type="button" class="cat-btn ${c==='全部'?'active':''}" data-cat="${c}"><span>${c}</span><span class="cat-count">${n}</span></button>`).join(''); $('#categories').addEventListener('click', e=>{ const btn=e.target.closest('.cat-btn'); if(!btn) return; state.category=btn.dataset.cat; document.querySelectorAll('.cat-btn').forEach(b=>b.classList.toggle('active', b===btn)); render(); }); $('#q').addEventListener('input', e=>{ state.query=e.target.value.trim().toLowerCase(); render(); }); $('#audience').addEventListener('input', e=>{ state.audience=e.target.value; render(); }); $('#status').addEventListener('input', e=>{ state.status=e.target.value; render(); }); $('#gridBtn').addEventListener('click',()=>setView('grid')); $('#listBtn').addEventListener('click',()=>setView('list')); render(); }

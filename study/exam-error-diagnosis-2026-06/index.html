@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>考卷錯題診斷與 7 天補強練習｜自然・數學・國文・公民</title>
+<meta name="description" content="根據自然浮力、數學平行線角度、國文空城計、公民行政救濟考卷錯題，整理錯因、能力缺口與 7 天補強練習。">
+<style>
+:root {
+  --bg:#f8fafc; --paper:#ffffff; --ink:#172033; --muted:#64748b; --line:#dbe4ef;
+  --blue:#2563eb; --cyan:#0891b2; --green:#16a34a; --amber:#d97706; --red:#dc2626; --purple:#7c3aed;
+  --soft-blue:#eff6ff; --soft-cyan:#ecfeff; --soft-green:#f0fdf4; --soft-amber:#fffbeb; --soft-red:#fef2f2; --soft-purple:#f5f3ff;
+  --shadow:0 18px 45px rgba(15,23,42,.08),0 3px 12px rgba(15,23,42,.05);
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:radial-gradient(circle at top left,rgba(37,99,235,.13),transparent 28rem),radial-gradient(circle at top right,rgba(8,145,178,.12),transparent 26rem),var(--bg);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",sans-serif;color:var(--ink);line-height:1.72}
+a{color:var(--blue);text-decoration:none} a:hover{text-decoration:underline} .wrap{width:min(1120px,calc(100% - 28px));margin:auto} .hero{padding:58px 0 28px} .eyebrow{display:inline-flex;padding:7px 12px;border-radius:999px;background:var(--soft-blue);color:var(--blue);font-weight:800;font-size:13px;letter-spacing:.04em} h1{font-size:clamp(32px,6vw,60px);line-height:1.05;letter-spacing:-.045em;margin:18px 0 12px} .lead{font-size:clamp(16px,2.2vw,21px);color:var(--muted);max-width:880px;margin:0} .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px} .btn{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:9px 14px;border-radius:999px;border:1px solid var(--line);background:white;font-weight:800;box-shadow:0 4px 12px rgba(15,23,42,.05)} .btn.primary{background:var(--blue);color:white;border-color:var(--blue)}
+.summary{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:30px 0} .score{background:rgba(255,255,255,.88);border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:var(--shadow)} .score strong{display:block;font-size:34px;line-height:1} .score span{color:var(--muted);font-size:14px} .score.bad strong{color:var(--red)} .score.warn strong{color:var(--amber)} .score.ok strong{color:var(--green)}
+.notice{border:1px dashed rgba(37,99,235,.35);background:rgba(239,246,255,.7);border-radius:20px;padding:16px 18px;color:#1e3a8a;margin:20px 0}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px} .card{background:rgba(255,255,255,.92);border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:var(--shadow)} .card h3{margin:0 0 8px;font-size:24px;letter-spacing:-.02em} .tag{display:inline-block;padding:3px 9px;border-radius:999px;font-size:12px;font-weight:900;margin-right:6px;background:var(--soft-cyan);color:#155e75} .tag.red{background:var(--soft-red);color:var(--red)} .tag.amber{background:var(--soft-amber);color:var(--amber)} .tag.green{background:var(--soft-green);color:var(--green)} .tag.purple{background:var(--soft-purple);color:var(--purple)}
+section{margin:30px 0} h2{font-size:clamp(26px,4vw,42px);line-height:1.12;letter-spacing:-.035em;margin:0 0 14px} h3{font-size:26px;line-height:1.2;margin:20px 0 8px} h4{font-size:21px;margin:18px 0 8px} h5{font-size:18px;margin:14px 0 6px;color:var(--blue)} p,li{font-size:16.5px} blockquote{margin:12px 0;padding:12px 16px;border-left:5px solid var(--blue);background:var(--soft-blue);border-radius:12px;color:#1e3a8a;font-weight:700} hr{border:0;border-top:1px solid var(--line);margin:24px 0} .toc{display:flex;flex-wrap:wrap;gap:9px;margin:18px 0 28px} .toc a{background:white;border:1px solid var(--line);padding:8px 11px;border-radius:999px;font-weight:800;font-size:14px}
+.subject{border-top:6px solid var(--blue)} .subject.nature{border-color:var(--red)} .subject.math{border-color:var(--blue)} .subject.chinese{border-color:var(--purple)} .subject.civic{border-color:var(--amber)} details{border:1px solid var(--line);background:white;border-radius:16px;padding:12px 15px;margin:10px 0} summary{font-weight:900;cursor:pointer} .days{display:grid;grid-template-columns:repeat(7,1fr);gap:12px} .day{background:white;border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:0 8px 24px rgba(15,23,42,.05)} .day b{color:var(--blue)} .checklist li{margin:.35em 0} .footer{padding:30px 0 50px;color:var(--muted);font-size:14px}
+@media(max-width:860px){.summary,.grid,.days{grid-template-columns:1fr} .hero{padding-top:36px} .card{padding:17px}}
+@media print{.actions,.toc{display:none} body{background:white} .card,.score,.day,details{box-shadow:none;break-inside:avoid}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<header class="hero">
+  <span class="eyebrow">/goal 執行成果｜考卷錯題診斷</span>
+  <h1>考卷錯題診斷與 7 天補強練習</h1>
+  <p class="lead">根據考卷照片，整理自然浮力、數學平行線角度、國文〈空城計〉、公民行政法規與行政救濟的錯題原因、能力缺口與可執行練習。適合家長陪讀、學生自學與老師課後補強。</p>
+  <div class="actions">
+    <a class="btn primary" href="#plan">直接看 7 天計畫</a>
+    <a class="btn" href="#practice">看補強練習</a>
+    <a class="btn" href="../../webpages/">回所有網頁總覽</a>
+    <button class="btn" onclick="window.print()">列印 / 存成 PDF</button>
+  </div>
+</header>
+
+<div class="summary" aria-label="分數概況">
+  <div class="score bad"><span>自然／理化</span><strong>40</strong><span>浮力與密度｜優先補強</span></div>
+  <div class="score ok"><span>數學</span><strong>63</strong><span>平行線與角度追蹤</span></div>
+  <div class="score ok"><span>國文</span><strong>60</strong><span>〈空城計〉與閱讀</span></div>
+  <div class="score warn"><span>公民</span><strong>54</strong><span>行政法規與救濟</span></div>
+</div>
+
+<div class="notice">照片有反光、摺痕與筆跡重疊，因此本頁以「可辨識資訊」進行診斷；若補更清楚掃描或答案卷，可再做逐題精修。</div>
+
+<nav class="toc">
+  <a href="#overview">整體診斷</a><a href="#nature">自然</a><a href="#math">數學</a><a href="#chinese">國文</a><a href="#civic">公民</a><a href="#plan">7 天計畫</a><a href="#check">檢核表</a>
+</nav>
+
+<section id="overview">
+  <h2>整體診斷</h2>
+  <div class="grid">
+    <article class="card"><span class="tag red">第一優先</span><h3>自然：浮力核心模型未穩</h3><p>主要不是單題不會，而是「浮力＝排開液體重量」、「漂浮時浮力＝物重」、「完全浸入時看排開體積」這幾個判斷句尚未自動化。</p></article>
+    <article class="card"><span class="tag amber">第二優先</span><h3>公民：概念分類混淆</h3><p>民事、刑事、行政責任與行政救濟流程容易混在一起。只要用表格與流程圖整理，短期內可明顯進步。</p></article>
+    <article class="card"><span class="tag">第三優先</span><h3>數學：圖形標角與輔助線</h3><p>基礎有一部分會，但複雜圖形容易失控。需要訓練看到平行線先找 Z 型、F 型、U 型。</p></article>
+    <article class="card"><span class="tag purple">每日累積</span><h3>國文：字詞與閱讀推論</h3><p>字詞基本功、人物心理、選項辨析各扣一部分。國文不宜一次爆量，適合每天短時間穩定練。</p></article>
+  </div>
+</section>
+
+<section id="practice">
+  <h2>分科錯因與補強練習</h2>
+  <article class="card subject nature" id="nature">
+    <h2>A. 自然／理化：浮力與密度</h2>
+<h3>看到的錯題型態</h3>
+<p>這張自然卷幾乎整份都圍繞浮力與密度，學生在以下題型常錯：</p>
+<ol>
+<li>比較不同物體在水中或液體中的浮力大小。</li>
+<li>判斷物體會浮、沉、懸浮。</li>
+<li>由密度與體積求重量或排水量。</li>
+<li>看圖判斷甲、乙、丙誰受浮力較大。</li>
+<li>判斷加入鹽水後浮沉變化。</li>
+<li>混淆「物體重量」、「浮力」、「排開液體重量」、「密度」。</li>
+</ol>
+<h3>核心錯因</h3>
+<h4>1. 沒有把浮力核心公式背成一個判斷句</h4>
+<p>應建立：</p>
+<blockquote>浮力 = 排開液體的重量。</blockquote>
+<blockquote>同一液體中，排開體積越大，浮力越大。</blockquote>
+<blockquote>完全沉入時，浮力看體積與液體密度，不直接看物體本身重量。</blockquote>
+<p>很多錯題看起來是把「重的物體浮力一定大」當成直覺，但這不一定對。</p>
+<h4>2. 沉浮條件不熟</h4>
+<p>要熟：</p>
+<ul>
+<li>物體密度 &lt; 液體密度：浮起</li>
+<li>物體密度 = 液體密度：懸浮</li>
+<li>物體密度 &gt; 液體密度：下沉</li>
+</ul>
+<p>以及：</p>
+<ul>
+<li>漂浮時：浮力 = 物重</li>
+<li>完全沉入且靜止懸浮時：浮力 = 物重</li>
+<li>沉在底部時：浮力 &lt; 物重，底部還有支持力</li>
+</ul>
+<h4>3. 題目問「最大浮力」時，沒有先判斷是否完全浸沒</h4>
+<p>若物體完全浸入同一液體：</p>
+<blockquote>體積越大，浮力越大。</blockquote>
+<p>若物體漂浮：</p>
+<blockquote>浮力等於物體重量。</blockquote>
+<p>這兩種情況常常混在一起。</p>
+<h3>補強練習</h3>
+<h4>自然練習 1：一句話判斷</h4>
+<p>請快速回答：</p>
+<ol>
+<li>同一杯水中，兩個體積相同、密度不同的鐵塊和鋁塊完全沉入水中，浮力誰比較大？</li>
+<li>同一杯水中，體積大的木塊和體積小的木塊都漂浮，浮力誰比較大？</li>
+<li>一顆球從清水移到鹽水，若都漂浮，浮力變大、變小、還是不變？</li>
+<li>一顆球從清水移到鹽水，露出水面的部分變多還是變少？</li>
+<li>一個物體密度 0.8 g/cm³，水密度 1.0 g/cm³，它會浮還是沉？</li>
+</ol>
+<h4>自然練習 2：計算題</h4>
+<ol>
+<li>某物體體積 100 cm³，完全浸入水中，水密度 1 g/cm³，排開水重約多少 gf？</li>
+<li>某物體密度 0.7 g/cm³，體積 100 cm³，漂浮於水面，物體重量約多少 gf？浮力約多少 gf？</li>
+<li>某木塊完全壓入水中時受浮力 250 gf，若手要讓它完全壓入水中，至少要施力 100 gf，木塊本身重量是多少 gf？</li>
+<li>一個 1.5 kgw 的無蓋鐵盒漂浮，最多可再放多少重量而不沉，取決於什麼？</li>
+</ol>
+<h4>自然練習答案</h4>
+<ol>
+<li>體積相同、同液體、完全浸入，浮力一樣大。</li>
+<li>都漂浮時，浮力等於物重；若體積大木塊也比較重，則浮力較大，但要看重量。</li>
+<li>若都漂浮，浮力等於物重，所以浮力不變。</li>
+<li>鹽水密度較大，需排開較少體積即可平衡，所以露出較多。</li>
+<li>密度小於水，會浮。</li>
+<li>100 gf。</li>
+<li>物重 70 gf，漂浮時浮力 70 gf。</li>
+<li>完全浸入時浮力 250 gf，手向下 100 gf，表示物重約 150 gf。</li>
+<li>取決於鐵盒可排開的最大水重扣掉鐵盒本身重量。</li>
+</ol>
+<hr>
+  </article>
+  <article class="card subject math" id="math">
+    <h2>B. 數學：平行線與角度追蹤</h2>
+<h3>看到的錯題型態</h3>
+<p>數學卷主題很集中：</p>
+<ul>
+<li>平行線截角</li>
+<li>同位角、內錯角、同側內角</li>
+<li>三角形內角和</li>
+<li>外角定理</li>
+<li>角平分線</li>
+<li>折線或球檯反射題</li>
+<li>需要畫輔助線的題目</li>
+</ul>
+<p>分數約 63，表示不是完全不會，而是遇到複雜圖形會失控。</p>
+<h3>核心錯因</h3>
+<h4>1. 圖形標記習慣不足</h4>
+<p>很多角度題不能只看選項猜，要做三步：</p>
+<ol>
+<li>先把已知角度寫在圖上。</li>
+<li>把平行線產生的同位角／內錯角標出來。</li>
+<li>再用三角形內角和或外角定理追角。</li>
+</ol>
+<h4>2. 看到平行線時，沒有主動找「Z、F、U」</h4>
+<p>記法：</p>
+<ul>
+<li>Z 型：內錯角相等</li>
+<li>F 型：同位角相等</li>
+<li>U 型：同側內角互補</li>
+</ul>
+<h4>3. 多步驟角度題缺少檢查</h4>
+<p>常見錯誤：</p>
+<ul>
+<li>把互補 180 度誤當相等</li>
+<li>把外角當內角</li>
+<li>忘記三角形內角和 180 度</li>
+<li>有角平分線卻沒有除以 2</li>
+</ul>
+<h3>補強練習</h3>
+<h4>數學練習 1：看到平行線先問三件事</h4>
+<p>每題都要寫：</p>
+<ol>
+<li>哪兩條線平行？</li>
+<li>哪條線是截線？</li>
+<li>出現的是 Z 型、F 型還是 U 型？</li>
+</ol>
+<h4>數學練習 2：角度追蹤</h4>
+<ol>
+<li>兩平行線被一直線截，若一個角是 65°，它的同位角是多少？同側內角是多少？</li>
+<li>三角形兩角為 45°、65°，第三角是多少？</li>
+<li>三角形一外角為 120°，其中一個不相鄰內角為 50°，另一個不相鄰內角是多少？</li>
+<li>若角平分線把一個 80° 的角分成兩等分，每一個是多少？</li>
+<li>兩平行線被折線連接，若上方夾角 35°，下方夾角 42°，中間轉角通常要把輔助線畫成什麼？</li>
+</ol>
+<h4>數學練習答案</h4>
+<ol>
+<li>同位角 65°；同側內角 115°。</li>
+<li>70°。</li>
+<li>70°。</li>
+<li>40°。</li>
+<li>畫一條通過折點且與兩條平行線平行的輔助線，再分別使用內錯角／同位角。</li>
+</ol>
+<hr>
+  </article>
+  <article class="card subject chinese" id="chinese">
+    <h2>C. 國文：〈空城計〉與閱讀理解</h2>
+<h3>看到的錯題型態</h3>
+<p>國文卷可見：</p>
+<ul>
+<li>注音、字形、字義扣分</li>
+<li>詞語解釋扣分</li>
+<li>改錯題扣分</li>
+<li>成語活用題有錯</li>
+<li>〈空城計〉人物心態與文意理解題錯</li>
+<li>閱讀測驗題組有錯</li>
+</ul>
+<h3>核心錯因</h3>
+<h4>1. 字詞基本功不穩</h4>
+<p>注音、字義、詞語解釋若先扣掉一大段，後面閱讀就更難穩住。</p>
+<h4>2. 文意題沒有抓「人物目的」</h4>
+<p>〈空城計〉的核心不是只記情節，而是要抓：</p>
+<ul>
+<li>諸葛亮為何敢開城門？</li>
+<li>司馬懿為何不敢進攻？</li>
+<li>兩人各自判斷的依據是什麼？</li>
+<li>作者如何塑造人物智慧與心理攻防？</li>
+</ul>
+<h4>3. 閱讀測驗選項辨析不足</h4>
+<p>國文閱讀題常見陷阱：</p>
+<ul>
+<li>選項有一半對，但範圍過大</li>
+<li>選項是文本沒有說的推論</li>
+<li>選項把人物態度講反</li>
+<li>選項使用絕對語氣，例如一定、完全、都</li>
+</ul>
+<h3>補強練習</h3>
+<h4>國文練習 1：空城計三問</h4>
+<ol>
+<li>諸葛亮使用空城計的真正目的是什麼？</li>
+<li>司馬懿退兵的心理原因是什麼？</li>
+<li>這篇文章塑造諸葛亮哪一種形象？</li>
+</ol>
+<h4>國文練習 2：閱讀選項判斷</h4>
+<p>看到選項時標記：</p>
+<ul>
+<li>S：文本有直接支持</li>
+<li>I：可合理推論</li>
+<li>X：文本沒有證據</li>
+<li>O：說太滿或過度推論</li>
+</ul>
+<h4>國文練習答案方向</h4>
+<ol>
+<li>以虛張聲勢、反用對方多疑心理，拖延或避免敵軍進攻。</li>
+<li>司馬懿熟知諸葛亮謹慎，認為城中必有埋伏，因此退兵。</li>
+<li>沉著、機智、善用心理戰、臨危不亂。</li>
+</ol>
+<hr>
+  </article>
+  <article class="card subject civic" id="civic">
+    <h2>D. 公民：行政法規與行政救濟</h2>
+<h3>看到的錯題型態</h3>
+<p>公民卷主題是：</p>
+<ul>
+<li>行政責任</li>
+<li>行政罰</li>
+<li>行政處分</li>
+<li>行政命令</li>
+<li>行政救濟</li>
+<li>訴願、行政訴訟</li>
+<li>法律、命令、自治條例</li>
+<li>民事責任、刑事責任、行政責任區分</li>
+</ul>
+<p>分數約 54，代表概念混淆不少。</p>
+<h3>核心錯因</h3>
+<h4>1. 三種責任混在一起</h4>
+<p>最重要先分清楚：</p>
+<h4>2. 行政救濟流程不熟</h4>
+<p>基本流程：</p>
+<blockquote>不服行政處分 → 訴願 → 行政訴訟</blockquote>
+<p>常見錯誤是把「訴願」和「行政訴訟」順序搞錯，或把法院／行政機關角色混淆。</p>
+<h4>3. 法規位階混淆</h4>
+<p>要先記：</p>
+<blockquote>憲法 &gt; 法律 &gt; 命令 &gt; 自治條例／自治規則</blockquote>
+<p>行政命令不能違反法律，法律不能違反憲法。</p>
+<h4>4. 看到生活案例時，沒有先判斷「誰對誰」</h4>
+<p>公民題要先問：</p>
+<ol>
+<li>是人民對人民？</li>
+<li>是人民違反國家行政規定？</li>
+<li>是國家機關作成處分？</li>
+<li>是不服處分要救濟？</li>
+</ol>
+<p>這四個一分清楚，答案會穩很多。</p>
+<h3>補強練習</h3>
+<h4>公民練習 1：責任分類</h4>
+<p>請判斷是民事、刑事還是行政責任：</p>
+<ol>
+<li>騎車違規停車，被開罰單。</li>
+<li>打破同學手機，需要賠償。</li>
+<li>酒駕造成他人受傷，被法院判刑。</li>
+<li>餐廳違反衛生規定，被勒令停業。</li>
+<li>亂丟垃圾，被環保局罰鍰。</li>
+</ol>
+<h4>公民練習 2：行政救濟流程</h4>
+<ol>
+<li>人民不服戶政事務所拒絕改名，應先向哪裡尋求救濟？</li>
+<li>若訴願仍不服，下一步是什麼？</li>
+<li>行政訴訟是向普通法院還是行政法院？</li>
+<li>行政機關發布的命令可以違反法律嗎？</li>
+<li>地方政府制定自治條例，可以違反中央法律嗎？</li>
+</ol>
+<h4>公民練習答案</h4>
+<ol>
+<li>行政責任。</li>
+<li>民事責任。</li>
+<li>刑事責任，也可能另有民事賠償。</li>
+<li>行政責任。</li>
+<li>行政責任。</li>
+<li>先訴願。</li>
+<li>行政訴訟。</li>
+<li>行政法院。</li>
+<li>不可以。</li>
+<li>不可以。</li>
+</ol>
+<hr>
+  </article>
+</section>
+
+<section id="plan">
+  <h2>7 天補強計畫</h2>
+  <div class="days">
+    <div class="day"><b>Day 1</b><p>自然浮力核心：背三句，完成一句話判斷。</p></div>
+    <div class="day"><b>Day 2</b><p>自然計算與圖形：每題畫出重力與浮力。</p></div>
+    <div class="day"><b>Day 3</b><p>公民三種責任：民事／刑事／行政分類。</p></div>
+    <div class="day"><b>Day 4</b><p>公民救濟流程：不服行政處分 → 訴願 → 行政訴訟。</p></div>
+    <div class="day"><b>Day 5</b><p>數學平行線：Z 型、F 型、U 型各 5 題。</p></div>
+    <div class="day"><b>Day 6</b><p>數學輔助線 + 國文閱讀選項辨析。</p></div>
+    <div class="day"><b>Day 7</b><p>混合回測：自然、公民、數學、國文。</p></div>
+  </div>
+  <details open><summary>完整 7 天計畫</summary><h3>四、7 天補強計畫</h3>
+<h4>Day 1：自然浮力核心重建</h4>
+<ul>
+<li>背熟三句：</li>
+</ul>
+<ol>
+<li>浮力 = 排開液體重量。</li>
+<li>漂浮時，浮力 = 物重。</li>
+<li>完全浸入同液體時，浮力看排開體積。</li>
+</ol>
+<ul>
+<li>完成自然練習 1。</li>
+<li>錯題要寫出「我原本怎麼想錯」。</li>
+</ul>
+<h4>Day 2：自然浮力計算與圖形題</h4>
+<ul>
+<li>完成自然練習 2。</li>
+<li>每題都畫出：物重向下、浮力向上。</li>
+<li>檢查是否有把「密度、體積、重量、浮力」混用。</li>
+</ul>
+<h4>Day 3：公民三種責任分類</h4>
+<ul>
+<li>背熟民事／刑事／行政責任表。</li>
+<li>完成公民練習 1。</li>
+<li>自己再舉 5 個生活例子分類。</li>
+</ul>
+<h4>Day 4：公民行政救濟流程</h4>
+<ul>
+<li>背熟：不服行政處分 → 訴願 → 行政訴訟。</li>
+<li>完成公民練習 2。</li>
+<li>畫一張「行政法規與救濟」流程圖。</li>
+</ul>
+<h4>Day 5：數學平行線角度</h4>
+<ul>
+<li>練 Z 型、F 型、U 型各 5 題。</li>
+<li>每題都在圖上標截線與角度。</li>
+<li>檢查：有沒有把互補當相等？</li>
+</ul>
+<h4>Day 6：數學多步驟角度 + 國文閱讀</h4>
+<ul>
+<li>數學做 5 題需要輔助線的角度題。</li>
+<li>國文做 2 篇閱讀測驗。</li>
+<li>國文每個錯選項都要寫：錯在「無文本證據、範圍過大、人物態度相反、說太滿」。</li>
+</ul>
+<h4>Day 7：混合回測</h4>
+<ul>
+<li>自然 10 題</li>
+<li>公民 10 題</li>
+<li>數學 5 題</li>
+<li>國文閱讀 1 篇</li>
+<li>目標：</li>
+<li>自然至少 70%</li>
+<li>公民至少 75%</li>
+<li>數學至少 75%</li>
+<li>國文閱讀題至少 70%</li>
+</ul>
+<hr></details>
+</section>
+
+<section id="check">
+  <h2>家長／老師檢核表</h2>
+  <article class="card checklist">
+    <h3>五、家長／老師檢核表</h3>
+<p>每天只檢查 5 件事：</p>
+<ol>
+<li>今天有沒有完成指定練習？</li>
+<li>錯題是否有寫「錯因」？</li>
+<li>自然題是否畫出浮力與重力？</li>
+<li>數學題是否在圖上標角？</li>
+<li>公民題是否先分類：民事／刑事／行政？</li>
+</ol>
+<p>若只做到一件事，優先做：</p>
+<blockquote>把錯題改成「錯因句」。</blockquote>
+<p>格式：</p>
+<blockquote>我這題錯是因為＿＿＿＿。下次看到＿＿＿＿，我要先＿＿＿＿。</blockquote>
+<p>範例：</p>
+<blockquote>我這題錯是因為把重的物體誤以為浮力一定大。下次看到浮力比較題，我要先判斷是否完全浸入，以及排開液體體積是否相同。</blockquote>
+<hr>
+  </article>
+</section>
+
+<section>
+  <h2>最後確認</h2>
+  <article class="card">
+    <h3>六、最後確認</h3>
+<p>本次已完成：</p>
+<ul>
+<li>[x] 讀取並檢視所有提供的考卷照片。</li>
+<li>[x] 辨識主要科目：自然、數學、國文、公民。</li>
+<li>[x] 確認可見分數與錯題分布。</li>
+<li>[x] 分析錯題背後能力缺口。</li>
+<li>[x] 針對每科設計補強練習。</li>
+<li>[x] 建立 7 天補強計畫。</li>
+<li>[x] 建立家長／老師檢核表。</li>
+</ul>
+<p>建議下一步：</p>
+<ol>
+<li>若要更精準，請再補每張考卷的「答案卷」或更清楚掃描，我可以逐題建立錯題表。</li>
+<li>若要直接給孩子做，我可以把上面的練習整理成 A4 可列印版。</li>
+<li>若要長期追蹤，我可以建立「段考錯題追蹤表」，每次考完都用同一格式累積。</li>
+</ol>
+  </article>
+</section>
+
+<footer class="footer">發布於 GitHub Pages｜路徑：study/exam-error-diagnosis-2026-06｜若照片更清楚，可再逐題精修錯題表。</footer>
+</main>
+</body>
+</html>

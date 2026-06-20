@@ -137,6 +137,7 @@
       </a>
       <div class="nav-actions">
         <a href="../">AI 工具比較首頁</a>
+        <a href="./grade8-learning-resources/">國二學習資源</a>
         <a href="../phai/resource-platform/">PhAI 資源館</a>
         <a href="https://addielu-phy.github.io/kh-inquiry-community-site/" target="_blank" rel="noopener">高雄探究社群</a>
       </div>
@@ -146,13 +147,13 @@
   <header class="hero shell">
     <div class="hero-grid">
       <div>
-        <span class="eyebrow">分類搜尋入口｜更新 2026-06-20 12:39</span>
+        <span class="eyebrow">分類搜尋入口｜更新 2026-06-20 15:56</span>
         <h1>盧老師網頁作品總覽</h1>
         <p class="lead">把所有製作過的網頁整理成一個可搜尋入口，並依「PhAI 平台、AI 工具、物理教材、自學評量、數學題庫、語文練習、簡報影片、探究實作」分類。每張卡片保留用途、對象、狀態、repo/路徑與開啟連結，方便備課、分享與後續維護。</p>
       </div>
       <aside class="quick-panel">
         <h2>使用建議</h2>
-        <p>想找學生可用的頁面，搜尋「自學、錯題、題庫、翻卡」。想找教師研習/PhAI，搜尋「PhAI、Agent、資源館、簡報」。</p>
+        <p>想找學生可用的頁面，搜尋「國二、自學、錯題、題庫、翻卡」。想找教師研習/PhAI，搜尋「PhAI、Agent、資源館、簡報」。</p>
       </aside>
     </div>
     <div class="stats" aria-label="作品統計">
@@ -167,7 +168,7 @@
     <section class="controls" aria-label="搜尋與篩選">
       <div class="control-row">
         <label>搜尋關鍵字
-          <input id="search" type="search" placeholder="例如：分科、五福、浮力、PhAI、Agent、機率、英文單字…" />
+          <input id="search" type="search" placeholder="例如：國二、五福、浮力、PhAI、Agent、機率、英文單字…" />
         </label>
         <label>分類
           <select id="categoryFilter"><option value="">全部分類</option></select>
@@ -207,7 +208,7 @@
     </section>
   </main>
 
-  <footer class="shell">盧老師網頁作品總覽｜由 Hermes 協助整理。更新：2026-06-20 12:39。</footer>
+  <footer class="shell">盧老師網頁作品總覽｜由 Hermes 協助整理。更新：2026-06-20 15:56。</footer>
 
   <script>
     const PAGES = [
@@ -492,6 +493,30 @@
     "source": "main-repo",
     "priority": 3,
     "size": 18286
+  },
+  {
+    "title": "國二學習資源｜盧老師網頁整理",
+    "h1": "國二學習資源",
+    "description": "彙整國中／國二相關網頁：國二下理化第 5、6 章、浮力與摩擦力題庫、會考自然、國文二下注釋翻卡、英文單字與考卷錯題診斷。",
+    "category": "04｜自學評量與考古題",
+    "kind": "國二資源入口",
+    "audience": "國二學生 / 家長 / 教師",
+    "status": "主 repo 公開",
+    "href": "./grade8-learning-resources/",
+    "publicUrl": "https://addielu-phy.github.io/ai-coding-tools-free-comparison/webpages/grade8-learning-resources/",
+    "repoPath": "webpages/grade8-learning-resources/index.html",
+    "repo": "addielu-phy/ai-coding-tools-free-comparison",
+    "tags": [
+      "國二",
+      "國中",
+      "學習資源",
+      "理化",
+      "國文",
+      "英文"
+    ],
+    "source": "main-repo",
+    "priority": 5,
+    "size": 29709
   },
   {
     "title": "五福國中摩擦力歷屆經典段考題",
@@ -1115,14 +1140,14 @@
   "01｜PhAI 社群與資源平台": "PhAI 共學圈、AI 物理教學資源館與投稿/上架流程相關頁面。",
   "02｜AI 工具、工作流與角色資料": "AI coding 工具比較、盧老師 AI 背景資料、Agent/工作流示範。",
   "03｜物理教材與互動模擬": "可直接備課、上課展示或給學生探索的物理互動頁與詳解頁。",
-  "04｜自學評量與考古題": "大考、段考、會考、五福國中與分科物理相關的自學評量與教師端頁面。",
+  "04｜自學評量與考古題": "國二學習入口、大考、段考、會考、五福國中與分科物理相關的自學評量與教師端頁面。",
   "05｜數學題庫與考前整理": "高一數學機率、基本計數原理、考古題與互動題庫。",
   "06｜國文／英文語文練習": "國文課文注釋翻卡、英文單字翻卡與測驗。",
   "07｜簡報、影片素材與分享": "分享簡報、YouTube/影片素材與手機觀看測試頁。",
   "08｜探究實作、研究與課堂平台": "探究與實作、太陽能研究、課堂互評/報告平台與社群網站。",
   "09｜本機原型與待整合頁": "目前仍在本機或私有 vault 的原型頁，尚未放進此公開 repo。"
 };
-    const QUICK_FILTERS = ["PhAI", "物理", "自學評量", "教師端", "五福國中", "分科測驗", "數學", "國文", "英文", "探究與實作", "Agent"];
+    const QUICK_FILTERS = ["PhAI", "物理", "自學評量", "教師端", "國二", "五福國中", "分科測驗", "數學", "國文", "英文", "探究與實作", "Agent"];
 
     const searchInput = document.getElementById('search');
     const categoryFilter = document.getElementById('categoryFilter');

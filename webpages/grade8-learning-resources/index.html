@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>國二學習資源｜盧老師網頁整理</title>
+  <meta name="description" content="把盧老師已公開的國中／國二相關網頁集中成一個學習入口，包含國二理化、國文注釋翻卡、英文單字、自學評量、考卷錯題診斷與會考自然整理。" />
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f4ee;
+      --paper: rgba(255,255,255,.88);
+      --paper-solid: #fffdf8;
+      --ink: #182230;
+      --muted: #667085;
+      --line: rgba(24,34,48,.13);
+      --line-strong: rgba(24,34,48,.24);
+      --brand: #0f766e;
+      --brand-dark: #115e59;
+      --blue: #2563eb;
+      --amber: #b45309;
+      --rose: #be123c;
+      --purple: #7c3aed;
+      --green: #166534;
+      --shadow: 0 22px 72px rgba(16,24,40,.10), 0 4px 16px rgba(16,24,40,.06);
+      --radius: 24px;
+      --max: 1180px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      line-height: 1.7;
+      background:
+        radial-gradient(circle at 8% -8%, rgba(15,118,110,.22), transparent 30rem),
+        radial-gradient(circle at 88% 5%, rgba(37,99,235,.15), transparent 28rem),
+        linear-gradient(180deg, #fffdf8 0%, var(--bg) 52%, #efe9dd 100%);
+    }
+    a { color: inherit; }
+    button, input, select { font: inherit; }
+    .shell { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
+    .skip { position:absolute; left:-999px; top:10px; background:#fff; padding:10px; border-radius:10px; }
+    .skip:focus { left:10px; z-index:99; }
+    .topbar { position: sticky; top: 0; z-index: 20; backdrop-filter: blur(18px); background: rgba(246,244,238,.78); border-bottom: 1px solid rgba(24,34,48,.09); }
+    .nav { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; padding: 13px 0; display:flex; align-items:center; justify-content:space-between; gap:14px; }
+    .brand { display:flex; align-items:center; gap:10px; min-width:0; text-decoration:none; }
+    .brand-mark { width:42px; height:42px; border-radius:15px; display:grid; place-items:center; color:#fff; font-weight:1000; background:linear-gradient(135deg,var(--brand),var(--blue)); box-shadow:0 12px 30px rgba(15,118,110,.22); }
+    .brand strong { display:block; line-height:1.08; letter-spacing:-.035em; }
+    .brand span span { display:block; color:var(--muted); font-size:12px; margin-top:2px; }
+    .nav-actions { display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end; }
+    .nav-actions a { text-decoration:none; color:#44515f; border:1px solid var(--line); background:rgba(255,255,255,.70); border-radius:999px; padding:7px 11px; font-size:13px; font-weight:850; }
+    .hero { padding: 58px 0 28px; }
+    .hero-grid { display:grid; grid-template-columns:minmax(0,1fr) 340px; gap:22px; align-items:end; }
+    .eyebrow { display:inline-flex; align-items:center; gap:8px; padding:7px 12px; border-radius:999px; background:rgba(15,118,110,.10); color:var(--brand-dark); font-weight:1000; font-size:12px; letter-spacing:.08em; text-transform:uppercase; }
+    h1 { margin:18px 0 14px; font-size:clamp(2.45rem,7vw,5.45rem); line-height:.98; letter-spacing:-.075em; max-width:950px; }
+    .lead { margin:0; max-width:880px; color:#4f5965; font-size:clamp(1.03rem,2.2vw,1.25rem); font-weight:560; }
+    .quick-panel { border:1px solid var(--line); background:var(--paper); border-radius:var(--radius); box-shadow:var(--shadow); padding:18px; }
+    .quick-panel h2 { margin:0 0 8px; font-size:1.08rem; }
+    .quick-panel ol { margin:9px 0 0; padding-left:1.25rem; color:#475467; font-size:14px; }
+    .stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-top:24px; }
+    .stat { border:1px solid var(--line); background:rgba(255,255,255,.66); border-radius:18px; padding:15px; }
+    .stat strong { display:block; font-size:2rem; line-height:1; letter-spacing:-.06em; color:var(--brand-dark); }
+    .stat span { color:var(--muted); font-size:13px; }
+    .route { margin: 12px 0 24px; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:13px; }
+    .route-card { background:rgba(255,255,255,.74); border:1px solid var(--line); border-radius:20px; padding:16px; text-decoration:none; box-shadow:0 12px 34px rgba(16,24,40,.06); }
+    .route-card b { display:block; color:var(--brand-dark); font-size:15px; }
+    .route-card span { display:block; color:var(--muted); font-size:13px; margin-top:4px; }
+    .controls { margin:26px 0 20px; border:1px solid var(--line); background:rgba(255,253,248,.82); border-radius:var(--radius); box-shadow:var(--shadow); padding:16px; display:grid; gap:14px; }
+    .control-row { display:grid; grid-template-columns: 1.35fr .78fr .78fr; gap:12px; }
+    label { display:grid; gap:6px; color:#52606d; font-size:12px; font-weight:950; letter-spacing:.08em; text-transform:uppercase; }
+    input, select { width:100%; min-height:46px; border:1px solid var(--line); border-radius:15px; padding:10px 12px; background:#fff; color:var(--ink); }
+    input:focus, select:focus, button:focus-visible, a:focus-visible { outline:3px solid rgba(15,118,110,.18); border-color:var(--brand); }
+    .chips { display:flex; flex-wrap:wrap; gap:8px; }
+    .chip { border:1px solid var(--line); background:#fff; color:#415160; border-radius:999px; padding:8px 11px; font-weight:850; font-size:13px; cursor:pointer; }
+    .chip.active { background:var(--brand-dark); color:#fff; border-color:var(--brand-dark); box-shadow:0 10px 24px rgba(15,118,110,.18); }
+    .resultbar { display:flex; justify-content:space-between; gap:12px; align-items:center; color:var(--muted); margin:14px 0; font-size:14px; }
+    .legend { display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end; }
+    .pill { display:inline-flex; align-items:center; gap:6px; padding:5px 9px; border-radius:999px; font-size:12px; font-weight:900; border:1px solid var(--line); background:#fff; color:#536171; white-space:nowrap; }
+    .pill.current { color:var(--green); background:#ecfdf3; border-color:#bbf7d0; }
+    .pill.external { color:#075985; background:#e0f2fe; border-color:#bae6fd; }
+    .pill.support { color:#6d28d9; background:#f3e8ff; border-color:#ddd6fe; }
+    .pill.old { color:#92400e; background:#fff7ed; border-color:#fed7aa; }
+    .category { margin:24px 0; }
+    .section-head { display:flex; justify-content:space-between; align-items:end; gap:18px; margin-bottom:13px; }
+    .section-head h2 { margin:0; font-size:clamp(1.55rem,4vw,2.35rem); letter-spacing:-.055em; line-height:1.05; }
+    .section-head p { margin:6px 0 0; color:var(--muted); max-width:760px; }
+    .count-badge { white-space:nowrap; align-self:center; background:#fff; border:1px solid var(--line); border-radius:999px; padding:7px 11px; color:#52606d; font-size:13px; font-weight:900; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:15px; }
+    .card { position:relative; overflow:hidden; border:1px solid var(--line); background:var(--paper-solid); border-radius:var(--radius); padding:18px; box-shadow:0 14px 38px rgba(16,24,40,.07); display:grid; gap:12px; }
+    .card::before { content:""; position:absolute; inset:0 auto 0 0; width:5px; background:linear-gradient(180deg,var(--brand),var(--blue)); opacity:.9; }
+    .card[data-subject="國文"]::before { background:linear-gradient(180deg,var(--purple),#a855f7); }
+    .card[data-subject="英文"]::before { background:linear-gradient(180deg,#2563eb,#06b6d4); }
+    .card[data-subject="讀書診斷"]::before { background:linear-gradient(180deg,var(--rose),var(--amber)); }
+    .card[data-subject="備用入口"]::before { background:linear-gradient(180deg,var(--amber),#f59e0b); }
+    .card-head { display:flex; justify-content:space-between; gap:12px; align-items:start; }
+    .kind { color:var(--brand-dark); font-size:12px; letter-spacing:.08em; text-transform:uppercase; font-weight:1000; }
+    .card h3 { margin:3px 0 0; font-size:1.15rem; line-height:1.32; letter-spacing:-.03em; }
+    .desc { margin:0; color:#4f5b67; font-size:14.5px; }
+    .meta { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+    .meta div { background:#f7f4ee; border:1px solid rgba(24,34,48,.08); border-radius:14px; padding:9px 10px; color:var(--muted); font-size:13px; }
+    .meta b { display:block; color:#1f2a37; font-size:12px; margin-bottom:2px; }
+    .tags { display:flex; flex-wrap:wrap; gap:6px; }
+    .tag { padding:4px 8px; border-radius:999px; background:#e8f4f8; color:#155e75; font-size:12px; font-weight:850; }
+    .actions { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-top:2px; }
+    .btn { min-height:40px; display:inline-flex; align-items:center; justify-content:center; border-radius:999px; padding:8px 12px; border:1px solid var(--line-strong); background:#fff; color:var(--brand-dark); text-decoration:none; font-weight:950; font-size:14px; }
+    .btn.primary { background:var(--brand-dark); color:#fff; border-color:var(--brand-dark); }
+    .empty { display:none; margin:28px 0 56px; padding:26px; border:1px dashed var(--line-strong); background:rgba(255,255,255,.7); border-radius:20px; text-align:center; color:var(--muted); }
+    .notes { margin:32px 0 55px; display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .note { border:1px solid var(--line); border-radius:20px; background:rgba(255,255,255,.74); padding:17px; color:#4f5b67; }
+    .note h2 { margin:0 0 8px; font-size:1.05rem; }
+    .note ul { margin:8px 0 0; padding-left:1.2rem; }
+    footer { padding:18px 0 54px; color:var(--muted); font-size:14px; }
+    @media (max-width: 930px) {
+      .hero-grid, .control-row, .grid, .notes, .route { grid-template-columns:1fr; }
+      .stats { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .section-head { display:block; }
+      .count-badge { display:inline-flex; margin-top:8px; }
+      .nav { align-items:flex-start; flex-direction:column; }
+      .nav-actions { display:flex; width:100%; overflow-x:auto; flex-wrap:nowrap; justify-content:flex-start; padding-bottom:2px; }
+      .nav-actions a { white-space:nowrap; }
+    }
+    @media (max-width: 560px) {
+      .shell, .nav { width:min(var(--max), calc(100% - 24px)); }
+      .hero { padding-top:38px; }
+      .stats, .meta { grid-template-columns:1fr; }
+      .card { padding:16px; border-radius:20px; }
+      .controls { padding:13px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#resources">跳到資源列表</a>
+  <div class="topbar">
+    <nav class="nav" aria-label="主導覽">
+      <a class="brand" href="./" aria-label="回到本頁頂端">
+        <span class="brand-mark">8</span>
+        <span><strong>國二學習資源</strong><span>Junior high / Grade 8 learning hub</span></span>
+      </a>
+      <div class="nav-actions">
+        <a href="../">所有網頁總覽</a>
+        <a href="../../">AI 工具比較首頁</a>
+        <a href="#resources">資源列表</a>
+      </div>
+    </nav>
+  </div>
+
+  <header class="hero shell">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">國中／國二入口｜更新 2026-06-20 15:56</span>
+        <h1>國二學習資源</h1>
+        <p class="lead">把目前已公開的國中相關網頁整理成學生可直接使用的入口：國二下理化第 5、6 章與考古題、會考自然物理整理、國文二下課文注釋翻卡、英文單字練習，以及考卷錯題診斷與 7 天補強。</p>
+      </div>
+      <aside class="quick-panel">
+        <h2>建議使用順序</h2>
+        <ol>
+          <li>先看「錯題診斷」找弱點。</li>
+          <li>理化用第 5、6 章與浮力／摩擦力題庫練核心觀念。</li>
+          <li>國文用翻卡每天短練；考前再用會考自然整理複習題型。</li>
+        </ol>
+      </aside>
+    </div>
+    <div class="stats" aria-label="資源統計">
+      <div class="stat"><strong id="stat-total">0</strong><span>收錄資源</span></div>
+      <div class="stat"><strong id="stat-science">0</strong><span>自然／理化</span></div>
+      <div class="stat"><strong id="stat-language">0</strong><span>國文／英文</span></div>
+      <div class="stat"><strong id="stat-support">0</strong><span>診斷／備用入口</span></div>
+    </div>
+  </header>
+
+  <main class="shell" id="resources">
+    <section class="route" aria-label="快速學習路線">
+      <a class="route-card" href="#subject-讀書診斷"><b>① 找弱點</b><span>考卷錯題診斷、逐題詳解、7 天補強。</span></a>
+      <a class="route-card" href="#subject-自然理化"><b>② 練理化</b><span>有機化合物、力與壓力、浮力、摩擦力、期末題庫。</span></a>
+      <a class="route-card" href="#subject-國文"><b>③ 背國文</b><span>〈飛魚〉、〈空城計〉、〈汨羅江神〉注釋翻卡。</span></a>
+      <a class="route-card" href="#subject-會考複習"><b>④ 會考複習</b><span>國中教育會考自然科物理試題截圖整理。</span></a>
+    </section>
+
+    <section class="controls" aria-label="搜尋與篩選">
+      <div class="control-row">
+        <label>搜尋關鍵字
+          <input id="search" type="search" placeholder="例如：浮力、摩擦力、有機化合物、空城計、英文、會考…" />
+        </label>
+        <label>學科／用途
+          <select id="subjectFilter"><option value="">全部</option></select>
+        </label>
+        <label>狀態
+          <select id="statusFilter"><option value="">全部狀態</option></select>
+        </label>
+      </div>
+      <div class="chips" id="quickChips" aria-label="快速篩選"></div>
+    </section>
+
+    <div class="resultbar">
+      <span id="resultText">載入中…</span>
+      <span class="legend"><span class="pill current">此 repo 公開</span><span class="pill external">另 repo 公開</span><span class="pill support">診斷／補強</span><span class="pill old">舊入口／備用</span></span>
+    </div>
+
+    <div id="sections"></div>
+    <div id="empty" class="empty">找不到符合條件的資源；請換一個關鍵字或清除篩選。</div>
+
+    <section class="notes" aria-label="維護說明">
+      <div class="note">
+        <h2>整理原則</h2>
+        <ul>
+          <li>以國中／國二學生可直接打開使用的頁面為主。</li>
+          <li>舊入口保留在「備用入口」區，避免歷史連結失效，但優先引導到新版頁。</li>
+          <li>另 repo 的公開題庫也放入，讓學生不用到總覽頁逐一搜尋。</li>
+        </ul>
+      </div>
+      <div class="note">
+        <h2>之後可擴充</h2>
+        <ul>
+          <li>補上國二上、國三會考複習與各章節學習地圖。</li>
+          <li>加上每個資源的建議練習時間與完成檢核。</li>
+          <li>若有新題庫，只要加入此頁資料陣列與總覽卡片即可。</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell">國二學習資源｜盧老師網頁整理，由 Hermes 協助彙整。更新：2026-06-20 15:56。</footer>
+
+  <script>
+    const RESOURCES = [
+      {
+        title: '考卷錯題診斷與 7 天補強練習',
+        description: '依自然浮力、數學平行線、國文〈空城計〉、公民行政救濟等錯題，整理能力缺口與 7 天補強練習。',
+        subject: '讀書診斷',
+        kind: '錯題診斷 / 讀書計畫',
+        status: '此 repo 公開',
+        href: '../../study/exam-error-diagnosis-2026-06/',
+        tags: ['錯題診斷', '7天補強', '自然', '數學', '國文', '公民']
+      },
+      {
+        title: '逐題錯題詳解｜孩子作答錯誤樣態分析',
+        description: '逐題標示孩子答案、正答、錯誤樣態與補救句，適合搭配考卷診斷頁做精準訂正。',
+        subject: '讀書診斷',
+        kind: '逐題詳解',
+        status: '此 repo 公開',
+        href: '../../study/exam-error-diagnosis-2026-06/detailed.html',
+        tags: ['逐題詳解', '錯誤樣態', '訂正']
+      },
+      {
+        title: '五福國中國二下期末理化｜第 5 章有機化合物互動題庫',
+        description: '五福國中 110–113 學年度國二下期末自然／理化第 5 章有機化合物題目，依主題與難易度重排。',
+        subject: '自然理化',
+        kind: '互動題庫',
+        status: '此 repo 公開',
+        href: '../../exams/wufu-jh-8b-final-science-ch5/',
+        tags: ['國二下', '理化', '有機化合物', '五福國中', '期末']
+      },
+      {
+        title: '國二下翰林理化第 6 章｜力與壓力學習重點',
+        description: '翰林版理化第 6 章力與壓力學習重點，含力與平衡、摩擦力、壓力、浮力例題與隱藏式詳解。',
+        subject: '自然理化',
+        kind: '學習重點 / 例題',
+        status: '此 repo 公開',
+        href: '../../exams/hanlin-8b-ch6-buoyancy-wufu/chapter6.html',
+        tags: ['國二下', '理化', '力與壓力', '摩擦力', '浮力']
+      },
+      {
+        title: '五福國中摩擦力歷屆經典段考題',
+        description: '高雄市立五福國中近年國二下理化摩擦力段考題互動測驗與詳細觀念解析。',
+        subject: '自然理化',
+        kind: '另 repo 自學評量',
+        status: '另 repo 公開',
+        href: 'https://addielu-phy.github.io/wu-fu-physics-quiz/',
+        tags: ['國二下', '摩擦力', '段考', '五福國中']
+      },
+      {
+        title: '五福國中浮力歷屆題自學評量',
+        description: '五福國中國二下理化期末考浮力歷屆題：原題截圖、即時評分、錯題練習與詳解。',
+        subject: '自然理化',
+        kind: '另 repo 自學評量',
+        status: '另 repo 公開',
+        href: 'https://addielu-phy.github.io/wu-fu-buoyancy-quiz/',
+        tags: ['國二下', '浮力', '錯題練習', '五福國中']
+      },
+      {
+        title: '理化自學評量｜國二下期末',
+        description: '國二下理化期末自學練習：作答、自動評分、錯題分析與詳解，可重複練習。',
+        subject: '自然理化',
+        kind: '另 repo 自學評量',
+        status: '另 repo 公開',
+        href: 'https://addielu-phy.github.io/physics-quiz/',
+        tags: ['國二下', '理化', '期末', '自動評分']
+      },
+      {
+        title: '115 會考自然科物理試題截圖整理',
+        description: '115 年國中教育會考自然科物理相關試題截圖整理，含概念分類、參考答案與官方來源。',
+        subject: '會考複習',
+        kind: '會考自然整理',
+        status: '此 repo 公開',
+        href: '../../exams/cap-115-nature-physics/',
+        tags: ['會考', '自然科', '物理', '國中']
+      },
+      {
+        title: '第七課〈飛魚〉名詞注釋翻卡練習',
+        description: '國中國文二下第七課〈飛魚〉課文相關名詞注釋練習，含隨機翻卡、答對答錯統計與錯題複習。',
+        subject: '國文',
+        kind: '語文翻卡 / 測驗',
+        status: '此 repo 公開',
+        href: '../../chinese/l07-feiyu-terms/',
+        tags: ['國文二下', '飛魚', '翻卡', '注釋']
+      },
+      {
+        title: '第八課〈空城計〉名詞注釋翻卡練習',
+        description: '國中國文二下第八課〈空城計〉課文相關名詞注釋練習，含隨機翻卡、答對答錯統計與錯題複習。',
+        subject: '國文',
+        kind: '語文翻卡 / 測驗',
+        status: '此 repo 公開',
+        href: '../../chinese/l08-kongchengji-terms/',
+        tags: ['國文二下', '空城計', '翻卡', '注釋']
+      },
+      {
+        title: '第九課〈汨羅江神〉名詞注釋翻卡練習',
+        description: '國中國文二下第九課〈汨羅江神〉課文相關名詞注釋練習，含隨機翻卡、答對答錯統計與錯題複習。',
+        subject: '國文',
+        kind: '語文翻卡 / 測驗',
+        status: '此 repo 公開',
+        href: '../../chinese/l09-miluojiangshen-terms/',
+        tags: ['國文二下', '汨羅江神', '翻卡', '注釋']
+      },
+      {
+        title: '5/19 英語課堂單字測驗｜300TU 互動翻卡與測驗',
+        description: '英文單字與片語互動測驗，包含雙面翻字卡、四選一、拼寫填空、發音、對錯統計與錯題加強。',
+        subject: '英文',
+        kind: '英語翻卡 / 測驗',
+        status: '此 repo 公開',
+        href: '../../exams/vocab-300tu-519/',
+        tags: ['英文', '單字', '翻卡', '測驗']
+      },
+      {
+        title: '5/26 英語課堂單字測驗｜白板互動翻卡與測驗',
+        description: '依課堂白板照片整理的英語單字互動網頁，含字卡記憶挑戰、四選一與拼寫填空。',
+        subject: '英文',
+        kind: '英語翻卡 / 測驗',
+        status: '此 repo 公開',
+        href: '../../exams/vocab-whiteboard-20260526/',
+        tags: ['英文', '單字', '白板', '測驗']
+      },
+      {
+        title: '五福第 6 章考古題',
+        description: '舊入口：浮力互動題庫已整合到第 6 章頁面，保留給舊連結使用。',
+        subject: '備用入口',
+        kind: '舊入口 / 重新導向',
+        status: '舊入口 / 備用',
+        href: '../../exams/hanlin-8b-ch6-buoyancy-wufu/final-exams.html',
+        tags: ['舊入口', '第6章', '浮力', '五福國中']
+      },
+      {
+        title: '國二下理化',
+        description: '舊入口：重建部署保留第 6 章頁面，並新增五福浮力考古題互動練習。',
+        subject: '備用入口',
+        kind: '舊入口 / 重新導向',
+        status: '舊入口 / 備用',
+        href: '../../exams/hanlin-8b-ch6-buoyancy-wufu/',
+        tags: ['舊入口', '國二下', '理化', '浮力']
+      },
+      {
+        title: '國二下翰林理化第 6 章｜力與壓力學習重點（舊版）',
+        description: '舊版第 6 章頁面，保留作為歷史版本與備用連結；平常建議使用新版第 6 章頁。',
+        subject: '備用入口',
+        kind: '舊入口 / 重新導向',
+        status: '舊入口 / 備用',
+        href: '../../exams/hanlin-8b-ch6-buoyancy-wufu/chapter6.original.html',
+        tags: ['舊入口', '力與壓力', '浮力', '摩擦力']
+      },
+      {
+        title: '第 6 章實驗影片',
+        description: '舊入口：目前主要內容已整合到 chapter6.html，保留給原本的實驗影片連結使用。',
+        subject: '備用入口',
+        kind: '舊入口 / 重新導向',
+        status: '舊入口 / 備用',
+        href: '../../exams/hanlin-8b-ch6-buoyancy-wufu/chapter6-lab-videos.html',
+        tags: ['舊入口', '實驗影片', '第6章', '浮力']
+      }
+    ];
+
+    const SUBJECT_ORDER = ['讀書診斷', '自然理化', '會考複習', '國文', '英文', '備用入口'];
+    const SUBJECT_DESCRIPTIONS = {
+      '讀書診斷': '先定位學習弱點，再決定要補哪一科、哪一章。',
+      '自然理化': '國二下理化第 5 章、第 6 章與五福國中段考／期末自學評量。',
+      '會考複習': '國中教育會考自然科中的物理題型與概念分類。',
+      '國文': '國文二下課文名詞注釋翻卡，適合每天 5–10 分鐘短練。',
+      '英文': '英文單字與片語翻卡、選擇題、拼寫填空。',
+      '備用入口': '歷史連結與 redirect/stub 頁面，平常優先使用上方新版資源。'
+    };
+    const QUICK_FILTERS = ['浮力', '摩擦力', '有機化合物', '力與壓力', '會考', '空城計', '翻卡', '錯題', '英文'];
+
+    const searchInput = document.getElementById('search');
+    const subjectFilter = document.getElementById('subjectFilter');
+    const statusFilter = document.getElementById('statusFilter');
+    const sectionsEl = document.getElementById('sections');
+    const resultText = document.getElementById('resultText');
+    const emptyEl = document.getElementById('empty');
+    const quickChips = document.getElementById('quickChips');
+    let activeQuick = '';
+
+    const normalize = (text) => (text || '').toString().toLowerCase().replace(/\s+/g, ' ').trim();
+    const escapeHtml = (text) => (text || '').toString().replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+    const statusClass = (status) => status.includes('舊') ? 'old' : status.includes('另 repo') ? 'external' : status.includes('診斷') ? 'support' : 'current';
+
+    function searchableText(resource) {
+      return normalize([resource.title, resource.description, resource.subject, resource.kind, resource.status, ...(resource.tags || [])].join(' '));
+    }
+
+    function hydrateControls() {
+      SUBJECT_ORDER.forEach(subject => {
+        if (!RESOURCES.some(r => r.subject === subject)) return;
+        const option = document.createElement('option');
+        option.value = subject;
+        option.textContent = subject;
+        subjectFilter.appendChild(option);
+      });
+      [...new Set(RESOURCES.map(r => r.status))].sort().forEach(status => {
+        const option = document.createElement('option');
+        option.value = status;
+        option.textContent = status;
+        statusFilter.appendChild(option);
+      });
+      QUICK_FILTERS.forEach(label => {
+        const btn = document.createElement('button');
+        btn.className = 'chip';
+        btn.type = 'button';
+        btn.textContent = label;
+        btn.addEventListener('click', () => {
+          activeQuick = activeQuick === label ? '' : label;
+          [...quickChips.children].forEach(chip => chip.classList.toggle('active', chip.textContent === activeQuick));
+          render();
+        });
+        quickChips.appendChild(btn);
+      });
+      document.getElementById('stat-total').textContent = RESOURCES.length;
+      document.getElementById('stat-science').textContent = RESOURCES.filter(r => r.subject === '自然理化' || r.subject === '會考複習').length;
+      document.getElementById('stat-language').textContent = RESOURCES.filter(r => r.subject === '國文' || r.subject === '英文').length;
+      document.getElementById('stat-support').textContent = RESOURCES.filter(r => r.subject === '讀書診斷' || r.subject === '備用入口').length;
+    }
+
+    function card(resource) {
+      const tags = (resource.tags || []).slice(0, 7).map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join('');
+      const external = resource.href.startsWith('http');
+      return `<article class="card" data-subject="${escapeHtml(resource.subject)}">
+        <div class="card-head">
+          <div><div class="kind">${escapeHtml(resource.kind)}</div><h3>${escapeHtml(resource.title)}</h3></div>
+          <span class="pill ${statusClass(resource.status)}">${escapeHtml(resource.status)}</span>
+        </div>
+        <p class="desc">${escapeHtml(resource.description)}</p>
+        <div class="meta">
+          <div><b>學科／用途</b>${escapeHtml(resource.subject)}</div>
+          <div><b>建議用法</b>${resource.subject === '備用入口' ? '備查／舊連結' : resource.kind.includes('題') ? '練題與訂正' : '閱讀與複習'}</div>
+        </div>
+        <div class="tags">${tags}</div>
+        <div class="actions"><a class="btn primary" href="${escapeHtml(resource.href)}"${external ? ' target="_blank" rel="noopener"' : ''}>開啟資源${external ? ' ↗' : ''}</a></div>
+      </article>`;
+    }
+
+    function filteredResources() {
+      const q = normalize(searchInput.value);
+      const quick = normalize(activeQuick);
+      const subject = subjectFilter.value;
+      const status = statusFilter.value;
+      return RESOURCES.filter(resource => {
+        const haystack = searchableText(resource);
+        return (!q || haystack.includes(q))
+          && (!quick || haystack.includes(quick))
+          && (!subject || resource.subject === subject)
+          && (!status || resource.status === status);
+      });
+    }
+
+    function render() {
+      const resources = filteredResources();
+      const grouped = new Map();
+      SUBJECT_ORDER.forEach(subject => grouped.set(subject, []));
+      resources.forEach(resource => {
+        if (!grouped.has(resource.subject)) grouped.set(resource.subject, []);
+        grouped.get(resource.subject).push(resource);
+      });
+      sectionsEl.innerHTML = '';
+      for (const [subject, list] of grouped.entries()) {
+        if (!list.length) continue;
+        const section = document.createElement('section');
+        section.className = 'category';
+        section.id = `subject-${subject.replace(/[^\w一-龥]+/g, '')}`;
+        section.innerHTML = `<div class="section-head"><div><h2>${escapeHtml(subject)}</h2><p>${escapeHtml(SUBJECT_DESCRIPTIONS[subject] || '')}</p></div><span class="count-badge">${list.length} 個資源</span></div><div class="grid">${list.map(card).join('')}</div>`;
+        sectionsEl.appendChild(section);
+      }
+      resultText.textContent = `顯示 ${resources.length} / ${RESOURCES.length} 個國二學習資源` + (activeQuick ? `｜快速篩選：${activeQuick}` : '');
+      emptyEl.style.display = resources.length ? 'none' : 'block';
+    }
+
+    searchInput.addEventListener('input', render);
+    subjectFilter.addEventListener('change', render);
+    statusFilter.addEventListener('change', render);
+    hydrateControls();
+    render();
+  </script>
+</body>
+</html>

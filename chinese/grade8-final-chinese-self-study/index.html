@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>國二下期末國文自學評量｜注音國字・注釋翻卡</title>
+  <meta name="description" content="依二年級下學期國文科第三次段考期末範圍整理：寫出國字、寫出注音、注釋翻卡練習，支援答對答錯統計、答對率與錯題複習。" />
+  <style>
+    :root{
+      --bg:#fff7ed; --bg2:#f5e9dc; --paper:#fffdf8; --ink:#22160d; --muted:#755f4a;
+      --line:rgba(91,52,18,.16); --brand:#9f1239; --brand2:#c2410c; --gold:#f59e0b;
+      --good:#15803d; --bad:#b91c1c; --purple:#7c3aed; --blue:#0369a1;
+      --shadow:0 22px 64px rgba(120,53,15,.16),0 4px 14px rgba(120,53,15,.08);
+      --radius:26px; --max:1160px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Microsoft JhengHei",sans-serif;line-height:1.72;background:
+      radial-gradient(circle at 9% -6%,rgba(244,114,182,.20),transparent 30rem),
+      radial-gradient(circle at 92% 5%,rgba(245,158,11,.25),transparent 26rem),
+      linear-gradient(180deg,#fffaf3 0%,var(--bg) 54%,var(--bg2) 100%);}
+    a{color:inherit} button,input,select{font:inherit}.wrap{width:min(var(--max),calc(100% - 30px));margin:0 auto}.skip{position:absolute;left:-999px;top:8px;background:white;padding:10px;border-radius:10px}.skip:focus{left:8px;z-index:30}
+    .topbar{position:sticky;top:0;z-index:20;background:rgba(255,247,237,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .nav{width:min(var(--max),calc(100% - 30px));margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0}.brand{display:flex;align-items:center;gap:10px;text-decoration:none}.mark{width:44px;height:44px;border-radius:16px;background:linear-gradient(135deg,var(--brand),var(--brand2));color:white;display:grid;place-items:center;font-weight:1000;box-shadow:0 12px 28px rgba(159,18,57,.22)}.brand strong{display:block;line-height:1.1}.brand small{display:block;color:var(--muted);font-weight:700}.navlinks{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.navlinks a{border:1px solid var(--line);background:rgba(255,255,255,.72);border-radius:999px;padding:7px 11px;text-decoration:none;color:#69452b;font-weight:850;font-size:13px}
+    .hero{padding:54px 0 26px}.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:22px;align-items:end}.eyebrow{display:inline-flex;gap:8px;align-items:center;border-radius:999px;padding:7px 12px;background:#ffe4e6;color:#9f1239;font-weight:1000;font-size:12px;letter-spacing:.08em;text-transform:uppercase}.hero h1{margin:18px 0 13px;font-size:clamp(2.2rem,6.7vw,5.4rem);line-height:.98;letter-spacing:-.075em}.lead{font-size:clamp(1.02rem,2.1vw,1.23rem);color:#5f4b3c;max-width:900px;margin:0;font-weight:560}.quick{border:1px solid var(--line);background:rgba(255,253,248,.82);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}.quick h2{margin:0 0 8px;font-size:1.08rem}.quick ol{margin:8px 0 0;padding-left:1.25rem;color:var(--muted);font-size:14px}
+    .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:24px}.stat{border:1px solid var(--line);background:rgba(255,255,255,.72);border-radius:18px;padding:15px}.stat strong{display:block;color:var(--brand);font-size:2rem;line-height:1;letter-spacing:-.06em}.stat span{font-size:13px;color:var(--muted)}
+    .controls{margin:26px 0 18px;border:1px solid var(--line);background:rgba(255,253,248,.88);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow);display:grid;gap:13px}.control-row{display:grid;grid-template-columns:1.2fr .75fr .68fr .62fr;gap:12px}label{font-size:12px;color:#76543a;font-weight:950;letter-spacing:.08em;text-transform:uppercase;display:grid;gap:6px}input,select{width:100%;min-height:46px;border:1px solid var(--line);border-radius:15px;padding:10px 12px;background:white;color:var(--ink)}button:focus-visible,a:focus-visible,input:focus,select:focus{outline:3px solid rgba(159,18,57,.16);border-color:var(--brand)}.toolbar{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid var(--line);border-radius:999px;background:white;color:#5b3412;padding:10px 14px;min-height:42px;font-weight:950;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:7px}.btn.primary{background:linear-gradient(135deg,#fb7185,var(--brand));border-color:transparent;color:white}.btn.gold{background:linear-gradient(135deg,#fde68a,var(--gold));border-color:transparent;color:#4a2600}.btn.active{background:#4c1d95;color:white;border-color:#4c1d95}
+    .practice-grid{display:grid;grid-template-columns:minmax(0,1.12fr) .88fr;gap:18px;align-items:start}.panel{border:1px solid var(--line);background:rgba(255,253,248,.90);border-radius:var(--radius);box-shadow:var(--shadow)}.practice{padding:18px}.card3d{perspective:1200px}.flashcard{position:relative;min-height:430px;transform-style:preserve-3d;-webkit-transform-style:preserve-3d;transition:transform .55s cubic-bezier(.2,.7,.2,1);cursor:pointer}.flashcard.flipped{transform:rotateY(180deg)}.face{position:absolute;inset:0;border-radius:22px;background:var(--paper);backface-visibility:hidden;-webkit-backface-visibility:hidden;border:1px solid rgba(91,52,18,.10);padding:28px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:inset 0 0 0 8px rgba(159,18,57,.045)}.face.back{transform:rotateY(180deg);align-items:flex-start;text-align:left;justify-content:flex-start;overflow:auto}.small{font-size:13px;color:var(--muted);font-weight:800}.typepill{display:inline-flex;align-items:center;border-radius:999px;padding:5px 10px;background:#fce7f3;color:#9d174d;font-size:12px;font-weight:1000}.prompt{font-size:clamp(2.05rem,6vw,4.7rem);line-height:1.14;letter-spacing:-.045em;margin:16px 0 10px;font-weight:950}.context{font-size:clamp(1.05rem,2.8vw,1.55rem);color:#5f4b3c;font-weight:800}.hint{font-size:14px;color:#7c6a57;margin-top:16px}.answer{font-size:clamp(2.2rem,7vw,4.2rem);line-height:1.15;margin:10px 0 8px;font-weight:1000;color:var(--brand)}.answer.def{font-size:clamp(1.35rem,3.5vw,2.2rem);line-height:1.45}.back h2{margin:0 0 6px;font-size:1rem;color:#7c2d12}.source{margin-top:auto;padding-top:12px;color:var(--muted);font-size:13px}.score-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.scorebtn{border:0;border-radius:18px;padding:14px;min-height:52px;color:white;font-weight:1000;cursor:pointer}.scorebtn.good{background:linear-gradient(135deg,#22c55e,var(--good))}.scorebtn.bad{background:linear-gradient(135deg,#fb7185,var(--bad))}
+    .side{padding:18px}.side h2{margin:0 0 12px}.mini-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.mini{border:1px solid var(--line);background:#fff;border-radius:16px;padding:12px}.mini strong{font-size:1.65rem;line-height:1;color:var(--brand);display:block}.mini span{font-size:12px;color:var(--muted)}.progress{height:12px;background:#f3e2cd;border-radius:999px;overflow:hidden;margin:14px 0}.bar{height:100%;width:0;background:linear-gradient(90deg,var(--brand),var(--gold));transition:width .3s}.history{display:grid;gap:8px;max-height:240px;overflow:auto}.row{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);background:white;border-radius:14px;padding:9px 10px}.ok{color:var(--good);font-weight:1000}.ng{color:var(--bad);font-weight:1000}.source-note{margin-top:13px;color:var(--muted);font-size:13px}
+    .section{margin:24px 0;padding:20px}.section h2{margin:0 0 8px;font-size:clamp(1.45rem,3vw,2.1rem);letter-spacing:-.045em}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:13px}.qchip{border:1px solid var(--line);background:white;border-radius:16px;padding:12px;text-align:left;cursor:pointer}.qchip b{display:block;color:#3a2415}.qchip span{display:block;color:var(--muted);font-size:13px;margin-top:3px}.qchip .tag{display:inline-flex;margin-top:8px;border-radius:999px;background:#fff1f2;color:#9f1239;padding:3px 8px;font-size:12px;font-weight:900}.source-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:14px}.source-shot{background:white;border:1px solid var(--line);border-radius:20px;overflow:hidden}.source-shot img{width:100%;display:block}.source-shot div{padding:12px;color:var(--muted);font-size:14px}.footer{padding:18px 0 54px;color:var(--muted);font-size:14px}.empty{display:none;text-align:center;color:var(--muted);padding:22px;border:1px dashed var(--line);border-radius:18px;background:rgba(255,255,255,.68)}
+    @media(max-width:930px){.hero-grid,.practice-grid,.control-row,.source-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.nav{align-items:flex-start;flex-direction:column}.navlinks{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;width:100%;padding-bottom:2px}.navlinks a{white-space:nowrap}.flashcard{min-height:380px}}
+    @media(max-width:560px){.wrap,.nav{width:min(var(--max),calc(100% - 22px))}.stats,.mini-stats,.score-actions{grid-template-columns:1fr}.hero{padding-top:38px}.face{padding:20px}.prompt{font-size:2rem}.answer{font-size:2.2rem}.flashcard{min-height:360px}.controls{padding:13px}}
+  </style>
+</head>
+<body>
+<a class="skip" href="#practice">跳到練習區</a>
+<div class="topbar">
+  <nav class="nav" aria-label="主導覽">
+    <a class="brand" href="./"><span class="mark">國</span><span><strong>期末國文自學評量</strong><small>注音國字・注釋翻卡</small></span></a>
+    <div class="navlinks">
+      <a href="../../webpages/grade8-learning-resources/">國二學習資源</a>
+      <a href="../../webpages/">所有網頁總覽</a>
+      <a href="#source">原卷截圖</a>
+    </div>
+  </nav>
+</div>
+<header class="hero wrap">
+  <div class="hero-grid">
+    <div>
+      <span class="eyebrow">二下第三次段考｜期末考範圍</span>
+      <h1>國文期末隨手測驗</h1>
+      <p class="lead">依考卷第 27 頁「注音國字 100 則」與第 28 頁「注釋 50 則」整理。先看題目、自己在紙上或心中作答，再點卡片翻面核對；按「答對／答錯」後會統計答對率，並自動整理錯題練習。</p>
+    </div>
+    <aside class="quick">
+      <h2>建議練習法</h2>
+      <ol>
+        <li>先選「全部題型」隨機練 15 題暖身。</li>
+        <li>考前分別練「寫國字」「寫注音」「注釋」。</li>
+        <li>按答錯後開啟「錯題練習」，直到答對率超過 90%。</li>
+      </ol>
+    </aside>
+  </div>
+  <div class="stats" aria-label="題庫統計">
+    <div class="stat"><strong id="statTotal">0</strong><span>總題數</span></div>
+    <div class="stat"><strong id="statHanzi">0</strong><span>寫國字</span></div>
+    <div class="stat"><strong id="statZhuyin">0</strong><span>寫注音</span></div>
+    <div class="stat"><strong id="statDef">0</strong><span>注釋</span></div>
+  </div>
+</header>
+<main class="wrap">
+  <section class="controls" aria-label="練習設定">
+    <div class="control-row">
+      <label>搜尋題目
+        <input id="search" type="search" placeholder="例如：鶴氅、汨羅江、ㄎㄨㄤ、注釋、扳回一城…" />
+      </label>
+      <label>題型
+        <select id="typeFilter">
+          <option value="">全部題型</option>
+          <option value="write-hanzi">寫出國字</option>
+          <option value="write-zhuyin">寫出注音</option>
+          <option value="definition">注釋</option>
+        </select>
+      </label>
+      <label>練習模式
+        <select id="modeFilter">
+          <option value="all">全部題目</option>
+          <option value="wrong">錯題練習</option>
+          <option value="unseen">尚未作答</option>
+          <option value="weak">答錯多於答對</option>
+        </select>
+      </label>
+      <label>排序
+        <select id="orderFilter">
+          <option value="random">隨機</option>
+          <option value="source">照原卷順序</option>
+        </select>
+      </label>
+    </div>
+    <div class="toolbar">
+      <button class="btn primary" id="nextBtn" type="button">抽下一題</button>
+      <button class="btn gold" id="wrongModeBtn" type="button">錯題練習：關</button>
+      <button class="btn" id="flipBtn" type="button">翻面看答案</button>
+      <button class="btn" id="resetBtn" type="button">清除本機紀錄</button>
+    </div>
+  </section>
+
+  <section id="practice" class="practice-grid" aria-label="翻卡練習區">
+    <div class="panel practice">
+      <div class="card3d">
+        <article id="flashcard" class="flashcard" tabindex="0" role="button" aria-label="點選翻轉字卡">
+          <div class="face front">
+            <span class="typepill" id="frontType">寫出國字</span>
+            <div class="small" id="counter">第 1 / 150 題</div>
+            <div class="prompt" id="frontPrompt">載入中…</div>
+            <div class="context" id="frontContext"></div>
+            <div class="hint">先作答，再點卡片或按「翻面看答案」核對</div>
+          </div>
+          <div class="face back">
+            <span class="typepill" id="backType">答案</span>
+            <h2 id="backPrompt">題目</h2>
+            <div class="answer" id="answerText">答案</div>
+            <div class="context" id="answerContext"></div>
+            <div class="source" id="sourceText"></div>
+          </div>
+        </article>
+      </div>
+      <div class="score-actions">
+        <button class="scorebtn good" id="correctBtn" type="button">我答對了</button>
+        <button class="scorebtn bad" id="wrongBtn" type="button">答錯／還不熟</button>
+      </div>
+    </div>
+    <aside class="panel side">
+      <h2>學習統計</h2>
+      <div class="mini-stats">
+        <div class="mini"><strong id="seenCount">0</strong><span>已作答</span></div>
+        <div class="mini"><strong id="accuracy">0%</strong><span>答對率</span></div>
+        <div class="mini"><strong id="wrongCount">0</strong><span>錯題數</span></div>
+        <div class="mini"><strong id="streak">0</strong><span>連續答對</span></div>
+      </div>
+      <div class="progress"><div class="bar" id="bar"></div></div>
+      <p class="small" id="summary">還沒有作答紀錄。先全部隨機練一輪，再做錯題。</p>
+      <h3>最近紀錄</h3>
+      <div class="history" id="history"></div>
+      <p class="source-note">紀錄只存在這台裝置的瀏覽器 localStorage，不會上傳。</p>
+    </aside>
+  </section>
+
+  <section class="panel section" aria-label="題庫列表">
+    <h2>題庫列表</h2>
+    <p class="small">點任一題可直接切換到該卡。列表會跟著搜尋與題型篩選改變。</p>
+    <div id="empty" class="empty">目前篩選沒有題目；請換關鍵字或清除篩選。</div>
+    <div id="cardList" class="cards"></div>
+  </section>
+
+  <section id="source" class="panel section" aria-label="原卷截圖">
+    <h2>原卷截圖</h2>
+    <p class="small">保留第 27、28 頁原卷截圖，方便核對題庫來源；點圖片可在新分頁放大。</p>
+    <div class="source-grid">
+      <a class="source-shot" href="assets/source-page-27.webp" target="_blank" rel="noopener"><img src="assets/source-page-27.webp" loading="lazy" alt="原卷第27頁：注音國字100則"><div>第 27 頁｜小試身手—注音國字 100 則</div></a>
+      <a class="source-shot" href="assets/source-page-28.webp" target="_blank" rel="noopener"><img src="assets/source-page-28.webp" loading="lazy" alt="原卷第28頁：注釋50則"><div>第 28 頁｜小試身手—注釋 50 則</div></a>
+    </div>
+  </section>
+</main>
+<footer class="footer wrap">資料來源：使用者提供之 Google Drive PDF「國文二下第三次段考／期末範圍」。本頁由 Hermes 協助整理為自學評量；若原卷有更新，建議以原卷為準再校訂題庫。</footer>
+<script>
+const SOURCE_URL='https://drive.google.com/file/d/1VQ05GVG1XERHemb-GglJAqI8V8fHBE0e/view?usp=sharing';
+const TYPE_LABELS={'write-hanzi':'寫出國字','write-zhuyin':'寫出注音','definition':'注釋'};
+const QUESTIONS=[
+{no:1,type:'write-zhuyin',prompt:'粗「獷」',answer:'ㄍㄨㄤˇ',context:'粗獷',sourcePage:27},
+{no:2,type:'write-hanzi',prompt:'精神「ㄎㄤˋ」奮',answer:'亢',context:'精神亢奮',sourcePage:27},
+{no:3,type:'write-zhuyin',prompt:'「憋」氣',answer:'ㄅㄧㄝ',context:'憋氣',sourcePage:27},
+{no:4,type:'write-hanzi',prompt:'美麗翅「ㄧˋ」',answer:'翼',context:'美麗翅翼',sourcePage:27},
+{no:5,type:'write-zhuyin',prompt:'「撇」閃',answer:'ㄆㄧㄝ',context:'撇閃',sourcePage:27},
+{no:6,type:'write-zhuyin',prompt:'光「暈」',answer:'ㄩㄣˋ',context:'光暈',sourcePage:27},
+{no:7,type:'write-zhuyin',prompt:'如火如「荼」',answer:'ㄊㄨˊ',context:'如火如荼',sourcePage:27},
+{no:8,type:'write-zhuyin',prompt:'「翱」翔天際',answer:'ㄠˊ',context:'翱翔天際',sourcePage:27},
+{no:9,type:'write-zhuyin',prompt:'精神抖「擻」',answer:'ㄙㄡˇ',context:'精神抖擻',sourcePage:27},
+{no:10,type:'write-hanzi',prompt:'船「ㄒㄧㄢˊ」',answer:'舷',context:'船舷',sourcePage:27},
+{no:11,type:'write-zhuyin',prompt:'渾身是「勁」',answer:'ㄐㄧㄥˋ',context:'渾身是勁',sourcePage:27},
+{no:12,type:'write-zhuyin',prompt:'愣「怔」',answer:'ㄓㄥ',context:'愣怔',sourcePage:27},
+{no:13,type:'write-zhuyin',prompt:'「吮」吸',answer:'ㄕㄨㄣˇ',context:'吮吸',sourcePage:27},
+{no:14,type:'write-hanzi',prompt:'窸窸「ㄙㄨˋ」ㄙㄨˋ',answer:'窣',context:'窸窸窣窣',sourcePage:27},
+{no:15,type:'write-hanzi',prompt:'「ㄔㄨㄢˋ」逃',answer:'竄',context:'竄逃',sourcePage:27},
+{no:16,type:'write-hanzi',prompt:'擺動尾「ㄑㄧˊ」',answer:'鰭',context:'擺動尾鰭',sourcePage:27},
+{no:17,type:'write-hanzi',prompt:'波光「ㄌㄧㄣˊ」ㄌㄧㄣˊ',answer:'粼',context:'波光粼粼',sourcePage:27},
+{no:18,type:'write-zhuyin',prompt:'蚊「蚋」',answer:'ㄖㄨㄟˋ',context:'蚊蚋',sourcePage:27},
+{no:19,type:'write-zhuyin',prompt:'一「盞」明燈',answer:'ㄓㄢˇ',context:'一盞明燈',sourcePage:27},
+{no:20,type:'write-zhuyin',prompt:'「乒」乒砰砰',answer:'ㄆㄧㄥ',context:'乒乒砰砰',sourcePage:27},
+{no:21,type:'write-hanzi',prompt:'神采「ㄧˋ」ㄧˋ',answer:'奕',context:'神采奕奕',sourcePage:27},
+{no:22,type:'write-hanzi',prompt:'「ㄌㄧㄥˊ」空飛落',answer:'凌',context:'凌空飛落',sourcePage:27},
+{no:23,type:'write-zhuyin',prompt:'乒乒「砰」砰',answer:'ㄆㄥ',context:'乒乒砰砰',sourcePage:27},
+{no:24,type:'write-hanzi',prompt:'農人「ㄌㄧˊ」田',answer:'犁',context:'農人犁田',sourcePage:27},
+{no:25,type:'write-hanzi',prompt:'功「ㄒㄩㄣ」',answer:'勳',context:'功勳',sourcePage:27},
+{no:26,type:'write-hanzi',prompt:'「ㄌㄧˊ」黑',answer:'黧',context:'黧黑',sourcePage:27},
+{no:27,type:'write-hanzi',prompt:'挖「ㄐㄩㄝˊ」',answer:'掘',context:'挖掘',sourcePage:27},
+{no:28,type:'write-zhuyin',prompt:'漣「漪」',answer:'ㄧ',context:'漣漪',sourcePage:27},
+{no:29,type:'write-zhuyin',prompt:'漁「汛」',answer:'ㄒㄩㄣˋ',context:'漁汛',sourcePage:27},
+{no:30,type:'write-zhuyin',prompt:'「咽」喉',answer:'ㄧㄢ',context:'咽喉',sourcePage:27},
+{no:31,type:'write-hanzi',prompt:'銀貨兩「ㄑㄧˋ」',answer:'訖',context:'銀貨兩訖',sourcePage:27},
+{no:32,type:'write-zhuyin',prompt:'披鶴「氅」',answer:'ㄔㄤˇ',context:'披鶴氅',sourcePage:27},
+{no:33,type:'write-hanzi',prompt:'搬運「ㄌㄧㄤˊ」草',answer:'糧',context:'搬運糧草',sourcePage:27},
+{no:34,type:'write-zhuyin',prompt:'自古「迄」今',answer:'ㄑㄧˋ',context:'自古迄今',sourcePage:27},
+{no:35,type:'write-zhuyin',prompt:'堅守「崗」位',answer:'ㄍㄤˇ',context:'堅守崗位',sourcePage:27},
+{no:36,type:'write-zhuyin',prompt:'笑容可「掬」',answer:'ㄐㄩˊ',context:'笑容可掬',sourcePage:27},
+{no:37,type:'write-hanzi',prompt:'「ㄈㄣˊ」香操琴',answer:'焚',context:'焚香操琴',sourcePage:27},
+{no:38,type:'write-hanzi',prompt:'「ㄕㄢˋ」離職守',answer:'擅',context:'擅離職守',sourcePage:27},
+{no:39,type:'write-zhuyin',prompt:'城「鋪」',answer:'ㄆㄨˋ',context:'城鋪',sourcePage:27},
+{no:40,type:'write-zhuyin',prompt:'「倚」欄而坐',answer:'ㄧˇ',context:'倚欄而坐',sourcePage:27},
+{no:41,type:'write-hanzi',prompt:'「ㄧˋ」立不搖',answer:'屹',context:'屹立不搖',sourcePage:27},
+{no:42,type:'write-hanzi',prompt:'手持「ㄓㄨˇ」尾',answer:'麈',context:'手持麈尾',sourcePage:27},
+{no:43,type:'write-zhuyin',prompt:'羽扇「綸」巾',answer:'ㄍㄨㄢ',context:'羽扇綸巾',sourcePage:27},
+{no:44,type:'write-zhuyin',prompt:'「駭」人聽聞',answer:'ㄏㄞˋ',context:'駭人聽聞',sourcePage:27},
+{no:45,type:'write-hanzi',prompt:'「ㄉㄨㄣˋ」逃',answer:'遁',context:'遁逃',sourcePage:27},
+{no:46,type:'write-hanzi',prompt:'手「ㄆㄥˇ」寶劍',answer:'捧',context:'手捧寶劍',sourcePage:27},
+{no:47,type:'write-hanzi',prompt:'略勝一「ㄔㄡˊ」',answer:'籌',context:'略勝一籌',sourcePage:27},
+{no:48,type:'write-hanzi',prompt:'止有一「ㄅㄢ」文官',answer:'班',context:'止有一班文官',sourcePage:27},
+{no:49,type:'write-hanzi',prompt:'「ㄈㄨˇ」掌大笑',answer:'撫',context:'撫掌大笑',sourcePage:27},
+{no:50,type:'write-zhuyin',prompt:'「妄」行出入',answer:'ㄨㄤˋ',context:'妄行出入',sourcePage:27},
+{no:51,type:'write-hanzi',prompt:'藏「ㄋㄧˋ」',answer:'匿',context:'藏匿',sourcePage:27},
+{no:52,type:'write-zhuyin',prompt:'前「哨」',answer:'ㄕㄠˋ',context:'前哨',sourcePage:27},
+{no:53,type:'write-hanzi',prompt:'神鬼「ㄇㄛˋ」測',answer:'莫',context:'神鬼莫測',sourcePage:27},
+{no:54,type:'write-hanzi',prompt:'千「ㄐㄩㄣ」一髮',answer:'鈞',context:'千鈞一髮',sourcePage:27},
+{no:55,type:'write-hanzi',prompt:'兵力「ㄒㄩㄢˊ」殊',answer:'懸',context:'兵力懸殊',sourcePage:27},
+{no:56,type:'write-hanzi',prompt:'敵眾我「ㄍㄨㄚˇ」',answer:'寡',context:'敵眾我寡',sourcePage:27},
+{no:57,type:'write-zhuyin',prompt:'欲「擒」故縱',answer:'ㄑㄧㄣˊ',context:'欲擒故縱',sourcePage:27},
+{no:58,type:'write-zhuyin',prompt:'孜孜「矻」矻',answer:'ㄎㄨˋ',context:'孜孜矻矻',sourcePage:27},
+{no:59,type:'write-zhuyin',prompt:'兩軍對「峙」',answer:'ㄓˋ',context:'兩軍對峙',sourcePage:27},
+{no:60,type:'write-hanzi',prompt:'遭到埋「ㄈㄨˊ」',answer:'伏',context:'遭到埋伏',sourcePage:27},
+{no:61,type:'write-zhuyin',prompt:'馬「謖」',answer:'ㄙㄨˋ',context:'馬謖',sourcePage:27},
+{no:62,type:'write-hanzi',prompt:'調兵「ㄑㄧㄢˇ」將',answer:'遣',context:'調兵遣將',sourcePage:27},
+{no:63,type:'write-hanzi',prompt:'「ㄐㄩˊ」躬盡瘁',answer:'鞠',context:'鞠躬盡瘁',sourcePage:27},
+{no:64,type:'write-zhuyin',prompt:'加以「渲」染',answer:'ㄒㄩㄢˋ',context:'加以渲染',sourcePage:27},
+{no:65,type:'write-hanzi',prompt:'眾將「ㄐㄧㄥ」旗',answer:'旌',context:'眾將旌旗',sourcePage:27},
+{no:66,type:'write-zhuyin',prompt:'司馬「懿」',answer:'ㄧˋ',context:'司馬懿',sourcePage:27},
+{no:67,type:'write-zhuyin',prompt:'扣人心「弦」',answer:'ㄒㄧㄢˊ',context:'扣人心弦',sourcePage:27},
+{no:68,type:'write-zhuyin',prompt:'「丞」相',answer:'ㄔㄥˊ',context:'丞相',sourcePage:27},
+{no:69,type:'write-zhuyin',prompt:'「汨」羅江',answer:'ㄇㄧˋ',context:'汨羅江',sourcePage:27},
+{no:70,type:'write-hanzi',prompt:'英「ㄌㄧㄝˋ」',answer:'烈',context:'英烈',sourcePage:27},
+{no:71,type:'write-zhuyin',prompt:'澎「湃」',answer:'ㄆㄞˋ',context:'澎湃',sourcePage:27},
+{no:72,type:'write-hanzi',prompt:'汙「ㄓㄨㄛˊ」',answer:'濁',context:'汙濁',sourcePage:27},
+{no:73,type:'write-zhuyin',prompt:'潔「癖」',answer:'ㄆㄧˇ',context:'潔癖',sourcePage:27},
+{no:74,type:'write-zhuyin',prompt:'千「槳」競發',answer:'ㄐㄧㄤˇ',context:'千槳競發',sourcePage:27},
+{no:75,type:'write-zhuyin',prompt:'困「厄」',answer:'ㄜˋ',context:'困厄',sourcePage:27},
+{no:76,type:'write-hanzi',prompt:'沉「ㄌㄨㄣˊ」',answer:'淪',context:'沉淪',sourcePage:27},
+{no:77,type:'write-zhuyin',prompt:'「澎」湃',answer:'ㄆㄥ',context:'澎湃',sourcePage:27},
+{no:78,type:'write-zhuyin',prompt:'「繆」思',answer:'ㄇㄧㄡˋ',context:'繆思',sourcePage:27},
+{no:79,type:'write-hanzi',prompt:'身手「ㄐㄧㄠˇ」健',answer:'矯',context:'身手矯健',sourcePage:27},
+{no:80,type:'write-hanzi',prompt:'「ㄡˇ」斷絲連',answer:'藕',context:'藕斷絲連',sourcePage:27},
+{no:81,type:'write-hanzi',prompt:'稱「ㄙㄨㄥˋ」',answer:'頌',context:'稱頌',sourcePage:27},
+{no:82,type:'write-zhuyin',prompt:'同「儕」',answer:'ㄔㄞˊ',context:'同儕',sourcePage:27},
+{no:83,type:'write-hanzi',prompt:'湖「ㄆㄢˋ」',answer:'畔',context:'湖畔',sourcePage:27},
+{no:84,type:'write-hanzi',prompt:'「ㄔㄡˊ」觴賦詩',answer:'酬',context:'酬觴賦詩',sourcePage:27},
+{no:85,type:'write-hanzi',prompt:'「ㄕㄥ」華',answer:'昇',context:'昇華',sourcePage:27},
+{no:86,type:'write-zhuyin',prompt:'「瞻」前顧後',answer:'ㄓㄢ',context:'瞻前顧後',sourcePage:27},
+{no:87,type:'write-hanzi',prompt:'受「ㄏㄨㄟˋ」良多',answer:'惠',context:'受惠良多',sourcePage:27},
+{no:88,type:'write-hanzi',prompt:'千古之「ㄇㄧˊ」',answer:'謎',context:'千古之謎',sourcePage:27},
+{no:89,type:'write-hanzi',prompt:'「ㄒㄧㄠ」遙自在',answer:'逍',context:'逍遙自在',sourcePage:27},
+{no:90,type:'write-zhuyin',prompt:'「偃」旗息鼓',answer:'ㄧㄢˇ',context:'偃旗息鼓',sourcePage:27},
+{no:91,type:'write-hanzi',prompt:'「ㄕㄨˋ」起大拇指',answer:'豎',context:'豎起大拇指',sourcePage:27},
+{no:92,type:'write-hanzi',prompt:'「ㄆㄧㄣˊ」ㄆㄧㄣˊ叫好',answer:'頻',context:'頻頻叫好',sourcePage:27},
+{no:93,type:'write-hanzi',prompt:'眼「ㄎㄨㄤ」',answer:'眶',context:'眼眶',sourcePage:27},
+{no:94,type:'write-hanzi',prompt:'清白無「ㄒㄧㄚˊ」',answer:'瑕',context:'清白無瑕',sourcePage:27},
+{no:95,type:'write-hanzi',prompt:'不「ㄎㄢ」一擊',answer:'堪',context:'不堪一擊',sourcePage:27},
+{no:96,type:'write-hanzi',prompt:'一敗「ㄊㄨˊ」地',answer:'塗',context:'一敗塗地',sourcePage:27},
+{no:97,type:'write-zhuyin',prompt:'陰「霾」消散',answer:'ㄇㄞˊ',context:'陰霾消散',sourcePage:27},
+{no:98,type:'write-zhuyin',prompt:'「蟄」伏',answer:'ㄓˊ',context:'蟄伏',sourcePage:27},
+{no:99,type:'write-hanzi',prompt:'「ㄅㄢ」回一城',answer:'扳',context:'扳回一城',sourcePage:27},
+{no:100,type:'write-zhuyin',prompt:'「揶」揄',answer:'ㄧㄝˊ',context:'揶揄',sourcePage:27},
+{no:101,type:'definition',prompt:'懾怔',answer:'指被嚇呆了。',context:'注釋',sourcePage:28},
+{no:102,type:'definition',prompt:'如火如荼',answer:'形容氣勢或氣氛蓬勃、熱烈。',context:'注釋',sourcePage:28},
+{no:103,type:'definition',prompt:'「薄」暮',answer:'接近。',context:'注釋',sourcePage:28},
+{no:104,type:'definition',prompt:'蚊「蚋」',answer:'蚊類害蟲。',context:'注釋',sourcePage:28},
+{no:105,type:'definition',prompt:'粗獷',answer:'粗野狂放。',context:'注釋',sourcePage:28},
+{no:106,type:'definition',prompt:'「紛紛」匆匆',answer:'眾多的樣子。',context:'注釋',sourcePage:28},
+{no:107,type:'definition',prompt:'奕奕',answer:'精神煥發的樣子。',context:'注釋',sourcePage:28},
+{no:108,type:'definition',prompt:'「黟」黑',answer:'黃黑色。',context:'注釋',sourcePage:28},
+{no:109,type:'definition',prompt:'銀光粼粼',answer:'指水波在月光的映照下，閃閃發亮的樣子。',context:'注釋',sourcePage:28},
+{no:110,type:'definition',prompt:'無采工',answer:'閩南語，指白費工夫。',context:'注釋',sourcePage:28},
+{no:111,type:'definition',prompt:'式微',answer:'衰落、衰微。',context:'注釋',sourcePage:28},
+{no:112,type:'definition',prompt:'吮吸',answer:'用口吸取。',context:'注釋',sourcePage:28},
+{no:113,type:'definition',prompt:'「憋」氣',answer:'壓抑、強忍著。',context:'注釋',sourcePage:28},
+{no:114,type:'definition',prompt:'窸窣',answer:'形容輕微細碎的聲音。',context:'注釋',sourcePage:28},
+{no:115,type:'definition',prompt:'撇閃',answer:'快速掠過。',context:'注釋',sourcePage:28},
+{no:116,type:'definition',prompt:'「蓋」因不得已而用之',answer:'實在是。',context:'注釋',sourcePage:28},
+{no:117,type:'definition',prompt:'凭欄',answer:'靠著欄杆。',context:'注釋',sourcePage:28},
+{no:118,type:'definition',prompt:'妄行出入',answer:'不守規定，隨意進出。',context:'注釋',sourcePage:28},
+{no:119,type:'definition',prompt:'汝輩「焉」知',answer:'如何、怎麼。',context:'注釋',sourcePage:28},
+{no:120,type:'definition',prompt:'「飛馬」報到',answer:'騎著快馬的人，此指傳送緊急軍情的人。',context:'注釋',sourcePage:28},
+{no:121,type:'definition',prompt:'駭然',answer:'驚恐的樣子。',context:'注釋',sourcePage:28},
+{no:122,type:'definition',prompt:'孔明「分撥」已定',answer:'分派、調度。',context:'注釋',sourcePage:28},
+{no:123,type:'definition',prompt:'玄機',answer:'高明奧妙的計謀。',context:'注釋',sourcePage:28},
+{no:124,type:'definition',prompt:'盡皆「失色」',answer:'因為驚恐而變了臉色。',context:'注釋',sourcePage:28},
+{no:125,type:'definition',prompt:'蜂擁',answer:'形容大批人群擁擠向前。',context:'注釋',sourcePage:28},
+{no:126,type:'definition',prompt:'「投」山北小路去也',answer:'往。',context:'注釋',sourcePage:28},
+{no:127,type:'definition',prompt:'不會「弄險」',answer:'冒險行事。',context:'注釋',sourcePage:28},
+{no:128,type:'definition',prompt:'笑容可「掬」',answer:'用兩手捧取。',context:'注釋',sourcePage:28},
+{no:129,type:'definition',prompt:'鶴氅',answer:'用鳥羽編製的外衣。',context:'注釋',sourcePage:28},
+{no:130,type:'definition',prompt:'前軍哨',answer:'在前鋒偵探敵情的士兵。',context:'注釋',sourcePage:28},
+{no:131,type:'definition',prompt:'「望」西城蜂擁而來',answer:'向、朝。',context:'注釋',sourcePage:28},
+{no:132,type:'definition',prompt:'城鋪',answer:'城中巡查的崗位。',context:'注釋',sourcePage:28},
+{no:133,type:'definition',prompt:'卻說',answer:'且說、再說。',context:'注釋',sourcePage:28},
+{no:134,type:'definition',prompt:'焚香操琴',answer:'燒香彈琴。',context:'注釋',sourcePage:28},
+{no:135,type:'definition',prompt:'言訖',answer:'說完。',context:'注釋',sourcePage:28},
+{no:136,type:'definition',prompt:'旌旗',answer:'旗子。',context:'注釋',sourcePage:28},
+{no:137,type:'definition',prompt:'清芬',answer:'清淡的香氣，比喻高潔的品德操守。',context:'注釋',sourcePage:28},
+{no:138,type:'definition',prompt:'酣睡',answer:'熟睡。',context:'注釋',sourcePage:28},
+{no:139,type:'definition',prompt:'滔滔',answer:'水流滾滾不絕的樣子。',context:'注釋',sourcePage:28},
+{no:140,type:'definition',prompt:'潔癖',answer:'過度愛好清潔的習性。',context:'注釋',sourcePage:28},
+{no:141,type:'definition',prompt:'淪落',answer:'沉淪、墮落。',context:'注釋',sourcePage:28},
+{no:142,type:'definition',prompt:'「酣」睡',answer:'本為盡興暢飲的意思，此為深、濃之意。',context:'注釋',sourcePage:28},
+{no:143,type:'definition',prompt:'悠悠',answer:'長久、久遠。',context:'注釋',sourcePage:28},
+{no:144,type:'definition',prompt:'渺渺',answer:'遙遠而不易見的樣子。',context:'注釋',sourcePage:28},
+{no:145,type:'definition',prompt:'行禮如儀',answer:'按流程步驟執行應有的禮節程序。',context:'注釋',sourcePage:28},
+{no:146,type:'definition',prompt:'揶揄',answer:'嘲弄。',context:'注釋',sourcePage:28},
+{no:147,type:'definition',prompt:'「蟄伏」許多日子',answer:'動物藏伏在土中不食不動。此指隱藏在心中。',context:'注釋',sourcePage:28},
+{no:148,type:'definition',prompt:'人道主義',answer:'提倡關懷人、尊重人，以人為中心的觀念。',context:'注釋',sourcePage:28},
+{no:149,type:'definition',prompt:'偃旗息鼓',answer:'軍隊收起旌旗，停敲戰鼓。後比喻事情中止，不再進行。',context:'注釋',sourcePage:28},
+{no:150,type:'definition',prompt:'行尸走肉',answer:'此指會走動而沒有靈魂的軀殼。',context:'注釋',sourcePage:28}
+];
+const KEY='grade8-final-chinese-self-study-v1';
+function normalizeRecord(data){
+  const base={answers:{},history:[],streak:0};
+  if(!data||typeof data!=='object') return base;
+  return {
+    answers:data.answers&&typeof data.answers==='object'?data.answers:{},
+    history:Array.isArray(data.history)?data.history.slice(0,60):[],
+    streak:Number.isFinite(Number(data.streak))?Number(data.streak):0
+  };
+}
+function loadRecord(){
+  try{return normalizeRecord(JSON.parse(localStorage.getItem(KEY)||'{}'));}
+  catch(e){return normalizeRecord(null);}
+}
+let record=loadRecord();
+let currentIndex=0;
+const $=id=>document.getElementById(id);
+const norm=t=>(t||'').toString().toLowerCase().replace(/\s+/g,' ').trim();
+const esc=t=>(t||'').toString().replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+function save(){try{localStorage.setItem(KEY,JSON.stringify(record));}catch(e){}}
+function statsFor(q){return record.answers[q.no]||{correct:0,wrong:0};}
+function filtered(){
+  const kw=norm($('search').value), type=$('typeFilter').value, mode=$('modeFilter').value;
+  let arr=QUESTIONS.filter(q=>!type||q.type===type).filter(q=>!kw||norm([q.prompt,q.answer,q.context,TYPE_LABELS[q.type],q.sourcePage].join(' ')).includes(kw));
+  if(mode==='wrong') arr=arr.filter(q=>statsFor(q).wrong>0);
+  if(mode==='weak') arr=arr.filter(q=>statsFor(q).wrong>statsFor(q).correct);
+  if(mode==='unseen') arr=arr.filter(q=>!record.answers[q.no]);
+  return arr;
+}
+function setPracticeDisabled(disabled){
+  ['correctBtn','wrongBtn','flipBtn'].forEach(id=>$(id).disabled=disabled);
+  $('flashcard').setAttribute('aria-disabled', disabled?'true':'false');
+}
+function renderEmptyState(){
+  const mode=$('modeFilter').value;
+  const message=mode==='wrong'?'目前沒有曾答錯的題目。先做幾題並把不熟的題目按「答錯／還不熟」，再回來練錯題。':'目前沒有符合條件的題目。請換關鍵字或清除篩選。';
+  $('flashcard').classList.remove('flipped');
+  $('frontType').textContent='沒有題目';
+  $('backType').textContent='沒有題目';
+  $('counter').textContent='0 題';
+  $('frontPrompt').textContent='目前沒有符合條件的題目';
+  $('frontContext').textContent=message;
+  $('backPrompt').textContent='請調整篩選';
+  $('answerText').textContent='';
+  $('answerText').className='answer';
+  $('answerContext').textContent=message;
+  $('sourceText').textContent='';
+  setPracticeDisabled(true);
+  renderStats(); renderList();
+}
+function pickNext(forceRandom=true){
+  const arr=filtered();
+  if(!arr.length){renderEmptyState();return;}
+  if($('orderFilter').value==='source'&&!forceRandom){
+    const pos=arr.findIndex(q=>q.no===QUESTIONS[currentIndex].no);
+    const next=arr[(pos+1+arr.length)%arr.length];
+    currentIndex=QUESTIONS.findIndex(q=>q.no===next.no);
+  }else{
+    let q=arr[Math.floor(Math.random()*arr.length)];
+    if(arr.length>1){while(q.no===QUESTIONS[currentIndex].no) q=arr[Math.floor(Math.random()*arr.length)];}
+    currentIndex=QUESTIONS.findIndex(x=>x.no===q.no);
+  }
+  render();
+}
+function render(){
+  const q=QUESTIONS[currentIndex];
+  setPracticeDisabled(false);
+  $('flashcard').classList.remove('flipped');
+  $('frontType').textContent=TYPE_LABELS[q.type];
+  $('backType').textContent=TYPE_LABELS[q.type]+'｜答案';
+  $('counter').textContent=`第 ${q.no} / ${QUESTIONS.length} 題`;
+  $('frontPrompt').textContent=q.prompt;
+  $('frontContext').textContent=q.type==='definition'?'請說出這個詞語的注釋':q.context;
+  $('backPrompt').textContent=q.prompt;
+  $('answerText').textContent=q.answer;
+  $('answerText').className='answer '+(q.type==='definition'?'def':'');
+  $('answerContext').textContent=q.context&&q.type!=='definition'?`完整詞語：${q.context}`:'';
+  $('sourceText').innerHTML=`來源：原卷第 ${q.sourcePage} 頁｜${TYPE_LABELS[q.type]}｜<a href="${SOURCE_URL}" target="_blank" rel="noopener">Google Drive 原檔</a>`;
+  renderStats(); renderList();
+}
+function score(ok){
+  const q=QUESTIONS[currentIndex], a=record.answers[q.no]||{correct:0,wrong:0};
+  if(ok){a.correct++; record.streak=(record.streak||0)+1;} else {a.wrong++; record.streak=0;}
+  record.answers[q.no]=a;
+  record.history.unshift({no:q.no,prompt:q.prompt,type:q.type,ok,time:new Date().toLocaleString('zh-TW',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'})});
+  record.history=record.history.slice(0,60); save(); pickNext($('orderFilter').value!=='source');
+}
+function renderStats(){
+  let c=0,w=0,mastered=0,wrongCards=0;
+  QUESTIONS.forEach(q=>{const a=statsFor(q); c+=a.correct||0; w+=a.wrong||0; if((a.correct||0)>=2 && (a.correct||0)>=(a.wrong||0)+1) mastered++; if((a.wrong||0)>0) wrongCards++;});
+  const total=c+w;
+  $('seenCount').textContent=total; $('accuracy').textContent=total?Math.round(c/total*100)+'%':'0%'; $('wrongCount').textContent=wrongCards; $('streak').textContent=record.streak||0; $('bar').style.width=Math.round(mastered/QUESTIONS.length*100)+'%';
+  $('summary').textContent=total?`已熟練 ${mastered} / ${QUESTIONS.length} 題；有 ${wrongCards} 題曾答錯。錯題練習會優先抽曾答錯或答錯多於答對的題目。`:'還沒有作答紀錄。建議先全部隨機練一輪，再開錯題練習。';
+  $('history').innerHTML=(record.history||[]).length?record.history.map(h=>`<div class="row"><div><b>${esc(TYPE_LABELS[h.type])} #${h.no}</b><br><span>${esc(h.prompt)}｜${esc(h.time)}</span></div><div class="${h.ok?'ok':'ng'}">${h.ok?'答對':'答錯'}</div></div>`).join(''):'<p class="small">尚無紀錄</p>';
+}
+function renderList(){
+  const arr=filtered(); $('empty').style.display=arr.length?'none':'block';
+  $('cardList').innerHTML=arr.map(q=>{const a=statsFor(q); const mark=a.wrong>a.correct?'需加強':a.correct>=2?'已熟練':TYPE_LABELS[q.type]; return `<button class="qchip" type="button" data-no="${q.no}"><b>#${q.no} ${esc(q.prompt)}</b><span>${esc(q.context||q.answer)}</span><span class="tag">${esc(mark)}</span></button>`;}).join('');
+  document.querySelectorAll('.qchip').forEach(btn=>btn.onclick=()=>{currentIndex=QUESTIONS.findIndex(q=>q.no===Number(btn.dataset.no)); render(); scrollTo({top:document.getElementById('practice').offsetTop-80,behavior:'smooth'});});
+}
+function syncModeButton(){
+  const active=$('modeFilter').value==='wrong';
+  $('wrongModeBtn').textContent='錯題練習：'+(active?'開':'關');
+  $('wrongModeBtn').classList.toggle('active',active);
+}
+function applyFilters(){
+  syncModeButton();
+  const arr=filtered();
+  if(arr.length) currentIndex=QUESTIONS.findIndex(q=>q.no===arr[0].no);
+  arr.length?render():renderEmptyState();
+}
+function init(){
+  QUESTIONS.sort((a,b)=>a.no-b.no);
+  $('statTotal').textContent=QUESTIONS.length;
+  $('statHanzi').textContent=QUESTIONS.filter(q=>q.type==='write-hanzi').length;
+  $('statZhuyin').textContent=QUESTIONS.filter(q=>q.type==='write-zhuyin').length;
+  $('statDef').textContent=QUESTIONS.filter(q=>q.type==='definition').length;
+  ['search','typeFilter','modeFilter','orderFilter'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',applyFilters));
+  $('flashcard').onclick=()=>{if($('flashcard').getAttribute('aria-disabled')!=='true') $('flashcard').classList.toggle('flipped');};
+  $('flashcard').onkeydown=e=>{if((e.key==='Enter'||e.key===' ')&&$('flashcard').getAttribute('aria-disabled')!=='true'){e.preventDefault();$('flashcard').classList.toggle('flipped');}};
+  $('flipBtn').onclick=()=>$('flashcard').classList.toggle('flipped');
+  $('nextBtn').onclick=()=>pickNext($('orderFilter').value!=='source');
+  $('correctBtn').onclick=()=>score(true); $('wrongBtn').onclick=()=>score(false);
+  $('wrongModeBtn').onclick=()=>{$('modeFilter').value=$('modeFilter').value==='wrong'?'all':'wrong'; syncModeButton(); pickNext(true);};
+  $('resetBtn').onclick=()=>{if(confirm('確定要清除這台裝置上的作答紀錄嗎？')){record={answers:{},history:[],streak:0};save();render();}};
+  syncModeButton(); pickNext(true);
+}
+init();
+</script>
+</body>
+</html>

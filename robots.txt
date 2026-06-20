@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /ai-coding-tools-free-comparison/study/toeic-244447-20260610-lu-private/

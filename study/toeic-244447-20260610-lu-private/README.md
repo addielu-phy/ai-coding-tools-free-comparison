@@ -1,0 +1,115 @@
+# TOEIC 模考 244447 備份摘要
+
+- 考生：盧政良
+- 日期：2026-06-10
+- 總分：555（Listening 310 / Reading 245）
+- 題數：200；錯/未答：98
+
+## Part 統計
+- Photographs: 5/6 (83%), 未答 1
+- Question Response: 19/25 (76%), 未答 0
+- Short Conversation: 22/39 (56%), 未答 1
+- Short Talk: 10/30 (33%), 未答 0
+- Incomplete Sentences: 17/30 (57%), 未答 0
+- Text Completion: 10/16 (63%), 未答 0
+- Reading Comprehension: 19/54 (35%), 未答 0
+
+## 錯題/未答清單
+- #2 Photographs｜你的答案 未作答｜正解 B｜描述場景題（靜物／方位）
+- #14 Question Response｜你的答案 A｜正解 C｜一般疑問句
+- #17 Question Response｜你的答案 B｜正解 A｜選擇疑問句
+- #20 Question Response｜你的答案 B｜正解 A｜一般疑問句
+- #24 Question Response｜你的答案 C｜正解 B｜特殊疑問句
+- #28 Question Response｜你的答案 C｜正解 A｜否定／反義疑問句
+- #31 Question Response｜你的答案 A｜正解 C｜特殊疑問句
+- #36 Short Conversation｜你的答案 C｜正解 D｜對話細節題
+- #40 Short Conversation｜你的答案 未作答｜正解 B｜對話細節題
+- #42 Short Conversation｜你的答案 C｜正解 D｜對話細節題
+- #43 Short Conversation｜你的答案 C｜正解 B｜對話細節題
+- #44 Short Conversation｜你的答案 D｜正解 C｜對話細節題
+- #50 Short Conversation｜你的答案 C｜正解 B｜對話細節題
+- #51 Short Conversation｜你的答案 A｜正解 B｜對話細節題
+- #52 Short Conversation｜你的答案 A｜正解 D｜對話細節題
+- #53 Short Conversation｜你的答案 D｜正解 A｜對話細節題
+- #54 Short Conversation｜你的答案 D｜正解 A｜對話主題／目的題
+- #57 Short Conversation｜你的答案 B｜正解 C｜
+- #59 Short Conversation｜你的答案 D｜正解 C｜對話涵義判定題
+- #60 Short Conversation｜你的答案 B｜正解 D｜對話涵義判定題
+- #61 Short Conversation｜你的答案 A｜正解 B｜對話細節題
+- #64 Short Conversation｜你的答案 C｜正解 D｜對話細節題
+- #66 Short Conversation｜你的答案 A｜正解 B｜對話細節題
+- #69 Short Conversation｜你的答案 A｜正解 C｜對話涵義判定題
+- #71 Short Talk｜你的答案 C｜正解 D｜對話主題／目的題
+- #72 Short Talk｜你的答案 B｜正解 A｜對話細節題
+- #73 Short Talk｜你的答案 A｜正解 D｜對話細節題
+- #75 Short Talk｜你的答案 A｜正解 D｜對話細節題
+- #76 Short Talk｜你的答案 A｜正解 B｜對話細節題
+- #77 Short Talk｜你的答案 D｜正解 B｜講話對象判定題
+- #78 Short Talk｜你的答案 A｜正解 D｜對話主題／目的題
+- #79 Short Talk｜你的答案 D｜正解 B｜對話細節題
+- #80 Short Talk｜你的答案 C｜正解 A｜對話主題／目的題
+- #81 Short Talk｜你的答案 D｜正解 A｜對話涵義判定題
+- #83 Short Talk｜你的答案 D｜正解 C｜對話細節題
+- #84 Short Talk｜你的答案 D｜正解 B｜對話細節題
+- #85 Short Talk｜你的答案 A｜正解 B｜對話細節題
+- #88 Short Talk｜你的答案 B｜正解 C｜對話涵義判定題
+- #89 Short Talk｜你的答案 D｜正解 A｜對話細節題
+- #91 Short Talk｜你的答案 D｜正解 A｜對話細節題
+- #92 Short Talk｜你的答案 D｜正解 A｜對話主題／目的題
+- #94 Short Talk｜你的答案 C｜正解 D｜對話細節題
+- #97 Short Talk｜你的答案 A｜正解 D｜對話細節題
+- #98 Short Talk｜你的答案 C｜正解 D｜對話細節題
+- #103 Incomplete Sentences｜你的答案 D｜正解 B｜時態題
+- #106 Incomplete Sentences｜你的答案 A｜正解 D｜字彙題
+- #109 Incomplete Sentences｜你的答案 B｜正解 C｜詞性題
+- #110 Incomplete Sentences｜你的答案 A｜正解 D｜字彙題
+- #113 Incomplete Sentences｜你的答案 A｜正解 B｜字彙題
+- #117 Incomplete Sentences｜你的答案 A｜正解 D｜連接詞題
+- #119 Incomplete Sentences｜你的答案 B｜正解 A｜字彙題
+- #121 Incomplete Sentences｜你的答案 D｜正解 A｜字彙題
+- #122 Incomplete Sentences｜你的答案 D｜正解 B｜字彙題
+- #125 Incomplete Sentences｜你的答案 D｜正解 A｜字彙題
+- #127 Incomplete Sentences｜你的答案 C｜正解 D｜詞性題
+- #128 Incomplete Sentences｜你的答案 B｜正解 A｜字彙題
+- #130 Incomplete Sentences｜你的答案 B｜正解 C｜代名詞題
+- #131 Text Completion｜你的答案 A｜正解 C｜字彙題
+- #134 Text Completion｜你的答案 A｜正解 D｜字彙題
+- #139 Text Completion｜你的答案 D｜正解 B｜慣用語題
+- #144 Text Completion｜你的答案 D｜正解 C｜準動詞題 （不定詞／動名詞／分詞）
+- #145 Text Completion｜你的答案 B｜正解 A｜句子題
+- #146 Text Completion｜你的答案 A｜正解 B｜字彙題
+- #150 Reading Comprehension｜你的答案 A｜正解 D｜詢問細節題
+- #154 Reading Comprehension｜你的答案 A｜正解 B｜詢問細節題
+- #155 Reading Comprehension｜你的答案 C｜正解 D｜詢問原因/目的題
+- #156 Reading Comprehension｜你的答案 B｜正解 C｜詢問細節題
+- #157 Reading Comprehension｜你的答案 B｜正解 D｜詢問細節題
+- #159 Reading Comprehension｜你的答案 B｜正解 D｜詢問原因/目的題
+- #161 Reading Comprehension｜你的答案 C｜正解 A｜詢問原因/目的題
+- #163 Reading Comprehension｜你的答案 A｜正解 B｜詢問細節題
+- #164 Reading Comprehension｜你的答案 C｜正解 B｜詢問細節題
+- #166 Reading Comprehension｜你的答案 B｜正解 A｜詢問細節題
+- #167 Reading Comprehension｜你的答案 B｜正解 D｜句子插入題
+- #169 Reading Comprehension｜你的答案 B｜正解 C｜詢問細節題
+- #171 Reading Comprehension｜你的答案 B｜正解 D｜句子插入題
+- #173 Reading Comprehension｜你的答案 C｜正解 B｜詞彙題
+- #174 Reading Comprehension｜你的答案 B｜正解 A｜詢問細節題
+- #175 Reading Comprehension｜你的答案 C｜正解 B｜詢問細節題
+- #176 Reading Comprehension｜你的答案 B｜正解 C｜詢問細節題
+- #177 Reading Comprehension｜你的答案 B｜正解 C｜詢問細節題
+- #178 Reading Comprehension｜你的答案 A｜正解 C｜詢問細節題
+- #179 Reading Comprehension｜你的答案 D｜正解 B｜判別真偽題
+- #181 Reading Comprehension｜你的答案 A｜正解 B｜判別真偽題
+- #182 Reading Comprehension｜你的答案 A｜正解 D｜詢問原因/目的題
+- #184 Reading Comprehension｜你的答案 C｜正解 D｜推理題
+- #185 Reading Comprehension｜你的答案 B｜正解 C｜判別真偽題
+- #186 Reading Comprehension｜你的答案 B｜正解 A｜詢問細節題
+- #189 Reading Comprehension｜你的答案 B｜正解 D｜詢問細節題
+- #190 Reading Comprehension｜你的答案 C｜正解 B｜詞彙題
+- #191 Reading Comprehension｜你的答案 C｜正解 A｜詢問細節題
+- #192 Reading Comprehension｜你的答案 B｜正解 A｜推理題
+- #193 Reading Comprehension｜你的答案 C｜正解 B｜詢問細節題
+- #195 Reading Comprehension｜你的答案 A｜正解 D｜判別真偽題
+- #197 Reading Comprehension｜你的答案 B｜正解 C｜詢問細節題
+- #198 Reading Comprehension｜你的答案 C｜正解 D｜詢問細節題
+- #199 Reading Comprehension｜你的答案 C｜正解 D｜詢問細節題
+- #200 Reading Comprehension｜你的答案 B｜正解 A｜詢問原因/目的題

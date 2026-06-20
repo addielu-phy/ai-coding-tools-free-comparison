@@ -1,0 +1,2289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="PjvAHX4i3djmu1ComKUObCUDb2uMazQDTBGggKml">
+    <title>多益線上模擬測驗</title>
+    <link rel="stylesheet" href="https://elitetoeic.online-test.com.tw/css/app.css?id=8e634c1426d3fa936f12">
+    </head>
+
+<body>
+    <div class="bg"></div>
+    <div class="container">
+        <h1 class="logo hidden-print">
+            多益線上模擬測驗
+        </h1>
+        <div id="transcripts" class="transcripts">
+    <div class="container userinfo">
+        <div class="pull-left">
+            測驗日期
+            <i class="material-icons">event</i>
+            2026-06-10
+            
+        </div>
+    </div>
+    <div class="wrapper">
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a data-toggle="tab" href="#score">Score</a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#answer_sheet">Answer Sheet</a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#bar_chart">Bar Chart</a>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Progress <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#progress" role="tab" data-toggle="tab">整體答對率</a></li>
+                                                                <li><a href="#tab_listening0" role="tab" data-toggle="tab">照片描述 Photographs</a></li>
+                                            <li><a href="#tab_listening1" role="tab" data-toggle="tab">應答問題 Question Response</a></li>
+                                            <li><a href="#tab_listening2" role="tab" data-toggle="tab">簡短對話 Short Conversation</a></li>
+                                            <li><a href="#tab_listening3" role="tab" data-toggle="tab">簡短獨白 Short Talk</a></li>
+                                                                                        <li><a href="#tab_reading0" role="tab" data-toggle="tab">單句填空 Incomplete Sentences</a></li>
+                                            <li><a href="#tab_reading1" role="tab" data-toggle="tab">短文填空 Text Completion</a></li>
+                                            <li><a href="#tab_reading2" role="tab" data-toggle="tab">文章理解 Reading Comprehension</a></li>
+                                                            </ul>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div id="score" class="tab-pane fade in active">
+                <div class="col-md-4 score-left">
+                    <div class="">STUDENT NAME</div>
+                    <div class="username">盧政良</div>
+                    <hr>
+                    <div class="">TOTAL SCORE</div>
+                    <div class="userscore">
+                        <div class="loading">555</div>
+                    </div>
+                    <hr>
+                    <div class="ratiobox">
+                        Numbers of answered questions
+                        <div class="ratio">198</div>
+                    </div>
+                    <div class="ratiobox">
+                        Ratio of answered questions
+                        <div class="ratio">99%</div>
+                    </div>
+                </div>
+                <div class="col-md-8 score-right">
+                    <div>
+                        <h1>英語能力說明</h1>
+                        <div class="bar-title">Listening</div>
+                        <div id="bar1" class="barfiller">
+                            <div class="tipWrap">
+                                <span class="tip">310</span>
+                            </div>
+                            <span class="fill" data-percentage="63"></span>
+                            <div class="barfill_footer">
+                                <span>5</span>
+                                <span style="float:right">495</span>
+                            </div>
+                        </div>
+                        <div class="bar-title">Reading</div>
+                        <div id="bar2" class="barfiller">
+                            <div class="tipWrap">
+                                <span class="tip">245</span>
+                            </div>
+                            <span class="fill" data-percentage="49"></span>
+                            <div class="barfill_footer">
+                                <span>5</span>
+                                <span style="float:right">495</span>
+                            </div>
+                        </div>
+                        <div class="suggest-box">
+                            <div class="title">
+                                參照ETS官網，您可獲得綠色證照（470~725）                            </div>
+                            英文文字溝通能力尚可。
+會話方面稍嫌詞彙不足、使用的語句較簡單，但能滿足有限的社交需求。已能掌握少量工作相關語言，可以從事英語相關程度較低的工作。                        </div>
+                    </div>
+                    <div>
+                        <h1>英語能力解析</h1>
+                        <div class="row" style="margin-bottom: 2.8rem;">
+                            <div class="col-md-12">
+                                <div class="bar-header chart">
+                                    <div class="bar-title">Listening</div>
+                                </div>
+                                <div class="chart-column" id="listening-chart"></div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="bar-header chart">
+                                    <div class="bar-title">Reading</div>
+                                </div>
+                                <div class="chart-column" id="reading-chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h1>學習建議</h1>
+                        <table class="table table-bordered suggest">
+                            <thead>
+                                <tr>
+                                <th width="10%"></th>
+                                <th width="45%">具備能力</th>
+                                <th width="45%">不足之處</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>聽力</th>
+                                    <th><ul><li>有時能從短對話中推斷出主旨、目的以及基本內容，特別是當使用字彙難度不高時。</li><li>若資訊有被複誦或重述，則能理解對話中的主旨、目的以及基本內容</li><li>當對話內容使用簡單或中難度的字彙時，能理解對話細節。</li><li>當長篇內容中的資訊有被複誦，或是重點資訊出現在開頭／結尾時，能理解對話中的細節；若資訊有部分被改述，依然能夠理解。</li></ul></th><th><ul><li>若對話內容非直接應答、不易預期或是使用較難字彙時，要理解主旨、目的、基本內容會有困難。</li><li>當需要連結片段資訊或使用較難字彙時，無法理解主旨、目的和基本內容。</li><li>當語句結構複雜或使用較難字彙時，無法理解短對話中的資訊；當使用否定結構時，要理解細節也會有困難。</li><li>若長篇內容中的資訊沒有被複誦，或是需要連結片段資訊時，無法理解對話中的細節；若資訊被改述或是有使用較難文法概念也無法理解內容。</li></ul></th>                                </tr>
+                                <tr>
+                                    <th>閱讀</th>
+                                    <th><ul><li>當所需資訊（選項）和文章中用字相同且無需理解長篇幅內容，能選出事實類問題的正解。</li><li>能理解簡易字彙和常見用語。</li><li>當閱讀篇幅短時，能理解最常見的規則性文法結構。</li></ul></th><th><ul><li>無法根據文字內容推斷相關細節。</li><li>無法理解經改述的事實類資訊，需依靠用字相同的答案選項和內容來找出答案。</li><li>通常無法連接片段資訊，即使範圍僅為單句也有困難。</li><li>僅熟悉小範圍的單字。</li><li>無法理解簡單的文法結構。</li></ul></th>                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="answer_sheet" class="tab-pane fade">
+                                <div class="col-md-6">
+                    <div class="mock-type mock-type-default">
+                        <div class="mock-type-header">
+                            聽力
+                            <div class="question-type">
+                                <label class="question-type-label" for="lunch">依排序</label>
+                                <div class="dropdown">
+                                    <button class="btn btn-dropdown dropdown-toggle" type="button" data-toggle="dropdown" title="全部題型" data-placement="top">
+                                        <span>全部題型</span>
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                                                                                                        <li class="sort" data-sort="P1"><a href="javascript:;">Photographs</a></li>
+                                                                                                                        <li class="sort" data-sort="Q2"><a href="javascript:;">Question Response</a></li>
+                                                                                                                        <li class="sort" data-sort="S3"><a href="javascript:;">Short Conversation</a></li>
+                                                                                                                        <li class="sort" data-sort="S4"><a href="javascript:;">Short Talk</a></li>
+                                                                                                                    </ul>
+                                </div>
+                                <div class="dropdown">
+                                    <button class="btn btn-dropdown dropdown-toggle" type="button" data-toggle="dropdown" title="全部題型" data-placement="top" aria-expanded="false" value="">
+                                        <span>對錯題切換</span>
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li class="showall"><a href="javascript:;">顯示全部</a></li>
+                                        <li class="showright"><a href="javascript:;">只顯示正確題</a></li>
+                                        <li class="showwrong"><a href="javascript:;">只顯示錯誤題</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>題號</th>
+                                    <th>題型</th>
+                                    <th>對錯</th>
+                                    <th>解析</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                                                                                                                <tr class=" correct P1">
+                                    <th>1</th>
+                                    <th>Photographs</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8574" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong P1">
+                                    <th>2</th>
+                                    <th>Photographs</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8575" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct P1">
+                                    <th>3</th>
+                                    <th>Photographs</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8576" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct P1">
+                                    <th>4</th>
+                                    <th>Photographs</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8577" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct P1">
+                                    <th>5</th>
+                                    <th>Photographs</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8578" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct P1">
+                                    <th>6</th>
+                                    <th>Photographs</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8579" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class="different-question-type correct Q2">
+                                    <th>7</th>
+                                    <th>Question Response</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8581" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct Q2">
+                                    <th>8</th>
+                                    <th>Question Response</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8582" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct Q2">
+                                    <th>9</th>
+                                    <th>Question Response</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8583" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct Q2">
+                                    <th>10</th>
+                                    <th>Question Response</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8584" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct Q2">
+                                    <th>11</th>
+                                    <th>Question Response</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8585" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct Q2">
+                                    <th>12</th>
+                                    <th>Question Response</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8586" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct Q2">
+                                    <th>13</th>
+                                    <th>Question Response</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8587" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong Q2">
+                                    <th>14</th>
+                                    <th>Question Response</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8588" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct Q2">
+                                    <th>15</th>
+                                    <th>Question Response</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8589" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct Q2">
+                                    <th>16</th>
+                                    <th>Question Response</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8590" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong Q2">
+                                    <th>17</th>
+                                    <th>Question Response</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8591" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct Q2">
+                                    <th>18</th>
+                                    <th>Question Response</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8592" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct Q2">
+                                    <th>19</th>
+                                    <th>Question Response</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8593" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong Q2">
+                                    <th>20</th>
+                                    <th>Question Response</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8594" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct Q2">
+                                    <th>21</th>
+                                    <th>Question Response</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8595" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct Q2">
+                                    <th>22</th>
+                                    <th>Question Response</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8596" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct Q2">
+                                    <th>23</th>
+                                    <th>Question Response</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8597" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong Q2">
+                                    <th>24</th>
+                                    <th>Question Response</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8598" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct Q2">
+                                    <th>25</th>
+                                    <th>Question Response</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8599" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct Q2">
+                                    <th>26</th>
+                                    <th>Question Response</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8600" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct Q2">
+                                    <th>27</th>
+                                    <th>Question Response</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8601" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong Q2">
+                                    <th>28</th>
+                                    <th>Question Response</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8602" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct Q2">
+                                    <th>29</th>
+                                    <th>Question Response</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8603" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct Q2">
+                                    <th>30</th>
+                                    <th>Question Response</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8604" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong Q2">
+                                    <th>31</th>
+                                    <th>Question Response</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8605" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class="different-question-type correct S3">
+                                    <th>32</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8607" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S3">
+                                    <th>33</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8608" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S3">
+                                    <th>34</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8609" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S3">
+                                    <th>35</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8610" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S3">
+                                    <th>36</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8611" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S3">
+                                    <th>37</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8612" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S3">
+                                    <th>38</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8613" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S3">
+                                    <th>39</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8614" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S3">
+                                    <th>40</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8615" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S3">
+                                    <th>41</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8616" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S3">
+                                    <th>42</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8617" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S3">
+                                    <th>43</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8618" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S3">
+                                    <th>44</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8619" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S3">
+                                    <th>45</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8620" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S3">
+                                    <th>46</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8621" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S3">
+                                    <th>47</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8622" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S3">
+                                    <th>48</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8623" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S3">
+                                    <th>49</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8624" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S3">
+                                    <th>50</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8625" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S3">
+                                    <th>51</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8626" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S3">
+                                    <th>52</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8627" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S3">
+                                    <th>53</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8628" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S3">
+                                    <th>54</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8629" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S3">
+                                    <th>55</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8630" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S3">
+                                    <th>56</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8631" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S3">
+                                    <th>57</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8632" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S3">
+                                    <th>58</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8633" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S3">
+                                    <th>59</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8634" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S3">
+                                    <th>60</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8635" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S3">
+                                    <th>61</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8636" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S3">
+                                    <th>62</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8637" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S3">
+                                    <th>63</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8638" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S3">
+                                    <th>64</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8639" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S3">
+                                    <th>65</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8640" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S3">
+                                    <th>66</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8641" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S3">
+                                    <th>67</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8642" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S3">
+                                    <th>68</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8643" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S3">
+                                    <th>69</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8644" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S3">
+                                    <th>70</th>
+                                    <th>Short Conversation</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8645" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class="different-question-type wrong S4">
+                                    <th>71</th>
+                                    <th>Short Talk</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8647" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S4">
+                                    <th>72</th>
+                                    <th>Short Talk</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8648" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S4">
+                                    <th>73</th>
+                                    <th>Short Talk</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8649" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S4">
+                                    <th>74</th>
+                                    <th>Short Talk</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8650" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S4">
+                                    <th>75</th>
+                                    <th>Short Talk</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8651" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S4">
+                                    <th>76</th>
+                                    <th>Short Talk</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8652" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S4">
+                                    <th>77</th>
+                                    <th>Short Talk</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8653" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S4">
+                                    <th>78</th>
+                                    <th>Short Talk</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8654" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S4">
+                                    <th>79</th>
+                                    <th>Short Talk</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8655" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S4">
+                                    <th>80</th>
+                                    <th>Short Talk</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8656" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S4">
+                                    <th>81</th>
+                                    <th>Short Talk</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8657" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S4">
+                                    <th>82</th>
+                                    <th>Short Talk</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8658" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S4">
+                                    <th>83</th>
+                                    <th>Short Talk</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8659" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S4">
+                                    <th>84</th>
+                                    <th>Short Talk</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8660" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S4">
+                                    <th>85</th>
+                                    <th>Short Talk</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8661" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S4">
+                                    <th>86</th>
+                                    <th>Short Talk</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8662" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S4">
+                                    <th>87</th>
+                                    <th>Short Talk</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8663" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S4">
+                                    <th>88</th>
+                                    <th>Short Talk</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8664" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S4">
+                                    <th>89</th>
+                                    <th>Short Talk</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8665" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S4">
+                                    <th>90</th>
+                                    <th>Short Talk</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8666" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S4">
+                                    <th>91</th>
+                                    <th>Short Talk</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8667" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S4">
+                                    <th>92</th>
+                                    <th>Short Talk</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8668" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S4">
+                                    <th>93</th>
+                                    <th>Short Talk</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8669" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S4">
+                                    <th>94</th>
+                                    <th>Short Talk</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8670" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S4">
+                                    <th>95</th>
+                                    <th>Short Talk</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8671" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S4">
+                                    <th>96</th>
+                                    <th>Short Talk</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8672" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S4">
+                                    <th>97</th>
+                                    <th>Short Talk</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8673" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong S4">
+                                    <th>98</th>
+                                    <th>Short Talk</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8674" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S4">
+                                    <th>99</th>
+                                    <th>Short Talk</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8675" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct S4">
+                                    <th>100</th>
+                                    <th>Short Talk</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8676" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                                <div class="col-md-6">
+                    <div class="mock-type mock-type-default">
+                        <div class="mock-type-header">
+                            閱讀
+                            <div class="question-type">
+                                <label class="question-type-label" for="lunch">依排序</label>
+                                <div class="dropdown">
+                                    <button class="btn btn-dropdown dropdown-toggle" type="button" data-toggle="dropdown" title="全部題型" data-placement="top">
+                                        <span>全部題型</span>
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                                                                                                        <li class="sort" data-sort="I1"><a href="javascript:;">Incomplete Sentences</a></li>
+                                                                                                                        <li class="sort" data-sort="T2"><a href="javascript:;">Text Completion</a></li>
+                                                                                                                        <li class="sort" data-sort="R3"><a href="javascript:;">Reading Comprehension</a></li>
+                                                                                                                    </ul>
+                                </div>
+                                <div class="dropdown">
+                                    <button class="btn btn-dropdown dropdown-toggle" type="button" data-toggle="dropdown" title="全部題型" data-placement="top" aria-expanded="false" value="">
+                                        <span>對錯題切換</span>
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li class="showall"><a href="javascript:;">顯示全部</a></li>
+                                        <li class="showright"><a href="javascript:;">只顯示正確題</a></li>
+                                        <li class="showwrong"><a href="javascript:;">只顯示錯誤題</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>題號</th>
+                                    <th>題型</th>
+                                    <th>對錯</th>
+                                    <th>解析</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                                                                                                                <tr class=" correct I1">
+                                    <th>101</th>
+                                    <th>Incomplete Sentences</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8678" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct I1">
+                                    <th>102</th>
+                                    <th>Incomplete Sentences</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8679" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong I1">
+                                    <th>103</th>
+                                    <th>Incomplete Sentences</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8680" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct I1">
+                                    <th>104</th>
+                                    <th>Incomplete Sentences</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8681" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct I1">
+                                    <th>105</th>
+                                    <th>Incomplete Sentences</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8682" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong I1">
+                                    <th>106</th>
+                                    <th>Incomplete Sentences</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8683" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct I1">
+                                    <th>107</th>
+                                    <th>Incomplete Sentences</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8684" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct I1">
+                                    <th>108</th>
+                                    <th>Incomplete Sentences</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8685" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong I1">
+                                    <th>109</th>
+                                    <th>Incomplete Sentences</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8686" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong I1">
+                                    <th>110</th>
+                                    <th>Incomplete Sentences</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8687" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct I1">
+                                    <th>111</th>
+                                    <th>Incomplete Sentences</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8688" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct I1">
+                                    <th>112</th>
+                                    <th>Incomplete Sentences</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8689" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong I1">
+                                    <th>113</th>
+                                    <th>Incomplete Sentences</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8690" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct I1">
+                                    <th>114</th>
+                                    <th>Incomplete Sentences</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8691" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct I1">
+                                    <th>115</th>
+                                    <th>Incomplete Sentences</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8692" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct I1">
+                                    <th>116</th>
+                                    <th>Incomplete Sentences</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8693" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong I1">
+                                    <th>117</th>
+                                    <th>Incomplete Sentences</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8694" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct I1">
+                                    <th>118</th>
+                                    <th>Incomplete Sentences</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8695" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong I1">
+                                    <th>119</th>
+                                    <th>Incomplete Sentences</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8696" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct I1">
+                                    <th>120</th>
+                                    <th>Incomplete Sentences</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8697" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong I1">
+                                    <th>121</th>
+                                    <th>Incomplete Sentences</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8698" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong I1">
+                                    <th>122</th>
+                                    <th>Incomplete Sentences</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8699" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct I1">
+                                    <th>123</th>
+                                    <th>Incomplete Sentences</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8700" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct I1">
+                                    <th>124</th>
+                                    <th>Incomplete Sentences</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8701" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong I1">
+                                    <th>125</th>
+                                    <th>Incomplete Sentences</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8702" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct I1">
+                                    <th>126</th>
+                                    <th>Incomplete Sentences</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8703" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong I1">
+                                    <th>127</th>
+                                    <th>Incomplete Sentences</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8704" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong I1">
+                                    <th>128</th>
+                                    <th>Incomplete Sentences</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8705" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct I1">
+                                    <th>129</th>
+                                    <th>Incomplete Sentences</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8706" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong I1">
+                                    <th>130</th>
+                                    <th>Incomplete Sentences</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8707" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class="different-question-type wrong T2">
+                                    <th>131</th>
+                                    <th>Text Completion</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8708" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct T2">
+                                    <th>132</th>
+                                    <th>Text Completion</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8709" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct T2">
+                                    <th>133</th>
+                                    <th>Text Completion</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8710" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong T2">
+                                    <th>134</th>
+                                    <th>Text Completion</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8711" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct T2">
+                                    <th>135</th>
+                                    <th>Text Completion</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8712" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct T2">
+                                    <th>136</th>
+                                    <th>Text Completion</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8713" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct T2">
+                                    <th>137</th>
+                                    <th>Text Completion</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8714" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct T2">
+                                    <th>138</th>
+                                    <th>Text Completion</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8715" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong T2">
+                                    <th>139</th>
+                                    <th>Text Completion</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8716" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct T2">
+                                    <th>140</th>
+                                    <th>Text Completion</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8717" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct T2">
+                                    <th>141</th>
+                                    <th>Text Completion</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8718" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct T2">
+                                    <th>142</th>
+                                    <th>Text Completion</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8719" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct T2">
+                                    <th>143</th>
+                                    <th>Text Completion</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8720" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong T2">
+                                    <th>144</th>
+                                    <th>Text Completion</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8721" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong T2">
+                                    <th>145</th>
+                                    <th>Text Completion</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8722" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong T2">
+                                    <th>146</th>
+                                    <th>Text Completion</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8723" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class="different-question-type correct R3">
+                                    <th>147</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8724" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct R3">
+                                    <th>148</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8725" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct R3">
+                                    <th>149</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8726" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>150</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8727" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct R3">
+                                    <th>151</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8728" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct R3">
+                                    <th>152</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8729" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct R3">
+                                    <th>153</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8730" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>154</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8731" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>155</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8732" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>156</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8733" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>157</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8734" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct R3">
+                                    <th>158</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8735" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>159</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8736" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct R3">
+                                    <th>160</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8737" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>161</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8738" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct R3">
+                                    <th>162</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8739" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>163</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8740" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>164</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8741" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct R3">
+                                    <th>165</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8742" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>166</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8743" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>167</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8744" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct R3">
+                                    <th>168</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8745" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>169</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8746" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct R3">
+                                    <th>170</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8747" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>171</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8748" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct R3">
+                                    <th>172</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8749" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>173</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8750" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>174</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8751" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>175</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8752" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>176</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8753" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>177</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8754" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>178</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8755" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>179</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8756" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct R3">
+                                    <th>180</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8757" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>181</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8758" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>182</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8759" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct R3">
+                                    <th>183</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8760" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>184</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8761" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>185</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8762" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>186</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8763" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct R3">
+                                    <th>187</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8764" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct R3">
+                                    <th>188</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8765" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>189</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8766" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>190</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8767" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>191</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8768" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>192</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8769" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>193</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8770" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct R3">
+                                    <th>194</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8771" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>195</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8772" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" correct R3">
+                                    <th>196</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons">radio_button_unchecked</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8773" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>197</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8774" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>198</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8775" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>199</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8776" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                                                                <tr class=" wrong R3">
+                                    <th>200</th>
+                                    <th>Reading Comprehension</th>
+                                    <th>
+                                                                                <i class="material-icons uncorrect">close</i>
+                                                                            </th>
+                                                                        <th><a href="/analyze/244447/8777" target="_blank"><i class="material-icons">find_in_page</i></a></th>
+                                </tr>
+                                                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                            </div>
+            <div id="bar_chart" class="tab-pane fade">
+                               <div class="col-md-6">
+                    <div class="skillbar clearfix collapsed" data-percent="54%" data-toggle="collapse">
+                        <div class="skillbar-title">
+                            <spen class="flag-icon flag-icon-us" style="padding: 4px 20px;height: 35px;line-height: 15px; margin-left: 10px"></spen><span style="float:right">口音答對率(美)</span>
+                        </div>
+                        <div class="skillbar-bar"></div>
+                        <div class="skill-bar-percent">54%</div>
+                    </div>
+                    <div class="skillbar clearfix collapsed" data-percent="54%" data-toggle="collapse">
+                        <div class="skillbar-title">
+                            <spen class="flag-icon flag-icon-gb" style="padding: 4px 20px;height: 35px;line-height: 15px; margin-left: 10px"></spen><span style="float:right">口音答對率(英)</span>
+                        </div>
+                        <div class="skillbar-bar"></div>
+                        <div class="skill-bar-percent">54%</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="skillbar clearfix collapsed" data-percent="85%" data-toggle="collapse">
+                        <div class="skillbar-title">
+                            <spen class="flag-icon flag-icon-ca" style="padding: 4px 20px;height: 35px;line-height: 15px; margin-left: 10px"></spen><span style="float:right">口音答對率(加)</span>
+                        </div>
+                        <div class="skillbar-bar"></div>
+                        <div class="skill-bar-percent">85%</div>
+                    </div>
+                    <div class="skillbar clearfix collapsed" data-percent="80%" data-toggle="collapse">
+                        <div class="skillbar-title">
+                            <spen class="flag-icon flag-icon-au" style="padding: 4px 20px;height: 35px;line-height: 15px; margin-left: 10px"></spen><span style="float:right">口音答對率(澳)</span>
+                        </div>
+                        <div class="skillbar-bar"></div>
+                        <div class="skill-bar-percent">80%</div>
+                    </div>
+                </div>
+                                                <div class="col-md-6">
+                                        <div class="skillbar parent clearfix collapsed" data-percent="83%" data-toggle="collapse" data-target="#listening0">
+                        <div class="skillbar-title"><span>照片描述<br>Photographs</span></div>
+                        <div class="skillbar-bar"></div>
+                        <div class="skill-bar-percent">83%</div>
+                    </div>
+                                        <div id="listening0" class="collapse">
+                        <div class="sub-skillbar clearfix">
+                            <div class="col-md-12">
+                                                                <div class="skillbar clearfix" data-percent="50%">
+                                    <div class="skillbar-title"><span>描述場景題（靜物／方位）</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">50%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="100%">
+                                    <div class="skillbar-title"><span>描述場景題（動作）</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">100%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="0%">
+                                    <div class="skillbar-title"><span>描述對象題（單人）</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">0%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="100%">
+                                    <div class="skillbar-title"><span>描述對象題（多人）</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">100%</div>
+                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                            <div class="skillbar parent clearfix collapsed" data-percent="76%" data-toggle="collapse" data-target="#listening1">
+                        <div class="skillbar-title"><span>應答問題<br>Question Response</span></div>
+                        <div class="skillbar-bar"></div>
+                        <div class="skill-bar-percent">76%</div>
+                    </div>
+                                        <div id="listening1" class="collapse">
+                        <div class="sub-skillbar clearfix">
+                            <div class="col-md-12">
+                                                                <div class="skillbar clearfix" data-percent="33%">
+                                    <div class="skillbar-title"><span>特殊疑問句</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">33%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="100%">
+                                    <div class="skillbar-title"><span>陳述句</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">100%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="100%">
+                                    <div class="skillbar-title"><span>間接疑問句</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">100%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="67%">
+                                    <div class="skillbar-title"><span>否定／反義疑問句</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">67%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="83%">
+                                    <div class="skillbar-title"><span>一般疑問句</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">83%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="67%">
+                                    <div class="skillbar-title"><span>選擇疑問句</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">67%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="0%">
+                                    <div class="skillbar-title"><span></span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">0%</div>
+                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                            <div class="skillbar parent clearfix collapsed" data-percent="56%" data-toggle="collapse" data-target="#listening2">
+                        <div class="skillbar-title"><span>簡短對話<br>Short Conversation</span></div>
+                        <div class="skillbar-bar"></div>
+                        <div class="skill-bar-percent">56%</div>
+                    </div>
+                                        <div id="listening2" class="collapse">
+                        <div class="sub-skillbar clearfix">
+                            <div class="col-md-12">
+                                                                <div class="skillbar clearfix" data-percent="83%">
+                                    <div class="skillbar-title"><span>對話主題／目的題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">83%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="48%">
+                                    <div class="skillbar-title"><span>對話細節題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">48%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="0%">
+                                    <div class="skillbar-title"><span>講話對象判定題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">0%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="100%">
+                                    <div class="skillbar-title"><span>圖表細節題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">100%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="40%">
+                                    <div class="skillbar-title"><span>對話涵義判定題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">40%</div>
+                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                            <div class="skillbar parent clearfix collapsed" data-percent="33%" data-toggle="collapse" data-target="#listening3">
+                        <div class="skillbar-title"><span>簡短獨白<br>Short Talk</span></div>
+                        <div class="skillbar-bar"></div>
+                        <div class="skill-bar-percent">33%</div>
+                    </div>
+                                        <div id="listening3" class="collapse">
+                        <div class="sub-skillbar clearfix">
+                            <div class="col-md-12">
+                                                                <div class="skillbar clearfix" data-percent="33%">
+                                    <div class="skillbar-title"><span>對話主題／目的題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">33%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="24%">
+                                    <div class="skillbar-title"><span>對話細節題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">24%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="50%">
+                                    <div class="skillbar-title"><span>講話對象判定題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">50%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="100%">
+                                    <div class="skillbar-title"><span>圖表細節題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">100%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="33%">
+                                    <div class="skillbar-title"><span>對話涵義判定題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">33%</div>
+                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                        </div>
+                                <div class="col-md-6">
+                                        <div class="skillbar parent clearfix collapsed" data-percent="57%" data-toggle="collapse" data-target="#reading0">
+                        <div class="skillbar-title"><span>單句填空<br>Incomplete Sentences</span></div>
+                        <div class="skillbar-bar"></div>
+                        <div class="skill-bar-percent">57%</div>
+                    </div>
+                                        <div id="reading0" class="collapse">
+                        <div class="sub-skillbar clearfix">
+                            <div class="col-md-12">
+                                                                <div class="skillbar clearfix" data-percent="33%">
+                                    <div class="skillbar-title"><span>字彙題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">33%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="100%">
+                                    <div class="skillbar-title"><span>介係詞題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">100%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="0%">
+                                    <div class="skillbar-title"><span>句子題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">0%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="50%">
+                                    <div class="skillbar-title"><span>時態題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">50%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="0%">
+                                    <div class="skillbar-title"><span>代名詞題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">0%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="75%">
+                                    <div class="skillbar-title"><span>詞性題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">75%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="80%">
+                                    <div class="skillbar-title"><span>連接詞題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">80%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="0%">
+                                    <div class="skillbar-title"><span>慣用語題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">0%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="100%">
+                                    <div class="skillbar-title"><span>準動詞題 （不定詞／動名詞／分詞）</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">100%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="0%">
+                                    <div class="skillbar-title"><span>使役動詞</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">0%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="0%">
+                                    <div class="skillbar-title"><span>附加問句</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">0%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="0%">
+                                    <div class="skillbar-title"><span>假設語氣</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">0%</div>
+                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                            <div class="skillbar parent clearfix collapsed" data-percent="63%" data-toggle="collapse" data-target="#reading1">
+                        <div class="skillbar-title"><span>短文填空<br>Text Completion</span></div>
+                        <div class="skillbar-bar"></div>
+                        <div class="skill-bar-percent">63%</div>
+                    </div>
+                                        <div id="reading1" class="collapse">
+                        <div class="sub-skillbar clearfix">
+                            <div class="col-md-12">
+                                                                <div class="skillbar clearfix" data-percent="50%">
+                                    <div class="skillbar-title"><span>字彙題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">50%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="0%">
+                                    <div class="skillbar-title"><span>介係詞題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">0%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="75%">
+                                    <div class="skillbar-title"><span>句子題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">75%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="100%">
+                                    <div class="skillbar-title"><span>時態題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">100%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="0%">
+                                    <div class="skillbar-title"><span>代名詞題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">0%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="0%">
+                                    <div class="skillbar-title"><span>準動詞題 （不定詞／動名詞／分詞）</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">0%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="67%">
+                                    <div class="skillbar-title"><span>慣用語題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">67%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="100%">
+                                    <div class="skillbar-title"><span>連接詞題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">100%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="0%">
+                                    <div class="skillbar-title"><span>詞性題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">0%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="0%">
+                                    <div class="skillbar-title"><span>使役動詞</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">0%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="0%">
+                                    <div class="skillbar-title"><span>附加問句</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">0%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="0%">
+                                    <div class="skillbar-title"><span>假設語氣</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">0%</div>
+                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                            <div class="skillbar parent clearfix collapsed" data-percent="35%" data-toggle="collapse" data-target="#reading2">
+                        <div class="skillbar-title"><span>文章理解<br>Reading Comprehension</span></div>
+                        <div class="skillbar-bar"></div>
+                        <div class="skill-bar-percent">35%</div>
+                    </div>
+                                        <div id="reading2" class="collapse">
+                        <div class="sub-skillbar clearfix">
+                            <div class="col-md-12">
+                                                                <div class="skillbar clearfix" data-percent="33%">
+                                    <div class="skillbar-title"><span>判別真偽題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">33%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="0%">
+                                    <div class="skillbar-title"><span>句子插入題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">0%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="50%">
+                                    <div class="skillbar-title"><span>推理題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">50%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="33%">
+                                    <div class="skillbar-title"><span>詞彙題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">33%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="31%">
+                                    <div class="skillbar-title"><span>詢問細節題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">31%</div>
+                                </div>
+                                                                <div class="skillbar clearfix" data-percent="50%">
+                                    <div class="skillbar-title"><span>詢問原因/目的題</span></div>
+                                    <div class="skillbar-bar"></div>
+                                    <div class="skill-bar-percent">50%</div>
+                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                        </div>
+                                <div class="col-md-12 sugtext"><span class="required">＊</span> 點選題型名稱，即可顯示詳細能力分析。</div>
+            </div>
+            <div id="progress" class="tab-pane fade">
+                <div class="col-md-12">
+                    <h1>整體答對率</h1>
+                    <div id="chatProgressContainer"></div>
+                </div>
+            </div>
+                                                    <div class="tab-pane" id="tab_listening0">
+                <div class="col-md-12">
+                    <h1>照片描述 Photographs</h1>
+                    <div id="tabChatProgress_P1"></div>
+                </div>
+            </div>
+                                            <div class="tab-pane" id="tab_listening1">
+                <div class="col-md-12">
+                    <h1>應答問題 Question Response</h1>
+                    <div id="tabChatProgress_Q2"></div>
+                </div>
+            </div>
+                                            <div class="tab-pane" id="tab_listening2">
+                <div class="col-md-12">
+                    <h1>簡短對話 Short Conversation</h1>
+                    <div id="tabChatProgress_S3"></div>
+                </div>
+            </div>
+                                            <div class="tab-pane" id="tab_listening3">
+                <div class="col-md-12">
+                    <h1>簡短獨白 Short Talk</h1>
+                    <div id="tabChatProgress_S4"></div>
+                </div>
+            </div>
+                                                                        <div class="tab-pane" id="tab_reading0">
+                <div class="col-md-12">
+                    <h1>單句填空 Incomplete Sentences</h1>
+                    <div id="tabChatProgress_I5"></div>
+                </div>
+            </div>
+                                            <div class="tab-pane" id="tab_reading1">
+                <div class="col-md-12">
+                    <h1>短文填空 Text Completion</h1>
+                    <div id="tabChatProgress_T6"></div>
+                </div>
+            </div>
+                                            <div class="tab-pane" id="tab_reading2">
+                <div class="col-md-12">
+                    <h1>文章理解 Reading Comprehension</h1>
+                    <div id="tabChatProgress_R7"></div>
+                </div>
+            </div>
+                                                    </div>
+    </div>
+</div>
+        <div class="footer hidden-print">
+            <div>
+<!--                <img src="/img/logo_elite_tw_w.svg" alt="菁英國際語言教育中心"> -->
+<img src="https://d1wdssd3yvj17y.cloudfront.net/logo/logo_elite_tw_w.svg" alt="菁英國際語言教育中心">
+            </div>
+            <div>
+                <h4>菁英國際語言教育中心</h4>
+                <h5>Copyright &copy; 2025 ELITE (English Language Institute of Testing and Education), <br>All rights reserved.</h5>
+            </div>
+        </div>
+    </div>
+    <div style="display: none;" class="jumpping-mask"></div>
+    <script src="https://elitetoeic.online-test.com.tw/js/app.js?id=2cbbb63d834a8494a913"></script>
+    <script>
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    </script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://elitetoeic.online-test.com.tw/js/transcript.js?id=0dd1df3d3397a2eda938"></script>
+<script>
+$(function() {
+    if ('' != '') {
+        alert('');
+    }
+    //console.log('');
+    transcript.toeic.render({"accent":{"ca":{"count":13,"sum":11,"percent":85},"uk":{"count":13,"sum":7,"percent":54},"au":{"count":15,"sum":12,"percent":80},"us":{"count":84,"sum":45,"percent":54}},"parts":{"Photographs":{"count":6,"correct":5,"not_answerd":1,"percent":{"correct":83,"not_answerd":17},"testPoint":{"2":{"count":2,"correct":2,"not_answerd":0,"percent":{"correct":100,"not_answerd":0},"name":"\u63cf\u8ff0\u5834\u666f\u984c\uff08\u52d5\u4f5c\uff09"},"1":{"count":2,"correct":1,"not_answerd":1,"percent":{"correct":50,"not_answerd":50},"name":"\u63cf\u8ff0\u5834\u666f\u984c\uff08\u975c\u7269\uff0f\u65b9\u4f4d\uff09"},"4":{"count":2,"correct":2,"not_answerd":0,"percent":{"correct":100,"not_answerd":0},"name":"\u63cf\u8ff0\u5c0d\u8c61\u984c\uff08\u591a\u4eba\uff09"}}},"Question Response":{"count":25,"correct":19,"not_answerd":0,"percent":{"correct":76,"not_answerd":0},"testPoint":{"9":{"count":12,"correct":10,"not_answerd":0,"percent":{"correct":83,"not_answerd":0},"name":"\u4e00\u822c\u7591\u554f\u53e5"},"5":{"count":3,"correct":1,"not_answerd":0,"percent":{"correct":33,"not_answerd":0},"name":"\u7279\u6b8a\u7591\u554f\u53e5"},"8":{"count":3,"correct":2,"not_answerd":0,"percent":{"correct":67,"not_answerd":0},"name":"\u5426\u5b9a\uff0f\u53cd\u7fa9\u7591\u554f\u53e5"},"6":{"count":3,"correct":3,"not_answerd":0,"percent":{"correct":100,"not_answerd":0},"name":"\u9673\u8ff0\u53e5"},"10":{"count":3,"correct":2,"not_answerd":0,"percent":{"correct":67,"not_answerd":0},"name":"\u9078\u64c7\u7591\u554f\u53e5"},"7":{"count":1,"correct":1,"not_answerd":0,"percent":{"correct":100,"not_answerd":0},"name":"\u9593\u63a5\u7591\u554f\u53e5"}}},"Short Conversation":{"count":39,"correct":22,"not_answerd":1,"percent":{"correct":56,"not_answerd":3},"testPoint":{"11":{"count":6,"correct":5,"not_answerd":0,"percent":{"correct":83,"not_answerd":0},"name":"\u5c0d\u8a71\u4e3b\u984c\uff0f\u76ee\u7684\u984c"},"12":{"count":23,"correct":11,"not_answerd":1,"percent":{"correct":48,"not_answerd":4},"name":"\u5c0d\u8a71\u7d30\u7bc0\u984c"},"15":{"count":5,"correct":2,"not_answerd":0,"percent":{"correct":40,"not_answerd":0},"name":"\u5c0d\u8a71\u6db5\u7fa9\u5224\u5b9a\u984c"},"0":{"count":2,"correct":1,"not_answerd":0,"percent":{"correct":50,"not_answerd":0},"name":""},"14":{"count":3,"correct":3,"not_answerd":0,"percent":{"correct":100,"not_answerd":0},"name":"\u5716\u8868\u7d30\u7bc0\u984c"}}},"Short Talk":{"count":30,"correct":10,"not_answerd":0,"percent":{"correct":33,"not_answerd":0},"testPoint":{"11":{"count":6,"correct":2,"not_answerd":0,"percent":{"correct":33,"not_answerd":0},"name":"\u5c0d\u8a71\u4e3b\u984c\uff0f\u76ee\u7684\u984c"},"12":{"count":17,"correct":4,"not_answerd":0,"percent":{"correct":24,"not_answerd":0},"name":"\u5c0d\u8a71\u7d30\u7bc0\u984c"},"13":{"count":2,"correct":1,"not_answerd":0,"percent":{"correct":50,"not_answerd":0},"name":"\u8b1b\u8a71\u5c0d\u8c61\u5224\u5b9a\u984c"},"15":{"count":3,"correct":1,"not_answerd":0,"percent":{"correct":33,"not_answerd":0},"name":"\u5c0d\u8a71\u6db5\u7fa9\u5224\u5b9a\u984c"},"14":{"count":2,"correct":2,"not_answerd":0,"percent":{"correct":100,"not_answerd":0},"name":"\u5716\u8868\u7d30\u7bc0\u984c"}}},"Incomplete Sentences":{"count":30,"correct":17,"not_answerd":0,"percent":{"correct":57,"not_answerd":0},"testPoint":{"16":{"count":12,"correct":4,"not_answerd":0,"percent":{"correct":33,"not_answerd":0},"name":"\u5b57\u5f59\u984c"},"21":{"count":8,"correct":6,"not_answerd":0,"percent":{"correct":75,"not_answerd":0},"name":"\u8a5e\u6027\u984c"},"19":{"count":2,"correct":1,"not_answerd":0,"percent":{"correct":50,"not_answerd":0},"name":"\u6642\u614b\u984c"},"22":{"count":5,"correct":4,"not_answerd":0,"percent":{"correct":80,"not_answerd":0},"name":"\u9023\u63a5\u8a5e\u984c"},"17":{"count":1,"correct":1,"not_answerd":0,"percent":{"correct":100,"not_answerd":0},"name":"\u4ecb\u4fc2\u8a5e\u984c"},"23":{"count":1,"correct":1,"not_answerd":0,"percent":{"correct":100,"not_answerd":0},"name":"\u6e96\u52d5\u8a5e\u984c \uff08\u4e0d\u5b9a\u8a5e\uff0f\u52d5\u540d\u8a5e\uff0f\u5206\u8a5e\uff09"},"20":{"count":1,"correct":0,"not_answerd":0,"percent":{"correct":0,"not_answerd":0},"name":"\u4ee3\u540d\u8a5e\u984c"}}},"Text Completion":{"count":16,"correct":10,"not_answerd":0,"percent":{"correct":63,"not_answerd":0},"testPoint":{"16":{"count":6,"correct":3,"not_answerd":0,"percent":{"correct":50,"not_answerd":0},"name":"\u5b57\u5f59\u984c"},"18":{"count":4,"correct":3,"not_answerd":0,"percent":{"correct":75,"not_answerd":0},"name":"\u53e5\u5b50\u984c"},"24":{"count":3,"correct":2,"not_answerd":0,"percent":{"correct":67,"not_answerd":0},"name":"\u6163\u7528\u8a9e\u984c"},"19":{"count":1,"correct":1,"not_answerd":0,"percent":{"correct":100,"not_answerd":0},"name":"\u6642\u614b\u984c"},"22":{"count":1,"correct":1,"not_answerd":0,"percent":{"correct":100,"not_answerd":0},"name":"\u9023\u63a5\u8a5e\u984c"},"23":{"count":1,"correct":0,"not_answerd":0,"percent":{"correct":0,"not_answerd":0},"name":"\u6e96\u52d5\u8a5e\u984c \uff08\u4e0d\u5b9a\u8a5e\uff0f\u52d5\u540d\u8a5e\uff0f\u5206\u8a5e\uff09"}}},"Reading Comprehension":{"count":54,"correct":19,"not_answerd":0,"percent":{"correct":35,"not_answerd":0},"testPoint":{"26":{"count":10,"correct":5,"not_answerd":0,"percent":{"correct":50,"not_answerd":0},"name":"\u8a62\u554f\u539f\u56e0\/\u76ee\u7684\u984c"},"30":{"count":6,"correct":2,"not_answerd":0,"percent":{"correct":33,"not_answerd":0},"name":"\u5224\u5225\u771f\u507d\u984c"},"25":{"count":29,"correct":9,"not_answerd":0,"percent":{"correct":31,"not_answerd":0},"name":"\u8a62\u554f\u7d30\u7bc0\u984c"},"27":{"count":3,"correct":1,"not_answerd":0,"percent":{"correct":33,"not_answerd":0},"name":"\u8a5e\u5f59\u984c"},"28":{"count":4,"correct":2,"not_answerd":0,"percent":{"correct":50,"not_answerd":0},"name":"\u63a8\u7406\u984c"},"29":{"count":2,"correct":0,"not_answerd":0,"percent":{"correct":0,"not_answerd":0},"name":"\u53e5\u5b50\u63d2\u5165\u984c"}}}},"types":{"listening":{"count":100,"correct":56,"not_answerd":2,"percent":{"correct":56,"not_answerd":2,"answerd":98},"answerd":98},"reading":{"count":100,"correct":46,"not_answerd":0,"percent":{"correct":46,"not_answerd":0,"answerd":100},"answerd":100}},"all":{"count":200,"correct":102,"not_answerd":2,"percent":{"correct":51,"not_answerd":1,"answerd":99},"answerd":198}}, {"listening":[{"en":"Photographs","tw":"\u7167\u7247\u63cf\u8ff0"},{"en":"Question Response","tw":"\u61c9\u7b54\u554f\u984c"},{"en":"Short Conversation","tw":"\u7c21\u77ed\u5c0d\u8a71"},{"en":"Short Talk","tw":"\u7c21\u77ed\u7368\u767d"}],"reading":[{"en":"Incomplete Sentences","tw":"\u55ae\u53e5\u586b\u7a7a"},{"en":"Text Completion","tw":"\u77ed\u6587\u586b\u7a7a"},{"en":"Reading Comprehension","tw":"\u6587\u7ae0\u7406\u89e3"}]}, {"Photographs":{"2026-06-11":83},"Question Response":{"2026-06-11":76},"Short Conversation":{"2026-06-11":56},"Short Talk":{"2026-06-11":33},"Incomplete Sentences":{"2026-06-11":57},"Text Completion":{"2026-06-11":63},"Reading Comprehension":{"2026-06-11":35}}, {"Photographs":{"\u63cf\u8ff0\u5834\u666f\u984c\uff08\u52d5\u4f5c\uff09":{"2026-06-11":100},"\u63cf\u8ff0\u5834\u666f\u984c\uff08\u975c\u7269\uff0f\u65b9\u4f4d\uff09":{"2026-06-11":50},"\u63cf\u8ff0\u5c0d\u8c61\u984c\uff08\u591a\u4eba\uff09":{"2026-06-11":100}},"Question Response":{"\u4e00\u822c\u7591\u554f\u53e5":{"2026-06-11":83},"\u7279\u6b8a\u7591\u554f\u53e5":{"2026-06-11":33},"\u5426\u5b9a\uff0f\u53cd\u7fa9\u7591\u554f\u53e5":{"2026-06-11":67},"\u9673\u8ff0\u53e5":{"2026-06-11":100},"\u9078\u64c7\u7591\u554f\u53e5":{"2026-06-11":67},"\u9593\u63a5\u7591\u554f\u53e5":{"2026-06-11":100}},"Short Conversation":{"\u5c0d\u8a71\u4e3b\u984c\uff0f\u76ee\u7684\u984c":{"2026-06-11":83},"\u5c0d\u8a71\u7d30\u7bc0\u984c":{"2026-06-11":48},"\u5c0d\u8a71\u6db5\u7fa9\u5224\u5b9a\u984c":{"2026-06-11":40},"\u5716\u8868\u7d30\u7bc0\u984c":{"2026-06-11":100}},"Short Talk":{"\u5c0d\u8a71\u4e3b\u984c\uff0f\u76ee\u7684\u984c":{"2026-06-11":33},"\u5c0d\u8a71\u7d30\u7bc0\u984c":{"2026-06-11":24},"\u8b1b\u8a71\u5c0d\u8c61\u5224\u5b9a\u984c":{"2026-06-11":50},"\u5c0d\u8a71\u6db5\u7fa9\u5224\u5b9a\u984c":{"2026-06-11":33},"\u5716\u8868\u7d30\u7bc0\u984c":{"2026-06-11":100}},"Incomplete Sentences":{"\u5b57\u5f59\u984c":{"2026-06-11":33},"\u8a5e\u6027\u984c":{"2026-06-11":75},"\u6642\u614b\u984c":{"2026-06-11":50},"\u9023\u63a5\u8a5e\u984c":{"2026-06-11":80},"\u4ecb\u4fc2\u8a5e\u984c":{"2026-06-11":100},"\u6e96\u52d5\u8a5e\u984c \uff08\u4e0d\u5b9a\u8a5e\uff0f\u52d5\u540d\u8a5e\uff0f\u5206\u8a5e\uff09":{"2026-06-11":100},"\u4ee3\u540d\u8a5e\u984c":{"2026-06-11":0}},"Text Completion":{"\u5b57\u5f59\u984c":{"2026-06-11":50},"\u53e5\u5b50\u984c":{"2026-06-11":75},"\u6163\u7528\u8a9e\u984c":{"2026-06-11":67},"\u6642\u614b\u984c":{"2026-06-11":100},"\u9023\u63a5\u8a5e\u984c":{"2026-06-11":100},"\u6e96\u52d5\u8a5e\u984c \uff08\u4e0d\u5b9a\u8a5e\uff0f\u52d5\u540d\u8a5e\uff0f\u5206\u8a5e\uff09":{"2026-06-11":0}},"Reading Comprehension":{"\u8a62\u554f\u539f\u56e0\/\u76ee\u7684\u984c":{"2026-06-11":50},"\u5224\u5225\u771f\u507d\u984c":{"2026-06-11":33},"\u8a62\u554f\u7d30\u7bc0\u984c":{"2026-06-11":31},"\u8a5e\u5f59\u984c":{"2026-06-11":33},"\u63a8\u7406\u984c":{"2026-06-11":50},"\u53e5\u5b50\u63d2\u5165\u984c":{"2026-06-11":0}}});
+});
+</script>
+</body>
+
+</html>

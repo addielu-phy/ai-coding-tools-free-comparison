@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>國二學習資源｜盧老師網頁整理</title>
-  <meta name="description" content="把盧老師已公開的國中／國二相關網頁集中成一個學習入口，包含國二理化、國文注釋翻卡、英文單字、自學評量、老師介面、考卷錯題診斷與會考自然整理。" />
+  <meta name="description" content="把盧老師已公開的國中／國二相關網頁集中成一個學習入口，先依科目分類，再依網頁類型細分，包含國二理化、國文注釋翻卡、英文單字、自學評量、老師介面、考卷錯題診斷與會考自然整理。" />
   <style>
     :root {
       color-scheme: light;
@@ -68,7 +68,7 @@
     .route-card b { display:block; color:var(--brand-dark); font-size:15px; }
     .route-card span { display:block; color:var(--muted); font-size:13px; margin-top:4px; }
     .controls { margin:26px 0 20px; border:1px solid var(--line); background:rgba(255,253,248,.82); border-radius:var(--radius); box-shadow:var(--shadow); padding:16px; display:grid; gap:14px; }
-    .control-row { display:grid; grid-template-columns: 1.35fr .78fr .78fr; gap:12px; }
+    .control-row { display:grid; grid-template-columns: 1.25fr .62fr .78fr .62fr; gap:12px; }
     label { display:grid; gap:6px; color:#52606d; font-size:12px; font-weight:950; letter-spacing:.08em; text-transform:uppercase; }
     input, select { width:100%; min-height:46px; border:1px solid var(--line); border-radius:15px; padding:10px 12px; background:#fff; color:var(--ink); }
     input:focus, select:focus, button:focus-visible, a:focus-visible { outline:3px solid rgba(15,118,110,.18); border-color:var(--brand); }
@@ -88,6 +88,10 @@
     .section-head h2 { margin:0; font-size:clamp(1.55rem,4vw,2.35rem); letter-spacing:-.055em; line-height:1.05; }
     .section-head p { margin:6px 0 0; color:var(--muted); max-width:760px; }
     .count-badge { white-space:nowrap; align-self:center; background:#fff; border:1px solid var(--line); border-radius:999px; padding:7px 11px; color:#52606d; font-size:13px; font-weight:900; }
+    .type-group { margin:18px 0 22px; }
+    .type-head { display:flex; justify-content:space-between; align-items:center; gap:12px; margin:0 0 10px; padding:0 2px; }
+    .type-head h3 { margin:0; font-size:1.08rem; letter-spacing:-.025em; color:#1f2a37; }
+    .type-count { white-space:nowrap; border:1px solid var(--line); background:rgba(255,255,255,.82); color:var(--muted); border-radius:999px; padding:4px 9px; font-size:12px; font-weight:900; }
     .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:15px; }
     .card { position:relative; overflow:hidden; border:1px solid var(--line); background:var(--paper-solid); border-radius:var(--radius); padding:18px; box-shadow:0 14px 38px rgba(16,24,40,.07); display:grid; gap:12px; }
     .card::before { content:""; position:absolute; inset:0 auto 0 0; width:5px; background:linear-gradient(180deg,var(--brand),var(--blue)); opacity:.9; }
@@ -151,9 +155,9 @@
   <header class="hero shell">
     <div class="hero-grid">
       <div>
-        <span class="eyebrow">國中／國二入口｜更新 2026-06-20 17:11</span>
+        <span class="eyebrow">國中／國二入口｜更新 2026-06-20 17:31</span>
         <h1>國二學習資源</h1>
-        <p class="lead">把目前已公開的國中相關網頁整理成學生與老師可直接使用的入口：國二下理化第 5、6 章與考古題、老師後台、會考自然物理整理、國文二下課文注釋翻卡、英文單字練習，以及考卷錯題診斷與 7 天補強。</p>
+        <p class="lead">把目前已公開的國中相關網頁整理成學生與老師可直接使用的入口；版面先依「科目」分類，再在每個科目底下細分「錯題診斷、學習重點、互動題庫、自學評量、教師端、會考複習、翻卡練習、舊入口」等網頁類型。</p>
       </div>
       <aside class="quick-panel">
         <h2>建議使用順序</h2>
@@ -167,28 +171,31 @@
     </div>
     <div class="stats" aria-label="資源統計">
       <div class="stat"><strong id="stat-total">0</strong><span>收錄資源</span></div>
-      <div class="stat"><strong id="stat-science">0</strong><span>自然／理化</span></div>
+      <div class="stat"><strong id="stat-subjects">0</strong><span>科目分類</span></div>
+      <div class="stat"><strong id="stat-science">0</strong><span>自然理化</span></div>
       <div class="stat"><strong id="stat-language">0</strong><span>國文／英文</span></div>
-      <div class="stat"><strong id="stat-support">0</strong><span>教師／診斷／備用</span></div>
     </div>
   </header>
 
   <main class="shell" id="resources">
     <section class="route" aria-label="快速學習路線">
-      <a class="route-card" href="#subject-讀書診斷"><b>① 找弱點</b><span>考卷錯題診斷、逐題詳解、7 天補強。</span></a>
-      <a class="route-card" href="#subject-自然理化"><b>② 練理化</b><span>有機化合物、力與壓力、浮力、摩擦力、期末題庫。</span></a>
-      <a class="route-card" href="#subject-國文"><b>③ 背國文</b><span>〈飛魚〉、〈空城計〉、〈汨羅江神〉注釋翻卡。</span></a>
-      <a class="route-card" href="#subject-會考複習"><b>④ 會考複習</b><span>國中教育會考自然科物理試題截圖整理。</span></a>
-      <a class="route-card" href="#subject-教師端"><b>⑤ 老師介面</b><span>國二下理化期末自學評量全班成績後台。</span></a>
+      <a class="route-card" href="#subject-綜合診斷"><b>① 綜合診斷</b><span>錯題診斷、逐題詳解、7 天補強。</span></a>
+      <a class="route-card" href="#subject-自然理化"><b>② 自然理化</b><span>學習重點、互動題庫、自學評量、教師端、會考複習。</span></a>
+      <a class="route-card" href="#subject-國文"><b>③ 國文</b><span>二下課文注釋翻卡與錯題複習。</span></a>
+      <a class="route-card" href="#subject-英文"><b>④ 英文</b><span>單字翻卡、四選一與拼寫填空。</span></a>
+      <a class="route-card" href="#subject-備用入口"><b>⑤ 備用入口</b><span>舊連結與重新導向頁集中保存。</span></a>
     </section>
 
     <section class="controls" aria-label="搜尋與篩選">
       <div class="control-row">
         <label>搜尋關鍵字
-          <input id="search" type="search" placeholder="例如：浮力、摩擦力、有機化合物、老師介面、空城計、英文、會考…" />
+          <input id="search" type="search" placeholder="例如：自然理化、互動題庫、老師介面、翻卡、空城計、英文、會考…" />
         </label>
-        <label>學科／用途
-          <select id="subjectFilter"><option value="">全部</option></select>
+        <label>科目
+          <select id="subjectFilter"><option value="">全部科目</option></select>
+        </label>
+        <label>網頁類型
+          <select id="typeFilter"><option value="">全部類型</option></select>
         </label>
         <label>狀態
           <select id="statusFilter"><option value="">全部狀態</option></select>
@@ -209,8 +216,8 @@
       <div class="note">
         <h2>整理原則</h2>
         <ul>
-          <li>以國中／國二學生可直接打開使用的頁面為主。</li>
-          <li>老師介面獨立列出並標示「教師端需登入」，避免學生端與管理端混在一起。</li>
+          <li>先依科目分類，再在科目底下依網頁類型分組，讓學生／老師先找科目再找用途。</li>
+          <li>老師介面會放在對應科目下的「教師端」類型，並標示「教師端需登入」。</li>
           <li>舊入口保留在「備用入口」區，避免歷史連結失效，但優先引導到新版頁。</li>
           <li>另 repo 的公開題庫也放入，讓學生不用到總覽頁逐一搜尋。</li>
         </ul>
@@ -226,15 +233,15 @@
     </section>
   </main>
 
-  <footer class="shell">國二學習資源｜盧老師網頁整理，由 Hermes 協助彙整。更新：2026-06-20 17:11。</footer>
+  <footer class="shell">國二學習資源｜盧老師網頁整理，由 Hermes 協助彙整。更新：2026-06-20 17:31。</footer>
 
   <script>
     const RESOURCES = [
       {
         title: '考卷錯題診斷與 7 天補強練習',
         description: '依自然浮力、數學平行線、國文〈空城計〉、公民行政救濟等錯題，整理能力缺口與 7 天補強練習。',
-        subject: '讀書診斷',
-        kind: '錯題診斷 / 讀書計畫',
+        subject: '綜合診斷',
+        type: '錯題診斷 / 讀書計畫',
         status: '此 repo 公開',
         href: '../../study/exam-error-diagnosis-2026-06/',
         tags: ['錯題診斷', '7天補強', '自然', '數學', '國文', '公民']
@@ -242,35 +249,35 @@
       {
         title: '逐題錯題詳解｜孩子作答錯誤樣態分析',
         description: '逐題標示孩子答案、正答、錯誤樣態與補救句，適合搭配考卷診斷頁做精準訂正。',
-        subject: '讀書診斷',
-        kind: '逐題詳解',
+        subject: '綜合診斷',
+        type: '逐題詳解',
         status: '此 repo 公開',
         href: '../../study/exam-error-diagnosis-2026-06/detailed.html',
         tags: ['逐題詳解', '錯誤樣態', '訂正']
       },
       {
-        title: '五福國中國二下期末理化｜第 5 章有機化合物互動題庫',
-        description: '五福國中 110–113 學年度國二下期末自然／理化第 5 章有機化合物題目，依主題與難易度重排。',
-        subject: '自然理化',
-        kind: '互動題庫',
-        status: '此 repo 公開',
-        href: '../../exams/wufu-jh-8b-final-science-ch5/',
-        tags: ['國二下', '理化', '有機化合物', '五福國中', '期末']
-      },
-      {
         title: '國二下翰林理化第 6 章｜力與壓力學習重點',
         description: '翰林版理化第 6 章力與壓力學習重點，含力與平衡、摩擦力、壓力、浮力例題與隱藏式詳解。',
         subject: '自然理化',
-        kind: '學習重點 / 例題',
+        type: '學習重點 / 例題',
         status: '此 repo 公開',
         href: '../../exams/hanlin-8b-ch6-buoyancy-wufu/chapter6.html',
         tags: ['國二下', '理化', '力與壓力', '摩擦力', '浮力']
       },
       {
+        title: '五福國中國二下期末理化｜第 5 章有機化合物互動題庫',
+        description: '五福國中 110–113 學年度國二下期末自然／理化第 5 章有機化合物題目，依主題與難易度重排。',
+        subject: '自然理化',
+        type: '互動題庫',
+        status: '此 repo 公開',
+        href: '../../exams/wufu-jh-8b-final-science-ch5/',
+        tags: ['國二下', '理化', '有機化合物', '五福國中', '期末']
+      },
+      {
         title: '五福國中摩擦力歷屆經典段考題',
         description: '高雄市立五福國中近年國二下理化摩擦力段考題互動測驗與詳細觀念解析。',
         subject: '自然理化',
-        kind: '另 repo 自學評量',
+        type: '自學評量',
         status: '另 repo 公開',
         href: 'https://addielu-phy.github.io/wu-fu-physics-quiz/',
         tags: ['國二下', '摩擦力', '段考', '五福國中']
@@ -279,7 +286,7 @@
         title: '五福國中浮力歷屆題自學評量',
         description: '五福國中國二下理化期末考浮力歷屆題：原題截圖、即時評分、錯題練習與詳解。',
         subject: '自然理化',
-        kind: '另 repo 自學評量',
+        type: '自學評量',
         status: '另 repo 公開',
         href: 'https://addielu-phy.github.io/wu-fu-buoyancy-quiz/',
         tags: ['國二下', '浮力', '錯題練習', '五福國中']
@@ -288,7 +295,7 @@
         title: '理化自學評量｜國二下期末',
         description: '國二下理化期末自學練習：作答、自動評分、錯題分析與詳解，可重複練習。',
         subject: '自然理化',
-        kind: '另 repo 自學評量',
+        type: '自學評量',
         status: '另 repo 公開',
         href: 'https://addielu-phy.github.io/physics-quiz/',
         tags: ['國二下', '理化', '期末', '自動評分']
@@ -296,8 +303,8 @@
       {
         title: '老師後台｜國二下理化期末全班成績',
         description: '國二下理化期末自學評量的教師端／老師後台，可查看全班作答紀錄、成績與錯題狀況；需要教師端設定／登入時使用。',
-        subject: '教師端',
-        kind: '老師介面 / 全班成績',
+        subject: '自然理化',
+        type: '教師端 / 全班成績',
         status: '教師端（需登入）',
         href: 'https://addielu-phy.github.io/physics-quiz/teacher.html',
         tags: ['老師介面', '教師端', '國二下', '理化', '全班成績', 'Firebase']
@@ -305,8 +312,8 @@
       {
         title: '115 會考自然科物理試題截圖整理',
         description: '115 年國中教育會考自然科物理相關試題截圖整理，含概念分類、參考答案與官方來源。',
-        subject: '會考複習',
-        kind: '會考自然整理',
+        subject: '自然理化',
+        type: '會考複習',
         status: '此 repo 公開',
         href: '../../exams/cap-115-nature-physics/',
         tags: ['會考', '自然科', '物理', '國中']
@@ -315,7 +322,7 @@
         title: '第七課〈飛魚〉名詞注釋翻卡練習',
         description: '國中國文二下第七課〈飛魚〉課文相關名詞注釋練習，含隨機翻卡、答對答錯統計與錯題複習。',
         subject: '國文',
-        kind: '語文翻卡 / 測驗',
+        type: '語文翻卡 / 測驗',
         status: '此 repo 公開',
         href: '../../chinese/l07-feiyu-terms/',
         tags: ['國文二下', '飛魚', '翻卡', '注釋']
@@ -324,7 +331,7 @@
         title: '第八課〈空城計〉名詞注釋翻卡練習',
         description: '國中國文二下第八課〈空城計〉課文相關名詞注釋練習，含隨機翻卡、答對答錯統計與錯題複習。',
         subject: '國文',
-        kind: '語文翻卡 / 測驗',
+        type: '語文翻卡 / 測驗',
         status: '此 repo 公開',
         href: '../../chinese/l08-kongchengji-terms/',
         tags: ['國文二下', '空城計', '翻卡', '注釋']
@@ -333,7 +340,7 @@
         title: '第九課〈汨羅江神〉名詞注釋翻卡練習',
         description: '國中國文二下第九課〈汨羅江神〉課文相關名詞注釋練習，含隨機翻卡、答對答錯統計與錯題複習。',
         subject: '國文',
-        kind: '語文翻卡 / 測驗',
+        type: '語文翻卡 / 測驗',
         status: '此 repo 公開',
         href: '../../chinese/l09-miluojiangshen-terms/',
         tags: ['國文二下', '汨羅江神', '翻卡', '注釋']
@@ -342,7 +349,7 @@
         title: '5/19 英語課堂單字測驗｜300TU 互動翻卡與測驗',
         description: '英文單字與片語互動測驗，包含雙面翻字卡、四選一、拼寫填空、發音、對錯統計與錯題加強。',
         subject: '英文',
-        kind: '英語翻卡 / 測驗',
+        type: '英語翻卡 / 測驗',
         status: '此 repo 公開',
         href: '../../exams/vocab-300tu-519/',
         tags: ['英文', '單字', '翻卡', '測驗']
@@ -351,7 +358,7 @@
         title: '5/26 英語課堂單字測驗｜白板互動翻卡與測驗',
         description: '依課堂白板照片整理的英語單字互動網頁，含字卡記憶挑戰、四選一與拼寫填空。',
         subject: '英文',
-        kind: '英語翻卡 / 測驗',
+        type: '英語翻卡 / 測驗',
         status: '此 repo 公開',
         href: '../../exams/vocab-whiteboard-20260526/',
         tags: ['英文', '單字', '白板', '測驗']
@@ -360,7 +367,7 @@
         title: '五福第 6 章考古題',
         description: '舊入口：浮力互動題庫已整合到第 6 章頁面，保留給舊連結使用。',
         subject: '備用入口',
-        kind: '舊入口 / 重新導向',
+        type: '舊入口 / 重新導向',
         status: '舊入口 / 備用',
         href: '../../exams/hanlin-8b-ch6-buoyancy-wufu/final-exams.html',
         tags: ['舊入口', '第6章', '浮力', '五福國中']
@@ -369,7 +376,7 @@
         title: '國二下理化',
         description: '舊入口：重建部署保留第 6 章頁面，並新增五福浮力考古題互動練習。',
         subject: '備用入口',
-        kind: '舊入口 / 重新導向',
+        type: '舊入口 / 重新導向',
         status: '舊入口 / 備用',
         href: '../../exams/hanlin-8b-ch6-buoyancy-wufu/',
         tags: ['舊入口', '國二下', '理化', '浮力']
@@ -378,7 +385,7 @@
         title: '國二下翰林理化第 6 章｜力與壓力學習重點（舊版）',
         description: '舊版第 6 章頁面，保留作為歷史版本與備用連結；平常建議使用新版第 6 章頁。',
         subject: '備用入口',
-        kind: '舊入口 / 重新導向',
+        type: '舊入口 / 重新導向',
         status: '舊入口 / 備用',
         href: '../../exams/hanlin-8b-ch6-buoyancy-wufu/chapter6.original.html',
         tags: ['舊入口', '力與壓力', '浮力', '摩擦力']
@@ -387,27 +394,27 @@
         title: '第 6 章實驗影片',
         description: '舊入口：目前主要內容已整合到 chapter6.html，保留給原本的實驗影片連結使用。',
         subject: '備用入口',
-        kind: '舊入口 / 重新導向',
+        type: '舊入口 / 重新導向',
         status: '舊入口 / 備用',
         href: '../../exams/hanlin-8b-ch6-buoyancy-wufu/chapter6-lab-videos.html',
         tags: ['舊入口', '實驗影片', '第6章', '浮力']
       }
     ];
 
-    const SUBJECT_ORDER = ['讀書診斷', '自然理化', '教師端', '會考複習', '國文', '英文', '備用入口'];
+    const SUBJECT_ORDER = ['綜合診斷', '自然理化', '國文', '英文', '備用入口'];
     const SUBJECT_DESCRIPTIONS = {
-      '讀書診斷': '先定位學習弱點，再決定要補哪一科、哪一章。',
-      '自然理化': '國二下理化第 5 章、第 6 章與五福國中段考／期末自學評量。',
-      '教師端': '老師後台與全班成績／錯題紀錄頁，適合課後追蹤與補救教學。',
-      '會考複習': '國中教育會考自然科中的物理題型與概念分類。',
+      '綜合診斷': '跨科錯題診斷、逐題詳解與補強計畫，先找出學習弱點。',
+      '自然理化': '國二下理化第 5、6 章、會考自然物理、自學評量與教師端。',
       '國文': '國文二下課文名詞注釋翻卡，適合每天 5–10 分鐘短練。',
-      '英文': '英文單字與片語翻卡、選擇題、拼寫填空。',
+      '英文': '英文單字與片語翻卡、四選一、拼寫填空。',
       '備用入口': '歷史連結與 redirect/stub 頁面，平常優先使用上方新版資源。'
     };
-    const QUICK_FILTERS = ['浮力', '摩擦力', '有機化合物', '老師介面', '教師端', '力與壓力', '會考', '空城計', '翻卡', '錯題', '英文'];
+    const TYPE_ORDER = ['錯題診斷 / 讀書計畫', '逐題詳解', '學習重點 / 例題', '互動題庫', '自學評量', '教師端 / 全班成績', '會考複習', '語文翻卡 / 測驗', '英語翻卡 / 測驗', '舊入口 / 重新導向'];
+    const QUICK_FILTERS = ['自然理化', '互動題庫', '自學評量', '教師端', '會考複習', '國文', '翻卡', '錯題診斷', '英文', '備用入口'];
 
     const searchInput = document.getElementById('search');
     const subjectFilter = document.getElementById('subjectFilter');
+    const typeFilter = document.getElementById('typeFilter');
     const statusFilter = document.getElementById('statusFilter');
     const sectionsEl = document.getElementById('sections');
     const resultText = document.getElementById('resultText');
@@ -418,9 +425,15 @@
     const normalize = (text) => (text || '').toString().toLowerCase().replace(/\s+/g, ' ').trim();
     const escapeHtml = (text) => (text || '').toString().replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
     const statusClass = (status) => status.includes('舊') ? 'old' : status.includes('教師端') ? 'teacher' : status.includes('另 repo') ? 'external' : status.includes('診斷') ? 'support' : 'current';
+    const resourceType = (resource) => resource.type || resource.kind || '網頁';
+    const typeRank = (type) => {
+      const index = TYPE_ORDER.indexOf(type);
+      return index === -1 ? 999 : index;
+    };
+    const sortTypes = (a, b) => typeRank(a) - typeRank(b) || a.localeCompare(b, 'zh-Hant');
 
     function searchableText(resource) {
-      return normalize([resource.title, resource.description, resource.subject, resource.kind, resource.status, ...(resource.tags || [])].join(' '));
+      return normalize([resource.title, resource.description, resource.subject, resourceType(resource), resource.status, ...(resource.tags || [])].join(' '));
     }
 
     function hydrateControls() {
@@ -430,6 +443,12 @@
         option.value = subject;
         option.textContent = subject;
         subjectFilter.appendChild(option);
+      });
+      [...new Set(RESOURCES.map(resourceType))].sort(sortTypes).forEach(type => {
+        const option = document.createElement('option');
+        option.value = type;
+        option.textContent = type;
+        typeFilter.appendChild(option);
       });
       [...new Set(RESOURCES.map(r => r.status))].sort().forEach(status => {
         const option = document.createElement('option');
@@ -450,23 +469,37 @@
         quickChips.appendChild(btn);
       });
       document.getElementById('stat-total').textContent = RESOURCES.length;
-      document.getElementById('stat-science').textContent = RESOURCES.filter(r => r.subject === '自然理化' || r.subject === '會考複習').length;
+      document.getElementById('stat-subjects').textContent = new Set(RESOURCES.map(r => r.subject)).size;
+      document.getElementById('stat-science').textContent = RESOURCES.filter(r => r.subject === '自然理化').length;
       document.getElementById('stat-language').textContent = RESOURCES.filter(r => r.subject === '國文' || r.subject === '英文').length;
-      document.getElementById('stat-support').textContent = RESOURCES.filter(r => r.subject === '教師端' || r.subject === '讀書診斷' || r.subject === '備用入口').length;
+    }
+
+    function suggestedUse(resource) {
+      const type = resourceType(resource);
+      if (type.includes('舊入口')) return '備查／舊連結';
+      if (type.includes('教師端')) return '查看全班紀錄';
+      if (type.includes('題庫') || type.includes('自學評量')) return '練題與訂正';
+      if (type.includes('翻卡')) return '每日短練';
+      if (type.includes('會考')) return '考前複習';
+      if (type.includes('診斷') || type.includes('詳解')) return '找弱點與訂正';
+      return '閱讀與複習';
     }
 
     function card(resource) {
+      const type = resourceType(resource);
       const tags = (resource.tags || []).slice(0, 7).map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join('');
       const external = resource.href.startsWith('http');
-      return `<article class="card" data-subject="${escapeHtml(resource.subject)}">
+      return `<article class="card" data-subject="${escapeHtml(resource.subject)}" data-type="${escapeHtml(type)}">
         <div class="card-head">
-          <div><div class="kind">${escapeHtml(resource.kind)}</div><h3>${escapeHtml(resource.title)}</h3></div>
+          <div><div class="kind">${escapeHtml(type)}</div><h3>${escapeHtml(resource.title)}</h3></div>
           <span class="pill ${statusClass(resource.status)}">${escapeHtml(resource.status)}</span>
         </div>
         <p class="desc">${escapeHtml(resource.description)}</p>
         <div class="meta">
-          <div><b>學科／用途</b>${escapeHtml(resource.subject)}</div>
-          <div><b>建議用法</b>${resource.subject === '備用入口' ? '備查／舊連結' : resource.subject === '教師端' ? '查看全班紀錄' : resource.kind.includes('題') ? '練題與訂正' : '閱讀與複習'}</div>
+          <div><b>科目</b>${escapeHtml(resource.subject)}</div>
+          <div><b>網頁類型</b>${escapeHtml(type)}</div>
+          <div><b>建議用法</b>${escapeHtml(suggestedUse(resource))}</div>
+          <div><b>開啟狀態</b>${escapeHtml(resource.status)}</div>
         </div>
         <div class="tags">${tags}</div>
         <div class="actions"><a class="btn primary" href="${escapeHtml(resource.href)}"${external ? ' target="_blank" rel="noopener"' : ''}>開啟資源${external ? ' ↗' : ''}</a></div>
@@ -477,12 +510,14 @@
       const q = normalize(searchInput.value);
       const quick = normalize(activeQuick);
       const subject = subjectFilter.value;
+      const type = typeFilter.value;
       const status = statusFilter.value;
       return RESOURCES.filter(resource => {
         const haystack = searchableText(resource);
         return (!q || haystack.includes(q))
           && (!quick || haystack.includes(quick))
           && (!subject || resource.subject === subject)
+          && (!type || resourceType(resource) === type)
           && (!status || resource.status === status);
       });
     }
@@ -501,7 +536,19 @@
         const section = document.createElement('section');
         section.className = 'category';
         section.id = `subject-${subject.replace(/[^\w一-龥]+/g, '')}`;
-        section.innerHTML = `<div class="section-head"><div><h2>${escapeHtml(subject)}</h2><p>${escapeHtml(SUBJECT_DESCRIPTIONS[subject] || '')}</p></div><span class="count-badge">${list.length} 個資源</span></div><div class="grid">${list.map(card).join('')}</div>`;
+
+        const typeGroups = new Map();
+        list.forEach(resource => {
+          const type = resourceType(resource);
+          if (!typeGroups.has(type)) typeGroups.set(type, []);
+          typeGroups.get(type).push(resource);
+        });
+        const typeSections = [...typeGroups.keys()].sort(sortTypes).map(type => {
+          const typedResources = typeGroups.get(type);
+          return `<section class="type-group"><div class="type-head"><h3>${escapeHtml(type)}</h3><span class="type-count">${typedResources.length} 個</span></div><div class="grid">${typedResources.map(card).join('')}</div></section>`;
+        }).join('');
+
+        section.innerHTML = `<div class="section-head"><div><h2>${escapeHtml(subject)}</h2><p>${escapeHtml(SUBJECT_DESCRIPTIONS[subject] || '')}</p></div><span class="count-badge">${list.length} 個資源</span></div>${typeSections}`;
         sectionsEl.appendChild(section);
       }
       resultText.textContent = `顯示 ${resources.length} / ${RESOURCES.length} 個國二學習資源` + (activeQuick ? `｜快速篩選：${activeQuick}` : '');
@@ -510,6 +557,7 @@
 
     searchInput.addEventListener('input', render);
     subjectFilter.addEventListener('change', render);
+    typeFilter.addEventListener('change', render);
     statusFilter.addEventListener('change', render);
     hydrateControls();
     render();

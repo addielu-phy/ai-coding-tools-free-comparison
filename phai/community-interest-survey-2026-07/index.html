@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhAI 共學圈｜七月主題興趣調查</title>
+  <meta name="description" content="PhAI 共學圈七月主題興趣調查：蒐集社群夥伴對 AI × 物理教學主題、分享形式與可分享經驗的偏好。" />
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --ink: #172033;
+      --muted: #5f6b7a;
+      --line: #dbe3ee;
+      --brand: #2563eb;
+      --brand-2: #7c3aed;
+      --soft: #eff6ff;
+      --ok: #059669;
+      --warn: #b45309;
+      --shadow: 0 16px 50px rgba(15, 23, 42, .08);
+      --radius: 22px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, .16), transparent 34rem),
+        radial-gradient(circle at 88% 12%, rgba(124, 58, 237, .13), transparent 30rem),
+        var(--bg);
+      color: var(--ink);
+      line-height: 1.72;
+    }
+    .wrap { width: min(960px, calc(100% - 28px)); margin: 0 auto; }
+    header { padding: 56px 0 22px; }
+    .pill { display:inline-flex; gap:8px; align-items:center; padding: 7px 12px; border-radius:999px; background:var(--soft); color:var(--brand); font-weight:800; font-size:13px; }
+    h1 { margin: 18px 0 12px; font-size: clamp(32px, 7vw, 58px); line-height:1.05; letter-spacing:-.05em; }
+    .lead { font-size: clamp(16px, 2.6vw, 21px); color: var(--muted); max-width: 800px; font-weight: 560; }
+    .meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; color:var(--muted); font-size:14px; }
+    .meta span { background: rgba(255,255,255,.75); border:1px solid var(--line); border-radius:999px; padding:6px 10px; }
+    form, .panel { background: rgba(255,255,255,.9); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); padding: clamp(18px, 4vw, 34px); margin: 20px 0; backdrop-filter: blur(8px); }
+    fieldset { border: 0; padding: 0; margin: 0 0 30px; }
+    legend { font-size: 22px; font-weight: 900; letter-spacing: -.02em; margin-bottom: 12px; }
+    .hint { color: var(--muted); font-size: 14px; margin: -4px 0 12px; }
+    label { display: block; font-weight: 760; margin: 14px 0 7px; }
+    input[type="text"], input[type="email"], select, textarea {
+      width: 100%; border: 1px solid var(--line); border-radius: 14px; padding: 13px 14px; font: inherit; background: #fff; color: var(--ink);
+      outline: none;
+    }
+    textarea { min-height: 110px; resize: vertical; }
+    input:focus, textarea:focus, select:focus { border-color: var(--brand); box-shadow: 0 0 0 4px rgba(37,99,235,.12); }
+    .choices { display: grid; gap: 10px; }
+    .choice { display: flex; gap: 10px; align-items: flex-start; padding: 12px 13px; border: 1px solid var(--line); border-radius: 15px; background: #fff; }
+    .choice input { margin-top: 5px; transform: scale(1.1); }
+    .grid { display:grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .ranking { display:grid; gap: 10px; }
+    .rank-row { display:grid; grid-template-columns: 90px 1fr; gap: 10px; align-items:center; }
+    .actions { display:flex; flex-wrap:wrap; gap: 12px; margin-top: 20px; }
+    button, .button {
+      appearance:none; border:0; cursor:pointer; border-radius: 16px; padding: 13px 17px; font-weight: 900; font-size: 15px; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    }
+    .primary { background: linear-gradient(135deg, var(--brand), var(--brand-2)); color:white; }
+    .secondary { background:#fff; color:var(--brand); border:1px solid var(--line); }
+    .ghost { background: transparent; color: var(--muted); border: 1px dashed var(--line); }
+    .notice { padding: 13px 15px; border-radius: 16px; background: #fff7ed; color: #7c2d12; border: 1px solid #fed7aa; margin: 12px 0; }
+    .ok { background: #ecfdf5; color:#065f46; border-color:#a7f3d0; }
+    #summary { white-space: pre-wrap; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; background:#0f172a; color:#e5edf8; padding:16px; border-radius:16px; overflow:auto; max-height: 520px; }
+    .small { font-size: 13px; color: var(--muted); }
+    footer { color: var(--muted); font-size: 13px; padding: 26px 0 44px; }
+    @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } .rank-row { grid-template-columns: 1fr; } .actions button, .actions .button { width:100%; } }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <div class="pill">PhAI 共學圈｜七月主題興趣調查</div>
+    <h1>你想在七月聽到哪些 AI × 物理教學分享？</h1>
+    <p class="lead">這份調查用來了解社群夥伴最想交流的主題，並協助我們邀請有實作經驗的老師來分享。填寫約 3–5 分鐘。</p>
+    <div class="meta">
+      <span>對象：物理教師 / 自然科教師 / AI 教學實作者</span>
+      <span>用途：主題排序、邀請講者、規劃共學活動</span>
+      <span>建議：可匿名填寫</span>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <form id="surveyForm">
+      <fieldset>
+        <legend>一、基本背景</legend>
+        <label for="name">稱呼（可匿名）</label>
+        <input id="name" name="稱呼" type="text" placeholder="例如：王老師 / 匿名 / 高中物理教師" />
+
+        <div class="grid">
+          <div>
+            <label for="role">你的主要角色</label>
+            <select id="role" name="主要角色">
+              <option value="">請選擇</option>
+              <option>高中物理教師</option>
+              <option>國中自然教師</option>
+              <option>大學 / 師培端教師</option>
+              <option>補教 / 自學 / 教材工作者</option>
+              <option>學生 / 研究生</option>
+              <option>其他</option>
+            </select>
+          </div>
+          <div>
+            <label for="aiLevel">AI 教學使用經驗</label>
+            <select id="aiLevel" name="AI 經驗">
+              <option value="">請選擇</option>
+              <option>剛開始觀望</option>
+              <option>偶爾用 ChatGPT / Claude / Gemini 備課</option>
+              <option>已在課堂或評量中嘗試</option>
+              <option>已做出可分享的教學流程或工具</option>
+              <option>我主要想學，不一定自己實作</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>二、你最感興趣的主題</legend>
+        <p class="hint">可複選。請選你真的會想參加或討論的主題。</p>
+        <div class="choices">
+          <label class="choice"><input type="checkbox" name="感興趣主題" value="AI 輔助備課：教案、講義、活動設計" />AI 輔助備課：教案、講義、活動設計</label>
+          <label class="choice"><input type="checkbox" name="感興趣主題" value="AI × 物理評量：出題、詳解、錯題練習、自動批改" />AI × 物理評量：出題、詳解、錯題練習、自動批改</label>
+          <label class="choice"><input type="checkbox" name="感興趣主題" value="AI 模擬與視覺化：Python、GeoGebra、PhET、數值模型" />AI 模擬與視覺化：Python、GeoGebra、PhET、數值模型</label>
+          <label class="choice"><input type="checkbox" name="感興趣主題" value="影片 / 圖像 / 動畫生成輔助物理概念解釋" />影片 / 圖像 / 動畫生成輔助物理概念解釋</label>
+          <label class="choice"><input type="checkbox" name="感興趣主題" value="學生探究實作：用 AI 協助提出假設、設計實驗、分析資料" />學生探究實作：用 AI 協助提出假設、設計實驗、分析資料</label>
+          <label class="choice"><input type="checkbox" name="感興趣主題" value="教師個人工作流：Obsidian、NotebookLM、Hermes、Agent、知識管理" />教師個人工作流：Obsidian、NotebookLM、Hermes、Agent、知識管理</label>
+          <label class="choice"><input type="checkbox" name="感興趣主題" value="本地端 AI / 開源模型 / 隱私與校園使用" />本地端 AI / 開源模型 / 隱私與校園使用</label>
+          <label class="choice"><input type="checkbox" name="感興趣主題" value="跨科專題：AI × 物理 × STEM / 資訊 / 數學" />跨科專題：AI × 物理 × STEM / 資訊 / 數學</label>
+          <label class="choice"><input type="checkbox" name="感興趣主題" value="AI 倫理、學習評量公平性、學生使用規範" />AI 倫理、學習評量公平性、學生使用規範</label>
+        </div>
+        <label for="otherTopics">其他想聽的主題</label>
+        <textarea id="otherTopics" name="其他主題" placeholder="例如：想看某位老師如何把 AI 用在段考複習、實驗報告批改、科展指導……"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>三、請排出你最想優先安排的 3 個方向</legend>
+        <p class="hint">若不確定可以空白。這會幫我們決定七月邀請講者的優先順序。</p>
+        <div class="ranking">
+          <div class="rank-row"><label for="rank1">第一優先</label><input id="rank1" name="第一優先" type="text" placeholder="例如：AI × 物理評量" /></div>
+          <div class="rank-row"><label for="rank2">第二優先</label><input id="rank2" name="第二優先" type="text" placeholder="例如：學生探究實作" /></div>
+          <div class="rank-row"><label for="rank3">第三優先</label><input id="rank3" name="第三優先" type="text" placeholder="例如：本地端 AI" /></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>四、你喜歡的分享形式</legend>
+        <div class="choices">
+          <label class="choice"><input type="checkbox" name="分享形式" value="30–40 分鐘案例分享 + Q&A" />30–40 分鐘案例分享 + Q&A</label>
+          <label class="choice"><input type="checkbox" name="分享形式" value="實作工作坊：跟著做一個小工具 / 小活動" />實作工作坊：跟著做一個小工具 / 小活動</label>
+          <label class="choice"><input type="checkbox" name="分享形式" value="講師對談：兩三位老師比較不同做法" />講師對談：兩三位老師比較不同做法</label>
+          <label class="choice"><input type="checkbox" name="分享形式" value="社群共備：大家帶一個問題一起改成教學活動" />社群共備：大家帶一個問題一起改成教學活動</label>
+          <label class="choice"><input type="checkbox" name="分享形式" value="短 Demo：每人 5 分鐘展示一個 AI 教學用法" />短 Demo：每人 5 分鐘展示一個 AI 教學用法</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>五、你是否願意分享或推薦講者？</legend>
+        <label for="shareExperience">你自己是否有可分享的 AI × 物理教學經驗？</label>
+        <textarea id="shareExperience" name="可分享經驗" placeholder="可以簡短寫：我做過什麼、適合分享幾分鐘、需要哪些協助。若沒有也可空白。"></textarea>
+
+        <label for="recommendSpeaker">你推薦哪位老師 / 夥伴來分享？</label>
+        <textarea id="recommendSpeaker" name="推薦講者" placeholder="可填姓名、專長、你希望他/她分享的主題。若涉及私人聯絡方式，請不要填在這裡，交給管理者私下確認。"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>六、時間與參與偏好</legend>
+        <div class="choices">
+          <label class="choice"><input type="checkbox" name="參與偏好" value="週三 21:30–22:30 可以" />週三 21:30–22:30 可以</label>
+          <label class="choice"><input type="checkbox" name="參與偏好" value="希望有錄影 / 事後摘要" />希望有錄影 / 事後摘要</label>
+          <label class="choice"><input type="checkbox" name="參與偏好" value="希望活動後有一週討論串" />希望活動後有一週討論串</label>
+          <label class="choice"><input type="checkbox" name="參與偏好" value="希望有可下載講義 / 範例檔" />希望有可下載講義 / 範例檔</label>
+          <label class="choice"><input type="checkbox" name="參與偏好" value="希望有初學者友善場" />希望有初學者友善場</label>
+        </div>
+        <label for="note">其他建議</label>
+        <textarea id="note" name="其他建議" placeholder="任何對七月主題、社群互動、分享節奏的建議都歡迎。"></textarea>
+      </fieldset>
+
+      <div class="notice">
+        <strong>送出方式說明：</strong>這是一份公開快速版調查頁。按下「產生回覆」後，系統會在你的裝置產生一段回覆文字；請複製後貼給 PhAI 社群管理者，或使用分享按鈕送出。此頁不會自動收集個資到伺服器。
+      </div>
+      <div class="actions">
+        <button class="primary" type="button" id="generateBtn">產生回覆摘要</button>
+        <button class="secondary" type="button" id="copyBtn" disabled>複製回覆</button>
+        <button class="secondary" type="button" id="shareBtn" disabled>手機分享</button>
+        <button class="ghost" type="reset">清除重填</button>
+      </div>
+    </form>
+
+    <section class="panel" id="resultPanel" hidden>
+      <h2>你的回覆摘要</h2>
+      <p class="small">請複製以下內容貼給 PhAI 管理者，或用手機分享。</p>
+      <pre id="summary"></pre>
+    </section>
+
+    <section class="panel">
+      <h2>給管理者的整理建議</h2>
+      <p>回收後可用以下欄位快速整理：</p>
+      <ul>
+        <li>主題熱度：各主題被勾選次數。</li>
+        <li>第一優先：最適合七月第一場或第二場。</li>
+        <li>可邀請講者：推薦名單與實作經驗。</li>
+        <li>活動形式：案例分享、工作坊、短 Demo、社群共備的比例。</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>PhAI 共學圈內部調查草案｜請勿填寫學生個資、私人聯絡方式或未授權公開的 Drive / 錄影連結。</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('surveyForm');
+    const generateBtn = document.getElementById('generateBtn');
+    const copyBtn = document.getElementById('copyBtn');
+    const shareBtn = document.getElementById('shareBtn');
+    const resultPanel = document.getElementById('resultPanel');
+    const summaryEl = document.getElementById('summary');
+    let latestSummary = '';
+
+    function valuesByName(name) {
+      return Array.from(form.querySelectorAll(`[name="${CSS.escape(name)}"]:checked`)).map(el => el.value);
+    }
+    function value(id) {
+      return (document.getElementById(id)?.value || '').trim();
+    }
+    function line(label, content) {
+      const text = Array.isArray(content) ? (content.length ? content.join('、') : '未填') : (content || '未填');
+      return `- ${label}：${text}`;
+    }
+    function buildSummary() {
+      const now = new Date();
+      return [
+        '# PhAI 七月主題興趣調查回覆',
+        `填寫時間：${now.toLocaleString('zh-TW')}`,
+        '',
+        '## 基本背景',
+        line('稱呼', value('name') || '匿名'),
+        line('主要角色', value('role')),
+        line('AI 教學使用經驗', value('aiLevel')),
+        '',
+        '## 感興趣主題',
+        line('勾選主題', valuesByName('感興趣主題')),
+        line('其他主題', value('otherTopics')),
+        '',
+        '## 優先方向',
+        line('第一優先', value('rank1')),
+        line('第二優先', value('rank2')),
+        line('第三優先', value('rank3')),
+        '',
+        '## 分享形式偏好',
+        line('分享形式', valuesByName('分享形式')),
+        '',
+        '## 分享 / 講者推薦',
+        line('可分享經驗', value('shareExperience')),
+        line('推薦講者', value('recommendSpeaker')),
+        '',
+        '## 時間與參與偏好',
+        line('參與偏好', valuesByName('參與偏好')),
+        line('其他建議', value('note'))
+      ].join('\n');
+    }
+    generateBtn.addEventListener('click', () => {
+      latestSummary = buildSummary();
+      summaryEl.textContent = latestSummary;
+      resultPanel.hidden = false;
+      copyBtn.disabled = false;
+      shareBtn.disabled = false;
+      resultPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    copyBtn.addEventListener('click', async () => {
+      if (!latestSummary) return;
+      await navigator.clipboard.writeText(latestSummary);
+      copyBtn.textContent = '已複製 ✓';
+      setTimeout(() => copyBtn.textContent = '複製回覆', 1600);
+    });
+    shareBtn.addEventListener('click', async () => {
+      if (!latestSummary) return;
+      if (navigator.share) {
+        await navigator.share({ title: 'PhAI 七月主題興趣調查回覆', text: latestSummary });
+      } else {
+        await navigator.clipboard.writeText(latestSummary);
+        alert('此瀏覽器不支援分享，已改為複製回覆。');
+      }
+    });
+  </script>
+</body>
+</html>

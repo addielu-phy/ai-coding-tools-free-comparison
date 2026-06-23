@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>祈燁期末考數學自學練習｜3-4～4-3</title>
+  <meta name="description" content="祈燁期末考數學自學練習網站：南一數學二下 3-4、3-5、4-1、4-2、4-3，支援選擇題點選判讀、詳解、錯題加強、不重複隨機與下一題。" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip" href="#practice">跳到練習</a>
+  <header class="hero">
+    <nav class="nav"><a href="../../webpages/grade8-learning-resources/">← 國二學習資源</a><a href="../../webpages/">所有網頁總覽</a></nav>
+    <div class="hero-grid">
+      <section>
+        <p class="eyebrow">Drive-first｜期末考數學 3-4～4-3</p>
+        <h1>祈燁期末考數學自學練習</h1>
+        <p class="lead">範圍對應官方 6/29 數學：3-4、3-5、4-1、4-2、4-3。選擇題可直接點 A/B/C/D，系統會立刻判斷對錯、顯示詳解，並提供「下一題」。同一輪隨機出題不重複，答對過的題目會先排除，錯題會進入錯題加強。</p>
+        <p class="source-note">題庫依 Google Drive 確認版本：數學2下段考試題卷 PDF 3-5～4-3、3-1～3-4 與課習進階卷整理；公開版採同範圍／同題型／同考點改寫練習，不逐字公開原 PDF 題面。</p>
+      </section>
+      <aside class="plan-card"><h2>考前建議</h2><ol><li>先做「期末模擬選擇」15 題，抓常見陷阱。</li><li>卡住就切到「3-5邊角關係」或「4-3特殊四邊形」。</li><li>答錯題不要重刷全部，改用「只練錯題」。</li><li>最後只記起手式：三角形不等式、平行四邊形性質、菱形/矩形/梯形面積。</li></ol></aside>
+    </div>
+  </header>
+  <main id="practice" class="app">
+    <section class="stats" aria-label="做答統計"><div><strong id="statAnswered">0</strong><span>做答題數</span></div><div><strong id="statCorrect">0</strong><span>答對題數</span></div><div><strong id="statWrong">0</strong><span>答錯題數</span></div><div><strong id="statRate">0%</strong><span>答對率</span></div></section>
+    <section class="toolbar" aria-label="練習設定"><label>科目<select id="subjectSelect"></select></label><label>題型<select id="typeSelect"></select></label><label>練習模式<select id="modeSelect"><option value="all">全部題庫隨機</option><option value="wrong">只練錯題</option></select></label><button id="newQuestion" class="primary">抽一題</button><button id="resetStats">清除統計</button></section>
+    <section class="quiz-card" aria-live="polite"><div class="quiz-meta"><span id="qSubject"></span><span id="qType"></span><span id="qSkill"></span></div><h2 id="qStem">按「抽一題」開始。</h2><div id="choices" class="choices"></div><div id="answerPanel" class="answer-panel" hidden><p id="qFeedback" class="feedback" hidden></p><p class="answer"><b>答案：</b><span id="qAnswer"></span></p><p><b>詳解：</b><span id="qExplanation"></span></p><p class="source"><b>來源層級：</b><span id="qSource"></span></p></div><div class="actions"><button id="revealAnswer">翻答案與詳解</button><button id="markCorrect" class="ok" disabled>我答對</button><button id="markWrong" class="bad" disabled>我答錯</button><button id="nextQuestion" type="button" class="primary next" hidden disabled>下一題</button></div></section>
+    <section class="wrong-box"><div><h2>錯題加強</h2><p>這裡只存在祈燁目前這台瀏覽器的 localStorage，不會上傳任何個資或作答紀錄。</p></div><div id="wrongList" class="wrong-list"></div></section>
+  </main>
+  <footer>祈燁期末考數學自學練習｜南一數學二下 3-4、3-5、4-1、4-2、4-3｜題庫 107 題｜更新 2026-06-23</footer>
+  <script src="./questions.js"></script><script src="./app.js"></script>
+</body></html>

@@ -163,8 +163,9 @@
         <h2>建議使用順序</h2>
         <ol>
           <li>先看「錯題診斷」找弱點。</li>
+          <li>數學用 3-4～4-3 期末自學站練幾何性質、三角形邊角與特殊四邊形。</li>
           <li>理化用第 5、6 章與浮力／摩擦力題庫練核心觀念。</li>
-          <li>老師可從「教師端」查看國二下理化期末自學評量全班紀錄。</li>
+          <li>公民用第 5、6 章自學站練行政救濟與兒少權益關鍵詞。</li>
           <li>國文先做期末注音國字／注釋自學評量，再用課文翻卡每天短練。</li>
         </ol>
       </aside>
@@ -181,9 +182,11 @@
     <section class="route" aria-label="快速學習路線">
       <a class="route-card" href="#subject-綜合診斷"><b>① 綜合診斷</b><span>錯題診斷、逐題詳解、7 天補強。</span></a>
       <a class="route-card" href="#subject-自然理化"><b>② 自然理化</b><span>學習重點、互動題庫、自學評量、教師端、會考複習。</span></a>
-      <a class="route-card" href="#subject-國文"><b>③ 國文</b><span>期末注音國字／注釋自學評量，加上二下課文翻卡。</span></a>
-      <a class="route-card" href="#subject-英文"><b>④ 英文</b><span>單字翻卡、四選一與拼寫填空。</span></a>
-      <a class="route-card" href="#subject-備用入口"><b>⑤ 備用入口</b><span>舊連結與重新導向頁集中保存。</span></a>
+      <a class="route-card" href="#subject-數學"><b>③ 數學</b><span>3-4～4-3 期末自學站、錯題加強與下一題。</span></a>
+      <a class="route-card" href="#subject-公民"><b>④ 公民</b><span>第 5、6 章期末自學站，練行政法規與兒少權益。</span></a>
+      <a class="route-card" href="#subject-國文"><b>⑤ 國文</b><span>期末注音國字／注釋自學評量，加上二下課文翻卡。</span></a>
+      <a class="route-card" href="#subject-英文"><b>⑥ 英文</b><span>單字翻卡、四選一與拼寫填空。</span></a>
+      <a class="route-card" href="#subject-備用入口"><b>⑦ 備用入口</b><span>舊連結與重新導向頁集中保存。</span></a>
     </section>
 
     <section class="controls" aria-label="搜尋與篩選">
@@ -254,6 +257,15 @@
         status: '此 repo 公開',
         href: '../../study/qiyue-grade8-final-civics-self-study-2026-06/',
         tags: ['祈燁', '期末考', '公民', '行政法規', '行政救濟', '兒少權益', '錯題加強']
+      },
+      {
+        title: '祈燁期末考數學自學練習｜3-4～4-3',
+        description: '依 Drive 數學2下段考試題卷 3-5～4-3、3-1～3-4 與課習進階卷製作，共 107 題：選擇題可直接點答案、自動判讀、顯示詳解，並支援不重複隨機、答對排除、錯題加強與下一題。公開版採同範圍／同題型改寫，不逐字公開原 PDF 題面。',
+        subject: '數學',
+        type: '自學評量',
+        status: '此 repo 公開',
+        href: '../../study/qiyue-grade8-final-math-self-study-2026-06/',
+        tags: ['祈燁', '期末考', '數學', '3-4', '3-5', '4-1', '4-2', '4-3', '錯題加強']
       },
       {
         title: '考卷錯題診斷與 7 天補強練習',
@@ -437,17 +449,18 @@
       }
     ];
 
-    const SUBJECT_ORDER = ['綜合診斷', '自然理化', '公民', '國文', '英文', '備用入口'];
+    const SUBJECT_ORDER = ['綜合診斷', '自然理化', '數學', '公民', '國文', '英文', '備用入口'];
     const SUBJECT_DESCRIPTIONS = {
       '綜合診斷': '跨科錯題診斷、逐題詳解與補強計畫，先找出學習弱點。',
       '自然理化': '國二下理化第 5、6 章、會考自然物理、自學評量與教師端。',
+      '數學': '國二下數學 3-4、3-5、4-1、4-2、4-3 期末考自學評量、幾何性質、三角形邊角與特殊四邊形。',
       '公民': '國二下公民行政法規與行政救濟、兒少權益、少年事件處理法等期末考自學評量。',
       '國文': '國文二下期末注音國字、注釋自學評量與課文名詞翻卡，適合每天 5–10 分鐘短練。',
       '英文': '英文單字與片語翻卡、四選一、拼寫填空。',
       '備用入口': '歷史連結與 redirect/stub 頁面，平常優先使用上方新版資源。'
     };
     const TYPE_ORDER = ['錯題診斷 / 讀書計畫', '逐題詳解', '學習重點 / 例題', '互動題庫', '自學評量', '教師端 / 全班成績', '會考複習', '語文翻卡 / 測驗', '英語翻卡 / 測驗', '舊入口 / 重新導向'];
-    const QUICK_FILTERS = ['自然理化', '互動題庫', '自學評量', '教師端', '會考複習', '公民', '國文', '翻卡', '錯題診斷', '英文', '備用入口'];
+    const QUICK_FILTERS = ['自然理化', '互動題庫', '自學評量', '教師端', '會考複習', '數學', '公民', '國文', '翻卡', '錯題診斷', '英文', '備用入口'];
 
     const searchInput = document.getElementById('search');
     const subjectFilter = document.getElementById('subjectFilter');

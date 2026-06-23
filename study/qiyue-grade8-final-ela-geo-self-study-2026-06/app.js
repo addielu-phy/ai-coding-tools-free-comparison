@@ -1,6 +1,8 @@
 const STORE_KEY = 'qiyue-ela-geo-self-study-v1';
 let current = null;
 let revealed = false;
+let currentScored = false;
+let selectedChoiceKey = '';
 const $ = (id) => document.getElementById(id);
 const byId = new Map(QUESTIONS.map((q) => [q.id, q]));
 const state = loadState();
@@ -48,6 +50,14 @@ function smallHash(text) {
     hash = (Math.imul(31, hash) + text.charCodeAt(i)) | 0;
   }
   return (hash >>> 0).toString(36);
+}
+
+function isChoiceQuestion(q) {
+  return Array.isArray(q?.choices) && q.choices.length > 0;
+}
+
+function normalizeAnswer(value) {
+  return String(value || '').trim().toUpperCase();
 }
 
 function initControls() {
@@ -155,6 +165,8 @@ function pickQuestion() {
   if (!list.length) {
     current = null;
     revealed = false;
+    currentScored = false;
+    selectedChoiceKey = '';
     $('qSubject').textContent = '沒有題目';
     $('qType').textContent = '';
     $('qSkill').textContent = '';
@@ -163,14 +175,17 @@ function pickQuestion() {
         ? '目前沒有符合條件的錯題。先回全部題庫做幾題。'
         : '目前篩選沒有題目，請換科目或題型。';
     $('choices').innerHTML = '';
-    $('answerPanel').hidden = true;
+    resetAnswerPanel();
     toggleMark(false);
+    $('revealAnswer').disabled = true;
     return;
   }
 
   current = nextFromQueue(list);
   if (!current) return;
   revealed = false;
+  currentScored = false;
+  selectedChoiceKey = '';
   state.seen[current.id] = (state.seen[current.id] || 0) + 1;
   localStorage.setItem(STORE_KEY, JSON.stringify(state));
 
@@ -178,25 +193,128 @@ function pickQuestion() {
   $('qType').textContent = current.type;
   $('qSkill').textContent = current.skill || '自學練習';
   $('qStem').textContent = current.stem;
-  $('choices').innerHTML =
-    (current.choices || [])
-      .map((c) => `<div class="choice"><b>${escapeHtml(c.key)}</b>${escapeHtml(c.text)}</div>`)
-      .join('') || '<div class="choice">這題是翻卡題：先在心裡或紙上寫答案，再翻答案。</div>';
+  renderChoices();
+  resetAnswerPanel();
+
+  if (isChoiceQuestion(current)) {
+    $('revealAnswer').textContent = '直接點選項作答';
+    $('revealAnswer').disabled = true;
+    toggleMark(false);
+  } else {
+    $('revealAnswer').textContent = '翻答案與詳解';
+    $('revealAnswer').disabled = false;
+    toggleMark(false);
+  }
+}
+
+function renderChoices() {
+  if (!isChoiceQuestion(current)) {
+    $('choices').innerHTML = '<div class="choice">這題是翻卡題：先在心裡或紙上寫答案，再翻答案。</div>';
+    return;
+  }
+
+  $('choices').innerHTML = current.choices
+    .map(
+      (c) => `<button type="button" class="choice choice-button" data-choice-key="${escapeHtml(c.key)}">
+        <b>${escapeHtml(c.key)}</b>${escapeHtml(c.text)}
+      </button>`
+    )
+    .join('');
+
+  document.querySelectorAll('.choice-button').forEach((btn) => {
+    btn.addEventListener('click', () => answerChoice(btn.dataset.choiceKey));
+  });
+}
+
+function answerChoice(key) {
+  if (!current || !isChoiceQuestion(current) || currentScored) return;
+  selectedChoiceKey = key;
+  const ok = normalizeAnswer(key) === normalizeAnswer(current.answer);
+  revealed = true;
+  scoreCurrent(ok, false);
+  showAnswer(ok);
+  updateChoiceButtons();
+  toggleMark(false);
+}
+
+function resetAnswerPanel() {
   $('answerPanel').hidden = true;
   $('qAnswer').textContent = '';
   $('qExplanation').textContent = '';
   $('qSource').textContent = '';
-  toggleMark(false);
+  if ($('qFeedback')) {
+    $('qFeedback').hidden = true;
+    $('qFeedback').textContent = '';
+    $('qFeedback').className = 'feedback';
+  }
 }
 
 function reveal() {
   if (!current) return;
   revealed = true;
+
+  if (isChoiceQuestion(current)) {
+    // 選擇題若直接看答案，這題不計分，避免看完答案再作答造成統計失真。
+    currentScored = true;
+    showAnswer(null, '已顯示答案，這題不計分；請按「抽一題」繼續。');
+    updateChoiceButtons();
+    toggleMark(false);
+    return;
+  }
+
+  showAnswer(null);
+  toggleMark(true);
+}
+
+function showAnswer(result, customFeedback = '') {
   $('answerPanel').hidden = false;
-  $('qAnswer').textContent = current.answer;
+
+  if (result === true) {
+    $('qAnswer').textContent = `答對！正確答案：${current.answer}`;
+  } else if (result === false) {
+    $('qAnswer').textContent = `答錯了。你選 ${selectedChoiceKey}，正確答案：${current.answer}`;
+  } else {
+    $('qAnswer').textContent = current.answer;
+  }
+
   $('qExplanation').textContent = current.explanation;
   $('qSource').textContent = current.source;
-  toggleMark(true);
+
+  const feedback = $('qFeedback');
+  if (!feedback) return;
+  if (customFeedback) {
+    feedback.textContent = customFeedback;
+    feedback.className = 'feedback peek';
+    feedback.hidden = false;
+  } else if (result === true) {
+    feedback.textContent = '答對 ✅ 這題已列為答對，之後會先練還沒答對的題目。';
+    feedback.className = 'feedback ok';
+    feedback.hidden = false;
+  } else if (result === false) {
+    feedback.textContent = '答錯，再看詳解抓關鍵字。這題會進入錯題加強。';
+    feedback.className = 'feedback bad';
+    feedback.hidden = false;
+  } else {
+    feedback.hidden = true;
+    feedback.textContent = '';
+    feedback.className = 'feedback';
+  }
+}
+
+function updateChoiceButtons() {
+  if (!current || !isChoiceQuestion(current)) return;
+  const correctKey = normalizeAnswer(current.answer);
+  document.querySelectorAll('.choice-button').forEach((btn) => {
+    const key = normalizeAnswer(btn.dataset.choiceKey);
+    const selected = normalizeAnswer(selectedChoiceKey) === key;
+    const correct = key === correctKey;
+    btn.disabled = currentScored || revealed;
+    btn.classList.toggle('selected', selected);
+    btn.classList.toggle('correct', revealed && correct);
+    btn.classList.toggle('wrong', revealed && selected && !correct);
+    if (revealed && correct) btn.setAttribute('aria-label', `${btn.textContent.trim()}，正確答案`);
+    if (revealed && selected && !correct) btn.setAttribute('aria-label', `${btn.textContent.trim()}，你的答案，答錯`);
+  });
 }
 
 function toggleMark(on) {
@@ -204,8 +322,9 @@ function toggleMark(on) {
   $('markWrong').disabled = !on;
 }
 
-function mark(ok) {
-  if (!current || !revealed) return;
+function scoreCurrent(ok, advance) {
+  if (!current || currentScored) return;
+  currentScored = true;
   state.answered++;
 
   if (ok) {
@@ -219,7 +338,12 @@ function mark(ok) {
   }
 
   save();
-  pickQuestion();
+  if (advance) pickQuestion();
+}
+
+function mark(ok) {
+  if (!current || !revealed || isChoiceQuestion(current)) return;
+  scoreCurrent(ok, true);
 }
 
 function renderStats() {

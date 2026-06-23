@@ -73,6 +73,8 @@ function initControls() {
   $('typeSelect').addEventListener('change', pickQuestion);
   $('modeSelect').addEventListener('change', pickQuestion);
   $('newQuestion').addEventListener('click', pickQuestion);
+  const nextButton = $('nextQuestion');
+  if (nextButton) nextButton.addEventListener('click', pickQuestion);
   $('revealAnswer').addEventListener('click', reveal);
   $('markCorrect').addEventListener('click', () => mark(true));
   $('markWrong').addEventListener('click', () => mark(false));
@@ -160,6 +162,20 @@ function pruneQuestionFromQueues(id) {
   }
 }
 
+function showNextQuestionButton() {
+  const btn = $('nextQuestion');
+  if (!btn) return;
+  btn.hidden = false;
+  btn.disabled = false;
+}
+
+function hideNextQuestionButton() {
+  const btn = $('nextQuestion');
+  if (!btn) return;
+  btn.hidden = true;
+  btn.disabled = true;
+}
+
 function pickQuestion() {
   const list = filtered();
   if (!list.length) {
@@ -177,6 +193,7 @@ function pickQuestion() {
     $('choices').innerHTML = '';
     resetAnswerPanel();
     toggleMark(false);
+    hideNextQuestionButton();
     $('revealAnswer').disabled = true;
     return;
   }
@@ -195,6 +212,7 @@ function pickQuestion() {
   $('qStem').textContent = current.stem;
   renderChoices();
   resetAnswerPanel();
+  hideNextQuestionButton();
 
   if (isChoiceQuestion(current)) {
     $('revealAnswer').textContent = '直接點選項作答';
@@ -235,6 +253,7 @@ function answerChoice(key) {
   showAnswer(ok);
   updateChoiceButtons();
   toggleMark(false);
+  showNextQuestionButton();
 }
 
 function resetAnswerPanel() {
@@ -256,14 +275,16 @@ function reveal() {
   if (isChoiceQuestion(current)) {
     // 選擇題若直接看答案，這題不計分，避免看完答案再作答造成統計失真。
     currentScored = true;
-    showAnswer(null, '已顯示答案，這題不計分；請按「抽一題」繼續。');
+    showAnswer(null, '已顯示答案，這題不計分；請按「下一題」繼續。');
     updateChoiceButtons();
     toggleMark(false);
+    showNextQuestionButton();
     return;
   }
 
   showAnswer(null);
   toggleMark(true);
+  showNextQuestionButton();
 }
 
 function showAnswer(result, customFeedback = '') {

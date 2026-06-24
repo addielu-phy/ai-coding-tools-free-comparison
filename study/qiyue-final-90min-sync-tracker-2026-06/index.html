@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>祈燁期末複習 90 分鐘檢核｜易讀版</title>
-  <meta name="description" content="祈燁國二下期末考每日至少 90 分鐘複習檢核。四段式操作、18 個 5 分鐘小段、各科講義/課後精華錄、單元卷、段考卷、考古題檢核，支援 Firebase/Firestore 同步。" />
+  <meta name="description" content="祈燁國二下期末考每日至少 90 分鐘複習檢核。四段式操作、18 個 5 分鐘小段、各科講義/課後精華錄、單元卷、段考卷、考古題檢核與第一週資料缺口巡檢，支援 Firebase/Firestore 同步。" />
   <style>
     :root {
       color-scheme: light;
@@ -99,11 +99,22 @@
     .week-top b { font-size: 1rem; }
     .week-top span { color: var(--brand); font-weight: 1000; font-size: .86rem; }
     .week-day p { margin: 0; color: var(--muted); font-size: .86rem; font-weight: 760; }
+    .gap-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .gap-card { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 12px; display: grid; gap: 9px; }
+    .gap-card h3 { margin-bottom: 0; }
+    .gap-card p { margin: 0; color: var(--muted); font-size: .84rem; font-weight: 760; }
+    .gap-list { display: grid; gap: 7px; }
+    .gap-item { display: grid; grid-template-columns: 92px 1fr; gap: 8px; align-items: start; border: 1px solid var(--line); border-radius: 13px; padding: 9px; background: #fffaf0; }
+    .gap-item b { font-size: .86rem; }
+    .gap-item span { color: var(--muted); font-size: .83rem; font-weight: 760; }
+    .gap-item.ok { background: #ecfdf3; border-color: #bbf7d0; }
+    .gap-item.warn { background: #fff7ed; border-color: #fed7aa; }
+    .gap-item.missing { background: #fff1f2; border-color: #fecdd3; }
     footer { color: var(--muted); padding: 18px 0 36px; font-size: .86rem; }
     @media (max-width: 820px) {
       .nav { align-items: flex-start; flex-direction: column; padding: 10px 0; }
       .nav-links { width: 100%; }
-      .simple-steps, .controls, .phase-grid, .material-grid, .notes-grid, .week-grid { grid-template-columns: 1fr; }
+      .simple-steps, .controls, .phase-grid, .material-grid, .notes-grid, .week-grid, .gap-grid { grid-template-columns: 1fr; }
       .mini-metrics { grid-template-columns: 1fr 1fr; }
       .card { padding: 14px; }
     }
@@ -189,6 +200,12 @@
       <div id="materialGrid" class="material-grid" aria-label="各科資料檢核卡片"></div>
     </section>
 
+    <section class="card" id="gapAudit">
+      <h2>90 分鐘第一週資料缺口巡檢</h2>
+      <p class="subtitle">本輪只公開低敏狀態：逐科檢查四類來源是否已可用、待切章節或待補。私人 Drive URL、完整檔名、原卷照片、題號與答案不放在公開頁。</p>
+      <div id="gapGrid" class="gap-grid" aria-label="第一週資料缺口巡檢表"></div>
+    </section>
+
     <section class="card">
       <h2>家長確認</h2>
       <div class="notes-grid">
@@ -213,7 +230,7 @@
 
   <footer>
     <p>資料同步說明：未設定 Firebase 時使用 LocalStorageAdapter，只存在本機瀏覽器；設定 Firestore 後切換為 FirestoreAdapter。請不要輸入完整姓名、私人題本照片或敏感個資。</p>
-    <p>版本：qiyue-final-90min-sync-v1.2｜更新：2026-06-24｜weekly-parent-report-v1.2。</p>
+    <p>版本：qiyue-final-90min-sync-v1.3｜更新：2026-06-24｜weekly-parent-report-v1.2｜first-week-gap-audit-v1.3。</p>
   </footer>
 
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
@@ -221,7 +238,7 @@
   <script src="./firebase-config.js"></script>
   <script>
     const CLIENT_VERSION = 'qiyue-final-90min-sync-v1';
-    const PAGE_MARKER = 'weekly-parent-report-v1.2';
+    const PAGE_MARKER = 'first-week-gap-audit-v1.3';
     const STORE_KEY = 'qiyue-final-90min-sync-tracker-v1';
     const TARGET_MINUTES = 90;
     const CHUNK_MINUTES = 5;
@@ -258,6 +275,96 @@
       ['週五', '收束弱點：只挑一個 A-F 錯因，避免亂刷題。'],
       ['週六', '混合短測：最低 3 題，標準 8 題，仍維持 90 分鐘節奏。'],
       ['週日', '低敏摘要：整理一科、一錯因、下週一個回測入口。']
+    ];
+    const GAP_AUDIT = [
+      {
+        subject: '國文',
+        note: 'Drive confirmed source 可用；公開頁不列私人檔名，仍待實際錯題/A-F 回填。',
+        items: [
+          ['講義/精華', '可用：L7-L10、自學選文與老師講義對照', 'ok'],
+          ['單元卷', '可用：語文基礎／階梯式測驗待切本次範圍', 'ok'],
+          ['段考卷', '可用：2下段考練習待切第三次段考', 'warn'],
+          ['考古題', '待補本校題；先用相近練習與錯因回測', 'warn']
+        ],
+        next: '若有題號或 A-F，先做一題回測。'
+      },
+      {
+        subject: '英文',
+        note: 'Drive confirmed source 可用；B4 U5-U6 與課外閱讀仍以章節/題組 gate 切分。',
+        items: [
+          ['講義/精華', '可用：課本／老師講義對照 U5-U6', 'ok'],
+          ['單元卷', '可用：2下平時測驗卷待切 U5-U6', 'ok'],
+          ['段考卷', '可用：2下段考練習待切第三次段考', 'warn'],
+          ['考古題', '待補本校題；公開翻卡只作相近暖身', 'warn']
+        ],
+        next: '先收一個單字/閱讀錯因，再排 D+1 回測。'
+      },
+      {
+        subject: '地理',
+        note: 'Drive confirmed source 可用；第5-6章仍以課後精華錄／段考卷／平時卷切 L05-L06。',
+        items: [
+          ['講義/精華', '可用：課後精華錄待切 L05-L06', 'ok'],
+          ['單元卷', '可用：平時測驗卷待切第5-6章', 'ok'],
+          ['段考卷', '可用：段考練習待切第三段', 'warn'],
+          ['考古題', '待補本校題；先做章節架構/地圖因果回測', 'warn']
+        ],
+        next: '補一張章節架構或一個地圖因果。'
+      },
+      {
+        subject: '數學',
+        note: 'Drive confirmed source 可用；3-5～4-3 為主，3-1～3-4 補 3-4。',
+        items: [
+          ['講義/精華', '可用：課本／講義對照 3-4～4-3', 'ok'],
+          ['單元卷', '可用：3-5～4-3 與 3-1～3-4 題卷', 'ok'],
+          ['段考卷', '可用：段考試題卷待切本次範圍', 'warn'],
+          ['考古題', '待補本校題；只做同範圍同題型', 'warn']
+        ],
+        next: '只挑最大洞一題，避免亂刷。'
+      },
+      {
+        subject: '理化',
+        note: 'Drive confirmed source 可用；第五～六章需從自然2下合檔切分，公開相近題只作補充。',
+        items: [
+          ['講義/精華', '可用：課本／講義對照第五～六章', 'ok'],
+          ['單元卷', '可用：自然2下平時測驗待切第五～六章', 'ok'],
+          ['段考卷', '可用：自然2下段考練習待切第三段', 'warn'],
+          ['考古題', '相近可用：外校公開題；不冒充本校題', 'warn']
+        ],
+        next: '先收公式/單位/適用情境一格。'
+      },
+      {
+        subject: '公民',
+        note: 'Drive confirmed source 可用；第5-6章需切 L05-L06 或第三段。',
+        items: [
+          ['講義/精華', '可用：課後精華錄待切 L05-L06', 'ok'],
+          ['單元卷', '可用：平時測驗卷待切第5-6章', 'ok'],
+          ['段考卷', '可用：段考練習待切第三段', 'warn'],
+          ['考古題', '待補本校題；先用關鍵詞/制度問答', 'warn']
+        ],
+        next: '先記 2 個關鍵詞，不猜題號。'
+      },
+      {
+        subject: '健康',
+        note: 'Drive 未見健康專用資料夾；不停止，改用官方範圍＋課本/講義。',
+        items: [
+          ['講義/精華', '待補：官方第三篇第1-2章＋課本/講義', 'warn'],
+          ['單元卷', '待補：若無卷，用關鍵詞問答模板', 'missing'],
+          ['段考卷', '待補：不以外網推測冒充版本題', 'missing'],
+          ['考古題', '待補：沒有本校題就留白', 'missing']
+        ],
+        next: '只做 2 個關鍵詞，不回外網亂找。'
+      },
+      {
+        subject: '歷史',
+        note: 'Drive confirmed source 可用；第5-6章以課後精華錄／段考卷／平時卷切 L05-L06。',
+        items: [
+          ['講義/精華', '可用：課後精華錄待切 L05-L06', 'ok'],
+          ['單元卷', '可用：平時測驗卷待切第5-6章', 'ok'],
+          ['段考卷', '可用：段考練習待切第三段', 'warn'],
+          ['考古題', '待補本校題；先用時間線與因果模板', 'warn']
+        ],
+        next: '只填時間線一列或一組原因→影響。'
+      }
     ];
     const $ = (id) => document.getElementById(id);
     const esc = (text) => String(text || '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
@@ -439,6 +546,14 @@
         return `<section class="week-day"><div class="week-top"><div><b>${esc(label)} ${esc(formatMonthDay(dayIso))}</b><p>${esc(hint)}</p></div><span>90 分鐘</span></div><label class="field">狀態<select data-kind="week-status" data-day="${esc(dayIso)}">${statuses.map(item => `<option value="${esc(item)}" ${item === status ? 'selected' : ''}>${esc(item)}</option>`).join('')}</select></label><label class="field">家長一句回報<textarea data-kind="week-report" data-day="${esc(dayIso)}" placeholder="${esc(defaultReport)}">${esc(report)}</textarea></label></section>`;
       }).join('');
     }
+    function renderGapAudit() {
+      $('gapGrid').innerHTML = GAP_AUDIT.map(subject => `
+        <section class="gap-card">
+          <div class="subject-title"><div><h3>${esc(subject.subject)}</h3><p>${esc(subject.note)}</p></div><span class="pill warn">巡檢</span></div>
+          <div class="gap-list">${subject.items.map(([label, text, mode]) => `<div class="gap-item ${esc(mode)}"><b>${esc(label)}</b><span>${esc(text)}</span></div>`).join('')}</div>
+          <p><strong>下一步：</strong>${esc(subject.next)}</p>
+        </section>`).join('');
+    }
     function updateMetrics() {
       const chunkKeys = buildChunks().map(c => key('chunk', c.id));
       const doneChunks = chunkKeys.filter(k => state.chunks[k]).length;
@@ -466,6 +581,7 @@
       renderMaterials();
       renderNotes();
       renderWeekReport();
+      renderGapAudit();
       updateMetrics();
     }
     function scheduleSave(pushCloud = true) {

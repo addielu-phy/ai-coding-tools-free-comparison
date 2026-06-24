@@ -93,11 +93,17 @@
     .mat.done { background: #ecfdf3; border-color: #bbf7d0; color: var(--good); }
     .link { color: var(--brand2); text-decoration: none; font-size: .9rem; font-weight: 950; }
     .notes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .week-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .week-day { display: grid; gap: 8px; background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 12px; }
+    .week-top { display: flex; justify-content: space-between; gap: 8px; align-items: flex-start; }
+    .week-top b { font-size: 1rem; }
+    .week-top span { color: var(--brand); font-weight: 1000; font-size: .86rem; }
+    .week-day p { margin: 0; color: var(--muted); font-size: .86rem; font-weight: 760; }
     footer { color: var(--muted); padding: 18px 0 36px; font-size: .86rem; }
     @media (max-width: 820px) {
       .nav { align-items: flex-start; flex-direction: column; padding: 10px 0; }
       .nav-links { width: 100%; }
-      .simple-steps, .controls, .phase-grid, .material-grid, .notes-grid { grid-template-columns: 1fr; }
+      .simple-steps, .controls, .phase-grid, .material-grid, .notes-grid, .week-grid { grid-template-columns: 1fr; }
       .mini-metrics { grid-template-columns: 1fr 1fr; }
       .card { padding: 14px; }
     }
@@ -194,11 +200,20 @@
         <button id="resetToday" class="btn warn" type="button">清除今日勾選</button>
       </div>
     </section>
+
+    <section class="card" id="weeklyReport">
+      <h2>週一～週日 90 分鐘家長一句回報</h2>
+      <p class="subtitle">這是穩定使用回合：每天仍是至少 90 分鐘，5 分鐘只當 18 格切段。沒有實際題號/A-F 時也可先填「先不知道」，不要編造題目或答案。</p>
+      <div id="weekGrid" class="week-grid" aria-label="本週每日 90 分鐘家長回報模板"></div>
+      <div class="sync-row" style="margin-top:12px">
+        <button id="copyWeekSummary" class="btn primary" type="button">複製本週 90 分鐘回報模板</button>
+      </div>
+    </section>
   </main>
 
   <footer>
     <p>資料同步說明：未設定 Firebase 時使用 LocalStorageAdapter，只存在本機瀏覽器；設定 Firestore 後切換為 FirestoreAdapter。請不要輸入完整姓名、私人題本照片或敏感個資。</p>
-    <p>版本：qiyue-final-90min-sync-v1.1｜更新：2026-06-24。</p>
+    <p>版本：qiyue-final-90min-sync-v1.2｜更新：2026-06-24｜weekly-parent-report-v1.2。</p>
   </footer>
 
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
@@ -206,6 +221,7 @@
   <script src="./firebase-config.js"></script>
   <script>
     const CLIENT_VERSION = 'qiyue-final-90min-sync-v1';
+    const PAGE_MARKER = 'weekly-parent-report-v1.2';
     const STORE_KEY = 'qiyue-final-90min-sync-tracker-v1';
     const TARGET_MINUTES = 90;
     const CHUNK_MINUTES = 5;
@@ -234,9 +250,19 @@
       ['geography', 'health', 'civics'],
       ['science', 'math', 'chinese']
     ];
+    const WEEK_DAYS = [
+      ['週一', '啟動週目標：選主攻 A/B，18 格以 90 分鐘為底線。'],
+      ['週二', 'D+1 回測：只回一題或一格，再補第二主攻科。'],
+      ['週三', '換科檢查：補尚未勾到的講義、單元卷或段考卷。'],
+      ['週四', 'D+3 延遲回測：回測週一最大卡點，不看答案重做。'],
+      ['週五', '收束弱點：只挑一個 A-F 錯因，避免亂刷題。'],
+      ['週六', '混合短測：最低 3 題，標準 8 題，仍維持 90 分鐘節奏。'],
+      ['週日', '低敏摘要：整理一科、一錯因、下週一個回測入口。']
+    ];
     const $ = (id) => document.getElementById(id);
     const esc = (text) => String(text || '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
     const todayISO = () => new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+    const toISODateLocal = (date) => new Date(date.getTime() - date.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
     let cloudDb = null;
     let cloudDoc = null;
     let cloudUnsub = null;
@@ -313,6 +339,23 @@
       const day = new Date(dateStr + 'T00:00:00').getDay();
       return ROTATION[day] || ROTATION[0];
     }
+    function addDaysISO(dateStr, offset) {
+      const date = new Date(dateStr + 'T00:00:00');
+      date.setDate(date.getDate() + offset);
+      return toISODateLocal(date);
+    }
+    function mondayISO(dateStr) {
+      const date = new Date(dateStr + 'T00:00:00');
+      const day = date.getDay() || 7;
+      date.setDate(date.getDate() - day + 1);
+      return toISODateLocal(date);
+    }
+    function weekDates() {
+      const monday = mondayISO(dateKey());
+      return WEEK_DAYS.map((_, idx) => addDaysISO(monday, idx));
+    }
+    function weekKey(dayIso, part) { return ['week', dayIso, part].join('|'); }
+    function formatMonthDay(dayIso) { return dayIso.slice(5).replace('-', '/'); }
     function buildChunks() {
       const focusA = $('focusA').value || dailyDefaults(dateKey())[0];
       const focusB = $('focusB').value || dailyDefaults(dateKey())[1];
@@ -386,6 +429,16 @@
       $('noteBlock').value = state.notes[nk] || '';
       $('reviewBlock').value = state.notes[rk] || '';
     }
+    function renderWeekReport() {
+      const statuses = ['待做', '已啟動', '達90分', '降載但不中斷', '需盧老師資料'];
+      const defaultReport = '今天完成 __/18 格；主攻A：__；主攻B：__；最大卡點：__；明天回測：__。';
+      $('weekGrid').innerHTML = weekDates().map((dayIso, idx) => {
+        const [label, hint] = WEEK_DAYS[idx];
+        const status = state.notes[weekKey(dayIso, 'status')] || '待做';
+        const report = state.notes[weekKey(dayIso, 'report')] || '';
+        return `<section class="week-day"><div class="week-top"><div><b>${esc(label)} ${esc(formatMonthDay(dayIso))}</b><p>${esc(hint)}</p></div><span>90 分鐘</span></div><label class="field">狀態<select data-kind="week-status" data-day="${esc(dayIso)}">${statuses.map(item => `<option value="${esc(item)}" ${item === status ? 'selected' : ''}>${esc(item)}</option>`).join('')}</select></label><label class="field">家長一句回報<textarea data-kind="week-report" data-day="${esc(dayIso)}" placeholder="${esc(defaultReport)}">${esc(report)}</textarea></label></section>`;
+      }).join('');
+    }
     function updateMetrics() {
       const chunkKeys = buildChunks().map(c => key('chunk', c.id));
       const doneChunks = chunkKeys.filter(k => state.chunks[k]).length;
@@ -412,6 +465,7 @@
       renderChunks();
       renderMaterials();
       renderNotes();
+      renderWeekReport();
       updateMetrics();
     }
     function scheduleSave(pushCloud = true) {
@@ -492,6 +546,16 @@
       });
       $('noteBlock').addEventListener('input', () => { state.notes[key('note', 'main')] = $('noteBlock').value; scheduleSave(); });
       $('reviewBlock').addEventListener('input', () => { state.notes[key('note', 'review')] = $('reviewBlock').value; scheduleSave(); });
+      $('weekGrid').addEventListener('change', (ev) => {
+        if (!ev.target.matches('[data-kind="week-status"]')) return;
+        state.notes[weekKey(ev.target.dataset.day, 'status')] = ev.target.value;
+        scheduleSave();
+      });
+      $('weekGrid').addEventListener('input', (ev) => {
+        if (!ev.target.matches('[data-kind="week-report"]')) return;
+        state.notes[weekKey(ev.target.dataset.day, 'report')] = ev.target.value;
+        scheduleSave();
+      });
       $('applyPlan').addEventListener('click', () => { if (activeSyncAdapter) activeSyncAdapter.subscribe(); });
       $('pushNow').addEventListener('click', () => { saveLocal(); if (activeSyncAdapter) activeSyncAdapter.save(); });
       $('copySummary').addEventListener('click', async () => {
@@ -500,6 +564,19 @@
         const minutes = doneChunks * CHUNK_MINUTES;
         const text = `祈燁 ${dateKey()} 複習回報：已完成 ${minutes}/90 分鐘（${doneChunks}/18 小段）。最大卡點：${$('noteBlock').value || '未填'}。明天回測：${$('reviewBlock').value || '未填'}。`;
         try { await navigator.clipboard.writeText(text); setSync('已複製今日回報', 'good'); }
+        catch { alert(text); }
+      });
+      $('copyWeekSummary').addEventListener('click', async () => {
+        const defaultReport = '今天完成 __/18 格；主攻A：__；主攻B：__；最大卡點：__；明天回測：__。';
+        const days = weekDates();
+        const lines = days.map((dayIso, idx) => {
+          const [label] = WEEK_DAYS[idx];
+          const status = state.notes[weekKey(dayIso, 'status')] || '待做';
+          const report = state.notes[weekKey(dayIso, 'report')] || defaultReport;
+          return `${label} ${formatMonthDay(dayIso)}｜${status}｜${report}`;
+        });
+        const text = `祈燁本週 90 分鐘回報模板（${formatMonthDay(days[0])}–${formatMonthDay(days[6])}）\n` + lines.join('\n');
+        try { await navigator.clipboard.writeText(text); setSync('已複製本週回報模板', 'good'); }
         catch { alert(text); }
       });
       $('resetToday').addEventListener('click', () => {

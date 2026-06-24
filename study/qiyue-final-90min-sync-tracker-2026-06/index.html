@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>祈燁期末複習 90 分鐘檢核｜易讀版</title>
-  <meta name="description" content="祈燁國二下期末考每日至少 90 分鐘複習檢核。四段式操作、18 個 5 分鐘小段、各科講義/課後精華錄、單元卷、段考卷、考古題檢核、第一週資料缺口巡檢、主攻 A/B 延遲回測、D0 理化＋數學啟動與 D+1 理化＋數學回測收斂欄，支援 Firebase/Firestore 同步。" />
+  <meta name="description" content="祈燁國二下期末考每日至少 90 分鐘複習檢核。四段式操作、18 個 5 分鐘小段、各科講義/課後精華錄、單元卷、段考卷、考古題檢核、第一週資料缺口巡檢、主攻 A/B 延遲回測、D0/D+1 理化＋數學銜接與 D+3 一洞延遲回測＋週末最低 3 題入口，支援 Firebase/Firestore 同步。" />
   <style>
     :root {
       color-scheme: light;
@@ -240,6 +240,21 @@
       </div>
     </section>
 
+    <section class="card" id="d3Retrieval">
+      <h2>D+3 理化＋數學一洞延遲回測＋週末最低 3 題混合短測入口</h2>
+      <p class="subtitle">若仍沒有 D0/D+1 完成格數、A-F 錯因、題號或頁碼，就不要重做 D+1。今天只選一個理化公式／觀念、一個數學起手式，再把週末最低 3 題入口排好；仍維持 18 格／90 分鐘。</p>
+      <div id="d3RetrievalGrid" class="gap-grid" aria-label="D+3 理化與數學延遲回測勾選"></div>
+      <div class="notes-grid" style="margin-top:12px">
+        <label class="field">D+3 理化一洞<textarea id="d3ScienceOne" placeholder="例：只回一個公式／觀念／單位；不知道題號也可填：先說出適用情境。"></textarea></label>
+        <label class="field">D+3 數學起手式<textarea id="d3MathStarter" placeholder="例：只回一個起手式：畫圖／標已知／列關係；不需要頁碼。"></textarea></label>
+        <label class="field">週末最低 3 題混合短測<textarea id="weekendThree" placeholder="例：理化 1 格＋數學 1 格＋任一科 1 格；標準版才做到 8 題。"></textarea></label>
+        <label class="field">下週 90 分鐘主攻<textarea id="d3NextFocus" placeholder="例：下週主攻 A：__；主攻 B：__；D+7 回測只看一洞。"></textarea></label>
+      </div>
+      <div class="sync-row" style="margin-top:12px">
+        <button id="copyD3Summary" class="btn primary" type="button">複製 D+3 延遲回測回報</button>
+      </div>
+    </section>
+
     <section class="card">
       <h2>家長確認</h2>
       <div class="notes-grid">
@@ -264,15 +279,15 @@
 
   <footer>
     <p>資料同步說明：未設定 Firebase 時使用 LocalStorageAdapter，只存在本機瀏覽器；設定 Firestore 後切換為 FirestoreAdapter。請不要輸入完整姓名、私人題本照片或敏感個資。</p>
-    <p>版本：qiyue-final-90min-sync-v1.6｜更新：2026-06-24｜weekly-parent-report-v1.2｜first-week-gap-audit-v1.3｜focus-ab-retrieval-v1.4｜d0-science-math-launch-v1.5｜d1-science-math-retrieval-v1.6。</p>
+    <p>版本：qiyue-final-90min-sync-v1.7｜更新：2026-06-24｜weekly-parent-report-v1.2｜first-week-gap-audit-v1.3｜focus-ab-retrieval-v1.4｜d0-science-math-launch-v1.5｜d1-science-math-retrieval-v1.6｜d3-one-hole-weekend-mix-v1.7。</p>
   </footer>
 
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
   <script src="./firebase-config.js"></script>
   <script>
-    const CLIENT_VERSION = 'qiyue-final-90min-sync-v1.6';
-    const PAGE_MARKER = 'd1-science-math-retrieval-v1.6';
+    const CLIENT_VERSION = 'qiyue-final-90min-sync-v1.7';
+    const PAGE_MARKER = 'd3-one-hole-weekend-mix-v1.7';
     const STORE_KEY = 'qiyue-final-90min-sync-tracker-v1';
     const TARGET_MINUTES = 90;
     const CHUNK_MINUTES = 5;
@@ -502,6 +517,26 @@
       ['D+3 gate', '排三天後只重看一個理化＋一個數學洞', '跨科'],
       ['收尾', '複製 D+1 回報；不加碼、不逼問孩子', '跨科']
     ].map((row, i) => ({ id: `d1-${String(i + 1).padStart(2, '0')}`, title: row[0], task: row[1], subject: row[2] }));
+    const D3_RETRIEVAL = [
+      ['回收 1', '承接 D0/D+1：完成格數可留白或填先不知道', '跨科'],
+      ['回收 2', '今天只選一個最大洞：理化／數學／先不知道', '跨科'],
+      ['回收 3', '仍排 90 分鐘，不把整天降成 5 分鐘', '跨科'],
+      ['理化一洞 1', '只回一個公式或觀念，不看答案先說', '理化'],
+      ['理化一洞 2', '補單位／適用情境一格', '理化'],
+      ['理化一洞 3', '用口頭題或同範圍空白題，不寫原卷題號', '理化'],
+      ['理化一洞 4', '留下 D+7 要重看的公式／觀念', '理化'],
+      ['數學一洞 1', '只回一個起手式：畫圖／標已知／列關係', '數學'],
+      ['數學一洞 2', '重畫圖或重標已知，不追新頁碼', '數學'],
+      ['數學一洞 3', '用同型空白題或口頭題，不公開原題答案', '數學'],
+      ['數學一洞 4', '留下 D+7 要重看的起手式', '數學'],
+      ['週末 3 題 1', '理化 1 題或 1 格：公式／單位／適用情境', '理化'],
+      ['週末 3 題 2', '數學 1 題或 1 格：起手式／步驟／答案形式', '數學'],
+      ['週末 3 題 3', '任一科 1 題或 1 格：以資料最齊科目為主', '跨科'],
+      ['標準版', '若精神足夠才擴成 8 題；最低版 3 題就算完成', '跨科'],
+      ['資料檢核', '理化＋數學四類來源：講義、單元卷、段考卷、考古題', '跨科'],
+      ['家長一句', '寫下本週最大一洞與下週 90 分鐘主攻 A/B', '跨科'],
+      ['收尾', '複製 D+3 回報；不加碼、不逼問孩子', '跨科']
+    ].map((row, i) => ({ id: `d3-${String(i + 1).padStart(2, '0')}`, title: row[0], task: row[1], subject: row[2] }));
     const $ = (id) => document.getElementById(id);
     const esc = (text) => String(text || '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
     const todayISO = () => new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 10);
@@ -724,6 +759,17 @@
       $('d1MathOne').value = state.notes[key('d1-retrieval', 'mathOne')] || '';
       $('d1ParentGate').value = state.notes[key('d1-retrieval', 'parentGate')] || '';
     }
+    function renderD3Retrieval() {
+      $('d3RetrievalGrid').innerHTML = D3_RETRIEVAL.map(item => {
+        const k = key('d3-retrieval', item.id);
+        const done = !!state.checks[k];
+        return `<label class="gap-card"><div class="gap-item ${done ? 'ok' : 'warn'}"><b>${esc(item.title)}</b><span><input type="checkbox" data-kind="d3-retrieval" data-key="${esc(k)}" ${done ? 'checked' : ''}> ${esc(item.task)}｜${esc(item.subject)}</span></div></label>`;
+      }).join('');
+      $('d3ScienceOne').value = state.notes[key('d3-retrieval', 'scienceOne')] || '';
+      $('d3MathStarter').value = state.notes[key('d3-retrieval', 'mathStarter')] || '';
+      $('weekendThree').value = state.notes[key('d3-retrieval', 'weekendThree')] || '';
+      $('d3NextFocus').value = state.notes[key('d3-retrieval', 'nextFocus')] || '';
+    }
     function updateMetrics() {
       const chunkKeys = buildChunks().map(c => key('chunk', c.id));
       const doneChunks = chunkKeys.filter(k => state.chunks[k]).length;
@@ -755,6 +801,7 @@
       renderABStarter();
       renderD0Launch();
       renderD1Retrieval();
+      renderD3Retrieval();
       updateMetrics();
     }
     function scheduleSave(pushCloud = true) {
@@ -865,6 +912,17 @@
       $('d1ScienceOne').addEventListener('input', () => { state.notes[key('d1-retrieval', 'scienceOne')] = $('d1ScienceOne').value; scheduleSave(); });
       $('d1MathOne').addEventListener('input', () => { state.notes[key('d1-retrieval', 'mathOne')] = $('d1MathOne').value; scheduleSave(); });
       $('d1ParentGate').addEventListener('input', () => { state.notes[key('d1-retrieval', 'parentGate')] = $('d1ParentGate').value; scheduleSave(); });
+      $('d3RetrievalGrid').addEventListener('change', (ev) => {
+        const box = ev.target.closest('input[data-kind="d3-retrieval"]');
+        if (!box) return;
+        state.checks[box.dataset.key] = box.checked;
+        renderD3Retrieval();
+        scheduleSave();
+      });
+      $('d3ScienceOne').addEventListener('input', () => { state.notes[key('d3-retrieval', 'scienceOne')] = $('d3ScienceOne').value; scheduleSave(); });
+      $('d3MathStarter').addEventListener('input', () => { state.notes[key('d3-retrieval', 'mathStarter')] = $('d3MathStarter').value; scheduleSave(); });
+      $('weekendThree').addEventListener('input', () => { state.notes[key('d3-retrieval', 'weekendThree')] = $('weekendThree').value; scheduleSave(); });
+      $('d3NextFocus').addEventListener('input', () => { state.notes[key('d3-retrieval', 'nextFocus')] = $('d3NextFocus').value; scheduleSave(); });
       $('applyPlan').addEventListener('click', () => { if (activeSyncAdapter) activeSyncAdapter.subscribe(); });
       $('pushNow').addEventListener('click', () => { saveLocal(); if (activeSyncAdapter) activeSyncAdapter.save(); });
       $('copySummary').addEventListener('click', async () => {
@@ -900,11 +958,18 @@
         try { await navigator.clipboard.writeText(text); setSync('已複製 D+1 回測回報', 'good'); }
         catch { alert(text); }
       });
+      $('copyD3Summary').addEventListener('click', async () => {
+        const done = D3_RETRIEVAL.filter(item => state.checks[key('d3-retrieval', item.id)]).length;
+        const text = `祈燁 D+3 理化＋數學一洞延遲回測＋週末最低 3 題入口：完成 ${done}/18 格；理化一洞=${$('d3ScienceOne').value || '未填'}；數學起手式=${$('d3MathStarter').value || '未填'}；週末最低3題=${$('weekendThree').value || '未填'}；下週90分鐘主攻=${$('d3NextFocus').value || '未填'}。`;
+        try { await navigator.clipboard.writeText(text); setSync('已複製 D+3 延遲回測回報', 'good'); }
+        catch { alert(text); }
+      });
       $('resetToday').addEventListener('click', () => {
         if (!confirm('只清除今天的 18 小段與備註？各科資料檢核會保留。')) return;
         buildChunks().forEach(c => delete state.chunks[key('chunk', c.id)]);
         D0_LAUNCH.forEach(item => delete state.checks[key('d0-launch', item.id)]);
         D1_RETRIEVAL.forEach(item => delete state.checks[key('d1-retrieval', item.id)]);
+        D3_RETRIEVAL.forEach(item => delete state.checks[key('d3-retrieval', item.id)]);
         delete state.notes[key('note', 'main')];
         delete state.notes[key('note', 'review')];
         delete state.notes[key('d0-launch', 'blocker')];
@@ -913,6 +978,10 @@
         delete state.notes[key('d1-retrieval', 'scienceOne')];
         delete state.notes[key('d1-retrieval', 'mathOne')];
         delete state.notes[key('d1-retrieval', 'parentGate')];
+        delete state.notes[key('d3-retrieval', 'scienceOne')];
+        delete state.notes[key('d3-retrieval', 'mathStarter')];
+        delete state.notes[key('d3-retrieval', 'weekendThree')];
+        delete state.notes[key('d3-retrieval', 'nextFocus')];
         render();
         scheduleSave();
       });

@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>祈燁國二下期末考總入口｜自學・錯題・考古題</title>
+  <meta name="description" content="祈燁國二下期末考所有自學練習、錯題加強與考古題練習彙整入口。舊頁保留原網址，從這一頁依科目與任務進入即可。" />
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f3ea;
+      --paper: rgba(255,255,255,.9);
+      --paper-solid: #fffdf8;
+      --ink: #17202a;
+      --muted: #667085;
+      --line: rgba(23,32,42,.13);
+      --line-strong: rgba(23,32,42,.24);
+      --brand: #0f766e;
+      --brand-2: #2563eb;
+      --amber: #b45309;
+      --rose: #be123c;
+      --green: #166534;
+      --purple: #7c3aed;
+      --shadow: 0 22px 80px rgba(16,24,40,.1), 0 4px 18px rgba(16,24,40,.06);
+      --radius: 24px;
+      --max: 1180px;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: radial-gradient(circle at 18% 0%, #d8f3ee 0, transparent 34%), radial-gradient(circle at 88% 10%, #e3ecff 0, transparent 30%), var(--bg); color: var(--ink); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif; }
+    a { color: inherit; }
+    .skip { position: absolute; left: -999px; top: 8px; background: #fff; padding: 8px 12px; border-radius: 999px; z-index: 99; }
+    .skip:focus { left: 12px; }
+    .topbar { position: sticky; top: 0; z-index: 20; background: rgba(246,243,234,.78); backdrop-filter: blur(18px); border-bottom: 1px solid var(--line); }
+    .nav { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 13px 0; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 950; min-width: 0; }
+    .brand-mark { width: 40px; height: 40px; border-radius: 14px; display: grid; place-items: center; color: #fff; background: linear-gradient(135deg, var(--brand), var(--brand-2)); box-shadow: 0 10px 24px rgba(15,118,110,.18); }
+    .brand span { display: block; color: var(--muted); font-size: 12px; font-weight: 750; margin-top: 2px; }
+    .nav-actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+    .nav-actions a { text-decoration: none; color: #44515f; border: 1px solid var(--line); background: rgba(255,255,255,.7); border-radius: 999px; padding: 7px 11px; font-size: 13px; font-weight: 850; }
+    .hero, main, footer { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
+    .hero { padding: 56px 0 24px; display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 22px; align-items: end; }
+    .eyebrow { display: inline-flex; padding: 7px 12px; border-radius: 999px; background: rgba(15,118,110,.1); color: var(--brand); font-size: 12px; font-weight: 1000; letter-spacing: .08em; text-transform: uppercase; }
+    h1 { margin: 16px 0 12px; font-size: clamp(2.25rem, 7vw, 5.2rem); line-height: .98; letter-spacing: -.07em; }
+    .lead { margin: 0; color: #4b5563; font-size: clamp(1.02rem, 2.1vw, 1.24rem); font-weight: 570; max-width: 850px; }
+    .notice { margin-top: 14px; display: inline-flex; gap: 8px; align-items: start; padding: 11px 13px; border-radius: 18px; border: 1px solid rgba(15,118,110,.2); background: rgba(255,255,255,.72); color: #315149; font-size: 14px; font-weight: 760; }
+    .side { border: 1px solid var(--line); background: var(--paper); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow); }
+    .side h2 { margin: 0 0 10px; font-size: 1.05rem; }
+    .side ol { margin: 0; padding-left: 1.2em; color: #526070; line-height: 1.65; font-weight: 650; }
+    .panel { border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); box-shadow: var(--shadow); padding: 18px; margin: 18px 0; }
+    .route-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+    .route { display: grid; gap: 5px; min-height: 118px; padding: 16px; border-radius: 20px; border: 1px solid var(--line); background: var(--paper-solid); text-decoration: none; box-shadow: 0 10px 28px rgba(16,24,40,.06); transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+    .route:hover { transform: translateY(-2px); box-shadow: 0 16px 36px rgba(16,24,40,.1); border-color: var(--line-strong); }
+    .route b { font-size: 1.02rem; letter-spacing: -.02em; }
+    .route span { color: var(--muted); font-size: 13px; line-height: 1.45; }
+    .route.primary { border-color: rgba(15,118,110,.28); background: linear-gradient(135deg, rgba(15,118,110,.14), #fff); }
+    .filters { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 10px; align-items: end; }
+    label { display: grid; gap: 6px; font-size: 13px; color: #526070; font-weight: 900; }
+    input, select { width: 100%; min-height: 44px; border: 1px solid var(--line-strong); border-radius: 14px; padding: 9px 11px; background: #fff; color: var(--ink); font: inherit; font-weight: 700; }
+    .chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+    .chip { border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: 8px 11px; font-weight: 900; font-size: 13px; cursor: pointer; }
+    .chip.active { background: var(--brand); color: #fff; border-color: var(--brand); }
+    .resultbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; color: var(--muted); margin: 14px 0; font-size: 14px; }
+    .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    .card { position: relative; overflow: hidden; display: grid; gap: 12px; border: 1px solid var(--line); background: var(--paper-solid); border-radius: var(--radius); padding: 17px; box-shadow: 0 13px 34px rgba(16,24,40,.07); }
+    .card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 5px; background: var(--brand); opacity: .9; }
+    .card[data-subject="理化"]::before { background: var(--green); }
+    .card[data-subject="數學"]::before { background: var(--brand-2); }
+    .card[data-subject="國文"]::before, .card[data-subject="英文"]::before, .card[data-subject="地理"]::before { background: var(--purple); }
+    .card[data-subject="公民"]::before { background: var(--amber); }
+    .card[data-subject="跨科"]::before { background: var(--rose); }
+    .card-head { display: flex; justify-content: space-between; gap: 10px; align-items: start; }
+    .kind { color: var(--brand); font-size: 12px; font-weight: 1000; letter-spacing: .08em; text-transform: uppercase; }
+    .badge { white-space: nowrap; border-radius: 999px; padding: 5px 8px; background: #eef6ff; color: #1d4ed8; font-size: 12px; font-weight: 950; }
+    .card h3 { margin: 3px 0 0; font-size: 1.12rem; line-height: 1.32; letter-spacing: -.03em; }
+    .card p { margin: 0; color: #536171; line-height: 1.58; font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag { padding: 4px 8px; border-radius: 999px; background: #e8f4f8; color: #155e75; font-size: 12px; font-weight: 850; }
+    .actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 2px; }
+    .btn { min-height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; padding: 8px 12px; border: 1px solid var(--line-strong); background: #fff; color: var(--brand); text-decoration: none; font-weight: 950; font-size: 14px; }
+    .btn.primary { background: var(--brand); color: #fff; border-color: var(--brand); }
+    .study-plan { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+    .step { border: 1px solid var(--line); background: #fff; border-radius: 18px; padding: 14px; }
+    .step b { display: block; margin-bottom: 5px; }
+    .step span { color: var(--muted); font-size: 13px; line-height: 1.45; }
+    .empty { text-align: center; padding: 40px 18px; border: 1px dashed var(--line-strong); border-radius: var(--radius); color: var(--muted); background: rgba(255,255,255,.55); }
+    footer { color: var(--muted); padding: 30px 0 42px; font-size: 13px; line-height: 1.7; }
+    @media (max-width: 920px) {
+      .hero { grid-template-columns: 1fr; padding-top: 38px; }
+      .route-grid, .cards, .study-plan { grid-template-columns: 1fr 1fr; }
+      .filters { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 620px) {
+      .nav { align-items: flex-start; flex-direction: column; }
+      .nav-actions { width: 100%; justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 2px; }
+      .nav-actions a { white-space: nowrap; }
+      .route-grid, .cards, .study-plan { grid-template-columns: 1fr; }
+      .hero, main, footer { width: min(100% - 24px, var(--max)); }
+      h1 { font-size: clamp(2rem, 12vw, 3.6rem); }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#resources">跳到練習入口</a>
+  <div class="topbar">
+    <nav class="nav" aria-label="主導覽">
+      <a class="brand" href="./" aria-label="回到本頁頂端"><span class="brand-mark">期</span><span><strong>祈燁期末考總入口</strong><span>自學・錯題・考古題都從這裡進</span></span></a>
+      <div class="nav-actions">
+        <a href="../../webpages/grade8-learning-resources/">國二學習資源</a>
+        <a href="../../webpages/">所有網頁總覽</a>
+        <a href="../../">AI 工具比較首頁</a>
+      </div>
+    </nav>
+  </div>
+
+  <header class="hero">
+    <section>
+      <p class="eyebrow">All-in-one final exam hub｜2026-06</p>
+      <h1>祈燁國二下期末考總入口</h1>
+      <p class="lead">把之前分散的自學練習、錯題加強、考古題練習全部收在一頁。舊頁全部保留原網址、不刪不搬；祈燁平常只要從這個總入口依科目或任務點進去即可。</p>
+      <p class="notice"><b>使用原則：</b><span>先做「跨科錯題檢討」5 分鐘抓弱點，再依當天科目進自學站；考前才做考古題，不要一開始就亂刷。</span></p>
+    </section>
+    <aside class="side">
+      <h2>今天最少版</h2>
+      <ol>
+        <li>錯題總檢 5 題。</li>
+        <li>理化或數學挑一科 10 題。</li>
+        <li>睡前只看錯題清單，不重抄整份。</li>
+      </ol>
+    </aside>
+  </header>
+
+  <main id="resources">
+    <section class="panel" aria-label="快速路線">
+      <div class="route-grid">
+        <a class="route primary" href="../qiyue-actual-wrong-review-2026-06/"><b>① 先看實際錯題</b><span>理化・國文實際錯因，5 分鐘抓今天最該補什麼。</span></a>
+        <a class="route" href="../qiyue-grade8-final-science-organic-self-study-2026-06/"><b>② 理化有機</b><span>皂化、酯化、有機/無機、燃燒、聚合物。</span></a>
+        <a class="route" href="../qiyue-grade8-final-math-self-study-2026-06/"><b>③ 數學幾何</b><span>3-4～4-3，平行、面積、四邊形與三角形。</span></a>
+        <a class="route" href="../qiyue-grade8-final-civics-self-study-2026-06/"><b>④ 公民第 5-6 章</b><span>行政法規、行政救濟、兒少權益。</span></a>
+      </div>
+    </section>
+
+    <section class="panel" aria-label="建議讀書節奏">
+      <h2>考前練習順序</h2>
+      <div class="study-plan">
+        <div class="step"><b>1. 錯題回收</b><span>先做實際錯題，不會的才值得今天花時間。</span></div>
+        <div class="step"><b>2. 科目自學</b><span>依考試順序或最弱科進入自學站。</span></div>
+        <div class="step"><b>3. 錯題模式</b><span>每站答錯後，只練錯題加強，不重刷已會題。</span></div>
+        <div class="step"><b>4. 考古題</b><span>觀念穩了再做歷屆或互動題庫，避免亂猜。</span></div>
+        <div class="step"><b>5. 收尾</b><span>睡前只看 3 個訂正句：我錯在哪、下次怎麼判斷。</span></div>
+      </div>
+    </section>
+
+    <section class="panel" aria-label="搜尋與篩選">
+      <div class="filters">
+        <label>搜尋關鍵字<input id="search" type="search" placeholder="例：理化、有機、錯題、數學、公民、考古題" /></label>
+        <label>科目<select id="subjectFilter"><option value="">全部科目</option></select></label>
+        <label>練習類型<select id="typeFilter"><option value="">全部類型</option></select></label>
+      </div>
+      <div class="chips" id="quickChips" aria-label="快速篩選"></div>
+    </section>
+
+    <div class="resultbar"><span id="resultText"></span><span>舊頁保留，新總入口只負責整併連結。</span></div>
+    <section class="cards" id="cards" aria-label="國二下期末考練習入口"></section>
+    <p class="empty" id="empty" hidden>找不到符合條件的練習入口。請改用「全部科目」或清除搜尋。</p>
+  </main>
+
+  <footer>
+    <p>公開安全說明：本頁只整併既有公開練習頁連結，不放原始考卷照片、不放私人路徑、不上傳學生作答資料。各自學站的統計保存在本機瀏覽器 localStorage。</p>
+    <p>更新：2026-06-24｜總入口版本：v1。</p>
+  </footer>
+
+  <script>
+    const RESOURCES = [
+      {
+        title: '祈燁實際錯題檢討加強｜理化・國文',
+        subject: '跨科',
+        type: '錯題加強',
+        priority: '先做',
+        href: '../qiyue-actual-wrong-review-2026-06/',
+        description: '把最近實際錯題轉成錯因、關鍵觀念與再練一題。先用這個頁面決定今天要補哪一科。',
+        tags: ['實際錯題', '理化', '國文', '錯因', '訂正句']
+      },
+      {
+        title: '祈燁期末考國文自學練習｜含實際錯題同型',
+        subject: '國文',
+        type: '自學練習',
+        priority: '主練習',
+        href: '../qiyue-grade8-final-ela-geo-self-study-2026-06/',
+        description: '從國文・英文・地理共用自學站進入，優先練國文注音國字、注釋、空城計、汨羅江神與實際錯題同型加強。',
+        tags: ['國文', '注音國字', '空城計', '汨羅江神', '錯題加強']
+      },
+      {
+        title: '祈燁期末考英文自學練習｜U5-U6',
+        subject: '英文',
+        type: '自學練習',
+        priority: '主練習',
+        href: '../qiyue-grade8-final-ela-geo-self-study-2026-06/',
+        description: '從國文・英文・地理共用自學站進入，篩選英文可練 U5-U6 單字、文法、片語與閱讀題組。',
+        tags: ['英文', 'U5-U6', '單字', '文法', '閱讀']
+      },
+      {
+        title: '祈燁期末考地理自學練習｜第 5-6 章',
+        subject: '地理',
+        type: '自學練習',
+        priority: '主練習',
+        href: '../qiyue-grade8-final-ela-geo-self-study-2026-06/',
+        description: '從國文・英文・地理共用自學站進入，篩選地理可練非洲、漠南非洲與第 5-6 章期末範圍。',
+        tags: ['地理', '第5章', '第6章', '非洲', '漠南非洲']
+      },
+      {
+        title: '祈燁期末考公民自學練習｜第 5-6 章',
+        subject: '公民',
+        type: '自學練習',
+        priority: '主練習',
+        href: '../qiyue-grade8-final-civics-self-study-2026-06/',
+        description: '行政法規、行政救濟、兒少權益、少年事件處理法。支援不重複隨機、答對排除與錯題模式。',
+        tags: ['公民', '第5章', '第6章', '行政救濟', '兒少權益']
+      },
+      {
+        title: '祈燁期末考數學自學練習｜3-4～4-3',
+        subject: '數學',
+        type: '自學練習',
+        priority: '主練習',
+        href: '../qiyue-grade8-final-math-self-study-2026-06/',
+        description: '3-4、3-5、4-1、4-2、4-3 的期末範圍：平行、面積、三角形邊角、平行四邊形、特殊四邊形。',
+        tags: ['數學', '3-4', '3-5', '4-1', '4-2', '4-3']
+      },
+      {
+        title: '祈燁理化有機化合物自學練習｜實際錯題加強',
+        subject: '理化',
+        type: '自學練習',
+        priority: '主練習',
+        href: '../qiyue-grade8-final-science-organic-self-study-2026-06/',
+        description: '有機化合物、皂化、酯化、有機/無機、聚合物、燃燒、清潔劑、實驗表格判讀。',
+        tags: ['理化', '有機化合物', '皂化', '酯化', '聚合物']
+      },
+      {
+        title: '考卷錯題診斷與 7 天補強練習',
+        subject: '跨科',
+        type: '錯題診斷',
+        priority: '補強',
+        href: '../exam-error-diagnosis-2026-06/',
+        description: '自然、數學、國文、公民的錯題診斷與 7 天補強計畫。適合家長快速看弱點分布。',
+        tags: ['錯題診斷', '7天補強', '自然', '數學', '國文', '公民']
+      },
+      {
+        title: '逐題錯題詳解｜孩子作答錯誤樣態分析',
+        subject: '跨科',
+        type: '逐題詳解',
+        priority: '補強',
+        href: '../exam-error-diagnosis-2026-06/detailed.html',
+        description: '逐題標示孩子答案、正答、錯誤樣態與補救句。適合考後或補洞時使用。',
+        tags: ['逐題詳解', '錯誤樣態', '訂正']
+      },
+      {
+        title: '八年級公民錯題詳解｜行政法規與行政救濟',
+        subject: '公民',
+        type: '錯題加強',
+        priority: '補強',
+        href: '../civics-admin-law-wrong-review-2026-06/',
+        description: '公民行政處分、行政罰、訴願、行政訴訟、民事責任與刑事責任逐題訂正。',
+        tags: ['公民', '行政法規', '行政救濟', '錯題詳解']
+      },
+      {
+        title: '五福國中國二下期末理化｜第 5 章有機化合物互動題庫',
+        subject: '理化',
+        type: '考古題練習',
+        priority: '考古題',
+        href: '../../exams/wufu-jh-8b-final-science-ch5/',
+        description: '五福國中 110–113 學年度國二下期末自然／理化第 5 章有機化合物題目整理。',
+        tags: ['理化', '有機化合物', '五福國中', '期末', '考古題']
+      },
+      {
+        title: '國二下翰林理化第 6 章｜力與壓力學習重點',
+        subject: '理化',
+        type: '學習重點',
+        priority: '補觀念',
+        href: '../../exams/hanlin-8b-ch6-buoyancy-wufu/chapter6.html',
+        description: '力與平衡、摩擦力、壓力、浮力學習重點與例題。若有第 6 章壓力/浮力弱點，先看這頁。',
+        tags: ['理化', '力與壓力', '摩擦力', '浮力', '第6章']
+      },
+      {
+        title: '國二下理化學習頁｜第 6 章入口',
+        subject: '理化',
+        type: '學習重點',
+        priority: '補觀念',
+        href: '../../exams/hanlin-8b-ch6-buoyancy-wufu/',
+        description: '國二下理化第 6 章相關入口，保留舊頁連結，作為力與壓力範圍備用入口。',
+        tags: ['理化', '第6章', '舊入口', '力與壓力']
+      },
+      {
+        title: '115 會考自然科物理試題截圖整理',
+        subject: '理化',
+        type: '考古題練習',
+        priority: '延伸',
+        href: '../../exams/cap-115-nature-physics/',
+        description: '會考自然物理題整理，非祈燁本次期末主線，但可作為自然科閱讀與圖表題延伸練習。',
+        tags: ['自然', '會考', '物理', '延伸']
+      }
+    ];
+
+    const SUBJECT_ORDER = ['跨科', '理化', '數學', '公民', '國文', '英文', '地理'];
+    const TYPE_ORDER = ['錯題加強', '錯題診斷', '逐題詳解', '自學練習', '考古題練習', '學習重點'];
+    const QUICK = ['先做', '理化', '數學', '公民', '國文', '錯題加強', '自學練習', '考古題練習'];
+    const $ = (id) => document.getElementById(id);
+    const escapeHtml = (text) => String(text || '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+    const normalize = (text) => String(text || '').toLowerCase().replace(/\s+/g, ' ').trim();
+    let activeQuick = '';
+
+    function rank(list, value) {
+      const idx = list.indexOf(value);
+      return idx === -1 ? 999 : idx;
+    }
+    function searchable(item) {
+      return normalize([item.title, item.subject, item.type, item.priority, item.description, ...item.tags].join(' '));
+    }
+    function fillFilters() {
+      [...new Set(RESOURCES.map(r => r.subject))].sort((a,b) => rank(SUBJECT_ORDER, a) - rank(SUBJECT_ORDER, b) || a.localeCompare(b, 'zh-Hant')).forEach(subject => {
+        const option = document.createElement('option');
+        option.value = subject;
+        option.textContent = subject;
+        $('subjectFilter').appendChild(option);
+      });
+      [...new Set(RESOURCES.map(r => r.type))].sort((a,b) => rank(TYPE_ORDER, a) - rank(TYPE_ORDER, b) || a.localeCompare(b, 'zh-Hant')).forEach(type => {
+        const option = document.createElement('option');
+        option.value = type;
+        option.textContent = type;
+        $('typeFilter').appendChild(option);
+      });
+      QUICK.forEach(label => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'chip';
+        button.textContent = label;
+        button.addEventListener('click', () => {
+          activeQuick = activeQuick === label ? '' : label;
+          document.querySelectorAll('.chip').forEach(chip => chip.classList.toggle('active', chip.textContent === activeQuick));
+          render();
+        });
+        $('quickChips').appendChild(button);
+      });
+    }
+    function filtered() {
+      const q = normalize($('search').value);
+      const subject = $('subjectFilter').value;
+      const type = $('typeFilter').value;
+      return RESOURCES.filter(item => {
+        if (subject && item.subject !== subject) return false;
+        if (type && item.type !== type) return false;
+        if (activeQuick && !searchable(item).includes(normalize(activeQuick))) return false;
+        if (q && !searchable(item).includes(q)) return false;
+        return true;
+      }).sort((a,b) => rank(SUBJECT_ORDER, a.subject) - rank(SUBJECT_ORDER, b.subject) || rank(TYPE_ORDER, a.type) - rank(TYPE_ORDER, b.type) || a.title.localeCompare(b.title, 'zh-Hant'));
+    }
+    function render() {
+      const items = filtered();
+      $('resultText').textContent = `顯示 ${items.length} / ${RESOURCES.length} 個期末考練習入口`;
+      $('empty').hidden = items.length !== 0;
+      $('cards').innerHTML = items.map(item => `
+        <article class="card" data-subject="${escapeHtml(item.subject)}">
+          <div class="card-head">
+            <div><div class="kind">${escapeHtml(item.subject)}｜${escapeHtml(item.type)}</div><h3>${escapeHtml(item.title)}</h3></div>
+            <span class="badge">${escapeHtml(item.priority)}</span>
+          </div>
+          <p>${escapeHtml(item.description)}</p>
+          <div class="tags">${item.tags.map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join('')}</div>
+          <div class="actions"><a class="btn primary" href="${escapeHtml(item.href)}">開啟練習</a></div>
+        </article>`).join('');
+    }
+    ['search', 'subjectFilter', 'typeFilter'].forEach(id => $(id).addEventListener('input', render));
+    fillFilters();
+    render();
+  </script>
+</body>
+</html>

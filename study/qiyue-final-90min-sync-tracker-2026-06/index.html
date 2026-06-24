@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>祈燁期末複習 90 分鐘檢核｜易讀版</title>
-  <meta name="description" content="祈燁國二下期末考每日至少 90 分鐘複習檢核。四段式操作、18 個 5 分鐘小段、各科講義/課後精華錄、單元卷、段考卷、考古題檢核、第一週資料缺口巡檢、主攻 A/B 延遲回測、D0/D+1 理化＋數學銜接與 D+3 一洞延遲回測＋週末最低 3 題入口，支援 Firebase/Firestore 同步。" />
+  <meta name="description" content="祈燁國二下期末考每日至少 90 分鐘複習檢核。四段式操作、18 個 5 分鐘小段、各科講義/課後精華錄、單元卷、段考卷、考古題檢核、第一週資料缺口巡檢、主攻 A/B 延遲回測、D0/D+1/D+3 理化＋數學銜接、D+7 一洞保留回測與下週 90 分鐘主攻 A/B 週目標表，支援 Firebase/Firestore 同步。" />
   <style>
     :root {
       color-scheme: light;
@@ -255,6 +255,21 @@
       </div>
     </section>
 
+    <section class="card" id="d7Retention">
+      <h2>D+7 理化＋數學一洞保留回測＋下週 90 分鐘主攻 A/B 週目標表</h2>
+      <p class="subtitle">D+3 v1.7 已完成後，若仍沒有實際題號、頁碼、A-F 或孩子回報，就不要重做 D+3。今天只檢查一週後是否保留：理化一洞、數學一個起手式、週末最低 3 題完成狀態，並排下週 90 分鐘主攻 A/B；仍是 18 格／90 分鐘。</p>
+      <div id="d7RetentionGrid" class="gap-grid" aria-label="D+7 理化與數學保留回測勾選"></div>
+      <div class="notes-grid" style="margin-top:12px">
+        <label class="field">D+7 理化保留一洞<textarea id="d7ScienceRetention" placeholder="例：一週後仍說得出來的公式／觀念／單位；沒有資料可填：先不知道。"></textarea></label>
+        <label class="field">D+7 數學保留起手式<textarea id="d7MathRetention" placeholder="例：一週後仍能先畫圖／標已知／列關係；不用題號或頁碼。"></textarea></label>
+        <label class="field">週末最低 3 題完成狀態<textarea id="d7WeekendStatus" placeholder="例：理化 __/1、數學 __/1、任一科 __/1；若未做，填待補，不補假答案。"></textarea></label>
+        <label class="field">下週 90 分鐘主攻 A/B<textarea id="d7NextWeekFocus" placeholder="例：主攻 A：理化公式/單位；主攻 B：數學起手式；D+1/D+3/D+7 gate：__。"></textarea></label>
+      </div>
+      <div class="sync-row" style="margin-top:12px">
+        <button id="copyD7Summary" class="btn primary" type="button">複製 D+7 週目標回報</button>
+      </div>
+    </section>
+
     <section class="card">
       <h2>家長確認</h2>
       <div class="notes-grid">
@@ -279,15 +294,15 @@
 
   <footer>
     <p>資料同步說明：未設定 Firebase 時使用 LocalStorageAdapter，只存在本機瀏覽器；設定 Firestore 後切換為 FirestoreAdapter。請不要輸入完整姓名、私人題本照片或敏感個資。</p>
-    <p>版本：qiyue-final-90min-sync-v1.7｜更新：2026-06-24｜weekly-parent-report-v1.2｜first-week-gap-audit-v1.3｜focus-ab-retrieval-v1.4｜d0-science-math-launch-v1.5｜d1-science-math-retrieval-v1.6｜d3-one-hole-weekend-mix-v1.7。</p>
+    <p>版本：qiyue-final-90min-sync-v1.8｜更新：2026-06-24｜weekly-parent-report-v1.2｜first-week-gap-audit-v1.3｜focus-ab-retrieval-v1.4｜d0-science-math-launch-v1.5｜d1-science-math-retrieval-v1.6｜d3-one-hole-weekend-mix-v1.7｜d7-retention-weekly-focus-v1.8。</p>
   </footer>
 
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
   <script src="./firebase-config.js"></script>
   <script>
-    const CLIENT_VERSION = 'qiyue-final-90min-sync-v1.7';
-    const PAGE_MARKER = 'd3-one-hole-weekend-mix-v1.7';
+    const CLIENT_VERSION = 'qiyue-final-90min-sync-v1.8';
+    const PAGE_MARKER = 'd7-retention-weekly-focus-v1.8';
     const STORE_KEY = 'qiyue-final-90min-sync-tracker-v1';
     const TARGET_MINUTES = 90;
     const CHUNK_MINUTES = 5;
@@ -537,6 +552,26 @@
       ['家長一句', '寫下本週最大一洞與下週 90 分鐘主攻 A/B', '跨科'],
       ['收尾', '複製 D+3 回報；不加碼、不逼問孩子', '跨科']
     ].map((row, i) => ({ id: `d3-${String(i + 1).padStart(2, '0')}`, title: row[0], task: row[1], subject: row[2] }));
+    const D7_RETENTION = [
+      ['回收 1', '先看 D+3：完成格數可留白，沒有回報也不追問', '跨科'],
+      ['回收 2', '確認週末最低 3 題：完成／未做／待補皆可填', '跨科'],
+      ['回收 3', '今天仍排 90 分鐘，不把一週回測降成 5 分鐘', '跨科'],
+      ['理化保留 1', '一週後只說一個公式或觀念，不看答案', '理化'],
+      ['理化保留 2', '補一個單位或適用情境', '理化'],
+      ['理化保留 3', '用口頭題或同範圍空白題檢查保留', '理化'],
+      ['理化保留 4', '寫下下週只補的一洞', '理化'],
+      ['數學保留 1', '一週後只寫一個起手式：畫圖／標已知／列關係', '數學'],
+      ['數學保留 2', '重畫圖或重標已知，不追新頁碼', '數學'],
+      ['數學保留 3', '用同型空白題或口頭題檢查保留', '數學'],
+      ['數學保留 4', '寫下下週只補的一個起手式', '數學'],
+      ['下週主攻 A', '若有實際 A-F，以該科為主攻 A；否則先理化', '跨科'],
+      ['下週主攻 B', '若沒有實際回報，以數學起手式為主攻 B', '跨科'],
+      ['資料檢核 1', '理化四類來源：講義、單元卷、段考卷、考古題', '理化'],
+      ['資料檢核 2', '數學四類來源：講義、單元卷、段考卷、考古題', '數學'],
+      ['家長一句', '只寫：本週保留一洞＋下週主攻 A/B', '跨科'],
+      ['下週 gate', '排下週 D+1/D+3/D+7，只留一洞不加碼', '跨科'],
+      ['收尾', '複製 D+7 回報；仍不編題號或答案', '跨科']
+    ].map((row, i) => ({ id: `d7-${String(i + 1).padStart(2, '0')}`, title: row[0], task: row[1], subject: row[2] }));
     const $ = (id) => document.getElementById(id);
     const esc = (text) => String(text || '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
     const todayISO = () => new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 10);
@@ -770,6 +805,17 @@
       $('weekendThree').value = state.notes[key('d3-retrieval', 'weekendThree')] || '';
       $('d3NextFocus').value = state.notes[key('d3-retrieval', 'nextFocus')] || '';
     }
+    function renderD7Retention() {
+      $('d7RetentionGrid').innerHTML = D7_RETENTION.map(item => {
+        const k = key('d7-retention', item.id);
+        const done = !!state.checks[k];
+        return `<label class="gap-card"><div class="gap-item ${done ? 'ok' : 'warn'}"><b>${esc(item.title)}</b><span><input type="checkbox" data-kind="d7-retention" data-key="${esc(k)}" ${done ? 'checked' : ''}> ${esc(item.task)}｜${esc(item.subject)}</span></div></label>`;
+      }).join('');
+      $('d7ScienceRetention').value = state.notes[key('d7-retention', 'scienceRetention')] || '';
+      $('d7MathRetention').value = state.notes[key('d7-retention', 'mathRetention')] || '';
+      $('d7WeekendStatus').value = state.notes[key('d7-retention', 'weekendStatus')] || '';
+      $('d7NextWeekFocus').value = state.notes[key('d7-retention', 'nextWeekFocus')] || '';
+    }
     function updateMetrics() {
       const chunkKeys = buildChunks().map(c => key('chunk', c.id));
       const doneChunks = chunkKeys.filter(k => state.chunks[k]).length;
@@ -802,6 +848,7 @@
       renderD0Launch();
       renderD1Retrieval();
       renderD3Retrieval();
+      renderD7Retention();
       updateMetrics();
     }
     function scheduleSave(pushCloud = true) {
@@ -923,6 +970,17 @@
       $('d3MathStarter').addEventListener('input', () => { state.notes[key('d3-retrieval', 'mathStarter')] = $('d3MathStarter').value; scheduleSave(); });
       $('weekendThree').addEventListener('input', () => { state.notes[key('d3-retrieval', 'weekendThree')] = $('weekendThree').value; scheduleSave(); });
       $('d3NextFocus').addEventListener('input', () => { state.notes[key('d3-retrieval', 'nextFocus')] = $('d3NextFocus').value; scheduleSave(); });
+      $('d7RetentionGrid').addEventListener('change', (ev) => {
+        const box = ev.target.closest('input[data-kind="d7-retention"]');
+        if (!box) return;
+        state.checks[box.dataset.key] = box.checked;
+        renderD7Retention();
+        scheduleSave();
+      });
+      $('d7ScienceRetention').addEventListener('input', () => { state.notes[key('d7-retention', 'scienceRetention')] = $('d7ScienceRetention').value; scheduleSave(); });
+      $('d7MathRetention').addEventListener('input', () => { state.notes[key('d7-retention', 'mathRetention')] = $('d7MathRetention').value; scheduleSave(); });
+      $('d7WeekendStatus').addEventListener('input', () => { state.notes[key('d7-retention', 'weekendStatus')] = $('d7WeekendStatus').value; scheduleSave(); });
+      $('d7NextWeekFocus').addEventListener('input', () => { state.notes[key('d7-retention', 'nextWeekFocus')] = $('d7NextWeekFocus').value; scheduleSave(); });
       $('applyPlan').addEventListener('click', () => { if (activeSyncAdapter) activeSyncAdapter.subscribe(); });
       $('pushNow').addEventListener('click', () => { saveLocal(); if (activeSyncAdapter) activeSyncAdapter.save(); });
       $('copySummary').addEventListener('click', async () => {
@@ -964,12 +1022,19 @@
         try { await navigator.clipboard.writeText(text); setSync('已複製 D+3 延遲回測回報', 'good'); }
         catch { alert(text); }
       });
+      $('copyD7Summary').addEventListener('click', async () => {
+        const done = D7_RETENTION.filter(item => state.checks[key('d7-retention', item.id)]).length;
+        const text = `祈燁 D+7 理化＋數學一洞保留回測＋下週 90 分鐘主攻：完成 ${done}/18 格；理化保留=${$('d7ScienceRetention').value || '未填'}；數學起手式=${$('d7MathRetention').value || '未填'}；週末最低3題=${$('d7WeekendStatus').value || '未填'}；下週主攻A/B=${$('d7NextWeekFocus').value || '未填'}。`;
+        try { await navigator.clipboard.writeText(text); setSync('已複製 D+7 週目標回報', 'good'); }
+        catch { alert(text); }
+      });
       $('resetToday').addEventListener('click', () => {
         if (!confirm('只清除今天的 18 小段與備註？各科資料檢核會保留。')) return;
         buildChunks().forEach(c => delete state.chunks[key('chunk', c.id)]);
         D0_LAUNCH.forEach(item => delete state.checks[key('d0-launch', item.id)]);
         D1_RETRIEVAL.forEach(item => delete state.checks[key('d1-retrieval', item.id)]);
         D3_RETRIEVAL.forEach(item => delete state.checks[key('d3-retrieval', item.id)]);
+        D7_RETENTION.forEach(item => delete state.checks[key('d7-retention', item.id)]);
         delete state.notes[key('note', 'main')];
         delete state.notes[key('note', 'review')];
         delete state.notes[key('d0-launch', 'blocker')];
@@ -982,6 +1047,10 @@
         delete state.notes[key('d3-retrieval', 'mathStarter')];
         delete state.notes[key('d3-retrieval', 'weekendThree')];
         delete state.notes[key('d3-retrieval', 'nextFocus')];
+        delete state.notes[key('d7-retention', 'scienceRetention')];
+        delete state.notes[key('d7-retention', 'mathRetention')];
+        delete state.notes[key('d7-retention', 'weekendStatus')];
+        delete state.notes[key('d7-retention', 'nextWeekFocus')];
         render();
         scheduleSave();
       });

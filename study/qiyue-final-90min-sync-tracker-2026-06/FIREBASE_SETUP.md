@@ -8,7 +8,7 @@
 - 不要放 private key。
 - 不要放 Google OAuth token。
 - Firebase Web config 裡的 `apiKey` 不是私鑰，公開在前端是正常做法；真正的保護靠 Firestore Rules。
-- 同步資料請只放：日期、科目、檢核項目、分鐘、簡短備註、週一～週日家長一句回報、第一週資料缺口巡檢的低敏勾選狀態、D0 理化＋數學啟動勾選、D+1 理化＋數學回測啟動、D+3 理化＋數學一洞延遲回測與週末最低 3 題入口。不要填完整姓名、班級座號、私人題本照片、私人 Drive URL、完整檔名、題號答案或敏感個資。
+- 同步資料請只放：日期、科目、檢核項目、分鐘、簡短備註、週一～週日家長一句回報、第一週資料缺口巡檢的低敏勾選狀態、D0 理化＋數學啟動勾選、D+1 理化＋數學回測啟動、D+3 理化＋數學一洞延遲回測、週末最低 3 題入口、D+7 理化＋數學一洞保留回測與下週 90 分鐘主攻 A/B 週目標。不要填完整姓名、班級座號、私人題本照片、私人 Drive URL、完整檔名、題號答案或敏感個資。
 
 ## Step 1：建立 Firebase 專案
 
@@ -49,7 +49,7 @@ service cloud.firestore {
       }
       function isValidPayload(d) {
         return d.keys().hasOnly(['state', 'updatedAt', 'clientVersion'])
-          && d.clientVersion == 'qiyue-final-90min-sync-v1.7'
+          && d.clientVersion == 'qiyue-final-90min-sync-v1.8'
           && d.state is map
           && d.state.keys().hasOnly(['checks', 'chunks', 'notes', 'selectedDate', 'updatedAt'])
           && d.state.checks is map

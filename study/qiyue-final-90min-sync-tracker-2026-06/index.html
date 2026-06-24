@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>祈燁期末複習 90 分鐘檢核｜易讀版</title>
-  <meta name="description" content="祈燁國二下期末考每日至少 90 分鐘複習檢核。四段式操作、18 個 5 分鐘小段、各科講義/課後精華錄、單元卷、段考卷、考古題檢核、第一週資料缺口巡檢、主攻 A/B 延遲回測與 D0 理化＋數學實作前手機勾選啟動表，支援 Firebase/Firestore 同步。" />
+  <meta name="description" content="祈燁國二下期末考每日至少 90 分鐘複習檢核。四段式操作、18 個 5 分鐘小段、各科講義/課後精華錄、單元卷、段考卷、考古題檢核、第一週資料缺口巡檢、主攻 A/B 延遲回測、D0 理化＋數學啟動與 D+1 理化＋數學回測收斂欄，支援 Firebase/Firestore 同步。" />
   <style>
     :root {
       color-scheme: light;
@@ -225,6 +225,21 @@
       </div>
     </section>
 
+    <section class="card" id="d1Retrieval">
+      <h2>D+1 理化＋數學 90 分鐘回測啟動＋家長一句回報收斂欄</h2>
+      <p class="subtitle">承接 D0：不重做啟動表，也不假裝有題號。今天仍是 18 格／90 分鐘，只把理化一格、數學一格、D0 完成格數與 D+3 gate 收斂成可回報欄。</p>
+      <div id="d1RetrievalGrid" class="gap-grid" aria-label="D+1 理化與數學回測啟動勾選"></div>
+      <div class="notes-grid" style="margin-top:12px">
+        <label class="field">D0 完成與最大卡點<textarea id="d1D0Carry" placeholder="例：D0 完成 __/18；最大卡點：先不知道／理化單位／數學起手式。"></textarea></label>
+        <label class="field">D+1 理化一格<textarea id="d1ScienceOne" placeholder="例：只回公式/單位/適用情境一格；若無題號，填今天要口頭說出的公式。"></textarea></label>
+        <label class="field">D+1 數學一格<textarea id="d1MathOne" placeholder="例：只回起手式一格；若無頁碼，填『先畫圖／標已知／列關係』其中一項。"></textarea></label>
+        <label class="field">家長一句回報＋D+3 gate<textarea id="d1ParentGate" placeholder="例：今天完成 __/18；理化一格：__；數學一格：__；D+3 要回測：__。"></textarea></label>
+      </div>
+      <div class="sync-row" style="margin-top:12px">
+        <button id="copyD1Summary" class="btn primary" type="button">複製 D+1 回測回報</button>
+      </div>
+    </section>
+
     <section class="card">
       <h2>家長確認</h2>
       <div class="notes-grid">
@@ -249,15 +264,15 @@
 
   <footer>
     <p>資料同步說明：未設定 Firebase 時使用 LocalStorageAdapter，只存在本機瀏覽器；設定 Firestore 後切換為 FirestoreAdapter。請不要輸入完整姓名、私人題本照片或敏感個資。</p>
-    <p>版本：qiyue-final-90min-sync-v1.5｜更新：2026-06-24｜weekly-parent-report-v1.2｜first-week-gap-audit-v1.3｜focus-ab-retrieval-v1.4｜d0-science-math-launch-v1.5。</p>
+    <p>版本：qiyue-final-90min-sync-v1.6｜更新：2026-06-24｜weekly-parent-report-v1.2｜first-week-gap-audit-v1.3｜focus-ab-retrieval-v1.4｜d0-science-math-launch-v1.5｜d1-science-math-retrieval-v1.6。</p>
   </footer>
 
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
   <script src="./firebase-config.js"></script>
   <script>
-    const CLIENT_VERSION = 'qiyue-final-90min-sync-v1.5';
-    const PAGE_MARKER = 'd0-science-math-launch-v1.5';
+    const CLIENT_VERSION = 'qiyue-final-90min-sync-v1.6';
+    const PAGE_MARKER = 'd1-science-math-retrieval-v1.6';
     const STORE_KEY = 'qiyue-final-90min-sync-tracker-v1';
     const TARGET_MINUTES = 90;
     const CHUNK_MINUTES = 5;
@@ -467,6 +482,26 @@
       ['D+1 排程', '明天先回理化一格，再回數學一格', '跨科'],
       ['收尾', '複製 D0 回報，不加碼', '跨科']
     ].map((row, i) => ({ id: `d0-${String(i + 1).padStart(2, '0')}`, title: row[0], task: row[1], subject: row[2] }));
+    const D1_RETRIEVAL = [
+      ['回收 1', '填 D0 完成格數：__/18；不知道也可先留白', '跨科'],
+      ['回收 2', '選今天最大卡點：理化／數學／先不知道', '跨科'],
+      ['回收 3', '今天仍排 90 分鐘，不把整天降成 5 分鐘', '跨科'],
+      ['理化回測 1', '只回一個公式或觀念，不看答案先說', '理化'],
+      ['理化回測 2', '補單位／適用情境一格', '理化'],
+      ['理化回測 3', '用同範圍相近小題或口頭題，不寫原卷題號', '理化'],
+      ['理化回測 4', '寫一句訂正句：我下次先檢查____', '理化'],
+      ['理化回測 5', '留下 D+3 要重看的公式／觀念', '理化'],
+      ['數學回測 1', '只回一個起手式：畫圖／標已知／列關係', '數學'],
+      ['數學回測 2', '重寫一小段步驟，先不追新題', '數學'],
+      ['數學回測 3', '用同型或口頭題，不公開原題或答案', '數學'],
+      ['數學回測 4', '檢查單位、角度、答案形式或理由', '數學'],
+      ['數學回測 5', '留下 D+3 要重看的起手式', '數學'],
+      ['資料檢核 1', '理化四類來源：講義／單元卷／段考卷／考古題', '理化'],
+      ['資料檢核 2', '數學四類來源：講義／單元卷／段考卷／考古題', '數學'],
+      ['家長一句', '只寫今天完成 __/18、理化一格、數學一格', '跨科'],
+      ['D+3 gate', '排三天後只重看一個理化＋一個數學洞', '跨科'],
+      ['收尾', '複製 D+1 回報；不加碼、不逼問孩子', '跨科']
+    ].map((row, i) => ({ id: `d1-${String(i + 1).padStart(2, '0')}`, title: row[0], task: row[1], subject: row[2] }));
     const $ = (id) => document.getElementById(id);
     const esc = (text) => String(text || '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
     const todayISO = () => new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 10);
@@ -678,6 +713,17 @@
       $('d0Blocker').value = state.notes[key('d0-launch', 'blocker')] || '';
       $('d1Blank').value = state.notes[key('d0-launch', 'd1')] || '';
     }
+    function renderD1Retrieval() {
+      $('d1RetrievalGrid').innerHTML = D1_RETRIEVAL.map(item => {
+        const k = key('d1-retrieval', item.id);
+        const done = !!state.checks[k];
+        return `<label class="gap-card"><div class="gap-item ${done ? 'ok' : 'warn'}"><b>${esc(item.title)}</b><span><input type="checkbox" data-kind="d1-retrieval" data-key="${esc(k)}" ${done ? 'checked' : ''}> ${esc(item.task)}｜${esc(item.subject)}</span></div></label>`;
+      }).join('');
+      $('d1D0Carry').value = state.notes[key('d1-retrieval', 'd0Carry')] || '';
+      $('d1ScienceOne').value = state.notes[key('d1-retrieval', 'scienceOne')] || '';
+      $('d1MathOne').value = state.notes[key('d1-retrieval', 'mathOne')] || '';
+      $('d1ParentGate').value = state.notes[key('d1-retrieval', 'parentGate')] || '';
+    }
     function updateMetrics() {
       const chunkKeys = buildChunks().map(c => key('chunk', c.id));
       const doneChunks = chunkKeys.filter(k => state.chunks[k]).length;
@@ -708,6 +754,7 @@
       renderGapAudit();
       renderABStarter();
       renderD0Launch();
+      renderD1Retrieval();
       updateMetrics();
     }
     function scheduleSave(pushCloud = true) {
@@ -807,6 +854,17 @@
       });
       $('d0Blocker').addEventListener('input', () => { state.notes[key('d0-launch', 'blocker')] = $('d0Blocker').value; scheduleSave(); });
       $('d1Blank').addEventListener('input', () => { state.notes[key('d0-launch', 'd1')] = $('d1Blank').value; scheduleSave(); });
+      $('d1RetrievalGrid').addEventListener('change', (ev) => {
+        const box = ev.target.closest('input[data-kind="d1-retrieval"]');
+        if (!box) return;
+        state.checks[box.dataset.key] = box.checked;
+        renderD1Retrieval();
+        scheduleSave();
+      });
+      $('d1D0Carry').addEventListener('input', () => { state.notes[key('d1-retrieval', 'd0Carry')] = $('d1D0Carry').value; scheduleSave(); });
+      $('d1ScienceOne').addEventListener('input', () => { state.notes[key('d1-retrieval', 'scienceOne')] = $('d1ScienceOne').value; scheduleSave(); });
+      $('d1MathOne').addEventListener('input', () => { state.notes[key('d1-retrieval', 'mathOne')] = $('d1MathOne').value; scheduleSave(); });
+      $('d1ParentGate').addEventListener('input', () => { state.notes[key('d1-retrieval', 'parentGate')] = $('d1ParentGate').value; scheduleSave(); });
       $('applyPlan').addEventListener('click', () => { if (activeSyncAdapter) activeSyncAdapter.subscribe(); });
       $('pushNow').addEventListener('click', () => { saveLocal(); if (activeSyncAdapter) activeSyncAdapter.save(); });
       $('copySummary').addEventListener('click', async () => {
@@ -836,14 +894,25 @@
         try { await navigator.clipboard.writeText(text); setSync('已複製 D0 回報', 'good'); }
         catch { alert(text); }
       });
+      $('copyD1Summary').addEventListener('click', async () => {
+        const done = D1_RETRIEVAL.filter(item => state.checks[key('d1-retrieval', item.id)]).length;
+        const text = `祈燁 D+1 理化＋數學 90 分鐘回測回報：完成 ${done}/18 格；D0承接=${$('d1D0Carry').value || '未填'}；理化一格=${$('d1ScienceOne').value || '未填'}；數學一格=${$('d1MathOne').value || '未填'}；家長一句＋D+3=${$('d1ParentGate').value || '未填'}。`;
+        try { await navigator.clipboard.writeText(text); setSync('已複製 D+1 回測回報', 'good'); }
+        catch { alert(text); }
+      });
       $('resetToday').addEventListener('click', () => {
         if (!confirm('只清除今天的 18 小段與備註？各科資料檢核會保留。')) return;
         buildChunks().forEach(c => delete state.chunks[key('chunk', c.id)]);
         D0_LAUNCH.forEach(item => delete state.checks[key('d0-launch', item.id)]);
+        D1_RETRIEVAL.forEach(item => delete state.checks[key('d1-retrieval', item.id)]);
         delete state.notes[key('note', 'main')];
         delete state.notes[key('note', 'review')];
         delete state.notes[key('d0-launch', 'blocker')];
         delete state.notes[key('d0-launch', 'd1')];
+        delete state.notes[key('d1-retrieval', 'd0Carry')];
+        delete state.notes[key('d1-retrieval', 'scienceOne')];
+        delete state.notes[key('d1-retrieval', 'mathOne')];
+        delete state.notes[key('d1-retrieval', 'parentGate')];
         render();
         scheduleSave();
       });

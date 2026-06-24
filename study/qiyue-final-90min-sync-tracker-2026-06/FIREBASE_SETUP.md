@@ -8,7 +8,7 @@
 - 不要放 private key。
 - 不要放 Google OAuth token。
 - Firebase Web config 裡的 `apiKey` 不是私鑰，公開在前端是正常做法；真正的保護靠 Firestore Rules。
-- 同步資料請只放：日期、科目、檢核項目、分鐘、簡短備註、週一～週日家長一句回報、第一週資料缺口巡檢的低敏勾選狀態、D0 理化＋數學啟動勾選與 D+1 空白回測欄。不要填完整姓名、班級座號、私人題本照片、私人 Drive URL、完整檔名、題號答案或敏感個資。
+- 同步資料請只放：日期、科目、檢核項目、分鐘、簡短備註、週一～週日家長一句回報、第一週資料缺口巡檢的低敏勾選狀態、D0 理化＋數學啟動勾選、D+1 理化＋數學回測啟動與 D+3 gate。不要填完整姓名、班級座號、私人題本照片、私人 Drive URL、完整檔名、題號答案或敏感個資。
 
 ## Step 1：建立 Firebase 專案
 
@@ -49,7 +49,7 @@ service cloud.firestore {
       }
       function isValidPayload(d) {
         return d.keys().hasOnly(['state', 'updatedAt', 'clientVersion'])
-          && d.clientVersion == 'qiyue-final-90min-sync-v1.5'
+          && d.clientVersion == 'qiyue-final-90min-sync-v1.6'
           && d.state is map
           && d.state.keys().hasOnly(['checks', 'chunks', 'notes', 'selectedDate', 'updatedAt'])
           && d.state.checks is map
@@ -83,7 +83,7 @@ https://addielu-phy.github.io/ai-coding-tools-free-comparison/study/qiyue-final-
 
 ## Adapter 架構
 
-- `LocalStorageAdapter`：預設啟用，不需要任何設定；資料只存在目前瀏覽器，也可先使用週一～週日家長一句回報模板、第一週資料缺口巡檢與 D0 理化＋數學啟動勾選。
-- `FirestoreAdapter`：當 `firebase-config.js` 的 `enabled: true` 且 `projectId` 等 Web config 已填入時自動啟用；同一個 `?plan=` 會同步同一份檢核、週回報模板、低敏資料缺口狀態與 D0 啟動欄。
+- `LocalStorageAdapter`：預設啟用，不需要任何設定；資料只存在目前瀏覽器，也可先使用週一～週日家長一句回報模板、第一週資料缺口巡檢、D0 理化＋數學啟動勾選與 D+1 回測欄。
+- `FirestoreAdapter`：當 `firebase-config.js` 的 `enabled: true` 且 `projectId` 等 Web config 已填入時自動啟用；同一個 `?plan=` 會同步同一份檢核、週回報模板、低敏資料缺口狀態、D0 啟動欄與 D+1 回測欄。
 - 不需要也不可以放 service account、private key、OAuth token 或任何伺服器端憑證。
-- `clientVersion` 仍為 `qiyue-final-90min-sync-v1.5`，若日後改版再同步更新 Firestore Rules。
+- `clientVersion` 仍為 `qiyue-final-90min-sync-v1.6`，若日後改版再同步更新 Firestore Rules。

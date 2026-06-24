@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>祈燁期末複習 90 分鐘同步檢核｜每日計畫・科目資料庫</title>
+  <meta name="description" content="祈燁國二下期末考每日至少 90 分鐘複習檢核頁。可拆成 5 分鐘小段，並檢核各科講義/課後精華錄、單元卷、段考卷、考古題。支援 Firebase/Firestore 跨平台同步。" />
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f3ea;
+      --paper: rgba(255,255,255,.92);
+      --solid: #fffdf8;
+      --ink: #16202a;
+      --muted: #667085;
+      --line: rgba(22,32,42,.14);
+      --line2: rgba(22,32,42,.24);
+      --brand: #0f766e;
+      --blue: #2563eb;
+      --amber: #b45309;
+      --red: #be123c;
+      --green: #166534;
+      --purple: #7c3aed;
+      --shadow: 0 22px 76px rgba(16,24,40,.11), 0 4px 18px rgba(16,24,40,.07);
+      --radius: 24px;
+      --max: 1220px;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: radial-gradient(circle at 18% 0%, #d8f3ee 0, transparent 34%), radial-gradient(circle at 88% 7%, #dfe8ff 0, transparent 32%), var(--bg); color: var(--ink); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif; }
+    a { color: inherit; }
+    .skip { position: absolute; left: -999px; top: 8px; background: #fff; border-radius: 999px; padding: 8px 12px; z-index: 99; }
+    .skip:focus { left: 12px; }
+    .topbar { position: sticky; top: 0; z-index: 20; background: rgba(246,243,234,.78); backdrop-filter: blur(18px); border-bottom: 1px solid var(--line); }
+    .nav { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 0; }
+    .brand { text-decoration: none; display: flex; align-items: center; gap: 10px; font-weight: 980; min-width: 0; }
+    .mark { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 15px; color: #fff; background: linear-gradient(135deg, var(--brand), var(--blue)); box-shadow: 0 10px 26px rgba(15,118,110,.18); }
+    .brand span span { display: block; margin-top: 2px; color: var(--muted); font-size: 12px; font-weight: 760; }
+    .nav-actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+    .nav-actions a, .btn { text-decoration: none; border: 1px solid var(--line2); background: #fff; color: var(--brand); border-radius: 999px; padding: 8px 12px; min-height: 40px; display: inline-flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 950; cursor: pointer; }
+    .btn.primary { background: var(--brand); color: #fff; border-color: var(--brand); }
+    .btn.warn { color: var(--amber); }
+    .btn:disabled { opacity: .5; cursor: not-allowed; }
+    .hero, main, footer { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
+    .hero { padding: 48px 0 22px; display: grid; grid-template-columns: minmax(0, 1fr) 350px; gap: 22px; align-items: end; }
+    .eyebrow { display: inline-flex; border-radius: 999px; padding: 7px 12px; background: rgba(15,118,110,.1); color: var(--brand); font-size: 12px; font-weight: 1000; letter-spacing: .08em; text-transform: uppercase; }
+    h1 { margin: 16px 0 12px; font-size: clamp(2.25rem, 7vw, 5.1rem); line-height: .98; letter-spacing: -.07em; }
+    .lead { margin: 0; color: #4b5563; font-size: clamp(1.02rem, 2vw, 1.22rem); line-height: 1.62; font-weight: 570; }
+    .side, .panel { border: 1px solid var(--line); background: var(--paper); border-radius: var(--radius); box-shadow: var(--shadow); padding: 18px; }
+    .side h2, .panel h2 { margin: 0 0 10px; letter-spacing: -.03em; }
+    .side p { margin: 0; color: var(--muted); line-height: 1.55; font-weight: 660; }
+    .sync-box { margin-top: 12px; display: grid; gap: 8px; }
+    .sync-row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    input, select, textarea { width: 100%; border: 1px solid var(--line2); background: #fff; color: var(--ink); border-radius: 14px; padding: 9px 11px; min-height: 42px; font: inherit; font-weight: 700; }
+    textarea { min-height: 96px; resize: vertical; line-height: 1.5; }
+    label { display: grid; gap: 6px; color: #526070; font-size: 13px; font-weight: 900; }
+    .pill { display: inline-flex; align-items: center; gap: 6px; padding: 6px 9px; border: 1px solid var(--line); border-radius: 999px; background: #fff; color: var(--muted); font-size: 12px; font-weight: 930; }
+    .pill.good { color: var(--green); background: #ecfdf3; border-color: #bbf7d0; }
+    .pill.bad { color: var(--red); background: #fff1f2; border-color: #fecdd3; }
+    .pill.warn { color: var(--amber); background: #fff7ed; border-color: #fed7aa; }
+    main { display: grid; gap: 18px; padding-bottom: 16px; }
+    .dashboard { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+    .metric { border: 1px solid var(--line); border-radius: 20px; background: var(--solid); padding: 15px; box-shadow: 0 10px 28px rgba(16,24,40,.06); }
+    .metric strong { display: block; font-size: clamp(1.6rem, 4vw, 2.35rem); line-height: 1; letter-spacing: -.05em; }
+    .metric span { display: block; color: var(--muted); margin-top: 7px; font-weight: 820; font-size: 13px; }
+    .bar { height: 12px; background: #edf2f7; border-radius: 999px; overflow: hidden; border: 1px solid rgba(0,0,0,.04); margin-top: 10px; }
+    .fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--brand), var(--blue)); transition: width .18s ease; }
+    .controls { display: grid; grid-template-columns: 180px 1fr 1fr; gap: 10px; align-items: end; }
+    .chunk-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+    .chunk { border: 1px solid var(--line); background: #fff; border-radius: 18px; padding: 12px; display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start; min-height: 108px; }
+    .chunk input, .matrix input { width: 22px; height: 22px; accent-color: var(--brand); }
+    .chunk.done { background: #ecfdf3; border-color: #bbf7d0; }
+    .chunk b { display: block; margin-bottom: 4px; }
+    .chunk small { display: block; color: var(--muted); line-height: 1.4; font-weight: 760; }
+    .subject-chip { display: inline-flex; width: fit-content; margin-top: 6px; border-radius: 999px; padding: 3px 7px; background: #e8f4f8; color: #155e75; font-size: 12px; font-weight: 950; }
+    .matrix-wrap { overflow-x: auto; }
+    .matrix { width: 100%; min-width: 820px; border-collapse: collapse; }
+    .matrix th, .matrix td { border-bottom: 1px solid var(--line); padding: 10px; text-align: left; vertical-align: top; }
+    .matrix th { color: #526070; font-size: 13px; background: rgba(255,255,255,.72); position: sticky; top: 65px; z-index: 1; }
+    .matrix .subject { font-weight: 980; white-space: nowrap; }
+    .cell-check { display: flex; align-items: center; gap: 8px; }
+    .cell-check span { color: var(--muted); font-size: 12px; font-weight: 760; }
+    .link { display: inline-flex; margin-top: 5px; color: var(--blue); font-size: 12px; font-weight: 900; text-decoration: none; }
+    .plans { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+    .plan-card { border: 1px solid var(--line); border-radius: 18px; background: #fff; padding: 13px; }
+    .plan-card b { display: block; margin-bottom: 5px; }
+    .plan-card span { color: var(--muted); font-size: 13px; line-height: 1.45; }
+    .notes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    footer { color: var(--muted); padding: 26px 0 42px; font-size: 13px; line-height: 1.7; }
+    @media (max-width: 960px) {
+      .hero { grid-template-columns: 1fr; padding-top: 34px; }
+      .dashboard, .plans { grid-template-columns: 1fr 1fr; }
+      .chunk-grid { grid-template-columns: 1fr 1fr; }
+      .controls, .notes-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 620px) {
+      .hero, main, footer, .nav { width: min(100% - 24px, var(--max)); }
+      .nav { align-items: flex-start; flex-direction: column; }
+      .nav-actions { width: 100%; justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 2px; }
+      .nav-actions a { white-space: nowrap; }
+      .dashboard, .plans, .chunk-grid { grid-template-columns: 1fr; }
+      h1 { font-size: clamp(2rem, 11vw, 3.5rem); }
+      .panel { padding: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#daily">跳到每日 90 分鐘檢核</a>
+  <div class="topbar">
+    <nav class="nav" aria-label="主導覽">
+      <a class="brand" href="./" aria-label="回到本頁頂端"><span class="mark">90</span><span><strong>祈燁 90 分鐘複習檢核</strong><span>每天至少 90 分鐘，可拆成 5 分鐘小段</span></span></a>
+      <div class="nav-actions">
+        <a href="../qiyue-grade8-final-all-in-one-2026-06/">期末總入口</a>
+        <a href="../../webpages/grade8-learning-resources/">國二學習資源</a>
+        <a href="../../webpages/">所有網頁總覽</a>
+      </div>
+    </nav>
+  </div>
+
+  <header class="hero">
+    <section>
+      <p class="eyebrow">90 min daily planner｜database-ready</p>
+      <h1>每天至少 90 分鐘，拆成 5 分鐘也可以</h1>
+      <p class="lead">這頁把「每日時間」、「各科資料檢核」和「家長確認」放在同一張表。每天做滿 18 個 5 分鐘小段；每科固定檢查四種來源：講義或課後精華錄、單元卷、段考卷、考古題。</p>
+    </section>
+    <aside class="side">
+      <h2>同步狀態</h2>
+      <p id="syncHelp">尚未啟用雲端時，資料會先存在本機瀏覽器；啟用 Firestore 後，同一個 plan 連結即可跨手機、電腦與 Telegram 同步。</p>
+      <div class="sync-box">
+        <span id="syncStatus" class="pill warn">本機模式</span>
+        <label>同步 plan ID<input id="planId" inputmode="latin" autocomplete="off" /></label>
+        <div class="sync-row">
+          <button id="applyPlan" class="btn" type="button">套用 plan</button>
+          <button id="pushNow" class="btn primary" type="button">立即同步</button>
+          <a class="btn warn" href="./FIREBASE_SETUP.md">資料庫設定</a>
+        </div>
+      </div>
+    </aside>
+  </header>
+
+  <main id="daily">
+    <section class="panel">
+      <div class="controls">
+        <label>日期<input id="datePicker" type="date" /></label>
+        <label>今天主攻 A<select id="focusA"></select></label>
+        <label>今天主攻 B<select id="focusB"></select></label>
+      </div>
+    </section>
+
+    <section class="dashboard" aria-label="今日進度">
+      <div class="metric"><strong id="minutesDone">0</strong><span>已完成分鐘 / 目標 90</span><div class="bar"><div id="minutesBar" class="fill"></div></div></div>
+      <div class="metric"><strong id="chunksDone">0/18</strong><span>5 分鐘小段</span><div class="bar"><div id="chunksBar" class="fill"></div></div></div>
+      <div class="metric"><strong id="materialsDone">0%</strong><span>各科資料檢核完成率</span><div class="bar"><div id="materialsBar" class="fill"></div></div></div>
+      <div class="metric"><strong id="todayLevel">未開始</strong><span>今日狀態</span><div class="bar"><div id="todayBar" class="fill"></div></div></div>
+    </section>
+
+    <section class="panel">
+      <h2>每日 90 分鐘｜18 個 5 分鐘小段</h2>
+      <p class="lead">可一次做完，也可分散在早上、放學、晚餐後、睡前。重點是每天累積至少 90 分鐘，而且每一段都要有可勾選的產出。</p>
+      <div id="chunkGrid" class="chunk-grid" aria-label="每日 5 分鐘小段"></div>
+    </section>
+
+    <section class="panel">
+      <h2>各科複習資料檢核</h2>
+      <p class="lead">每科都要看過四類資料。沒有該科資料時先留白，不要假裝完成；等拿到資料再勾。</p>
+      <div class="matrix-wrap">
+        <table class="matrix" aria-label="各科資料檢核矩陣">
+          <thead><tr><th>科目</th><th>講義 / 課後精華錄</th><th>單元卷</th><th>段考卷</th><th>考古題</th><th>練習入口</th></tr></thead>
+          <tbody id="materialRows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>一目了然的每日配置</h2>
+      <div class="plans">
+        <div class="plan-card"><b>啟動 10 分鐘</b><span>看昨天錯題、圈今天主攻 A/B，不先亂刷。</span></div>
+        <div class="plan-card"><b>主攻 A 35 分鐘</b><span>講義或課後精華錄 → 單元卷 → 錯題一題回測。</span></div>
+        <div class="plan-card"><b>主攻 B 35 分鐘</b><span>段考卷或考古題，同一輪不重複已會題。</span></div>
+        <div class="plan-card"><b>收尾 10 分鐘</b><span>寫 1 句訂正句，明天 D+1 / D+3 / D+7 回測。</span></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>家長確認與 A-F 錯因</h2>
+      <div class="notes-grid">
+        <label>今天最大卡點 / A-F 錯因<textarea id="noteBlock" placeholder="例：理化皂化和酯化混淆；A 概念混淆。"></textarea></label>
+        <label>明天回測安排<textarea id="reviewBlock" placeholder="例：明天先回測理化皂化 1 題，再做數學 4-2 平行四邊形。"></textarea></label>
+      </div>
+      <div class="sync-row" style="margin-top:12px">
+        <button id="copySummary" class="btn primary" type="button">複製今日回報</button>
+        <button id="resetToday" class="btn warn" type="button">清除今日勾選</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>資料同步說明：未設定 Firebase 時只用本機 localStorage；設定 Firestore 後，頁面會把勾選狀態、分鐘與簡短備註同步到資料庫。請不要輸入完整姓名、私人題本照片或敏感個資。</p>
+    <p>版本：qiyue-final-90min-sync-v1｜更新：2026-06-24。</p>
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="./firebase-config.js"></script>
+  <script>
+    const CLIENT_VERSION = 'qiyue-final-90min-sync-v1';
+    const STORE_KEY = 'qiyue-final-90min-sync-tracker-v1';
+    const TARGET_MINUTES = 90;
+    const CHUNK_MINUTES = 5;
+    const SUBJECTS = [
+      { id: 'chinese', name: '國文', link: '../qiyue-grade8-final-ela-geo-self-study-2026-06/', hint: '注音國字、注釋、空城計、汨羅江神' },
+      { id: 'english', name: '英文', link: '../qiyue-grade8-final-ela-geo-self-study-2026-06/', hint: 'U5-U6 單字、文法、閱讀題組' },
+      { id: 'geography', name: '地理', link: '../qiyue-grade8-final-ela-geo-self-study-2026-06/', hint: '第 5-6 章、非洲、漠南非洲' },
+      { id: 'civics', name: '公民', link: '../qiyue-grade8-final-civics-self-study-2026-06/', hint: '第 5-6 章、行政法規、行政救濟' },
+      { id: 'science', name: '理化', link: '../qiyue-grade8-final-science-organic-self-study-2026-06/', hint: '有機化合物、皂化、酯化、燃燒' },
+      { id: 'math', name: '數學', link: '../qiyue-grade8-final-math-self-study-2026-06/', hint: '3-4～4-3 幾何、平行、四邊形' },
+      { id: 'health', name: '健康', link: '../qiyue-grade8-final-all-in-one-2026-06/', hint: '官方範圍＋課本/講義對照' },
+      { id: 'history', name: '歷史', link: '../qiyue-grade8-final-all-in-one-2026-06/', hint: '歷史 L05-L06 / 期末範圍待比對' }
+    ];
+    const MATERIALS = [
+      { id: 'notes', name: '講義 / 課後精華錄', min: 10 },
+      { id: 'unit', name: '單元卷', min: 15 },
+      { id: 'exam', name: '段考卷', min: 20 },
+      { id: 'past', name: '考古題', min: 20 }
+    ];
+    const ROTATION = [
+      ['science', 'math', 'civics'],
+      ['math', 'science', 'health'],
+      ['chinese', 'english', 'geography'],
+      ['civics', 'history', 'science'],
+      ['math', 'english', 'chinese'],
+      ['geography', 'health', 'civics'],
+      ['science', 'math', 'chinese']
+    ];
+    const $ = (id) => document.getElementById(id);
+    const esc = (text) => String(text || '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+    const todayISO = () => new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+    let cloudDb = null;
+    let cloudDoc = null;
+    let cloudUnsub = null;
+    let suppressCloudSave = false;
+    let saveTimer = null;
+    let state = loadLocal();
+
+    function emptyState() {
+      return { selectedDate: todayISO(), checks: {}, chunks: {}, notes: {}, updatedAt: Date.now() };
+    }
+    function loadLocal() {
+      try { return Object.assign(emptyState(), JSON.parse(localStorage.getItem(STORE_KEY)) || {}); }
+      catch { return emptyState(); }
+    }
+    function saveLocal() {
+      state.updatedAt = Date.now();
+      localStorage.setItem(STORE_KEY, JSON.stringify(state));
+    }
+    function subjectById(id) { return SUBJECTS.find(s => s.id === id) || SUBJECTS[0]; }
+    function dateKey() { return $('datePicker').value || state.selectedDate || todayISO(); }
+    function key(...parts) { return [dateKey(), ...parts].join('|'); }
+    function cloudEnabled() {
+      return !!(window.CLOUD && CLOUD.enabled && window.firebase && CLOUD.config && CLOUD.config.projectId);
+    }
+    function setSync(text, mode) {
+      const el = $('syncStatus');
+      el.textContent = text;
+      el.className = 'pill ' + (mode || 'warn');
+    }
+    function planIdFromUrl() {
+      const p = new URLSearchParams(location.search).get('plan');
+      return (p || localStorage.getItem(STORE_KEY + ':planId') || (window.CLOUD && CLOUD.defaultPlanId) || 'qiyue-final-review-2026-06').trim();
+    }
+    function normalizePlanId(value) {
+      return String(value || '').replace(/[^a-zA-Z0-9_-]/g, '-').slice(0, 80) || 'qiyue-final-review-2026-06';
+    }
+    function dailyDefaults(dateStr) {
+      const day = new Date(dateStr + 'T00:00:00').getDay();
+      return ROTATION[day] || ROTATION[0];
+    }
+    function buildChunks() {
+      const focusA = $('focusA').value || dailyDefaults(dateKey())[0];
+      const focusB = $('focusB').value || dailyDefaults(dateKey())[1];
+      const focusC = dailyDefaults(dateKey()).find(id => id !== focusA && id !== focusB) || 'civics';
+      const sA = subjectById(focusA).name;
+      const sB = subjectById(focusB).name;
+      const sC = subjectById(focusC).name;
+      return [
+        ['啟動', '圈今天主攻 A/B，打開總入口', '跨科'],
+        ['錯題回收', '看昨天答錯或最卡一題，不重抄整張', '跨科'],
+        ['資料定位', '確認今天要用的講義/卷子在哪裡', '跨科'],
+        [`${sA} 講義`, '講義或課後精華錄 1 小節，只畫 3 個關鍵詞', sA],
+        [`${sA} 單元卷`, '單元卷或同型題 1 小組', sA],
+        [`${sA} 段考卷`, '段考卷中挑 2 題，先想再看解答', sA],
+        [`${sA} 錯題`, '錯題模式 1 題，寫一句訂正句', sA],
+        [`${sA} 回測`, '不用看答案重做 1 題', sA],
+        [`${sB} 講義`, '講義或課後精華錄 1 小節，只畫 3 個關鍵詞', sB],
+        [`${sB} 單元卷`, '單元卷或同型題 1 小組', sB],
+        [`${sB} 段考卷`, '段考卷中挑 2 題，先想再看解答', sB],
+        [`${sB} 錯題`, '錯題模式 1 題，寫一句訂正句', sB],
+        [`${sB} 回測`, '不用看答案重做 1 題', sB],
+        [`${sC} 低壓`, '副科 5 分鐘：看一個表、一題或一個關鍵詞', sC],
+        ['考古題', '只做已讀過觀念的考古題，不靠猜', '跨科'],
+        ['家長確認', '盧老師只問：今天最卡哪一格？', '跨科'],
+        ['明日排程', '標 D+1 / D+3 / D+7 要回測的一題', '跨科'],
+        ['收尾', '複製今日回報或口頭回報 30 秒', '跨科']
+      ].map((row, i) => ({ id: `c${String(i + 1).padStart(2, '0')}`, title: row[0], task: row[1], subject: row[2] }));
+    }
+    function populateSubjectSelects() {
+      for (const id of ['focusA', 'focusB']) {
+        $(id).innerHTML = SUBJECTS.map(s => `<option value="${esc(s.id)}">${esc(s.name)}</option>`).join('');
+      }
+    }
+    function setDefaultFocus(force) {
+      const defaults = dailyDefaults(dateKey());
+      if (force || !$('focusA').value) $('focusA').value = defaults[0];
+      if (force || !$('focusB').value) $('focusB').value = defaults[1];
+    }
+    function renderChunks() {
+      const chunks = buildChunks();
+      $('chunkGrid').innerHTML = chunks.map((c) => {
+        const k = key('chunk', c.id);
+        const done = !!state.chunks[k];
+        return `<label class="chunk ${done ? 'done' : ''}">
+          <input type="checkbox" data-kind="chunk" data-key="${esc(k)}" ${done ? 'checked' : ''}>
+          <span><b>${esc(c.id.replace('c', ''))}. ${esc(c.title)}</b><small>${esc(c.task)}</small><em class="subject-chip">${esc(c.subject)}｜5 分鐘</em></span>
+        </label>`;
+      }).join('');
+    }
+    function renderMaterials() {
+      $('materialRows').innerHTML = SUBJECTS.map(s => `<tr>
+        <td><span class="subject">${esc(s.name)}</span><br><span class="pill">${esc(s.hint)}</span></td>
+        ${MATERIALS.map(m => {
+          const k = key('material', s.id, m.id);
+          const done = !!state.checks[k];
+          return `<td><label class="cell-check"><input type="checkbox" data-kind="material" data-key="${esc(k)}" ${done ? 'checked' : ''}><span>${done ? '已確認' : `建議 ${m.min} 分`}</span></label></td>`;
+        }).join('')}
+        <td><a class="link" href="${esc(s.link)}">打開${esc(s.name)}練習 →</a></td>
+      </tr>`).join('');
+    }
+    function renderNotes() {
+      const nk = key('note', 'main');
+      const rk = key('note', 'review');
+      $('noteBlock').value = state.notes[nk] || '';
+      $('reviewBlock').value = state.notes[rk] || '';
+    }
+    function updateMetrics() {
+      const chunkKeys = buildChunks().map(c => key('chunk', c.id));
+      const doneChunks = chunkKeys.filter(k => state.chunks[k]).length;
+      const minutes = doneChunks * CHUNK_MINUTES;
+      const materialKeys = [];
+      SUBJECTS.forEach(s => MATERIALS.forEach(m => materialKeys.push(key('material', s.id, m.id))));
+      const doneMaterials = materialKeys.filter(k => state.checks[k]).length;
+      const matPct = Math.round(doneMaterials / materialKeys.length * 100);
+      const minPct = Math.min(100, Math.round(minutes / TARGET_MINUTES * 100));
+      $('minutesDone').textContent = String(minutes);
+      $('chunksDone').textContent = `${doneChunks}/18`;
+      $('materialsDone').textContent = `${matPct}%`;
+      $('todayLevel').textContent = minutes >= 90 ? '達標' : minutes >= 45 ? '進行中' : minutes > 0 ? '已啟動' : '未開始';
+      $('minutesBar').style.width = `${minPct}%`;
+      $('chunksBar').style.width = `${Math.round(doneChunks / 18 * 100)}%`;
+      $('materialsBar').style.width = `${matPct}%`;
+      $('todayBar').style.width = `${minPct}%`;
+    }
+    function render() {
+      state.selectedDate = dateKey();
+      renderChunks();
+      renderMaterials();
+      renderNotes();
+      updateMetrics();
+    }
+    function scheduleSave(pushCloud = true) {
+      saveLocal();
+      updateMetrics();
+      clearTimeout(saveTimer);
+      if (pushCloud) saveTimer = setTimeout(saveCloud, 650);
+    }
+    async function initCloud() {
+      $('planId').value = normalizePlanId(planIdFromUrl());
+      if (!cloudEnabled()) {
+        setSync('本機模式｜尚未設定資料庫', 'warn');
+        return;
+      }
+      try {
+        if (!firebase.apps.length) firebase.initializeApp(CLOUD.config);
+        cloudDb = firebase.firestore();
+        subscribeCloud();
+      } catch (err) {
+        console.warn('cloud init failed', err);
+        setSync('雲端初始化失敗，先用本機', 'bad');
+      }
+    }
+    function subscribeCloud() {
+      if (!cloudDb) return;
+      const planId = normalizePlanId($('planId').value);
+      localStorage.setItem(STORE_KEY + ':planId', planId);
+      if (cloudUnsub) cloudUnsub();
+      cloudDoc = cloudDb.collection((CLOUD && CLOUD.collection) || 'qiyueFinalReviewPlans').doc(planId);
+      setSync('雲端連線中…', 'warn');
+      cloudUnsub = cloudDoc.onSnapshot((snap) => {
+        if (snap.exists && snap.data().state) {
+          suppressCloudSave = true;
+          state = Object.assign(emptyState(), snap.data().state);
+          saveLocal();
+          $('datePicker').value = state.selectedDate || todayISO();
+          setDefaultFocus(false);
+          render();
+          suppressCloudSave = false;
+        }
+        setSync(`已連到資料庫｜${planId}`, 'good');
+      }, (err) => {
+        console.warn('cloud snapshot failed', err);
+        setSync('雲端讀取失敗，先用本機', 'bad');
+      });
+    }
+    async function saveCloud() {
+      if (suppressCloudSave || !cloudDoc || !cloudEnabled()) return;
+      try {
+        setSync('同步中…', 'warn');
+        await cloudDoc.set({ state, updatedAt: firebase.firestore.FieldValue.serverTimestamp(), clientVersion: CLIENT_VERSION }, { merge: true });
+        setSync(`已同步｜${normalizePlanId($('planId').value)}`, 'good');
+      } catch (err) {
+        console.warn('cloud save failed', err);
+        setSync('雲端寫入失敗，已先存本機', 'bad');
+      }
+    }
+    function bindEvents() {
+      $('datePicker').addEventListener('change', () => { state.selectedDate = dateKey(); setDefaultFocus(true); render(); scheduleSave(); });
+      $('focusA').addEventListener('change', () => { render(); scheduleSave(); });
+      $('focusB').addEventListener('change', () => { render(); scheduleSave(); });
+      $('chunkGrid').addEventListener('change', (ev) => {
+        const box = ev.target.closest('input[data-kind="chunk"]');
+        if (!box) return;
+        state.chunks[box.dataset.key] = box.checked;
+        renderChunks();
+        scheduleSave();
+      });
+      $('materialRows').addEventListener('change', (ev) => {
+        const box = ev.target.closest('input[data-kind="material"]');
+        if (!box) return;
+        state.checks[box.dataset.key] = box.checked;
+        renderMaterials();
+        scheduleSave();
+      });
+      $('noteBlock').addEventListener('input', () => { state.notes[key('note', 'main')] = $('noteBlock').value; scheduleSave(); });
+      $('reviewBlock').addEventListener('input', () => { state.notes[key('note', 'review')] = $('reviewBlock').value; scheduleSave(); });
+      $('applyPlan').addEventListener('click', () => subscribeCloud());
+      $('pushNow').addEventListener('click', () => { saveLocal(); saveCloud(); });
+      $('copySummary').addEventListener('click', async () => {
+        const chunkKeys = buildChunks().map(c => key('chunk', c.id));
+        const doneChunks = chunkKeys.filter(k => state.chunks[k]).length;
+        const minutes = doneChunks * CHUNK_MINUTES;
+        const text = `祈燁 ${dateKey()} 複習回報：已完成 ${minutes}/90 分鐘（${doneChunks}/18 小段）。最大卡點：${$('noteBlock').value || '未填'}。明天回測：${$('reviewBlock').value || '未填'}。`;
+        try { await navigator.clipboard.writeText(text); setSync('已複製今日回報', 'good'); }
+        catch { alert(text); }
+      });
+      $('resetToday').addEventListener('click', () => {
+        if (!confirm('只清除今天的 18 小段與備註？各科資料檢核會保留。')) return;
+        buildChunks().forEach(c => delete state.chunks[key('chunk', c.id)]);
+        delete state.notes[key('note', 'main')];
+        delete state.notes[key('note', 'review')];
+        render();
+        scheduleSave();
+      });
+    }
+    function boot() {
+      populateSubjectSelects();
+      $('datePicker').value = state.selectedDate || todayISO();
+      setDefaultFocus(true);
+      bindEvents();
+      render();
+      initCloud();
+    }
+    boot();
+  </script>
+</body>
+</html>

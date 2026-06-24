@@ -132,10 +132,10 @@
   <main id="resources">
     <section class="panel" aria-label="快速路線">
       <div class="route-grid">
-        <a class="route primary" href="../qiyue-actual-wrong-review-2026-06/"><b>① 先看實際錯題</b><span>理化・國文實際錯因，5 分鐘抓今天最該補什麼。</span></a>
-        <a class="route" href="../qiyue-grade8-final-science-organic-self-study-2026-06/"><b>② 理化有機</b><span>皂化、酯化、有機/無機、燃燒、聚合物。</span></a>
-        <a class="route" href="../qiyue-grade8-final-math-self-study-2026-06/"><b>③ 數學幾何</b><span>3-4～4-3，平行、面積、四邊形與三角形。</span></a>
-        <a class="route" href="../qiyue-grade8-final-civics-self-study-2026-06/"><b>④ 公民第 5-6 章</b><span>行政法規、行政救濟、兒少權益。</span></a>
+        <a class="route primary" href="../qiyue-final-90min-sync-tracker-2026-06/"><b>① 每日 90 分鐘檢核</b><span>18 個 5 分鐘小段＋各科四類資料勾選，支援資料庫同步。</span></a>
+        <a class="route" href="../qiyue-actual-wrong-review-2026-06/"><b>② 先看實際錯題</b><span>理化・國文實際錯因，5 分鐘抓今天最該補什麼。</span></a>
+        <a class="route" href="../qiyue-grade8-final-science-organic-self-study-2026-06/"><b>③ 理化有機</b><span>皂化、酯化、有機/無機、燃燒、聚合物。</span></a>
+        <a class="route" href="../qiyue-grade8-final-math-self-study-2026-06/"><b>④ 數學幾何</b><span>3-4～4-3，平行、面積、四邊形與三角形。</span></a>
       </div>
     </section>
 
@@ -171,6 +171,15 @@
 
   <script>
     const RESOURCES = [
+      {
+        title: '祈燁期末複習 90 分鐘同步檢核｜每日計畫・科目資料庫',
+        subject: '跨科',
+        type: '每日檢核',
+        priority: '先做',
+        href: '../qiyue-final-90min-sync-tracker-2026-06/',
+        description: '每天至少 90 分鐘，可拆成 18 個 5 分鐘小段；各科檢核講義/課後精華錄、單元卷、段考卷、考古題，並可接 Firebase/Firestore 跨平台同步。',
+        tags: ['90分鐘', '每日檢核', '資料庫同步', '講義', '單元卷', '段考卷', '考古題']
+      },
       {
         title: '祈燁實際錯題檢討加強｜理化・國文',
         subject: '跨科',
@@ -300,8 +309,8 @@
     ];
 
     const SUBJECT_ORDER = ['跨科', '理化', '數學', '公民', '國文', '英文', '地理'];
-    const TYPE_ORDER = ['錯題加強', '錯題診斷', '逐題詳解', '自學練習', '考古題練習', '學習重點'];
-    const QUICK = ['先做', '理化', '數學', '公民', '國文', '錯題加強', '自學練習', '考古題練習'];
+    const TYPE_ORDER = ['每日檢核', '錯題加強', '錯題診斷', '逐題詳解', '自學練習', '考古題練習', '學習重點'];
+    const QUICK = ['先做', '90分鐘', '每日檢核', '理化', '數學', '公民', '國文', '錯題加強', '自學練習', '考古題練習'];
     const $ = (id) => document.getElementById(id);
     const escapeHtml = (text) => String(text || '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
     const normalize = (text) => String(text || '').toLowerCase().replace(/\s+/g, ' ').trim();

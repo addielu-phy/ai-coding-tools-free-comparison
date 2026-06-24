@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>祈燁期末複習 90 分鐘檢核｜易讀版</title>
-  <meta name="description" content="祈燁國二下期末考每日至少 90 分鐘複習檢核。四段式操作、18 個 5 分鐘小段、各科講義/課後精華錄、單元卷、段考卷、考古題檢核、第一週資料缺口巡檢、主攻 A/B 延遲回測、D0/D+1/D+3 理化＋數學銜接、D+7 一洞保留回測與下週 90 分鐘主攻 A/B 週目標表，支援 Firebase/Firestore 同步。" />
+  <meta name="description" content="祈燁國二下期末考每日至少 90 分鐘複習檢核。四段式操作、18 個 5 分鐘小段、各科講義/課後精華錄、單元卷、段考卷、考古題檢核、第一週資料缺口巡檢、主攻 A/B 延遲回測、D0/D+1/D+3 理化＋數學銜接、D+7 一洞保留回測與下週週一 90 分鐘主攻 A/B 落地檢核＋家長一句回報銜接，支援 Firebase/Firestore 同步。" />
   <style>
     :root {
       color-scheme: light;
@@ -270,6 +270,21 @@
       </div>
     </section>
 
+    <section class="card" id="mondayLanding">
+      <h2>下週週一 90 分鐘主攻 A/B 落地檢核＋家長一句回報銜接</h2>
+      <p class="subtitle">承接 D+7 v1.8：不重做 D+7，也不等實際題號才開始。週一先把 90 分鐘切成 18 格；前 10 分鐘補填「先不知道／A/B 暫定」，再讓理化主攻 A、數學主攻 B 各留一洞，最後複製家長一句與 D+1 gate。</p>
+      <div id="mondayLandingGrid" class="gap-grid" aria-label="下週週一 90 分鐘主攻 A/B 落地檢核"></div>
+      <div class="notes-grid" style="margin-top:12px">
+        <label class="field">週一入場補填<textarea id="mondayCarry" placeholder="例：D+7 週末最低 3 題：完成/未做/待補；A/B 暫定：先不知道也可。"></textarea></label>
+        <label class="field">主攻 A：理化一洞<textarea id="mondayScienceA" placeholder="例：公式/觀念/單位/適用情境只選一格；不需要題號或答案。"></textarea></label>
+        <label class="field">主攻 B：數學起手式<textarea id="mondayMathB" placeholder="例：畫圖/標已知/列關係只選一格；沒有頁碼可填先不知道。"></textarea></label>
+        <label class="field">家長一句＋D+1 gate<textarea id="mondayParentGate" placeholder="固定句型：週一完成 __/18；主攻A=__；主攻B=__；最大卡點=__；D+1 回測=__。"></textarea></label>
+      </div>
+      <div class="sync-row" style="margin-top:12px">
+        <button id="copyMondaySummary" class="btn primary" type="button">複製週一 90 分鐘落地回報</button>
+      </div>
+    </section>
+
     <section class="card">
       <h2>家長確認</h2>
       <div class="notes-grid">
@@ -294,15 +309,15 @@
 
   <footer>
     <p>資料同步說明：未設定 Firebase 時使用 LocalStorageAdapter，只存在本機瀏覽器；設定 Firestore 後切換為 FirestoreAdapter。請不要輸入完整姓名、私人題本照片或敏感個資。</p>
-    <p>版本：qiyue-final-90min-sync-v1.8｜更新：2026-06-24｜weekly-parent-report-v1.2｜first-week-gap-audit-v1.3｜focus-ab-retrieval-v1.4｜d0-science-math-launch-v1.5｜d1-science-math-retrieval-v1.6｜d3-one-hole-weekend-mix-v1.7｜d7-retention-weekly-focus-v1.8。</p>
+    <p>版本：qiyue-final-90min-sync-v1.9｜更新：2026-06-25｜weekly-parent-report-v1.2｜first-week-gap-audit-v1.3｜focus-ab-retrieval-v1.4｜d0-science-math-launch-v1.5｜d1-science-math-retrieval-v1.6｜d3-one-hole-weekend-mix-v1.7｜d7-retention-weekly-focus-v1.8｜monday-landing-parent-gate-v1.9。</p>
   </footer>
 
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
   <script src="./firebase-config.js"></script>
   <script>
-    const CLIENT_VERSION = 'qiyue-final-90min-sync-v1.8';
-    const PAGE_MARKER = 'd7-retention-weekly-focus-v1.8';
+    const CLIENT_VERSION = 'qiyue-final-90min-sync-v1.9';
+    const PAGE_MARKER = 'monday-landing-parent-gate-v1.9';
     const STORE_KEY = 'qiyue-final-90min-sync-tracker-v1';
     const TARGET_MINUTES = 90;
     const CHUNK_MINUTES = 5;
@@ -572,6 +587,26 @@
       ['下週 gate', '排下週 D+1/D+3/D+7，只留一洞不加碼', '跨科'],
       ['收尾', '複製 D+7 回報；仍不編題號或答案', '跨科']
     ].map((row, i) => ({ id: `d7-${String(i + 1).padStart(2, '0')}`, title: row[0], task: row[1], subject: row[2] }));
+    const MONDAY_LANDING = [
+      ['入場 1', '打開 D+7 欄，只看週末最低 3 題完成/未做/待補', '跨科'],
+      ['入場 2', '補填 A/B 暫定；沒有資料就寫先不知道', '跨科'],
+      ['入場 3', '確認今天仍是 18 格／90 分鐘，不降成 5 分鐘', '跨科'],
+      ['主攻 A 1', '理化只選一個公式或觀念，不看答案先說', '理化'],
+      ['主攻 A 2', '補一個單位或適用情境', '理化'],
+      ['主攻 A 3', '用口頭題或同範圍空白題檢查，不寫原卷題號', '理化'],
+      ['主攻 A 4', '寫一句訂正句：我下次先檢查____', '理化'],
+      ['主攻 A 5', '留下 D+1 理化回測一格', '理化'],
+      ['主攻 B 1', '數學只選一個起手式：畫圖／標已知／列關係', '數學'],
+      ['主攻 B 2', '重畫圖或重標已知，不追新頁碼', '數學'],
+      ['主攻 B 3', '用同型空白題或口頭題，不公開原題答案', '數學'],
+      ['主攻 B 4', '寫一句檢查句：我下次先____', '數學'],
+      ['主攻 B 5', '留下 D+1 數學回測一格', '數學'],
+      ['資料檢核 1', '理化四類來源：講義、單元卷、段考卷、考古題', '理化'],
+      ['資料檢核 2', '數學四類來源：講義、單元卷、段考卷、考古題', '數學'],
+      ['家長一句', '固定句型：完成格數、主攻 A/B、最大卡點', '跨科'],
+      ['D+1 gate', '明天只回理化一格＋數學一格，不加碼', '跨科'],
+      ['收尾', '複製週一 90 分鐘落地回報；仍不編題號或答案', '跨科']
+    ].map((row, i) => ({ id: `monday-${String(i + 1).padStart(2, '0')}`, title: row[0], task: row[1], subject: row[2] }));
     const $ = (id) => document.getElementById(id);
     const esc = (text) => String(text || '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
     const todayISO = () => new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 10);
@@ -816,6 +851,17 @@
       $('d7WeekendStatus').value = state.notes[key('d7-retention', 'weekendStatus')] || '';
       $('d7NextWeekFocus').value = state.notes[key('d7-retention', 'nextWeekFocus')] || '';
     }
+    function renderMondayLanding() {
+      $('mondayLandingGrid').innerHTML = MONDAY_LANDING.map(item => {
+        const k = key('monday-landing', item.id);
+        const done = !!state.checks[k];
+        return `<label class="gap-card"><div class="gap-item ${done ? 'ok' : 'warn'}"><b>${esc(item.title)}</b><span><input type="checkbox" data-kind="monday-landing" data-key="${esc(k)}" ${done ? 'checked' : ''}> ${esc(item.task)}｜${esc(item.subject)}</span></div></label>`;
+      }).join('');
+      $('mondayCarry').value = state.notes[key('monday-landing', 'carry')] || '';
+      $('mondayScienceA').value = state.notes[key('monday-landing', 'scienceA')] || '';
+      $('mondayMathB').value = state.notes[key('monday-landing', 'mathB')] || '';
+      $('mondayParentGate').value = state.notes[key('monday-landing', 'parentGate')] || '';
+    }
     function updateMetrics() {
       const chunkKeys = buildChunks().map(c => key('chunk', c.id));
       const doneChunks = chunkKeys.filter(k => state.chunks[k]).length;
@@ -849,6 +895,7 @@
       renderD1Retrieval();
       renderD3Retrieval();
       renderD7Retention();
+      renderMondayLanding();
       updateMetrics();
     }
     function scheduleSave(pushCloud = true) {
@@ -981,6 +1028,17 @@
       $('d7MathRetention').addEventListener('input', () => { state.notes[key('d7-retention', 'mathRetention')] = $('d7MathRetention').value; scheduleSave(); });
       $('d7WeekendStatus').addEventListener('input', () => { state.notes[key('d7-retention', 'weekendStatus')] = $('d7WeekendStatus').value; scheduleSave(); });
       $('d7NextWeekFocus').addEventListener('input', () => { state.notes[key('d7-retention', 'nextWeekFocus')] = $('d7NextWeekFocus').value; scheduleSave(); });
+      $('mondayLandingGrid').addEventListener('change', (ev) => {
+        const box = ev.target.closest('input[data-kind="monday-landing"]');
+        if (!box) return;
+        state.checks[box.dataset.key] = box.checked;
+        renderMondayLanding();
+        scheduleSave();
+      });
+      $('mondayCarry').addEventListener('input', () => { state.notes[key('monday-landing', 'carry')] = $('mondayCarry').value; scheduleSave(); });
+      $('mondayScienceA').addEventListener('input', () => { state.notes[key('monday-landing', 'scienceA')] = $('mondayScienceA').value; scheduleSave(); });
+      $('mondayMathB').addEventListener('input', () => { state.notes[key('monday-landing', 'mathB')] = $('mondayMathB').value; scheduleSave(); });
+      $('mondayParentGate').addEventListener('input', () => { state.notes[key('monday-landing', 'parentGate')] = $('mondayParentGate').value; scheduleSave(); });
       $('applyPlan').addEventListener('click', () => { if (activeSyncAdapter) activeSyncAdapter.subscribe(); });
       $('pushNow').addEventListener('click', () => { saveLocal(); if (activeSyncAdapter) activeSyncAdapter.save(); });
       $('copySummary').addEventListener('click', async () => {
@@ -1028,6 +1086,12 @@
         try { await navigator.clipboard.writeText(text); setSync('已複製 D+7 週目標回報', 'good'); }
         catch { alert(text); }
       });
+      $('copyMondaySummary').addEventListener('click', async () => {
+        const done = MONDAY_LANDING.filter(item => state.checks[key('monday-landing', item.id)]).length;
+        const text = `祈燁週一 90 分鐘主攻 A/B 落地回報：完成 ${done}/18 格；入場補填=${$('mondayCarry').value || '未填'}；主攻A理化=${$('mondayScienceA').value || '未填'}；主攻B數學=${$('mondayMathB').value || '未填'}；家長一句＋D+1=${$('mondayParentGate').value || '未填'}。`;
+        try { await navigator.clipboard.writeText(text); setSync('已複製週一落地回報', 'good'); }
+        catch { alert(text); }
+      });
       $('resetToday').addEventListener('click', () => {
         if (!confirm('只清除今天的 18 小段與備註？各科資料檢核會保留。')) return;
         buildChunks().forEach(c => delete state.chunks[key('chunk', c.id)]);
@@ -1035,6 +1099,7 @@
         D1_RETRIEVAL.forEach(item => delete state.checks[key('d1-retrieval', item.id)]);
         D3_RETRIEVAL.forEach(item => delete state.checks[key('d3-retrieval', item.id)]);
         D7_RETENTION.forEach(item => delete state.checks[key('d7-retention', item.id)]);
+        MONDAY_LANDING.forEach(item => delete state.checks[key('monday-landing', item.id)]);
         delete state.notes[key('note', 'main')];
         delete state.notes[key('note', 'review')];
         delete state.notes[key('d0-launch', 'blocker')];
@@ -1051,6 +1116,10 @@
         delete state.notes[key('d7-retention', 'mathRetention')];
         delete state.notes[key('d7-retention', 'weekendStatus')];
         delete state.notes[key('d7-retention', 'nextWeekFocus')];
+        delete state.notes[key('monday-landing', 'carry')];
+        delete state.notes[key('monday-landing', 'scienceA')];
+        delete state.notes[key('monday-landing', 'mathB')];
+        delete state.notes[key('monday-landing', 'parentGate')];
         render();
         scheduleSave();
       });

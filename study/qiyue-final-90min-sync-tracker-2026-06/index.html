@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>祈燁期末複習 90 分鐘檢核｜易讀版</title>
-  <meta name="description" content="祈燁國二下期末考每日至少 90 分鐘複習檢核。四段式操作、18 個 5 分鐘小段、各科講義/課後精華錄、單元卷、段考卷、考古題檢核與第一週資料缺口巡檢，支援 Firebase/Firestore 同步。" />
+  <meta name="description" content="祈燁國二下期末考每日至少 90 分鐘複習檢核。四段式操作、18 個 5 分鐘小段、各科講義/課後精華錄、單元卷、段考卷、考古題檢核、第一週資料缺口巡檢與主攻 A/B 延遲回測啟動表，支援 Firebase/Firestore 同步。" />
   <style>
     :root {
       color-scheme: light;
@@ -206,6 +206,12 @@
       <div id="gapGrid" class="gap-grid" aria-label="第一週資料缺口巡檢表"></div>
     </section>
 
+    <section class="card" id="abStarter">
+      <h2>90 分鐘主攻 A/B 與 D+1/D+3/D+7 回測啟動表</h2>
+      <p class="subtitle">承接資料缺口巡檢：沒有實際題號或 A-F 錯因時，先用低敏 A/B 選科讓每天 90 分鐘能開始；若盧老師補任一科回報，主攻 A 立即改成該科。</p>
+      <div id="abStarterGrid" class="gap-grid" aria-label="主攻 A/B 與延遲回測啟動表"></div>
+    </section>
+
     <section class="card">
       <h2>家長確認</h2>
       <div class="notes-grid">
@@ -230,15 +236,15 @@
 
   <footer>
     <p>資料同步說明：未設定 Firebase 時使用 LocalStorageAdapter，只存在本機瀏覽器；設定 Firestore 後切換為 FirestoreAdapter。請不要輸入完整姓名、私人題本照片或敏感個資。</p>
-    <p>版本：qiyue-final-90min-sync-v1.3｜更新：2026-06-24｜weekly-parent-report-v1.2｜first-week-gap-audit-v1.3。</p>
+    <p>版本：qiyue-final-90min-sync-v1.4｜更新：2026-06-24｜weekly-parent-report-v1.2｜first-week-gap-audit-v1.3｜focus-ab-retrieval-v1.4。</p>
   </footer>
 
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
   <script src="./firebase-config.js"></script>
   <script>
-    const CLIENT_VERSION = 'qiyue-final-90min-sync-v1';
-    const PAGE_MARKER = 'first-week-gap-audit-v1.3';
+    const CLIENT_VERSION = 'qiyue-final-90min-sync-v1.4';
+    const PAGE_MARKER = 'focus-ab-retrieval-v1.4';
     const STORE_KEY = 'qiyue-final-90min-sync-tracker-v1';
     const TARGET_MINUTES = 90;
     const CHUNK_MINUTES = 5;
@@ -364,6 +370,68 @@
           ['考古題', '待補本校題；先用時間線與因果模板', 'warn']
         ],
         next: '只填時間線一列或一組原因→影響。'
+      }
+    ];
+    const AB_STARTER = [
+      {
+        day: 'D0 啟動日',
+        focusA: '理化',
+        focusB: '數學',
+        basis: '兩科 Drive confirmed resources 較齊，且最適合用一格公式/起手式做回測。',
+        today: '18 格照跑：啟動 3 格、理化 5 格、數學 5 格、副科/考古題/家長確認/排程/收尾 5 格。',
+        d1: '各回測一題或一格；沒有題號就只回公式/單位/起手式。',
+        d3: '不看答案重做同題型一題；仍不公開原卷內容。',
+        d7: '整理一張「理化＋數學最大洞」低敏摘要。'
+      },
+      {
+        day: 'D1 語文補洞',
+        focusA: '英文',
+        focusB: '國文',
+        basis: '語文類適合每日短回收；已可用課本/講義、單元卷與段考卷待切。',
+        today: '英文抓單字/閱讀錯因一格；國文抓注釋/主旨/字詞一格；其餘格維持 90 分鐘。',
+        d1: '英文 3 字詞或一句型；國文 3 字詞或一句主旨。',
+        d3: '換順序口頭回測，不用新題號。',
+        d7: '留一行「最容易忘的語文規則」。'
+      },
+      {
+        day: 'D2 社會整合',
+        focusA: '地理',
+        focusB: '公民',
+        basis: '社會科資料可用但待切章節；先用地圖/因果與制度關鍵詞做低敏回測。',
+        today: '地理一組地圖/因果；公民兩個關鍵詞；不編事件、題號或答案。',
+        d1: '各說出一個因果或制度限制。',
+        d3: '把地理與公民各做一題同型空白回測。',
+        d7: '彙整成會考能力地圖「待比對」欄。'
+      },
+      {
+        day: 'D3 STEM 延遲回測',
+        focusA: '數學',
+        focusB: '理化',
+        basis: '回到 D0 的最大洞，測記憶是否保留，而不是再展開新範圍。',
+        today: '數學只選最大洞一格；理化只選公式/單位/適用情境一格。',
+        d1: '若 D0 有錯，先重做同型；若無資料，就口頭說出解題起手式。',
+        d3: '本日就是 D+3 gate：完成後才加新題。',
+        d7: '週末混合短測最低 3 題，標準 8 題。'
+      },
+      {
+        day: 'D4 缺口收斂',
+        focusA: '歷史',
+        focusB: '健康',
+        basis: '歷史有 Drive confirmed resources 待切；健康仍是缺口科，用官方範圍＋課本/講義，不回外網亂找。',
+        today: '歷史只填時間線一列或原因→影響一組；健康只填 2 個關鍵詞。',
+        d1: '隔天各口頭說一次，不要求題號。',
+        d3: '若健康仍無卷，維持待補，不冒充考古題。',
+        d7: '在資料缺口巡檢中標出已補/待補。'
+      },
+      {
+        day: 'D7 低敏摘要',
+        focusA: '實際回報科目',
+        focusB: '資料最齊科目',
+        basis: '若一週內出現 A-F/題號/頁碼，就讓它成為主攻 A；若仍無資料，選資料最齊的科目完成低敏摘要。',
+        today: '完成 90 分鐘後只交一行：主攻 A、主攻 B、最大卡點、下週回測入口。',
+        d1: '下週一先回主攻 A 的一題/一格。',
+        d3: '下週三換主攻 B。',
+        d7: '形成下一週 90 分鐘週目標，不建立假精準診斷。'
       }
     ];
     const $ = (id) => document.getElementById(id);
@@ -554,6 +622,20 @@
           <p><strong>下一步：</strong>${esc(subject.next)}</p>
         </section>`).join('');
     }
+    function renderABStarter() {
+      $('abStarterGrid').innerHTML = AB_STARTER.map(row => `
+        <section class="gap-card">
+          <div class="subject-title"><div><h3>${esc(row.day)}</h3><p>${esc(row.basis)}</p></div><span class="pill good">90 分鐘</span></div>
+          <div class="gap-list">
+            <div class="gap-item ok"><b>主攻 A</b><span>${esc(row.focusA)}</span></div>
+            <div class="gap-item ok"><b>主攻 B</b><span>${esc(row.focusB)}</span></div>
+            <div class="gap-item warn"><b>今天做法</b><span>${esc(row.today)}</span></div>
+            <div class="gap-item warn"><b>D+1</b><span>${esc(row.d1)}</span></div>
+            <div class="gap-item warn"><b>D+3</b><span>${esc(row.d3)}</span></div>
+            <div class="gap-item warn"><b>D+7</b><span>${esc(row.d7)}</span></div>
+          </div>
+        </section>`).join('');
+    }
     function updateMetrics() {
       const chunkKeys = buildChunks().map(c => key('chunk', c.id));
       const doneChunks = chunkKeys.filter(k => state.chunks[k]).length;
@@ -582,6 +664,7 @@
       renderNotes();
       renderWeekReport();
       renderGapAudit();
+      renderABStarter();
       updateMetrics();
     }
     function scheduleSave(pushCloud = true) {

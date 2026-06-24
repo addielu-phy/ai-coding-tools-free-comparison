@@ -79,4 +79,11 @@ https://addielu-phy.github.io/ai-coding-tools-free-comparison/study/qiyue-final-
 
 ## 如果還沒設定 Firebase
 
-頁面會顯示「本機模式」。這時仍可勾選與規劃，但資料只存在該裝置瀏覽器，不會跨平台同步。
+頁面會顯示「本機模式」與 `LocalStorageAdapter`。這時仍可勾選與規劃，但資料只存在該裝置瀏覽器，不會跨平台同步。
+
+## Adapter 架構
+
+- `LocalStorageAdapter`：預設啟用，不需要任何設定；資料只存在目前瀏覽器。
+- `FirestoreAdapter`：當 `firebase-config.js` 的 `enabled: true` 且 `projectId` 等 Web config 已填入時自動啟用；同一個 `?plan=` 會同步同一份檢核。
+- 不需要也不可以放 service account、private key、OAuth token 或任何伺服器端憑證。
+- `clientVersion` 仍為 `qiyue-final-90min-sync-v1`，若日後改版再同步更新 Firestore Rules。

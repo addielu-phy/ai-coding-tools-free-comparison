@@ -118,15 +118,16 @@
 
   <header class="hero">
     <section>
-      <p class="eyebrow">90 min daily planner｜database-ready</p>
+      <p class="eyebrow">90 min daily planner｜adapter-ready</p>
       <h1>每天至少 90 分鐘，拆成 5 分鐘也可以</h1>
       <p class="lead">這頁把「每日時間」、「各科資料檢核」和「家長確認」放在同一張表。每天做滿 18 個 5 分鐘小段；每科固定檢查四種來源：講義或課後精華錄、單元卷、段考卷、考古題。</p>
     </section>
     <aside class="side">
       <h2>同步狀態</h2>
-      <p id="syncHelp">尚未啟用雲端時，資料會先存在本機瀏覽器；啟用 Firestore 後，同一個 plan 連結即可跨手機、電腦與 Telegram 同步。</p>
+      <p id="syncHelp">預設使用 LocalStorageAdapter 存在本機瀏覽器；啟用 FirestoreAdapter 後，同一個 plan 連結即可跨手機、電腦與 Telegram 同步。</p>
       <div class="sync-box">
         <span id="syncStatus" class="pill warn">本機模式</span>
+        <span id="adapterStatus" class="pill">LocalStorageAdapter</span>
         <label>同步 plan ID<input id="planId" inputmode="latin" autocomplete="off" /></label>
         <div class="sync-row">
           <button id="applyPlan" class="btn" type="button">套用 plan</button>
@@ -194,7 +195,7 @@
   </main>
 
   <footer>
-    <p>資料同步說明：未設定 Firebase 時只用本機 localStorage；設定 Firestore 後，頁面會把勾選狀態、分鐘與簡短備註同步到資料庫。請不要輸入完整姓名、私人題本照片或敏感個資。</p>
+    <p>資料同步說明：頁面透過 database adapter 儲存資料；未設定 Firebase 時使用 LocalStorageAdapter，只存在本機瀏覽器；設定 Firestore 後切換為 FirestoreAdapter，把勾選狀態、分鐘與簡短備註同步到資料庫。請不要輸入完整姓名、私人題本照片或敏感個資。</p>
     <p>版本：qiyue-final-90min-sync-v1｜更新：2026-06-24。</p>
   </footer>
 
@@ -240,6 +241,7 @@
     let suppressCloudSave = false;
     let saveTimer = null;
     let state = loadLocal();
+    let activeSyncAdapter = null;
 
     function emptyState() {
       return { selectedDate: todayISO(), checks: {}, chunks: {}, notes: {}, updatedAt: Date.now() };
@@ -262,6 +264,41 @@
       const el = $('syncStatus');
       el.textContent = text;
       el.className = 'pill ' + (mode || 'warn');
+    }
+    function localStorageAdapter() {
+      return {
+        id: 'local',
+        label: 'LocalStorageAdapter',
+        help: '預設使用 LocalStorageAdapter：資料只存在本機瀏覽器，可先使用；要跨手機/電腦同步時再啟用 Firebase Web config。',
+        subscribe() {
+          if (cloudUnsub) cloudUnsub();
+          cloudUnsub = null;
+          cloudDoc = null;
+          setSync('本機模式｜LocalStorageAdapter', 'warn');
+        },
+        async save() {
+          setSync('已存本機｜LocalStorageAdapter', 'warn');
+        }
+      };
+    }
+    function firestoreAdapter() {
+      return {
+        id: 'firestore',
+        label: 'FirestoreAdapter',
+        help: '已切換 FirestoreAdapter：同一個 plan 連結會跨手機、電腦與 Telegram 同步；只同步勾選、分鐘與簡短備註。',
+        subscribe: subscribeCloud,
+        save: saveCloud
+      };
+    }
+    function setActiveAdapter(adapter) {
+      activeSyncAdapter = adapter || localStorageAdapter();
+      const el = $('adapterStatus');
+      if (el) {
+        el.textContent = activeSyncAdapter.label;
+        el.className = 'pill ' + (activeSyncAdapter.id === 'firestore' ? 'good' : 'warn');
+      }
+      const help = $('syncHelp');
+      if (help) help.textContent = activeSyncAdapter.help;
     }
     function planIdFromUrl() {
       const p = new URLSearchParams(location.search).get('plan');
@@ -369,20 +406,23 @@
       saveLocal();
       updateMetrics();
       clearTimeout(saveTimer);
-      if (pushCloud) saveTimer = setTimeout(saveCloud, 650);
+      if (pushCloud && activeSyncAdapter) saveTimer = setTimeout(() => activeSyncAdapter.save(), 650);
     }
     async function initCloud() {
       $('planId').value = normalizePlanId(planIdFromUrl());
       if (!cloudEnabled()) {
-        setSync('本機模式｜尚未設定資料庫', 'warn');
+        setActiveAdapter(localStorageAdapter());
+        activeSyncAdapter.subscribe();
         return;
       }
       try {
         if (!firebase.apps.length) firebase.initializeApp(CLOUD.config);
         cloudDb = firebase.firestore();
-        subscribeCloud();
+        setActiveAdapter(firestoreAdapter());
+        activeSyncAdapter.subscribe();
       } catch (err) {
         console.warn('cloud init failed', err);
+        setActiveAdapter(localStorageAdapter());
         setSync('雲端初始化失敗，先用本機', 'bad');
       }
     }
@@ -440,8 +480,8 @@
       });
       $('noteBlock').addEventListener('input', () => { state.notes[key('note', 'main')] = $('noteBlock').value; scheduleSave(); });
       $('reviewBlock').addEventListener('input', () => { state.notes[key('note', 'review')] = $('reviewBlock').value; scheduleSave(); });
-      $('applyPlan').addEventListener('click', () => subscribeCloud());
-      $('pushNow').addEventListener('click', () => { saveLocal(); saveCloud(); });
+      $('applyPlan').addEventListener('click', () => { if (activeSyncAdapter) activeSyncAdapter.subscribe(); });
+      $('pushNow').addEventListener('click', () => { saveLocal(); if (activeSyncAdapter) activeSyncAdapter.save(); });
       $('copySummary').addEventListener('click', async () => {
         const chunkKeys = buildChunks().map(c => key('chunk', c.id));
         const doneChunks = chunkKeys.filter(k => state.chunks[k]).length;

@@ -8,7 +8,7 @@
 - 不要放 private key。
 - 不要放 Google OAuth token。
 - Firebase Web config 裡的 `apiKey` 不是私鑰，公開在前端是正常做法；真正的保護靠 Firestore Rules。
-- 同步資料請只放：日期、科目、檢核項目、分鐘、簡短備註、週一～週日家長一句回報、第一週資料缺口巡檢的低敏勾選狀態、D0 理化＋數學啟動勾選、D+1 理化＋數學回測啟動、D+3 理化＋數學一洞延遲回測、週末最低 3 題入口、D+7 理化＋數學一洞保留回測、下週 90 分鐘主攻 A/B 週目標、週一 90 分鐘主攻 A/B 落地檢核＋家長一句回報銜接，以及 D+1 理化＋數學一洞回測收斂欄。不要填完整姓名、班級座號、私人題本照片、私人 Drive URL、完整檔名、題號答案或敏感個資。
+- 同步資料請只放：日期、科目、檢核項目、分鐘、簡短備註、週一～週日家長一句回報、第一週資料缺口巡檢的低敏勾選狀態、D0 理化＋數學啟動勾選、D+1 理化＋數學回測啟動、D+3 理化＋數學一洞延遲回測、週末最低 3 題入口、D+7 理化＋數學一洞保留回測、下週 90 分鐘主攻 A/B 週目標、週一 90 分鐘主攻 A/B 落地檢核＋家長一句回報銜接、D+1 理化＋數學一洞回測收斂欄，以及 D+3 週一後理化＋數學一洞延遲回測＋週末最低 3 題接續欄。不要填完整姓名、班級座號、私人題本照片、私人 Drive URL、完整檔名、題號答案或敏感個資。
 
 ## Step 1：建立 Firebase 專案
 
@@ -49,7 +49,7 @@ service cloud.firestore {
       }
       function isValidPayload(d) {
         return d.keys().hasOnly(['state', 'updatedAt', 'clientVersion'])
-          && d.clientVersion == 'qiyue-final-90min-sync-v1.10'
+          && d.clientVersion == 'qiyue-final-90min-sync-v1.11'
           && d.state is map
           && d.state.keys().hasOnly(['checks', 'chunks', 'notes', 'selectedDate', 'updatedAt'])
           && d.state.checks is map
@@ -83,7 +83,7 @@ https://addielu-phy.github.io/ai-coding-tools-free-comparison/study/qiyue-final-
 
 ## Adapter 架構
 
-- `LocalStorageAdapter`：預設啟用，不需要任何設定；資料只存在目前瀏覽器，也可先使用週一～週日家長一句回報模板、第一週資料缺口巡檢、D0 理化＋數學啟動勾選、D+1 回測欄、D+3 一洞延遲回測欄、D+7 保留回測欄、週一落地檢核欄與 D+1 週一後收斂欄。
-- `FirestoreAdapter`：當 `firebase-config.js` 的 `enabled: true` 且 `projectId` 等 Web config 已填入時自動啟用；同一個 `?plan=` 會同步同一份檢核、週回報模板、低敏資料缺口狀態、D0 啟動欄、D+1 回測欄、D+3 週末最低 3 題入口、D+7 保留回測欄、週一落地檢核欄與 D+1 週一後收斂欄。
+- `LocalStorageAdapter`：預設啟用，不需要任何設定；資料只存在目前瀏覽器，也可先使用週一～週日家長一句回報模板、第一週資料缺口巡檢、D0 理化＋數學啟動勾選、D+1 回測欄、D+3 一洞延遲回測欄、D+7 保留回測欄、週一落地檢核欄、D+1 週一後收斂欄與 D+3 週一後延遲回測欄。
+- `FirestoreAdapter`：當 `firebase-config.js` 的 `enabled: true` 且 `projectId` 等 Web config 已填入時自動啟用；同一個 `?plan=` 會同步同一份檢核、週回報模板、低敏資料缺口狀態、D0 啟動欄、D+1 回測欄、D+3 週末最低 3 題入口、D+7 保留回測欄、週一落地檢核欄、D+1 週一後收斂欄與 D+3 週一後延遲回測欄。
 - 不需要也不可以放 service account、private key、OAuth token 或任何伺服器端憑證。
-- `clientVersion` 仍為 `qiyue-final-90min-sync-v1.10`，若日後改版再同步更新 Firestore Rules。
+- `clientVersion` 仍為 `qiyue-final-90min-sync-v1.11`，若日後改版再同步更新 Firestore Rules。

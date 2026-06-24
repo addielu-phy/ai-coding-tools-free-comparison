@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>祈燁期末複習 90 分鐘檢核｜易讀版</title>
-  <meta name="description" content="祈燁國二下期末考每日至少 90 分鐘複習檢核。四段式操作、18 個 5 分鐘小段、各科講義/課後精華錄、單元卷、段考卷、考古題檢核、第一週資料缺口巡檢與主攻 A/B 延遲回測啟動表，支援 Firebase/Firestore 同步。" />
+  <meta name="description" content="祈燁國二下期末考每日至少 90 分鐘複習檢核。四段式操作、18 個 5 分鐘小段、各科講義/課後精華錄、單元卷、段考卷、考古題檢核、第一週資料缺口巡檢、主攻 A/B 延遲回測與 D0 理化＋數學實作前手機勾選啟動表，支援 Firebase/Firestore 同步。" />
   <style>
     :root {
       color-scheme: light;
@@ -212,6 +212,19 @@
       <div id="abStarterGrid" class="gap-grid" aria-label="主攻 A/B 與延遲回測啟動表"></div>
     </section>
 
+    <section class="card" id="d0Launch">
+      <h2>D0 理化＋數學 90 分鐘實作前手機勾選啟動＋D+1 回測空白欄</h2>
+      <p class="subtitle">這輪不重做 A/B 表，直接把 D0 變成可勾選流程：先跑 18 格，再留下明天 D+1 一格。沒有實際題號時只填公式／起手式／最大卡點，不編造原卷內容。</p>
+      <div id="d0LaunchGrid" class="gap-grid" aria-label="D0 理化與數學實作前啟動勾選"></div>
+      <div class="notes-grid" style="margin-top:12px">
+        <label class="field">D0 最大卡點<textarea id="d0Blocker" placeholder="例：理化公式單位不穩；數學不知道起手式。沒有資料可填：先不知道。"></textarea></label>
+        <label class="field">D+1 回測空白欄<textarea id="d1Blank" placeholder="例：明天回測理化 1 格：____；數學 1 格：____。若沒有題號，填公式/起手式即可。"></textarea></label>
+      </div>
+      <div class="sync-row" style="margin-top:12px">
+        <button id="copyD0Summary" class="btn primary" type="button">複製 D0 理化＋數學回報</button>
+      </div>
+    </section>
+
     <section class="card">
       <h2>家長確認</h2>
       <div class="notes-grid">
@@ -236,15 +249,15 @@
 
   <footer>
     <p>資料同步說明：未設定 Firebase 時使用 LocalStorageAdapter，只存在本機瀏覽器；設定 Firestore 後切換為 FirestoreAdapter。請不要輸入完整姓名、私人題本照片或敏感個資。</p>
-    <p>版本：qiyue-final-90min-sync-v1.4｜更新：2026-06-24｜weekly-parent-report-v1.2｜first-week-gap-audit-v1.3｜focus-ab-retrieval-v1.4。</p>
+    <p>版本：qiyue-final-90min-sync-v1.5｜更新：2026-06-24｜weekly-parent-report-v1.2｜first-week-gap-audit-v1.3｜focus-ab-retrieval-v1.4｜d0-science-math-launch-v1.5。</p>
   </footer>
 
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
   <script src="./firebase-config.js"></script>
   <script>
-    const CLIENT_VERSION = 'qiyue-final-90min-sync-v1.4';
-    const PAGE_MARKER = 'focus-ab-retrieval-v1.4';
+    const CLIENT_VERSION = 'qiyue-final-90min-sync-v1.5';
+    const PAGE_MARKER = 'd0-science-math-launch-v1.5';
     const STORE_KEY = 'qiyue-final-90min-sync-tracker-v1';
     const TARGET_MINUTES = 90;
     const CHUNK_MINUTES = 5;
@@ -434,6 +447,26 @@
         d7: '形成下一週 90 分鐘週目標，不建立假精準診斷。'
       }
     ];
+    const D0_LAUNCH = [
+      ['啟動 1', '打開本頁並選今天日期', '跨科'],
+      ['啟動 2', '主攻 A 設理化，主攻 B 設數學', '跨科'],
+      ['啟動 3', '先寫今天最大卡點：可填先不知道', '跨科'],
+      ['理化 1', '只看第五～六章一個公式或觀念', '理化'],
+      ['理化 2', '補單位／適用情境一格', '理化'],
+      ['理化 3', '做一個同範圍小題或口頭說出解法', '理化'],
+      ['理化 4', '寫一句訂正句，不抄整題', '理化'],
+      ['理化 5', '留下明天 D+1 回測一格', '理化'],
+      ['數學 1', '只選 3-4～4-3 最大洞一節', '數學'],
+      ['數學 2', '寫出起手式：先畫圖／標已知／列關係', '數學'],
+      ['數學 3', '做一題同型或改寫題，不看答案先啟動', '數學'],
+      ['數學 4', '慢寫步驟，檢查單位與答案形式', '數學'],
+      ['數學 5', '留下明天 D+1 回測一格', '數學'],
+      ['副科 1', '公民或健康只做 2 關鍵詞', '副科'],
+      ['資料檢核', '勾理化／數學四類來源到目前狀態', '跨科'],
+      ['家長確認', '只問：今天 18 格完成幾格？', '跨科'],
+      ['D+1 排程', '明天先回理化一格，再回數學一格', '跨科'],
+      ['收尾', '複製 D0 回報，不加碼', '跨科']
+    ].map((row, i) => ({ id: `d0-${String(i + 1).padStart(2, '0')}`, title: row[0], task: row[1], subject: row[2] }));
     const $ = (id) => document.getElementById(id);
     const esc = (text) => String(text || '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
     const todayISO = () => new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 10);
@@ -636,6 +669,15 @@
           </div>
         </section>`).join('');
     }
+    function renderD0Launch() {
+      $('d0LaunchGrid').innerHTML = D0_LAUNCH.map(item => {
+        const k = key('d0-launch', item.id);
+        const done = !!state.checks[k];
+        return `<label class="gap-card"><div class="gap-item ${done ? 'ok' : 'warn'}"><b>${esc(item.title)}</b><span><input type="checkbox" data-kind="d0-launch" data-key="${esc(k)}" ${done ? 'checked' : ''}> ${esc(item.task)}｜${esc(item.subject)}</span></div></label>`;
+      }).join('');
+      $('d0Blocker').value = state.notes[key('d0-launch', 'blocker')] || '';
+      $('d1Blank').value = state.notes[key('d0-launch', 'd1')] || '';
+    }
     function updateMetrics() {
       const chunkKeys = buildChunks().map(c => key('chunk', c.id));
       const doneChunks = chunkKeys.filter(k => state.chunks[k]).length;
@@ -665,6 +707,7 @@
       renderWeekReport();
       renderGapAudit();
       renderABStarter();
+      renderD0Launch();
       updateMetrics();
     }
     function scheduleSave(pushCloud = true) {
@@ -755,6 +798,15 @@
         state.notes[weekKey(ev.target.dataset.day, 'report')] = ev.target.value;
         scheduleSave();
       });
+      $('d0LaunchGrid').addEventListener('change', (ev) => {
+        const box = ev.target.closest('input[data-kind="d0-launch"]');
+        if (!box) return;
+        state.checks[box.dataset.key] = box.checked;
+        renderD0Launch();
+        scheduleSave();
+      });
+      $('d0Blocker').addEventListener('input', () => { state.notes[key('d0-launch', 'blocker')] = $('d0Blocker').value; scheduleSave(); });
+      $('d1Blank').addEventListener('input', () => { state.notes[key('d0-launch', 'd1')] = $('d1Blank').value; scheduleSave(); });
       $('applyPlan').addEventListener('click', () => { if (activeSyncAdapter) activeSyncAdapter.subscribe(); });
       $('pushNow').addEventListener('click', () => { saveLocal(); if (activeSyncAdapter) activeSyncAdapter.save(); });
       $('copySummary').addEventListener('click', async () => {
@@ -778,11 +830,20 @@
         try { await navigator.clipboard.writeText(text); setSync('已複製本週回報模板', 'good'); }
         catch { alert(text); }
       });
+      $('copyD0Summary').addEventListener('click', async () => {
+        const done = D0_LAUNCH.filter(item => state.checks[key('d0-launch', item.id)]).length;
+        const text = `祈燁 D0 理化＋數學 90 分鐘啟動回報：完成 ${done}/18 格；主攻A=理化，主攻B=數學；最大卡點=${$('d0Blocker').value || '未填'}；D+1回測=${$('d1Blank').value || '未填'}。`;
+        try { await navigator.clipboard.writeText(text); setSync('已複製 D0 回報', 'good'); }
+        catch { alert(text); }
+      });
       $('resetToday').addEventListener('click', () => {
         if (!confirm('只清除今天的 18 小段與備註？各科資料檢核會保留。')) return;
         buildChunks().forEach(c => delete state.chunks[key('chunk', c.id)]);
+        D0_LAUNCH.forEach(item => delete state.checks[key('d0-launch', item.id)]);
         delete state.notes[key('note', 'main')];
         delete state.notes[key('note', 'review')];
+        delete state.notes[key('d0-launch', 'blocker')];
+        delete state.notes[key('d0-launch', 'd1')];
         render();
         scheduleSave();
       });

@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>祈燁期末複習 90 分鐘檢核｜易讀版</title>
-  <meta name="description" content="祈燁國二下期末考每日至少 90 分鐘複習檢核。四段式操作、18 個 5 分鐘小段、各科講義/課後精華錄、單元卷、段考卷、考古題檢核、第一週資料缺口巡檢、主攻 A/B 延遲回測、D0/D+1/D+3 理化＋數學銜接、D+7 一洞保留回測、下週週一 90 分鐘主攻 A/B 落地檢核、D+1 收斂欄、D+3 週一後理化＋數學一洞延遲回測、週末最低 3 題完成回收＋第二週 A/B 目標、第二週 D+1 理化＋數學一格回測收斂欄，第二週 D+3 理化＋數學一格延遲回測＋週末最低 3 題接續 v1.14，以及第二週 D+7 A/B 一格保留回測＋第三週 90 分鐘主攻 A/B 接續 v1.15、第三週 D+1 A/B 一格回測收斂 v1.16，以及第三週 D+3 A/B 一格延遲回測＋週末最低 3 題接續 v1.17，以及第三週 D+7 A/B 一格保留回測＋下週 90 分鐘主攻 A/B 接續 v1.18，支援 Firebase/Firestore 同步。" />
+  <meta name="description" content="祈燁國二下期末考每日至少 90 分鐘複習檢核。四段式操作、18 個 5 分鐘小段、各科講義/課後精華錄、單元卷、段考卷、考古題檢核、第一週資料缺口巡檢、主攻 A/B 延遲回測、D0/D+1/D+3 理化＋數學銜接、D+7 一洞保留回測、下週週一 90 分鐘主攻 A/B 落地檢核、D+1 收斂欄、D+3 週一後理化＋數學一洞延遲回測、週末最低 3 題完成回收＋第二週 A/B 目標、第二週 D+1 理化＋數學一格回測收斂欄，第二週 D+3 理化＋數學一格延遲回測＋週末最低 3 題接續 v1.14，以及第二週 D+7 A/B 一格保留回測＋第三週 90 分鐘主攻 A/B 接續 v1.15、第三週 D+1 A/B 一格回測收斂 v1.16，以及第三週 D+3 A/B 一格延遲回測＋週末最低 3 題接續 v1.17，以及第三週 D+7 A/B 一格保留回測＋下週 90 分鐘主攻 A/B 接續 v1.18，並新增下週週一 90 分鐘主攻 A/B 落地檢核＋家長一句回報銜接 v1.19，支援 Firebase/Firestore 同步。" />
   <style>
     :root {
       color-scheme: light;
@@ -439,6 +439,22 @@
       </div>
     </section>
 
+    <section class="card" id="nextMondayLandingV119">
+      <h2>下週週一 90 分鐘主攻 A/B 落地檢核＋家長一句回報銜接 v1.19</h2>
+      <p class="subtitle">承接 v1.18：若仍沒有第三週 D+7 完成格數、A-F、題號、頁碼或孩子回報，不重做 D+7 欄。先用 10 分鐘把 v1.18 做最小關閉，再把下週週一 90 分鐘落地成 18 格；第一格先定向，不在翻題本找題號時卡住。</p>
+      <div id="nextMondayV119Grid" class="gap-grid" aria-label="v1.19 下週週一 90 分鐘主攻 A/B 落地勾選"></div>
+      <div class="notes-grid" style="margin-top:12px">
+        <label class="field">v1.18 承接與完成格數<textarea id="nextMondayV119Carry" placeholder="例：v1.18 D+7 完成 __/18；A/B 是否有印象；不知道可填先不知道。"></textarea></label>
+        <label class="field">v1.18 最小關閉確認<textarea id="nextMondayV119Close" placeholder="5分鐘口頭確認：A 還記得__／B 還記得__／未確認也可填未確認；不追題號。"></textarea></label>
+        <label class="field">週一主攻 A 落地<textarea id="nextMondayV119A" placeholder="例：週一 A=同一理化一格；先定向，再做公式/觀念/單位/適用情境；不填原卷題號。"></textarea></label>
+        <label class="field">週一主攻 B 落地<textarea id="nextMondayV119B" placeholder="例：週一 B=同一數學起手式或第二資料齊全科一格；頁碼可空白，先留回測入口。"></textarea></label>
+        <label class="field">家長一句＋D+1 gate<textarea id="nextMondayV119ParentGate" placeholder="固定句型：週一完成 __/18；A=__；B=__；最大卡點=__；D+1 只回同一格=__；回報截止=晚間固定一句。"></textarea></label>
+      </div>
+      <div class="sync-row" style="margin-top:12px">
+        <button id="copyNextMondayV119Summary" class="btn primary" type="button">複製 v1.19 週一落地回報</button>
+      </div>
+    </section>
+
     <section class="card" id="weeklyReport">
       <h2>週一～週日 90 分鐘家長一句回報</h2>
       <p class="subtitle">這是穩定使用回合：每天仍是至少 90 分鐘，5 分鐘只當 18 格切段。沒有實際題號/A-F 時也可先填「先不知道」，不要編造題目或答案。</p>
@@ -451,15 +467,15 @@
 
   <footer>
     <p>資料同步說明：未設定 Firebase 時使用 LocalStorageAdapter，只存在本機瀏覽器；設定 Firestore 後切換為 FirestoreAdapter。請不要輸入完整姓名、私人題本照片或敏感個資。</p>
-    <p>版本：qiyue-final-90min-sync-v1.18｜更新：2026-06-25｜weekly-parent-report-v1.2｜first-week-gap-audit-v1.3｜focus-ab-retrieval-v1.4｜d0-science-math-launch-v1.5｜d1-science-math-retrieval-v1.6｜d3-one-hole-weekend-mix-v1.7｜d7-retention-weekly-focus-v1.8｜monday-landing-parent-gate-v1.9｜d1-monday-convergence-v1.10｜d3-monday-followup-v1.11｜weekend-second-week-v1.12｜second-week-d1-convergence-v1.13｜second-week-d3-followup-v1.14｜second-week-d7-retention-v1.15｜third-week-d1-convergence-v1.16｜third-week-d3-followup-v1.17｜third-week-d7-retention-v1.18。</p>
+    <p>版本：qiyue-final-90min-sync-v1.19｜更新：2026-06-25｜weekly-parent-report-v1.2｜first-week-gap-audit-v1.3｜focus-ab-retrieval-v1.4｜d0-science-math-launch-v1.5｜d1-science-math-retrieval-v1.6｜d3-one-hole-weekend-mix-v1.7｜d7-retention-weekly-focus-v1.8｜monday-landing-parent-gate-v1.9｜d1-monday-convergence-v1.10｜d3-monday-followup-v1.11｜weekend-second-week-v1.12｜second-week-d1-convergence-v1.13｜second-week-d3-followup-v1.14｜second-week-d7-retention-v1.15｜third-week-d1-convergence-v1.16｜third-week-d3-followup-v1.17｜third-week-d7-retention-v1.18｜next-monday-landing-v1.19。</p>
   </footer>
 
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
   <script src="./firebase-config.js"></script>
   <script>
-    const CLIENT_VERSION = 'qiyue-final-90min-sync-v1.18';
-    const PAGE_MARKER = 'third-week-d7-retention-v1.18';
+    const CLIENT_VERSION = 'qiyue-final-90min-sync-v1.19';
+    const PAGE_MARKER = 'next-monday-landing-v1.19';
     const STORE_KEY = 'qiyue-final-90min-sync-tracker-v1';
     const TARGET_MINUTES = 90;
     const CHUNK_MINUTES = 5;
@@ -935,6 +951,27 @@
       ['收尾', '複製 v1.18 回報；不公開私人題號、照片或答案', '跨科']
     ].map((row, i) => ({ id: `w3d7-${String(i + 1).padStart(2, '0')}`, title: row[0], task: row[1], subject: row[2] }));
 
+    const NEXT_MONDAY_LANDING_V119 = [
+      ['承接 1', '讀 v1.18：D+7 完成格數、A/B 保留、下週 A/B 可留白', '跨科'],
+      ['承接 2', '5 分鐘最小關閉：A/B 有無印象只填已確認／未確認', '跨科'],
+      ['定向 1', '第一格先定向：今天只攻 A 一格＋B 一格，不翻題本找題號卡住', '跨科'],
+      ['A 落地 1', '主攻 A 先選來源類型：講義／課後精華錄／單元卷／段考卷／考古題', '主攻 A'],
+      ['A 落地 2', '遮住筆記，說出一個公式／觀念／單位／適用情境', '主攻 A'],
+      ['A 落地 3', '同範圍相近練習一題或口頭題，不公開原卷題號', '主攻 A'],
+      ['A 落地 4', '若有 A-F 錯因就填；沒有就填先不知道，不編造', '主攻 A'],
+      ['A 落地 5', '留下 D+1 要回測的同一格，不加新範圍', '主攻 A'],
+      ['B 落地 1', '主攻 B 先選來源類型：講義／課後精華錄／單元卷／段考卷／考古題', '主攻 B'],
+      ['B 落地 2', '寫一個起手式或關鍵詞，不追求多題量', '主攻 B'],
+      ['B 落地 3', '同範圍相近練習一題或口頭題，不填原卷答案', '主攻 B'],
+      ['B 落地 4', '若有 A-F 錯因就填；沒有就填先不知道，不逼孩子猜', '主攻 B'],
+      ['B 落地 5', '留下 D+1 要回測的同一格，不加新範圍', '主攻 B'],
+      ['資料門', 'A/B 四類來源各勾一次；缺資料只標待補', '跨科'],
+      ['家長一句', '固定晚間一句：完成 __/18、A=__、B=__、最大卡點=__', '跨科'],
+      ['D+1 gate', '下輪只回今天同一 A/B 一格；有真題號才改實際回測', '跨科'],
+      ['降載', '疲累時縮小每格內容，但仍維持 18 格／90 分鐘架構', '跨科'],
+      ['收尾', '複製 v1.19 回報；不公開私人題號、照片、答案或孩子表現', '跨科']
+    ].map((row, i) => ({ id: `nm119-${String(i + 1).padStart(2, '0')}`, title: row[0], task: row[1], subject: row[2] }));
+
     const $ = (id) => document.getElementById(id);
     const esc = (text) => String(text || '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
     const todayISO = () => new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 10);
@@ -1300,6 +1337,18 @@
       $('thirdWeekD7NextWeek').value = state.notes[key('third-week-d7', 'nextWeek')] || '';
       $('thirdWeekD7Gate').value = state.notes[key('third-week-d7', 'gate')] || '';
     }
+    function renderNextMondayLandingV119() {
+      $('nextMondayV119Grid').innerHTML = NEXT_MONDAY_LANDING_V119.map(item => {
+        const k = key('next-monday-v119', item.id);
+        const done = !!state.checks[k];
+        return `<label class="gap-card"><div class="gap-item ${done ? 'ok' : 'warn'}"><b>${esc(item.title)}</b><span><input type="checkbox" data-kind="next-monday-v119" data-key="${esc(k)}" ${done ? 'checked' : ''}> ${esc(item.task)}｜${esc(item.subject)}</span></div></label>`;
+      }).join('');
+      $('nextMondayV119Carry').value = state.notes[key('next-monday-v119', 'carry')] || '';
+      $('nextMondayV119Close').value = state.notes[key('next-monday-v119', 'close')] || '';
+      $('nextMondayV119A').value = state.notes[key('next-monday-v119', 'a')] || '';
+      $('nextMondayV119B').value = state.notes[key('next-monday-v119', 'b')] || '';
+      $('nextMondayV119ParentGate').value = state.notes[key('next-monday-v119', 'parentGate')] || '';
+    }
     function updateMetrics() {
       const chunkKeys = buildChunks().map(c => key('chunk', c.id));
       const doneChunks = chunkKeys.filter(k => state.chunks[k]).length;
@@ -1343,6 +1392,7 @@
       renderThirdWeekD1Convergence();
       renderThirdWeekD3Followup();
       renderThirdWeekD7Retention();
+      renderNextMondayLandingV119();
       updateMetrics();
     }
     function scheduleSave(pushCloud = true) {
@@ -1594,6 +1644,19 @@
       $('thirdWeekD7B').addEventListener('input', () => { state.notes[key('third-week-d7', 'b')] = $('thirdWeekD7B').value; scheduleSave(); });
       $('thirdWeekD7NextWeek').addEventListener('input', () => { state.notes[key('third-week-d7', 'nextWeek')] = $('thirdWeekD7NextWeek').value; scheduleSave(); });
       $('thirdWeekD7Gate').addEventListener('input', () => { state.notes[key('third-week-d7', 'gate')] = $('thirdWeekD7Gate').value; scheduleSave(); });
+
+      $('nextMondayV119Grid').addEventListener('change', (ev) => {
+        const box = ev.target.closest('input[data-kind="next-monday-v119"]');
+        if (!box) return;
+        state.checks[box.dataset.key] = box.checked;
+        renderNextMondayLandingV119();
+        scheduleSave();
+      });
+      $('nextMondayV119Carry').addEventListener('input', () => { state.notes[key('next-monday-v119', 'carry')] = $('nextMondayV119Carry').value; scheduleSave(); });
+      $('nextMondayV119Close').addEventListener('input', () => { state.notes[key('next-monday-v119', 'close')] = $('nextMondayV119Close').value; scheduleSave(); });
+      $('nextMondayV119A').addEventListener('input', () => { state.notes[key('next-monday-v119', 'a')] = $('nextMondayV119A').value; scheduleSave(); });
+      $('nextMondayV119B').addEventListener('input', () => { state.notes[key('next-monday-v119', 'b')] = $('nextMondayV119B').value; scheduleSave(); });
+      $('nextMondayV119ParentGate').addEventListener('input', () => { state.notes[key('next-monday-v119', 'parentGate')] = $('nextMondayV119ParentGate').value; scheduleSave(); });
       $('applyPlan').addEventListener('click', () => { if (activeSyncAdapter) activeSyncAdapter.subscribe(); });
       $('pushNow').addEventListener('click', () => { saveLocal(); if (activeSyncAdapter) activeSyncAdapter.save(); });
       $('copySummary').addEventListener('click', async () => {
@@ -1703,6 +1766,12 @@
         try { await navigator.clipboard.writeText(text); setSync('已複製 v1.18 第三週 D+7 回報', 'good'); }
         catch { alert(text); }
       });
+      $('copyNextMondayV119Summary').addEventListener('click', async () => {
+        const done = NEXT_MONDAY_LANDING_V119.filter(item => state.checks[key('next-monday-v119', item.id)]).length;
+        const text = `祈燁 v1.19 下週週一 90 分鐘主攻 A/B 落地回報：完成 ${done}/18 格；v1.18承接=${$('nextMondayV119Carry').value || '未填'}；最小關閉=${$('nextMondayV119Close').value || '未填'}；主攻A=${$('nextMondayV119A').value || '未填'}；主攻B=${$('nextMondayV119B').value || '未填'}；家長一句＋D+1=${$('nextMondayV119ParentGate').value || '未填'}。`;
+        try { await navigator.clipboard.writeText(text); setSync('已複製 v1.19 週一落地回報', 'good'); }
+        catch { alert(text); }
+      });
       $('resetToday').addEventListener('click', () => {
         if (!confirm('只清除今天的 18 小段與備註？各科資料檢核會保留。')) return;
         buildChunks().forEach(c => delete state.chunks[key('chunk', c.id)]);
@@ -1720,6 +1789,7 @@
         THIRD_WEEK_D1_CONVERGENCE.forEach(item => delete state.checks[key('third-week-d1', item.id)]);
         THIRD_WEEK_D3_FOLLOWUP.forEach(item => delete state.checks[key('third-week-d3', item.id)]);
         THIRD_WEEK_D7_RETENTION.forEach(item => delete state.checks[key('third-week-d7', item.id)]);
+        NEXT_MONDAY_LANDING_V119.forEach(item => delete state.checks[key('next-monday-v119', item.id)]);
         delete state.notes[key('note', 'main')];
         delete state.notes[key('note', 'review')];
         delete state.notes[key('d0-launch', 'blocker')];
@@ -1782,6 +1852,11 @@
         delete state.notes[key('third-week-d7', 'b')];
         delete state.notes[key('third-week-d7', 'nextWeek')];
         delete state.notes[key('third-week-d7', 'gate')];
+        delete state.notes[key('next-monday-v119', 'carry')];
+        delete state.notes[key('next-monday-v119', 'close')];
+        delete state.notes[key('next-monday-v119', 'a')];
+        delete state.notes[key('next-monday-v119', 'b')];
+        delete state.notes[key('next-monday-v119', 'parentGate')];
         render();
         scheduleSave();
       });

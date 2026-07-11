@@ -1,0 +1,118 @@
+{
+  "modules": [
+    {
+      "id": "m01",
+      "title": "力學：運動學",
+      "description": "位移、速度、加速度與圖表判讀",
+      "order": 1
+    },
+    {
+      "id": "m02",
+      "title": "力學：動力學",
+      "description": "牛頓定律、力圖與圓周運動",
+      "order": 2
+    },
+    {
+      "id": "m03",
+      "title": "力學：能量與動量",
+      "description": "功、能量守恆、碰撞與衝量",
+      "order": 3
+    },
+    {
+      "id": "m04",
+      "title": "熱學：熱量與溫度",
+      "description": "比熱、相變、熱平衡",
+      "order": 4
+    },
+    {
+      "id": "m05",
+      "title": "熱學：氣體與熱力學",
+      "description": "理想氣體、氣體動力論與熱力學",
+      "order": 5
+    },
+    {
+      "id": "m06",
+      "title": "光學：幾何光學",
+      "description": "反射、折射、透鏡與成像",
+      "order": 6
+    },
+    {
+      "id": "m07",
+      "title": "光學：波動",
+      "description": "波速、干涉、繞射與都卜勒",
+      "order": 7
+    },
+    {
+      "id": "m08",
+      "title": "光學：物理光學",
+      "description": "光電、偏振與波粒二象性",
+      "order": 8
+    },
+    {
+      "id": "m09",
+      "title": "電磁學：靜電",
+      "description": "庫侖力、電場、電位與電容",
+      "order": 9
+    },
+    {
+      "id": "m10",
+      "title": "電磁學：電流",
+      "description": "歐姆定律、電路與功率",
+      "order": 10
+    },
+    {
+      "id": "m11",
+      "title": "電磁學：磁場與受力",
+      "description": "磁力、帶電粒子與載流導線",
+      "order": 11
+    },
+    {
+      "id": "m12",
+      "title": "電磁學：電磁感應",
+      "description": "磁通量、感應電動勢與楞次定律",
+      "order": 12
+    },
+    {
+      "id": "m13",
+      "title": "近代物理：光電效應",
+      "description": "光量子、截止電壓與功函數",
+      "order": 13
+    },
+    {
+      "id": "m14",
+      "title": "近代物理：物質波",
+      "description": "德布羅意波、電子繞射",
+      "order": 14
+    },
+    {
+      "id": "m15",
+      "title": "近代物理：原子模型",
+      "description": "波耳模型與能階",
+      "order": 15
+    },
+    {
+      "id": "m16",
+      "title": "近代物理：原子核與量子概念",
+      "description": "核反應、半衰期與量子觀念",
+      "order": 16
+    },
+    {
+      "id": "m17",
+      "title": "實驗與圖表判讀",
+      "description": "量測、誤差、圖表與模型檢核",
+      "order": 17
+    },
+    {
+      "id": "m18",
+      "title": "跨章節整合",
+      "description": "多概念題組與情境推理",
+      "order": 18
+    },
+    {
+      "id": "m19",
+      "title": "模擬測驗策略",
+      "description": "時間分配、作答檢查與錯因回收",
+      "order": 19
+    }
+  ]
+}

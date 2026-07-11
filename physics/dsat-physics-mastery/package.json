@@ -1,0 +1,8 @@
+{
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "validate": "node scripts/validate-release-a.mjs",
+    "verify:official-pdfs": "python scripts/verify_ceec_answer_pdfs.py"
+  }
+}

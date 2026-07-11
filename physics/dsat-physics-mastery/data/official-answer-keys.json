@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "officialIndexUrl": "https://www.ceec.edu.tw/xmfile?xsmsid=0J052427633128416650",
+  "checkedAt": "2026-07-12",
+  "years": {
+    "110": {
+      "exam": "110學年度指定科目考試物理考科",
+      "questionPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251613285357490464/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e7%a7%91%e8%a9%a6%e5%8d%b7%e5%ae%9a%e7%a8%bf%20.pdf",
+      "answerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+      "answerPdfSha256": "20bbda06fe2f3b9a142e221fcc6ea79473ded149843f798914d8a12917b3b464",
+      "nonChoiceAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l266474253065721553/06-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%9d%9e%e9%81%b8%e6%93%87%e9%a1%8c%e5%8f%83%e8%80%83%e7%ad%94%e6%a1%88.pdf",
+      "checkedAt": "2026-07-12",
+      "answers": ["E", "C", "A", "E", "D", "B", "A", "D", "B", "D", "E", "A", "E", "C", "B", "D", "B", "A", "C", "C", "BD", "ADE", "BCE", "ACE", "/", "/", "/", "/"]
+    },
+    "111": {
+      "exam": "111學年度分科測驗物理考科",
+      "answerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0m223498335577191796/05-111%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+      "answerPdfSha256": "191c54201cd8db2686970667429dc1abf0d27cca0ae0c6be8a3571d88fec03b8",
+      "checkedAt": "2026-07-12",
+      "answers": ["C", "D", "C", "A", "B", "D", "C", "B", "A", "E", "C", "ABE", "CE", "AD", "BE", "DE", "AD", "BC", "B", "A", "/", "D", "/", "/", "E", "/"]
+    },
+    "112": {
+      "exam": "112學年度分科測驗物理考科",
+      "answerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+      "answerPdfSha256": "0243515a8b1339e9b594dd4b7f4e0e810d63529ae5c0a44ebfa47a1966ca44cb",
+      "checkedAt": "2026-07-12",
+      "answers": ["D", "C", "E", "B", "E", "E", "B", "A", "B", "D", "D", "A", "C", "ADE", "AC", "BCE", "AC", "BD", "AD", "/", "/", "BE", "/", "CE", "A", "/"]
+    },
+    "113": {
+      "exam": "113學年度分科測驗物理考科",
+      "answerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0o221354517405701583/05-113%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+      "answerPdfSha256": "b2b47a2b9e484dd2035d582229e0b204057fa10a1296093955deb649e76c2b05",
+      "checkedAt": "2026-07-12",
+      "answers": ["D", "B", "E", "D", "E", "B", "A", "A", "C", "B", "C", "D", "BC", "BD", "ADE", "ACE", "ACD", "BDE", "/", "BCE", "/", "/", "E", "AD", "/", "/"]
+    },
+    "114": {
+      "exam": "114學年度分科測驗物理考科",
+      "answerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0p217332507401284656/05-114%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+      "answerPdfSha256": "f54a635a87bfffa5a2da0c0050666ab11f4beef6ff942746416f014a0ebd7fa6",
+      "checkedAt": "2026-07-12",
+      "answers": ["E", "A", "D", "D", "C", "B", "D", "C", "A", "B", "C", "E", "BCE", "BC", "BDE", "AC", "AD", "CD", "/", "/", "/", "/", "AD", "AE", "A", "/"]
+    }
+  }
+}

@@ -1,0 +1,5711 @@
+{
+  "schemaVersion": 1,
+  "questions": [
+    {
+      "id": "110-01",
+      "sourceId": "110-01",
+      "year": 110,
+      "questionNumber": 1,
+      "type": "single",
+      "domain": "近代物理",
+      "topic": "宇宙學與背景輻射",
+      "moduleId": "m16",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "E"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/110_01.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p2.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "110-02",
+      "sourceId": "110-02",
+      "year": 110,
+      "questionNumber": 2,
+      "type": "single",
+      "domain": "光學",
+      "topic": "水波因次分析",
+      "moduleId": "m07",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "C"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/110_02.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p2.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "110-03",
+      "sourceId": "110-03",
+      "year": 110,
+      "questionNumber": 3,
+      "type": "single",
+      "domain": "力學",
+      "topic": "投球作功與動能",
+      "moduleId": "m03",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/110_03.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p2.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": true,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "110-04",
+      "sourceId": "110-04",
+      "year": 110,
+      "questionNumber": 4,
+      "type": "single",
+      "domain": "力學",
+      "topic": "拋體運動",
+      "moduleId": "m01",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "E"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/110_04.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p2.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": true,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "110-05",
+      "sourceId": "110-05",
+      "year": 110,
+      "questionNumber": 5,
+      "type": "single",
+      "domain": "力學",
+      "topic": "單擺與彈簧週期",
+      "moduleId": "m02",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "D"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/110_05.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p2.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "110-06",
+      "sourceId": "110-06",
+      "year": 110,
+      "questionNumber": 6,
+      "type": "single",
+      "domain": "力學",
+      "topic": "靜力平衡與力矩",
+      "moduleId": "m02",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "B"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/110_06.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p3.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": true,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "110-07",
+      "sourceId": "110-07",
+      "year": 110,
+      "questionNumber": 7,
+      "type": "single",
+      "domain": "力學",
+      "topic": "擺球碰撞與能量",
+      "moduleId": "m03",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/110_07.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p3.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "110-08",
+      "sourceId": "110-08",
+      "year": 110,
+      "questionNumber": 8,
+      "type": "single",
+      "domain": "光學",
+      "topic": "氣柱共鳴/聲波",
+      "moduleId": "m07",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "D"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/110_08.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p3.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": true,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "110-09",
+      "sourceId": "110-09",
+      "year": 110,
+      "questionNumber": 9,
+      "type": "single",
+      "domain": "電磁學",
+      "topic": "電流天平與磁力",
+      "moduleId": "m11",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "B"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/110_09.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p3.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": true,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "110-10",
+      "sourceId": "110-10",
+      "year": 110,
+      "questionNumber": 10,
+      "type": "single",
+      "domain": "力學",
+      "topic": "力學題組",
+      "moduleId": "m02",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "D"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/110_10.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p4.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": true,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "110-11",
+      "sourceId": "110-11",
+      "year": 110,
+      "questionNumber": 11,
+      "type": "single",
+      "domain": "力學",
+      "topic": "能量守恆",
+      "moduleId": "m03",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "E"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/110_11.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p4.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": true,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "110-12",
+      "sourceId": "110-12",
+      "year": 110,
+      "questionNumber": 12,
+      "type": "single",
+      "domain": "熱力學",
+      "topic": "氣體分子與壓力",
+      "moduleId": "m05",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/110_12.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p4.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": true,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "110-13",
+      "sourceId": "110-13",
+      "year": 110,
+      "questionNumber": 13,
+      "type": "single",
+      "domain": "電磁學",
+      "topic": "電路/電阻",
+      "moduleId": "m10",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "E"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/110_13.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p4.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": true,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "110-14",
+      "sourceId": "110-14",
+      "year": 110,
+      "questionNumber": 14,
+      "type": "single",
+      "domain": "電磁學",
+      "topic": "電場/電位",
+      "moduleId": "m09",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "C"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/110_14.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p5.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "110-15",
+      "sourceId": "110-15",
+      "year": 110,
+      "questionNumber": 15,
+      "type": "single",
+      "domain": "電磁學",
+      "topic": "感應電動勢",
+      "moduleId": "m12",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "B"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/110_15.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p5.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": true,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "110-16",
+      "sourceId": "110-16",
+      "year": 110,
+      "questionNumber": 16,
+      "type": "single",
+      "domain": "光學",
+      "topic": "透鏡/成像",
+      "moduleId": "m06",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "D"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/110_16.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p5.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": true,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "110-17",
+      "sourceId": "110-17",
+      "year": 110,
+      "questionNumber": 17,
+      "type": "single",
+      "domain": "近代物理",
+      "topic": "光電效應",
+      "moduleId": "m13",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "B"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/110_17.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p5.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": true,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "110-18",
+      "sourceId": "110-18",
+      "year": 110,
+      "questionNumber": 18,
+      "type": "single",
+      "domain": "近代物理",
+      "topic": "氫原子能階",
+      "moduleId": "m15",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/110_18.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p6.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": true,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "110-19",
+      "sourceId": "110-19",
+      "year": 110,
+      "questionNumber": 19,
+      "type": "single",
+      "domain": "近代物理",
+      "topic": "物質波",
+      "moduleId": "m14",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "C"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/110_19.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p6.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": true,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "110-20",
+      "sourceId": "110-20",
+      "year": 110,
+      "questionNumber": 20,
+      "type": "single",
+      "domain": "熱力學",
+      "topic": "熱學/熱機",
+      "moduleId": "m04",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "C"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/110_20.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p6.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": true,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "110-21",
+      "sourceId": "110-21",
+      "year": 110,
+      "questionNumber": 21,
+      "type": "multi",
+      "domain": "電磁學",
+      "topic": "磁場與電流",
+      "moduleId": "m11",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "B",
+        "D"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/110_21.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p6.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "110-22",
+      "sourceId": "110-22",
+      "year": 110,
+      "questionNumber": 22,
+      "type": "multi",
+      "domain": "電磁學",
+      "topic": "電磁感應多選",
+      "moduleId": "m12",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A",
+        "D",
+        "E"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/110_22.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p6.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": true,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "110-23",
+      "sourceId": "110-23",
+      "year": 110,
+      "questionNumber": 23,
+      "type": "multi",
+      "domain": "力學",
+      "topic": "轉動/力矩",
+      "moduleId": "m02",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "B",
+        "C",
+        "E"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/110_23.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p7.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": true,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "110-24",
+      "sourceId": "110-24",
+      "year": 110,
+      "questionNumber": 24,
+      "type": "multi",
+      "domain": "光學",
+      "topic": "干涉/繞射",
+      "moduleId": "m08",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A",
+        "C",
+        "E"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/110_24.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p7.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": true,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "110-25",
+      "sourceId": "110-25",
+      "year": 110,
+      "questionNumber": 25,
+      "type": "open",
+      "domain": "近代物理",
+      "topic": "核反應/近代物理",
+      "moduleId": "m16",
+      "points": 4,
+      "choices": [],
+      "answer": [],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/110_25.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p7.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "110-26",
+      "sourceId": "110-26",
+      "year": 110,
+      "questionNumber": 26,
+      "type": "open",
+      "domain": "力學",
+      "topic": "非選能量",
+      "moduleId": "m03",
+      "points": 4,
+      "choices": [],
+      "answer": [],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/110_26.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p8.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "110-27",
+      "sourceId": "110-27",
+      "year": 110,
+      "questionNumber": 27,
+      "type": "open",
+      "domain": "電磁學",
+      "topic": "非選感應",
+      "moduleId": "m12",
+      "points": 4,
+      "choices": [],
+      "answer": [],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/110_27.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p8.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "110-28",
+      "sourceId": "110-28",
+      "year": 110,
+      "questionNumber": 28,
+      "type": "open",
+      "domain": "光學",
+      "topic": "非選波動",
+      "moduleId": "m07",
+      "points": 4,
+      "choices": [],
+      "answer": [],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/110_28.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p8.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "111-01",
+      "sourceId": "111-01",
+      "year": 111,
+      "questionNumber": 1,
+      "type": "single",
+      "domain": "力學",
+      "topic": "牛頓第二定律單位",
+      "moduleId": "m02",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "C"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/111_01.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/111_p2.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0m223498335577191796/05-111%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "111-02",
+      "sourceId": "111-02",
+      "year": 111,
+      "questionNumber": 2,
+      "type": "single",
+      "domain": "力學",
+      "topic": "斜面、碰撞與能量",
+      "moduleId": "m03",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "D"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/111_02.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/111_p2.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0m223498335577191796/05-111%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "111-03",
+      "sourceId": "111-03",
+      "year": 111,
+      "questionNumber": 3,
+      "type": "single",
+      "domain": "力學",
+      "topic": "直線運動煞車",
+      "moduleId": "m01",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "C"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/111_03.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/111_p2.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0m223498335577191796/05-111%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "111-04",
+      "sourceId": "111-04",
+      "year": 111,
+      "questionNumber": 4,
+      "type": "single",
+      "domain": "熱力學",
+      "topic": "焦耳實驗功熱轉換",
+      "moduleId": "m04",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/111_04.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/111_p2.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0m223498335577191796/05-111%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "111-05",
+      "sourceId": "111-05",
+      "year": 111,
+      "questionNumber": 5,
+      "type": "single",
+      "domain": "電磁學",
+      "topic": "磁通量變化",
+      "moduleId": "m12",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "B"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/111_05.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/111_p2.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0m223498335577191796/05-111%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "111-06",
+      "sourceId": "111-06",
+      "year": 111,
+      "questionNumber": 6,
+      "type": "single",
+      "domain": "光學",
+      "topic": "弦駐波與基頻",
+      "moduleId": "m07",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "D"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/111_06.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/111_p3.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0m223498335577191796/05-111%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "111-07",
+      "sourceId": "111-07",
+      "year": 111,
+      "questionNumber": 7,
+      "type": "single",
+      "domain": "熱力學",
+      "topic": "氣體動力論",
+      "moduleId": "m05",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "C"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/111_07.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/111_p3.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0m223498335577191796/05-111%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "111-08",
+      "sourceId": "111-08",
+      "year": 111,
+      "questionNumber": 8,
+      "type": "single",
+      "domain": "近代物理",
+      "topic": "宇宙/粒子與量子",
+      "moduleId": "m16",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "B"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/111_08.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/111_p3.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0m223498335577191796/05-111%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "111-09",
+      "sourceId": "111-09",
+      "year": 111,
+      "questionNumber": 9,
+      "type": "single",
+      "domain": "近代物理",
+      "topic": "光的二象性與氫原子吸收",
+      "moduleId": "m15",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/111_09.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/111_p3.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0m223498335577191796/05-111%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "111-10",
+      "sourceId": "111-10",
+      "year": 111,
+      "questionNumber": 10,
+      "type": "single",
+      "domain": "光學",
+      "topic": "球透鏡/幾何光學",
+      "moduleId": "m06",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "E"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/111_10.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/111_p3.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0m223498335577191796/05-111%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "111-11",
+      "sourceId": "111-11",
+      "year": 111,
+      "questionNumber": 11,
+      "type": "single",
+      "domain": "力學",
+      "topic": "測量與不確定度",
+      "moduleId": "m01",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "C"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/111_11.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/111_p4.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0m223498335577191796/05-111%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "111-12",
+      "sourceId": "111-12",
+      "year": 111,
+      "questionNumber": 12,
+      "type": "multi",
+      "domain": "力學",
+      "topic": "摩擦力與力平衡",
+      "moduleId": "m02",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "E"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/111_12.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/111_p4.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0m223498335577191796/05-111%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "111-13",
+      "sourceId": "111-13",
+      "year": 111,
+      "questionNumber": 13,
+      "type": "multi",
+      "domain": "電磁學",
+      "topic": "電路與電阻",
+      "moduleId": "m10",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "C",
+        "E"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/111_13.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/111_p4.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0m223498335577191796/05-111%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "111-14",
+      "sourceId": "111-14",
+      "year": 111,
+      "questionNumber": 14,
+      "type": "multi",
+      "domain": "電磁學",
+      "topic": "電磁感應與電流",
+      "moduleId": "m12",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A",
+        "D"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/111_14.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/111_p5.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0m223498335577191796/05-111%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "111-15",
+      "sourceId": "111-15",
+      "year": 111,
+      "questionNumber": 15,
+      "type": "multi",
+      "domain": "電磁學",
+      "topic": "平行板電容/電場",
+      "moduleId": "m09",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "B",
+        "E"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/111_15.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/111_p5.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0m223498335577191796/05-111%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "111-16",
+      "sourceId": "111-16",
+      "year": 111,
+      "questionNumber": 16,
+      "type": "multi",
+      "domain": "光學",
+      "topic": "折射與壓克力板",
+      "moduleId": "m06",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "D",
+        "E"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/111_16.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/111_p5.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0m223498335577191796/05-111%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "111-17",
+      "sourceId": "111-17",
+      "year": 111,
+      "questionNumber": 17,
+      "type": "multi",
+      "domain": "熱力學",
+      "topic": "氣體膨脹作功",
+      "moduleId": "m04",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A",
+        "D"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/111_17.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/111_p5.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0m223498335577191796/05-111%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "111-18",
+      "sourceId": "111-18",
+      "year": 111,
+      "questionNumber": 18,
+      "type": "multi",
+      "domain": "熱力學",
+      "topic": "能量守恆/熱學",
+      "moduleId": "m04",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "B",
+        "C"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/111_18.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/111_p6.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0m223498335577191796/05-111%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "111-19",
+      "sourceId": "111-19",
+      "year": 111,
+      "questionNumber": 19,
+      "type": "single",
+      "domain": "力學",
+      "topic": "萬有引力與拉格朗日點",
+      "moduleId": "m02",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "B"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/111_19.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/111_p6.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0m223498335577191796/05-111%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "111-20",
+      "sourceId": "111-20",
+      "year": 111,
+      "questionNumber": 20,
+      "type": "single",
+      "domain": "力學",
+      "topic": "圓周運動/天體",
+      "moduleId": "m02",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/111_20.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/111_p7.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0m223498335577191796/05-111%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "111-21",
+      "sourceId": "111-21",
+      "year": 111,
+      "questionNumber": 21,
+      "type": "open",
+      "domain": "力學",
+      "topic": "L2 優點非選",
+      "moduleId": "m02",
+      "points": 4,
+      "choices": [],
+      "answer": [],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/111_21.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/111_p7.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0m223498335577191796/05-111%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "111-22",
+      "sourceId": "111-22",
+      "year": 111,
+      "questionNumber": 22,
+      "type": "single",
+      "domain": "近代物理",
+      "topic": "光電效應實驗",
+      "moduleId": "m13",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "D"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/111_22.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/111_p7.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0m223498335577191796/05-111%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "111-23",
+      "sourceId": "111-23",
+      "year": 111,
+      "questionNumber": 23,
+      "type": "open",
+      "domain": "近代物理",
+      "topic": "普朗克常數圖表",
+      "moduleId": "m13",
+      "points": 4,
+      "choices": [],
+      "answer": [],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/111_23.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/111_p7.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0m223498335577191796/05-111%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "111-24",
+      "sourceId": "111-24",
+      "year": 111,
+      "questionNumber": 24,
+      "type": "open",
+      "domain": "近代物理",
+      "topic": "光電效應數據判讀",
+      "moduleId": "m13",
+      "points": 4,
+      "choices": [],
+      "answer": [],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/111_24.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/111_p8.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0m223498335577191796/05-111%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": true,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "111-25",
+      "sourceId": "111-25",
+      "year": 111,
+      "questionNumber": 25,
+      "type": "single",
+      "domain": "光學",
+      "topic": "瑞立擴音器/波動",
+      "moduleId": "m07",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "E"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/111_25.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/111_p8.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0m223498335577191796/05-111%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": true,
+        "choicesRecovered": true,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "111-26",
+      "sourceId": "111-26",
+      "year": 111,
+      "questionNumber": 26,
+      "type": "open",
+      "domain": "光學",
+      "topic": "聲波繞射模型",
+      "moduleId": "m07",
+      "points": 4,
+      "choices": [],
+      "answer": [],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/111_26.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/111_p8.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0m223498335577191796/05-111%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "112-01",
+      "sourceId": "112-01",
+      "year": 112,
+      "questionNumber": 1,
+      "type": "single",
+      "domain": "力學",
+      "topic": "因次與能量單位",
+      "moduleId": "m03",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "D"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/112_01.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/112_p2.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "112-02",
+      "sourceId": "112-02",
+      "year": 112,
+      "questionNumber": 2,
+      "type": "single",
+      "domain": "光學",
+      "topic": "電磁波性質",
+      "moduleId": "m07",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "C"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/112_02.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/112_p2.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "112-03",
+      "sourceId": "112-03",
+      "year": 112,
+      "questionNumber": 3,
+      "type": "single",
+      "domain": "力學",
+      "topic": "測量與不確定度",
+      "moduleId": "m01",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "E"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/112_03.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/112_p2.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "112-04",
+      "sourceId": "112-04",
+      "year": 112,
+      "questionNumber": 4,
+      "type": "single",
+      "domain": "電磁學",
+      "topic": "點電荷作功與電位能",
+      "moduleId": "m09",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "B"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/112_04.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/112_p2.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "112-05",
+      "sourceId": "112-05",
+      "year": 112,
+      "questionNumber": 5,
+      "type": "single",
+      "domain": "力學",
+      "topic": "簡諧運動/單擺",
+      "moduleId": "m02",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "E"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/112_05.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/112_p2.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "112-06",
+      "sourceId": "112-06",
+      "year": 112,
+      "questionNumber": 6,
+      "type": "single",
+      "domain": "力學",
+      "topic": "彈性碰撞與能量",
+      "moduleId": "m03",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "E"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/112_06.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/112_p2.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "112-07",
+      "sourceId": "112-07",
+      "year": 112,
+      "questionNumber": 7,
+      "type": "single",
+      "domain": "近代物理",
+      "topic": "奈米/量子與物性",
+      "moduleId": "m13",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "B"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/112_07.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/112_p3.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "112-08",
+      "sourceId": "112-08",
+      "year": 112,
+      "questionNumber": 8,
+      "type": "single",
+      "domain": "力學",
+      "topic": "碰撞結合彈性位能",
+      "moduleId": "m03",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/112_08.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/112_p3.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "112-09",
+      "sourceId": "112-09",
+      "year": 112,
+      "questionNumber": 9,
+      "type": "single",
+      "domain": "力學",
+      "topic": "v-t 圖與分段運動",
+      "moduleId": "m01",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "B"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/112_09.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/112_p3.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "112-10",
+      "sourceId": "112-10",
+      "year": 112,
+      "questionNumber": 10,
+      "type": "single",
+      "domain": "熱力學",
+      "topic": "奈米尺度熔點判讀",
+      "moduleId": "m04",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "D"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/112_10.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/112_p4.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "112-11",
+      "sourceId": "112-11",
+      "year": 112,
+      "questionNumber": 11,
+      "type": "single",
+      "domain": "光學",
+      "topic": "聲波相消干涉",
+      "moduleId": "m07",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "D"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/112_11.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/112_p4.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "112-12",
+      "sourceId": "112-12",
+      "year": 112,
+      "questionNumber": 12,
+      "type": "single",
+      "domain": "近代物理",
+      "topic": "太陽吸收光譜",
+      "moduleId": "m16",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/112_12.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/112_p4.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "112-13",
+      "sourceId": "112-13",
+      "year": 112,
+      "questionNumber": 13,
+      "type": "single",
+      "domain": "力學",
+      "topic": "力學基本題",
+      "moduleId": "m02",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "C"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/112_13.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/112_p4.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "112-14",
+      "sourceId": "112-14",
+      "year": 112,
+      "questionNumber": 14,
+      "type": "multi",
+      "domain": "力學",
+      "topic": "紙牌/受力分析",
+      "moduleId": "m02",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A",
+        "D",
+        "E"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/112_14.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/112_p5.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": true,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "112-15",
+      "sourceId": "112-15",
+      "year": 112,
+      "questionNumber": 15,
+      "type": "multi",
+      "domain": "力學",
+      "topic": "行星資料與萬有引力",
+      "moduleId": "m02",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A",
+        "C"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/112_15.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/112_p5.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": true,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "112-16",
+      "sourceId": "112-16",
+      "year": 112,
+      "questionNumber": 16,
+      "type": "multi",
+      "domain": "力學",
+      "topic": "角動量/參考點",
+      "moduleId": "m02",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "B",
+        "C",
+        "E"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/112_16.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/112_p5.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": true,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "112-17",
+      "sourceId": "112-17",
+      "year": 112,
+      "questionNumber": 17,
+      "type": "multi",
+      "domain": "近代物理",
+      "topic": "量子現象",
+      "moduleId": "m15",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A",
+        "C"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/112_17.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/112_p5.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": true,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "112-18",
+      "sourceId": "112-18",
+      "year": 112,
+      "questionNumber": 18,
+      "type": "multi",
+      "domain": "光學",
+      "topic": "折射定律/圓柱體",
+      "moduleId": "m06",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "B",
+        "D"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/112_18.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/112_p6.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": true,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "112-19",
+      "sourceId": "112-19",
+      "year": 112,
+      "questionNumber": 19,
+      "type": "multi",
+      "domain": "光學",
+      "topic": "波動/聲學",
+      "moduleId": "m07",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A",
+        "D"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/112_19.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/112_p6.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": true,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "112-20",
+      "sourceId": "112-20",
+      "year": 112,
+      "questionNumber": 20,
+      "type": "open",
+      "domain": "近代物理",
+      "topic": "微中子基本作用力",
+      "moduleId": "m16",
+      "points": 4,
+      "choices": [],
+      "answer": [],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/112_20.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/112_p6.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "112-21",
+      "sourceId": "112-21",
+      "year": 112,
+      "questionNumber": 21,
+      "type": "open",
+      "domain": "近代物理",
+      "topic": "光子動量公式推導",
+      "moduleId": "m14",
+      "points": 4,
+      "choices": [],
+      "answer": [],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/112_21.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/112_p6.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "112-22",
+      "sourceId": "112-22",
+      "year": 112,
+      "questionNumber": 22,
+      "type": "multi",
+      "domain": "熱力學",
+      "topic": "水銀氣壓計/壓力",
+      "moduleId": "m04",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "B",
+        "E"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/112_22.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/112_p7.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": true,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "112-23",
+      "sourceId": "112-23",
+      "year": 112,
+      "questionNumber": 23,
+      "type": "open",
+      "domain": "熱力學",
+      "topic": "位能零位面/流體壓力",
+      "moduleId": "m04",
+      "points": 4,
+      "choices": [],
+      "answer": [],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/112_23.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/112_p7.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "112-24",
+      "sourceId": "112-24",
+      "year": 112,
+      "questionNumber": 24,
+      "type": "multi",
+      "domain": "電磁學",
+      "topic": "軸向發電機",
+      "moduleId": "m12",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "C",
+        "E"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/112_24.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/112_p8.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": true,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "112-25",
+      "sourceId": "112-25",
+      "year": 112,
+      "questionNumber": 25,
+      "type": "single",
+      "domain": "電磁學",
+      "topic": "感應電流/磁通量",
+      "moduleId": "m12",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/112_25.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/112_p8.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "112-26",
+      "sourceId": "112-26",
+      "year": 112,
+      "questionNumber": 26,
+      "type": "open",
+      "domain": "電磁學",
+      "topic": "感應電動勢推導",
+      "moduleId": "m12",
+      "points": 4,
+      "choices": [],
+      "answer": [],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/112_26.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/112_p8.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "113-01",
+      "sourceId": "113-01",
+      "year": 113,
+      "questionNumber": 1,
+      "type": "single",
+      "domain": "近代物理",
+      "topic": "量子/原子概念",
+      "moduleId": "m16",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "D"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/113_01.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/113_p2.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0o221354517405701583/05-113%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "113-02",
+      "sourceId": "113-02",
+      "year": 113,
+      "questionNumber": 2,
+      "type": "single",
+      "domain": "熱力學",
+      "topic": "氣體動力論",
+      "moduleId": "m05",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "B"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/113_02.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/113_p2.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0o221354517405701583/05-113%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "113-03",
+      "sourceId": "113-03",
+      "year": 113,
+      "questionNumber": 3,
+      "type": "single",
+      "domain": "力學",
+      "topic": "運動圖形/測量",
+      "moduleId": "m01",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "E"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/113_03.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/113_p2.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0o221354517405701583/05-113%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "113-04",
+      "sourceId": "113-04",
+      "year": 113,
+      "questionNumber": 4,
+      "type": "single",
+      "domain": "力學",
+      "topic": "牛頓運動定律",
+      "moduleId": "m02",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "D"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/113_04.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/113_p2.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0o221354517405701583/05-113%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "113-05",
+      "sourceId": "113-05",
+      "year": 113,
+      "questionNumber": 5,
+      "type": "single",
+      "domain": "力學",
+      "topic": "能量守恆",
+      "moduleId": "m03",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "E"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/113_05.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/113_p3.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0o221354517405701583/05-113%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "113-06",
+      "sourceId": "113-06",
+      "year": 113,
+      "questionNumber": 6,
+      "type": "single",
+      "domain": "光學",
+      "topic": "波動/聲波",
+      "moduleId": "m07",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "B"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/113_06.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/113_p3.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0o221354517405701583/05-113%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "113-07",
+      "sourceId": "113-07",
+      "year": 113,
+      "questionNumber": 7,
+      "type": "single",
+      "domain": "光學",
+      "topic": "幾何光學",
+      "moduleId": "m06",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/113_07.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/113_p3.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0o221354517405701583/05-113%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "113-08",
+      "sourceId": "113-08",
+      "year": 113,
+      "questionNumber": 8,
+      "type": "single",
+      "domain": "電磁學",
+      "topic": "磁場與帶電粒子",
+      "moduleId": "m11",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/113_08.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/113_p4.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0o221354517405701583/05-113%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "113-09",
+      "sourceId": "113-09",
+      "year": 113,
+      "questionNumber": 9,
+      "type": "single",
+      "domain": "電磁學",
+      "topic": "感應定律",
+      "moduleId": "m12",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "C"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/113_09.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/113_p4.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0o221354517405701583/05-113%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "113-10",
+      "sourceId": "113-10",
+      "year": 113,
+      "questionNumber": 10,
+      "type": "single",
+      "domain": "光學",
+      "topic": "干涉/繞射",
+      "moduleId": "m08",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "B"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/113_10.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/113_p4.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0o221354517405701583/05-113%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "113-11",
+      "sourceId": "113-11",
+      "year": 113,
+      "questionNumber": 11,
+      "type": "single",
+      "domain": "近代物理",
+      "topic": "光電效應",
+      "moduleId": "m13",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "C"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/113_11.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/113_p4.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0o221354517405701583/05-113%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "113-12",
+      "sourceId": "113-12",
+      "year": 113,
+      "questionNumber": 12,
+      "type": "single",
+      "domain": "近代物理",
+      "topic": "氫原子能階",
+      "moduleId": "m15",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "D"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/113_12.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/113_p4.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0o221354517405701583/05-113%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "113-13",
+      "sourceId": "113-13",
+      "year": 113,
+      "questionNumber": 13,
+      "type": "multi",
+      "domain": "力學",
+      "topic": "碰撞/動量",
+      "moduleId": "m02",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "B",
+        "C"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/113_13.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/113_p5.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0o221354517405701583/05-113%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "113-14",
+      "sourceId": "113-14",
+      "year": 113,
+      "questionNumber": 14,
+      "type": "multi",
+      "domain": "力學",
+      "topic": "功與能",
+      "moduleId": "m03",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "B",
+        "D"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/113_14.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/113_p5.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0o221354517405701583/05-113%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "113-15",
+      "sourceId": "113-15",
+      "year": 113,
+      "questionNumber": 15,
+      "type": "multi",
+      "domain": "電磁學",
+      "topic": "靜電場/電位",
+      "moduleId": "m09",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A",
+        "D",
+        "E"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/113_15.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/113_p5.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0o221354517405701583/05-113%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "113-16",
+      "sourceId": "113-16",
+      "year": 113,
+      "questionNumber": 16,
+      "type": "multi",
+      "domain": "電磁學",
+      "topic": "電路與電阻",
+      "moduleId": "m10",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A",
+        "C",
+        "E"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/113_16.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/113_p5.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0o221354517405701583/05-113%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "113-17",
+      "sourceId": "113-17",
+      "year": 113,
+      "questionNumber": 17,
+      "type": "multi",
+      "domain": "電磁學",
+      "topic": "電流磁效應",
+      "moduleId": "m11",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A",
+        "C",
+        "D"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/113_17.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/113_p6.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0o221354517405701583/05-113%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "113-18",
+      "sourceId": "113-18",
+      "year": 113,
+      "questionNumber": 18,
+      "type": "multi",
+      "domain": "電磁學",
+      "topic": "電磁感應",
+      "moduleId": "m12",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "B",
+        "D",
+        "E"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/113_18.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/113_p6.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0o221354517405701583/05-113%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "113-19",
+      "sourceId": "113-19",
+      "year": 113,
+      "questionNumber": 19,
+      "type": "open",
+      "domain": "光學",
+      "topic": "成像非選",
+      "moduleId": "m06",
+      "points": 4,
+      "choices": [],
+      "answer": [],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/113_19.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/113_p6.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0o221354517405701583/05-113%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "113-20",
+      "sourceId": "113-20",
+      "year": 113,
+      "questionNumber": 20,
+      "type": "multi",
+      "domain": "力學",
+      "topic": "力矩/轉動多選",
+      "moduleId": "m02",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "B",
+        "C",
+        "E"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/113_20.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/113_p7.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0o221354517405701583/05-113%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "113-21",
+      "sourceId": "113-21",
+      "year": 113,
+      "questionNumber": 21,
+      "type": "open",
+      "domain": "熱力學",
+      "topic": "熱學非選",
+      "moduleId": "m04",
+      "points": 4,
+      "choices": [],
+      "answer": [],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/113_21.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/113_p7.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0o221354517405701583/05-113%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "113-22",
+      "sourceId": "113-22",
+      "year": 113,
+      "questionNumber": 22,
+      "type": "open",
+      "domain": "力學",
+      "topic": "能量非選",
+      "moduleId": "m03",
+      "points": 4,
+      "choices": [],
+      "answer": [],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/113_22.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/113_p7.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0o221354517405701583/05-113%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "113-23",
+      "sourceId": "113-23",
+      "year": 113,
+      "questionNumber": 23,
+      "type": "single",
+      "domain": "光學",
+      "topic": "波動概念",
+      "moduleId": "m07",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "E"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/113_23.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/113_p7.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0o221354517405701583/05-113%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "113-24",
+      "sourceId": "113-24",
+      "year": 113,
+      "questionNumber": 24,
+      "type": "multi",
+      "domain": "近代物理",
+      "topic": "物質波/量子",
+      "moduleId": "m14",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A",
+        "D"
+      ],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/113_24.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/113_p8.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0o221354517405701583/05-113%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "113-25",
+      "sourceId": "113-25",
+      "year": 113,
+      "questionNumber": 25,
+      "type": "open",
+      "domain": "電磁學",
+      "topic": "感應非選",
+      "moduleId": "m12",
+      "points": 4,
+      "choices": [],
+      "answer": [],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/113_25.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/113_p8.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0o221354517405701583/05-113%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "113-26",
+      "sourceId": "113-26",
+      "year": 113,
+      "questionNumber": 26,
+      "type": "open",
+      "domain": "力學",
+      "topic": "實驗與運動分析非選",
+      "moduleId": "m01",
+      "points": 4,
+      "choices": [],
+      "answer": [],
+      "status": "answer-checked",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/113_26.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/113_p8.jpg",
+      "solution": {
+        "status": "building",
+        "text": "大考中心官方答案已核對；詳解建置中。",
+        "reviewedLabel": "官方答案已核對／詳解建置中"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0o221354517405701583/05-113%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": false,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "114-01",
+      "sourceId": "114-01",
+      "year": 114,
+      "questionNumber": 1,
+      "type": "single",
+      "domain": "近代物理",
+      "topic": "量子力學史與原子模型",
+      "moduleId": "m15",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "E"
+      ],
+      "status": "reviewed",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/114_01.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/114_p2.jpg",
+      "solution": {
+        "status": "reviewed",
+        "text": "核心概念：普朗克、愛因斯坦、波耳、德布羅意與現代量子力學的分工。普朗克主要解釋黑體輻射，不是氫原子光譜；德布羅意物質波不限電子；波耳模型用量子化能階說明氫原子光譜，不是原子核組成與核衰變；雙狹縫單顆電子落點只能給機率分布，不能精準預測單次位置。量子力學可以用波函數/軌域描述電子在原子中的空間分布，並給出量子化能階，所以選 E。短檢核：看到『精準預測單次位置』要警覺：量子力學通常預測機率分布。",
+        "migratedFrom": "physics/dsat-114-physics-self-study/data.js",
+        "reviewedLabel": "114 年詳解已整理"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0p217332507401284656/05-114%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": true,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "114-02",
+      "sourceId": "114-02",
+      "year": 114,
+      "questionNumber": 2,
+      "type": "single",
+      "domain": "熱力學",
+      "topic": "氣體分子速率分布",
+      "moduleId": "m05",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A"
+      ],
+      "status": "reviewed",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/114_02.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/114_p2.jpg",
+      "solution": {
+        "status": "reviewed",
+        "text": "核心概念：Maxwell 速率分布：溫度越高，峰值越低、曲線越寬、最概然速率越大。同為 1 莫耳氦氣，曲線下面積都代表總分子數，應相同。溫度升高時，平均動能與方均根速率都增加，分布往高速端移且變寬變低。圖中高速端最靠右、最寬的曲線溫度最高，依序為丁＞丙＞乙＞甲。氮氣分子量不同，即使同溫，速率分布也不會與氦氣相同。短檢核：判斷速率分布先看曲線是否往右移、變寬，而不是看峰高。",
+        "migratedFrom": "physics/dsat-114-physics-self-study/data.js",
+        "reviewedLabel": "114 年詳解已整理"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0p217332507401284656/05-114%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": true,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "114-03",
+      "sourceId": "114-03",
+      "year": 114,
+      "questionNumber": 3,
+      "type": "single",
+      "domain": "近代物理",
+      "topic": "拉塞福散射與原子核",
+      "moduleId": "m16",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "D"
+      ],
+      "status": "reviewed",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/114_03.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/114_p2.jpg",
+      "solution": {
+        "status": "reviewed",
+        "text": "核心概念：α 粒子大角度散射來自原子核的庫侖斥力。拉塞福用 α 粒子轟擊金箔，是為了探究正電荷在原子中的分布。大部分 α 粒子穿透，少數大角度偏折，極少數反彈，顯示原子正電荷與質量集中在很小的原子核。反彈的主要原因是 α 粒子與帶正電原子核間的電磁作用（庫侖斥力），不是強作用力，所以錯誤的是 D。短檢核：原子尺度散射題，先分辨電磁作用與核力作用的尺度。",
+        "migratedFrom": "physics/dsat-114-physics-self-study/data.js",
+        "reviewedLabel": "114 年詳解已整理"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0p217332507401284656/05-114%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": true,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "114-04",
+      "sourceId": "114-04",
+      "year": 114,
+      "questionNumber": 4,
+      "type": "single",
+      "domain": "力學",
+      "topic": "滑輪組與牛頓第二定律",
+      "moduleId": "m02",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "D"
+      ],
+      "status": "reviewed",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/114_04.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/114_p2.jpg",
+      "solution": {
+        "status": "reviewed",
+        "text": "核心概念：無質量繩與滑輪使各段張力相等；由系統受力與約束判斷加速度。題圖的滑輪組中施力 F=mg，對無質量繩而言張力 T=F=mg。依題圖配置，物體受等效拉力與重力的差導致加速度量值為 g。此題容易把『省力滑輪』背成固定比例，但要回到繩長約束與受力圖；在該配置下答案為 D。短檢核：滑輪題不要只數繩子段數；要畫出物體/動滑輪的受力與繩長約束。",
+        "migratedFrom": "physics/dsat-114-physics-self-study/data.js",
+        "reviewedLabel": "114 年詳解已整理"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0p217332507401284656/05-114%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": true,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "114-05",
+      "sourceId": "114-05",
+      "year": 114,
+      "questionNumber": 5,
+      "type": "single",
+      "domain": "力學",
+      "topic": "圓周運動與克卜勒定律",
+      "moduleId": "m02",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "C"
+      ],
+      "status": "reviewed",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/114_05.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/114_p3.jpg",
+      "solution": {
+        "status": "reviewed",
+        "text": "核心概念：衛星繞行星：T^2=4π²r³/GM，中心天體質量 M∝r³/T²。比較土星與地球：M_S/M_E=(r_S/r_E)^3(T_E/T_S)^2。題給 r_S/r_E≈1.2×10^6 / 3.6×10^5=10/3，T_E/T_S≈28/14=2，所以比值約 (10/3)^3×4≈148。地球質量約 6.0×10^24 kg，土星約 9×10^26 kg，量級為 10^27 kg，選 C。衛星本身質量在此近似中不是主因。短檢核：看到衛星週期和半徑，優先想到中心天體質量 M∝r³/T²。",
+        "migratedFrom": "physics/dsat-114-physics-self-study/data.js",
+        "reviewedLabel": "114 年詳解已整理"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0p217332507401284656/05-114%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": true,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "114-06",
+      "sourceId": "114-06",
+      "year": 114,
+      "questionNumber": 6,
+      "type": "single",
+      "domain": "力學",
+      "topic": "單擺簡諧運動",
+      "moduleId": "m02",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "B"
+      ],
+      "status": "reviewed",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/114_06.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/114_p3.jpg",
+      "solution": {
+        "status": "reviewed",
+        "text": "核心概念：小角度單擺週期 T=2π√(L/g)。L=0.20 m，g=9.8 m/s²，T≈2π√(0.20/9.8)≈0.90 s。從平衡點向右通過開始計時：T/4 到右端，T/2 回平衡向左，3T/4 到左端，T≈0.90 s 又回平衡向右。1.5 s 約為 1.67T，也就是第二輪中從平衡往左端前進的階段，擺錘向左且速率逐漸減小，選 B。短檢核：先把時間換成週期的幾分之幾，再判斷方向與速率變化。",
+        "migratedFrom": "physics/dsat-114-physics-self-study/data.js",
+        "reviewedLabel": "114 年詳解已整理"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0p217332507401284656/05-114%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": true,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "114-07",
+      "sourceId": "114-07",
+      "year": 114,
+      "questionNumber": 7,
+      "type": "single",
+      "domain": "力學",
+      "topic": "功率、能量與電池電流",
+      "moduleId": "m03",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "D"
+      ],
+      "status": "reviewed",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/114_07.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/114_p3.jpg",
+      "solution": {
+        "status": "reviewed",
+        "text": "核心概念：電池功率 P=IV；機械功率包含爬升重力位能率與克服阻力功率。120 s 內上升 200 m，重力作功 mgh=720×10×200=1.44×10^6 J。克服空氣阻力作功 Fd，斜面路程 d=vt=20×120=2400 m，為 600×2400=1.44×10^6 J。總能量 2.88×10^6 J，平均功率 P=2.88×10^6/120=24000 W。電壓 1200 V，電流 I=P/V=24000/1200=20 A，選 D。短檢核：阻力作功用沿路程距離，不是垂直高度。",
+        "migratedFrom": "physics/dsat-114-physics-self-study/data.js",
+        "reviewedLabel": "114 年詳解已整理"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0p217332507401284656/05-114%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": true,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "114-08",
+      "sourceId": "114-08",
+      "year": 114,
+      "questionNumber": 8,
+      "type": "single",
+      "domain": "電磁學",
+      "topic": "帶電粒子在磁場中迴旋",
+      "moduleId": "m11",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "C"
+      ],
+      "status": "reviewed",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/114_08.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/114_p3.jpg",
+      "solution": {
+        "status": "reviewed",
+        "text": "核心概念：均勻磁場中角頻率 ω=|q|B/m。電子電量大小 e、質量 m，所以 ω_m=eB/m。n+ 離子電量大小 ne、質量 M，所以 ω_M=neB/M。比值 ω_m/ω_M=(eB/m)/(neB/M)=M/(nm)，選 C。注意角頻率與速率、半徑無關，只與 q/m 和 B 有關。短檢核：迴旋頻率題先寫 ω=qB/m，半徑 r=mv/qB 是另一件事。",
+        "migratedFrom": "physics/dsat-114-physics-self-study/data.js",
+        "reviewedLabel": "114 年詳解已整理"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0p217332507401284656/05-114%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": true,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "114-09",
+      "sourceId": "114-09",
+      "year": 114,
+      "questionNumber": 9,
+      "type": "single",
+      "domain": "電磁學",
+      "topic": "法拉第感應定律",
+      "moduleId": "m12",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A"
+      ],
+      "status": "reviewed",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/114_09.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/114_p3.jpg",
+      "solution": {
+        "status": "reviewed",
+        "text": "核心概念：感應電動勢 ε=N A |dB/dt|，且 dB/dt=(ΔB/Δx)v。面積 0.20 cm²=2.0×10^-5 m²，匝數 N=1000，磁場梯度 ΔB/Δx=0.50 T/m。ε=N A (ΔB/Δx)v=1000×2.0×10^-5×0.50×v=0.010v V。量到 ε=1.0 mV=1.0×10^-3 V，因此 v=0.10 m/s，選 A。短檢核：cm² 要換成 m²：1 cm²=10^-4 m²。",
+        "migratedFrom": "physics/dsat-114-physics-self-study/data.js",
+        "reviewedLabel": "114 年詳解已整理"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0p217332507401284656/05-114%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": true,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "114-10",
+      "sourceId": "114-10",
+      "year": 114,
+      "questionNumber": 10,
+      "type": "single",
+      "domain": "光學",
+      "topic": "單狹縫繞射",
+      "moduleId": "m08",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "B"
+      ],
+      "status": "reviewed",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/114_10.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/114_p3.jpg",
+      "solution": {
+        "status": "reviewed",
+        "text": "核心概念：單狹縫暗紋條件 a sinθ=mλ。同一狹縫與屏幕位置，暗紋中線重合代表角度相同，因此 mλ=m'λ'。第二暗紋的 λ 與第三暗紋的 λ' 重合：2λ=3λ'，所以 λ:λ'=3:2，選 B。短檢核：單狹縫暗紋用 mλ；雙狹縫亮紋才常用 mλ 作亮紋條件。",
+        "migratedFrom": "physics/dsat-114-physics-self-study/data.js",
+        "reviewedLabel": "114 年詳解已整理"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0p217332507401284656/05-114%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": true,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "114-11",
+      "sourceId": "114-11",
+      "year": 114,
+      "questionNumber": 11,
+      "type": "single",
+      "domain": "近代物理",
+      "topic": "光電效應與截止電壓",
+      "moduleId": "m13",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "C"
+      ],
+      "status": "reviewed",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/114_11.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/114_p4.jpg",
+      "solution": {
+        "status": "reviewed",
+        "text": "核心概念：K_max=hf−φ=hc/λ−φ。紅光 640 nm 已能打出光電子，K=hc/640−φ。藍光 480 nm 時 K'=hc/480−φ。因為 1/480=4/(3×640)，光子能量是紅光的 4/3 倍，但 K 只是扣掉功函數後的剩餘能量；K'=4/3(hc/640)−φ=4/3K+1/3φ，大於 4K/3，選 C。短檢核：光子能量變 4/3 倍，不代表最大動能也只變 4/3 倍，因為功函數固定。",
+        "migratedFrom": "physics/dsat-114-physics-self-study/data.js",
+        "reviewedLabel": "114 年詳解已整理"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0p217332507401284656/05-114%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": true,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "114-12",
+      "sourceId": "114-12",
+      "year": 114,
+      "questionNumber": 12,
+      "type": "single",
+      "domain": "光學",
+      "topic": "折射率與光路",
+      "moduleId": "m06",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "E"
+      ],
+      "status": "reviewed",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/114_12.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/114_p4.jpg",
+      "solution": {
+        "status": "reviewed",
+        "text": "核心概念：氫原子 r_n=n²R，E_n=E_1/n²；束縛態總能量為負。n=3 時半徑為 9R，不是 3R 或 6R；總能量為 E/9，不是 3E。電子從 n=3 跳到 n=1 時會放出光子，總能量降低，不保持不變。在庫侖束縛系統中 U=2E、K=−E；往低能階躍遷時動能增加、電位能降低，且電位能減少的絕對值是動能增加的兩倍，所以 E 正確。短檢核：波耳模型記三件事：r∝n²、E∝−1/n²、U=−2K。",
+        "migratedFrom": "physics/dsat-114-physics-self-study/data.js",
+        "reviewedLabel": "114 年詳解已整理"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0p217332507401284656/05-114%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": true,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "114-13",
+      "sourceId": "114-13",
+      "year": 114,
+      "questionNumber": 13,
+      "type": "multi",
+      "domain": "力學",
+      "topic": "牛頓擺、動量與能量",
+      "moduleId": "m03",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "B",
+        "C",
+        "E"
+      ],
+      "status": "reviewed",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/114_13.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/114_p4.jpg",
+      "solution": {
+        "status": "reviewed",
+        "text": "核心概念：Q=mcΔT，時間 t=Q/P。裝滿時甲 1.0 L、乙 1.5 L，升溫相同，能量比為水量比 2:3，不是 3:2，A 錯。時間比 t甲:t乙=(1.0/1500):(1.5/1000)=2:3? 實際不同，B 對。同加熱 500 mL，所需熱量相同，C 對；但功率不同，甲時間較短，D 錯。甲 900 mL/1500 W 與乙 600 mL/1000 W，m/P 都是 0.0006 L/W，時間相同，E 對。短檢核：能量看水量；時間還要除以功率。",
+        "migratedFrom": "physics/dsat-114-physics-self-study/data.js",
+        "reviewedLabel": "114 年詳解已整理"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0p217332507401284656/05-114%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": true,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "114-14",
+      "sourceId": "114-14",
+      "year": 114,
+      "questionNumber": 14,
+      "type": "multi",
+      "domain": "力學",
+      "topic": "動量與衝量",
+      "moduleId": "m02",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "B",
+        "C"
+      ],
+      "status": "reviewed",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/114_14.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/114_p4.jpg",
+      "solution": {
+        "status": "reviewed",
+        "text": "核心概念：彈性碰撞中分離相對速度大小等於接近相對速度大小。一維正面彈性碰撞且兩物體質量不同、其中一個原先靜止，碰後兩者通常都會運動，B 對。彈性碰撞滿足相對速度反向等大；若題目以速度方向定義使碰後相對速度為 v1−v2，則其量值關係對應選項 C。非彈性碰撞可出現完全非彈性兩者同速，故 v1−v2 可為 0，D 錯；也不必大於原速，E 錯。A 對所有碰撞太強，完全非彈性或特殊情況不保證。短檢核：彈性碰撞的核心不是『動能守恆』硬算，而是相對速度反向等大。",
+        "migratedFrom": "physics/dsat-114-physics-self-study/data.js",
+        "reviewedLabel": "114 年詳解已整理"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0p217332507401284656/05-114%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": true,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "114-15",
+      "sourceId": "114-15",
+      "year": 114,
+      "questionNumber": 15,
+      "type": "multi",
+      "domain": "力學",
+      "topic": "質心與轉動",
+      "moduleId": "m02",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "B",
+        "D",
+        "E"
+      ],
+      "status": "reviewed",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/114_15.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/114_p5.jpg",
+      "solution": {
+        "status": "reviewed",
+        "text": "核心概念：水平外力為零，兩木塊最後共同速度由動量守恆決定。系統總動量初值為 2m·v + m·2v =4mv，總質量 3m，所以若滑動到同速，末共同速度為 4v/3。摩擦會使甲加速、乙減速，所以甲最大速率為 4v/3，乙最小速率為 4v/3，B、D 對。初動能為 1/2(2m)v²+1/2(m)(2v)²=3mv²；末動能為 1/2(3m)(4v/3)²=8mv²/3，損失為 mv²/3，對應選項 E。短檢核：內摩擦不守機械能，但水平動量守恆。",
+        "migratedFrom": "physics/dsat-114-physics-self-study/data.js",
+        "reviewedLabel": "114 年詳解已整理"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0p217332507401284656/05-114%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": true,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "114-16",
+      "sourceId": "114-16",
+      "year": 114,
+      "questionNumber": 16,
+      "type": "multi",
+      "domain": "力學",
+      "topic": "靜力平衡與力矩",
+      "moduleId": "m02",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A",
+        "C"
+      ],
+      "status": "reviewed",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/114_16.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/114_p5.jpg",
+      "solution": {
+        "status": "reviewed",
+        "text": "核心概念：電流受磁場力 F=I L×B 造成轉動；用觀察到的轉向反推電流與磁極。由電池正極經銅線到磁鐵外圍形成電流，PQ 段電流方向為 P 到 Q，A 對。配合由上往下看銅線順時針轉動，依右手定則可判斷磁鐵 N 極較靠近電池，C 對；若 N 極在桌面側則磁場方向相反，轉向不符。RS 段方向與選項 B 不符；P、R 處受磁鐵幾何位置影響，磁場方向不相同，E 錯。短檢核：馬達題要同時用電流方向、磁場方向、受力方向三者交叉檢查。",
+        "migratedFrom": "physics/dsat-114-physics-self-study/data.js",
+        "reviewedLabel": "114 年詳解已整理"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0p217332507401284656/05-114%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": true,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "114-17",
+      "sourceId": "114-17",
+      "year": 114,
+      "questionNumber": 17,
+      "type": "multi",
+      "domain": "電磁學",
+      "topic": "電磁場中粒子偏轉",
+      "moduleId": "m11",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A",
+        "D"
+      ],
+      "status": "reviewed",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/114_17.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/114_p5.jpg",
+      "solution": {
+        "status": "reviewed",
+        "text": "核心概念：長直導線電流增加使線圈磁通量增加；楞次定律決定感應電流方向。導線電流向上，線圈在導線右側時，穿過線圈的磁場方向為紙內且增強。線圈須產生紙外磁場來反抗增加，所以感應電流為逆時針或順時針需依題圖位置判定；官方答案為 A，表示題圖配置下為順時針。受力方面，靠近導線的一側與長直導線作用較強，合力指向導線，也就是向左，D 對。短檢核：先判斷線圈所在區域的原磁場方向，再用『反抗磁通變化』決定感應電流。",
+        "migratedFrom": "physics/dsat-114-physics-self-study/data.js",
+        "reviewedLabel": "114 年詳解已整理"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0p217332507401284656/05-114%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": true,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "114-18",
+      "sourceId": "114-18",
+      "year": 114,
+      "questionNumber": 18,
+      "type": "multi",
+      "domain": "電磁學",
+      "topic": "電橋與電阻量測",
+      "moduleId": "m10",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "C",
+        "D"
+      ],
+      "status": "reviewed",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/114_18.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/114_p5.jpg",
+      "solution": {
+        "status": "reviewed",
+        "text": "核心概念：電子是普遍存在的基本粒子，關鍵證據是荷質比固定且與材料無關，並與其他現象中的粒子一致。氣體發光或螢光只能說明有射線/激發現象，不足以證明粒子普遍存在於所有原子。若陰極射線粒子的荷質比固定，且與管內氣體、陰極材料無關，代表它不是特定材料的產物，C 對。若其性質與光電效應中的帶電粒子相同，也支持它是共同基本粒子，D 對。能產生電流只說明帶電，不能證明普遍性。短檢核：題目問『普遍存在』，要找與材料無關、跨實驗一致的證據。",
+        "migratedFrom": "physics/dsat-114-physics-self-study/data.js",
+        "reviewedLabel": "114 年詳解已整理"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0p217332507401284656/05-114%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": true,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "114-19",
+      "sourceId": "114-19",
+      "year": 114,
+      "questionNumber": 19,
+      "type": "open",
+      "domain": "光學",
+      "topic": "顯微鏡與成像",
+      "moduleId": "m06",
+      "points": 4,
+      "choices": [],
+      "answer": [],
+      "status": "reviewed",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/114_19.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/114_p6.jpg",
+      "solution": {
+        "status": "reviewed",
+        "text": "核心概念：鎖死後輪胎與地面動摩擦，減速度 a=μ_k g。鎖死代表輪胎在地面上滑動，制動力為地面動摩擦 f=μkt mg=0.50×100×10=500 N，減速度 a=f/m=5 m/s²。用 0=v0²−2aS，S=v0²/(2a)=4.0²/(2×5)=1.6 m。也可用功能定理：初動能 1/2mv² 被摩擦力做功 fS 消耗。短檢核：『車輪鎖死』後看輪胎—地面動摩擦，不看煞車片摩擦。",
+        "migratedFrom": "physics/dsat-114-physics-self-study/data.js",
+        "reviewedLabel": "114 年詳解已整理"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0p217332507401284656/05-114%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": true,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "114-20",
+      "sourceId": "114-20",
+      "year": 114,
+      "questionNumber": 20,
+      "type": "open",
+      "domain": "光學",
+      "topic": "折射率非選",
+      "moduleId": "m06",
+      "points": 4,
+      "choices": [],
+      "answer": [],
+      "status": "reviewed",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/114_20.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/114_p6.jpg",
+      "solution": {
+        "status": "reviewed",
+        "text": "核心概念：未鎖死時題目指定由煞車片與輪胎面的動摩擦作功使車減速。煞車片對兩輪胎總正向力 N=200 N，煞車片與輪胎面的動摩擦力 f=μkb N=0.40×200=80 N。減速度 a=f/m=80/100=0.8 m/s²。停止距離 S=v0²/(2a)=4.0²/(2×0.8)=10 m。功能定理同樣得到 S=(1/2mv²)/f=800/80=10 m。短檢核：未鎖死、輪胎不在地面滑動；制動能量損耗發生在煞車片—輪胎接觸處。",
+        "migratedFrom": "physics/dsat-114-physics-self-study/data.js",
+        "reviewedLabel": "114 年詳解已整理"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0p217332507401284656/05-114%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": true,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "114-21",
+      "sourceId": "114-21",
+      "year": 114,
+      "questionNumber": 21,
+      "type": "open",
+      "domain": "電磁學",
+      "topic": "靜電力與電場",
+      "moduleId": "m09",
+      "points": 4,
+      "choices": [],
+      "answer": [],
+      "status": "reviewed",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/114_21.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/114_p7.jpg",
+      "solution": {
+        "status": "reviewed",
+        "text": "核心概念：等電位點之間電位差為 0；電場線與等電位線垂直。做法可用檢流計/微安培計：P1 接觸碳板某點，P2 在附近尋找儀表讀值為 0 A 的點，累積同電位點形成等電位線。也可用伏特計找 0 V 或固定電壓值的點。圖 9 中電力線由正極出發至負極，會與電荷位置相關；等電位線不相交且處處垂直電場線，因此實線為等電位線，虛線為電力線。短檢核：等電位線的操作判準就是『兩點間電位差固定，常用 0 V』。",
+        "migratedFrom": "physics/dsat-114-physics-self-study/data.js",
+        "reviewedLabel": "114 年詳解已整理"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0p217332507401284656/05-114%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": true,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "114-22",
+      "sourceId": "114-22",
+      "year": 114,
+      "questionNumber": 22,
+      "type": "open",
+      "domain": "電磁學",
+      "topic": "電位與電場",
+      "moduleId": "m09",
+      "points": 4,
+      "choices": [],
+      "answer": [],
+      "status": "reviewed",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/114_22.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/114_p7.jpg",
+      "solution": {
+        "status": "reviewed",
+        "text": "核心概念：電場方向為電力線切線方向；電力線越密，電場越強。在圖 9 上，C、D 點的電場方向要沿虛線電力線的切線並由正極指向負極。比較 E、F 場強時，看電力線密度或等電位線間距：E 附近電力線較密、等電位線間距較小，也較靠近電極，所以 E 點電場量值大於 F 點。短檢核：場強比較不要看點標籤遠近主觀判斷；看線密度或等位線間距。",
+        "migratedFrom": "physics/dsat-114-physics-self-study/data.js",
+        "reviewedLabel": "114 年詳解已整理"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0p217332507401284656/05-114%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": true,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "114-23",
+      "sourceId": "114-23",
+      "year": 114,
+      "questionNumber": 23,
+      "type": "multi",
+      "domain": "光學",
+      "topic": "波動判讀",
+      "moduleId": "m07",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A",
+        "D"
+      ],
+      "status": "reviewed",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/114_23.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/114_p8.jpg",
+      "solution": {
+        "status": "reviewed",
+        "text": "核心概念：實驗上通常先量等電位線，再依垂直關係畫電力線；對稱軸可為零電位線。等電位線可由測量電位差取得，再依電力線垂直等電位線畫出電場線，A 對。碳板上電流方向沿電場方向，不是沿等電位線，B 錯。電力線從正電極出發、到負電極終止，會通過 A、B 接觸點附近，C 不當。若兩電極對稱且原點 O 設為零，Y 軸為中垂對稱線，任一點電位為零，D 對。換成金屬導體會使整片近似等電位，不能維持同樣電場分布，E 錯。短檢核：電流/電場方向與等電位線垂直，不是沿著等電位線。",
+        "migratedFrom": "physics/dsat-114-physics-self-study/data.js",
+        "reviewedLabel": "114 年詳解已整理"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0p217332507401284656/05-114%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": true,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "114-24",
+      "sourceId": "114-24",
+      "year": 114,
+      "questionNumber": 24,
+      "type": "multi",
+      "domain": "電磁學",
+      "topic": "感應與磁通量",
+      "moduleId": "m12",
+      "points": 5,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A",
+        "E"
+      ],
+      "status": "reviewed",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/114_24.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/114_p8.jpg",
+      "solution": {
+        "status": "reviewed",
+        "text": "核心概念：光進入水中頻率不變，速率變慢，波長變短。同一束光從空氣進入水中，頻率由光源決定而保持不變，所以單光子能量 E=hf 不變。水中折射率大於 1，傳遞速率 v=c/n 變慢；由 v=fλ，頻率不變且速率變慢，所以波長變短。強度可能因吸收衰減，不會因進水而增大。因此 A、E 正確。短檢核：折射進介質：頻率不變，是判斷波長與速率的核心。",
+        "migratedFrom": "physics/dsat-114-physics-self-study/data.js",
+        "reviewedLabel": "114 年詳解已整理"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0p217332507401284656/05-114%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": true,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "114-25",
+      "sourceId": "114-25",
+      "year": 114,
+      "questionNumber": 25,
+      "type": "single",
+      "domain": "力學",
+      "topic": "轉動/力矩應用",
+      "moduleId": "m02",
+      "points": 3,
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "answer": [
+        "A"
+      ],
+      "status": "reviewed",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/114_25.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/114_p8.jpg",
+      "solution": {
+        "status": "reviewed",
+        "text": "核心概念：衰減係數越大，光在水中吸收越強，越不適合浸潤式曝光。從圖 10 的水吸收光譜判讀，EUV 13.5 nm 對應水中衰減極大，穿透距離非常短，因此最不適合在晶圓與光源間注入純水使用。193 nm、248 nm、365 nm、436 nm 相對位於可用或較低吸收區，故選 A。短檢核：看吸收光譜時，縱軸是對數；差一格可能就是 10 倍。",
+        "migratedFrom": "physics/dsat-114-physics-self-study/data.js",
+        "reviewedLabel": "114 年詳解已整理"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0p217332507401284656/05-114%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": true,
+        "officialSource": true
+      }
+    },
+    {
+      "id": "114-26",
+      "sourceId": "114-26",
+      "year": 114,
+      "questionNumber": 26,
+      "type": "open",
+      "domain": "電磁學",
+      "topic": "感應電動勢推導",
+      "moduleId": "m12",
+      "points": 4,
+      "choices": [],
+      "answer": [],
+      "status": "reviewed",
+      "sourceType": "official-past-exam",
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
+      "images": [
+        "../dsat-physics-five-year-topical/assets/q/114_26.jpg"
+      ],
+      "pageImage": "../dsat-physics-five-year-topical/assets/114_p8.jpg",
+      "solution": {
+        "status": "reviewed",
+        "text": "核心概念：I=I0 e^{-αz}；若 z=0.10 m 後至少剩 0.37I0，則 α≤10 m^{-1}。題給 I=I0e^{-αz}，z=10 cm=0.10 m，要求 I≥0.37I0≈e^{-1}I0。因此 e^{-α(0.10)}≥e^{-1}，得到 α(0.10)≤1，也就是 α≤10 m^{-1}。到圖 10 找衰減係數 α=10 m^{-1} 與曲線的兩個交點，讀得約 λL=200 nm、λH=900 nm，所以可行波長範圍約 200 nm 到 900 nm。短檢核：先把 10 cm 換成 0.10 m；再把 0.37 看成 e^{-1}。",
+        "migratedFrom": "physics/dsat-114-physics-self-study/data.js",
+        "reviewedLabel": "114 年詳解已整理"
+      },
+      "qa": {
+        "sourceChecked": true,
+        "answerChecked": true,
+        "answerCheckedAgainstOfficialPdf": true,
+        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0p217332507401284656/05-114%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
+        "detailedSolutionReviewed": true,
+        "officialSource": true
+      }
+    }
+  ]
+}

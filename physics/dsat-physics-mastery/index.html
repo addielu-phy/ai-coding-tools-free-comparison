@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>分科測驗物理自學平台</title>
+  <meta name="description" content="110-114 分科測驗物理題庫、114 詳解、複習排程與本機錯題練習。">
+  <link rel="stylesheet" href="styles/base.css">
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要內容</a>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">Release A / local only</p>
+      <h1>分科測驗物理自學平台</h1>
+      <p>110-114 共 132 題索引，114 年 26 題已整理詳解；其他題目標示為大考中心官方答案已核對、詳解建置中。</p>
+    </div>
+    <nav aria-label="輔助連結">
+      <a href="about.html">來源與隱私</a>
+      <a href="../dsat-114-physics-self-study/">舊 114 站</a>
+      <a href="../dsat-physics-five-year-topical/">舊五年站</a>
+    </nav>
+  </header>
+
+  <main id="main" class="shell">
+    <section aria-labelledby="actions-title">
+      <h2 id="actions-title">開始</h2>
+      <div class="primary-actions" id="primaryActions" aria-label="主要功能"></div>
+    </section>
+
+    <section class="status-grid" aria-label="學習狀態">
+      <div><b id="statTotal">132</b><span>題目總數</span></div>
+      <div><b id="statDue">0</b><span>今日到期</span></div>
+      <div><b id="statWrong">0</b><span>錯題本</span></div>
+      <div><b id="statReviewed">26</b><span>已審詳解</span></div>
+    </section>
+
+    <section class="toolbar" aria-label="資料管理">
+      <button id="exportBtn" type="button">匯出 JSON</button>
+      <label class="import-label">匯入 JSON<input id="importInput" type="file" accept="application/json"></label>
+      <button id="resetBtn" type="button" class="ghost">清除本機紀錄</button>
+      <p id="storageNote">所有練習紀錄只保存在本機瀏覽器 localStorage，不登入、不上傳、不寫入遠端。</p>
+    </section>
+
+    <section id="view" class="view" aria-live="polite"></section>
+  </main>
+
+  <footer class="shell footer">
+    <p>來源：既有 repo 題庫與 114 詳解。公開官方資料不等於自由授權；本頁僅以教學自學目的相對路徑引用既有圖片。</p>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

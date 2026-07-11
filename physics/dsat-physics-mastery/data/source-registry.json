@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-11T21:23:29.201Z",
+  "sources": [
+    {
+      "id": "ceec-official-answer-keys",
+      "url": "https://www.ceec.edu.tw/xmfile?xsmsid=0J052427633128416650",
+      "role": "110-114 CEEC official answer PDF reconciliation",
+      "recordsUsed": 132,
+      "checkedAt": "2026-07-12",
+      "officialSourceStatus": "direct CEEC answer PDFs",
+      "publicReuseRisk": "URLs and answer facts are cited; official PDFs are not republished by this new site."
+    },
+    {
+      "id": "five-year-topical",
+      "path": "physics/dsat-physics-five-year-topical/questions.json",
+      "role": "110-114 official-question index and answer keys",
+      "recordsUsed": 132,
+      "officialSourceStatus": "official-source-identified",
+      "publicReuseRisk": "Official/public exam material is not assumed freely reusable; this site keeps attribution notes and reuses only existing repo references."
+    },
+    {
+      "id": "dsat-114-self-study",
+      "path": "physics/dsat-114-physics-self-study/data.js",
+      "role": "114 detailed explanation migration",
+      "recordsUsed": 26,
+      "officialSourceStatus": "derived local reviewed content",
+      "publicReuseRisk": "Reviewed explanations are local educational content; question images still follow official-source caution."
+    }
+  ],
+  "counts": {
+    "totalQuestions": 132,
+    "byYear": {
+      "110": 28,
+      "111": 26,
+      "112": 26,
+      "113": 26,
+      "114": 26
+    },
+    "reviewedDetailedSolutions": 26,
+    "answerCheckedOnly": 106,
+    "officialSourceItems": 132,
+    "officialAnswerPdfChecked": 132,
+    "legacyMismatchesCorrected": 28
+  }
+}

@@ -8,7 +8,8 @@
       "questionNumber": 1,
       "type": "single",
       "domain": "近代物理",
-      "topic": "宇宙學與背景輻射",
+      "subdomain": "宇宙學",
+      "topic": "宇宙膨脹、紅移與宇宙微波背景",
       "moduleId": "m16",
       "points": 3,
       "choices": [
@@ -42,6 +43,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -51,8 +53,9 @@
       "year": 110,
       "questionNumber": 2,
       "type": "single",
-      "domain": "光學",
-      "topic": "水波因次分析",
+      "domain": "波動與光學",
+      "subdomain": "水波",
+      "topic": "因次分析與水波波速",
       "moduleId": "m07",
       "points": 3,
       "choices": [
@@ -86,6 +89,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -96,8 +100,9 @@
       "questionNumber": 3,
       "type": "single",
       "domain": "力學",
-      "topic": "投球作功與動能",
-      "moduleId": "m03",
+      "subdomain": "圓周運動",
+      "topic": "向心力與旋轉投擲",
+      "moduleId": "m02",
       "points": 3,
       "choices": [
         "A",
@@ -127,9 +132,10 @@
         "answerChecked": true,
         "answerCheckedAgainstOfficialPdf": true,
         "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": true,
+        "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -140,7 +146,8 @@
       "questionNumber": 4,
       "type": "single",
       "domain": "力學",
-      "topic": "拋體運動",
+      "subdomain": "拋體運動",
+      "topic": "斜拋運動的位移與飛行時間",
       "moduleId": "m01",
       "points": 3,
       "choices": [
@@ -171,9 +178,10 @@
         "answerChecked": true,
         "answerCheckedAgainstOfficialPdf": true,
         "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": true,
+        "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -184,7 +192,8 @@
       "questionNumber": 5,
       "type": "single",
       "domain": "力學",
-      "topic": "單擺與彈簧週期",
+      "subdomain": "週期運動",
+      "topic": "單擺與彈簧振子週期對重力的依賴",
       "moduleId": "m02",
       "points": 3,
       "choices": [
@@ -218,6 +227,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -228,7 +238,8 @@
       "questionNumber": 6,
       "type": "single",
       "domain": "力學",
-      "topic": "靜力平衡與力矩",
+      "subdomain": "靜力學",
+      "topic": "力矩平衡與起重機纜索張力",
       "moduleId": "m02",
       "points": 3,
       "choices": [
@@ -259,9 +270,10 @@
         "answerChecked": true,
         "answerCheckedAgainstOfficialPdf": true,
         "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": true,
+        "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -272,7 +284,8 @@
       "questionNumber": 7,
       "type": "single",
       "domain": "力學",
-      "topic": "擺球碰撞與能量",
+      "subdomain": "碰撞",
+      "topic": "彈性碰撞的動量與能量守恆",
       "moduleId": "m03",
       "points": 3,
       "choices": [
@@ -306,6 +319,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -315,8 +329,9 @@
       "year": 110,
       "questionNumber": 8,
       "type": "single",
-      "domain": "光學",
-      "topic": "氣柱共鳴/聲波",
+      "domain": "波動與光學",
+      "subdomain": "聲波",
+      "topic": "氣柱共鳴與共鳴長度圖表",
       "moduleId": "m07",
       "points": 3,
       "choices": [
@@ -347,9 +362,10 @@
         "answerChecked": true,
         "answerCheckedAgainstOfficialPdf": true,
         "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": true,
+        "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -360,7 +376,8 @@
       "questionNumber": 9,
       "type": "single",
       "domain": "電磁學",
-      "topic": "電流天平與磁力",
+      "subdomain": "電流磁效應",
+      "topic": "平行電流間磁力與電流天平",
       "moduleId": "m11",
       "points": 3,
       "choices": [
@@ -391,9 +408,10 @@
         "answerChecked": true,
         "answerCheckedAgainstOfficialPdf": true,
         "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": true,
+        "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -403,9 +421,10 @@
       "year": 110,
       "questionNumber": 10,
       "type": "single",
-      "domain": "力學",
-      "topic": "力學題組",
-      "moduleId": "m02",
+      "domain": "電磁學",
+      "subdomain": "帶電粒子運動",
+      "topic": "磁場中帶電粒子的軌跡、電性與動量電量比",
+      "moduleId": "m11",
       "points": 3,
       "choices": [
         "A",
@@ -435,9 +454,10 @@
         "answerChecked": true,
         "answerCheckedAgainstOfficialPdf": true,
         "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": true,
+        "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -447,9 +467,10 @@
       "year": 110,
       "questionNumber": 11,
       "type": "single",
-      "domain": "力學",
-      "topic": "能量守恆",
-      "moduleId": "m03",
+      "domain": "近代物理",
+      "subdomain": "物質波",
+      "topic": "電子繞射與德布羅意波長",
+      "moduleId": "m14",
       "points": 3,
       "choices": [
         "A",
@@ -479,9 +500,10 @@
         "answerChecked": true,
         "answerCheckedAgainstOfficialPdf": true,
         "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": true,
+        "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -491,9 +513,10 @@
       "year": 110,
       "questionNumber": 12,
       "type": "single",
-      "domain": "熱力學",
-      "topic": "氣體分子與壓力",
-      "moduleId": "m05",
+      "domain": "近代物理",
+      "subdomain": "光電效應",
+      "topic": "多波段光源的光電流—電壓曲線",
+      "moduleId": "m13",
       "points": 3,
       "choices": [
         "A",
@@ -523,9 +546,10 @@
         "answerChecked": true,
         "answerCheckedAgainstOfficialPdf": true,
         "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": true,
+        "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -535,9 +559,10 @@
       "year": 110,
       "questionNumber": 13,
       "type": "single",
-      "domain": "電磁學",
-      "topic": "電路/電阻",
-      "moduleId": "m10",
+      "domain": "波動與光學",
+      "subdomain": "幾何光學",
+      "topic": "薄透鏡成像與物像共軛位置",
+      "moduleId": "m06",
       "points": 3,
       "choices": [
         "A",
@@ -567,9 +592,10 @@
         "answerChecked": true,
         "answerCheckedAgainstOfficialPdf": true,
         "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": true,
+        "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -579,9 +605,10 @@
       "year": 110,
       "questionNumber": 14,
       "type": "single",
-      "domain": "電磁學",
-      "topic": "電場/電位",
-      "moduleId": "m09",
+      "domain": "波動與光學",
+      "subdomain": "地震波",
+      "topic": "P 波與 S 波到時差的地震預警",
+      "moduleId": "m07",
       "points": 3,
       "choices": [
         "A",
@@ -614,6 +641,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -623,9 +651,10 @@
       "year": 110,
       "questionNumber": 15,
       "type": "single",
-      "domain": "電磁學",
-      "topic": "感應電動勢",
-      "moduleId": "m12",
+      "domain": "力學",
+      "subdomain": "簡諧運動",
+      "topic": "簡諧運動最大加速度與靜摩擦條件",
+      "moduleId": "m02",
       "points": 3,
       "choices": [
         "A",
@@ -655,9 +684,10 @@
         "answerChecked": true,
         "answerCheckedAgainstOfficialPdf": true,
         "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": true,
+        "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -667,9 +697,10 @@
       "year": 110,
       "questionNumber": 16,
       "type": "single",
-      "domain": "光學",
-      "topic": "透鏡/成像",
-      "moduleId": "m06",
+      "domain": "近代物理",
+      "subdomain": "原子物理",
+      "topic": "氫原子能階躍遷與光譜線數",
+      "moduleId": "m15",
       "points": 3,
       "choices": [
         "A",
@@ -699,9 +730,10 @@
         "answerChecked": true,
         "answerCheckedAgainstOfficialPdf": true,
         "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": true,
+        "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -711,9 +743,10 @@
       "year": 110,
       "questionNumber": 17,
       "type": "single",
-      "domain": "近代物理",
-      "topic": "光電效應",
-      "moduleId": "m13",
+      "domain": "波動與光學",
+      "subdomain": "水波",
+      "topic": "水波折射的波前與傳播方向",
+      "moduleId": "m06",
       "points": 3,
       "choices": [
         "A",
@@ -743,9 +776,10 @@
         "answerChecked": true,
         "answerCheckedAgainstOfficialPdf": true,
         "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": true,
+        "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -755,9 +789,10 @@
       "year": 110,
       "questionNumber": 18,
       "type": "single",
-      "domain": "近代物理",
-      "topic": "氫原子能階",
-      "moduleId": "m15",
+      "domain": "熱學",
+      "subdomain": "理想氣體",
+      "topic": "熱氣球加熱、密度與浮力",
+      "moduleId": "m05",
       "points": 3,
       "choices": [
         "A",
@@ -787,9 +822,10 @@
         "answerChecked": true,
         "answerCheckedAgainstOfficialPdf": true,
         "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": true,
+        "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -800,8 +836,9 @@
       "questionNumber": 19,
       "type": "single",
       "domain": "近代物理",
-      "topic": "物質波",
-      "moduleId": "m14",
+      "subdomain": "核物理",
+      "topic": "放射性衰變、半衰期與活度",
+      "moduleId": "m16",
       "points": 3,
       "choices": [
         "A",
@@ -831,9 +868,10 @@
         "answerChecked": true,
         "answerCheckedAgainstOfficialPdf": true,
         "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": true,
+        "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -843,9 +881,10 @@
       "year": 110,
       "questionNumber": 20,
       "type": "single",
-      "domain": "熱力學",
-      "topic": "熱學/熱機",
-      "moduleId": "m04",
+      "domain": "電磁學",
+      "subdomain": "電磁感應",
+      "topic": "法拉第定律與 RFID 感應電動勢",
+      "moduleId": "m12",
       "points": 3,
       "choices": [
         "A",
@@ -875,9 +914,10 @@
         "answerChecked": true,
         "answerCheckedAgainstOfficialPdf": true,
         "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": true,
+        "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -888,8 +928,9 @@
       "questionNumber": 21,
       "type": "multi",
       "domain": "電磁學",
-      "topic": "磁場與電流",
-      "moduleId": "m11",
+      "subdomain": "直流電路",
+      "topic": "檢流計改裝成安培計與伏特計",
+      "moduleId": "m10",
       "points": 5,
       "choices": [
         "A",
@@ -923,6 +964,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -932,9 +974,10 @@
       "year": 110,
       "questionNumber": 22,
       "type": "multi",
-      "domain": "電磁學",
-      "topic": "電磁感應多選",
-      "moduleId": "m12",
+      "domain": "力學",
+      "subdomain": "圓周運動",
+      "topic": "傾斜彎道的向心力與摩擦力",
+      "moduleId": "m02",
       "points": 5,
       "choices": [
         "A",
@@ -955,7 +998,7 @@
       "images": [
         "../dsat-physics-five-year-topical/assets/q/110_22.jpg"
       ],
-      "pageImage": "../dsat-physics-five-year-topical/assets/110_p6.jpg",
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p7.jpg",
       "solution": {
         "status": "building",
         "text": "大考中心官方答案已核對；詳解建置中。",
@@ -966,9 +1009,10 @@
         "answerChecked": true,
         "answerCheckedAgainstOfficialPdf": true,
         "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": true,
+        "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -978,9 +1022,10 @@
       "year": 110,
       "questionNumber": 23,
       "type": "multi",
-      "domain": "力學",
-      "topic": "轉動/力矩",
-      "moduleId": "m02",
+      "domain": "波動與光學",
+      "subdomain": "波動光學",
+      "topic": "雙狹縫干涉與單狹縫繞射",
+      "moduleId": "m07",
       "points": 5,
       "choices": [
         "A",
@@ -1012,9 +1057,10 @@
         "answerChecked": true,
         "answerCheckedAgainstOfficialPdf": true,
         "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": true,
+        "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -1024,9 +1070,10 @@
       "year": 110,
       "questionNumber": 24,
       "type": "multi",
-      "domain": "光學",
-      "topic": "干涉/繞射",
-      "moduleId": "m08",
+      "domain": "電磁學",
+      "subdomain": "靜電學",
+      "topic": "帶電導體球、表面電場與接地放電",
+      "moduleId": "m09",
       "points": 5,
       "choices": [
         "A",
@@ -1058,9 +1105,10 @@
         "answerChecked": true,
         "answerCheckedAgainstOfficialPdf": true,
         "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": true,
+        "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -1070,9 +1118,10 @@
       "year": 110,
       "questionNumber": 25,
       "type": "open",
-      "domain": "近代物理",
-      "topic": "核反應/近代物理",
-      "moduleId": "m16",
+      "domain": "熱學",
+      "subdomain": "量熱學",
+      "topic": "混合法與電熱法測金屬比熱",
+      "moduleId": "m04",
       "points": 4,
       "choices": [],
       "answer": [],
@@ -1083,7 +1132,7 @@
       "images": [
         "../dsat-physics-five-year-topical/assets/q/110_25.jpg"
       ],
-      "pageImage": "../dsat-physics-five-year-topical/assets/110_p7.jpg",
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p8.jpg",
       "solution": {
         "status": "building",
         "text": "大考中心官方答案已核對；詳解建置中。",
@@ -1097,6 +1146,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -1107,8 +1157,9 @@
       "questionNumber": 26,
       "type": "open",
       "domain": "力學",
-      "topic": "非選能量",
-      "moduleId": "m03",
+      "subdomain": "圓周運動",
+      "topic": "旋轉調速器、圓錐擺與摩擦功率",
+      "moduleId": "m02",
       "points": 4,
       "choices": [],
       "answer": [],
@@ -1133,78 +1184,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
-        "officialSource": true
-      }
-    },
-    {
-      "id": "110-27",
-      "sourceId": "110-27",
-      "year": 110,
-      "questionNumber": 27,
-      "type": "open",
-      "domain": "電磁學",
-      "topic": "非選感應",
-      "moduleId": "m12",
-      "points": 4,
-      "choices": [],
-      "answer": [],
-      "status": "answer-checked",
-      "sourceType": "official-past-exam",
-      "officialSourceStatus": "official-source-identified",
-      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
-      "images": [
-        "../dsat-physics-five-year-topical/assets/q/110_27.jpg"
-      ],
-      "pageImage": "../dsat-physics-five-year-topical/assets/110_p8.jpg",
-      "solution": {
-        "status": "building",
-        "text": "大考中心官方答案已核對；詳解建置中。",
-        "reviewedLabel": "官方答案已核對／詳解建置中"
-      },
-      "qa": {
-        "sourceChecked": true,
-        "answerChecked": true,
-        "answerCheckedAgainstOfficialPdf": true,
-        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": false,
-        "choicesRecovered": false,
-        "detailedSolutionReviewed": false,
-        "officialSource": true
-      }
-    },
-    {
-      "id": "110-28",
-      "sourceId": "110-28",
-      "year": 110,
-      "questionNumber": 28,
-      "type": "open",
-      "domain": "光學",
-      "topic": "非選波動",
-      "moduleId": "m07",
-      "points": 4,
-      "choices": [],
-      "answer": [],
-      "status": "answer-checked",
-      "sourceType": "official-past-exam",
-      "officialSourceStatus": "official-source-identified",
-      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
-      "images": [
-        "../dsat-physics-five-year-topical/assets/q/110_28.jpg"
-      ],
-      "pageImage": "../dsat-physics-five-year-topical/assets/110_p8.jpg",
-      "solution": {
-        "status": "building",
-        "text": "大考中心官方答案已核對；詳解建置中。",
-        "reviewedLabel": "官方答案已核對／詳解建置中"
-      },
-      "qa": {
-        "sourceChecked": true,
-        "answerChecked": true,
-        "answerCheckedAgainstOfficialPdf": true,
-        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": false,
-        "choicesRecovered": false,
-        "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -1215,7 +1195,8 @@
       "questionNumber": 1,
       "type": "single",
       "domain": "力學",
-      "topic": "牛頓第二定律單位",
+      "subdomain": "牛頓運動定律",
+      "topic": "力的 SI 單位牛頓",
       "moduleId": "m02",
       "points": 3,
       "choices": [
@@ -1249,6 +1230,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -1259,7 +1241,8 @@
       "questionNumber": 2,
       "type": "single",
       "domain": "力學",
-      "topic": "斜面、碰撞與能量",
+      "subdomain": "碰撞",
+      "topic": "等質量一維碰撞的動量與動能守恆",
       "moduleId": "m03",
       "points": 3,
       "choices": [
@@ -1293,6 +1276,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -1303,7 +1287,8 @@
       "questionNumber": 3,
       "type": "single",
       "domain": "力學",
-      "topic": "直線運動煞車",
+      "subdomain": "直線運動",
+      "topic": "等加速度煞車與避免追撞",
       "moduleId": "m01",
       "points": 3,
       "choices": [
@@ -1337,6 +1322,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -1346,8 +1332,9 @@
       "year": 111,
       "questionNumber": 4,
       "type": "single",
-      "domain": "熱力學",
-      "topic": "焦耳實驗功熱轉換",
+      "domain": "熱學",
+      "subdomain": "熱功轉換",
+      "topic": "焦耳實驗與機械功轉化為熱",
       "moduleId": "m04",
       "points": 3,
       "choices": [
@@ -1381,6 +1368,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -1391,7 +1379,8 @@
       "questionNumber": 5,
       "type": "single",
       "domain": "電磁學",
-      "topic": "磁通量變化",
+      "subdomain": "電磁感應",
+      "topic": "不同形狀線圈的感應電動勢與電流",
       "moduleId": "m12",
       "points": 3,
       "choices": [
@@ -1425,6 +1414,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -1434,8 +1424,9 @@
       "year": 111,
       "questionNumber": 6,
       "type": "single",
-      "domain": "光學",
-      "topic": "弦駐波與基頻",
+      "domain": "波動與光學",
+      "subdomain": "駐波",
+      "topic": "固定弦的基音與按弦後頻率",
       "moduleId": "m07",
       "points": 3,
       "choices": [
@@ -1469,6 +1460,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -1478,8 +1470,9 @@
       "year": 111,
       "questionNumber": 7,
       "type": "single",
-      "domain": "熱力學",
-      "topic": "氣體動力論",
+      "domain": "熱學",
+      "subdomain": "氣體動力論",
+      "topic": "理想氣體微觀量與狀態方程",
       "moduleId": "m05",
       "points": 3,
       "choices": [
@@ -1513,6 +1506,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -1523,7 +1517,8 @@
       "questionNumber": 8,
       "type": "single",
       "domain": "近代物理",
-      "topic": "宇宙/粒子與量子",
+      "subdomain": "核物理",
+      "topic": "半衰期與同位素豐度比",
       "moduleId": "m16",
       "points": 3,
       "choices": [
@@ -1557,6 +1552,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -1567,8 +1563,9 @@
       "questionNumber": 9,
       "type": "single",
       "domain": "近代物理",
-      "topic": "光的二象性與氫原子吸收",
-      "moduleId": "m15",
+      "subdomain": "波粒二象性",
+      "topic": "光的波動性與粒子性證據",
+      "moduleId": "m16",
       "points": 3,
       "choices": [
         "A",
@@ -1601,6 +1598,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -1610,8 +1608,9 @@
       "year": 111,
       "questionNumber": 10,
       "type": "single",
-      "domain": "光學",
-      "topic": "球透鏡/幾何光學",
+      "domain": "波動與光學",
+      "subdomain": "幾何光學",
+      "topic": "球形水滴與氣泡的組合成像",
       "moduleId": "m06",
       "points": 3,
       "choices": [
@@ -1645,6 +1644,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -1654,9 +1654,10 @@
       "year": 111,
       "questionNumber": 11,
       "type": "single",
-      "domain": "力學",
-      "topic": "測量與不確定度",
-      "moduleId": "m01",
+      "domain": "實驗與圖表",
+      "subdomain": "測量與不確定度",
+      "topic": "重複測量的平均值與組合不確定度",
+      "moduleId": "m17",
       "points": 3,
       "choices": [
         "A",
@@ -1689,6 +1690,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -1699,7 +1701,8 @@
       "questionNumber": 12,
       "type": "multi",
       "domain": "力學",
-      "topic": "摩擦力與力平衡",
+      "subdomain": "受力與平衡",
+      "topic": "疊放物體、動摩擦與滑輪張力",
       "moduleId": "m02",
       "points": 5,
       "choices": [
@@ -1735,6 +1738,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -1745,8 +1749,9 @@
       "questionNumber": 13,
       "type": "multi",
       "domain": "電磁學",
-      "topic": "電路與電阻",
-      "moduleId": "m10",
+      "subdomain": "靜電學",
+      "topic": "平行板系統的電場、電位與靜電力",
+      "moduleId": "m09",
       "points": 5,
       "choices": [
         "A",
@@ -1780,6 +1785,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -1790,7 +1796,8 @@
       "questionNumber": 14,
       "type": "multi",
       "domain": "電磁學",
-      "topic": "電磁感應與電流",
+      "subdomain": "電磁感應",
+      "topic": "感應電動勢、電流方向與端電壓",
       "moduleId": "m12",
       "points": 5,
       "choices": [
@@ -1825,6 +1832,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -1835,8 +1843,9 @@
       "questionNumber": 15,
       "type": "multi",
       "domain": "電磁學",
-      "topic": "平行板電容/電場",
-      "moduleId": "m09",
+      "subdomain": "電流磁效應",
+      "topic": "載流圓筒的磁場與磁壓力",
+      "moduleId": "m11",
       "points": 5,
       "choices": [
         "A",
@@ -1870,6 +1879,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -1879,8 +1889,9 @@
       "year": 111,
       "questionNumber": 16,
       "type": "multi",
-      "domain": "光學",
-      "topic": "折射與壓克力板",
+      "domain": "波動與光學",
+      "subdomain": "幾何光學",
+      "topic": "平行玻璃板折射與視位移",
       "moduleId": "m06",
       "points": 5,
       "choices": [
@@ -1915,6 +1926,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -1924,9 +1936,10 @@
       "year": 111,
       "questionNumber": 17,
       "type": "multi",
-      "domain": "熱力學",
-      "topic": "氣體膨脹作功",
-      "moduleId": "m04",
+      "domain": "近代物理",
+      "subdomain": "原子物理",
+      "topic": "碰撞激發、波耳能階與放光",
+      "moduleId": "m15",
       "points": 5,
       "choices": [
         "A",
@@ -1960,6 +1973,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -1969,9 +1983,10 @@
       "year": 111,
       "questionNumber": 18,
       "type": "multi",
-      "domain": "熱力學",
-      "topic": "能量守恆/熱學",
-      "moduleId": "m04",
+      "domain": "熱學",
+      "subdomain": "熱力學過程",
+      "topic": "絕熱準靜態膨脹與自由膨脹的溫度變化",
+      "moduleId": "m05",
       "points": 5,
       "choices": [
         "A",
@@ -2005,6 +2020,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -2015,7 +2031,8 @@
       "questionNumber": 19,
       "type": "single",
       "domain": "力學",
-      "topic": "萬有引力與拉格朗日點",
+      "subdomain": "萬有引力",
+      "topic": "二體系統的角速度與圓形公轉",
       "moduleId": "m02",
       "points": 3,
       "choices": [
@@ -2049,6 +2066,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -2059,7 +2077,8 @@
       "questionNumber": 20,
       "type": "single",
       "domain": "力學",
-      "topic": "圓周運動/天體",
+      "subdomain": "軌道力學",
+      "topic": "拉格朗日 L2 點的引力與向心力平衡",
       "moduleId": "m02",
       "points": 3,
       "choices": [
@@ -2093,6 +2112,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -2103,7 +2123,8 @@
       "questionNumber": 21,
       "type": "open",
       "domain": "力學",
-      "topic": "L2 優點非選",
+      "subdomain": "軌道力學",
+      "topic": "拉格朗日點選址與 JWST 觀測條件",
       "moduleId": "m02",
       "points": 4,
       "choices": [],
@@ -2129,6 +2150,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -2139,8 +2161,9 @@
       "questionNumber": 22,
       "type": "single",
       "domain": "近代物理",
-      "topic": "光電效應實驗",
-      "moduleId": "m13",
+      "subdomain": "量子論",
+      "topic": "光量子能量與普朗克關係",
+      "moduleId": "m16",
       "points": 3,
       "choices": [
         "A",
@@ -2173,6 +2196,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -2183,7 +2207,8 @@
       "questionNumber": 23,
       "type": "open",
       "domain": "近代物理",
-      "topic": "普朗克常數圖表",
+      "subdomain": "光電效應實驗",
+      "topic": "光電效應電路配置與自變因控制",
       "moduleId": "m13",
       "points": 4,
       "choices": [],
@@ -2209,6 +2234,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -2219,7 +2245,8 @@
       "questionNumber": 24,
       "type": "open",
       "domain": "近代物理",
-      "topic": "光電效應數據判讀",
+      "subdomain": "光電效應實驗",
+      "topic": "截止電壓—頻率圖與普朗克常數電量比",
       "moduleId": "m13",
       "points": 4,
       "choices": [],
@@ -2242,9 +2269,10 @@
         "answerChecked": true,
         "answerCheckedAgainstOfficialPdf": true,
         "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0m223498335577191796/05-111%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": true,
+        "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -2254,8 +2282,9 @@
       "year": 111,
       "questionNumber": 25,
       "type": "single",
-      "domain": "光學",
-      "topic": "瑞立擴音器/波動",
+      "domain": "波動與光學",
+      "subdomain": "聲波",
+      "topic": "單縫繞射與聲波張角",
       "moduleId": "m07",
       "points": 3,
       "choices": [
@@ -2286,9 +2315,10 @@
         "answerChecked": true,
         "answerCheckedAgainstOfficialPdf": true,
         "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0m223498335577191796/05-111%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": true,
-        "choicesRecovered": true,
+        "legacyMismatchCorrected": false,
+        "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -2298,8 +2328,9 @@
       "year": 111,
       "questionNumber": 26,
       "type": "open",
-      "domain": "光學",
-      "topic": "聲波繞射模型",
+      "domain": "波動與光學",
+      "subdomain": "聲波",
+      "topic": "矩形開口繞射模型與方向性實驗設計",
       "moduleId": "m07",
       "points": 4,
       "choices": [],
@@ -2325,6 +2356,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -2334,9 +2366,10 @@
       "year": 112,
       "questionNumber": 1,
       "type": "single",
-      "domain": "力學",
-      "topic": "因次與能量單位",
-      "moduleId": "m03",
+      "domain": "實驗與圖表",
+      "subdomain": "物理量與量綱",
+      "topic": "能量量綱與因次分析",
+      "moduleId": "m17",
       "points": 3,
       "choices": [
         "A",
@@ -2369,6 +2402,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -2378,8 +2412,9 @@
       "year": 112,
       "questionNumber": 2,
       "type": "single",
-      "domain": "光學",
-      "topic": "電磁波性質",
+      "domain": "波動與光學",
+      "subdomain": "電磁波",
+      "topic": "電磁波的橫波性與傳播性質",
       "moduleId": "m07",
       "points": 3,
       "choices": [
@@ -2413,6 +2448,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -2422,9 +2458,10 @@
       "year": 112,
       "questionNumber": 3,
       "type": "single",
-      "domain": "力學",
-      "topic": "測量與不確定度",
-      "moduleId": "m01",
+      "domain": "實驗與圖表",
+      "subdomain": "測量與不確定度",
+      "topic": "組合不確定度與測量結果有效位數",
+      "moduleId": "m17",
       "points": 3,
       "choices": [
         "A",
@@ -2457,6 +2494,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -2467,7 +2505,8 @@
       "questionNumber": 4,
       "type": "single",
       "domain": "電磁學",
-      "topic": "點電荷作功與電位能",
+      "subdomain": "靜電學",
+      "topic": "兩點電荷系統的電位能與外力作功",
       "moduleId": "m09",
       "points": 3,
       "choices": [
@@ -2501,6 +2540,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -2511,7 +2551,8 @@
       "questionNumber": 5,
       "type": "single",
       "domain": "力學",
-      "topic": "簡諧運動/單擺",
+      "subdomain": "振動",
+      "topic": "彈簧與單擺週期比較測定重力加速度",
       "moduleId": "m02",
       "points": 3,
       "choices": [
@@ -2545,6 +2586,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -2555,8 +2597,9 @@
       "questionNumber": 6,
       "type": "single",
       "domain": "力學",
-      "topic": "彈性碰撞與能量",
-      "moduleId": "m03",
+      "subdomain": "運動學",
+      "topic": "鉛直上拋與週期性拋接",
+      "moduleId": "m01",
       "points": 3,
       "choices": [
         "A",
@@ -2589,6 +2632,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -2599,7 +2643,8 @@
       "questionNumber": 7,
       "type": "single",
       "domain": "近代物理",
-      "topic": "奈米/量子與物性",
+      "subdomain": "光量子論",
+      "topic": "光電效應中光強度與光子通量",
       "moduleId": "m13",
       "points": 3,
       "choices": [
@@ -2633,6 +2678,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -2643,7 +2689,8 @@
       "questionNumber": 8,
       "type": "single",
       "domain": "力學",
-      "topic": "碰撞結合彈性位能",
+      "subdomain": "功與能",
+      "topic": "重力位能、動能與彈性位能轉換",
       "moduleId": "m03",
       "points": 3,
       "choices": [
@@ -2677,6 +2724,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -2687,7 +2735,8 @@
       "questionNumber": 9,
       "type": "single",
       "domain": "力學",
-      "topic": "v-t 圖與分段運動",
+      "subdomain": "運動圖表",
+      "topic": "斜面—水平面—彈簧段的速率時間圖",
       "moduleId": "m01",
       "points": 3,
       "choices": [
@@ -2721,6 +2770,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -2730,8 +2780,9 @@
       "year": 112,
       "questionNumber": 10,
       "type": "single",
-      "domain": "熱力學",
-      "topic": "奈米尺度熔點判讀",
+      "domain": "熱學",
+      "subdomain": "相變與材料熱性質",
+      "topic": "奈米粒徑對熔點的影響與曲線判讀",
       "moduleId": "m04",
       "points": 3,
       "choices": [
@@ -2765,6 +2816,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -2774,8 +2826,9 @@
       "year": 112,
       "questionNumber": 11,
       "type": "single",
-      "domain": "光學",
-      "topic": "聲波相消干涉",
+      "domain": "波動與光學",
+      "subdomain": "聲波干涉",
+      "topic": "消音器的破壞性干涉與路徑差",
       "moduleId": "m07",
       "points": 3,
       "choices": [
@@ -2809,6 +2862,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -2819,8 +2873,9 @@
       "questionNumber": 12,
       "type": "single",
       "domain": "近代物理",
-      "topic": "太陽吸收光譜",
-      "moduleId": "m16",
+      "subdomain": "原子光譜",
+      "topic": "吸收光譜暗線與元素辨識",
+      "moduleId": "m15",
       "points": 3,
       "choices": [
         "A",
@@ -2853,6 +2908,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -2863,8 +2919,9 @@
       "questionNumber": 13,
       "type": "single",
       "domain": "力學",
-      "topic": "力學基本題",
-      "moduleId": "m02",
+      "subdomain": "拋體運動",
+      "topic": "水平拋射的獨立分量與落地狀態",
+      "moduleId": "m01",
       "points": 3,
       "choices": [
         "A",
@@ -2897,6 +2954,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -2907,7 +2965,8 @@
       "questionNumber": 14,
       "type": "multi",
       "domain": "力學",
-      "topic": "紙牌/受力分析",
+      "subdomain": "牛頓運動定律與摩擦",
+      "topic": "疊置物體的靜摩擦與動摩擦受力",
       "moduleId": "m02",
       "points": 5,
       "choices": [
@@ -2940,9 +2999,10 @@
         "answerChecked": true,
         "answerCheckedAgainstOfficialPdf": true,
         "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": true,
+        "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -2953,7 +3013,8 @@
       "questionNumber": 15,
       "type": "multi",
       "domain": "力學",
-      "topic": "行星資料與萬有引力",
+      "subdomain": "萬有引力與天體運動",
+      "topic": "行星公轉、自轉與軌道資料判讀",
       "moduleId": "m02",
       "points": 5,
       "choices": [
@@ -2985,9 +3046,10 @@
         "answerChecked": true,
         "answerCheckedAgainstOfficialPdf": true,
         "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": true,
+        "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -2998,8 +3060,9 @@
       "questionNumber": 16,
       "type": "multi",
       "domain": "力學",
-      "topic": "角動量/參考點",
-      "moduleId": "m02",
+      "subdomain": "衛星軌道",
+      "topic": "空氣阻力下衛星螺旋降軌的能量與角動量",
+      "moduleId": "m03",
       "points": 5,
       "choices": [
         "A",
@@ -3031,9 +3094,10 @@
         "answerChecked": true,
         "answerCheckedAgainstOfficialPdf": true,
         "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": true,
+        "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -3044,8 +3108,9 @@
       "questionNumber": 17,
       "type": "multi",
       "domain": "近代物理",
-      "topic": "量子現象",
-      "moduleId": "m15",
+      "subdomain": "物質波",
+      "topic": "電子與中子的雙狹縫干涉",
+      "moduleId": "m14",
       "points": 5,
       "choices": [
         "A",
@@ -3076,9 +3141,10 @@
         "answerChecked": true,
         "answerCheckedAgainstOfficialPdf": true,
         "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": true,
+        "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -3088,8 +3154,9 @@
       "year": 112,
       "questionNumber": 18,
       "type": "multi",
-      "domain": "光學",
-      "topic": "折射定律/圓柱體",
+      "domain": "波動與光學",
+      "subdomain": "折射",
+      "topic": "光跨介面時頻率、波速、波長與折射角關係",
       "moduleId": "m06",
       "points": 5,
       "choices": [
@@ -3121,9 +3188,10 @@
         "answerChecked": true,
         "answerCheckedAgainstOfficialPdf": true,
         "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": true,
+        "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -3133,8 +3201,9 @@
       "year": 112,
       "questionNumber": 19,
       "type": "multi",
-      "domain": "光學",
-      "topic": "波動/聲學",
+      "domain": "波動與光學",
+      "subdomain": "水波干涉",
+      "topic": "同相雙波源的節線與腹線",
       "moduleId": "m07",
       "points": 5,
       "choices": [
@@ -3166,9 +3235,10 @@
         "answerChecked": true,
         "answerCheckedAgainstOfficialPdf": true,
         "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": true,
+        "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -3179,7 +3249,8 @@
       "questionNumber": 20,
       "type": "open",
       "domain": "近代物理",
-      "topic": "微中子基本作用力",
+      "subdomain": "核物理與基本交互作用",
+      "topic": "太陽核融合中正電子與微中子的弱交互作用",
       "moduleId": "m16",
       "points": 4,
       "choices": [],
@@ -3205,6 +3276,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -3215,8 +3287,9 @@
       "questionNumber": 21,
       "type": "open",
       "domain": "近代物理",
-      "topic": "光子動量公式推導",
-      "moduleId": "m14",
+      "subdomain": "光量子論",
+      "topic": "光子動量與波長關係 p=h/λ",
+      "moduleId": "m16",
       "points": 4,
       "choices": [],
       "answer": [],
@@ -3241,6 +3314,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -3250,9 +3324,10 @@
       "year": 112,
       "questionNumber": 22,
       "type": "multi",
-      "domain": "熱力學",
-      "topic": "水銀氣壓計/壓力",
-      "moduleId": "m04",
+      "domain": "力學",
+      "subdomain": "流體靜力學",
+      "topic": "水銀氣壓計的液柱高度與壓力平衡",
+      "moduleId": "m02",
       "points": 5,
       "choices": [
         "A",
@@ -3283,9 +3358,10 @@
         "answerChecked": true,
         "answerCheckedAgainstOfficialPdf": true,
         "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": true,
+        "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -3295,9 +3371,10 @@
       "year": 112,
       "questionNumber": 23,
       "type": "open",
-      "domain": "熱力學",
-      "topic": "位能零位面/流體壓力",
-      "moduleId": "m04",
+      "domain": "力學",
+      "subdomain": "功與重力位能",
+      "topic": "抬升水銀柱造成的重力位能變化",
+      "moduleId": "m03",
       "points": 4,
       "choices": [],
       "answer": [],
@@ -3322,6 +3399,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -3332,8 +3410,9 @@
       "questionNumber": 24,
       "type": "multi",
       "domain": "電磁學",
-      "topic": "軸向發電機",
-      "moduleId": "m12",
+      "subdomain": "載流導線的磁力",
+      "topic": "馬達線圈受磁力方向與轉矩",
+      "moduleId": "m11",
       "points": 5,
       "choices": [
         "A",
@@ -3364,9 +3443,10 @@
         "answerChecked": true,
         "answerCheckedAgainstOfficialPdf": true,
         "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0n214394111040559567/05-112%e5%88%86%e7%a7%91%e6%b8%ac%e9%a9%97%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": true,
+        "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -3377,7 +3457,8 @@
       "questionNumber": 25,
       "type": "single",
       "domain": "電磁學",
-      "topic": "感應電流/磁通量",
+      "subdomain": "電磁感應",
+      "topic": "多磁極轉子旋轉時的磁通量時間圖",
       "moduleId": "m12",
       "points": 3,
       "choices": [
@@ -3411,6 +3492,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -3421,7 +3503,8 @@
       "questionNumber": 26,
       "type": "open",
       "domain": "電磁學",
-      "topic": "感應電動勢推導",
+      "subdomain": "交流發電機",
+      "topic": "法拉第定律、最大感應電動勢與最大輸出功率",
       "moduleId": "m12",
       "points": 4,
       "choices": [],
@@ -3447,6 +3530,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -3457,7 +3541,8 @@
       "questionNumber": 1,
       "type": "single",
       "domain": "近代物理",
-      "topic": "量子/原子概念",
+      "subdomain": "核反應",
+      "topic": "原子核反應中的守恆定律",
       "moduleId": "m16",
       "points": 3,
       "choices": [
@@ -3491,6 +3576,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -3500,9 +3586,10 @@
       "year": 113,
       "questionNumber": 2,
       "type": "single",
-      "domain": "熱力學",
-      "topic": "氣體動力論",
-      "moduleId": "m05",
+      "domain": "波動與光學",
+      "subdomain": "光的性質",
+      "topic": "折射、色散與光的波粒二象性",
+      "moduleId": "m08",
       "points": 3,
       "choices": [
         "A",
@@ -3535,6 +3622,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -3545,8 +3633,9 @@
       "questionNumber": 3,
       "type": "single",
       "domain": "力學",
-      "topic": "運動圖形/測量",
-      "moduleId": "m01",
+      "subdomain": "萬有引力與衛星",
+      "topic": "低軌衛星與同步衛星的軌道性質比較",
+      "moduleId": "m02",
       "points": 3,
       "choices": [
         "A",
@@ -3579,6 +3668,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -3588,9 +3678,10 @@
       "year": 113,
       "questionNumber": 4,
       "type": "single",
-      "domain": "力學",
-      "topic": "牛頓運動定律",
-      "moduleId": "m02",
+      "domain": "電磁學",
+      "subdomain": "靜電學",
+      "topic": "導體靜電平衡與法拉第籠屏蔽",
+      "moduleId": "m09",
       "points": 3,
       "choices": [
         "A",
@@ -3623,6 +3714,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -3632,9 +3724,10 @@
       "year": 113,
       "questionNumber": 5,
       "type": "single",
-      "domain": "力學",
-      "topic": "能量守恆",
-      "moduleId": "m03",
+      "domain": "近代物理",
+      "subdomain": "光電效應",
+      "topic": "截止電壓與金屬功函數",
+      "moduleId": "m13",
       "points": 3,
       "choices": [
         "A",
@@ -3667,6 +3760,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -3676,9 +3770,10 @@
       "year": 113,
       "questionNumber": 6,
       "type": "single",
-      "domain": "光學",
-      "topic": "波動/聲波",
-      "moduleId": "m07",
+      "domain": "近代物理",
+      "subdomain": "原子光譜",
+      "topic": "氫原子能階躍遷與光譜系列",
+      "moduleId": "m15",
       "points": 3,
       "choices": [
         "A",
@@ -3711,6 +3806,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -3720,9 +3816,10 @@
       "year": 113,
       "questionNumber": 7,
       "type": "single",
-      "domain": "光學",
-      "topic": "幾何光學",
-      "moduleId": "m06",
+      "domain": "電磁學",
+      "subdomain": "電流的磁效應",
+      "topic": "螺線管磁場中載流導線的磁力與電流天平",
+      "moduleId": "m11",
       "points": 3,
       "choices": [
         "A",
@@ -3755,6 +3852,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -3765,8 +3863,9 @@
       "questionNumber": 8,
       "type": "single",
       "domain": "電磁學",
-      "topic": "磁場與帶電粒子",
-      "moduleId": "m11",
+      "subdomain": "靜電力",
+      "topic": "庫侖斥力與懸球平衡",
+      "moduleId": "m09",
       "points": 3,
       "choices": [
         "A",
@@ -3799,6 +3898,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -3808,9 +3908,10 @@
       "year": 113,
       "questionNumber": 9,
       "type": "single",
-      "domain": "電磁學",
-      "topic": "感應定律",
-      "moduleId": "m12",
+      "domain": "力學",
+      "subdomain": "振動",
+      "topic": "調諧質量阻尼器的單擺週期",
+      "moduleId": "m02",
       "points": 3,
       "choices": [
         "A",
@@ -3843,6 +3944,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -3852,9 +3954,10 @@
       "year": 113,
       "questionNumber": 10,
       "type": "single",
-      "domain": "光學",
-      "topic": "干涉/繞射",
-      "moduleId": "m08",
+      "domain": "波動與光學",
+      "subdomain": "水波干涉",
+      "topic": "週期波的路程、反射與建設性干涉",
+      "moduleId": "m07",
       "points": 3,
       "choices": [
         "A",
@@ -3887,6 +3990,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -3896,9 +4000,10 @@
       "year": 113,
       "questionNumber": 11,
       "type": "single",
-      "domain": "近代物理",
-      "topic": "光電效應",
-      "moduleId": "m13",
+      "domain": "波動與光學",
+      "subdomain": "幾何光學",
+      "topic": "薄凸透鏡成像與物體速度",
+      "moduleId": "m06",
       "points": 3,
       "choices": [
         "A",
@@ -3931,6 +4036,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -3940,9 +4046,10 @@
       "year": 113,
       "questionNumber": 12,
       "type": "single",
-      "domain": "近代物理",
-      "topic": "氫原子能階",
-      "moduleId": "m15",
+      "domain": "熱學",
+      "subdomain": "理想氣體",
+      "topic": "定溫氣體的壓力—體積換算與供氣時間",
+      "moduleId": "m05",
       "points": 3,
       "choices": [
         "A",
@@ -3975,6 +4082,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -3984,9 +4092,10 @@
       "year": 113,
       "questionNumber": 13,
       "type": "multi",
-      "domain": "力學",
-      "topic": "碰撞/動量",
-      "moduleId": "m02",
+      "domain": "近代物理",
+      "subdomain": "量子物理與 X 射線",
+      "topic": "X 射線、量子論與原子模型的物理史判斷",
+      "moduleId": "m16",
       "points": 5,
       "choices": [
         "A",
@@ -4020,6 +4129,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -4029,9 +4139,10 @@
       "year": 113,
       "questionNumber": 14,
       "type": "multi",
-      "domain": "力學",
-      "topic": "功與能",
-      "moduleId": "m03",
+      "domain": "波動與光學",
+      "subdomain": "雙狹縫干涉",
+      "topic": "條紋間距、介質折射率、波長與光程差",
+      "moduleId": "m07",
       "points": 5,
       "choices": [
         "A",
@@ -4065,6 +4176,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -4075,7 +4187,8 @@
       "questionNumber": 15,
       "type": "multi",
       "domain": "電磁學",
-      "topic": "靜電場/電位",
+      "subdomain": "電場中的帶電粒子",
+      "topic": "均勻電場內拋體的受力與能量轉換",
       "moduleId": "m09",
       "points": 5,
       "choices": [
@@ -4111,6 +4224,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -4120,9 +4234,10 @@
       "year": 113,
       "questionNumber": 16,
       "type": "multi",
-      "domain": "電磁學",
-      "topic": "電路與電阻",
-      "moduleId": "m10",
+      "domain": "力學",
+      "subdomain": "碰撞",
+      "topic": "一維非彈性碰撞的速度時間圖、動量與能量",
+      "moduleId": "m03",
       "points": 5,
       "choices": [
         "A",
@@ -4157,6 +4272,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -4167,8 +4283,9 @@
       "questionNumber": 17,
       "type": "multi",
       "domain": "電磁學",
-      "topic": "電流磁效應",
-      "moduleId": "m11",
+      "subdomain": "交流電與變壓器",
+      "topic": "高壓輸電、理想變壓器與線路損耗",
+      "moduleId": "m12",
       "points": 5,
       "choices": [
         "A",
@@ -4203,6 +4320,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -4213,7 +4331,8 @@
       "questionNumber": 18,
       "type": "multi",
       "domain": "電磁學",
-      "topic": "電磁感應",
+      "subdomain": "電磁感應",
+      "topic": "線圈面積改變引起的磁通量變化、感應電動勢與楞次定律",
       "moduleId": "m12",
       "points": 5,
       "choices": [
@@ -4249,6 +4368,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -4258,9 +4378,10 @@
       "year": 113,
       "questionNumber": 19,
       "type": "open",
-      "domain": "光學",
-      "topic": "成像非選",
-      "moduleId": "m06",
+      "domain": "力學",
+      "subdomain": "流體與質量流率",
+      "topic": "風機截面中的空氣質量流率 m=ρAvΔt",
+      "moduleId": "m02",
       "points": 4,
       "choices": [],
       "answer": [],
@@ -4285,6 +4406,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -4295,8 +4417,9 @@
       "questionNumber": 20,
       "type": "multi",
       "domain": "力學",
-      "topic": "力矩/轉動多選",
-      "moduleId": "m02",
+      "subdomain": "功率與能源",
+      "topic": "風力功率的風速三次方律與發電減碳估算",
+      "moduleId": "m03",
       "points": 5,
       "choices": [
         "A",
@@ -4331,6 +4454,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -4340,9 +4464,10 @@
       "year": 113,
       "questionNumber": 21,
       "type": "open",
-      "domain": "熱力學",
-      "topic": "熱學非選",
-      "moduleId": "m04",
+      "domain": "波動與光學",
+      "subdomain": "電磁波偏振",
+      "topic": "金屬條偏振板與穿透波電場方向",
+      "moduleId": "m08",
       "points": 4,
       "choices": [],
       "answer": [],
@@ -4367,6 +4492,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -4376,9 +4502,10 @@
       "year": 113,
       "questionNumber": 22,
       "type": "open",
-      "domain": "力學",
-      "topic": "能量非選",
-      "moduleId": "m03",
+      "domain": "實驗與圖表",
+      "subdomain": "實驗設計",
+      "topic": "以雙偏振板驗證電磁波為橫波",
+      "moduleId": "m17",
       "points": 4,
       "choices": [],
       "answer": [],
@@ -4403,6 +4530,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -4412,9 +4540,10 @@
       "year": 113,
       "questionNumber": 23,
       "type": "single",
-      "domain": "光學",
-      "topic": "波動概念",
-      "moduleId": "m07",
+      "domain": "波動與光學",
+      "subdomain": "偏振",
+      "topic": "馬呂斯定律與雙偏振板夾角—強度圖",
+      "moduleId": "m08",
       "points": 3,
       "choices": [
         "A",
@@ -4447,6 +4576,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -4456,9 +4586,10 @@
       "year": 113,
       "questionNumber": 24,
       "type": "multi",
-      "domain": "近代物理",
-      "topic": "物質波/量子",
-      "moduleId": "m14",
+      "domain": "力學",
+      "subdomain": "圓周運動與傳動",
+      "topic": "鏈條齒盤的切線速率、角速度與向心加速度",
+      "moduleId": "m02",
       "points": 5,
       "choices": [
         "A",
@@ -4492,6 +4623,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -4501,9 +4633,10 @@
       "year": 113,
       "questionNumber": 25,
       "type": "open",
-      "domain": "電磁學",
-      "topic": "感應非選",
-      "moduleId": "m12",
+      "domain": "力學",
+      "subdomain": "轉動力學與機械傳動",
+      "topic": "踏板力矩經齒盤與鏈條傳至後輪",
+      "moduleId": "m02",
       "points": 4,
       "choices": [],
       "answer": [],
@@ -4528,6 +4661,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -4538,8 +4672,9 @@
       "questionNumber": 26,
       "type": "open",
       "domain": "力學",
-      "topic": "實驗與運動分析非選",
-      "moduleId": "m01",
+      "subdomain": "轉動力學與靜摩擦",
+      "topic": "以齒輪比最佳化後輪驅動力",
+      "moduleId": "m02",
       "points": 4,
       "choices": [],
       "answer": [],
@@ -4564,6 +4699,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": false,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -4574,8 +4710,9 @@
       "questionNumber": 1,
       "type": "single",
       "domain": "近代物理",
-      "topic": "量子力學史與原子模型",
-      "moduleId": "m15",
+      "subdomain": "量子物理",
+      "topic": "量子力學發展史與基本觀念",
+      "moduleId": "m16",
       "points": 3,
       "choices": [
         "A",
@@ -4609,6 +4746,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": true,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -4618,8 +4756,9 @@
       "year": 114,
       "questionNumber": 2,
       "type": "single",
-      "domain": "熱力學",
-      "topic": "氣體分子速率分布",
+      "domain": "熱學",
+      "subdomain": "氣體動力論",
+      "topic": "馬克士威速率分布與溫度",
       "moduleId": "m05",
       "points": 3,
       "choices": [
@@ -4654,6 +4793,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": true,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -4664,7 +4804,8 @@
       "questionNumber": 3,
       "type": "single",
       "domain": "近代物理",
-      "topic": "拉塞福散射與原子核",
+      "subdomain": "原子結構",
+      "topic": "拉塞福散射與原子核模型",
       "moduleId": "m16",
       "points": 3,
       "choices": [
@@ -4699,6 +4840,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": true,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -4709,7 +4851,8 @@
       "questionNumber": 4,
       "type": "single",
       "domain": "力學",
-      "topic": "滑輪組與牛頓第二定律",
+      "subdomain": "牛頓運動定律",
+      "topic": "動滑輪系統的受力與加速度",
       "moduleId": "m02",
       "points": 3,
       "choices": [
@@ -4744,6 +4887,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": true,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -4754,7 +4898,8 @@
       "questionNumber": 5,
       "type": "single",
       "domain": "力學",
-      "topic": "圓周運動與克卜勒定律",
+      "subdomain": "萬有引力與圓周運動",
+      "topic": "由衛星軌道估算行星質量",
       "moduleId": "m02",
       "points": 3,
       "choices": [
@@ -4789,6 +4934,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": true,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -4799,7 +4945,8 @@
       "questionNumber": 6,
       "type": "single",
       "domain": "力學",
-      "topic": "單擺簡諧運動",
+      "subdomain": "振動",
+      "topic": "單擺的週期、相位與運動方向",
       "moduleId": "m02",
       "points": 3,
       "choices": [
@@ -4834,6 +4981,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": true,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -4844,7 +4992,8 @@
       "questionNumber": 7,
       "type": "single",
       "domain": "力學",
-      "topic": "功率、能量與電池電流",
+      "subdomain": "功、能與功率",
+      "topic": "爬坡時的能量轉換、功率與電流",
       "moduleId": "m03",
       "points": 3,
       "choices": [
@@ -4879,6 +5028,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": true,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -4889,7 +5039,8 @@
       "questionNumber": 8,
       "type": "single",
       "domain": "電磁學",
-      "topic": "帶電粒子在磁場中迴旋",
+      "subdomain": "帶電粒子在磁場中的運動",
+      "topic": "迴旋頻率與荷質比",
       "moduleId": "m11",
       "points": 3,
       "choices": [
@@ -4924,6 +5075,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": true,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -4934,7 +5086,8 @@
       "questionNumber": 9,
       "type": "single",
       "domain": "電磁學",
-      "topic": "法拉第感應定律",
+      "subdomain": "電磁感應",
+      "topic": "空間變化磁場中的磁通量變化與感應電動勢",
       "moduleId": "m12",
       "points": 3,
       "choices": [
@@ -4969,6 +5122,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": true,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -4978,9 +5132,10 @@
       "year": 114,
       "questionNumber": 10,
       "type": "single",
-      "domain": "光學",
-      "topic": "單狹縫繞射",
-      "moduleId": "m08",
+      "domain": "波動與光學",
+      "subdomain": "波動光學",
+      "topic": "單狹縫繞射暗紋重合",
+      "moduleId": "m07",
       "points": 3,
       "choices": [
         "A",
@@ -5014,6 +5169,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": true,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -5024,7 +5180,8 @@
       "questionNumber": 11,
       "type": "single",
       "domain": "近代物理",
-      "topic": "光電效應與截止電壓",
+      "subdomain": "光量子論",
+      "topic": "光電效應與光電子最大動能",
       "moduleId": "m13",
       "points": 3,
       "choices": [
@@ -5059,6 +5216,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": true,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -5068,9 +5226,10 @@
       "year": 114,
       "questionNumber": 12,
       "type": "single",
-      "domain": "光學",
-      "topic": "折射率與光路",
-      "moduleId": "m06",
+      "domain": "近代物理",
+      "subdomain": "原子物理",
+      "topic": "波耳氫原子的軌道半徑與能階",
+      "moduleId": "m15",
       "points": 3,
       "choices": [
         "A",
@@ -5104,6 +5263,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": true,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -5113,9 +5273,10 @@
       "year": 114,
       "questionNumber": 13,
       "type": "multi",
-      "domain": "力學",
-      "topic": "牛頓擺、動量與能量",
-      "moduleId": "m03",
+      "domain": "熱學",
+      "subdomain": "熱量與熱功率",
+      "topic": "電熱壺加熱的熱量、功率與時間",
+      "moduleId": "m04",
       "points": 5,
       "choices": [
         "A",
@@ -5151,6 +5312,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": true,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -5161,8 +5323,9 @@
       "questionNumber": 14,
       "type": "multi",
       "domain": "力學",
-      "topic": "動量與衝量",
-      "moduleId": "m02",
+      "subdomain": "動量與碰撞",
+      "topic": "一維彈性與非彈性碰撞",
+      "moduleId": "m03",
       "points": 5,
       "choices": [
         "A",
@@ -5197,6 +5360,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": true,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -5207,8 +5371,9 @@
       "questionNumber": 15,
       "type": "multi",
       "domain": "力學",
-      "topic": "質心與轉動",
-      "moduleId": "m02",
+      "subdomain": "動量與能量",
+      "topic": "疊置物塊的摩擦、動量守恆與動能耗散",
+      "moduleId": "m03",
       "points": 5,
       "choices": [
         "A",
@@ -5244,6 +5409,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": true,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -5253,9 +5419,10 @@
       "year": 114,
       "questionNumber": 16,
       "type": "multi",
-      "domain": "力學",
-      "topic": "靜力平衡與力矩",
-      "moduleId": "m02",
+      "domain": "電磁學",
+      "subdomain": "電流的磁效應",
+      "topic": "載流導線受磁力與直流馬達原理",
+      "moduleId": "m11",
       "points": 5,
       "choices": [
         "A",
@@ -5290,6 +5457,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": true,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -5300,8 +5468,9 @@
       "questionNumber": 17,
       "type": "multi",
       "domain": "電磁學",
-      "topic": "電磁場中粒子偏轉",
-      "moduleId": "m11",
+      "subdomain": "電磁感應",
+      "topic": "互感、冷次定律與感應磁力",
+      "moduleId": "m12",
       "points": 5,
       "choices": [
         "A",
@@ -5336,6 +5505,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": true,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -5345,9 +5515,10 @@
       "year": 114,
       "questionNumber": 18,
       "type": "multi",
-      "domain": "電磁學",
-      "topic": "電橋與電阻量測",
-      "moduleId": "m10",
+      "domain": "近代物理",
+      "subdomain": "原子結構",
+      "topic": "陰極射線與電子的發現",
+      "moduleId": "m15",
       "points": 5,
       "choices": [
         "A",
@@ -5382,6 +5553,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": true,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -5391,9 +5563,10 @@
       "year": 114,
       "questionNumber": 19,
       "type": "open",
-      "domain": "光學",
-      "topic": "顯微鏡與成像",
-      "moduleId": "m06",
+      "domain": "力學",
+      "subdomain": "摩擦力與直線運動",
+      "topic": "鎖死車輪的動摩擦煞車與停止距離",
+      "moduleId": "m02",
       "points": 4,
       "choices": [],
       "answer": [],
@@ -5419,6 +5592,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": true,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -5428,9 +5602,10 @@
       "year": 114,
       "questionNumber": 20,
       "type": "open",
-      "domain": "光學",
-      "topic": "折射率非選",
-      "moduleId": "m06",
+      "domain": "力學",
+      "subdomain": "摩擦力與直線運動",
+      "topic": "未鎖死車輪的煞車摩擦與停止距離",
+      "moduleId": "m02",
       "points": 4,
       "choices": [],
       "answer": [],
@@ -5456,6 +5631,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": true,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -5466,7 +5642,8 @@
       "questionNumber": 21,
       "type": "open",
       "domain": "電磁學",
-      "topic": "靜電力與電場",
+      "subdomain": "靜電場與電位",
+      "topic": "等電位線的實驗測量與判定",
       "moduleId": "m09",
       "points": 4,
       "choices": [],
@@ -5493,6 +5670,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": true,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -5503,7 +5681,8 @@
       "questionNumber": 22,
       "type": "open",
       "domain": "電磁學",
-      "topic": "電位與電場",
+      "subdomain": "靜電場與電位",
+      "topic": "由等電位線判讀電場方向與大小",
       "moduleId": "m09",
       "points": 4,
       "choices": [],
@@ -5530,6 +5709,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": true,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -5539,9 +5719,10 @@
       "year": 114,
       "questionNumber": 23,
       "type": "multi",
-      "domain": "光學",
-      "topic": "波動判讀",
-      "moduleId": "m07",
+      "domain": "電磁學",
+      "subdomain": "靜電場與電位",
+      "topic": "等電位線、電力線與導體的性質",
+      "moduleId": "m09",
       "points": 5,
       "choices": [
         "A",
@@ -5576,6 +5757,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": true,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -5585,9 +5767,10 @@
       "year": 114,
       "questionNumber": 24,
       "type": "multi",
-      "domain": "電磁學",
-      "topic": "感應與磁通量",
-      "moduleId": "m12",
+      "domain": "波動與光學",
+      "subdomain": "光在介質中的傳播",
+      "topic": "光由空氣進入水時的頻率、波長、速率、能量與強度",
+      "moduleId": "m07",
       "points": 5,
       "choices": [
         "A",
@@ -5622,6 +5805,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": true,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -5631,9 +5815,10 @@
       "year": 114,
       "questionNumber": 25,
       "type": "single",
-      "domain": "力學",
-      "topic": "轉動/力矩應用",
-      "moduleId": "m02",
+      "domain": "波動與光學",
+      "subdomain": "光的吸收與衰減",
+      "topic": "由水的吸收光譜選擇曝光波長",
+      "moduleId": "m08",
       "points": 3,
       "choices": [
         "A",
@@ -5667,6 +5852,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": true,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     },
@@ -5676,9 +5862,10 @@
       "year": 114,
       "questionNumber": 26,
       "type": "open",
-      "domain": "電磁學",
-      "topic": "感應電動勢推導",
-      "moduleId": "m12",
+      "domain": "波動與光學",
+      "subdomain": "光的吸收與衰減",
+      "topic": "指數衰減定律與對數吸收光譜判讀",
+      "moduleId": "m08",
       "points": 4,
       "choices": [],
       "answer": [],
@@ -5704,6 +5891,7 @@
         "legacyMismatchCorrected": false,
         "choicesRecovered": false,
         "detailedSolutionReviewed": true,
+        "topicClassificationReviewed": true,
         "officialSource": true
       }
     }

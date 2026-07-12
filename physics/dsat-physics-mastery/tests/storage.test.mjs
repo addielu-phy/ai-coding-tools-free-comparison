@@ -22,16 +22,20 @@ test('import sanitizes nested records and drops malformed or unknown fields', ()
     schemaVersion: 1,
     attempts: [
       { questionId: '114-01', correct: true, points: 3, at: '2026-07-12T00:00:00.000Z', mode: 'practice', studentName: '<script>' },
+      { questionId: '110-27', correct: false, points: 0, mode: 'practice' },
+      { questionId: '999-99', correct: false, points: 0, mode: 'practice' },
       { questionId: '<img>', correct: 'yes' }
     ],
-    wrongQuestionIds: ['114-02', '<script>', '114-02'],
+    wrongQuestionIds: ['114-02', '<script>', '114-02', '110-27', '999-99'],
     reviews: [
       { questionId: '114-02', offset: 1, dueDate: '2026-07-13', done: false },
+      { questionId: '110-27', offset: 1, dueDate: '2026-07-13', done: false },
+      { questionId: '999-99', offset: 1, dueDate: '2026-07-13', done: false },
       { questionId: 'bad', dueDate: 'tomorrow', done: false },
       { questionId: '114-03', dueDate: '2026-99-99', done: false }
     ],
-    answers: { '114-01': ['E', '<img>'], bad: '<script>' },
-    errorCauses: { '114-02': ['A', 'F', '<script>'], bad: {} },
+    answers: { '114-01': ['E', '<img>'], '110-27': ['A'], '999-99': ['B'], bad: '<script>' },
+    errorCauses: { '114-02': ['A', 'F', '<script>'], '110-27': ['A'], '999-99': ['B'], bad: {} },
     profile: { studentName: '不應保留' }
   }));
   assert.deepEqual(imported.wrongQuestionIds, ['114-02']);
@@ -41,4 +45,34 @@ test('import sanitizes nested records and drops malformed or unknown fields', ()
   assert.deepEqual(imported.answers, { '114-01': ['E'] });
   assert.deepEqual(imported.errorCauses, { '114-02': ['A', 'F'] });
   assert.deepEqual(imported.profile, {});
+});
+
+test('import filters invalid IDs before applying the 130-record cap', () => {
+  const validIds = Array.from({ length: 5 }, (_, yearIndex) => 110 + yearIndex)
+    .flatMap(year => Array.from({ length: 26 }, (_, questionIndex) => `${year}-${String(questionIndex + 1).padStart(2, '0')}`));
+  const answers = Object.fromEntries([
+    ['110-27', ['A']],
+    ['999-99', ['B']],
+    ...validIds.map(id => [id, ['A']])
+  ]);
+  const errorCauses = Object.fromEntries([
+    ['110-27', ['A']],
+    ['999-99', ['B']],
+    ...validIds.map(id => [id, ['F']])
+  ]);
+
+  const imported = importState(JSON.stringify({
+    schemaVersion: 1,
+    attempts: [],
+    wrongQuestionIds: [],
+    reviews: [],
+    answers,
+    errorCauses
+  }));
+  assert.equal(Object.keys(imported.answers).length, 130);
+  assert.equal(Object.keys(imported.errorCauses).length, 130);
+  assert.deepEqual(Object.keys(imported.answers), validIds);
+  assert.deepEqual(Object.keys(imported.errorCauses), validIds);
+  assert.deepEqual(imported.answers['114-26'], ['A']);
+  assert.deepEqual(imported.errorCauses['114-26'], ['F']);
 });

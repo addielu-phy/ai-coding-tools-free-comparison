@@ -100,6 +100,7 @@ h2 { margin: 20px 0 10px; }
 }
 .import-label:focus-within { outline: 3px solid rgba(36,79,143,.35); outline-offset: 3px; }
 .view { margin-top: 18px; }
+.view h2, .feedback { scroll-margin-top: 16px; }
 .filters { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 10px; margin-bottom: 12px; }
 .module-grid, .index-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 .module-card h3, .question-card h3 { margin: 0 0 6px; }

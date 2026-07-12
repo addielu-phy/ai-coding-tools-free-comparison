@@ -1,0 +1,2110 @@
+{
+  "schemaVersion": 1,
+  "questionCount": 130,
+  "built": 130,
+  "notFound": [],
+  "records": [
+    {
+      "id": "110-01",
+      "status": "built",
+      "sourcePages": [
+        "assets/110_p2.jpg"
+      ],
+      "targetY": 293.0,
+      "endY": 459.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        747,
+        170
+      ]
+    },
+    {
+      "id": "110-02",
+      "status": "built",
+      "sourcePages": [
+        "assets/110_p2.jpg"
+      ],
+      "targetY": 459.0,
+      "endY": 594.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        786,
+        139
+      ]
+    },
+    {
+      "id": "110-03",
+      "status": "built",
+      "sourcePages": [
+        "assets/110_p2.jpg"
+      ],
+      "targetY": 656.0,
+      "endY": 772.0,
+      "group": [
+        3,
+        4
+      ],
+      "referencedPrevious": false,
+      "newSize": [
+        786,
+        182
+      ]
+    },
+    {
+      "id": "110-04",
+      "status": "built",
+      "sourcePages": [
+        "assets/110_p2.jpg"
+      ],
+      "targetY": 772.0,
+      "endY": 946.0,
+      "group": [
+        3,
+        4
+      ],
+      "referencedPrevious": false,
+      "newSize": [
+        785,
+        266
+      ]
+    },
+    {
+      "id": "110-05",
+      "status": "built",
+      "sourcePages": [
+        "assets/110_p2.jpg"
+      ],
+      "targetY": 946.0,
+      "endY": 1228,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        795,
+        382
+      ]
+    },
+    {
+      "id": "110-06",
+      "status": "built",
+      "sourcePages": [
+        "assets/110_p3.jpg"
+      ],
+      "targetY": 142.0,
+      "endY": 365.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        787,
+        227
+      ]
+    },
+    {
+      "id": "110-07",
+      "status": "built",
+      "sourcePages": [
+        "assets/110_p3.jpg"
+      ],
+      "targetY": 365.0,
+      "endY": 663.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        785,
+        302
+      ]
+    },
+    {
+      "id": "110-08",
+      "status": "built",
+      "sourcePages": [
+        "assets/110_p3.jpg"
+      ],
+      "targetY": 663.0,
+      "endY": 932.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        783,
+        273
+      ]
+    },
+    {
+      "id": "110-09",
+      "status": "manual",
+      "sourcePages": [
+        "assets/110_p3.jpg"
+      ],
+      "segments": [
+        [
+          930,
+          1255
+        ]
+      ],
+      "newSize": [
+        795,
+        329
+      ],
+      "note": "保留 A-E 與完整圖 4"
+    },
+    {
+      "id": "110-10",
+      "status": "built",
+      "sourcePages": [
+        "assets/110_p4.jpg"
+      ],
+      "targetY": 136.0,
+      "endY": 571.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        784,
+        439
+      ]
+    },
+    {
+      "id": "110-11",
+      "status": "built",
+      "sourcePages": [
+        "assets/110_p4.jpg"
+      ],
+      "targetY": 571.0,
+      "endY": 704.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        783,
+        137
+      ]
+    },
+    {
+      "id": "110-12",
+      "status": "built",
+      "sourcePages": [
+        "assets/110_p4.jpg"
+      ],
+      "targetY": 704.0,
+      "endY": 1087.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        783,
+        387
+      ]
+    },
+    {
+      "id": "110-13",
+      "status": "built",
+      "sourcePages": [
+        "assets/110_p4.jpg"
+      ],
+      "targetY": 1087.0,
+      "endY": 1228,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        783,
+        145
+      ]
+    },
+    {
+      "id": "110-14",
+      "status": "built",
+      "sourcePages": [
+        "assets/110_p5.jpg"
+      ],
+      "targetY": 251.0,
+      "endY": 613.0,
+      "group": [
+        14,
+        15
+      ],
+      "referencedPrevious": false,
+      "newSize": [
+        785,
+        478
+      ]
+    },
+    {
+      "id": "110-15",
+      "status": "built",
+      "sourcePages": [
+        "assets/110_p5.jpg"
+      ],
+      "targetY": 613.0,
+      "endY": 773.0,
+      "group": [
+        14,
+        15
+      ],
+      "referencedPrevious": false,
+      "newSize": [
+        783,
+        298
+      ]
+    },
+    {
+      "id": "110-16",
+      "status": "built",
+      "sourcePages": [
+        "assets/110_p5.jpg"
+      ],
+      "targetY": 773.0,
+      "endY": 877.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        783,
+        108
+      ]
+    },
+    {
+      "id": "110-17",
+      "status": "built",
+      "sourcePages": [
+        "assets/110_p5.jpg"
+      ],
+      "targetY": 877.0,
+      "endY": 1228,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        798,
+        447
+      ]
+    },
+    {
+      "id": "110-18",
+      "status": "built",
+      "sourcePages": [
+        "assets/110_p6.jpg"
+      ],
+      "targetY": 141.0,
+      "endY": 383.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        783,
+        246
+      ]
+    },
+    {
+      "id": "110-19",
+      "status": "built",
+      "sourcePages": [
+        "assets/110_p6.jpg"
+      ],
+      "targetY": 383.0,
+      "endY": 626.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        784,
+        247
+      ]
+    },
+    {
+      "id": "110-20",
+      "status": "built",
+      "sourcePages": [
+        "assets/110_p6.jpg"
+      ],
+      "targetY": 626.0,
+      "endY": 981.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        786,
+        359
+      ]
+    },
+    {
+      "id": "110-21",
+      "status": "built",
+      "sourcePages": [
+        "assets/110_p6.jpg"
+      ],
+      "targetY": 1117.0,
+      "endY": 1257.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        809,
+        459
+      ]
+    },
+    {
+      "id": "110-22",
+      "status": "built",
+      "sourcePages": [
+        "assets/110_p7.jpg"
+      ],
+      "targetY": 363.0,
+      "endY": 629.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        785,
+        270
+      ]
+    },
+    {
+      "id": "110-23",
+      "status": "built",
+      "sourcePages": [
+        "assets/110_p7.jpg"
+      ],
+      "targetY": 629.0,
+      "endY": 936.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        786,
+        311
+      ]
+    },
+    {
+      "id": "110-24",
+      "status": "built",
+      "sourcePages": [
+        "assets/110_p7.jpg"
+      ],
+      "targetY": 936.0,
+      "endY": 1264.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        785,
+        332
+      ]
+    },
+    {
+      "id": "110-25",
+      "status": "manual",
+      "sourcePages": [
+        "assets/110_p8.jpg"
+      ],
+      "segments": [
+        [
+          130,
+          885
+        ]
+      ],
+      "newSize": [
+        803,
+        759
+      ],
+      "note": "非選第一大題"
+    },
+    {
+      "id": "110-26",
+      "status": "manual",
+      "sourcePages": [
+        "assets/110_p8.jpg"
+      ],
+      "segments": [
+        [
+          130,
+          280
+        ],
+        [
+          880,
+          1265
+        ]
+      ],
+      "newSize": [
+        801,
+        561
+      ],
+      "note": "共同說明＋非選第二大題"
+    },
+    {
+      "id": "111-01",
+      "status": "built",
+      "sourcePages": [
+        "assets/111_p2.jpg"
+      ],
+      "targetY": 240.0,
+      "endY": 410.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        516,
+        174
+      ]
+    },
+    {
+      "id": "111-02",
+      "status": "built",
+      "sourcePages": [
+        "assets/111_p2.jpg"
+      ],
+      "targetY": 410.0,
+      "endY": 630.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        787,
+        224
+      ]
+    },
+    {
+      "id": "111-03",
+      "status": "built",
+      "sourcePages": [
+        "assets/111_p2.jpg"
+      ],
+      "targetY": 630.0,
+      "endY": 915.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        787,
+        289
+      ]
+    },
+    {
+      "id": "111-04",
+      "status": "built",
+      "sourcePages": [
+        "assets/111_p2.jpg"
+      ],
+      "targetY": 915.0,
+      "endY": 1032.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        787,
+        121
+      ]
+    },
+    {
+      "id": "111-05",
+      "status": "manual",
+      "sourcePages": [
+        "assets/111_p2.jpg"
+      ],
+      "segments": [
+        [
+          1010,
+          1260
+        ]
+      ],
+      "newSize": [
+        787,
+        254
+      ],
+      "note": "保留 A-E 與完整圖 2"
+    },
+    {
+      "id": "111-06",
+      "status": "built",
+      "sourcePages": [
+        "assets/111_p3.jpg"
+      ],
+      "targetY": 142.0,
+      "endY": 263.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        785,
+        125
+      ]
+    },
+    {
+      "id": "111-07",
+      "status": "built",
+      "sourcePages": [
+        "assets/111_p3.jpg"
+      ],
+      "targetY": 263.0,
+      "endY": 411.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        780,
+        152
+      ]
+    },
+    {
+      "id": "111-08",
+      "status": "built",
+      "sourcePages": [
+        "assets/111_p3.jpg"
+      ],
+      "targetY": 411.0,
+      "endY": 564.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        786,
+        157
+      ]
+    },
+    {
+      "id": "111-09",
+      "status": "built",
+      "sourcePages": [
+        "assets/111_p3.jpg"
+      ],
+      "targetY": 564.0,
+      "endY": 740.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        782,
+        180
+      ]
+    },
+    {
+      "id": "111-10",
+      "status": "built",
+      "sourcePages": [
+        "assets/111_p3.jpg"
+      ],
+      "targetY": 740.0,
+      "endY": 1228,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        788,
+        591
+      ]
+    },
+    {
+      "id": "111-11",
+      "status": "built",
+      "sourcePages": [
+        "assets/111_p4.jpg"
+      ],
+      "targetY": 144.0,
+      "endY": 614.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        805,
+        474
+      ]
+    },
+    {
+      "id": "111-12",
+      "status": "built",
+      "sourcePages": [
+        "assets/111_p4.jpg"
+      ],
+      "targetY": 614.0,
+      "endY": 914.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        805,
+        304
+      ]
+    },
+    {
+      "id": "111-13",
+      "status": "built",
+      "sourcePages": [
+        "assets/111_p4.jpg"
+      ],
+      "targetY": 914.0,
+      "endY": 1228,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        788,
+        413
+      ]
+    },
+    {
+      "id": "111-14",
+      "status": "built",
+      "sourcePages": [
+        "assets/111_p5.jpg"
+      ],
+      "targetY": 142.0,
+      "endY": 435.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        785,
+        297
+      ]
+    },
+    {
+      "id": "111-15",
+      "status": "built",
+      "sourcePages": [
+        "assets/111_p5.jpg"
+      ],
+      "targetY": 435.0,
+      "endY": 713.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        784,
+        282
+      ]
+    },
+    {
+      "id": "111-16",
+      "status": "built",
+      "sourcePages": [
+        "assets/111_p5.jpg"
+      ],
+      "targetY": 713.0,
+      "endY": 1002.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        785,
+        293
+      ]
+    },
+    {
+      "id": "111-17",
+      "status": "manual",
+      "sourcePages": [
+        "assets/111_p5.jpg"
+      ],
+      "segments": [
+        [
+          1015,
+          1255
+        ]
+      ],
+      "newSize": [
+        785,
+        244
+      ],
+      "note": "保留多選 A-E"
+    },
+    {
+      "id": "111-18",
+      "status": "built",
+      "sourcePages": [
+        "assets/111_p6.jpg"
+      ],
+      "targetY": 145.0,
+      "endY": 505.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        785,
+        364
+      ]
+    },
+    {
+      "id": "111-19",
+      "status": "built",
+      "sourcePages": [
+        "assets/111_p6.jpg"
+      ],
+      "targetY": 1024.0,
+      "endY": 1228,
+      "group": [
+        19,
+        21
+      ],
+      "referencedPrevious": false,
+      "newSize": [
+        788,
+        669
+      ]
+    },
+    {
+      "id": "111-20",
+      "status": "built",
+      "sourcePages": [
+        "assets/111_p7.jpg"
+      ],
+      "targetY": 141.0,
+      "endY": 347.0,
+      "group": [
+        19,
+        21
+      ],
+      "referencedPrevious": true,
+      "newSize": [
+        788,
+        897
+      ]
+    },
+    {
+      "id": "111-21",
+      "status": "built",
+      "sourcePages": [
+        "assets/111_p7.jpg"
+      ],
+      "targetY": 347.0,
+      "endY": 467.0,
+      "group": [
+        19,
+        21
+      ],
+      "referencedPrevious": true,
+      "newSize": [
+        788,
+        1039
+      ]
+    },
+    {
+      "id": "111-22",
+      "status": "built",
+      "sourcePages": [
+        "assets/111_p7.jpg"
+      ],
+      "targetY": 588.0,
+      "endY": 684.0,
+      "group": [
+        22,
+        24
+      ],
+      "referencedPrevious": false,
+      "newSize": [
+        799,
+        221
+      ]
+    },
+    {
+      "id": "111-23",
+      "status": "built",
+      "sourcePages": [
+        "assets/111_p7.jpg"
+      ],
+      "targetY": 684.0,
+      "endY": 1228,
+      "group": [
+        22,
+        24
+      ],
+      "referencedPrevious": false,
+      "newSize": [
+        799,
+        786
+      ]
+    },
+    {
+      "id": "111-24",
+      "status": "built",
+      "sourcePages": [
+        "assets/111_p8.jpg"
+      ],
+      "targetY": 143.0,
+      "endY": 606.0,
+      "group": [
+        22,
+        24
+      ],
+      "referencedPrevious": false,
+      "newSize": [
+        799,
+        610
+      ]
+    },
+    {
+      "id": "111-25",
+      "status": "built",
+      "sourcePages": [
+        "assets/111_p8.jpg"
+      ],
+      "targetY": 947.0,
+      "endY": 1060.0,
+      "group": [
+        25,
+        26
+      ],
+      "referencedPrevious": false,
+      "newSize": [
+        787,
+        458
+      ]
+    },
+    {
+      "id": "111-26",
+      "status": "manual",
+      "sourcePages": [
+        "assets/111_p8.jpg"
+      ],
+      "segments": [
+        [
+          610,
+          1250
+        ]
+      ],
+      "newSize": [
+        787,
+        644
+      ],
+      "note": "25-26 共用背景與第 26 題全部子題"
+    },
+    {
+      "id": "112-01",
+      "status": "built",
+      "sourcePages": [
+        "assets/112_p2.jpg"
+      ],
+      "targetY": 246.0,
+      "endY": 333.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        690,
+        91
+      ]
+    },
+    {
+      "id": "112-02",
+      "status": "built",
+      "sourcePages": [
+        "assets/112_p2.jpg"
+      ],
+      "targetY": 333.0,
+      "endY": 499.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        602,
+        170
+      ]
+    },
+    {
+      "id": "112-03",
+      "status": "built",
+      "sourcePages": [
+        "assets/112_p2.jpg"
+      ],
+      "targetY": 499.0,
+      "endY": 729.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        786,
+        234
+      ]
+    },
+    {
+      "id": "112-04",
+      "status": "built",
+      "sourcePages": [
+        "assets/112_p2.jpg"
+      ],
+      "targetY": 729.0,
+      "endY": 815.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        786,
+        90
+      ]
+    },
+    {
+      "id": "112-05",
+      "status": "built",
+      "sourcePages": [
+        "assets/112_p2.jpg"
+      ],
+      "targetY": 815.0,
+      "endY": 955.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        787,
+        144
+      ]
+    },
+    {
+      "id": "112-06",
+      "status": "built",
+      "sourcePages": [
+        "assets/112_p2.jpg"
+      ],
+      "targetY": 955.0,
+      "endY": 1270.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        789,
+        415
+      ]
+    },
+    {
+      "id": "112-07",
+      "status": "built",
+      "sourcePages": [
+        "assets/112_p3.jpg"
+      ],
+      "targetY": 141.0,
+      "endY": 349.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        787,
+        212
+      ]
+    },
+    {
+      "id": "112-08",
+      "status": "built",
+      "sourcePages": [
+        "assets/112_p3.jpg"
+      ],
+      "targetY": 588.0,
+      "endY": 768.0,
+      "group": [
+        8,
+        9
+      ],
+      "referencedPrevious": false,
+      "newSize": [
+        787,
+        423
+      ]
+    },
+    {
+      "id": "112-09",
+      "status": "built",
+      "sourcePages": [
+        "assets/112_p3.jpg"
+      ],
+      "targetY": 768.0,
+      "endY": 1228,
+      "group": [
+        8,
+        9
+      ],
+      "referencedPrevious": false,
+      "newSize": [
+        789,
+        820
+      ]
+    },
+    {
+      "id": "112-10",
+      "status": "built",
+      "sourcePages": [
+        "assets/112_p4.jpg"
+      ],
+      "targetY": 143.0,
+      "endY": 610.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        785,
+        471
+      ]
+    },
+    {
+      "id": "112-11",
+      "status": "built",
+      "sourcePages": [
+        "assets/112_p4.jpg"
+      ],
+      "targetY": 610.0,
+      "endY": 844.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        785,
+        238
+      ]
+    },
+    {
+      "id": "112-12",
+      "status": "built",
+      "sourcePages": [
+        "assets/112_p4.jpg"
+      ],
+      "targetY": 844.0,
+      "endY": 1081.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        784,
+        241
+      ]
+    },
+    {
+      "id": "112-13",
+      "status": "manual",
+      "sourcePages": [
+        "assets/112_p4.jpg"
+      ],
+      "segments": [
+        [
+          1075,
+          1260
+        ]
+      ],
+      "newSize": [
+        784,
+        189
+      ],
+      "note": "保留 A-E"
+    },
+    {
+      "id": "112-14",
+      "status": "built",
+      "sourcePages": [
+        "assets/112_p5.jpg"
+      ],
+      "targetY": 211.0,
+      "endY": 471.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        785,
+        264
+      ]
+    },
+    {
+      "id": "112-15",
+      "status": "built",
+      "sourcePages": [
+        "assets/112_p5.jpg"
+      ],
+      "targetY": 471.0,
+      "endY": 922.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        785,
+        455
+      ]
+    },
+    {
+      "id": "112-16",
+      "status": "built",
+      "sourcePages": [
+        "assets/112_p5.jpg"
+      ],
+      "targetY": 922.0,
+      "endY": 1070.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        785,
+        152
+      ]
+    },
+    {
+      "id": "112-17",
+      "status": "manual",
+      "sourcePages": [
+        "assets/112_p5.jpg"
+      ],
+      "segments": [
+        [
+          1080,
+          1255
+        ]
+      ],
+      "newSize": [
+        752,
+        179
+      ],
+      "note": "保留多選 A-E"
+    },
+    {
+      "id": "112-18",
+      "status": "built",
+      "sourcePages": [
+        "assets/112_p6.jpg"
+      ],
+      "targetY": 144.0,
+      "endY": 548.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        785,
+        408
+      ]
+    },
+    {
+      "id": "112-19",
+      "status": "built",
+      "sourcePages": [
+        "assets/112_p6.jpg"
+      ],
+      "targetY": 548.0,
+      "endY": 804.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        786,
+        260
+      ]
+    },
+    {
+      "id": "112-20",
+      "status": "built",
+      "sourcePages": [
+        "assets/112_p6.jpg"
+      ],
+      "targetY": 1166.0,
+      "endY": 1200.0,
+      "group": [
+        20,
+        21
+      ],
+      "referencedPrevious": false,
+      "newSize": [
+        787,
+        245
+      ]
+    },
+    {
+      "id": "112-21",
+      "status": "built",
+      "sourcePages": [
+        "assets/112_p6.jpg"
+      ],
+      "targetY": 1200.0,
+      "endY": 1264.0,
+      "group": [
+        20,
+        21
+      ],
+      "referencedPrevious": false,
+      "newSize": [
+        787,
+        299
+      ]
+    },
+    {
+      "id": "112-22",
+      "status": "built",
+      "sourcePages": [
+        "assets/112_p7.jpg"
+      ],
+      "targetY": 384.0,
+      "endY": 534.0,
+      "group": [
+        22,
+        23
+      ],
+      "referencedPrevious": false,
+      "newSize": [
+        789,
+        393
+      ]
+    },
+    {
+      "id": "112-23",
+      "status": "built",
+      "sourcePages": [
+        "assets/112_p7.jpg"
+      ],
+      "targetY": 534.0,
+      "endY": 654.0,
+      "group": [
+        22,
+        23
+      ],
+      "referencedPrevious": false,
+      "newSize": [
+        789,
+        385
+      ]
+    },
+    {
+      "id": "112-24",
+      "status": "built",
+      "sourcePages": [
+        "assets/112_p8.jpg"
+      ],
+      "targetY": 144.0,
+      "endY": 482.0,
+      "group": [
+        24,
+        26
+      ],
+      "referencedPrevious": false,
+      "newSize": [
+        787,
+        968
+      ]
+    },
+    {
+      "id": "112-25",
+      "status": "built",
+      "sourcePages": [
+        "assets/112_p8.jpg"
+      ],
+      "targetY": 482.0,
+      "endY": 1112.0,
+      "group": [
+        24,
+        26
+      ],
+      "referencedPrevious": false,
+      "newSize": [
+        787,
+        1260
+      ]
+    },
+    {
+      "id": "112-26",
+      "status": "manual",
+      "sourcePages": [
+        "assets/112_p8.jpg"
+      ],
+      "segments": [
+        [
+          492,
+          1255
+        ]
+      ],
+      "newSize": [
+        787,
+        767
+      ],
+      "note": "第 25 題必要資料與第 26 題 a-c"
+    },
+    {
+      "id": "113-01",
+      "status": "built",
+      "sourcePages": [
+        "assets/113_p2.jpg"
+      ],
+      "targetY": 246.0,
+      "endY": 360.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        784,
+        118
+      ]
+    },
+    {
+      "id": "113-02",
+      "status": "built",
+      "sourcePages": [
+        "assets/113_p2.jpg"
+      ],
+      "targetY": 360.0,
+      "endY": 556.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        786,
+        200
+      ]
+    },
+    {
+      "id": "113-03",
+      "status": "built",
+      "sourcePages": [
+        "assets/113_p2.jpg"
+      ],
+      "targetY": 556.0,
+      "endY": 803.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        786,
+        251
+      ]
+    },
+    {
+      "id": "113-04",
+      "status": "built",
+      "sourcePages": [
+        "assets/113_p2.jpg"
+      ],
+      "targetY": 803.0,
+      "endY": 1228,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        788,
+        525
+      ]
+    },
+    {
+      "id": "113-05",
+      "status": "built",
+      "sourcePages": [
+        "assets/113_p3.jpg"
+      ],
+      "targetY": 142.0,
+      "endY": 337.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        787,
+        199
+      ]
+    },
+    {
+      "id": "113-06",
+      "status": "built",
+      "sourcePages": [
+        "assets/113_p3.jpg"
+      ],
+      "targetY": 337.0,
+      "endY": 786.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        787,
+        453
+      ]
+    },
+    {
+      "id": "113-07",
+      "status": "built",
+      "sourcePages": [
+        "assets/113_p3.jpg"
+      ],
+      "targetY": 786.0,
+      "endY": 1228,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        789,
+        542
+      ]
+    },
+    {
+      "id": "113-08",
+      "status": "built",
+      "sourcePages": [
+        "assets/113_p4.jpg"
+      ],
+      "targetY": 142.0,
+      "endY": 408.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        786,
+        270
+      ]
+    },
+    {
+      "id": "113-09",
+      "status": "built",
+      "sourcePages": [
+        "assets/113_p4.jpg"
+      ],
+      "targetY": 408.0,
+      "endY": 769.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        787,
+        365
+      ]
+    },
+    {
+      "id": "113-10",
+      "status": "built",
+      "sourcePages": [
+        "assets/113_p4.jpg"
+      ],
+      "targetY": 769.0,
+      "endY": 908.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        785,
+        143
+      ]
+    },
+    {
+      "id": "113-11",
+      "status": "built",
+      "sourcePages": [
+        "assets/113_p4.jpg"
+      ],
+      "targetY": 908.0,
+      "endY": 1051.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        785,
+        147
+      ]
+    },
+    {
+      "id": "113-12",
+      "status": "built",
+      "sourcePages": [
+        "assets/113_p4.jpg"
+      ],
+      "targetY": 1051.0,
+      "endY": 1228,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        785,
+        181
+      ]
+    },
+    {
+      "id": "113-13",
+      "status": "built",
+      "sourcePages": [
+        "assets/113_p5.jpg"
+      ],
+      "targetY": 210.0,
+      "endY": 405.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        784,
+        199
+      ]
+    },
+    {
+      "id": "113-14",
+      "status": "built",
+      "sourcePages": [
+        "assets/113_p5.jpg"
+      ],
+      "targetY": 405.0,
+      "endY": 570.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        775,
+        169
+      ]
+    },
+    {
+      "id": "113-15",
+      "status": "built",
+      "sourcePages": [
+        "assets/113_p5.jpg"
+      ],
+      "targetY": 570.0,
+      "endY": 794.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        784,
+        228
+      ]
+    },
+    {
+      "id": "113-16",
+      "status": "built",
+      "sourcePages": [
+        "assets/113_p5.jpg"
+      ],
+      "targetY": 794.0,
+      "endY": 1228,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        789,
+        532
+      ]
+    },
+    {
+      "id": "113-17",
+      "status": "built",
+      "sourcePages": [
+        "assets/113_p6.jpg"
+      ],
+      "targetY": 142.0,
+      "endY": 450.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        785,
+        312
+      ]
+    },
+    {
+      "id": "113-18",
+      "status": "built",
+      "sourcePages": [
+        "assets/113_p6.jpg"
+      ],
+      "targetY": 450.0,
+      "endY": 807.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        785,
+        361
+      ]
+    },
+    {
+      "id": "113-19",
+      "status": "built",
+      "sourcePages": [
+        "assets/113_p6.jpg"
+      ],
+      "targetY": 1125.0,
+      "endY": 1228,
+      "group": [
+        19,
+        20
+      ],
+      "referencedPrevious": false,
+      "newSize": [
+        788,
+        356
+      ]
+    },
+    {
+      "id": "113-20",
+      "status": "built",
+      "sourcePages": [
+        "assets/113_p7.jpg"
+      ],
+      "targetY": 142.0,
+      "endY": 420.0,
+      "group": [
+        19,
+        20
+      ],
+      "referencedPrevious": false,
+      "newSize": [
+        788,
+        457
+      ]
+    },
+    {
+      "id": "113-21",
+      "status": "built",
+      "sourcePages": [
+        "assets/113_p7.jpg"
+      ],
+      "targetY": 516.0,
+      "endY": 743.0,
+      "group": [
+        21,
+        23
+      ],
+      "referencedPrevious": false,
+      "newSize": [
+        787,
+        327
+      ]
+    },
+    {
+      "id": "113-22",
+      "status": "built",
+      "sourcePages": [
+        "assets/113_p7.jpg"
+      ],
+      "targetY": 743.0,
+      "endY": 801.0,
+      "group": [
+        21,
+        23
+      ],
+      "referencedPrevious": true,
+      "newSize": [
+        787,
+        415
+      ]
+    },
+    {
+      "id": "113-23",
+      "status": "manual",
+      "sourcePages": [
+        "assets/113_p7.jpg"
+      ],
+      "segments": [
+        [
+          420,
+          1245
+        ]
+      ],
+      "newSize": [
+        797,
+        829
+      ],
+      "note": "21-23 共用背景與 A-E 圖表"
+    },
+    {
+      "id": "113-24",
+      "status": "built",
+      "sourcePages": [
+        "assets/113_p8.jpg"
+      ],
+      "targetY": 584.0,
+      "endY": 810.0,
+      "group": [
+        24,
+        26
+      ],
+      "referencedPrevious": false,
+      "newSize": [
+        787,
+        673
+      ]
+    },
+    {
+      "id": "113-25",
+      "status": "built",
+      "sourcePages": [
+        "assets/113_p8.jpg"
+      ],
+      "targetY": 810.0,
+      "endY": 1124.0,
+      "group": [
+        24,
+        26
+      ],
+      "referencedPrevious": false,
+      "newSize": [
+        787,
+        783
+      ]
+    },
+    {
+      "id": "113-26",
+      "status": "manual",
+      "sourcePages": [
+        "assets/113_p8.jpg"
+      ],
+      "segments": [
+        [
+          135,
+          570
+        ],
+        [
+          805,
+          1255
+        ]
+      ],
+      "newSize": [
+        787,
+        911
+      ],
+      "note": "24-26 共用背景、第 25 題與完整第 26 題"
+    },
+    {
+      "id": "114-01",
+      "status": "built",
+      "sourcePages": [
+        "assets/114_p2.jpg"
+      ],
+      "targetY": 248.0,
+      "endY": 513.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        785,
+        269
+      ]
+    },
+    {
+      "id": "114-02",
+      "status": "built",
+      "sourcePages": [
+        "assets/114_p2.jpg"
+      ],
+      "targetY": 513.0,
+      "endY": 833.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        780,
+        324
+      ]
+    },
+    {
+      "id": "114-03",
+      "status": "built",
+      "sourcePages": [
+        "assets/114_p2.jpg"
+      ],
+      "targetY": 833.0,
+      "endY": 1040.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        785,
+        211
+      ]
+    },
+    {
+      "id": "114-04",
+      "status": "built",
+      "sourcePages": [
+        "assets/114_p2.jpg"
+      ],
+      "targetY": 1040.0,
+      "endY": 1228,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        788,
+        290
+      ]
+    },
+    {
+      "id": "114-05",
+      "status": "manual",
+      "sourcePages": [
+        "assets/114_p3.jpg"
+      ],
+      "segments": [
+        [
+          135,
+          410
+        ]
+      ],
+      "newSize": [
+        789,
+        279
+      ],
+      "note": "完整表一、問題與 A-E"
+    },
+    {
+      "id": "114-06",
+      "status": "manual",
+      "sourcePages": [
+        "assets/114_p3.jpg"
+      ],
+      "segments": [
+        [
+          405,
+          585
+        ]
+      ],
+      "newSize": [
+        786,
+        184
+      ],
+      "note": "只保留第 6 題"
+    },
+    {
+      "id": "114-07",
+      "status": "built",
+      "sourcePages": [
+        "assets/114_p3.jpg"
+      ],
+      "targetY": 589.0,
+      "endY": 767.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        788,
+        182
+      ]
+    },
+    {
+      "id": "114-08",
+      "status": "built",
+      "sourcePages": [
+        "assets/114_p3.jpg"
+      ],
+      "targetY": 767.0,
+      "endY": 877.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        783,
+        114
+      ]
+    },
+    {
+      "id": "114-09",
+      "status": "built",
+      "sourcePages": [
+        "assets/114_p3.jpg"
+      ],
+      "targetY": 877.0,
+      "endY": 1141.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        786,
+        268
+      ]
+    },
+    {
+      "id": "114-10",
+      "status": "manual",
+      "sourcePages": [
+        "assets/114_p3.jpg"
+      ],
+      "segments": [
+        [
+          1140,
+          1255
+        ]
+      ],
+      "newSize": [
+        785,
+        119
+      ],
+      "note": "保留 A-E"
+    },
+    {
+      "id": "114-11",
+      "status": "built",
+      "sourcePages": [
+        "assets/114_p4.jpg"
+      ],
+      "targetY": 145.0,
+      "endY": 330.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        785,
+        189
+      ]
+    },
+    {
+      "id": "114-12",
+      "status": "built",
+      "sourcePages": [
+        "assets/114_p4.jpg"
+      ],
+      "targetY": 330.0,
+      "endY": 594.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        785,
+        268
+      ]
+    },
+    {
+      "id": "114-13",
+      "status": "built",
+      "sourcePages": [
+        "assets/114_p4.jpg"
+      ],
+      "targetY": 663.0,
+      "endY": 929.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        785,
+        270
+      ]
+    },
+    {
+      "id": "114-14",
+      "status": "built",
+      "sourcePages": [
+        "assets/114_p4.jpg"
+      ],
+      "targetY": 929.0,
+      "endY": 1228,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        788,
+        400
+      ]
+    },
+    {
+      "id": "114-15",
+      "status": "built",
+      "sourcePages": [
+        "assets/114_p5.jpg"
+      ],
+      "targetY": 144.0,
+      "endY": 473.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        784,
+        333
+      ]
+    },
+    {
+      "id": "114-16",
+      "status": "built",
+      "sourcePages": [
+        "assets/114_p5.jpg"
+      ],
+      "targetY": 473.0,
+      "endY": 795.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        780,
+        326
+      ]
+    },
+    {
+      "id": "114-17",
+      "status": "built",
+      "sourcePages": [
+        "assets/114_p5.jpg"
+      ],
+      "targetY": 795.0,
+      "endY": 1027.0,
+      "group": null,
+      "referencedPrevious": false,
+      "newSize": [
+        783,
+        236
+      ]
+    },
+    {
+      "id": "114-18",
+      "status": "manual",
+      "sourcePages": [
+        "assets/114_p5.jpg"
+      ],
+      "segments": [
+        [
+          1030,
+          1255
+        ]
+      ],
+      "newSize": [
+        785,
+        229
+      ],
+      "note": "保留多選 A-E"
+    },
+    {
+      "id": "114-19",
+      "status": "built",
+      "sourcePages": [
+        "assets/114_p6.jpg"
+      ],
+      "targetY": 593.0,
+      "endY": 653.0,
+      "group": [
+        19,
+        20
+      ],
+      "referencedPrevious": false,
+      "newSize": [
+        788,
+        353
+      ]
+    },
+    {
+      "id": "114-20",
+      "status": "built",
+      "sourcePages": [
+        "assets/114_p6.jpg"
+      ],
+      "targetY": 653.0,
+      "endY": 767.0,
+      "group": [
+        19,
+        20
+      ],
+      "referencedPrevious": false,
+      "newSize": [
+        788,
+        429
+      ]
+    },
+    {
+      "id": "114-21",
+      "status": "built",
+      "sourcePages": [
+        "assets/114_p7.jpg"
+      ],
+      "targetY": 690.0,
+      "endY": 1058.0,
+      "group": [
+        21,
+        23
+      ],
+      "referencedPrevious": false,
+      "newSize": [
+        787,
+        885
+      ]
+    },
+    {
+      "id": "114-22",
+      "status": "built",
+      "sourcePages": [
+        "assets/114_p7.jpg"
+      ],
+      "targetY": 1058.0,
+      "endY": 1228,
+      "group": [
+        21,
+        23
+      ],
+      "referencedPrevious": false,
+      "newSize": [
+        789,
+        785
+      ]
+    },
+    {
+      "id": "114-23",
+      "status": "built",
+      "sourcePages": [
+        "assets/114_p8.jpg"
+      ],
+      "targetY": 144.0,
+      "endY": 321.0,
+      "group": [
+        21,
+        23
+      ],
+      "referencedPrevious": false,
+      "newSize": [
+        787,
+        694
+      ]
+    },
+    {
+      "id": "114-24",
+      "status": "built",
+      "sourcePages": [
+        "assets/114_p8.jpg"
+      ],
+      "targetY": 1005.0,
+      "endY": 1096.0,
+      "group": [
+        24,
+        26
+      ],
+      "referencedPrevious": false,
+      "newSize": [
+        788,
+        779
+      ]
+    },
+    {
+      "id": "114-25",
+      "status": "built",
+      "sourcePages": [
+        "assets/114_p8.jpg"
+      ],
+      "targetY": 1096.0,
+      "endY": 1188.0,
+      "group": [
+        24,
+        26
+      ],
+      "referencedPrevious": false,
+      "newSize": [
+        788,
+        802
+      ]
+    },
+    {
+      "id": "114-26",
+      "status": "built",
+      "sourcePages": [
+        "assets/114_p8.jpg"
+      ],
+      "targetY": 1188.0,
+      "endY": 1258.0,
+      "group": [
+        24,
+        26
+      ],
+      "referencedPrevious": false,
+      "newSize": [
+        788,
+        780
+      ]
+    }
+  ]
+}

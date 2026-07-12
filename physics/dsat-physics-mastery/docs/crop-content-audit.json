@@ -1,0 +1,2526 @@
+{
+  "schemaVersion": 1,
+  "questionCount": 130,
+  "selectableCount": 110,
+  "choicesCompleteCount": 130,
+  "failures": [],
+  "records": [
+    {
+      "id": "110-01",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 157,
+      "visualOverride": null
+    },
+    {
+      "id": "110-02",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 117,
+      "visualOverride": null
+    },
+    {
+      "id": "110-03",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 152,
+      "visualOverride": null
+    },
+    {
+      "id": "110-04",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 202,
+      "visualOverride": null
+    },
+    {
+      "id": "110-05",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 236,
+      "visualOverride": null
+    },
+    {
+      "id": "110-06",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 198,
+      "visualOverride": null
+    },
+    {
+      "id": "110-07",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 184,
+      "visualOverride": null
+    },
+    {
+      "id": "110-08",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 170,
+      "visualOverride": null
+    },
+    {
+      "id": "110-09",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 216,
+      "visualOverride": null
+    },
+    {
+      "id": "110-10",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 421,
+      "visualOverride": null
+    },
+    {
+      "id": "110-11",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 123,
+      "visualOverride": null
+    },
+    {
+      "id": "110-12",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 214,
+      "visualOverride": "A-E are five plotted answer graphs; OCR missed a graph label"
+    },
+    {
+      "id": "110-13",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 127,
+      "visualOverride": null
+    },
+    {
+      "id": "110-14",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 383,
+      "visualOverride": null
+    },
+    {
+      "id": "110-15",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 311,
+      "visualOverride": null
+    },
+    {
+      "id": "110-16",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 107,
+      "visualOverride": null
+    },
+    {
+      "id": "110-17",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 116,
+      "visualOverride": null
+    },
+    {
+      "id": "110-18",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 274,
+      "visualOverride": null
+    },
+    {
+      "id": "110-19",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 294,
+      "visualOverride": null
+    },
+    {
+      "id": "110-20",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 299,
+      "visualOverride": null
+    },
+    {
+      "id": "110-21",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 269,
+      "visualOverride": null
+    },
+    {
+      "id": "110-22",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 215,
+      "visualOverride": null
+    },
+    {
+      "id": "110-23",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 301,
+      "visualOverride": null
+    },
+    {
+      "id": "110-24",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 312,
+      "visualOverride": null
+    },
+    {
+      "id": "110-25",
+      "type": "open",
+      "expectedChoices": [],
+      "detectedChoices": [],
+      "choicesComplete": true,
+      "ocrTextLength": 754,
+      "visualOverride": null
+    },
+    {
+      "id": "110-26",
+      "type": "open",
+      "expectedChoices": [],
+      "detectedChoices": [],
+      "choicesComplete": true,
+      "ocrTextLength": 511,
+      "visualOverride": null
+    },
+    {
+      "id": "111-01",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 142,
+      "visualOverride": null
+    },
+    {
+      "id": "111-02",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 177,
+      "visualOverride": null
+    },
+    {
+      "id": "111-03",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 312,
+      "visualOverride": null
+    },
+    {
+      "id": "111-04",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 147,
+      "visualOverride": null
+    },
+    {
+      "id": "111-05",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 228,
+      "visualOverride": null
+    },
+    {
+      "id": "111-06",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 87,
+      "visualOverride": null
+    },
+    {
+      "id": "111-07",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 132,
+      "visualOverride": null
+    },
+    {
+      "id": "111-08",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 162,
+      "visualOverride": null
+    },
+    {
+      "id": "111-09",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 172,
+      "visualOverride": null
+    },
+    {
+      "id": "111-10",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 384,
+      "visualOverride": null
+    },
+    {
+      "id": "111-11",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 425,
+      "visualOverride": null
+    },
+    {
+      "id": "111-12",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 253,
+      "visualOverride": null
+    },
+    {
+      "id": "111-13",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 302,
+      "visualOverride": null
+    },
+    {
+      "id": "111-14",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 252,
+      "visualOverride": null
+    },
+    {
+      "id": "111-15",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 232,
+      "visualOverride": null
+    },
+    {
+      "id": "111-16",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 292,
+      "visualOverride": "A-E are visibly complete; OCR missed a parenthesized label"
+    },
+    {
+      "id": "111-17",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 244,
+      "visualOverride": null
+    },
+    {
+      "id": "111-18",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 288,
+      "visualOverride": null
+    },
+    {
+      "id": "111-19",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "B",
+        "C",
+        "D"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 443,
+      "visualOverride": "A-E are visibly complete in the shared 19-21 group crop"
+    },
+    {
+      "id": "111-20",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 551,
+      "visualOverride": null
+    },
+    {
+      "id": "111-21",
+      "type": "open",
+      "expectedChoices": [],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 696,
+      "visualOverride": null
+    },
+    {
+      "id": "111-22",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 191,
+      "visualOverride": null
+    },
+    {
+      "id": "111-23",
+      "type": "open",
+      "expectedChoices": [],
+      "detectedChoices": [],
+      "choicesComplete": true,
+      "ocrTextLength": 336,
+      "visualOverride": null
+    },
+    {
+      "id": "111-24",
+      "type": "open",
+      "expectedChoices": [],
+      "detectedChoices": [],
+      "choicesComplete": true,
+      "ocrTextLength": 438,
+      "visualOverride": null
+    },
+    {
+      "id": "111-25",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 515,
+      "visualOverride": null
+    },
+    {
+      "id": "111-26",
+      "type": "open",
+      "expectedChoices": [],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 731,
+      "visualOverride": null
+    },
+    {
+      "id": "112-01",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 65,
+      "visualOverride": null
+    },
+    {
+      "id": "112-02",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 135,
+      "visualOverride": null
+    },
+    {
+      "id": "112-03",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 223,
+      "visualOverride": null
+    },
+    {
+      "id": "112-04",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 95,
+      "visualOverride": null
+    },
+    {
+      "id": "112-05",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 165,
+      "visualOverride": null
+    },
+    {
+      "id": "112-06",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 319,
+      "visualOverride": null
+    },
+    {
+      "id": "112-07",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 99,
+      "visualOverride": null
+    },
+    {
+      "id": "112-08",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 320,
+      "visualOverride": null
+    },
+    {
+      "id": "112-09",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 258,
+      "visualOverride": null
+    },
+    {
+      "id": "112-10",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 250,
+      "visualOverride": null
+    },
+    {
+      "id": "112-11",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 183,
+      "visualOverride": null
+    },
+    {
+      "id": "112-12",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 248,
+      "visualOverride": null
+    },
+    {
+      "id": "112-13",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 171,
+      "visualOverride": null
+    },
+    {
+      "id": "112-14",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 305,
+      "visualOverride": null
+    },
+    {
+      "id": "112-15",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 384,
+      "visualOverride": null
+    },
+    {
+      "id": "112-16",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 150,
+      "visualOverride": null
+    },
+    {
+      "id": "112-17",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 174,
+      "visualOverride": null
+    },
+    {
+      "id": "112-18",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 264,
+      "visualOverride": null
+    },
+    {
+      "id": "112-19",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 205,
+      "visualOverride": null
+    },
+    {
+      "id": "112-20",
+      "type": "open",
+      "expectedChoices": [],
+      "detectedChoices": [],
+      "choicesComplete": true,
+      "ocrTextLength": 273,
+      "visualOverride": null
+    },
+    {
+      "id": "112-21",
+      "type": "open",
+      "expectedChoices": [],
+      "detectedChoices": [],
+      "choicesComplete": true,
+      "ocrTextLength": 322,
+      "visualOverride": null
+    },
+    {
+      "id": "112-22",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 357,
+      "visualOverride": null
+    },
+    {
+      "id": "112-23",
+      "type": "open",
+      "expectedChoices": [],
+      "detectedChoices": [],
+      "choicesComplete": true,
+      "ocrTextLength": 368,
+      "visualOverride": null
+    },
+    {
+      "id": "112-24",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 525,
+      "visualOverride": null
+    },
+    {
+      "id": "112-25",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 476,
+      "visualOverride": null
+    },
+    {
+      "id": "112-26",
+      "type": "open",
+      "expectedChoices": [],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 294,
+      "visualOverride": null
+    },
+    {
+      "id": "113-01",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 104,
+      "visualOverride": null
+    },
+    {
+      "id": "113-02",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 178,
+      "visualOverride": null
+    },
+    {
+      "id": "113-03",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 258,
+      "visualOverride": null
+    },
+    {
+      "id": "113-04",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 189,
+      "visualOverride": null
+    },
+    {
+      "id": "113-05",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 107,
+      "visualOverride": null
+    },
+    {
+      "id": "113-06",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 239,
+      "visualOverride": null
+    },
+    {
+      "id": "113-07",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 314,
+      "visualOverride": null
+    },
+    {
+      "id": "113-08",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 178,
+      "visualOverride": null
+    },
+    {
+      "id": "113-09",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 341,
+      "visualOverride": null
+    },
+    {
+      "id": "113-10",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 183,
+      "visualOverride": null
+    },
+    {
+      "id": "113-11",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 163,
+      "visualOverride": null
+    },
+    {
+      "id": "113-12",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 174,
+      "visualOverride": null
+    },
+    {
+      "id": "113-13",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 166,
+      "visualOverride": null
+    },
+    {
+      "id": "113-14",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 177,
+      "visualOverride": null
+    },
+    {
+      "id": "113-15",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 202,
+      "visualOverride": null
+    },
+    {
+      "id": "113-16",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 365,
+      "visualOverride": null
+    },
+    {
+      "id": "113-17",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 356,
+      "visualOverride": null
+    },
+    {
+      "id": "113-18",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 330,
+      "visualOverride": null
+    },
+    {
+      "id": "113-19",
+      "type": "open",
+      "expectedChoices": [],
+      "detectedChoices": [
+        "A"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 217,
+      "visualOverride": null
+    },
+    {
+      "id": "113-20",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 421,
+      "visualOverride": null
+    },
+    {
+      "id": "113-21",
+      "type": "open",
+      "expectedChoices": [],
+      "detectedChoices": [],
+      "choicesComplete": true,
+      "ocrTextLength": 245,
+      "visualOverride": null
+    },
+    {
+      "id": "113-22",
+      "type": "open",
+      "expectedChoices": [],
+      "detectedChoices": [
+        "A",
+        "B"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 309,
+      "visualOverride": null
+    },
+    {
+      "id": "113-23",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 551,
+      "visualOverride": null
+    },
+    {
+      "id": "113-24",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 288,
+      "visualOverride": null
+    },
+    {
+      "id": "113-25",
+      "type": "open",
+      "expectedChoices": [],
+      "detectedChoices": [
+        "A",
+        "B"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 356,
+      "visualOverride": null
+    },
+    {
+      "id": "113-26",
+      "type": "open",
+      "expectedChoices": [],
+      "detectedChoices": [
+        "A",
+        "B"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 521,
+      "visualOverride": null
+    },
+    {
+      "id": "114-01",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 306,
+      "visualOverride": "A-E are visibly complete; OCR missed C in dense text"
+    },
+    {
+      "id": "114-02",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 230,
+      "visualOverride": null
+    },
+    {
+      "id": "114-03",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 180,
+      "visualOverride": null
+    },
+    {
+      "id": "114-04",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 135,
+      "visualOverride": null
+    },
+    {
+      "id": "114-05",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 203,
+      "visualOverride": null
+    },
+    {
+      "id": "114-06",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 152,
+      "visualOverride": null
+    },
+    {
+      "id": "114-07",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 205,
+      "visualOverride": null
+    },
+    {
+      "id": "114-08",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 93,
+      "visualOverride": null
+    },
+    {
+      "id": "114-09",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 236,
+      "visualOverride": null
+    },
+    {
+      "id": "114-10",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 146,
+      "visualOverride": null
+    },
+    {
+      "id": "114-11",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 133,
+      "visualOverride": null
+    },
+    {
+      "id": "114-12",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 183,
+      "visualOverride": "A-E are visibly complete; OCR missed a mathematical label"
+    },
+    {
+      "id": "114-13",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 283,
+      "visualOverride": null
+    },
+    {
+      "id": "114-14",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 214,
+      "visualOverride": null
+    },
+    {
+      "id": "114-15",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 202,
+      "visualOverride": null
+    },
+    {
+      "id": "114-16",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 263,
+      "visualOverride": null
+    },
+    {
+      "id": "114-17",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 156,
+      "visualOverride": "A-E are visibly complete beside the induction diagram"
+    },
+    {
+      "id": "114-18",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 257,
+      "visualOverride": null
+    },
+    {
+      "id": "114-19",
+      "type": "open",
+      "expectedChoices": [],
+      "detectedChoices": [],
+      "choicesComplete": true,
+      "ocrTextLength": 342,
+      "visualOverride": null
+    },
+    {
+      "id": "114-20",
+      "type": "open",
+      "expectedChoices": [],
+      "detectedChoices": [],
+      "choicesComplete": true,
+      "ocrTextLength": 396,
+      "visualOverride": null
+    },
+    {
+      "id": "114-21",
+      "type": "open",
+      "expectedChoices": [],
+      "detectedChoices": [
+        "A",
+        "B"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 359,
+      "visualOverride": null
+    },
+    {
+      "id": "114-22",
+      "type": "open",
+      "expectedChoices": [],
+      "detectedChoices": [
+        "A",
+        "B"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 343,
+      "visualOverride": null
+    },
+    {
+      "id": "114-23",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 375,
+      "visualOverride": null
+    },
+    {
+      "id": "114-24",
+      "type": "multi",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 533,
+      "visualOverride": null
+    },
+    {
+      "id": "114-25",
+      "type": "single",
+      "expectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "detectedChoices": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "choicesComplete": true,
+      "ocrTextLength": 540,
+      "visualOverride": null
+    },
+    {
+      "id": "114-26",
+      "type": "open",
+      "expectedChoices": [],
+      "detectedChoices": [],
+      "choicesComplete": true,
+      "ocrTextLength": 524,
+      "visualOverride": null
+    }
+  ]
+}

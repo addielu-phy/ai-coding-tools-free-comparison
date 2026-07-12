@@ -5,11 +5,11 @@ import fs from 'node:fs';
 const questions = JSON.parse(fs.readFileSync(new URL('../data/questions-official.json', import.meta.url), 'utf8')).questions;
 const modules = JSON.parse(fs.readFileSync(new URL('../data/modules.json', import.meta.url), 'utf8')).modules;
 
-test('official index preserves 132 unique ids and yearly counts', () => {
-  assert.equal(questions.length, 132);
-  assert.equal(new Set(questions.map(q => q.id)).size, 132);
+test('official index preserves 130 unique ids and yearly counts', () => {
+  assert.equal(questions.length, 130);
+  assert.equal(new Set(questions.map(q => q.id)).size, 130);
   assert.deepEqual(Object.fromEntries([110, 111, 112, 113, 114].map(year => [year, questions.filter(q => q.year === year).length])), {
-    110: 28,
+    110: 26,
     111: 26,
     112: 26,
     113: 26,

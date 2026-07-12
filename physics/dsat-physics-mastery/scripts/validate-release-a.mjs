@@ -7,10 +7,10 @@ function assert(condition, message) {
   if (!condition) throw new Error(message);
 }
 
-assert(questions.length === 132, 'expected 132 questions');
-assert(new Set(questions.map(q => q.id)).size === 132, 'question ids must be unique');
+assert(questions.length === 130, 'expected 130 questions');
+assert(new Set(questions.map(q => q.id)).size === 130, 'question ids must be unique');
 assert(modules.length === 19, 'expected 19 modules');
-for (const [year, expected] of [[110, 28], [111, 26], [112, 26], [113, 26], [114, 26]]) {
+for (const [year, expected] of [[110, 26], [111, 26], [112, 26], [113, 26], [114, 26]]) {
   assert(questions.filter(q => q.year === year).length === expected, `bad count for ${year}`);
 }
 assert(questions.filter(q => q.year === 114 && q.status === 'reviewed' && q.solution.status === 'reviewed').length === 26, 'expected 26 reviewed 114 details');

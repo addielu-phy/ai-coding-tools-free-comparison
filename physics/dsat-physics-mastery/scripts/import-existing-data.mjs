@@ -187,7 +187,7 @@ Each item includes id, sourceId, year, questionNumber, type, domain, topic, modu
 
 ## Reuse Position
 
-Official/public exam files are treated as official-source material, not as freely reusable assets. Release A reuses existing repository image references by relative path and does not duplicate the 132 question image files.
+Official/public exam files are treated as official-source material, not as freely reusable assets. The platform reuses and corrects the existing 130 question image files by relative path instead of duplicating the full set.
 
 Answer keys were reconciled on 2026-07-12 against the CEEC official answer PDFs listed in \`data/official-answer-keys.json\`. The new platform corrects legacy answer/type mismatches without altering the two old public sites.
 

@@ -955,7 +955,7 @@
       "images": [
         "../dsat-physics-five-year-topical/assets/q/110_22.jpg"
       ],
-      "pageImage": "../dsat-physics-five-year-topical/assets/110_p6.jpg",
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p7.jpg",
       "solution": {
         "status": "building",
         "text": "大考中心官方答案已核對；詳解建置中。",
@@ -1070,9 +1070,9 @@
       "year": 110,
       "questionNumber": 25,
       "type": "open",
-      "domain": "近代物理",
-      "topic": "核反應/近代物理",
-      "moduleId": "m16",
+      "domain": "熱學",
+      "topic": "非選：金屬比熱實驗",
+      "moduleId": "m04",
       "points": 4,
       "choices": [],
       "answer": [],
@@ -1083,7 +1083,7 @@
       "images": [
         "../dsat-physics-five-year-topical/assets/q/110_25.jpg"
       ],
-      "pageImage": "../dsat-physics-five-year-topical/assets/110_p7.jpg",
+      "pageImage": "../dsat-physics-five-year-topical/assets/110_p8.jpg",
       "solution": {
         "status": "building",
         "text": "大考中心官方答案已核對；詳解建置中。",
@@ -1107,8 +1107,8 @@
       "questionNumber": 26,
       "type": "open",
       "domain": "力學",
-      "topic": "非選能量",
-      "moduleId": "m03",
+      "topic": "非選：調速器與圓周運動",
+      "moduleId": "m02",
       "points": 4,
       "choices": [],
       "answer": [],
@@ -1118,78 +1118,6 @@
       "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
       "images": [
         "../dsat-physics-five-year-topical/assets/q/110_26.jpg"
-      ],
-      "pageImage": "../dsat-physics-five-year-topical/assets/110_p8.jpg",
-      "solution": {
-        "status": "building",
-        "text": "大考中心官方答案已核對；詳解建置中。",
-        "reviewedLabel": "官方答案已核對／詳解建置中"
-      },
-      "qa": {
-        "sourceChecked": true,
-        "answerChecked": true,
-        "answerCheckedAgainstOfficialPdf": true,
-        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": false,
-        "choicesRecovered": false,
-        "detailedSolutionReviewed": false,
-        "officialSource": true
-      }
-    },
-    {
-      "id": "110-27",
-      "sourceId": "110-27",
-      "year": 110,
-      "questionNumber": 27,
-      "type": "open",
-      "domain": "電磁學",
-      "topic": "非選感應",
-      "moduleId": "m12",
-      "points": 4,
-      "choices": [],
-      "answer": [],
-      "status": "answer-checked",
-      "sourceType": "official-past-exam",
-      "officialSourceStatus": "official-source-identified",
-      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
-      "images": [
-        "../dsat-physics-five-year-topical/assets/q/110_27.jpg"
-      ],
-      "pageImage": "../dsat-physics-five-year-topical/assets/110_p8.jpg",
-      "solution": {
-        "status": "building",
-        "text": "大考中心官方答案已核對；詳解建置中。",
-        "reviewedLabel": "官方答案已核對／詳解建置中"
-      },
-      "qa": {
-        "sourceChecked": true,
-        "answerChecked": true,
-        "answerCheckedAgainstOfficialPdf": true,
-        "officialAnswerPdfUrl": "https://www.ceec.edu.tw/files/file_pool/1/0l251616726435248419/08-110%e6%8c%87%e8%80%83%e7%89%a9%e7%90%86%e9%81%b8%e6%93%87%e9%a1%8c%e7%ad%94%e6%a1%88.pdf",
-        "legacyMismatchCorrected": false,
-        "choicesRecovered": false,
-        "detailedSolutionReviewed": false,
-        "officialSource": true
-      }
-    },
-    {
-      "id": "110-28",
-      "sourceId": "110-28",
-      "year": 110,
-      "questionNumber": 28,
-      "type": "open",
-      "domain": "光學",
-      "topic": "非選波動",
-      "moduleId": "m07",
-      "points": 4,
-      "choices": [],
-      "answer": [],
-      "status": "answer-checked",
-      "sourceType": "official-past-exam",
-      "officialSourceStatus": "official-source-identified",
-      "publicReuseRisk": "requires attribution and conservative reuse; public availability is not a reuse license",
-      "images": [
-        "../dsat-physics-five-year-topical/assets/q/110_28.jpg"
       ],
       "pageImage": "../dsat-physics-five-year-topical/assets/110_p8.jpg",
       "solution": {

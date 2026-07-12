@@ -22,6 +22,20 @@ let session = null;
 const view = document.querySelector('#view');
 const actions = document.querySelector('#primaryActions');
 
+function focusView(selector = 'h2') {
+  requestAnimationFrame(() => {
+    const target = view.querySelector(selector) || view;
+    if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    target.focus({ preventScroll: true });
+  });
+}
+
+function showModules() {
+  renderModules();
+  focusView('h2');
+}
+
 function el(tag, attrs = {}, children = []) {
   const node = document.createElement(tag);
   for (const [key, value] of Object.entries(attrs)) {
@@ -44,7 +58,7 @@ function save() {
 }
 
 function updateStats() {
-  document.querySelector('#statTotal').textContent = String(questions.length || 132);
+  document.querySelector('#statTotal').textContent = String(questions.length || 130);
   document.querySelector('#statReviewed').textContent = String(questions.filter(q => q.status === 'reviewed').length || 26);
   document.querySelector('#statWrong').textContent = String(state.wrongQuestionIds.length);
   document.querySelector('#statDue').textContent = String(dueReviewIds(state).length);
@@ -54,7 +68,7 @@ function renderPrimaryActions() {
   actions.replaceChildren(
     actionButton('快速診斷', '15 題跨模組抽樣', () => startDiagnostic()),
     actionButton('今日複習', 'D+1 / D+3 / D+7 到期', () => startDueReview()),
-    actionButton('依章節練習', '19 模組地圖與題庫索引', () => renderModules()),
+    actionButton('依章節練習', '19 模組地圖與題庫索引', showModules),
     actionButton('模擬測驗', '正式送出後才顯示回饋', () => startMock())
   );
 }
@@ -145,6 +159,7 @@ function startDueReview() {
   const list = ids.map(id => questions.find(q => q.id === id)).filter(Boolean);
   if (!list.length) {
     view.replaceChildren(el('div', { class: 'panel' }, [el('h2', { text: '今日複習' }), el('p', { text: '目前沒有 D+1 / D+3 / D+7 到期題。' })]));
+    focusView('h2');
     return;
   }
   startPractice(list, '今日複習', 'review');
@@ -163,6 +178,7 @@ function startPractice(list, title = '練習', mode = 'practice') {
   save();
   session = { title, mode, ids: queue, index: 0, answers: {}, scored: {}, mockSubmitted: false };
   renderQuestion();
+  focusView('#question-title');
 }
 
 function startMock() {
@@ -172,6 +188,7 @@ function startMock() {
   save();
   session = { title: '正式模擬測驗', mode: 'mock', ids: queue, index: 0, answers: {}, scored: {}, mockSubmitted: false };
   renderQuestion();
+  focusView('#question-title');
 }
 
 function currentQuestion() {
@@ -189,7 +206,7 @@ function renderQuestion() {
 
   main.append(
     el('p', { class: 'eyebrow', text: `${session.title} / ${session.index + 1} of ${session.ids.length}` }),
-    el('h2', { text: `${q.year} 第 ${q.questionNumber} 題` }),
+    el('h2', { id: 'question-title', text: `${q.year} 第 ${q.questionNumber} 題` }),
     el('div', { class: 'tag-row' }, [
       el('span', { class: 'tag', text: typeLabel(q.type) }),
       el('span', { class: q.solution.status === 'reviewed' ? 'tag good' : 'tag warn', text: q.solution.reviewedLabel })
@@ -347,10 +364,11 @@ function recordResult(q, result) {
   }
   save();
   renderQuestion();
+  focusView('.feedback');
 }
 
 function renderFeedback(q, result) {
-  const node = el('div', { class: result.correct ? 'feedback' : 'feedback bad' });
+  const node = el('div', { class: result.correct ? 'feedback' : 'feedback bad', role: 'status', 'aria-live': 'polite', tabindex: '-1' });
   node.append(el('strong', { text: result.correct ? '答對' : '需要訂正' }));
   node.append(el('p', { text: `正答：${q.answer.join('、')}` }));
   if (q.solution.status === 'reviewed') node.append(el('p', { text: q.solution.text }));
@@ -381,11 +399,11 @@ function renderErrorCauses(questionId) {
 function renderNavigation() {
   const row = el('div', { class: 'nav-row' });
   row.append(
-    el('button', { type: 'button', class: 'ghost', disabled: session.index === 0 ? 'true' : null, onclick: () => { session.index -= 1; renderQuestion(); } }, '上一題'),
-    el('button', { type: 'button', class: 'ghost', disabled: session.index >= session.ids.length - 1 ? 'true' : null, onclick: () => { session.index += 1; renderQuestion(); } }, '下一題')
+    el('button', { type: 'button', class: 'ghost', disabled: session.index === 0 ? 'true' : null, onclick: () => { session.index -= 1; renderQuestion(); focusView('#question-title'); } }, '上一題'),
+    el('button', { type: 'button', class: 'ghost', disabled: session.index >= session.ids.length - 1 ? 'true' : null, onclick: () => { session.index += 1; renderQuestion(); focusView('#question-title'); } }, '下一題')
   );
   if (session.mode === 'mock' && !session.mockSubmitted) row.append(el('button', { type: 'button', onclick: submitMock }, '送出模擬測驗'));
-  else row.append(el('button', { type: 'button', class: 'ghost', onclick: renderModules }, '回章節地圖'));
+  else row.append(el('button', { type: 'button', class: 'ghost', onclick: showModules }, '回章節地圖'));
   return row;
 }
 
@@ -418,6 +436,7 @@ function submitMock() {
   session.mockSubmitted = true;
   save();
   renderQuestion();
+  focusView('.feedback');
 }
 
 document.querySelector('#exportBtn').addEventListener('click', () => {

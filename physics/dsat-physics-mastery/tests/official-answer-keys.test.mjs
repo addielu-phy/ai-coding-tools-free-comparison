@@ -5,8 +5,8 @@ import fs from 'node:fs';
 const questions = JSON.parse(fs.readFileSync(new URL('../data/questions-official.json', import.meta.url), 'utf8')).questions;
 const official = JSON.parse(fs.readFileSync(new URL('../data/official-answer-keys.json', import.meta.url), 'utf8'));
 
-test('all 132 answers and question types match CEEC official answer PDFs', () => {
-  assert.equal(Object.values(official.years).reduce((sum, entry) => sum + entry.answers.length, 0), 132);
+test('all 130 answers and question types match CEEC official answer PDFs', () => {
+  assert.equal(Object.values(official.years).reduce((sum, entry) => sum + entry.answers.length, 0), 130);
   for (const q of questions) {
     const expected = official.years[q.year].answers[q.questionNumber - 1];
     assert.ok(expected, `missing official key for ${q.id}`);

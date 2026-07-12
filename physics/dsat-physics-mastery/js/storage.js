@@ -67,9 +67,11 @@ function cleanReviews(values) {
 function cleanAnswers(value) {
   if (!value || typeof value !== 'object' || Array.isArray(value)) return {};
   const result = {};
-  for (const [rawId, rawAnswer] of Object.entries(value).slice(0, 130)) {
-    const id = cleanQuestionId(rawId);
-    if (!id) continue;
+  const validEntries = Object.entries(value)
+    .map(([rawId, rawAnswer]) => [cleanQuestionId(rawId), rawAnswer])
+    .filter(([id]) => id)
+    .slice(0, 130);
+  for (const [id, rawAnswer] of validEntries) {
     if (Array.isArray(rawAnswer)) {
       result[id] = [...new Set(rawAnswer.filter(choice => CHOICES.has(choice)))];
     } else if (rawAnswer && typeof rawAnswer === 'object' && !Array.isArray(rawAnswer)) {
@@ -82,9 +84,12 @@ function cleanAnswers(value) {
 function cleanErrorCauses(value) {
   if (!value || typeof value !== 'object' || Array.isArray(value)) return {};
   const result = {};
-  for (const [rawId, rawCauses] of Object.entries(value).slice(0, 130)) {
-    const id = cleanQuestionId(rawId);
-    if (!id || !Array.isArray(rawCauses)) continue;
+  const validEntries = Object.entries(value)
+    .map(([rawId, rawCauses]) => [cleanQuestionId(rawId), rawCauses])
+    .filter(([id]) => id)
+    .slice(0, 130);
+  for (const [id, rawCauses] of validEntries) {
+    if (!Array.isArray(rawCauses)) continue;
     const causes = [...new Set(rawCauses.filter(cause => CAUSES.has(cause)))];
     if (causes.length) result[id] = causes;
   }

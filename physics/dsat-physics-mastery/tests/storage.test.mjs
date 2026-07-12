@@ -46,3 +46,33 @@ test('import sanitizes nested records and drops malformed or unknown fields', ()
   assert.deepEqual(imported.errorCauses, { '114-02': ['A', 'F'] });
   assert.deepEqual(imported.profile, {});
 });
+
+test('import filters invalid IDs before applying the 130-record cap', () => {
+  const validIds = Array.from({ length: 5 }, (_, yearIndex) => 110 + yearIndex)
+    .flatMap(year => Array.from({ length: 26 }, (_, questionIndex) => `${year}-${String(questionIndex + 1).padStart(2, '0')}`));
+  const answers = Object.fromEntries([
+    ['110-27', ['A']],
+    ['999-99', ['B']],
+    ...validIds.map(id => [id, ['A']])
+  ]);
+  const errorCauses = Object.fromEntries([
+    ['110-27', ['A']],
+    ['999-99', ['B']],
+    ...validIds.map(id => [id, ['F']])
+  ]);
+
+  const imported = importState(JSON.stringify({
+    schemaVersion: 1,
+    attempts: [],
+    wrongQuestionIds: [],
+    reviews: [],
+    answers,
+    errorCauses
+  }));
+  assert.equal(Object.keys(imported.answers).length, 130);
+  assert.equal(Object.keys(imported.errorCauses).length, 130);
+  assert.deepEqual(Object.keys(imported.answers), validIds);
+  assert.deepEqual(Object.keys(imported.errorCauses), validIds);
+  assert.deepEqual(imported.answers['114-26'], ['A']);
+  assert.deepEqual(imported.errorCauses['114-26'], ['F']);
+});

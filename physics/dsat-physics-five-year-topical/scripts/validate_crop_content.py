@@ -4,6 +4,9 @@
 This is a release audit, not a crop generator. It detects the common regression
 where the bottom of a selectable question is cut before option E. Manual visual
 review is still required for diagrams, tables, and non-choice subparts.
+
+Install reproducible dependencies before running:
+  python -m pip install -r scripts/requirements-crop-audit.txt
 """
 from __future__ import annotations
 
@@ -52,6 +55,13 @@ def scan(item: dict) -> dict:
 
 
 def main() -> int:
+    try:
+        import rapidocr_onnxruntime  # noqa: F401
+    except ModuleNotFoundError as exc:
+        requirements = Path(__file__).with_name("requirements-crop-audit.txt")
+        raise SystemExit(
+            f"Missing OCR dependencies. Run: python -m pip install -r {requirements}"
+        ) from exc
     parser = argparse.ArgumentParser()
     parser.add_argument("--workers", type=int, default=4)
     args = parser.parse_args()

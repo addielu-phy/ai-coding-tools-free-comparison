@@ -10,7 +10,7 @@ Scope: new static site at `physics/dsat-physics-mastery/`, preserving old public
 - Answer-checked / detailed-solution-building items: 104
 - Official-source-status items: 130
 - Official-answer-PDF reconciled items: 130
-- Legacy answer/type mismatches corrected against official PDFs: 28
+- Legacy answer/type mismatches corrected against official PDFs: 0
 
 ## Fields Audited
 
@@ -20,7 +20,7 @@ Each item includes id, sourceId, year, questionNumber, type, domain, topic, modu
 
 Official/public exam files are treated as official-source material, not as freely reusable assets. The platform reuses and corrects the existing 130 question image files by relative path instead of duplicating the full set.
 
-Answer keys were reconciled on 2026-07-12 against the CEEC official answer PDFs listed in `data/official-answer-keys.json`. The new platform corrects legacy answer/type mismatches without altering the two old public sites.
+Answer keys were reconciled on 2026-07-12 against the CEEC official answer PDFs listed in `data/official-answer-keys.json`. The hotfix preserves both old public URLs while correcting the five-year site's answer/type data and shared question crops; the old 114 path remains intact.
 
 ## Coverage Risk
 

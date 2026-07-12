@@ -132,18 +132,21 @@
     },
     {
       "id": "110-09",
-      "status": "built",
+      "status": "manual",
       "sourcePages": [
         "assets/110_p3.jpg"
       ],
-      "targetY": 932.0,
-      "endY": 1228,
-      "group": null,
-      "referencedPrevious": false,
+      "segments": [
+        [
+          930,
+          1255
+        ]
+      ],
       "newSize": [
         795,
-        390
-      ]
+        329
+      ],
+      "note": "保留 A-E 與完整圖 4"
     },
     {
       "id": "110-10",
@@ -478,18 +481,21 @@
     },
     {
       "id": "111-05",
-      "status": "built",
+      "status": "manual",
       "sourcePages": [
         "assets/111_p2.jpg"
       ],
-      "targetY": 1032.0,
-      "endY": 1228,
-      "group": null,
-      "referencedPrevious": false,
+      "segments": [
+        [
+          1010,
+          1260
+        ]
+      ],
       "newSize": [
-        788,
-        295
-      ]
+        787,
+        254
+      ],
+      "note": "保留 A-E 與完整圖 2"
     },
     {
       "id": "111-06",
@@ -658,18 +664,21 @@
     },
     {
       "id": "111-17",
-      "status": "built",
+      "status": "manual",
       "sourcePages": [
         "assets/111_p5.jpg"
       ],
-      "targetY": 1002.0,
-      "endY": 1228,
-      "group": null,
-      "referencedPrevious": false,
+      "segments": [
+        [
+          1015,
+          1255
+        ]
+      ],
       "newSize": [
-        788,
-        327
-      ]
+        785,
+        244
+      ],
+      "note": "保留多選 A-E"
     },
     {
       "id": "111-18",
@@ -814,21 +823,21 @@
     },
     {
       "id": "111-26",
-      "status": "built",
+      "status": "manual",
       "sourcePages": [
         "assets/111_p8.jpg"
       ],
-      "targetY": 1060.0,
-      "endY": 1228,
-      "group": [
-        25,
-        26
+      "segments": [
+        [
+          610,
+          1250
+        ]
       ],
-      "referencedPrevious": false,
       "newSize": [
         787,
-        535
-      ]
+        644
+      ],
+      "note": "25-26 共用背景與第 26 題全部子題"
     },
     {
       "id": "112-01",
@@ -1018,18 +1027,21 @@
     },
     {
       "id": "112-13",
-      "status": "built",
+      "status": "manual",
       "sourcePages": [
         "assets/112_p4.jpg"
       ],
-      "targetY": 1081.0,
-      "endY": 1228,
-      "group": null,
-      "referencedPrevious": false,
+      "segments": [
+        [
+          1075,
+          1260
+        ]
+      ],
       "newSize": [
         784,
-        151
-      ]
+        189
+      ],
+      "note": "保留 A-E"
     },
     {
       "id": "112-14",
@@ -1078,18 +1090,21 @@
     },
     {
       "id": "112-17",
-      "status": "built",
+      "status": "manual",
       "sourcePages": [
         "assets/112_p5.jpg"
       ],
-      "targetY": 1070.0,
-      "endY": 1228,
-      "group": null,
-      "referencedPrevious": false,
+      "segments": [
+        [
+          1080,
+          1255
+        ]
+      ],
       "newSize": [
-        789,
-        258
-      ]
+        752,
+        179
+      ],
+      "note": "保留多選 A-E"
     },
     {
       "id": "112-18",
@@ -1231,21 +1246,21 @@
     },
     {
       "id": "112-26",
-      "status": "built",
+      "status": "manual",
       "sourcePages": [
         "assets/112_p8.jpg"
       ],
-      "targetY": 1112.0,
-      "endY": 1228,
-      "group": [
-        24,
-        26
+      "segments": [
+        [
+          492,
+          1255
+        ]
       ],
-      "referencedPrevious": true,
       "newSize": [
         787,
-        1398
-      ]
+        767
+      ],
+      "note": "第 25 題必要資料與第 26 題 a-c"
     },
     {
       "id": "113-01",
@@ -1591,21 +1606,21 @@
     },
     {
       "id": "113-23",
-      "status": "built",
+      "status": "manual",
       "sourcePages": [
         "assets/113_p7.jpg"
       ],
-      "targetY": 801.0,
-      "endY": 1228,
-      "group": [
-        21,
-        23
+      "segments": [
+        [
+          420,
+          1245
+        ]
       ],
-      "referencedPrevious": true,
       "newSize": [
         797,
-        864
-      ]
+        829
+      ],
+      "note": "21-23 共用背景與 A-E 圖表"
     },
     {
       "id": "113-24",
@@ -1645,21 +1660,25 @@
     },
     {
       "id": "113-26",
-      "status": "built",
+      "status": "manual",
       "sourcePages": [
         "assets/113_p8.jpg"
       ],
-      "targetY": 1124.0,
-      "endY": 1228,
-      "group": [
-        24,
-        26
+      "segments": [
+        [
+          135,
+          570
+        ],
+        [
+          805,
+          1255
+        ]
       ],
-      "referencedPrevious": false,
       "newSize": [
         787,
-        573
-      ]
+        911
+      ],
+      "note": "24-26 共用背景、第 25 題與完整第 26 題"
     },
     {
       "id": "114-01",
@@ -1723,33 +1742,39 @@
     },
     {
       "id": "114-05",
-      "status": "built",
+      "status": "manual",
       "sourcePages": [
         "assets/114_p3.jpg"
       ],
-      "targetY": 144.0,
-      "endY": 286.0,
-      "group": null,
-      "referencedPrevious": false,
+      "segments": [
+        [
+          135,
+          410
+        ]
+      ],
       "newSize": [
         789,
-        146
-      ]
+        279
+      ],
+      "note": "完整表一、問題與 A-E"
     },
     {
       "id": "114-06",
-      "status": "built",
+      "status": "manual",
       "sourcePages": [
         "assets/114_p3.jpg"
       ],
-      "targetY": 286.0,
-      "endY": 589.0,
-      "group": null,
-      "referencedPrevious": false,
+      "segments": [
+        [
+          405,
+          585
+        ]
+      ],
       "newSize": [
-        789,
-        307
-      ]
+        786,
+        184
+      ],
+      "note": "只保留第 6 題"
     },
     {
       "id": "114-07",
@@ -1798,18 +1823,21 @@
     },
     {
       "id": "114-10",
-      "status": "built",
+      "status": "manual",
       "sourcePages": [
         "assets/114_p3.jpg"
       ],
-      "targetY": 1141.0,
-      "endY": 1228,
-      "group": null,
-      "referencedPrevious": false,
+      "segments": [
+        [
+          1140,
+          1255
+        ]
+      ],
       "newSize": [
-        789,
-        188
-      ]
+        785,
+        119
+      ],
+      "note": "保留 A-E"
     },
     {
       "id": "114-11",
@@ -1918,18 +1946,21 @@
     },
     {
       "id": "114-18",
-      "status": "built",
+      "status": "manual",
       "sourcePages": [
         "assets/114_p5.jpg"
       ],
-      "targetY": 1027.0,
-      "endY": 1228,
-      "group": null,
-      "referencedPrevious": false,
+      "segments": [
+        [
+          1030,
+          1255
+        ]
+      ],
       "newSize": [
         785,
-        205
-      ]
+        229
+      ],
+      "note": "保留多選 A-E"
     },
     {
       "id": "114-19",

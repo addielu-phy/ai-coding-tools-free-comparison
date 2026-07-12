@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-12T01:26:18.658Z",
+  "generatedAt": "2026-07-12T22:33:27.554Z",
   "sources": [
     {
       "id": "ceec-official-answer-keys",
@@ -41,6 +41,6 @@
     "answerCheckedOnly": 104,
     "officialSourceItems": 130,
     "officialAnswerPdfChecked": 130,
-    "legacyMismatchesCorrected": 28
+    "legacyMismatchesCorrected": 0
   }
 }

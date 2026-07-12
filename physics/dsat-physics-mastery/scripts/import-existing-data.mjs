@@ -89,8 +89,9 @@ const questions = fiveYear.questions
       questionNumber: q.q,
       type: verifiedType,
       domain: q.domain,
+      subdomain: q.subdomain,
       topic: q.topic,
-      moduleId: moduleBySort.get(sortKey) || 'm18',
+      moduleId: q.moduleId || moduleBySort.get(sortKey) || 'm18',
       points: verifiedType === 'multi' ? 5 : verifiedType === 'open' ? 4 : 3,
       choices: verifiedChoices,
       answer: verifiedAnswer,
@@ -118,6 +119,7 @@ const questions = fiveYear.questions
         legacyMismatchCorrected,
         choicesRecovered,
         detailedSolutionReviewed: reviewed,
+        topicClassificationReviewed: q.topicClassification?.status === 'reviewed',
         officialSource: true
       }
     };
@@ -189,7 +191,7 @@ Each item includes id, sourceId, year, questionNumber, type, domain, topic, modu
 
 Official/public exam files are treated as official-source material, not as freely reusable assets. The platform reuses and corrects the existing 130 question image files by relative path instead of duplicating the full set.
 
-Answer keys were reconciled on 2026-07-12 against the CEEC official answer PDFs listed in \`data/official-answer-keys.json\`. The new platform corrects legacy answer/type mismatches without altering the two old public sites.
+Answer keys were reconciled on 2026-07-12 against the CEEC official answer PDFs listed in \`data/official-answer-keys.json\`. The hotfix preserves both old public URLs while correcting the five-year site's answer/type data and shared question crops; the old 114 path remains intact.
 
 ## Coverage Risk
 

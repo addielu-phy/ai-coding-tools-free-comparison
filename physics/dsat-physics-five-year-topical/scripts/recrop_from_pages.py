@@ -22,8 +22,21 @@ REPORT = ROOT / "physics" / "dsat-physics-mastery" / "docs" / "page-ocr-crop-aud
 _OCR = None
 
 MANUAL = {
+    "110-09": {"source": "assets/110_p3.jpg", "segments": [(930, 1255)], "note": "保留 A-E 與完整圖 4"},
     "110-25": {"source": "assets/110_p8.jpg", "segments": [(130, 885)], "note": "非選第一大題"},
     "110-26": {"source": "assets/110_p8.jpg", "segments": [(130, 280), (880, 1265)], "note": "共同說明＋非選第二大題"},
+    "111-05": {"source": "assets/111_p2.jpg", "segments": [(1010, 1260)], "note": "保留 A-E 與完整圖 2"},
+    "111-17": {"source": "assets/111_p5.jpg", "segments": [(1015, 1255)], "note": "保留多選 A-E"},
+    "111-26": {"source": "assets/111_p8.jpg", "segments": [(610, 1250)], "note": "25-26 共用背景與第 26 題全部子題"},
+    "112-13": {"source": "assets/112_p4.jpg", "segments": [(1075, 1260)], "note": "保留 A-E"},
+    "112-17": {"source": "assets/112_p5.jpg", "segments": [(1080, 1255)], "note": "保留多選 A-E"},
+    "112-26": {"source": "assets/112_p8.jpg", "segments": [(492, 1255)], "note": "第 25 題必要資料與第 26 題 a-c"},
+    "113-23": {"source": "assets/113_p7.jpg", "segments": [(420, 1245)], "note": "21-23 共用背景與 A-E 圖表"},
+    "113-26": {"source": "assets/113_p8.jpg", "segments": [(135, 570), (805, 1255)], "note": "24-26 共用背景、第 25 題與完整第 26 題"},
+    "114-05": {"source": "assets/114_p3.jpg", "segments": [(135, 410)], "note": "完整表一、問題與 A-E"},
+    "114-06": {"source": "assets/114_p3.jpg", "segments": [(405, 585)], "note": "只保留第 6 題"},
+    "114-10": {"source": "assets/114_p3.jpg", "segments": [(1140, 1255)], "note": "保留 A-E"},
+    "114-18": {"source": "assets/114_p5.jpg", "segments": [(1030, 1255)], "note": "保留多選 A-E"},
 }
 
 

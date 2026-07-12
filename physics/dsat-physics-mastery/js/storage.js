@@ -2,6 +2,10 @@ export const CURRENT_SCHEMA_VERSION = 1;
 export const STORAGE_KEY = 'dsat_physics_mastery_v1';
 
 const QUESTION_ID = /^\d{3}-\d{2}$/;
+const VALID_QUESTION_IDS = new Set(
+  Array.from({ length: 5 }, (_, yearIndex) => 110 + yearIndex)
+    .flatMap(year => Array.from({ length: 26 }, (_, questionIndex) => `${year}-${String(questionIndex + 1).padStart(2, '0')}`))
+);
 const DATE_ONLY = /^\d{4}-\d{2}-\d{2}$/;
 const CHOICES = new Set(['A', 'B', 'C', 'D', 'E']);
 const CAUSES = new Set(['A', 'B', 'C', 'D', 'E', 'F']);
@@ -21,10 +25,10 @@ function cleanString(value, max = 200) {
 
 function cleanQuestionId(value) {
   const id = cleanString(value, 40);
-  return QUESTION_ID.test(id) ? id : '';
+  return QUESTION_ID.test(id) && VALID_QUESTION_IDS.has(id) ? id : '';
 }
 
-function uniqueValidIds(values, max = 132) {
+function uniqueValidIds(values, max = 130) {
   return [...new Set(values.map(cleanQuestionId).filter(Boolean))].slice(0, max);
 }
 
@@ -63,7 +67,7 @@ function cleanReviews(values) {
 function cleanAnswers(value) {
   if (!value || typeof value !== 'object' || Array.isArray(value)) return {};
   const result = {};
-  for (const [rawId, rawAnswer] of Object.entries(value).slice(0, 132)) {
+  for (const [rawId, rawAnswer] of Object.entries(value).slice(0, 130)) {
     const id = cleanQuestionId(rawId);
     if (!id) continue;
     if (Array.isArray(rawAnswer)) {
@@ -78,7 +82,7 @@ function cleanAnswers(value) {
 function cleanErrorCauses(value) {
   if (!value || typeof value !== 'object' || Array.isArray(value)) return {};
   const result = {};
-  for (const [rawId, rawCauses] of Object.entries(value).slice(0, 132)) {
+  for (const [rawId, rawCauses] of Object.entries(value).slice(0, 130)) {
     const id = cleanQuestionId(rawId);
     if (!id || !Array.isArray(rawCauses)) continue;
     const causes = [...new Set(rawCauses.filter(cause => CAUSES.has(cause)))];

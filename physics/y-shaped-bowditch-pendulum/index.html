@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#082536">
+  <meta name="description" content="IYPT 2026 Problem 5：Y 型擺（Bowditch pendulum）互動模擬。調整懸線幾何、振幅、相位、阻尼與頻率，觀察 Lissajous 圖形。">
+  <title>Y 型擺（Bowditch pendulum）互動研究室</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
+      svg: { fontCache: 'global' },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#lab">跳到互動模擬</a>
+
+  <header class="hero">
+    <nav class="topbar shell" aria-label="頁面導覽">
+      <a class="brand" href="../../webpages/" aria-label="回到盧老師公開網頁整理">
+        <span class="brand-mark" aria-hidden="true">Y</span>
+        <span>Physics Field Lab</span>
+      </a>
+      <div class="nav-links">
+        <a href="#lab">模擬</a>
+        <a href="#physics">原理</a>
+        <a href="#parameters">參數</a>
+        <a href="#investigation">探究</a>
+      </div>
+    </nav>
+
+    <div class="hero-grid shell">
+      <div class="hero-copy">
+        <div class="eyebrow"><span>IYPT 2026</span><span>Problem 5</span></div>
+        <h1>Y 型擺<br><span>Bowditch Pendulum</span></h1>
+        <p class="hero-lead">一顆擺錘，卻同時聽從兩個不同週期。調整 Y 型懸線幾何，直接看見軌跡如何從橢圓、花瓣變成緩慢漂移的 Lissajous 圖形。</p>
+        <div class="hero-actions">
+          <a class="primary-action" href="#lab">開始互動實驗</a>
+          <a class="secondary-action" href="#physics">先看核心物理</a>
+        </div>
+        <p class="microcopy">模擬全程在瀏覽器運算；數學公式由 MathJax CDN 載入，不上傳模擬資料。可匯出軌跡 CSV 與圖像。</p>
+      </div>
+
+      <aside class="insight-card" aria-label="核心洞察">
+        <p class="insight-kicker">核心洞察</p>
+        <div class="mini-y" aria-hidden="true">
+          <span class="support left"></span><span class="support right"></span>
+          <span class="branch branch-left"></span><span class="branch branch-right"></span>
+          <span class="stem"></span><span class="mini-bob"></span>
+        </div>
+        <h2>Y 型懸線把水平運動分成兩個主模態</h2>
+        <div class="mode-row"><span class="mode-dot cyan"></span><strong>平行支點連線</strong><span>短有效長度 \(\ell\)</span></div>
+        <div class="mode-row"><span class="mode-dot amber"></span><strong>垂直支點連線</strong><span>長有效長度 \(\ell+h\)</span></div>
+        <p>兩個簡諧振動疊加後，擺錘在水平面的投影就是 Lissajous 圖形。</p>
+      </aside>
+    </div>
+  </header>
+
+  <main id="main" class="shell main-flow">
+    <section id="lab" class="lab-section" aria-labelledby="lab-title">
+      <div class="section-heading">
+        <div><p class="section-number">01 · INTERACTIVE LAB</p><h2 id="lab-title">互動模擬研究室</h2></div>
+        <p>先選一組典型情境，再逐項改變參數。三張圖同步更新：裝置運動、水平軌跡與兩模態時序。</p>
+      </div>
+
+      <div class="lab-shell">
+        <div class="lab-toolbar" role="group" aria-label="模擬播放與匯出工具">
+          <label class="preset-control" for="presetSelect">
+            <span>情境預設</span>
+            <select id="presetSelect">
+              <option value="threeTwo">3:2 經典閉合</option>
+              <option value="twoOne">2:1 雙環圖形</option>
+              <option value="fourThree">4:3 細緻閉合</option>
+              <option value="nearOne">接近 1:1：橢圓／直線</option>
+              <option value="detuned">3:2 輕微失諧：慢漂移</option>
+              <option value="damped">阻尼不對稱：形狀演化</option>
+              <option value="nonlinear">大振幅：非線性漂移</option>
+            </select>
+          </label>
+          <div class="button-cluster">
+            <button id="playPause" class="tool-button primary" type="button" aria-pressed="true">
+              <span class="button-icon" aria-hidden="true">Ⅱ</span><span class="button-label">暫停</span>
+            </button>
+            <button id="stepOnce" class="tool-button" type="button" title="向前一步">單步</button>
+            <button id="resetSim" class="tool-button" type="button">重設</button>
+            <button id="clearTrail" class="tool-button" type="button">清除軌跡</button>
+          </div>
+          <div class="button-cluster export-cluster">
+            <button id="downloadCsv" class="tool-button" type="button">下載 CSV</button>
+            <button id="exportPng" class="tool-button" type="button">匯出 PNG</button>
+          </div>
+        </div>
+
+        <div class="metric-grid">
+          <article class="metric"><span>平行模態 \(f_\parallel\)</span><strong id="frequencyXVal">—</strong><small>短模態</small></article>
+          <article class="metric"><span>垂直模態 \(f_\perp\)</span><strong id="frequencyYVal">—</strong><small>長模態</small></article>
+          <article class="metric accent"><span>頻率比 \(f_\parallel/f_\perp\)</span><strong id="ratioVal">—</strong><small id="ratioHint">—</small></article>
+          <article class="metric"><span>理想閉合候選</span><strong id="closureVal">—</strong><small id="closureHint">—</small></article>
+          <article class="metric"><span>接點深度 \(h\)</span><strong id="junctionDepthVal">—</strong><small>幾何導出</small></article>
+          <article class="metric"><span>每支上弦靜張力</span><strong id="branchTensionVal">—</strong><small>平衡近似</small></article>
+        </div>
+
+        <div class="visual-grid">
+          <figure class="viz-panel apparatus-panel">
+            <figcaption><span><strong>裝置視圖</strong><small>Y 型懸線與擺錘的近似三維投影</small></span><span class="live-pill"><i></i> LIVE</span></figcaption>
+            <canvas id="apparatusCanvas" width="760" height="560" aria-label="Y 型擺三維裝置動畫" role="img"></canvas>
+            <div id="axisLegend" class="axis-legend" aria-label="座標軸圖例">
+              <span><i class="line-cyan"></i>\(x\)：平行支點連線</span>
+              <span><i class="line-amber"></i>\(y\)：垂直支點連線</span>
+            </div>
+          </figure>
+
+          <figure class="viz-panel trace-panel">
+            <figcaption><span><strong>Lissajous 軌跡</strong><small>由上往下看擺錘的水平投影</small></span><span class="time-readout">t = <b id="timeVal">0.00</b> s</span></figcaption>
+            <canvas id="traceCanvas" width="760" height="560" aria-label="Lissajous 軌跡圖" role="img"></canvas>
+            <p class="canvas-note" id="traceNote">線性模式：淡線為小角度模型的預測路徑；亮線為實際播放累積軌跡。</p>
+          </figure>
+        </div>
+
+        <figure class="viz-panel series-panel">
+          <figcaption><span><strong>兩模態時序</strong><small>比較角位移的週期、相位與振幅衰減</small></span><span class="series-legend"><i class="cyan"></i>\(\theta_\parallel\)<i class="amber"></i>\(\theta_\perp\)</span></figcaption>
+          <canvas id="seriesCanvas" width="1500" height="340" aria-label="兩模態位移時間序列" role="img"></canvas>
+        </figure>
+
+        <div class="status-stack">
+          <p id="modelNotice" class="notice info">—</p>
+          <p id="largeAngleWarning" class="notice warning" hidden>振幅已進入大角度區。線性模型的週期會低估，請切換「非線性獨立模態近似」比較。</p>
+          <p id="constraintWarning" class="notice warning" hidden>目前兩方向振幅組合太大，幾何投影已接近下弦極限；請降低其中一個振幅。</p>
+        </div>
+
+        <div class="control-board" aria-label="模擬參數控制面板">
+          <fieldset class="control-group">
+            <legend><span>Geometry</span>Y 型幾何</legend>
+            <label for="lowerLength"><span>下弦長 \(\ell\)</span><output id="lowerLengthOut">0.80 m</output></label>
+            <input id="lowerLength" type="range" min="0.25" max="2.00" step="0.01" value="0.80">
+
+            <label for="upperLength"><span>每支上弦長 \(S\)</span><output id="upperLengthOut">1.17 m</output></label>
+            <input id="upperLength" type="range" min="0.35" max="2.00" step="0.001" value="1.166">
+
+            <label for="supportSpacing"><span>支點間距 \(d\)</span><output id="supportSpacingOut">1.20 m</output></label>
+            <input id="supportSpacing" type="range" min="0.10" max="2.20" step="0.01" value="1.20">
+          </fieldset>
+
+          <fieldset class="control-group">
+            <legend><span>Initial state</span>初始條件</legend>
+            <label for="ampX"><span>平行模態振幅</span><output id="ampXOut">12.0°</output></label>
+            <input id="ampX" type="range" min="0" max="28" step="0.5" value="12">
+
+            <label for="ampY"><span>垂直模態振幅</span><output id="ampYOut">12.0°</output></label>
+            <input id="ampY" type="range" min="0" max="28" step="0.5" value="12">
+
+            <label for="phase"><span>初始相位差 \(\delta\)</span><output id="phaseOut">90°</output></label>
+            <input id="phase" type="range" min="0" max="360" step="1" value="90">
+          </fieldset>
+
+          <fieldset class="control-group">
+            <legend><span>Dynamics</span>動力學</legend>
+            <label for="modelMode"><span>計算模型</span></label>
+            <select id="modelMode">
+              <option value="linear">小角度線性模型</option>
+              <option value="nonlinear">非線性獨立模態近似</option>
+            </select>
+
+            <label for="damping"><span>平均阻尼 \(\beta\)</span><output id="dampingOut">0.004 s⁻¹</output></label>
+            <input id="damping" type="range" min="0" max="0.120" step="0.001" value="0.004">
+
+            <label for="dampingSplit"><span>阻尼不對稱</span><output id="dampingSplitOut">0%</output></label>
+            <input id="dampingSplit" type="range" min="-90" max="90" step="1" value="0">
+
+            <label for="detune"><span>平行模態頻率微調</span><output id="detuneOut">0.00%</output></label>
+            <input id="detune" type="range" min="-8" max="8" step="0.01" value="0">
+          </fieldset>
+
+          <fieldset class="control-group">
+            <legend><span>Environment</span>環境與顯示</legend>
+            <label for="gravity"><span>重力加速度 \(g\)</span><output id="gravityOut">9.81 m/s²</output></label>
+            <input id="gravity" type="range" min="1.62" max="24.80" step="0.01" value="9.81">
+
+            <label for="mass"><span>擺錘質量 \(m\)</span><output id="massOut">0.25 kg</output></label>
+            <input id="mass" type="range" min="0.05" max="1.50" step="0.01" value="0.25">
+
+            <label for="playbackSpeed"><span>播放速度</span><output id="playbackSpeedOut">1.00×</output></label>
+            <input id="playbackSpeed" type="range" min="0.10" max="3.00" step="0.05" value="1">
+
+            <label for="trailLength"><span>軌跡保留時間</span><output id="trailLengthOut">15 s</output></label>
+            <input id="trailLength" type="range" min="2" max="60" step="1" value="15">
+          </fieldset>
+        </div>
+      </div>
+    </section>
+
+    <section id="physics" class="content-section" aria-labelledby="physics-title">
+      <div class="section-heading">
+        <div><p class="section-number">02 · PHYSICS</p><h2 id="physics-title">為什麼會產生 Lissajous 圖形？</h2></div>
+        <p>關鍵不是擺錘有兩條線，而是對稱 Y 型約束產生兩個互相垂直的主振動模態，且有效擺長不同。</p>
+      </div>
+
+      <div class="derivation-grid">
+        <article class="theory-card geometry-card">
+          <div class="card-index">A</div><h3>先把 Y 型幾何化成一個高度</h3>
+          <p>兩個固定支點相距 \(d\)，每支上弦長 \(S\)。對稱靜止時，接點到支點連線的垂直距離是</p>
+          <div class="equation">\[h=\sqrt{S^2-(d/2)^2}\]</div>
+          <p>下弦長記為 \(\ell\)。因此，裝置在兩個主方向看到的有效擺長不同。</p>
+          <div class="geometry-key"><span>必須滿足</span><strong>\(d&lt;2S\)</strong><small>否則上弦無法形成 Y 型</small></div>
+        </article>
+
+        <article class="theory-card mode-card cyan-card">
+          <div class="card-index">B</div><h3>短模態（平行支點連線）</h3>
+          <p>接點被兩支上弦共同限制，沿支點連線方向幾乎不移動；主要是下弦繞接點擺動。因此</p>
+          <div class="equation">\[L_\parallel=\ell,\qquad \omega_{\parallel}=\sqrt{\frac{g}{\ell}}\]</div>
+          <p>這個方向的有效擺長較短，所以頻率較高。</p>
+        </article>
+
+        <article class="theory-card mode-card amber-card">
+          <div class="card-index">C</div><h3>長模態（垂直支點連線）</h3>
+          <p>從側面看，接點可繞支點連線擺動；接點與擺錘近似一起轉動。因此</p>
+          <div class="equation">\[L_\perp=\ell+h,\qquad \omega_{\perp}=\sqrt{\frac{g}{\ell+h}}\]</div>
+          <p>這個方向的有效擺長較長，所以頻率較低。</p>
+        </article>
+
+        <article class="theory-card ratio-card">
+          <div class="card-index">D</div><h3>幾何直接決定頻率比</h3>
+          <div class="equation hero-equation">\[\frac{f_{\parallel}}{f_{\perp}}=\sqrt{\frac{\ell+h}{\ell}}\]</div>
+          <p>當比值接近整數比 \(p:q\) 時，平行模態走 \(p\) 圈、垂直模態走 \(q\) 圈後會同時回到初相位，圖形閉合；若不是有理比，軌跡不會精確閉合。</p>
+        </article>
+      </div>
+
+      <div class="model-panel">
+        <div class="model-copy">
+          <p class="section-number">LINEAR SUPERPOSITION</p>
+          <h3>小角度線性模型</h3>
+          <p>把水平投影分解為兩個獨立的阻尼簡諧振動：</p>
+          <div class="equation left-equation">\[
+            x(t)=A_xe^{-\beta_x t}\cos(\omega_\parallel t),\qquad
+            y(t)=A_ye^{-\beta_y t}\cos(\omega_\perp t+\delta)
+          \]</div>
+          <p>時間 \(t\) 被消去後，\((x,y)\) 就畫出 Lissajous 圖形。振幅比控制寬高，相位差控制對稱與旋向，頻率比控制拓撲與是否閉合。</p>
+        </div>
+        <div class="model-diagram" aria-label="兩個正弦波合成 Lissajous 圖形示意">
+          <div class="wave-chip cyan-wave"><span>\(x(t)\)</span><i></i></div>
+          <div class="plus" aria-hidden="true">+</div>
+          <div class="wave-chip amber-wave"><span>\(y(t)\)</span><i></i></div>
+          <div class="arrow" aria-hidden="true">→</div>
+          <div class="lissajous-chip"><span>\((x,y)\)</span><i></i></div>
+        </div>
+      </div>
+
+      <div class="nonlinear-panel">
+        <div><p class="section-number">BEYOND SMALL ANGLES</p><h3>大振幅時：週期本身也會依振幅改變</h3></div>
+        <div class="equation">\[\ddot\theta+2\beta\dot\theta+\frac{g}{L}\sin\theta=0\]</div>
+        <p>模擬器的「非線性獨立模態近似」使用固定時間步長 RK4，分別積分兩個上式。它能呈現大角度造成的頻率下降與相位漂移，但仍不是完整的三條不可伸長弦、無質量接點與三維張力耦合解。</p>
+      </div>
+    </section>
+
+    <section id="parameters" class="content-section" aria-labelledby="parameters-title">
+      <div class="section-heading">
+        <div><p class="section-number">03 · PARAMETERS</p><h2 id="parameters-title">每個參數在改變什麼？</h2></div>
+        <p>分清楚「改頻率」「改形狀」「改時間演化」三類，實驗設計會清楚很多。</p>
+      </div>
+
+      <div class="parameter-grid">
+        <article class="parameter-card"><span class="parameter-symbol">\(\ell\)</span><h3>下弦長</h3><p>直接控制短模態，並同時進入長模態。增加 \(\ell\) 會讓兩個頻率都下降，頻率比通常更接近 1。</p><b>主要影響：兩頻率、頻率比</b></article>
+        <article class="parameter-card"><span class="parameter-symbol">\(S,d\)</span><h3>上弦與支點間距</h3><p>透過 \(h=\sqrt{S^2-(d/2)^2}\) 改變長模態。固定 \(S\) 時加大支點間距 \(d\)，會使 \(h\) 下降、頻率比靠近 1，但上弦張力上升。</p><b>主要影響：長模態、上弦張力</b></article>
+        <article class="parameter-card"><span class="parameter-symbol">\(A_x:A_y\)</span><h3>振幅比</h3><p>在線性小角度模型下，只改變 Lissajous 圖形的寬高比例；若其中一個振幅為零，軌跡退化成單一直線振動。大振幅時，振幅也會改變週期。</p><b>主要影響：圖形尺度、扁率；大角度時也影響頻率</b></article>
+        <article class="parameter-card"><span class="parameter-symbol">\(\delta\)</span><h3>初始相位差</h3><p>同一頻率比也可能長得完全不同。1:1 時，\(\delta=0\) 是直線、\(90^\circ\) 且等振幅是圓。</p><b>主要影響：對稱、方向、交點</b></article>
+        <article class="parameter-card"><span class="parameter-symbol">\(\beta_x,\beta_y\)</span><h3>阻尼與阻尼不對稱</h3><p>相同阻尼讓圖形整體縮小；兩方向阻尼不同時，振幅比會隨時間改變，圖形也會持續變形。</p><b>主要影響：包絡線、長時間形狀</b></article>
+        <article class="parameter-card"><span class="parameter-symbol">\(\varepsilon_f\)</span><h3>頻率微調</h3><p>模擬支點不對稱、弦的有限剛性、接點摩擦或製作誤差。即使只偏離理想整數比 0.5%，閉合圖形也會緩慢轉動／漂移。</p><b>主要影響：相位滑移、拍頻</b></article>
+        <article class="parameter-card"><span class="parameter-symbol">\(g\)</span><h3>重力加速度</h3><p>兩個頻率都隨 \(\sqrt g\) 改變，但理想頻率比不變；因此圖形拓撲不變，只是播放快慢不同。</p><b>主要影響：時間尺度</b></article>
+        <article class="parameter-card"><span class="parameter-symbol">\(m\)</span><h3>擺錘質量</h3><p>質量不影響理想小角度頻率，也不直接改變 Lissajous 圖形；它會改變弦張力。若空氣阻力是固定力係數，實際阻尼率也可能隨質量改變。</p><b>主要影響：張力、非理想阻尼</b></article>
+      </div>
+
+      <aside class="mass-note"><strong>一個好對照實驗：</strong>保持幾何與初始角度不變，只改擺錘質量。理想模型預測週期不變；若實測不同，就要檢查空氣阻力、弦伸長、接點摩擦與擺錘尺寸。</aside>
+    </section>
+
+    <section id="investigation" class="content-section" aria-labelledby="investigation-title">
+      <div class="section-heading">
+        <div><p class="section-number">04 · INVESTIGATION</p><h2 id="investigation-title">把模擬器變成可檢驗的 IYPT 研究</h2></div>
+        <p>不要一次改很多參數。每張圖都應對應一個清楚的控制變因與可量化指標。</p>
+      </div>
+
+      <h3 class="workflow-title">建議實驗流程</h3>
+      <ol class="workflow">
+        <li><span>01</span><div><strong>校正幾何</strong><p>量測 \(S,d,\ell\)，計算 \(h\) 與理想頻率比。</p></div></li>
+        <li><span>02</span><div><strong>分別激發主模態</strong><p>只沿兩個主方向各擺一次，從影片擬合 \(f_\parallel,f_\perp,\beta_\parallel,\beta_\perp\)。</p></div></li>
+        <li><span>03</span><div><strong>組合初始條件</strong><p>用斜向位移或切向初速同時激發兩模態，記錄水平軌跡。</p></div></li>
+        <li><span>04</span><div><strong>掃描與比較</strong><p>一次只掃一個幾何或動力學參數，和模擬輸出的 CSV 疊圖。</p></div></li>
+      </ol>
+
+      <div class="investigation-grid">
+        <article class="investigation-card"><span>Q1</span><h3>幾何－頻率比曲線</h3><p>固定 \(S,\ell\)，改變 \(d\)。檢驗 \(f_\parallel/f_\perp=\sqrt{(\ell+h)/\ell}\)。</p><dl><dt>橫軸</dt><dd>\(d/S\)</dd><dt>縱軸</dt><dd>頻率比</dd></dl></article>
+        <article class="investigation-card"><span>Q2</span><h3>閉合的容忍度</h3><p>以 3:2 為中心做 ±2% 頻率微調，量測一個候選閉合週期後的端點誤差。</p><dl><dt>控制</dt><dd>振幅、阻尼</dd><dt>指標</dt><dd>相位滑移／端點距離</dd></dl></article>
+        <article class="investigation-card"><span>Q3</span><h3>相位如何重塑同一比例</h3><p>固定頻率比與振幅比，每隔 \(15^\circ\) 掃描初始相位差，分類對稱性、交點數與旋向。</p><dl><dt>控制</dt><dd>\(p:q,A_x:A_y\)</dd><dt>改變</dt><dd>\(\delta\)</dd></dl></article>
+        <article class="investigation-card"><span>Q4</span><h3>大振幅非線性</h3><p>從 2° 掃到 25°，比較線性與非線性模型的相位差累積；找出線性近似開始失效的振幅。</p><dl><dt>指標</dt><dd>週期偏差</dd><dt>模型</dt><dd>線性 vs RK4</dd></dl></article>
+        <article class="investigation-card"><span>Q5</span><h3>阻尼各向異性</h3><p>擬合兩方向振幅包絡線。若 \(\beta_x\ne\beta_y\)，量化 Lissajous 圖形寬高比隨時間的變化。</p><dl><dt>模型</dt><dd>\(A_i(t)=A_{i0}e^{-\beta_i t}\)</dd><dt>指標</dt><dd>橢圓率</dd></dl></article>
+        <article class="investigation-card"><span>Q6</span><h3>非理想效應盤點</h3><p>改變擺錘質量、接點形式與弦材，區分空氣阻力、接點摩擦、弦伸長與支點不對稱。</p><dl><dt>策略</dt><dd>逐項替換</dd><dt>證據</dt><dd>頻率／阻尼殘差</dd></dl></article>
+      </div>
+
+      <div class="dimensionless-card">
+        <div><p class="section-number">DATA COLLAPSE</p><h3>先做無因次化，才容易比較不同尺寸裝置</h3></div>
+        <div class="equation">\[\tau=t\sqrt{\frac{g}{\ell}},\qquad \lambda=\frac{h}{\ell},\qquad \rho=\frac{A_y}{A_x}\]</div>
+        <p>理想小角度頻率比只依賴 \(\lambda\)：\(f_\parallel/f_\perp=\sqrt{1+\lambda}\)。不同尺寸但相同 \(h/\ell\) 的裝置，經時間縮放後應具有相同的理想圖形家族。</p>
+      </div>
+    </section>
+
+    <section class="content-section limits-section" aria-labelledby="limits-title">
+      <div class="section-heading compact-heading"><div><p class="section-number">05 · MODEL BOUNDARY</p><h2 id="limits-title">模型適用範圍</h2></div></div>
+      <div class="limit-grid">
+        <article><h3>這個模擬能回答</h3><ul><li>幾何如何設定兩個主模態的理想頻率</li><li>振幅、相位、阻尼與微小失諧如何改變軌跡</li><li>大振幅下，獨立模態非線性造成的相位漂移</li><li>哪些參數值得在實驗中逐項掃描</li></ul></article>
+        <article><h3>它沒有宣稱精確包含</h3><ul><li>質量不為零的接點與弦本身振動</li><li>三條弦的完整瞬時張力耦合與鬆弛</li><li>弦的伸長、彎曲剛性、扭轉與遲滯</li><li>大角度下完整三維約束運動與混沌</li></ul></article>
+      </div>
+      <p class="boundary-note">研究上應把本頁視為「可解釋、可擬合的基準模型」，再用實測殘差判斷需要加入哪一個非理想效應，而不是把動畫當成實驗結果。</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-grid">
+      <div><strong>Y 型擺互動研究室</strong><p>IYPT 2026 Problem 5 · 教學與研究起始模型</p></div>
+      <div><a href="#lab">回到模擬</a><a href="../../webpages/">公開網頁整理</a></div>
+    </div>
+  </footer>
+
+  <script src="physics-model.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

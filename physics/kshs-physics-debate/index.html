@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <title>高雄中學物理辯論隊｜非官方資料草稿</title>
+  <meta name="description" content="高雄中學物理辯論隊的非官方資料草稿：物理辯論介紹、培訓流程、研究題目、教材資源、歷史紀錄與資料補充入口。" />
+  <link rel="canonical" href="https://addielu-phy.github.io/ai-coding-tools-free-comparison/physics/kshs-physics-debate/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:title" content="高雄中學物理辯論隊｜非官方資料草稿" />
+  <meta property="og:description" content="一個可逐年累積物理辯論校隊研究、教材與歷史的手機友善Wiki型網站。" />
+  <meta property="og:url" content="https://addielu-phy.github.io/ai-coding-tools-free-comparison/physics/kshs-physics-debate/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#142b4a" />
+  <style>
+    :root {
+      color-scheme: light;
+      --navy: #142b4a;
+      --navy-2: #0b1c32;
+      --blue: #245a92;
+      --blue-soft: #eaf2fb;
+      --gold: #d59a2f;
+      --gold-soft: #fff4d8;
+      --red: #a9323a;
+      --paper: #fffdf8;
+      --bg: #f1f3f5;
+      --ink: #172231;
+      --muted: #647184;
+      --line: #d9dee5;
+      --line-strong: #bec7d3;
+      --green: #276749;
+      --shadow: 0 18px 50px rgba(15, 31, 50, .09);
+      --radius: 18px;
+      --max: 1280px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 90% -10%, rgba(213,154,47,.18), transparent 26rem),
+        linear-gradient(180deg, #f8fafc 0, var(--bg) 35rem, #e9edf2 100%);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      line-height: 1.72;
+    }
+    a { color: var(--blue); text-underline-offset: 3px; }
+    a:hover { color: var(--red); }
+    button, input { font: inherit; }
+    :focus-visible { outline: 3px solid rgba(213,154,47,.45); outline-offset: 3px; }
+    .skip {
+      position: fixed; left: 12px; top: -70px; z-index: 100;
+      background: white; color: var(--navy); padding: 10px 14px; border-radius: 10px;
+      box-shadow: var(--shadow); font-weight: 800;
+    }
+    .skip:focus { top: 10px; }
+
+    .topbar {
+      position: sticky; top: 0; z-index: 30;
+      background: rgba(255,253,248,.88); backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(20,43,74,.12);
+    }
+    .topbar-inner {
+      width: min(var(--max), calc(100% - 32px)); margin: auto;
+      min-height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; min-width: 0; }
+    .brand-mark {
+      width: 42px; height: 42px; border-radius: 14px; flex: 0 0 auto;
+      display: grid; place-items: center; color: white;
+      background: linear-gradient(145deg, var(--navy), var(--blue));
+      box-shadow: 0 9px 24px rgba(20,43,74,.22);
+    }
+    .brand-mark svg { width: 27px; height: 27px; }
+    .brand-copy { min-width: 0; }
+    .brand-copy strong { display: block; color: var(--navy); line-height: 1.18; letter-spacing: -.02em; }
+    .brand-copy span { display: block; color: var(--muted); font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .nav-actions { display: flex; align-items: center; gap: 8px; }
+    .nav-actions a {
+      color: var(--navy); text-decoration: none; font-size: 13px; font-weight: 800;
+      border: 1px solid var(--line); padding: 7px 11px; border-radius: 999px; background: white;
+    }
+
+    .hero {
+      position: relative; overflow: hidden; color: white;
+      background:
+        linear-gradient(105deg, rgba(11,28,50,.98) 0%, rgba(20,43,74,.94) 54%, rgba(36,90,146,.86) 100%),
+        linear-gradient(135deg, var(--navy), var(--blue));
+      border-bottom: 5px solid var(--gold);
+    }
+    .hero::after {
+      content: ""; position: absolute; inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,.12) 1px, transparent 1.5px);
+      background-size: 24px 24px; mask-image: linear-gradient(90deg, transparent 20%, black 100%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative; z-index: 1;
+      width: min(var(--max), calc(100% - 32px)); margin: auto; padding: 62px 0 55px;
+      display: grid; grid-template-columns: minmax(0,1fr) 320px; gap: 42px; align-items: center;
+    }
+    .kicker { margin: 0 0 14px; color: #f9d890; font-size: 13px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { margin: 0; font-size: clamp(2.5rem, 7vw, 5.3rem); line-height: 1.02; letter-spacing: -.065em; }
+    .hero-en { display: block; margin-top: 8px; font-size: clamp(.95rem, 2vw, 1.25rem); font-weight: 650; letter-spacing: .05em; color: #cad8e8; }
+    .hero-lead { max-width: 760px; margin: 22px 0 0; color: #edf4fb; font-size: clamp(1rem, 2vw, 1.18rem); }
+    .status-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 25px; }
+    .badge { display: inline-flex; align-items: center; gap: 7px; border-radius: 999px; padding: 7px 11px; font-size: 12px; font-weight: 900; }
+    .badge.draft { background: var(--gold-soft); color: #69470a; }
+    .badge.safe { background: rgba(255,255,255,.12); color: white; border: 1px solid rgba(255,255,255,.2); }
+    .hero-art { min-height: 300px; display: grid; place-items: center; }
+    .hero-art svg { width: min(100%, 300px); filter: drop-shadow(0 22px 30px rgba(0,0,0,.23)); }
+
+    .mobile-toc { display: none; width: min(var(--max), calc(100% - 24px)); margin: 16px auto 0; }
+    .mobile-toc details { border: 1px solid var(--line); border-radius: 14px; background: white; box-shadow: var(--shadow); }
+    .mobile-toc summary { cursor: pointer; padding: 13px 15px; font-weight: 900; color: var(--navy); }
+    .mobile-toc nav { padding: 0 15px 14px; display: grid; gap: 6px; }
+    .mobile-toc a { text-decoration: none; font-size: 14px; }
+    .mobile-search { padding: 0 15px 12px; display: grid; gap: 6px; }
+    .mobile-search label { color: var(--muted); font-size: 11px; font-weight: 900; letter-spacing: .08em; }
+    .mobile-search input { width: 100%; min-width: 0; border: 1px solid var(--line-strong); border-radius: 10px; padding: 9px 10px; background: white; }
+    .mobile-search .search-status { margin-top: 0; }
+
+    .page-shell {
+      width: min(var(--max), calc(100% - 32px)); margin: 30px auto 70px;
+      display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 26px; align-items: start;
+    }
+    .sidebar {
+      position: sticky; top: 88px; border: 1px solid var(--line); background: rgba(255,255,255,.9);
+      border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden;
+    }
+    .sidebar-head { padding: 16px 16px 13px; border-bottom: 1px solid var(--line); background: #f8fafc; }
+    .sidebar-head strong { display: block; color: var(--navy); }
+    .sidebar-head span { color: var(--muted); font-size: 12px; }
+    .search-box { padding: 14px; border-bottom: 1px solid var(--line); }
+    .search-box label { display: grid; gap: 6px; color: var(--muted); font-size: 11px; font-weight: 900; letter-spacing: .08em; }
+    .search-box input { min-width: 0; width: 100%; border: 1px solid var(--line-strong); border-radius: 10px; padding: 9px 10px; background: white; }
+    .search-status { display: block; margin-top: 7px; min-height: 1.2em; color: var(--muted); font-size: 11px; }
+    .toc { padding: 10px; display: grid; gap: 2px; }
+    .toc a { display: block; color: #44556b; text-decoration: none; padding: 7px 9px; border-radius: 9px; font-size: 13px; font-weight: 700; }
+    .toc a:hover, .toc a.active { background: var(--blue-soft); color: var(--blue); }
+    .toc .sub { padding-left: 20px; font-weight: 600; font-size: 12px; }
+
+    .content { min-width: 0; }
+    .notice {
+      margin-bottom: 18px; padding: 15px 17px; border: 1px solid #e5c270; border-left: 5px solid var(--gold);
+      border-radius: 12px; background: var(--gold-soft); color: #5d491c;
+    }
+    .notice strong { color: #4b370e; }
+    .wiki-section {
+      scroll-margin-top: 88px; margin: 0 0 18px; padding: 26px;
+      border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); box-shadow: var(--shadow);
+    }
+    .section-label { color: var(--red); font-size: 11px; font-weight: 950; letter-spacing: .12em; text-transform: uppercase; }
+    h2 { margin: 5px 0 15px; color: var(--navy); font-size: clamp(1.65rem, 4vw, 2.35rem); line-height: 1.15; letter-spacing: -.045em; }
+    h2::after { content: ""; display: block; width: 58px; height: 4px; margin-top: 11px; border-radius: 999px; background: linear-gradient(90deg, var(--gold), var(--red)); }
+    h3 { color: var(--navy); margin: 24px 0 8px; font-size: 1.15rem; }
+    p { margin: 10px 0; }
+    .muted { color: var(--muted); }
+
+    .quick-grid, .role-grid, .resource-grid, .placeholder-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 13px; }
+    .quick-card, .role, .resource, .placeholder {
+      min-width: 0; border: 1px solid var(--line); border-radius: 14px; background: white; padding: 16px;
+    }
+    .quick-card strong, .role strong, .resource strong { display: block; color: var(--navy); }
+    .quick-card span, .role p, .resource p { color: var(--muted); font-size: 13px; }
+    .role { position: relative; overflow: hidden; padding-top: 20px; }
+    .role::before { content: ""; position: absolute; inset: 0 0 auto; height: 5px; }
+    .role.reporter::before { background: #2563eb; }
+    .role.opponent::before { background: var(--red); }
+    .role.reviewer::before { background: var(--gold); }
+    .role .role-en { color: var(--muted); font-size: 12px; font-weight: 800; letter-spacing: .05em; }
+
+    .process { position: relative; display: grid; gap: 10px; margin-top: 18px; }
+    .step { display: grid; grid-template-columns: 42px 1fr; gap: 12px; align-items: start; padding: 12px; border-radius: 13px; background: #f7f9fc; border: 1px solid #e4e9f0; }
+    .step-num { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 12px; background: var(--navy); color: white; font-weight: 950; }
+    .step strong { color: var(--navy); }
+    .step p { margin: 3px 0 0; color: var(--muted); font-size: 13px; }
+
+    .tag-row { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 11px; }
+    .tag { display: inline-flex; padding: 4px 8px; border-radius: 999px; background: var(--blue-soft); color: var(--blue); font-size: 11px; font-weight: 850; }
+    .resource { display: grid; align-content: start; gap: 8px; }
+    .resource-state { justify-self: start; color: #6a4a0c; background: var(--gold-soft); padding: 4px 8px; border-radius: 999px; font-size: 11px; font-weight: 900; }
+    .resource a { font-size: 13px; font-weight: 800; }
+
+    .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: white; }
+    table { width: 100%; border-collapse: collapse; min-width: 690px; }
+    caption { padding: 12px; font-weight: 900; color: var(--navy); text-align: left; }
+    th, td { padding: 10px 11px; border-top: 1px solid var(--line); border-right: 1px solid var(--line); text-align: left; vertical-align: top; font-size: 13px; }
+    th:last-child, td:last-child { border-right: 0; }
+    thead th { border-top: 0; background: #edf2f7; color: var(--navy); }
+    .pending { color: #76520d; background: #fff9e8; font-weight: 800; }
+
+    .placeholder { min-height: 145px; display: grid; place-items: center; text-align: center; color: var(--muted); border-style: dashed; background: #fafbfc; }
+    .placeholder svg { width: 44px; height: 44px; color: #94a3b8; margin-bottom: 5px; }
+    .placeholder strong { display: block; color: #536275; }
+
+    .checklist { margin: 14px 0 0; padding-left: 1.25rem; }
+    .checklist li { margin: 7px 0; }
+    .button-row { display: flex; gap: 9px; flex-wrap: wrap; margin-top: 16px; }
+    .btn { cursor: pointer; border: 1px solid var(--navy); border-radius: 999px; padding: 9px 14px; background: var(--navy); color: white; font-weight: 850; text-decoration: none; }
+    .btn.secondary { background: white; color: var(--navy); }
+    .btn.done { background: var(--green); border-color: var(--green); }
+
+    .source-note { border-left: 4px solid var(--blue); padding: 12px 14px; background: var(--blue-soft); border-radius: 0 12px 12px 0; color: #324d6c; }
+    .search-hidden { display: none !important; }
+    mark { background: #ffe69b; color: inherit; padding: 0 2px; border-radius: 3px; }
+
+    footer { color: var(--muted); background: var(--navy-2); border-top: 5px solid var(--gold); }
+    .footer-inner { width: min(var(--max), calc(100% - 32px)); margin: auto; padding: 28px 0 42px; display: grid; grid-template-columns: 1fr auto; gap: 24px; }
+    footer strong { color: white; }
+    footer a { color: #c9dcf1; }
+    footer p { margin: 4px 0; font-size: 13px; }
+
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr 220px; }
+      .page-shell { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+      .mobile-toc { display: block; }
+      .role-grid, .resource-grid, .quick-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      html { scroll-padding-top: 78px; }
+      .topbar-inner { width: calc(100% - 24px); min-height: 60px; }
+      .nav-actions a:first-child { display: none; }
+      .nav-actions a { padding: 6px 9px; }
+      .hero-inner { width: calc(100% - 24px); padding: 42px 0 36px; grid-template-columns: 1fr; }
+      .hero-art { min-height: 210px; }
+      .hero-art svg { width: 210px; }
+      .page-shell { width: calc(100% - 24px); margin-top: 16px; }
+      .wiki-section { padding: 19px 16px; border-radius: 15px; }
+      .role-grid, .resource-grid, .quick-grid, .placeholder-grid { grid-template-columns: 1fr; }
+      .footer-inner { width: calc(100% - 24px); grid-template-columns: 1fr; }
+      h1 { letter-spacing: -.05em; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+    @media print {
+      .topbar, .sidebar, .mobile-toc, .button-row { display: none !important; }
+      body { background: white; }
+      .hero { color: black; background: white; border: 0; }
+      .hero-art { display: none; }
+      .hero-inner, .page-shell { width: 100%; display: block; padding: 0; margin: 0; }
+      .hero-lead, .hero-en { color: #333; }
+      .wiki-section { break-inside: avoid; box-shadow: none; border-color: #aaa; }
+      footer { color: #333; background: white; border-top: 1px solid #aaa; }
+      footer strong, footer a { color: #111; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">跳至主要內容</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top" aria-label="回到頁面頂端">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none">
+            <circle cx="32" cy="32" r="5" fill="currentColor" />
+            <ellipse cx="32" cy="32" rx="25" ry="10" stroke="currentColor" stroke-width="3" />
+            <ellipse cx="32" cy="32" rx="25" ry="10" stroke="currentColor" stroke-width="3" transform="rotate(60 32 32)" />
+            <ellipse cx="32" cy="32" rx="25" ry="10" stroke="currentColor" stroke-width="3" transform="rotate(120 32 32)" />
+          </svg>
+        </span>
+        <span class="brand-copy"><strong>雄中物辯知識頁</strong><span>KSHS Physics Debate · draft</span></span>
+      </a>
+      <nav class="nav-actions" aria-label="頁面工具">
+        <a href="../../webpages/">盧老師網頁總覽</a>
+        <a href="#contribute">補充資料</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <div>
+        <p class="kicker">Inquiry · Evidence · Debate</p>
+        <h1>高雄中學<br />物理辯論隊</h1>
+        <span class="hero-en">KSHS Physics Debate Team</span>
+        <p class="hero-lead">把開放物理問題轉化為可重現的實驗、可檢驗的模型與可回應質疑的科學論證。這是一個準備用來累積校隊研究、培訓、教材與歷史的公開知識頁草稿。</p>
+        <div class="status-row">
+          <span class="badge draft">● 非官方草稿・待資料核定</span>
+          <span class="badge safe">不刊登未經同意的學生姓名與照片</span>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="以軌道、波形與辯論三角色構成的物理圖像">
+        <svg viewBox="0 0 360 360" role="img" aria-labelledby="artTitle artDesc">
+          <title id="artTitle">物理辯論視覺圖像</title>
+          <desc id="artDesc">三個節點象徵報告者、反方與評論者，中央波形象徵以證據交會。</desc>
+          <defs>
+            <linearGradient id="g" x1="0" x2="1"><stop stop-color="#f7cf73"/><stop offset="1" stop-color="#fff7d7"/></linearGradient>
+          </defs>
+          <circle cx="180" cy="180" r="126" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="2" />
+          <circle cx="180" cy="180" r="82" fill="none" stroke="rgba(255,255,255,.28)" stroke-width="2" stroke-dasharray="7 9" />
+          <path d="M55 181 C86 120 112 242 145 180 S207 120 238 180 S289 245 307 180" fill="none" stroke="url(#g)" stroke-width="6" stroke-linecap="round" />
+          <path d="M180 54 L288 244 L72 244 Z" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.35)" stroke-width="2" />
+          <g font-family="system-ui, sans-serif" text-anchor="middle">
+            <circle cx="180" cy="54" r="32" fill="#245a92" stroke="#fff" stroke-width="3" />
+            <text x="180" y="51" fill="#fff" font-size="13" font-weight="800">REPORTER</text><text x="180" y="67" fill="#dceaff" font-size="10">報告者</text>
+            <circle cx="72" cy="244" r="32" fill="#a9323a" stroke="#fff" stroke-width="3" />
+            <text x="72" y="241" fill="#fff" font-size="12" font-weight="800">OPPONENT</text><text x="72" y="257" fill="#ffe2e4" font-size="10">反方</text>
+            <circle cx="288" cy="244" r="32" fill="#d59a2f" stroke="#fff" stroke-width="3" />
+            <text x="288" y="241" fill="#2b210d" font-size="11" font-weight="900">REVIEWER</text><text x="288" y="257" fill="#493614" font-size="10">評論者</text>
+            <circle cx="180" cy="180" r="22" fill="#fffdf8" /><text x="180" y="176" fill="#142b4a" font-size="11" font-weight="900">EVIDENCE</text><text x="180" y="191" fill="#142b4a" font-size="10">證據</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="mobile-toc">
+    <details>
+      <summary>開啟本頁目次</summary>
+      <div class="mobile-search">
+        <label for="mobileSearch">頁內搜尋</label>
+        <input id="mobileSearch" type="search" placeholder="例如：實驗、簡報、歷史…" autocomplete="off" />
+        <span class="search-status" id="mobileSearchStatus" aria-live="polite"></span>
+      </div>
+      <nav aria-label="手機版目次">
+        <a href="#about">1. 關於物理辯論</a><a href="#roles">2. 三種辯論角色</a><a href="#training">3. 校隊培訓</a>
+        <a href="#problems">4. 題目研究</a><a href="#resources">5. 教材與工具</a><a href="#history">6. 歷史與成果</a>
+        <a href="#people">7. 隊員與指導</a><a href="#contribute">8. 補充資料</a><a href="#sources">9. 來源與授權</a>
+      </nav>
+    </details>
+  </div>
+
+  <div class="page-shell">
+    <aside class="sidebar" aria-label="目次與搜尋">
+      <div class="sidebar-head"><strong>目次</strong><span>點選章節快速前往</span></div>
+      <div class="search-box">
+        <label for="siteSearch">頁內搜尋</label>
+        <input id="siteSearch" type="search" placeholder="例如：實驗、簡報、歷史…" autocomplete="off" />
+        <span class="search-status" id="searchStatus" aria-live="polite"></span>
+      </div>
+      <nav class="toc" id="toc" aria-label="桌面版目次">
+        <a href="#about">1. 關於物理辯論</a><a href="#roles">2. 三種辯論角色</a><a href="#training">3. 校隊培訓</a>
+        <a href="#problems">4. 題目研究</a><a href="#resources">5. 教材與工具</a><a href="#history">6. 歷史與成果</a>
+        <a href="#people">7. 隊員與指導</a><a href="#contribute">8. 補充資料</a><a href="#sources">9. 來源與授權</a>
+      </nav>
+    </aside>
+
+    <main class="content" id="main">
+      <div class="notice"><strong>校對邊界：</strong>目前只放可安全公開的框架與通用說明。校隊成立沿革、歷屆名單、照片、名次、分數與教材連結，須由校方／指導老師／當事人提供或核定後才會公開。</div>
+
+      <section class="wiki-section searchable" id="about">
+        <span class="section-label">Overview</span>
+        <h2>關於物理辯論</h2>
+        <p>物理辯論不是把課本答案講得更快，而是研究沒有單一標準答案的開放問題。學生要提出可檢驗的模型，設計實驗、處理資料與不確定度，再以英文簡報和科學辯論回應其他隊伍的質疑。</p>
+        <p>這個頁面預計成為高雄中學物理辯論隊的長期知識入口：保存研究方法、培訓節點、教材資源、歷屆成果與可公開的校隊記憶。</p>
+        <div class="quick-grid">
+          <div class="quick-card"><strong>研究</strong><span>從現象與問題出發，建立模型、控制變因並累積可重現資料。</span></div>
+          <div class="quick-card"><strong>論證</strong><span>分開主張、證據與推理；能回答「為什麼相信這個結論」。</span></div>
+          <div class="quick-card"><strong>協作</strong><span>在報告者、反方與評論者角色中練習同行評審與團隊決策。</span></div>
+        </div>
+      </section>
+
+      <section class="wiki-section searchable" id="roles">
+        <span class="section-label">Physics Fight</span>
+        <h2>三種辯論角色</h2>
+        <div class="role-grid">
+          <article class="role reporter"><span class="role-en">REPORTER</span><strong>報告者</strong><p>提出對題目的理解、理論模型、實驗方法、資料與結論，並對反方問題作出有證據的回應。</p></article>
+          <article class="role opponent"><span class="role-en">OPPONENT</span><strong>反方</strong><p>辨識報告中的關鍵假設、證據缺口與可改進處；不是挑錯比賽，而是推動更深入的科學討論。</p></article>
+          <article class="role reviewer"><span class="role-en">REVIEWER</span><strong>評論者</strong><p>評估雙方論證的品質，指出真正有共識與仍未解決之處，讓整場討論收斂到重要問題。</p></article>
+        </div>
+      </section>
+
+      <section class="wiki-section searchable" id="training">
+        <span class="section-label">Training Path</span>
+        <h2>校隊培訓</h2>
+        <p class="muted">以下為建議培訓骨架；實際期程與甄選方式待指導團隊核定。</p>
+        <div class="process">
+          <div class="step"><span class="step-num">01</span><div><strong>審題與現象重現</strong><p>拆解題目中的關鍵名詞、可觀察量與邊界條件，先用最小裝置重現現象。</p></div></div>
+          <div class="step"><span class="step-num">02</span><div><strong>模型與實驗設計</strong><p>建立可被資料否證的模型，規劃控制變因、量測方法、校正與不確定度。</p></div></div>
+          <div class="step"><span class="step-num">03</span><div><strong>資料分析與視覺化</strong><p>保留原始資料與程式，使用合適圖表、擬合與殘差檢查，不只追求漂亮曲線。</p></div></div>
+          <div class="step"><span class="step-num">04</span><div><strong>英文簡報與問答</strong><p>把研究壓縮成清楚故事線，讓圖表能被讀懂，並準備對模型限制的誠實回答。</p></div></div>
+          <div class="step"><span class="step-num">05</span><div><strong>模擬賽與迭代</strong><p>輪流擔任三種角色，記錄每次質疑如何改變實驗、分析或主張，再重新測試。</p></div></div>
+        </div>
+      </section>
+
+      <section class="wiki-section searchable" id="problems">
+        <span class="section-label">Research Problems</span>
+        <h2>題目研究</h2>
+        <p>每年度可在此建立題目卡，連到研究日誌、實驗版本、資料、模型、簡報與辯論紀錄。正式題目應以IYPT／TYPT主辦單位公告為準。</p>
+        <div class="resource-grid">
+          <article class="resource"><span class="resource-state">資料待補</span><strong>題目A｜現象與最小模型</strong><p>填入研究問題、主要變因、目前假說與第一版可重現裝置。</p><div class="tag-row"><span class="tag">現象重現</span><span class="tag">模型</span></div></article>
+          <article class="resource"><span class="resource-state">資料待補</span><strong>題目B｜量測與不確定度</strong><p>填入量測方法、校正流程、解析度、誤差來源與資料品質判準。</p><div class="tag-row"><span class="tag">實驗</span><span class="tag">資料</span></div></article>
+          <article class="resource"><span class="resource-state">資料待補</span><strong>題目C｜論證與反方問題</strong><p>填入核心主張、支持證據、限制、預期質疑與修改紀錄。</p><div class="tag-row"><span class="tag">CER</span><span class="tag">辯論</span></div></article>
+        </div>
+        <div class="button-row">
+          <a class="btn" href="https://iypt.org/problems/" target="_blank" rel="noopener noreferrer">IYPT Problems ↗</a>
+          <a class="btn secondary" href="https://typt.phy.ntnu.edu.tw/" target="_blank" rel="noopener noreferrer">TYPT官方網站 ↗</a>
+        </div>
+      </section>
+
+      <section class="wiki-section searchable" id="resources">
+        <span class="section-label">Resources</span>
+        <h2>教材與研究工具</h2>
+        <div class="resource-grid">
+          <article class="resource"><span class="resource-state">待公開</span><strong>研究日誌模板</strong><p>問題、版本、器材、變因、原始資料、異常與下一步。</p></article>
+          <article class="resource"><span class="resource-state">待公開</span><strong>資料與繪圖模板</strong><p>Python／試算表整理規則、圖軸、單位、誤差棒與輸出格式。</p></article>
+          <article class="resource"><span class="resource-state">待公開</span><strong>Reporter簡報模板</strong><p>現象、模型、方法、結果、限制與結論的投影片骨架。</p></article>
+          <article class="resource"><span class="resource-state">待公開</span><strong>Opponent提問表</strong><p>以假設、方法、資料、推論與可重現性分類，不做人身攻防。</p></article>
+          <article class="resource"><span class="resource-state">待公開</span><strong>Reviewer收斂表</strong><p>記錄雙方共識、主要歧見、證據強弱與下一個可檢驗問題。</p></article>
+          <article class="resource"><span class="resource-state">待核定</span><strong>校隊培訓手冊</strong><p>待整合指導教師與歷屆隊員可公開的實務經驗。</p></article>
+        </div>
+      </section>
+
+      <section class="wiki-section searchable" id="history">
+        <span class="section-label">Archive</span>
+        <h2>歷史與成果</h2>
+        <p>這一區只接受可查證的年份、隊名、名次、獎項與公開來源。若資料來自私人相簿、群組或隊員回憶，應先取得公開同意並標示資料性質。</p>
+        <div class="table-wrap">
+          <table>
+            <caption>歷屆參賽與成果紀錄｜待核定資料</caption>
+            <thead><tr><th>年度／屆次</th><th>隊伍</th><th>研究題目</th><th>成果</th><th>公開來源</th><th>狀態</th></tr></thead>
+            <tbody>
+              <tr><td>待補</td><td>待補</td><td>待補</td><td>待補</td><td>待補</td><td class="pending">尚未核定</td></tr>
+              <tr><td>待補</td><td>待補</td><td>待補</td><td>待補</td><td>待補</td><td class="pending">尚未核定</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>照片與研究現場</h3>
+        <div class="placeholder-grid">
+          <div class="placeholder"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9" r="1.5"/><path d="m5 17 4.5-4 3 2.5 2.5-2 4 3.5"/></svg><strong>實驗研究照片</strong><span>須確認學生影像公開同意</span></div></div>
+          <div class="placeholder"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9" r="1.5"/><path d="m5 17 4.5-4 3 2.5 2.5-2 4 3.5"/></svg><strong>模擬賽照片</strong><span>須標示日期、場合與攝影來源</span></div></div>
+          <div class="placeholder"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9" r="1.5"/><path d="m5 17 4.5-4 3 2.5 2.5-2 4 3.5"/></svg><strong>公開成果照片</strong><span>名次與人物皆須來源核定</span></div></div>
+        </div>
+      </section>
+
+      <section class="wiki-section searchable" id="people">
+        <span class="section-label">People</span>
+        <h2>隊員與指導</h2>
+        <p>本區將依「最少必要公開」原則維護。學生姓名、年級、照片與個人賽事表現，不因出現在私人群組或校內文件就自動公開。</p>
+        <div class="quick-grid">
+          <div class="quick-card"><strong>指導教師</strong><span>姓名、任教單位與指導年度待本人／校方核定。</span></div>
+          <div class="quick-card"><strong>歷屆隊員</strong><span>只刊登已同意公開且有年份、隊伍來源的名單。</span></div>
+          <div class="quick-card"><strong>協作夥伴</strong><span>跨校模擬賽、校友與外部專家需標示合作範圍。</span></div>
+        </div>
+      </section>
+
+      <section class="wiki-section searchable" id="contribute">
+        <span class="section-label">Contribute</span>
+        <h2>如何補充這個知識頁</h2>
+        <p>請先提供資料，不需要自己排版。每一筆校史或成果至少附上一個可以核對的來源。</p>
+        <ol class="checklist" id="contributionChecklist">
+          <li>正式中文／英文隊名與頁面定位。</li>
+          <li>校隊成立年份、甄選方式與培訓期程。</li>
+          <li>歷屆年份、隊伍名稱、研究題目、名次或獎項。</li>
+          <li>可公開教材的檔案或連結，以及作者／授權方式。</li>
+          <li>照片的日期、場合、攝影者與公開同意範圍。</li>
+          <li>學生姓名是否可公開；若不可，改用隊名或年度摘要。</li>
+          <li>每一項資料的來源網址、公告、文件或具名確認者。</li>
+        </ol>
+        <div class="button-row"><button class="btn" id="copyChecklist" type="button">複製資料補充清單</button><a class="btn secondary" href="#sources">查看來源規則</a></div>
+      </section>
+
+      <section class="wiki-section searchable" id="sources">
+        <span class="section-label">Sources & License</span>
+        <h2>來源、授權與技術說明</h2>
+        <div class="source-note">
+          <strong>版型參考：</strong>竹園Wiki〈物理辯論隊〉頁面，原站採用MediaWiki 1.39.2與Vector介面，文字依<a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh_TW" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>提供。本頁保留「目次＋知識條目＋歷史表格」概念，但未複製該校校史、人名、成績與照片。
+        </div>
+        <h3>原站是怎麼做的？</h3>
+        <p>MediaWiki是一套PHP＋資料庫的Wiki系統，登入者可用VisualEditor或Wikitext編輯；目次、章節編輯、版本歷史、圖片管理、搜尋與權限控制由後端自動提供。適合多人長期共筆，但需要伺服器、資料庫、更新與反垃圾管理。</p>
+        <h3>這個版本是怎麼做的？</h3>
+        <p>本頁使用單一HTML檔、CSS與少量原生JavaScript，不需後端或資料庫，由GitHub Pages託管。優點是快、穩定、手機友善、維護成本低；限制是沒有多人帳號與逐頁版本編輯，內容更新需修改原始檔後重新發布。</p>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div><strong>高雄中學物理辯論隊｜非官方資料草稿</strong><p>本頁尚未代表高雄中學或校隊正式立場；校史、人名、照片與成果須核定後發布。</p></div>
+      <div><p><a href="https://tnfshwiki.tfcis.org/%E7%89%A9%E7%90%86%E8%BE%AF%E8%AB%96%E9%9A%8A" target="_blank" rel="noopener noreferrer">參考頁面 ↗</a></p><p>Prototype · 2026-09-04</p></div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const search = document.getElementById('siteSearch');
+      const mobileSearch = document.getElementById('mobileSearch');
+      const status = document.getElementById('searchStatus');
+      const mobileStatus = document.getElementById('mobileSearchStatus');
+      const sections = [...document.querySelectorAll('.searchable')];
+      const tocLinks = [...document.querySelectorAll('#toc a')];
+      const normalize = value => value.toLocaleLowerCase('zh-Hant-TW').trim();
+
+      function applySearch(value) {
+        search.value = value;
+        mobileSearch.value = value;
+        const query = normalize(value);
+        let shown = 0;
+        sections.forEach(section => {
+          const match = !query || normalize(section.textContent).includes(query);
+          section.classList.toggle('search-hidden', !match);
+          if (match) shown += 1;
+        });
+        const message = query ? `找到 ${shown} 個相關章節` : '';
+        status.textContent = message;
+        mobileStatus.textContent = message;
+      }
+      search.addEventListener('input', event => applySearch(event.target.value));
+      mobileSearch.addEventListener('input', event => applySearch(event.target.value));
+
+      const observer = new IntersectionObserver(entries => {
+        const visible = entries.filter(entry => entry.isIntersecting).sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (!visible) return;
+        tocLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${visible.target.id}`));
+      }, { rootMargin: '-18% 0px -65% 0px', threshold: [0, .15, .4] });
+      sections.forEach(section => observer.observe(section));
+
+      const copyButton = document.getElementById('copyChecklist');
+      copyButton.addEventListener('click', async () => {
+        const items = [...document.querySelectorAll('#contributionChecklist li')].map((item, index) => `${index + 1}. ${item.textContent.trim()}`);
+        const text = `高雄中學物理辯論隊資料補充清單\n\n${items.join('\n')}`;
+        try {
+          await navigator.clipboard.writeText(text);
+          copyButton.textContent = '已複製 ✓';
+          copyButton.classList.add('done');
+          setTimeout(() => { copyButton.textContent = '複製資料補充清單'; copyButton.classList.remove('done'); }, 2200);
+        } catch (error) {
+          const area = document.createElement('textarea');
+          area.value = text; document.body.appendChild(area); area.select(); document.execCommand('copy'); area.remove();
+          copyButton.textContent = '已複製 ✓';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

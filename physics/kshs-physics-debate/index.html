@@ -512,18 +512,24 @@
       sections.forEach(section => observer.observe(section));
 
       const copyButton = document.getElementById('copyChecklist');
+      function showCopied() {
+        copyButton.textContent = '已複製 ✓';
+        copyButton.classList.add('done');
+        setTimeout(() => {
+          copyButton.textContent = '複製資料補充清單';
+          copyButton.classList.remove('done');
+        }, 2200);
+      }
       copyButton.addEventListener('click', async () => {
         const items = [...document.querySelectorAll('#contributionChecklist li')].map((item, index) => `${index + 1}. ${item.textContent.trim()}`);
         const text = `高雄中學物理辯論隊資料補充清單\n\n${items.join('\n')}`;
         try {
           await navigator.clipboard.writeText(text);
-          copyButton.textContent = '已複製 ✓';
-          copyButton.classList.add('done');
-          setTimeout(() => { copyButton.textContent = '複製資料補充清單'; copyButton.classList.remove('done'); }, 2200);
+          showCopied();
         } catch (error) {
           const area = document.createElement('textarea');
           area.value = text; document.body.appendChild(area); area.select(); document.execCommand('copy'); area.remove();
-          copyButton.textContent = '已複製 ✓';
+          showCopied();
         }
       });
     })();

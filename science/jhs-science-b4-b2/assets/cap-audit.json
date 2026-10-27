@@ -1,0 +1,2839 @@
+{
+  "checked_date": "2026-10-27",
+  "years": [
+    111,
+    112,
+    113,
+    114,
+    115
+  ],
+  "questions_per_year": 50,
+  "total_questions": 250,
+  "included_questions": 74,
+  "boundary_questions": 6,
+  "other_questions": 170,
+  "topics": {
+    "b4-reaction": {
+      "title": "化學反應與相對質量",
+      "count": 6,
+      "years": [
+        111,
+        112,
+        113,
+        114,
+        115
+      ],
+      "references": [
+        "111-9",
+        "112-27",
+        "113-7",
+        "113-37",
+        "114-32",
+        "115-19"
+      ]
+    },
+    "b4-redox": {
+      "title": "氧化與還原",
+      "count": 3,
+      "years": [
+        113,
+        115
+      ],
+      "references": [
+        "113-23",
+        "115-49",
+        "115-50"
+      ]
+    },
+    "b4-acidbase": {
+      "title": "電解質、酸鹼與鹽",
+      "count": 8,
+      "years": [
+        111,
+        112,
+        113,
+        114,
+        115
+      ],
+      "references": [
+        "111-21",
+        "111-29",
+        "111-41",
+        "112-3",
+        "112-32",
+        "113-17",
+        "114-19",
+        "115-40"
+      ]
+    },
+    "b4-rate": {
+      "title": "反應速率與平衡",
+      "count": 3,
+      "years": [
+        113,
+        114,
+        115
+      ],
+      "references": [
+        "113-11",
+        "114-43",
+        "115-12"
+      ]
+    },
+    "b4-organic": {
+      "title": "有機物、材料與生活",
+      "count": 8,
+      "years": [
+        111,
+        112,
+        113,
+        114
+      ],
+      "references": [
+        "111-10",
+        "111-22",
+        "112-11",
+        "112-17",
+        "113-2",
+        "113-19",
+        "114-21",
+        "114-44"
+      ]
+    },
+    "b4-force": {
+      "title": "力、壓力與浮力",
+      "count": 10,
+      "years": [
+        111,
+        112,
+        113,
+        114,
+        115
+      ],
+      "references": [
+        "111-1",
+        "111-7",
+        "111-36",
+        "112-33",
+        "113-16",
+        "113-34",
+        "114-9",
+        "114-18",
+        "115-32",
+        "115-33"
+      ]
+    },
+    "b2-reproduction": {
+      "title": "生殖與生命延續",
+      "count": 5,
+      "years": [
+        112,
+        113,
+        114,
+        115
+      ],
+      "references": [
+        "112-35",
+        "113-21",
+        "113-30",
+        "114-35",
+        "115-13"
+      ]
+    },
+    "b2-genetics": {
+      "title": "遺傳、變異與生物技術",
+      "count": 6,
+      "years": [
+        111,
+        112,
+        113,
+        114,
+        115
+      ],
+      "references": [
+        "111-11",
+        "111-39",
+        "112-38",
+        "113-12",
+        "114-30",
+        "115-25"
+      ]
+    },
+    "b2-evolution": {
+      "title": "演化與生命歷史",
+      "count": 0,
+      "years": [],
+      "references": []
+    },
+    "b2-classification": {
+      "title": "生物分類與多樣性",
+      "count": 9,
+      "years": [
+        111,
+        112,
+        113,
+        114,
+        115
+      ],
+      "references": [
+        "111-45",
+        "112-4",
+        "112-20",
+        "113-20",
+        "113-22",
+        "113-39",
+        "114-24",
+        "114-34",
+        "115-29"
+      ]
+    },
+    "b2-ecology": {
+      "title": "生態系與交互作用",
+      "count": 5,
+      "years": [
+        111,
+        113,
+        114,
+        115
+      ],
+      "references": [
+        "111-4",
+        "111-23",
+        "113-14",
+        "114-3",
+        "115-21"
+      ]
+    },
+    "b2-environment": {
+      "title": "人類、環境與保育",
+      "count": 11,
+      "years": [
+        111,
+        112,
+        113,
+        115
+      ],
+      "references": [
+        "111-27",
+        "112-1",
+        "112-7",
+        "112-14",
+        "112-44",
+        "113-42",
+        "113-43",
+        "113-44",
+        "113-45",
+        "115-42",
+        "115-43"
+      ]
+    }
+  },
+  "items": [
+    {
+      "year": 111,
+      "question": 1,
+      "primary_topic": "b4-force",
+      "secondary_topics": [],
+      "concept": "氣壓的量度與百帕單位",
+      "scope_note": "題材為天氣，但作答核心只需辨認壓力單位，納入共通壓力概念。",
+      "pdf_page": 2,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 2,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "落下過程中重力位能轉為動能",
+      "scope_note": "Book5功與能，排除。",
+      "pdf_page": 2,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 3,
+      "primary_topic": "uncertain",
+      "secondary_topics": [
+        "b4-redox"
+      ],
+      "concept": "利用氮氣低反應活性減少物品氧化",
+      "scope_note": "題目直接考氮氣性質，與Book3氣體性質及Book4防氧化交界；不強列紅氧頻率。",
+      "pdf_page": 2,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 4,
+      "primary_topic": "b2-ecology",
+      "secondary_topics": [
+        "b2-environment"
+      ],
+      "concept": "依光照與水深選擇人工魚礁的海域棲地",
+      "scope_note": "主要為水域生態系的棲地條件；人工棲地保育為次要。",
+      "pdf_page": 2,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 5,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "比較植物向性與快速感應的反應時間",
+      "scope_note": "Book1植物感應，排除。",
+      "pdf_page": 2,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 6,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "南北半球季節與晝夜長短",
+      "scope_note": "地科季節，排除。",
+      "pdf_page": 2,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 7,
+      "primary_topic": "b4-force",
+      "secondary_topics": [],
+      "concept": "以控制溫度的反例辨認高山包裝膨脹的氣壓因素",
+      "scope_note": "大氣壓現象與證據評估，非氣候型態判讀。",
+      "pdf_page": 3,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 8,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "原子、細胞與天體的體積尺度排序",
+      "scope_note": "尺度與測量，非目標單元。",
+      "pdf_page": 3,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 9,
+      "primary_topic": "b4-reaction",
+      "secondary_topics": [],
+      "concept": "從性質是否改變區別混色與化學變質",
+      "scope_note": "化學變化判別。",
+      "pdf_page": 3,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 10,
+      "primary_topic": "b4-organic",
+      "secondary_topics": [
+        "b4-acidbase"
+      ],
+      "concept": "依羧基與組成辨認有機酸及電解質",
+      "scope_note": "雙概念題，主碼有機物，電解質僅次碼。",
+      "pdf_page": 3,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 11,
+      "primary_topic": "b2-genetics",
+      "secondary_topics": [],
+      "concept": "從ABO顯隱性基因推論親代可產生的子代血型",
+      "scope_note": "基因型與遺傳組合。",
+      "pdf_page": 4,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 12,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "以斜坡撞擊房屋模型辨識控制變因與操縱變因",
+      "scope_note": "研究設計，不因有斜面或重量就納入力學。",
+      "pdf_page": 4,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 13,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "地殼地函與岩石圈軟流圈的層界",
+      "scope_note": "地球內部構造。",
+      "pdf_page": 4,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 14,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "區別光直進、折射及反射裝置",
+      "scope_note": "光學。",
+      "pdf_page": 4,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 15,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "從含水地層剖面辨認地下水面",
+      "scope_note": "地下水地科，非液壓。",
+      "pdf_page": 5,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 16,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "直導線電流所生磁場的方向及強弱",
+      "scope_note": "電磁學。",
+      "pdf_page": 5,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 17,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "依觀察尺度選用複式或解剖顯微鏡",
+      "scope_note": "儀器選擇；提到花器不等於考生殖。",
+      "pdf_page": 5,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 18,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "依葉綠體與粒線體分布比較光合和呼吸細胞數",
+      "scope_note": "Book1細胞生理，非生態循環。",
+      "pdf_page": 5,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 19,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由吸收地表輻射說明氣體的溫室效應",
+      "scope_note": "單考輻射與地科大氣，沒有生態影響或保育判斷，排除。",
+      "pdf_page": 5,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 20,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "判讀月均溫和降雨圖，辨別年溫差與日溫差",
+      "scope_note": "地科氣候圖。",
+      "pdf_page": 6,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 21,
+      "primary_topic": "b4-acidbase",
+      "secondary_topics": [
+        "b4-reaction"
+      ],
+      "concept": "辨認氧化鈣與水反應製得的鹼性物質",
+      "scope_note": "石灰與氫氧化鈣，屬常見鹼的製備。",
+      "pdf_page": 6,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 22,
+      "primary_topic": "b4-organic",
+      "secondary_topics": [],
+      "concept": "根據酯類存在於水果的例子評估萃取溶劑敘述",
+      "scope_note": "酯的性質與用途。",
+      "pdf_page": 6,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 23,
+      "primary_topic": "b2-ecology",
+      "secondary_topics": [],
+      "concept": "由食物鏈位置比較營養階層總能量",
+      "scope_note": "能量塔與食物鏈。",
+      "pdf_page": 7,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 24,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "從地面天氣系統與風向推論區域天氣",
+      "scope_note": "地科天氣圖。",
+      "pdf_page": 7,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 25,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "依速度時間圖比較車輛間距的變化",
+      "scope_note": "Book5運動學。",
+      "pdf_page": 7,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 26,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "以心室血氧辨認相連血管與循環路徑",
+      "scope_note": "Book1循環系統。",
+      "pdf_page": 7,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 27,
+      "primary_topic": "b2-environment",
+      "secondary_topics": [],
+      "concept": "依發電比例與單位排碳比較能源轉型的碳足跡",
+      "scope_note": "明確考排碳減量的環境指標，不將一般電功計算一併納入。",
+      "pdf_page": 8,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 28,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "固定加熱功率下比較不同水量的升溫斜率",
+      "scope_note": "熱量與比熱。",
+      "pdf_page": 8,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 29,
+      "primary_topic": "b4-acidbase",
+      "secondary_topics": [
+        "b2-environment"
+      ],
+      "concept": "以曝氣與熟石灰分別調整養殖水的溶氧及酸鹼值",
+      "scope_note": "關鍵化學知識為鹼使pH上升；水質生態為次碼。",
+      "pdf_page": 8,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 30,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由電流電子流辨認電池電極的半反應",
+      "scope_note": "Book6電化學，不列Book4得失氧。",
+      "pdf_page": 9,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 31,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由離子電荷與粒子數辨認質子電子中子",
+      "scope_note": "Book3原子結構。",
+      "pdf_page": 9,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 32,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "利用澱粉碘液檢測推認蜂蜜酵素的作用",
+      "scope_note": "Book1營養與酵素，非化學速率題。",
+      "pdf_page": 9,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 33,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "比較兩力對槓桿產生的合力矩",
+      "scope_note": "Book5力矩，排除。",
+      "pdf_page": 9,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 34,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由繩上質點位置時間資料推估波的週期",
+      "scope_note": "波動。",
+      "pdf_page": 10,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 35,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由血中尿素與氧氣變化辨認器官功能",
+      "scope_note": "Book1排泄與循環。",
+      "pdf_page": 10,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 36,
+      "primary_topic": "b4-force",
+      "secondary_topics": [],
+      "concept": "以正向力影響最大靜摩擦力說明重櫃難啟動",
+      "scope_note": "核心為靜摩擦；F=ma是題中待否證說法，不以此排除此題。",
+      "pdf_page": 10,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 37,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由岸邊水位觀察限定乾潮可能時段",
+      "scope_note": "地科潮汐。",
+      "pdf_page": 10,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 38,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "區別空心物整體體積與金屬材料體積以解釋密度",
+      "scope_note": "只考密度測量，沒有浮力求解，排除。",
+      "pdf_page": 11,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 39,
+      "primary_topic": "b2-genetics",
+      "secondary_topics": [
+        "b2-reproduction"
+      ],
+      "concept": "比較卵、受精卵、體細胞與成熟紅血球的性染色體",
+      "scope_note": "以染色體成對與否為主，細胞類別為輔。",
+      "pdf_page": 11,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 40,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "用地層上下關係與岩脈截切判斷相對年代",
+      "scope_note": "地史。",
+      "pdf_page": 11,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 41,
+      "primary_topic": "b4-acidbase",
+      "secondary_topics": [
+        "b4-redox"
+      ],
+      "concept": "金屬及非金屬燃燒產物溶水後混合，預測酚酞顏色",
+      "scope_note": "已看圖22：鈉和硫分別燃燒，混合後是否過量決定酚酞。",
+      "pdf_page": 11,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 42,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "選擇密閉發酵與排水集氣的正確裝置",
+      "scope_note": "氣體收集操作，屬Book3實驗，不因有壓差就歸力。",
+      "pdf_page": 12,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 43,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "分辨沼氣中的二氧化碳檢驗與助燃性檢驗",
+      "scope_note": "氣體鑑別，屬Book3；非化學計量或得失氧推論。",
+      "pdf_page": 13,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 44,
+      "primary_topic": "uncertain",
+      "secondary_topics": [
+        "b4-rate"
+      ],
+      "concept": "以每日產氣量衡量發酵快慢並限制由資料可得的結論",
+      "scope_note": "可作反應速率的應用，但題旨也可能為微生物生理與資料判讀；保留待課綱裁定。",
+      "pdf_page": 13,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 45,
+      "primary_topic": "b2-classification",
+      "secondary_topics": [],
+      "concept": "依莖剖面的維管束排列區分植物類群",
+      "scope_note": "問植物類群，不把下一題輸導作用同算分類。",
+      "pdf_page": 13,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 46,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "辨認植物醣類與水的運輸組織及方向",
+      "scope_note": "Book1輸導組織。",
+      "pdf_page": 13,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 47,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "把並聯電路圖轉為實際導線與電表接法",
+      "scope_note": "電路。",
+      "pdf_page": 14,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 48,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "用分支電流守恆檢查安培計紀錄",
+      "scope_note": "電路。",
+      "pdf_page": 14,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 49,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "依太陽月球地球位置與觀測月相評估卡牌組合",
+      "scope_note": "地科月相。",
+      "pdf_page": 15,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 111,
+      "question": 50,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由視聽刺激到按鈴動作辨認神經傳遞路徑",
+      "scope_note": "Book1神經系統。",
+      "pdf_page": 15,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 1,
+      "primary_topic": "b2-environment",
+      "secondary_topics": [
+        "b2-ecology"
+      ],
+      "concept": "評估單一樹種造林對物種多樣性與生態穩定的影響",
+      "scope_note": "人為改變多樣性的保育問題為主。",
+      "pdf_page": 2,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 2,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "辨認受擠壓彎曲的岩層構造",
+      "scope_note": "褶皺地科。",
+      "pdf_page": 2,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 3,
+      "primary_topic": "b4-acidbase",
+      "secondary_topics": [],
+      "concept": "辨認運動飲料中補充鈉鉀鹽類的電解質",
+      "scope_note": "圖2呈現鈉鉀等成分，核心為電解質類別。",
+      "pdf_page": 2,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 4,
+      "primary_topic": "b2-classification",
+      "secondary_topics": [],
+      "concept": "以菌絲、細胞壁及無葉綠體辨認真菌特徵",
+      "scope_note": "真菌類群構造。",
+      "pdf_page": 2,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 5,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由潮汐曲線比較兩天潮差",
+      "scope_note": "地科潮汐。",
+      "pdf_page": 2,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 6,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "選擇不碰杯底的水溫量測方式",
+      "scope_note": "熱學實驗器材操作。",
+      "pdf_page": 3,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 7,
+      "primary_topic": "b2-environment",
+      "secondary_topics": [
+        "b4-redox"
+      ],
+      "concept": "依製氫能源來源辨認低碳綠氫",
+      "scope_note": "主考減碳與能源來源；燃燒是背景，不列紅氧主碼。",
+      "pdf_page": 3,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 8,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "飯後血糖上升引起胰島素分泌",
+      "scope_note": "Book1內分泌。",
+      "pdf_page": 3,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 9,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由物體反射聚光燈光線說明可見性",
+      "scope_note": "光學。",
+      "pdf_page": 3,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 10,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "以截切和侵蝕關係排列岩層形成事件",
+      "scope_note": "地史。",
+      "pdf_page": 4,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 11,
+      "primary_topic": "b4-organic",
+      "secondary_topics": [
+        "b4-reaction"
+      ],
+      "concept": "辨認油脂皂化後加入食鹽使肥皂析出的實驗目的",
+      "scope_note": "已看圖6：油脂、酒精與NaOH，後加飽和食鹽水，非催化製氧。",
+      "pdf_page": 4,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 12,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "電子發現對原子不可分說法的修正",
+      "scope_note": "Book3原子模型。",
+      "pdf_page": 4,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 13,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "用頻率響度圖表示白噪音",
+      "scope_note": "聲學。",
+      "pdf_page": 5,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 14,
+      "primary_topic": "b2-environment",
+      "secondary_topics": [
+        "b2-ecology"
+      ],
+      "concept": "利用DDT濃度辨認食物鏈中的生物放大",
+      "scope_note": "污染物沿營養階層累積。",
+      "pdf_page": 5,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 15,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "依季風與洋流評估臺灣向日本航海條件",
+      "scope_note": "地科季風洋流。",
+      "pdf_page": 5,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 16,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "光合反應中的水及木質部輸送",
+      "scope_note": "Book1光合作用與輸導，沒有生態循環。",
+      "pdf_page": 6,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 17,
+      "primary_topic": "b4-organic",
+      "secondary_topics": [],
+      "concept": "比較有機及無機物的元素組成限制",
+      "scope_note": "有機物界定。",
+      "pdf_page": 6,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 18,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "同距離競賽由最短時間推論平均速率",
+      "scope_note": "運動學。",
+      "pdf_page": 6,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 19,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "利用力學能守恆比較滑球能達到的高度",
+      "scope_note": "Book5功與能。",
+      "pdf_page": 6,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 20,
+      "primary_topic": "b2-classification",
+      "secondary_topics": [],
+      "concept": "依科屬資料判斷植物分類階層關係",
+      "scope_note": "分類階層可確定性。",
+      "pdf_page": 6,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 21,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由行星特性判定比較圖的座標物理量",
+      "scope_note": "天文。",
+      "pdf_page": 7,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 22,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "以發燒曲線與潛伏期反推感染時段",
+      "scope_note": "恆定與疾病資料判讀，非微生物分類。",
+      "pdf_page": 7,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 23,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "依速度時間圖斜率比較外力與施力時間",
+      "scope_note": "Book5牛頓第二定律。",
+      "pdf_page": 7,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 24,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "依膜通透性預測葡萄糖與澱粉檢驗結果",
+      "scope_note": "Book1細胞物質運輸與營養檢測。",
+      "pdf_page": 7,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 25,
+      "primary_topic": "uncertain",
+      "secondary_topics": [
+        "b4-rate"
+      ],
+      "concept": "調整氧氣和二氧化碳比例延緩蘋果熟化",
+      "scope_note": "氣體環境對熟化涉及呼吸與可能的反應條件；不能確定是Book1生理或Book4速率平衡，不強計。",
+      "pdf_page": 8,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 26,
+      "primary_topic": "uncertain",
+      "secondary_topics": [
+        "b4-redox"
+      ],
+      "concept": "以銀硫化與金屬活性評估銀針試毒的限制",
+      "scope_note": "母代理一致性複核：題文為硫化銀的廣義氧化，與114-28同屬非得失氧情境；為使狹義主編碼邊界一致，均不計入頻度，保留跨界案例。",
+      "pdf_page": 8,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 27,
+      "primary_topic": "b4-reaction",
+      "secondary_topics": [
+        "b4-organic",
+        "b4-redox"
+      ],
+      "concept": "從完全燃燒方程式推回分子組成、分子量及物質類別",
+      "scope_note": "需用方程式計量推定未知物；有機類別只作次碼。",
+      "pdf_page": 8,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 28,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "以高壓下沉氣流解釋晴朗天氣",
+      "scope_note": "地科天氣系統，非壓力力學。",
+      "pdf_page": 8,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 29,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "比較旅途中氣溫氣壓隨海拔的變化趨勢",
+      "scope_note": "大氣垂直構造與氣象圖，非壓力作用或測量。",
+      "pdf_page": 9,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 30,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "從質量體積標示與油水密度評估商品資料",
+      "scope_note": "只考密度與單位，浮於水面只是密度線索，不計浮力。",
+      "pdf_page": 9,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 31,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "結合顯微鏡移片方向與血流分支辨認小血管",
+      "scope_note": "Book1顯微鏡與循環。",
+      "pdf_page": 10,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 32,
+      "primary_topic": "b4-acidbase",
+      "secondary_topics": [],
+      "concept": "從餐後口腔pH曲線判讀唾液對酸性的調節",
+      "scope_note": "pH與酸鹼程度。",
+      "pdf_page": 10,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 33,
+      "primary_topic": "b4-force",
+      "secondary_topics": [],
+      "concept": "由外力、摩擦力與靜動狀態界定最大靜摩擦力範圍",
+      "scope_note": "不需F=ma。",
+      "pdf_page": 10,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 34,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由額定功率計算單位時間電能",
+      "scope_note": "電功率。",
+      "pdf_page": 11,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 35,
+      "primary_topic": "b2-reproduction",
+      "secondary_topics": [],
+      "concept": "分辨花托膨大與子房發育成果實",
+      "scope_note": "花與果實種子發育。",
+      "pdf_page": 11,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 36,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由一年兩次太陽直射日期推定地點緯度",
+      "scope_note": "地科天文。",
+      "pdf_page": 11,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 37,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "載流導線在磁場中的受力方向",
+      "scope_note": "電磁力，不因力字列Book4。",
+      "pdf_page": 11,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 38,
+      "primary_topic": "b2-genetics",
+      "secondary_topics": [],
+      "concept": "由突變致病與未患病親代推定基因型",
+      "scope_note": "顯隱性及新生突變。",
+      "pdf_page": 12,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 39,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "以日月食日期推算月相時序",
+      "scope_note": "地科月相。",
+      "pdf_page": 12,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 40,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "利用日常泳池反例檢驗液態氮造成中毒的反應說",
+      "scope_note": "主要為氣體性質與證據反駁，非反應速率專題。",
+      "pdf_page": 12,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 41,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "用溶解度與沸點安排混合物分離步驟",
+      "scope_note": "Book3混合物分離。",
+      "pdf_page": 12,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 42,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "比較並聯導線斷路對燈泡的影響",
+      "scope_note": "電路。",
+      "pdf_page": 13,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 43,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "依蛋白質和糖標示選擇飲品",
+      "scope_note": "Book1營養，不因共用環保題組就列環境。",
+      "pdf_page": 13,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 44,
+      "primary_topic": "b2-environment",
+      "secondary_topics": [],
+      "concept": "比較相同碳排放下可生產的飲品量",
+      "scope_note": "飲食碳足跡。",
+      "pdf_page": 13,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 45,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "辨認風機功率係數代表的能量轉換效率",
+      "scope_note": "能量效率；再生能源背景不等同環境考點。",
+      "pdf_page": 14,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 46,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由風機效率曲線讀出最佳出流風速",
+      "scope_note": "能量圖表，不涉及生態效應。",
+      "pdf_page": 14,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 47,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "以配對實驗數據檢查農藥洗滌效果的說法",
+      "scope_note": "控制變因與證據判讀；無生態毒性或污染循環考點。",
+      "pdf_page": 15,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 48,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "為比較清洗方式而統一農藥前處理",
+      "scope_note": "研究設計，非環境毒性。",
+      "pdf_page": 15,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 49,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "區分地震強度與規模在液化模擬中的作用",
+      "scope_note": "地科災害。",
+      "pdf_page": 15,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 112,
+      "question": 50,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "在固定震動條件下以地下水位判讀液化潛勢",
+      "scope_note": "地科液化。",
+      "pdf_page": 15,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 1,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "比較同起終點不同路線的位移與路徑長",
+      "scope_note": "Book5運動學。",
+      "pdf_page": 2,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 2,
+      "primary_topic": "b4-organic",
+      "secondary_topics": [],
+      "concept": "依原子種類及連結方式判定糖醇是否屬醇類",
+      "scope_note": "有機物結構與官能基。",
+      "pdf_page": 2,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 3,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "從逐時區域氣溫預報選擇合適天氣標題",
+      "scope_note": "地科氣象。",
+      "pdf_page": 2,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 4,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "辨別週期表可提供與不可提供的元素資訊",
+      "scope_note": "Book3週期表；選項提分子量不足以改列化學計量。",
+      "pdf_page": 2,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 5,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "副甲狀腺激素的血液運輸與鈣調節",
+      "scope_note": "Book1內分泌。",
+      "pdf_page": 3,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 6,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "判斷破損電線錯誤修復造成短路的風險",
+      "scope_note": "電路安全。",
+      "pdf_page": 3,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 7,
+      "primary_topic": "b4-reaction",
+      "secondary_topics": [],
+      "concept": "由生石灰遇水放熱解釋浸泡溫度改變",
+      "scope_note": "化學反應吸放熱，溶解度為應用。",
+      "pdf_page": 3,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 8,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "以地球自轉與日光方向解釋日落",
+      "scope_note": "地科天文。",
+      "pdf_page": 3,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 9,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "高鹽外液使植物細胞失水的滲透作用",
+      "scope_note": "Book1細胞運輸。",
+      "pdf_page": 4,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 10,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由中洋脊距離比較海洋地殼年齡",
+      "scope_note": "地科板塊。",
+      "pdf_page": 4,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 11,
+      "primary_topic": "b4-rate",
+      "secondary_topics": [],
+      "concept": "辨認可逆反應達動態平衡時正逆速率相等且非零",
+      "scope_note": "化學平衡。",
+      "pdf_page": 4,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 12,
+      "primary_topic": "b2-genetics",
+      "secondary_topics": [],
+      "concept": "比較異型合子交配理論表現型比與小樣本外推",
+      "scope_note": "孟德爾遺傳及樣本量。",
+      "pdf_page": 5,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 13,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "磁鐵兩極穿過線圈時感應電流的方向和大小",
+      "scope_note": "電磁感應。",
+      "pdf_page": 5,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 14,
+      "primary_topic": "b2-ecology",
+      "secondary_topics": [],
+      "concept": "用出生死亡遷入遷出解釋族群數量變化",
+      "scope_note": "族群動態。",
+      "pdf_page": 5,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 15,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "從等壓線判定仍需哪些數據才能推論風向",
+      "scope_note": "地科天氣圖。",
+      "pdf_page": 5,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 16,
+      "primary_topic": "b4-force",
+      "secondary_topics": [],
+      "concept": "由力除以面積的量綱辨認輪胎氣壓單位",
+      "scope_note": "壓力定義。",
+      "pdf_page": 6,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 17,
+      "primary_topic": "b4-acidbase",
+      "secondary_topics": [],
+      "concept": "由牙齒酸蝕量對照pH判定飲料酸性強弱",
+      "scope_note": "酸性與pH。",
+      "pdf_page": 6,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 18,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "依是否需介質區分重力波和力學波",
+      "scope_note": "波動。",
+      "pdf_page": 6,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 19,
+      "primary_topic": "b4-organic",
+      "secondary_topics": [],
+      "concept": "從元素質量百分比排除不可能的有機物組成",
+      "scope_note": "有機物的含碳及物質類型判定。",
+      "pdf_page": 6,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 20,
+      "primary_topic": "b2-classification",
+      "secondary_topics": [],
+      "concept": "尋找淡水刺絲胞動物反駁類群全生活於海洋的說法",
+      "scope_note": "動物類群特徵與反例。",
+      "pdf_page": 7,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 21,
+      "primary_topic": "b2-reproduction",
+      "secondary_topics": [],
+      "concept": "以播種數和發芽數比較種子的發芽比例",
+      "scope_note": "種子萌發為繁殖後代發育；主考比例判讀，列邊界教學例而非遺傳。",
+      "pdf_page": 7,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 22,
+      "primary_topic": "b2-classification",
+      "secondary_topics": [],
+      "concept": "以形成層與環剝線索辨認單子葉或雙子葉植物",
+      "scope_note": "問植物類別；養分運輸只是辨認線索。",
+      "pdf_page": 7,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 23,
+      "primary_topic": "b4-redox",
+      "secondary_topics": [],
+      "concept": "以氫奪取金屬氧化物的氧說明冶煉的氧化還原",
+      "scope_note": "得氧失氧。",
+      "pdf_page": 7,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 24,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由太陽明亮面積暫時降低辨認日食成因",
+      "scope_note": "地科天文。",
+      "pdf_page": 8,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 25,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "依岩石形成方式與壓密膠結辨認岩石循環",
+      "scope_note": "地科岩石。",
+      "pdf_page": 8,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 26,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "正帶電金屬接地時電子補入造成中性",
+      "scope_note": "靜電。",
+      "pdf_page": 8,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 27,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "判讀冰的加熱曲線與熔點及相態",
+      "scope_note": "熱與物態。",
+      "pdf_page": 8,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 28,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "依中心氣流與壓力類型整理颱風和氣團",
+      "scope_note": "地科天氣系統。",
+      "pdf_page": 9,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 29,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "配對靜置與加熱實驗判斷降低餘氯量的證據",
+      "scope_note": "未給反應機制，主考實驗控制，不強列反應速率或環境。",
+      "pdf_page": 9,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 30,
+      "primary_topic": "b2-reproduction",
+      "secondary_topics": [
+        "b2-genetics"
+      ],
+      "concept": "減數分裂後卵子的性染色體條數",
+      "scope_note": "主要為減數分裂造成染色體套數改變。",
+      "pdf_page": 9,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 31,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由教室正午日照範圍變化辨認冬至前後",
+      "scope_note": "地科天文。",
+      "pdf_page": 9,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 32,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由示蹤溶質濃度推算泳池中尿液體積所需資料",
+      "scope_note": "Book3濃度，不是酸鹼或化學計量。",
+      "pdf_page": 10,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 33,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "腎臟形成尿液與進出血管的血氧差",
+      "scope_note": "Book1泌尿循環。",
+      "pdf_page": 10,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 34,
+      "primary_topic": "b4-force",
+      "secondary_topics": [],
+      "concept": "用浮沉平衡比較不同物體浸水體積",
+      "scope_note": "阿基米德原理；不是單純密度定義。",
+      "pdf_page": 10,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 35,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "依測站震度分布辨認同一次地震的規模",
+      "scope_note": "地科地震。",
+      "pdf_page": 10,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 36,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "依透鏡偏折光路判定焦距",
+      "scope_note": "光學。",
+      "pdf_page": 11,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 37,
+      "primary_topic": "b4-reaction",
+      "secondary_topics": [
+        "b4-redox"
+      ],
+      "concept": "由金屬與鹽酸產氫的質量資料比較反應物和生成物",
+      "scope_note": "質量守恆及反應比例為主。",
+      "pdf_page": 11,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 38,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由力乘位移的作功改變木塊動能",
+      "scope_note": "Book5功與能。",
+      "pdf_page": 11,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 39,
+      "primary_topic": "b2-classification",
+      "secondary_topics": [],
+      "concept": "利用二名法的屬名搜尋同屬異種植物",
+      "scope_note": "學名與分類。",
+      "pdf_page": 11,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 40,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "選擇鐵片鍍銅的電源電極與電解液配置",
+      "scope_note": "Book6電鍍。",
+      "pdf_page": 12,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 41,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "酵素超過失活溫度後產物量不再增加",
+      "scope_note": "Book1酵素熱變性；不是一般催化劑反應速率通則。",
+      "pdf_page": 12,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 42,
+      "primary_topic": "b2-environment",
+      "secondary_topics": [],
+      "concept": "辨認野生龜數量下降的過度捕捉壓力",
+      "scope_note": "保育威脅。",
+      "pdf_page": 12,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 43,
+      "primary_topic": "b2-environment",
+      "secondary_topics": [],
+      "concept": "依IUCN評估流程辨認受威脅保育等級",
+      "scope_note": "保育分類，不是生物分類階層。",
+      "pdf_page": 12,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 44,
+      "primary_topic": "b2-environment",
+      "secondary_topics": [],
+      "concept": "依減碳能源政策辨認未來發電組合",
+      "scope_note": "能源轉型的環境目標。",
+      "pdf_page": 13,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 45,
+      "primary_topic": "b2-environment",
+      "secondary_topics": [],
+      "concept": "比較煤與天然氣發電的單位污染物排放",
+      "scope_note": "空氣污染防治。",
+      "pdf_page": 13,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 46,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "把住宅用電圖上的數值換為科學記號",
+      "scope_note": "圖表數量轉換，節電背景不算環境頻率。",
+      "pdf_page": 14,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 47,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "配對年度冷氣時與用電量檢查相關性",
+      "scope_note": "資料推論，不直接考生態或污染。",
+      "pdf_page": 14,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 48,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "解釋統計指標採用28度門檻的生活意義",
+      "scope_note": "指標操作定義，非環境生態。",
+      "pdf_page": 14,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 49,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由週期性二氧化碳濃度曲線推估橫軸時間尺度",
+      "scope_note": "主考年度季節週期讀圖，題組的碳循環不自動套給每一題。",
+      "pdf_page": 15,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 113,
+      "question": 50,
+      "primary_topic": "uncertain",
+      "secondary_topics": [
+        "b2-ecology",
+        "b4-reaction"
+      ],
+      "concept": "比較碳氧季節循環所引起的相對濃度變幅",
+      "scope_note": "涉及生態物質循環但正解直接靠大氣氧氣背景比例；Book2循環與Book3空氣組成邊界未定，不強列。",
+      "pdf_page": 15,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 1,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "超聲波頻率超出人耳可聽範圍",
+      "scope_note": "聲學，胎兒只為背景。",
+      "pdf_page": 2,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 2,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "選用天平與量筒測量不規則物體密度",
+      "scope_note": "Book3測量。",
+      "pdf_page": 2,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 3,
+      "primary_topic": "b2-ecology",
+      "secondary_topics": [
+        "b2-environment"
+      ],
+      "concept": "外來鳥類與麻雀之間的競爭和掠食",
+      "scope_note": "問交互作用為主；外來種為次碼。",
+      "pdf_page": 2,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 4,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "比較元素、化合物與混合物的原子種類",
+      "scope_note": "Book3物質分類。",
+      "pdf_page": 2,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 5,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由鋒面上升氣流與雲雨辨認冷暖空氣",
+      "scope_note": "地科鋒面。",
+      "pdf_page": 2,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 6,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "辨認過度抽地下水造成的地層下陷",
+      "scope_note": "地科地質災害，沒有生態效應考點。",
+      "pdf_page": 3,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 7,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "以同類雞蛋在非端午立起反駁特定日期的因果說",
+      "scope_note": "實驗反例與控制變因，未要求平衡受力分析。",
+      "pdf_page": 3,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 8,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "比較綠色與白色蘆筍部位的光合呼吸產氣",
+      "scope_note": "Book1植物生理。",
+      "pdf_page": 3,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 9,
+      "primary_topic": "b4-force",
+      "secondary_topics": [],
+      "concept": "由同一直線二力平衡比較鉛筆兩端施力",
+      "scope_note": "明確為基本靜力平衡；另含作用反作用配對但未涉及加速度，依任務例外納入。",
+      "pdf_page": 3,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 10,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "依電荷距離比較靜電作用力強弱",
+      "scope_note": "Book6靜電，不泛列基本力。",
+      "pdf_page": 4,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 11,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "把溶質質量比例表示成ppm",
+      "scope_note": "Book3濃度。",
+      "pdf_page": 4,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 12,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "比較尖叫和追跑涉及的神經受器動器與中樞",
+      "scope_note": "Book1神經。",
+      "pdf_page": 4,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 13,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "把冬季季風迎背風條件套用到陽臺選向",
+      "scope_note": "地科天氣氣候。",
+      "pdf_page": 4,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 14,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "依紅光下的球色限制白光下可能的物體顏色",
+      "scope_note": "光學。",
+      "pdf_page": 4,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 15,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "板塊邊界與地形變動的關係",
+      "scope_note": "板塊地科。",
+      "pdf_page": 5,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 16,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "以火山灰岩層與岩脈年代限制沉積先後",
+      "scope_note": "地史。",
+      "pdf_page": 5,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 17,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由離子電荷與原子序比較質子及電子數",
+      "scope_note": "Book3原子結構。",
+      "pdf_page": 5,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 18,
+      "primary_topic": "b4-force",
+      "secondary_topics": [],
+      "concept": "由摩擦力外力曲線區分靜摩擦與動摩擦",
+      "scope_note": "摩擦力關係，無加速度求解。",
+      "pdf_page": 5,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 19,
+      "primary_topic": "b4-acidbase",
+      "secondary_topics": [
+        "b2-environment",
+        "b4-reaction"
+      ],
+      "concept": "以鈣離子形成難溶碳酸鹽說明二氧化碳固碳",
+      "scope_note": "作答核心是鹽類沉澱性質；減碳為次要情境。",
+      "pdf_page": 6,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 20,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由餐後血糖變化比較胰島素分泌時機",
+      "scope_note": "Book1內分泌。",
+      "pdf_page": 6,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 21,
+      "primary_topic": "b4-organic",
+      "secondary_topics": [
+        "b4-rate"
+      ],
+      "concept": "依塑膠材質與溫度資料評估酒精容器的耐受性",
+      "scope_note": "聚合物用途與材料選擇為主；溫度耗損率為次。",
+      "pdf_page": 6,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 22,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "利用木質部水分運輸監測蒸散",
+      "scope_note": "Book1輸導生理。",
+      "pdf_page": 7,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 23,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "用等壓線梯度比較海上風速",
+      "scope_note": "地科天氣圖，非物體受壓。",
+      "pdf_page": 7,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 24,
+      "primary_topic": "b2-classification",
+      "secondary_topics": [],
+      "concept": "由鳥類分類資料推定可能的目屬數目",
+      "scope_note": "分類階層。",
+      "pdf_page": 7,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 25,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "比較電極面積改變對電池電壓電流和功率的影響",
+      "scope_note": "Book6電化學，不列化學速率。",
+      "pdf_page": 7,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 26,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "以同質量同加熱條件比較金屬比熱",
+      "scope_note": "熱學。",
+      "pdf_page": 8,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 27,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "比較古今複式顯微鏡的構造功能",
+      "scope_note": "Book1顯微鏡。",
+      "pdf_page": 8,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 28,
+      "primary_topic": "uncertain",
+      "secondary_topics": [
+        "b4-redox"
+      ],
+      "concept": "以碘液褪色推知茶水含可被氧化的物質",
+      "scope_note": "圖14無得失氧或金屬活性；屬廣義氧化還原，是否納入任務所定Book4範圍不明，保留。",
+      "pdf_page": 8,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 29,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由不互溶液體的體積與密度比較總質量",
+      "scope_note": "Book3密度，沒有浮力求解。",
+      "pdf_page": 9,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 30,
+      "primary_topic": "b2-genetics",
+      "secondary_topics": [],
+      "concept": "由黑眼親代生出紅眼後代推定異型合子",
+      "scope_note": "顯隱性與基因型。",
+      "pdf_page": 9,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 31,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "比較導線電流方向大小造成的磁針偏轉",
+      "scope_note": "電磁學。",
+      "pdf_page": 9,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 32,
+      "primary_topic": "b4-reaction",
+      "secondary_topics": [
+        "b4-redox"
+      ],
+      "concept": "以反應前後物質質量判斷硫化氫與二氧化硫反應結果",
+      "scope_note": "質量守恆與剩餘反應物。",
+      "pdf_page": 10,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 33,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "從震央與斷層面幾何選擇鑽探位置",
+      "scope_note": "地科構造。",
+      "pdf_page": 10,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 34,
+      "primary_topic": "b2-classification",
+      "secondary_topics": [],
+      "concept": "由生物構造比較辨認所屬生物界",
+      "scope_note": "五界與類群特徵。",
+      "pdf_page": 10,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 35,
+      "primary_topic": "b2-reproduction",
+      "secondary_topics": [
+        "b2-genetics"
+      ],
+      "concept": "區分葉片繁殖及種子萌發所需的細胞分裂",
+      "scope_note": "兩種幼苗生長皆涉及細胞分裂，需分清與減數分裂。",
+      "pdf_page": 10,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 36,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "以澱粉和還原糖檢驗結果辨認失活的澱粉酶",
+      "scope_note": "Book1酵素與營養檢測。",
+      "pdf_page": 11,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 37,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "依行星軌道限制三個天體的直線排列",
+      "scope_note": "天文。",
+      "pdf_page": 11,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 38,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "從測試規範變動辨認新增的控制變因",
+      "scope_note": "實驗設計，節能標章只是背景。",
+      "pdf_page": 11,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 39,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由速度時間圖斜率比較同一物體所受合力",
+      "scope_note": "Book5F=ma，明確排除。",
+      "pdf_page": 11,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 40,
+      "primary_topic": "other",
+      "secondary_topics": [
+        "b4-force"
+      ],
+      "concept": "降低氣體溫度後以凝結與汽化解釋再沸騰",
+      "scope_note": "主考相變化與沸點，氣壓僅次碼，不混入基本壓力頻率。",
+      "pdf_page": 12,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 41,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "比較不同燃料供給相同能量時的質量和體積",
+      "scope_note": "能量密度圖，零碳飛機背景不等同燃燒或生態題。",
+      "pdf_page": 12,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 42,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由千瓦時電能計算電費",
+      "scope_note": "電能單位，節能背景不列環境。",
+      "pdf_page": 12,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 43,
+      "primary_topic": "b4-rate",
+      "secondary_topics": [],
+      "concept": "比較低溫前處理後轉溫對蒜頭變色速率的影響",
+      "scope_note": "不同反應條件與速率的實驗資料。",
+      "pdf_page": 13,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 44,
+      "primary_topic": "b4-organic",
+      "secondary_topics": [
+        "b4-acidbase"
+      ],
+      "concept": "在相同pH下由羧基辨認有利蒜頭變色的溶液特徵",
+      "scope_note": "以等pH控制排除酸性強弱；COOH有機官能基為主。",
+      "pdf_page": 13,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 45,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "按出血紀錄與參考範圍初步判定異常",
+      "scope_note": "Book1循環凝血。",
+      "pdf_page": 14,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 46,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "辨認與止血相關的血小板",
+      "scope_note": "Book1血液。",
+      "pdf_page": 14,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 47,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "從動滑輪的拉力位移計算作功",
+      "scope_note": "Book5機械與功，排除。",
+      "pdf_page": 15,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 48,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由動滑輪受力圖的截距辨認裝置自重影響",
+      "scope_note": "Book5簡單機械；即使有靜力平衡也非本任務基本二力平衡。",
+      "pdf_page": 15,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 49,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "用半亮半暗球模型表示上弦及下弦月的方位",
+      "scope_note": "地科月相。",
+      "pdf_page": 15,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 114,
+      "question": 50,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由月相變化期間估算地球自轉圈數",
+      "scope_note": "天文週期。",
+      "pdf_page": 15,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 1,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "上皿天平指針偏轉時調校零點",
+      "scope_note": "Book3測量及天平操作，不按槓桿延伸納入力學。",
+      "pdf_page": 2,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 2,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由導電導熱延展性辨認金屬元素",
+      "scope_note": "Book3元素物性，不是金屬活動性。",
+      "pdf_page": 2,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 3,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "同族鈍氣具有相似化學性質",
+      "scope_note": "Book3週期表。",
+      "pdf_page": 2,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 4,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "疊合歷年海岸線辨認沉積與侵蝕趨勢",
+      "scope_note": "地科海岸變遷。",
+      "pdf_page": 2,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 5,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "依反射角光路判斷光線是否到達牆壁",
+      "scope_note": "光學。",
+      "pdf_page": 2,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 6,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "依顯微影像尺度辨認細胞等構造",
+      "scope_note": "Book1細胞尺度；病毒只是尺度選項，不算分類。",
+      "pdf_page": 3,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 7,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "運用並聯電流關係推算電表讀數",
+      "scope_note": "電路。",
+      "pdf_page": 3,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 8,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "區分地震預警的當地震度與到達倒數時間",
+      "scope_note": "地震地科。",
+      "pdf_page": 3,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 9,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "暖濕空氣遇較冷磁磚而凝結成水珠",
+      "scope_note": "熱與相變化。",
+      "pdf_page": 3,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 10,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "辨認起跑反應中的中樞神經功能",
+      "scope_note": "Book1神經。",
+      "pdf_page": 4,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 11,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "以肺容積變化判斷呼吸時橫膈及肋骨動作",
+      "scope_note": "Book1呼吸，非壓力力學專題。",
+      "pdf_page": 4,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 12,
+      "primary_topic": "b4-rate",
+      "secondary_topics": [
+        "b4-organic"
+      ],
+      "concept": "指出只有產物量而缺反應時間無法比較速率",
+      "scope_note": "皂化為情境，主問速率測量條件。",
+      "pdf_page": 4,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 13,
+      "primary_topic": "b2-reproduction",
+      "secondary_topics": [
+        "b2-genetics",
+        "b2-evolution"
+      ],
+      "concept": "辨認雜交育種經生殖器官進行有性生殖",
+      "scope_note": "問生殖方式為主，人工選拔與遺傳變異僅次碼，不重計演化。",
+      "pdf_page": 4,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 14,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由連續月相觀察推回前一週月相變化",
+      "scope_note": "天文。",
+      "pdf_page": 5,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 15,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由每日滿乾潮延後與退潮週期選擇到海邊時段",
+      "scope_note": "地科潮汐。",
+      "pdf_page": 5,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 16,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "用分貝表示惱人的鼾聲強弱",
+      "scope_note": "聲學。",
+      "pdf_page": 5,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 17,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "以自發光等特徵辨認恆星和其他星體",
+      "scope_note": "天文層級，非生物分類。",
+      "pdf_page": 6,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 18,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "選擇可用排水法量體積且不溶不吸水的物體",
+      "scope_note": "Book3測量，非阿基米德浮力。",
+      "pdf_page": 6,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 19,
+      "primary_topic": "b4-reaction",
+      "secondary_topics": [
+        "b4-redox",
+        "b2-environment"
+      ],
+      "concept": "利用甲烷和二氧化碳分子量把燃料質量換算為排放量",
+      "scope_note": "化學反應比例與分子量為主，不把環境背景作第二主碼。",
+      "pdf_page": 6,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 20,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由觸角腺功能類比人類腎臟的排泄與再吸收",
+      "scope_note": "Book1生理功能；不因動物比較即列分類。",
+      "pdf_page": 6,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 21,
+      "primary_topic": "b2-ecology",
+      "secondary_topics": [],
+      "concept": "用捉放法估計魚池族群數量並區分估計與實際值",
+      "scope_note": "族群調查。",
+      "pdf_page": 6,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 22,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "以多組槓桿平衡實驗檢驗力臂與力矩的說法",
+      "scope_note": "Book5槓桿與力矩，排除。",
+      "pdf_page": 7,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 23,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "配對水溫鹽度實驗以辨認影響蒸發的變因",
+      "scope_note": "物理蒸發，不是化學反應速率。",
+      "pdf_page": 7,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 24,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "辨認光合與呼吸的物質來源及產物",
+      "scope_note": "Book1光合呼吸基本反應，未涉及生態循環。",
+      "pdf_page": 7,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 25,
+      "primary_topic": "b2-genetics",
+      "secondary_topics": [],
+      "concept": "以抽棋子模擬異型合子交配的顯隱性子代比例",
+      "scope_note": "孟德爾遺傳。",
+      "pdf_page": 7,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 26,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "依海域擴張推論張裂板塊邊界及新生地殼",
+      "scope_note": "板塊地科。",
+      "pdf_page": 8,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 27,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "用氣溫高度趨勢區分對流層和平流層",
+      "scope_note": "地科大氣分層；氣壓只是比較項，不列壓力。",
+      "pdf_page": 8,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 28,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "辨認延長線超載是總電流超出可承受值",
+      "scope_note": "電學安全。",
+      "pdf_page": 8,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 29,
+      "primary_topic": "b2-classification",
+      "secondary_topics": [
+        "b2-reproduction"
+      ],
+      "concept": "由具花種子的特徵判定植物有果實",
+      "scope_note": "被子植物與其他類群的辨認為主。",
+      "pdf_page": 8,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 30,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由同質量金屬的升溫斜率比較比熱",
+      "scope_note": "熱學。",
+      "pdf_page": 9,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 31,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "辨認電鍍裝置的正負極與銅離子移動方向",
+      "scope_note": "Book6電化學。",
+      "pdf_page": 9,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 32,
+      "primary_topic": "b4-force",
+      "secondary_topics": [],
+      "concept": "改變均質木塊尺寸後比較重量與接觸面積形成的壓力",
+      "scope_note": "壓力定義，不是只比較重量。",
+      "pdf_page": 9,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 33,
+      "primary_topic": "b4-force",
+      "secondary_topics": [],
+      "concept": "用浮力平衡和碗材密度判定碗內外水面高低",
+      "scope_note": "已看圖19，要求浮體排水量與自重關係。",
+      "pdf_page": 9,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 34,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由東亞天氣圖辨認副熱帶高壓和滯留鋒",
+      "scope_note": "地科天氣系統。",
+      "pdf_page": 10,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 35,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "選擇磁針相對導線方向以偵測電流接通",
+      "scope_note": "電流磁效應。",
+      "pdf_page": 10,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 36,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "比較兩杯蔗糖溶液的重量百分率濃度",
+      "scope_note": "Book3濃度，不是化學計量反應。",
+      "pdf_page": 10,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 37,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由蛋白質消化與產物推認酵素的消化液來源",
+      "scope_note": "Book1消化酵素，排除。",
+      "pdf_page": 10,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 38,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "比較不同北半球緯度的季節白晝長短",
+      "scope_note": "地科季節。",
+      "pdf_page": 11,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 39,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "判斷肺與肝流出血液回心臟的路徑",
+      "scope_note": "Book1循環。",
+      "pdf_page": 11,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 40,
+      "primary_topic": "b4-acidbase",
+      "secondary_topics": [],
+      "concept": "酸鹼中和時溶液增量造成旁觀鈉離子濃度降低",
+      "scope_note": "中和及離子濃度；不是誤認鹽必析出。",
+      "pdf_page": 11,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 41,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由小球鉛直運動的加速度比較外力與重力",
+      "scope_note": "Book5牛頓運動定律，排除。",
+      "pdf_page": 12,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 42,
+      "primary_topic": "b2-environment",
+      "secondary_topics": [
+        "b4-acidbase"
+      ],
+      "concept": "比較單一與多測站資料造成的酸雨監測結果差異",
+      "scope_note": "污染監測的取樣代表性；不是純季節或一般氣象題。",
+      "pdf_page": 12,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 43,
+      "primary_topic": "b2-environment",
+      "secondary_topics": [
+        "b4-acidbase"
+      ],
+      "concept": "由分組雨水pH資料辨認迎背風條件與污染酸度的研究問題",
+      "scope_note": "酸雨污染地理分組，pH作為次碼。",
+      "pdf_page": 12,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 44,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "以每小時氣泡移動距離判讀植物蒸散速率",
+      "scope_note": "Book1蒸散，不是反應速率。",
+      "pdf_page": 13,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 45,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "依氣孔與水分運輸判斷蒸散裝置不可能的變化",
+      "scope_note": "Book1植物水分生理。",
+      "pdf_page": 13,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 46,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "以落下高度改變水滴撞擊前的速度",
+      "scope_note": "Book5自由落體與研究設計，不列基本力。",
+      "pdf_page": 14,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 47,
+      "primary_topic": "other",
+      "secondary_topics": [],
+      "concept": "由撞擊力時間圖及作用反作用等大比較水滴受力",
+      "scope_note": "Book5牛頓第三定律動態撞擊，不符合基本平衡例外。",
+      "pdf_page": 14,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 48,
+      "primary_topic": "other",
+      "secondary_topics": [
+        "b4-acidbase"
+      ],
+      "concept": "辨認雙氧水製氧及酸與碳酸鈣製二氧化碳",
+      "scope_note": "主考Book3氣體製備，不因每個選項皆有反應就算反應計量。",
+      "pdf_page": 15,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 49,
+      "primary_topic": "b4-redox",
+      "secondary_topics": [
+        "b4-reaction"
+      ],
+      "concept": "由鐵氧化耗氧與空氣組成比較氧氣是否消耗完畢",
+      "scope_note": "氧化耗氧量與剩餘氣體；化學比例作次碼。",
+      "pdf_page": 15,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    },
+    {
+      "year": 115,
+      "question": 50,
+      "primary_topic": "b4-redox",
+      "secondary_topics": [],
+      "concept": "以鐵和碳對氧的活性比較判斷能否還原二氧化碳",
+      "scope_note": "得氧失氧與活性順序。",
+      "pdf_page": 15,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link"
+    }
+  ],
+  "sources": [
+    {
+      "year": 111,
+      "paper_url": "https://drive.google.com/file/d/1OiQVdqtDQauNW_qwlCFTWLmcfBHuCjdm/view?usp=drive_link",
+      "answer_url": "https://drive.google.com/file/d/1IeMHI4BmTpC_2Oc1lQ1Qj6XWHDf9qwGd/view?usp=drive_link",
+      "index_url": "https://cap.rcpet.edu.tw/exam/111/111exam.html"
+    },
+    {
+      "year": 112,
+      "paper_url": "https://drive.google.com/file/d/1Bo87vJFakmGzyUqqjHzTCF-fv75DFgx_/view?usp=drive_link",
+      "answer_url": "https://drive.google.com/file/d/1OT5r0que_0bXSy0kwLEOEJMssce2OnL0/view?usp=drive_link",
+      "index_url": "https://cap.rcpet.edu.tw/exam/112/112exam.html"
+    },
+    {
+      "year": 113,
+      "paper_url": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link",
+      "answer_url": "https://drive.google.com/file/d/1cWlogP9FBRX1eD5kjgVDP2_6f8VCLSB4/view?usp=drive_link",
+      "index_url": "https://cap.rcpet.edu.tw/exam/113/113exam.html"
+    },
+    {
+      "year": 114,
+      "paper_url": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link",
+      "answer_url": "https://drive.google.com/file/d/175hz0lHG4GTDNxYet9lrRDu0lmC_G08o/view?usp=drive_link",
+      "index_url": "https://cap.rcpet.edu.tw/exam/114/114exam.html"
+    },
+    {
+      "year": 115,
+      "paper_url": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link",
+      "answer_url": "https://drive.google.com/file/d/1fxfOLQPMdCEMSuziD1qsQZg3vVOGt8df/view?usp=drive_link",
+      "index_url": "https://cap.rcpet.edu.tw/exam/115/115exam.html"
+    }
+  ],
+  "method": "111–115年每年自然科50題，共250題。每題只給一個主要主題；跨冊次標記與6題邊界案例不重複加總。不依背景字詞歸類，以作答核心編碼。這是本站主題分類，非官方冊次統計；環境能源含跨冊議題；不預測未來命題。"
+}

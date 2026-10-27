@@ -1,0 +1,101 @@
+{
+  "title": "國中自然雙冊重點地圖",
+  "checked_date": "2026-10-27",
+  "version": "1.0",
+  "public_base": "https://addielu-phy.github.io/ai-coding-tools-free-comparison/science/jhs-science-b4-b2/",
+  "teacher_public_not_authenticated": true,
+  "student_answers_embedded": false,
+  "versions": [
+    {
+      "book": "book4",
+      "role": "student",
+      "path": "book4/student/",
+      "pdf": "downloads/book4-student.pdf",
+      "coverage_topics": 36,
+      "core_cards": 10,
+      "original_questions": 20
+    },
+    {
+      "book": "book4",
+      "role": "teacher",
+      "path": "book4/teacher/",
+      "pdf": "downloads/book4-teacher.pdf",
+      "coverage_topics": 36,
+      "core_cards": 10,
+      "original_questions": 20
+    },
+    {
+      "book": "book2",
+      "role": "student",
+      "path": "book2/student/",
+      "pdf": "downloads/book2-student.pdf",
+      "coverage_topics": 32,
+      "core_cards": 10,
+      "original_questions": 20
+    },
+    {
+      "book": "book2",
+      "role": "teacher",
+      "path": "book2/teacher/",
+      "pdf": "downloads/book2-teacher.pdf",
+      "coverage_topics": 32,
+      "core_cards": 10,
+      "original_questions": 20
+    }
+  ],
+  "totals": {
+    "coverage_topics": 68,
+    "core_cards": 20,
+    "original_questions": 40,
+    "official_questions_audited": 250,
+    "frequency_included": 74,
+    "boundary_excluded": 6
+  },
+  "svg_diagrams": 9,
+  "source_method": "111–115年每年自然科50題，共250題。每題只給一個主要主題；跨冊次標記與6題邊界案例不重複加總。不依背景字詞歸類，以作答核心編碼。這是本站主題分類，非官方冊次統計；環境能源含跨冊議題；不預測未來命題。",
+  "editable_teacher_files": [
+    {
+      "file": "book4-teacher.docx",
+      "tables": 19,
+      "paragraphs": 333
+    },
+    {
+      "file": "book2-teacher.docx",
+      "tables": 22,
+      "paragraphs": 335
+    }
+  ],
+  "pdf_files": [
+    {
+      "file": "book4-student.pdf",
+      "pages": 20,
+      "bytes": 2138191,
+      "sha256": "219d57f8f6cbcaddff359b4975de03cfd52f3e44f336b884573d104fc17d363a"
+    },
+    {
+      "file": "book4-teacher.pdf",
+      "pages": 25,
+      "bytes": 2350339,
+      "sha256": "89bc3c3589311898dd993cdbcbb60330cf11f276ef5decbea2aa1a41ef31d426"
+    },
+    {
+      "file": "book2-student.pdf",
+      "pages": 21,
+      "bytes": 2289254,
+      "sha256": "3824aad6b67bcc57c0b1c3a4ef8ad866280b68a62391d18ee08e3f0a4e299523"
+    },
+    {
+      "file": "book2-teacher.pdf",
+      "pages": 25,
+      "bytes": 2498643,
+      "sha256": "2e461ff361bfb7a8d03497a18106562a2945b996c2db07bd7b2cf9c05b365146"
+    }
+  ],
+  "quality_checks": {
+    "content": true,
+    "mobile_390px": true,
+    "answers_separated": true,
+    "pdf_and_docx": true,
+    "links_checked": 458
+  }
+}

@@ -14,8 +14,8 @@
     },
     {
       "name": "index.html",
-      "bytes": 7552107,
-      "sha256": "590ff8a19dde81b1b05bcd86f03aa903c259b314d552b77413fe325742436741"
+      "bytes": 7585384,
+      "sha256": "3915797c80f83cc9547dcb02ae176c57124379b5f2fe3b6f8d3eb7c474941a0c"
     },
     {
       "name": "preview.png",
@@ -23,5 +23,44 @@
       "sha256": "5ae7c4c945bf48d4a305000582cd39cd20d0a1ba972919ba816dfd2ed6fe84cf"
     }
   ],
-  "teacher_answer_notes_published": false
+  "teacher_answer_notes_published": false,
+  "updated_at": "2026-10-29T12:59:45.692191+08:00",
+  "blade_design": {
+    "anchor": "#blade-design",
+    "mode": "geometry_and_local_inflow_kinematics",
+    "control_count": 9,
+    "features": [
+      "blade_count",
+      "rotor_radius",
+      "chord_width",
+      "linear_taper",
+      "airfoil_geometry",
+      "tip_speed_ratio",
+      "tip_pitch",
+      "spanwise_twist",
+      "radial_station"
+    ],
+    "wind_m_s": 6,
+    "generator_model_unchanged": true,
+    "electric_power_prediction": false,
+    "measured_airfoil_polars": false,
+    "sources": [
+      "https://www.energy.gov/cmei/systems/articles/bends-twists-and-flat-edges-change-game-wind-energy",
+      "https://www.grc.nasa.gov/www/k-12/VirtualAero/BottleRocket/airplane/incline.html",
+      "https://web.mit.edu/16.unified/www/FALL/fluids/Lectures/f19.pdf",
+      "https://web.stanford.edu/~cantwell/AA200_Course_Material/The%20NACA%20airfoil%20series.pdf",
+      "https://m-selig.ae.illinois.edu/pubs/GiguereSelig-1999-NREL-SR-500-26173-BladeDesign.pdf"
+    ]
+  },
+  "validation": {
+    "generator_tests": 10,
+    "blade_geometry_tests": 11,
+    "geometry_edge_cases": 12,
+    "responsive_widths": [
+      375,
+      768,
+      1024,
+      1440
+    ]
+  }
 }

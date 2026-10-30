@@ -1,0 +1,34 @@
+{
+  "version": "typt19-acoustics-1.0.0",
+  "published_at": "2026-10-30T12:19:21.920775+08:00",
+  "public_url": "https://addielu-phy.github.io/ai-coding-tools-free-comparison/physics/typt19-acoustics/",
+  "approved_by_user": "選項1：公開工具，音檔與實驗資料保留在使用者裝置",
+  "privacy": {
+    "backend": false,
+    "audio_uploaded_to_server": false,
+    "external_scripts": false,
+    "raw_audio_in_project_json": false
+  },
+  "official_problem_numbers": [
+    4,
+    6,
+    11
+  ],
+  "numeric_unit_tests": 20,
+  "local_browser_checks": 29,
+  "qa_data": "synthetic test signals and numerical checks only; not team experimental evidence",
+  "files": {
+    "index.html": {
+      "bytes": 90304,
+      "sha256": "7fe817b7a84d5c2b5ef9238fa62ca2213da22e313c850423b50fd3a7d0957414"
+    },
+    "README.md": {
+      "bytes": 4260,
+      "sha256": "0350b9a184be2a2d38f58c710ae8efe9e5945c6a30366df1e2542467846874d9"
+    },
+    "preview.png": {
+      "bytes": 246418,
+      "sha256": "563ea8d582fcaa7b731b9822f19052ac6d0b0fc025136b048d0a2251f1408970"
+    }
+  }
+}
